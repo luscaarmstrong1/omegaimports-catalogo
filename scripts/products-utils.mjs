@@ -1,49 +1,50 @@
-import { existsSync, readFileSync } from "node:fs";
-import { fileURLToPath } from "node:url";
+import { normalizeText } from "./shared.mjs";
 
-const root = fileURLToPath(new URL("../", import.meta.url));
-const productsFile = new URL("../src/data/products.ts", import.meta.url);
+export { loadProducts, normalizeText, site } from "./shared.mjs";
 
-export function loadProducts() {
-  const source = readFileSync(productsFile, "utf8");
-  const match = source.match(/export const products = ([\s\S]*?) satisfies Product\[\];/);
-  if (!match) throw new Error("Não foi possível ler src/data/products.ts");
-  return JSON.parse(match[1]);
+export function expectedQuantityFromText(text = "") {
+  const normalized = normalizeText(text);
+  const match = normalized.match(/\b(\d+)\s*x\b|\bkit\s*(?:com\s*)?(\d+)|\bcom\s*(\d+)\s*(?:unidades|pecas|peças)/);
+  if (!match) return 1;
+  return Number(match[1] || match[2] || match[3] || 1);
 }
 
-export function validateProducts(products = loadProducts()) {
+export function validateProducts(products) {
   const issues = [];
-  const slugs = new Set();
+  const critical = [];
   const ids = new Set();
-  const links = new Set();
+  const slugs = new Set();
+  const images = new Map();
 
   for (const product of products) {
-    const prefix = `${product.mlbId} ${product.name}`;
-    if (!product.mercadoLivreUrl) issues.push(`${prefix}: sem link do Mercado Livre`);
-    if (!/^https:\/\/.+mercadolivre\.com\.br/.test(product.mercadoLivreUrl)) {
-      issues.push(`${prefix}: link externo inválido`);
-    }
-    if (links.has(product.mercadoLivreUrl)) issues.push(`${prefix}: link duplicado`);
-    if (slugs.has(product.slug)) issues.push(`${prefix}: slug duplicado`);
-    if (ids.has(product.id)) issues.push(`${prefix}: ID duplicado`);
-    if (!product.category) issues.push(`${prefix}: categoria ausente`);
-    if (!product.shortDescription) issues.push(`${prefix}: descrição vazia`);
-    if (!product.quantityInKit) issues.push(`${prefix}: quantidade do kit ausente`);
-    if (!product.condition) issues.push(`${prefix}: condição ausente`);
-    if (!product.specifications?.length) issues.push(`${prefix}: sem especificações detalhadas`);
-    if (!product.image) issues.push(`${prefix}: imagem ausente`);
-    if (product.image && !existsSync(new URL(`../public${product.image}`, import.meta.url))) {
-      issues.push(`${prefix}: imagem inexistente ${product.image}`);
-    }
-    links.add(product.mercadoLivreUrl);
+    const ref = `${product.mlbId} ${product.title}`;
+    if (!/^MLB\d+$/.test(product.mlbId)) critical.push(`${ref}: MLB inválido`);
+    if (ids.has(product.mlbId)) critical.push(`${ref}: MLB duplicado`);
+    if (slugs.has(product.slug)) critical.push(`${ref}: slug duplicado`);
+    ids.add(product.mlbId);
     slugs.add(product.slug);
-    ids.add(product.id);
+    if (!product.marketplaceUrl?.startsWith("https://")) critical.push(`${ref}: URL não HTTPS`);
+    if (!product.marketplaceUrl?.includes(product.mlbId.replace("MLB", ""))) critical.push(`${ref}: URL não contém o código MLB`);
+    if (!product.image) critical.push(`${ref}: imagem ausente`);
+    if (!["verified", "needs-review", "missing"].includes(product.imageStatus)) critical.push(`${ref}: imageStatus inválido`);
+    if (product.featured && product.imageStatus !== "verified") critical.push(`${ref}: destaque sem imagem verificada`);
+    if (!product.priceLastVerifiedAt && product.price) issues.push(`${ref}: preço sem data de atualização`);
+    const expected = expectedQuantityFromText(`${product.title} ${product.fullDescription}`);
+    if (expected !== product.quantity && product.quantity !== 1) issues.push(`${ref}: possível divergência de quantidade (${product.quantity} x texto ${expected})`);
+    const text = normalizeText(`${product.title} ${product.fullDescription}`);
+    if (product.condition === "novo" && /\busado\b|\baberto\b/.test(text)) issues.push(`${ref}: condição novo contradita por título/descrição`);
+    if (product.mlbId === "MLB4417997973") issues.push(`${ref}: divergência conhecida de condição/quantidade exige revisão manual`);
+    if (product.image) {
+      const list = images.get(product.image) || [];
+      list.push(product.mlbId);
+      images.set(product.image, list);
+    }
   }
-  return issues;
-}
 
-export function siteBase() {
-  return process.env.NEXT_PUBLIC_SITE_URL || "https://omegaimports.catalogo.local";
+  for (const [image, idsUsing] of images) {
+    if (idsUsing.length > 1 && image !== "/assets/product-placeholder.svg") {
+      issues.push(`${image}: usado por múltiplos MLBs (${idsUsing.join(", ")})`);
+    }
+  }
+  return { issues, critical };
 }
-
-export { root };

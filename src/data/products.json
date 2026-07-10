@@ -1,6 +1,4 @@
-import type { Product } from "@/src/types/product";
-
-export const products = [
+[
   {
     "id": "mlb3939451361",
     "mlbId": "MLB3939451361",
@@ -4362,4 +4360,4 @@ export const products = [
     "priceLastVerifiedAt": "2026-07-10",
     "lastVerifiedAt": "2026-07-10"
   }
-] satisfies Product[];
+]

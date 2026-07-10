@@ -1,46 +1,19 @@
 {
-  "name": "omegaimports-catalog",
-  "version": "0.1.0",
-  "private": true,
-  "engines": {
-    "node": ">=22.13.0"
-  },
+  "name": "omegaimports-catalogo",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
   "scripts": {
-    "dev": "vinext dev",
-    "build": "vinext build",
-    "start": "vinext start",
+    "dev": "node scripts/build-site.mjs && node scripts/serve-dist.mjs",
+    "build": "node scripts/build-site.mjs",
+    "lint": "node scripts/lint.mjs",
+    "typecheck": "node scripts/typecheck.mjs",
     "test": "node --test tests/catalog.test.mjs",
-    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
-    "typecheck": "tsc --noEmit",
-    "products:validate": "node scripts/products-validate.mjs",
-    "products:import": "node scripts/products-import.mjs",
-    "products:report": "node scripts/products-report.mjs",
-    "products:sitemap": "node scripts/products-sitemap.mjs",
-    "db:generate": "drizzle-kit generate"
-  },
-  "dependencies": {
-    "drizzle-orm": "0.45.2",
-    "next": "16.2.6",
-    "react": "19.2.6",
-    "react-dom": "19.2.6"
-  },
-  "devDependencies": {
-    "@cloudflare/vite-plugin": "1.37.1",
-    "@tailwindcss/postcss": "4.2.1",
-    "@types/node": "22.19.19",
-    "@types/react": "19.2.14",
-    "@types/react-dom": "19.2.3",
-    "@vitejs/plugin-react": "6.0.2",
-    "@vitejs/plugin-rsc": "0.5.26",
-    "drizzle-kit": "0.31.10",
-    "eslint": "9.39.4",
-    "eslint-config-next": "16.2.6",
-    "react-server-dom-webpack": "19.2.6",
-    "tailwindcss": "4.2.1",
-    "typescript": "5.9.3",
-    "vinext": "0.0.50",
-    "vite": "8.0.13",
-    "wrangler": "4.92.0"
-  },
-  "type": "module"
+    "test:e2e": "node scripts/test-e2e.mjs",
+    "audit:products": "node scripts/audit-products.mjs",
+    "audit:encoding": "node scripts/audit-encoding.mjs",
+    "audit:links": "node scripts/audit-links.mjs",
+    "products:validate": "node scripts/audit-products.mjs",
+    "products:report": "node scripts/products-report.mjs"
+  }
 }

@@ -1,31 +1,34 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { loadProducts, validateProducts } from "../scripts/products-utils.mjs";
+import { categories, loadProducts } from "../scripts/shared.mjs";
+import { validateProducts } from "../scripts/products-utils.mjs";
 
 const products = loadProducts();
 
-test("all active products have valid Mercado Livre HTTPS URLs", () => {
-  for (const product of products.filter((item) => item.active)) {
-    assert.match(product.mercadoLivreUrl, /^https:\/\/.+mercadolivre\.com\.br/);
+test("imports all active Mercado Livre products with MLB IDs", () => {
+  assert.equal(products.length, 47);
+  for (const product of products) assert.match(product.mlbId, /^MLB\d+$/);
+});
+
+test("uses internal taxonomy with stable ASCII slugs", () => {
+  const allowed = new Set(categories.map((category) => category.slug));
+  for (const product of products) assert.ok(allowed.has(product.categorySlug), product.categorySlug);
+});
+
+test("marketplace URLs are HTTPS and include the item code", () => {
+  for (const product of products) {
+    assert.match(product.marketplaceUrl, /^https:\/\/.+mercadolivre\.com\.br/);
+    assert.ok(product.marketplaceUrl.includes(product.mlbId.replace("MLB", "")));
   }
 });
 
-test("catalog has unique ids, slugs and links", () => {
-  assert.equal(new Set(products.map((product) => product.id)).size, products.length);
-  assert.equal(new Set(products.map((product) => product.slug)).size, products.length);
-  assert.equal(new Set(products.map((product) => product.mercadoLivreUrl)).size, products.length);
+test("home featured products require verified images", () => {
+  for (const product of products.filter((item) => item.featured)) {
+    assert.equal(product.imageStatus, "verified");
+  }
 });
 
-test("cards can render from structured data", () => {
-  const first = products[0];
-  assert.ok(first.name);
-  assert.ok(first.shortDescription);
-  assert.ok(first.image);
-  assert.ok(first.category);
-});
-
-test("validator reports only documented data-quality issues", () => {
-  const issues = validateProducts(products);
-  assert.ok(Array.isArray(issues));
-  assert.ok(issues.every((issue) => /sem especificações detalhadas|imagem|link|slug|ID|categoria|descrição|quantidade|condição/.test(issue)));
+test("product audit has no critical issues", () => {
+  const { critical } = validateProducts(products);
+  assert.deepEqual(critical, []);
 });

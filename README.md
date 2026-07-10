@@ -1,66 +1,97 @@
-# OMEGAIMPORTS - catálogo oficial
+# OMEGAIMPORTS Catálogo
 
-Site vitrine da OMEGAIMPORTS para apresentar produtos de eletrônica, automação, energia e projetos técnicos. A compra não acontece neste site: cada CTA direciona para o Mercado Livre.
+Site oficial estático da OMEGAIMPORTS, operação de e-commerce fundada em dezembro de 2024 e especializada em componentes eletroeletrônicos, IoT, telemetria, energia e automação.
 
-## Estrutura
+Produção prevista:
 
-- `src/data/products.ts`: fonte única do catálogo.
-- `src/data/store.ts`: dados configuráveis da loja e canais opcionais.
-- `src/lib/catalog.ts`: busca, categorias, formatação e validações.
-- `app/`: rotas públicas, páginas de produto, categorias, conteúdo técnico e páginas institucionais.
-- `scripts/`: validação, importação, relatórios e sitemap de manutenção.
-- `public/products/`: imagens usadas pelos cards e páginas.
+https://luscaarmstrong1.github.io/omegaimports-catalogo/
+
+## Stack
+
+- HTML estático gerado por scripts Node.
+- TypeScript strict para tipos de dados.
+- CSS moderno com tokens dark premium.
+- JavaScript mínimo para busca, filtros, menu mobile e eventos.
+- GitHub Pages com GitHub Actions.
 
 ## Comandos
 
 ```bash
-pnpm install
-pnpm dev
-pnpm build
-pnpm test
-pnpm lint
-pnpm typecheck
-pnpm products:validate
-pnpm products:import caminho/arquivo.csv
-pnpm products:report
-pnpm products:sitemap
+npm ci
+npm run dev
+npm run lint
+npm run typecheck
+npm test
+npm run audit:products
+npm run audit:encoding
+npm run audit:links
+npm run build
+npm run test:e2e
 ```
 
-Os scripts também ficam disponíveis via `npm run ...` em ambientes com `npm` instalado.
+## Estrutura
 
-## Atualização de produtos
+- `src/data/products.json`: fonte central dos produtos.
+- `src/data/products.ts`: versão tipada dos produtos.
+- `src/data/store.ts`: configuração institucional, categorias e guias.
+- `src/types/product.ts`: contrato do produto.
+- `public/brand/`: logos, favicon e Open Graph.
+- `public/assets/`: CSS, JS e placeholder.
+- `scripts/`: build, auditorias e relatórios.
+- `reports/`: auditoria inicial, CSV e galeria de auditoria.
+- `dist/`: saída de build para GitHub Pages.
 
-1. Atualize `src/data/products.ts` ou gere uma prévia com `pnpm products:import arquivo.csv`.
-2. Confirme `mlbId`, `name`, `condition`, `quantityInKit`, `category`, imagens e link do Mercado Livre.
-3. Rode `pnpm products:validate`.
-4. Rode `pnpm products:report` e revise `products-report.json`.
-5. Rode `pnpm build` antes de publicar.
+## Atualizar produtos
 
-## Variáveis de ambiente
+1. Atualize `src/data/products.json` e reflita a alteração em `src/data/products.ts`.
+2. Garanta que cada produto tenha `mlbId`, `slug`, `title`, `categorySlug`, `marketplaceUrl`, `imageStatus`, `lastVerifiedAt`.
+3. Adicione imagens verificadas em `public/products/MLB0000000000/`.
+4. Troque `imageStatus` para `verified` somente quando imagem, título, condição, quantidade e URL forem do mesmo MLB.
+5. Execute `npm run audit:products`.
+6. Revise `reports/galeria-auditoria.html`.
+7. Execute `npm run build`.
 
-Copie `.env.example` para `.env.local` quando quiser habilitar integrações opcionais.
+## Validar um MLB ID
 
-- `NEXT_PUBLIC_SITE_URL`: domínio final do site.
-- `NEXT_PUBLIC_GA_ID`: Google Analytics 4.
-- `NEXT_PUBLIC_CLARITY_ID`: Microsoft Clarity.
+- O `mlbId` deve seguir `MLB0000000000`.
+- A URL do Mercado Livre deve conter o número do MLB.
+- A imagem só pode ser marcada como verificada quando vier do anúncio exato.
 
-Não coloque chaves privadas no frontend.
+## Destacar produto
 
-## Checklist de deploy
+Defina `featured: true` apenas se:
 
-- Catálogo validado.
-- Sem produtos fictícios.
-- Links revisados.
-- Imagens sem quebra.
-- Busca e filtros testados.
-- Rotas principais revisadas em mobile e desktop.
-- `pnpm test`, `pnpm typecheck`, `pnpm lint` e `pnpm build` concluídos.
-- Relatórios finais gerados em `outputs/`.
+- `status` não for `hidden`;
+- `imageStatus` for `verified`;
+- condição, quantidade, preço e URL tiverem sido revisados.
+
+## Preços
+
+Preços vêm da exportação fornecida e precisam de `priceLastVerifiedAt`. Se a data ficar vencida, substitua no dado público por consulta no anúncio.
+
+## Publicação
+
+O workflow `.github/workflows/deploy-pages.yml` executa:
+
+1. checkout;
+2. setup Node;
+3. `npm ci`;
+4. lint;
+5. typecheck;
+6. auditorias;
+7. testes;
+8. build;
+9. upload de `dist`;
+10. deploy GitHub Pages.
+
+## Identidade
+
+Use apenas os arquivos em `public/brand/`. Não use o caractere Omega digitado como substituto de logo. Não publique assets com checkerboard visível.
 
 ## Manutenção mensal
 
 - Revisar anúncios ativos no Mercado Livre.
-- Atualizar preços e condições quando houver nova exportação.
-- Conferir produtos sem ficha técnica detalhada.
-- Substituir imagens genéricas por imagens individuais quando disponíveis.
-- Revisar cliques e buscas sem resultado quando analytics estiver ativo.
+- Atualizar exportação de produtos.
+- Validar imagens por MLB.
+- Corrigir pendências do CSV de auditoria.
+- Rodar build e workflow.
