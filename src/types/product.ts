@@ -1,0 +1,38 @@
+export type Product = {
+  id: string;
+  mlbId: string;
+  slug: string;
+  name: string;
+  shortName: string;
+  category: string;
+  subcategory?: string;
+  brand?: string;
+  model?: string;
+  condition: "novo" | "usado";
+  quantityInKit: number;
+  price?: number;
+  previousPrice?: number;
+  currency: "BRL";
+  image: string;
+  gallery: string[];
+  shortDescription: string;
+  fullDescription: string;
+  highlights: string[];
+  specifications: {
+    label: string;
+    value: string;
+  }[];
+  applications: string[];
+  packageContents: string[];
+  compatibility?: string[];
+  warnings?: string[];
+  mercadoLivreUrl: string;
+  linkStatus?: "confirmed" | "derivedFromExport" | "storeFallback";
+  storeUrl?: string;
+  active: boolean;
+  featured: boolean;
+  bestSeller?: boolean;
+  newArrival?: boolean;
+  priority?: number;
+  searchTerms: string[];
+};

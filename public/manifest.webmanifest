@@ -1,0 +1,16 @@
+{
+  "name": "OMEGAIMPORTS",
+  "short_name": "OMEGAIMPORTS",
+  "description": "Catálogo OMEGAIMPORTS com compra finalizada no Mercado Livre.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f8fb",
+  "theme_color": "#07111f",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

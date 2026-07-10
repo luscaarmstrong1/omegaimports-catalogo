@@ -1,0 +1,4081 @@
+import type { Product } from "@/src/types/product";
+
+export const products = [
+  {
+    "id": "mlb3939451361",
+    "mlbId": "MLB3939451361",
+    "slug": "modulo-de-comunicacao-ttgo-t-call-sim800l-lilygo-mlb3939451361",
+    "name": "Módulo De Comunicação Ttgo T-call, Sim800l Lilygo",
+    "shortName": "Módulo De Comunicação Ttgo T-call, Sim800l Lilygo",
+    "category": "Placas e microcontroladores",
+    "subcategory": "Placas de microcontroladores",
+    "brand": "Lilygo",
+    "model": "LILYGO LORA32",
+    "condition": "novo",
+    "quantityInKit": 1,
+    "price": 141.9,
+    "currency": "BRL",
+    "image": "/products/757733-MLA110012205690_042026-O.jpg",
+    "gallery": [
+      "/products/757733-MLA110012205690_042026-O.jpg",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "Módulo de Comunicação Sem Fio TTGO T-Call, SIM800L, Antena FPC, Cartão SIM, V1.4, ESP32",
+    "fullDescription": "*Prezado cliente, informo que, no momento, ainda não emito nota fiscal. Por favor, leve essa informação em consideração antes de finalizar sua compra.*\n\nMódulo de Comunicação Sem Fio TTGO T-Call, SIM800L, Antena FPC, Cartão SIM, V1.4, ESP32\n\nO Módulo de Comunicação Sem Fio TTGO T-Call é uma solução integrada que combina os módulos ESP32-WROver-B e SIM800L, oferecendo Wi-Fi, Bluetooth, GSM/GPRS e capacidades de carregamento de bateria.\n\n\nCaracterísticas Principais:\n\n- Produto homologado pela ANATEL\n- Módulo ESP32-WROver-B com Wi-Fi, Bluetooth e BLE\n- Módulo SIM800L com GSM/GPRS (850/900/1800/1900MHz)\n- Interface TYPE-C para depuração e carregamento\n- Suporte a transmissão de voz, SMS e dados\n- Dois portos áudio: entrada e saída para microfone\n- Luz indicadora LED azul\n- Suporte a cartão SIM 2G\n- Circuito de carga e descarga de bateria de lítio\n- Proteção contra sobrecarga e descarga\n\n\nEspecificações Técnicas:\n\n- Tensão de alimentação: DC 3.6V ~ 5V\n- Interface de bateria de lítio: TYPE-C (5V, 500mA)\n- Frequência operacional: 850/900/1800/1900MHz\n\n\nAplicações:\n\n- Projetos IoT\n- Comunicação M2M\n- Dispositivos portáteis\n- Sistemas de monitoramento remoto",
+    "highlights": [
+      "Módulo de Comunicação Sem Fio TTGO T-Call, SIM800L, Antena FPC, Cartão SIM, V1.4, ESP32"
+    ],
+    "specifications": [
+      {
+        "label": "Marca",
+        "value": "Lilygo"
+      },
+      {
+        "label": "Modelo",
+        "value": "LILYGO LORA32"
+      },
+      {
+        "label": "Microcontrolador",
+        "value": "ESP32"
+      },
+      {
+        "label": "Tensão de operação",
+        "value": "3,3V"
+      },
+      {
+        "label": "Voltagem de entrada recomendado",
+        "value": "5"
+      },
+      {
+        "label": "Frequência do relógio",
+        "value": "240.0 MHz"
+      },
+      {
+        "label": "Comprimento",
+        "value": "7.883 cm"
+      },
+      {
+        "label": "Largura",
+        "value": "2.892 cm"
+      },
+      {
+        "label": "Altura",
+        "value": "0.806 cm"
+      },
+      {
+        "label": "Peso",
+        "value": "11.77 g"
+      },
+      {
+        "label": "Inclui cabo usb",
+        "value": "Não"
+      }
+    ],
+    "applications": [
+      "Projetos IoT",
+      "Comunicação M2M",
+      "Dispositivos portáteis",
+      "Sistemas de monitoramento remoto"
+    ],
+    "packageContents": [],
+    "warnings": [
+      "Prezado cliente, informo que, no momento, ainda não emito nota fiscal. Por favor, leve essa informação em consideração antes de finalizar sua compra.",
+      "Módulo de Comunicação Sem Fio TTGO T-Call, SIM800L, Antena FPC, Cartão SIM, V1.4, ESP32",
+      "Características Principais:",
+      "Produto homologado pela ANATEL"
+    ],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-3939451361-modulo-de-comunicacao-ttgo-t-call-sim800l-lilygo_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": true,
+    "bestSeller": true,
+    "newArrival": false,
+    "priority": 1,
+    "searchTerms": [
+      "dulo",
+      "Comunica",
+      "Ttgo",
+      "T-call",
+      "Sim800l",
+      "Lilygo",
+      "Placas",
+      "microcontroladores",
+      "LILYGO",
+      "LORA32"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb5288925380",
+    "mlbId": "MLB5288925380",
+    "slug": "3x-kit-esp32-sim800l-modulo-sem-fio-gprs-t-call-antena-mlb5288925380",
+    "name": "3x Kit Esp32 Sim800l Módulo Sem Fio Gprs T-call + Antena",
+    "shortName": "3x Kit Esp32 Sim800l Módulo Sem Fio Gprs T-call + Antena",
+    "category": "Placas e microcontroladores",
+    "subcategory": "Placas de microcontroladores",
+    "brand": "Lilygo",
+    "model": "TTGO T-Call, SIM800L",
+    "condition": "novo",
+    "quantityInKit": 3,
+    "price": 382.0,
+    "currency": "BRL",
+    "image": "/products/D_NQ_985903-MLA113110801334_072026-OO.webp",
+    "gallery": [
+      "/products/D_NQ_985903-MLA113110801334_072026-OO.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "Garanta já o seu kit com 3 unidades para criar projetos completos com qualidade e conectividade avançada!",
+    "fullDescription": "---Prezado cliente, informo que as vendas são realizadas exclusivamente para pessoas físicas (CPF).---\n\n Garanta já o seu kit com 3 unidades para criar projetos completos com qualidade e conectividade avançada!\n\nKit 3 Unidades Módulo de Comunicação TTGO T-Call V1.4 ESP32 SIM800L GSM Wi-Fi Bluetooth ANATEL** \n\n\nDescubra o Módulo de Comunicação Sem Fio TTGO T-Call \nUma solução inovadora e integrada que combina os módulos ESP32-WROver-B e SIM800L, proporcionando conectividade Wi-Fi, Bluetooth, GSM/GPRS e funcionalidades de carregamento de bateria para projetos robustos e versáteis. \n\n O que Acompanha:\n3 Unidades Módulo de Comunicação TTGO T-Call V1.4 \n01 - Antena WiFi FPC conector IPEX\n01 - Cabo Conector para Bateria 3.7V: JST Pino 1,25 mm\n02 - Barras de Pinos 1x21\n\n Características Principais:\n- Produto Homologado pela ANATEL: Garantia de segurança e qualidade. \n- ESP32-WROver-B: Conectividade Wi-Fi, Bluetooth e BLE. \n- SIM800L: Suporte GSM/GPRS (850/900/1800/1900MHz). \n- Interface TYPE-C: Depuração e carregamento com conexão prática e segura. \n- Suporte a Voz, SMS e Dados: Ideal para múltiplas aplicações IoT e M2M. \n- Entradas e Saídas de Áudio: Conectores para microfone e alto-falante. \n- LED Indicador Azul: Facilita o monitoramento de status do dispositivo. \n- Circuito de Carga e Descarga Integrado: Proteção contra sobrecarga e descarga de bateria de lítio. \n\n Especificações Técnicas:\n- Tensão de Alimentação: DC 3.6V ~ 5V \n- Interface de Bateria: TYPE-C (5V, 500mA) \n- Frequência GSM/GPRS: 850/900/1800/1900MHz \n\n Aplicações Versáteis: \n- Projetos IoT: Ideal para redes de dispositivos conectados. \n- Comunicação M2M: Conexão eficiente entre máquinas e sistemas. \n- Dispositivos Portáteis: Tecnologia compacta e eficiente. \n- Monitoramento Remoto: Confiabilidade para sistemas de controle e rastreamento.",
+    "highlights": [
+      "Garanta já o seu kit com 3 unidades para criar projetos completos com qualidade e conectividade avançada!"
+    ],
+    "specifications": [
+      {
+        "label": "Marca",
+        "value": "Lilygo"
+      },
+      {
+        "label": "Modelo",
+        "value": "TTGO T-Call, SIM800L"
+      },
+      {
+        "label": "Microcontrolador",
+        "value": "ESP32"
+      },
+      {
+        "label": "Tensão de operação",
+        "value": "3,3 - 5V"
+      },
+      {
+        "label": "Voltagem de entrada recomendado",
+        "value": "3,3 - 5V"
+      },
+      {
+        "label": "Frequência do relógio",
+        "value": "240.0 MHz"
+      },
+      {
+        "label": "Capacidade da memória flash",
+        "value": "8000.0 KB"
+      },
+      {
+        "label": "Capacidade SRAM",
+        "value": "520.0 KB"
+      },
+      {
+        "label": "Comprimento",
+        "value": "7.883 cm"
+      },
+      {
+        "label": "Largura",
+        "value": "2.892 cm"
+      },
+      {
+        "label": "Altura",
+        "value": "0.9 cm"
+      },
+      {
+        "label": "Peso",
+        "value": "172.0 g"
+      },
+      {
+        "label": "Quantidade de pinos digitais de entrada e saída",
+        "value": "42"
+      }
+    ],
+    "applications": [
+      "Entradas e Saídas de Áudio: Conectores para microfone e alto-falante.",
+      "LED Indicador Azul: Facilita o monitoramento de status do dispositivo.",
+      "Circuito de Carga e Descarga Integrado: Proteção contra sobrecarga e descarga de bateria de lítio.",
+      "Especificações Técnicas:",
+      "Tensão de Alimentação: DC 3.6V ~ 5V",
+      "Interface de Bateria: TYPE-C (5V, 500mA)"
+    ],
+    "packageContents": [
+      "3 Unidades Módulo de Comunicação TTGO T-Call V1.4",
+      "01 - Antena WiFi FPC conector IPEX",
+      "01 - Cabo Conector para Bateria 3.7V: JST Pino 1,25 mm",
+      "02 - Barras de Pinos 1x21",
+      "Características Principais:",
+      "Produto Homologado pela ANATEL: Garantia de segurança e qualidade."
+    ],
+    "warnings": [
+      "Prezado cliente, informo que as vendas são realizadas exclusivamente para pessoas físicas (CPF).",
+      "Garanta já o seu kit com 3 unidades para criar projetos completos com qualidade e conectividade avançada!",
+      "Kit 3 Unidades Módulo de Comunicação TTGO T-Call V1.4 ESP32 SIM800L GSM Wi-Fi Bluetooth ANATEL",
+      "Descubra o Módulo de Comunicação Sem Fio TTGO T-Call"
+    ],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-5288925380-3x-kit-esp32-sim800l-modulo-sem-fio-gprs-t-call-antena_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": true,
+    "bestSeller": true,
+    "newArrival": false,
+    "priority": 2,
+    "searchTerms": [
+      "Kit",
+      "Esp32",
+      "Sim800l",
+      "dulo",
+      "Sem",
+      "Fio",
+      "Gprs",
+      "T-call",
+      "Antena",
+      "Placas",
+      "microcontroladores",
+      "Lilygo",
+      "TTGO",
+      "T-Call",
+      "SIM800L"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb4417997973",
+    "mlbId": "MLB4417997973",
+    "slug": "kit-2x-modulos-esp32-ttgo-t-call-sim800l-antena-novo-mlb4417997973",
+    "name": "Kit 2x Módulos Esp32 Ttgo T-call Sim800l + Antena (novo)",
+    "shortName": "Kit 2x Módulos Esp32 Ttgo T-call Sim800l + Antena (novo)",
+    "category": "Placas e microcontroladores",
+    "subcategory": "Placas de microcontroladores",
+    "brand": "Lilygo",
+    "model": "Kit 2x Módulos Esp32 Ttgo T-call Sim800l + Antena",
+    "condition": "usado",
+    "quantityInKit": 2,
+    "price": 245.0,
+    "currency": "BRL",
+    "image": "/products/D_NQ_NP_925680-MLA72842852904_112023-O.jpg",
+    "gallery": [
+      "/products/D_NQ_NP_925680-MLA72842852904_112023-O.jpg",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "TRATA-SE DE PRODUTOS NOVOS - EMBALADOS E NUNCA ABERTOS",
+    "fullDescription": "*Venda somente para pessoas físicas.*\n\n* TRATA-SE DE PRODUTOS NOVOS - EMBALADOS E NUNCA ABERTOS *\n\n5 unidades de Módulos de Comunicação Sem Fio TTGO T-Call V1.4 – ESP32 + SIM800L\n\nO TTGO T-Call V1.4 é um módulo integrado que combina o ESP32-WROver-B com o SIM800L, proporcionando conectividade Wi-Fi, Bluetooth, GSM/GPRS e suporte a bateria de lítio. O produto já vem com os pinos soldados, facilitando a instalação e integração em projetos eletrônicos. Ideal para aplicações IoT, comunicação M2M e monitoramento remoto.\n\nDestaques do produto:\nProduto homologado pela ANATEL\nMódulo ESP32-WROver-B com conectividade Wi-Fi, Bluetooth e BLE\nMódulo SIM800L compatível com redes GSM/GPRS (850/900/1800/1900MHz)\nInterface TYPE-C para alimentação e depuração\nSuporte a SMS, chamadas de voz e transmissão de dados\nCompatível com cartão SIM 2G\nCircuito integrado para carregamento e proteção da bateria de lítio\nLED indicador de status\nPinos já soldados, pronto para uso\n\nEspecificações técnicas:\nTensão de operação: 3.6V ~ 5V\nInterface de carregamento: TYPE-C (5V, 500mA)\nFrequência GSM: 850/900/1800/1900MHz\nAplicações recomendadas:\n\nProjetos IoT, como automação residencial, rastreamento e monitoramento remoto\nComunicação M2M para integração entre dispositivos inteligentes\nDispositivos portáteis que exigem conectividade móvel\nSistemas de monitoramento, segurança e telemetria\nProduto pronto para uso e ideal para diversos projetos eletrônicos.",
+    "highlights": [
+      "Venda somente para pessoas físicas.",
+      "TRATA-SE DE PRODUTOS NOVOS - EMBALADOS E NUNCA ABERTOS",
+      "5 unidades de Módulos de Comunicação Sem Fio TTGO T-Call V1.4 – ESP32 + SIM800L"
+    ],
+    "specifications": [
+      {
+        "label": "Marca",
+        "value": "Lilygo"
+      },
+      {
+        "label": "Modelo",
+        "value": "Kit 2x Módulos Esp32 Ttgo T-call Sim800l + Antena"
+      },
+      {
+        "label": "Microcontrolador",
+        "value": "ESP32"
+      },
+      {
+        "label": "Comprimento",
+        "value": "7.8 cm"
+      },
+      {
+        "label": "Largura",
+        "value": "11.0 cm"
+      },
+      {
+        "label": "Altura",
+        "value": "0.9 cm"
+      },
+      {
+        "label": "Peso",
+        "value": "80.0 g"
+      }
+    ],
+    "applications": [
+      "Destaques do produto:",
+      "Produto homologado pela ANATEL",
+      "Módulo ESP32-WROver-B com conectividade Wi-Fi, Bluetooth e BLE",
+      "Módulo SIM800L compatível com redes GSM/GPRS (850/900/1800/1900MHz)",
+      "Interface TYPE-C para alimentação e depuração",
+      "Suporte a SMS, chamadas de voz e transmissão de dados"
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-4417997973-kit-2x-modulos-esp32-ttgo-t-call-sim800l-antena-novo_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": true,
+    "bestSeller": true,
+    "newArrival": false,
+    "priority": 3,
+    "searchTerms": [
+      "Kit",
+      "dulos",
+      "Esp32",
+      "Ttgo",
+      "T-call",
+      "Sim800l",
+      "Antena",
+      "novo",
+      "Placas",
+      "microcontroladores",
+      "Lilygo"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb5272829812",
+    "mlbId": "MLB5272829812",
+    "slug": "modulo-gps-ublox-casa-da-robotica-gy-gps6mv2-antena-ceramica-arduino-mlb5272829812",
+    "name": "Módulo Gps Ublox Casa Da Robótica Gy-gps6mv2 Antena Cerâmica Arduino",
+    "shortName": "Módulo Gps Ublox Casa Da Robótica Gy-gps6mv2 Antena Cerâmica Ard",
+    "category": "Placas e microcontroladores",
+    "subcategory": "Placas de microcontroladores",
+    "brand": "Casa Da Robótica",
+    "model": "Ublox GY-GPS6MV2",
+    "condition": "novo",
+    "quantityInKit": 1,
+    "price": 360.9,
+    "currency": "BRL",
+    "image": "/products/D_Q_NP_2X_614597-MLA94063638439_102025-AB.webp",
+    "gallery": [
+      "/products/D_Q_NP_2X_614597-MLA94063638439_102025-AB.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "Este módulo GPS conta com antena cerâmica e EEPROM integradas, proporcionando ótima precisão e simplicidade na utilização. A comunicação é realizada por meio de uma porta serial, com 4 pinos",
+    "fullDescription": "Este módulo GPS conta com antena cerâmica e EEPROM integradas, proporcionando ótima precisão e simplicidade na utilização. A comunicação é realizada por meio de uma porta serial, com 4 pinos: VCC, RX, TX e GND. Seu tamanho reduzido e a antena integrada tornam o módulo ideal para aplicações embarcadas e produtos finais.\n\nEspecificações:\n\n- Modelo: GY-GPS6MV2;\n- Tensão de alimentação: 3~5V;\n- Antena cerâmica integrada;\n- EEPROM para registro dos dados;\n- Bateria de backup;\n- Modo economia de energia;\n- LED indicador de sinal;\n- Dimensões da antena: 25*25mm;\n- Dimensões do módulo: 25*35mm;\n- 5 furos de 3mm para fixação;\n- Taxa de transmissão padrão: 9600bps;\n- Compatibilidade com diversos controladores de voo;\n- Peso do módulo: 3g;\n- Peso da antena: 11g.",
+    "highlights": [
+      "Este módulo GPS conta com antena cerâmica e EEPROM integradas, proporcionando ótima precisão e simplicidade na utilização. A comunicação é realizada por meio de uma porta serial, com 4 pinos"
+    ],
+    "specifications": [
+      {
+        "label": "Marca",
+        "value": "Casa Da Robótica"
+      },
+      {
+        "label": "Modelo",
+        "value": "Ublox GY-GPS6MV2"
+      },
+      {
+        "label": "Microcontrolador",
+        "value": "GY-GPS6MV2"
+      },
+      {
+        "label": "Tensão de operação",
+        "value": "5V"
+      },
+      {
+        "label": "Comprimento",
+        "value": "2 cm"
+      },
+      {
+        "label": "Largura",
+        "value": "0.3 cm"
+      },
+      {
+        "label": "Altura",
+        "value": "0.3 cm"
+      },
+      {
+        "label": "Peso",
+        "value": "20 g"
+      }
+    ],
+    "applications": [
+      "Especificações:",
+      "Modelo: GY-GPS6MV2;",
+      "Tensão de alimentação: 3~5V;",
+      "Antena cerâmica integrada;",
+      "EEPROM para registro dos dados;",
+      "Bateria de backup;"
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-5272829812-modulo-gps-ublox-casa-da-robotica-gy-gps6mv2-antena-ceramica-arduino_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": true,
+    "bestSeller": true,
+    "newArrival": false,
+    "priority": 4,
+    "searchTerms": [
+      "dulo",
+      "Gps",
+      "Ublox",
+      "Casa",
+      "Rob",
+      "tica",
+      "Gy-gps6mv2",
+      "Antena",
+      "Cer",
+      "mica",
+      "Arduino",
+      "Placas",
+      "microcontroladores",
+      "GY-GPS6MV2"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb7070500932",
+    "mlbId": "MLB7070500932",
+    "slug": "placa-de-comunicacao-lilygo-com-esp32-ttgo-t-call-sim800l-mlb7070500932",
+    "name": "Placa De Comunicação Lilygo Com Esp32 Ttgo T-call Sim800l",
+    "shortName": "Placa De Comunicação Lilygo Com Esp32 Ttgo T-call Sim800l",
+    "category": "Placas e microcontroladores",
+    "subcategory": "Placas de microcontroladores",
+    "brand": "",
+    "model": "",
+    "condition": "novo",
+    "quantityInKit": 1,
+    "price": 151.9,
+    "currency": "BRL",
+    "image": "/products/D_Q_NP_2X_620097-MLA96767173502_112025-AB.webp",
+    "gallery": [
+      "/products/D_Q_NP_2X_620097-MLA96767173502_112025-AB.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "Módulo de Comunicação Sem Fio TTGO T-Call, SIM800L, Antena FPC, Cartão SIM, V1.4, ESP32",
+    "fullDescription": "*Prezado cliente, informo que, no momento, ainda não emito nota fiscal. Por favor, leve essa informação em consideração antes de finalizar sua compra.*\n\nMódulo de Comunicação Sem Fio TTGO T-Call, SIM800L, Antena FPC, Cartão SIM, V1.4, ESP32\n\nO Módulo de Comunicação Sem Fio TTGO T-Call é uma solução integrada que combina os módulos ESP32-WROver-B e SIM800L, oferecendo Wi-Fi, Bluetooth, GSM/GPRS e capacidades de carregamento de bateria.\n\n\nCaracterísticas Principais:\n\n- Produto homologado pela ANATEL\n- Módulo ESP32-WROver-B com Wi-Fi, Bluetooth e BLE\n- Módulo SIM800L com GSM/GPRS (850/900/1800/1900MHz)\n- Interface TYPE-C para depuração e carregamento\n- Suporte a transmissão de voz, SMS e dados\n- Dois portos áudio: entrada e saída para microfone\n- Luz indicadora LED azul\n- Suporte a cartão SIM 2G\n- Circuito de carga e descarga de bateria de lítio\n- Proteção contra sobrecarga e descarga\n\n\nEspecificações Técnicas:\n\n- Tensão de alimentação: DC 3.6V ~ 5V\n- Interface de bateria de lítio: TYPE-C (5V, 500mA)\n- Frequência operacional: 850/900/1800/1900MHz\n\n\nAplicações:\n\n- Projetos IoT\n- Comunicação M2M\n- Dispositivos portáteis\n- Sistemas de monitoramento remoto",
+    "highlights": [
+      "Módulo de Comunicação Sem Fio TTGO T-Call, SIM800L, Antena FPC, Cartão SIM, V1.4, ESP32"
+    ],
+    "specifications": [],
+    "applications": [
+      "Projetos IoT",
+      "Comunicação M2M",
+      "Dispositivos portáteis",
+      "Sistemas de monitoramento remoto"
+    ],
+    "packageContents": [],
+    "warnings": [
+      "Prezado cliente, informo que, no momento, ainda não emito nota fiscal. Por favor, leve essa informação em consideração antes de finalizar sua compra.",
+      "Módulo de Comunicação Sem Fio TTGO T-Call, SIM800L, Antena FPC, Cartão SIM, V1.4, ESP32",
+      "Características Principais:",
+      "Produto homologado pela ANATEL"
+    ],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-7070500932-placa-de-comunicacao-lilygo-com-esp32-ttgo-t-call-sim800l_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": true,
+    "bestSeller": true,
+    "newArrival": false,
+    "priority": 5,
+    "searchTerms": [
+      "Placa",
+      "Comunica",
+      "Lilygo",
+      "Com",
+      "Esp32",
+      "Ttgo",
+      "T-call",
+      "Sim800l",
+      "Placas",
+      "microcontroladores"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb3939446645",
+    "mlbId": "MLB3939446645",
+    "slug": "contator-trifasico-elitek-32a-220v-3-polos-modelo-ecp32a10m-mlb3939446645",
+    "name": "Contator Trifásico Elitek 32a 220v 3 Polos Modelo Ecp32a10m",
+    "shortName": "Contator Trifásico Elitek 32a 220v 3 Polos Modelo Ecp32a10m",
+    "category": "Automa??o e comando",
+    "subcategory": "Contatores e relés para eletrodomésticos",
+    "brand": "Elitek",
+    "model": "ECP32A10M",
+    "condition": "novo",
+    "quantityInKit": 1,
+    "price": 77.9,
+    "currency": "BRL",
+    "image": "/products/D_Q_NP_2X_757282-MLA100045769531_122025-AB.webp",
+    "gallery": [
+      "/products/D_Q_NP_2X_757282-MLA100045769531_122025-AB.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "O contator ECP é utilizado em circuitos AC 50/60 Hz, com tensão de trabalho nominal até 690V e corrente de trabalho nominal até 150A de acordo com a classe de emprego AC-3.",
+    "fullDescription": "Características:\nO contator ECP é utilizado em circuitos AC 50/60 Hz, com tensão de trabalho nominal até 690V e corrente de trabalho nominal até 150A de acordo com a classe de emprego AC-3. \nServe para ligar e desligar um circuito à distância e, quando conectado a um relé térmico, protege o circuito contra sobrecargas, funcionando como uma chave eletromagnética.\nTambém pode ser utilizado como temporizador, chave reversora e chave estrela triângulo quando combinado com blocos auxiliares.\n\nInformações Técnicas:\nMarca: Elitek\nModelo: ECP32A10M\nReferência: 1095\nFrequência Nominal de Trabalho: 50/60Hz\nTensão de trabalho: 220Vca\nPolos: 3\nN° de contatos: 1NA\n\n*IMAGENS MERAMENTE ILUSTRATIVAS.",
+    "highlights": [
+      "Características:",
+      "O contator ECP é utilizado em circuitos AC 50/60 Hz, com tensão de trabalho nominal até 690V e corrente de trabalho nominal até 150A de acordo com a classe de emprego AC-3.",
+      "Serve para ligar e desligar um circuito à distância e, quando conectado a um relé térmico, protege o circuito contra sobrecargas, funcionando como uma chave eletromagnética.",
+      "Também pode ser utilizado como temporizador, chave reversora e chave estrela triângulo quando combinado com blocos auxiliares.",
+      "Informações Técnicas:",
+      "Marca: Elitek"
+    ],
+    "specifications": [
+      {
+        "label": "Marca",
+        "value": "Elitek"
+      },
+      {
+        "label": "Modelo",
+        "value": "ECP32A10M"
+      },
+      {
+        "label": "Tipo de produto",
+        "value": "Contator"
+      },
+      {
+        "label": "Categorias de utilização",
+        "value": "AC3"
+      },
+      {
+        "label": "Material de contacto",
+        "value": "Liga de prata"
+      },
+      {
+        "label": "Tipo de montagem",
+        "value": "Trilho DIN"
+      },
+      {
+        "label": "Tipos de contato auxiliar",
+        "value": "1NA"
+      },
+      {
+        "label": "Tipo de motor",
+        "value": "Trifásico"
+      },
+      {
+        "label": "Usos recomendados",
+        "value": "MOTOR TRIFÁSICO INDUSTRIAL"
+      },
+      {
+        "label": "Quantidade de pólos principais",
+        "value": "3"
+      },
+      {
+        "label": "Quantidade de pólos auxiliares",
+        "value": "1"
+      },
+      {
+        "label": "Frequência",
+        "value": "50/60Hz"
+      },
+      {
+        "label": "Com proteção contra sobrecarga",
+        "value": "Não"
+      }
+    ],
+    "applications": [
+      "Projetos eletr?nicos e t?cnicos conforme caracter?sticas do an?ncio."
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-3939446645-contator-trifasico-elitek-32a-220v-3-polos-modelo-ecp32a10m_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": true,
+    "bestSeller": true,
+    "newArrival": false,
+    "priority": 6,
+    "searchTerms": [
+      "Contator",
+      "Trif",
+      "sico",
+      "Elitek",
+      "32a",
+      "220v",
+      "Polos",
+      "Modelo",
+      "Ecp32a10m",
+      "Automa??o",
+      "comando",
+      "ECP32A10M"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb3948176139",
+    "mlbId": "MLB3948176139",
+    "slug": "kit-50-conectores-fendido-16mm-split-bolt-cobre-mlb3948176139",
+    "name": "Kit 50 Conectores Fendido 16mm Split Bolt Cobre",
+    "shortName": "Kit 50 Conectores Fendido 16mm Split Bolt Cobre",
+    "category": "Conectores e instala??o",
+    "subcategory": "Conectores de áudio e vídeo",
+    "brand": "Contel",
+    "model": "Conector Split Bolt 16Mm² - Intelli",
+    "condition": "novo",
+    "quantityInKit": 50,
+    "price": 199.8,
+    "currency": "BRL",
+    "image": "/products/D_Q_NP_2X_757573-MLA113356351957_062026-AB.webp",
+    "gallery": [
+      "/products/D_Q_NP_2X_757573-MLA113356351957_062026-AB.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "Kit com 50 conectores Split Bolt (fendido) de cobre - 16mm²",
+    "fullDescription": "*Prezado cliente, informo que, no momento, ainda não emito nota fiscal. Por favor, leve essa informação em consideração antes de finalizar sua compra.*\n\nKit com 50 conectores Split Bolt (fendido) de cobre - 16mm² \n\nConjunto de 50 conectores Split Bolt (fendido) de alta qualidade, fabricados em cobre para garantir máxima condutividade elétrica e durabilidade. Ideal para conexões elétricas seguras e eficientes em instalações industriais, comerciais e residenciais. \n\nCaracterísticas principais: \n- Material: Cobre de alta pureza para excelente condutividade \n- Capacidade de cabo: 16mm² \n- Design Split Bolt (fendido): Fácil instalação e alta resistência mecânica \n- Rosca precisa para garantir conexão firme e estável \n- Resistente à corrosão, ideal para uso em ambientes internos e externos \n- Suporte para emendas e derivações confiáveis em circuitos de baixa e média tensão \n\nAplicações: \n- Conexão de cabos em quadros de distribuição \n- Derivação de circuitos elétricos \n- Sistemas de aterramento \n- Conexões temporárias ou permanentes em redes elétricas \n- Projetos industriais, comerciais e residenciais \n\nVantagens: \n- Fácil de instalar, com ferramenta comum de aperto \n- Alta resistência mecânica e elétrica para conexões seguras \n- Versatilidade para diversos tipos de projetos elétricos \n\nAdquira já o Kit com 50 conectores Split Bolt 16mm² e garanta conexões elétricas confiáveis e duradouras.",
+    "highlights": [
+      "Kit com 50 conectores Split Bolt (fendido) de cobre - 16mm²"
+    ],
+    "specifications": [
+      {
+        "label": "Marca",
+        "value": "Contel"
+      },
+      {
+        "label": "Modelo",
+        "value": "Conector Split Bolt 16Mm² - Intelli"
+      },
+      {
+        "label": "Formato de venda",
+        "value": "Kit"
+      },
+      {
+        "label": "Unidades por kit",
+        "value": "50"
+      },
+      {
+        "label": "Tipo de produto",
+        "value": "Conector"
+      },
+      {
+        "label": "Tipo de conector",
+        "value": "Split Bolt"
+      },
+      {
+        "label": "Gênero do conector",
+        "value": "Emenda"
+      },
+      {
+        "label": "Material de revestimento",
+        "value": "Cobre eletrolítico"
+      }
+    ],
+    "applications": [
+      "Conexão de cabos em quadros de distribuição",
+      "Derivação de circuitos elétricos",
+      "Sistemas de aterramento",
+      "Conexões temporárias ou permanentes em redes elétricas",
+      "Projetos industriais, comerciais e residenciais",
+      "Vantagens:"
+    ],
+    "packageContents": [],
+    "warnings": [
+      "Prezado cliente, informo que, no momento, ainda não emito nota fiscal. Por favor, leve essa informação em consideração antes de finalizar sua compra.",
+      "Kit com 50 conectores Split Bolt (fendido) de cobre - 16mm²",
+      "Características principais:",
+      "Material: Cobre de alta pureza para excelente condutividade"
+    ],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-3948176139-kit-50-conectores-fendido-16mm-split-bolt-cobre_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": true,
+    "bestSeller": false,
+    "newArrival": true,
+    "priority": 7,
+    "searchTerms": [
+      "Kit",
+      "Conectores",
+      "Fendido",
+      "16mm",
+      "Split",
+      "Bolt",
+      "Cobre",
+      "instala??o",
+      "Contel",
+      "Conector",
+      "16Mm",
+      "Intelli"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb3957971855",
+    "mlbId": "MLB3957971855",
+    "slug": "kit-com-100-prensa-cabos-pg9-cinza-vedacao-ip68-mlb3957971855",
+    "name": "Kit Com 100 Prensa Cabos Pg9 Cinza - Vedação Ip68",
+    "shortName": "Kit Com 100 Prensa Cabos Pg9 Cinza - Vedação Ip68",
+    "category": "Conectores e instala??o",
+    "subcategory": "Prensa-cabos náuticos",
+    "brand": "Manuks Ferramentas",
+    "model": "PG9-GRAYI - 50 PEÇAS PRENSA CABO CINZA 9MM",
+    "condition": "novo",
+    "quantityInKit": 100,
+    "price": 78.9,
+    "currency": "BRL",
+    "image": "/products/D_Q_NP_2X_765319-MLA99988235169_112025-AB.webp",
+    "gallery": [
+      "/products/D_Q_NP_2X_765319-MLA99988235169_112025-AB.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "Kit com 100 Prensa Cabos PG9 Cinza IP68 - Vedação e Segurança",
+    "fullDescription": "*Prezado cliente, informo que, no momento, ainda não emito nota fiscal. Por favor, leve essa informação em consideração antes de finalizar sua compra.*\n\n**Kit com 100 Prensa Cabos PG9 Cinza IP68 - Vedação e Segurança** \n\nConjunto de 100 prensa cabos modelo PG9 na cor cinza, projetados para proporcionar vedação e fixação seguras em cabos elétricos e eletrônicos. Com certificação IP68, esses conectores oferecem alta proteção contra poeira e água, ideais para aplicações internas e externas. \n\nCaracterísticas principais: \n- Modelo: PG9 \n- Cor: Cinza \n- Grau de proteção: IP68 (proteção total contra poeira e imersão em água) \n- Diâmetro de cabo suportado: 4 a 8 mm \n- Material de alta durabilidade e resistência a impactos \n- Vedação eficiente para evitar infiltrações de líquidos e poeira \n- Rosca precisa para fixação segura em caixas e painéis \n\nAplicações: \n- Painéis de controle e automação \n- Instalações industriais e comerciais \n- Equipamentos elétricos e eletrônicos \n- Sistemas de iluminação externa \n- Redes de telecomunicações e cabos de dados \n\nVantagens: \n- Fácil instalação com encaixe firme e vedação confiável \n- Alta resistência a ambientes agressivos e intempéries \n- Design compacto e estético para diversos tipos de projetos \n\nGaranta já o Kit com 50 prensa cabos PG9 e obtenha segurança e durabilidade em suas instalações elétricas e eletrônicas.",
+    "highlights": [
+      "Kit com 100 Prensa Cabos PG9 Cinza IP68 - Vedação e Segurança"
+    ],
+    "specifications": [
+      {
+        "label": "Marca",
+        "value": "Manuks Ferramentas"
+      },
+      {
+        "label": "Modelo",
+        "value": "PG9-GRAYI - 50 PEÇAS PRENSA CABO CINZA 9MM"
+      },
+      {
+        "label": "Material",
+        "value": "Plástico"
+      },
+      {
+        "label": "Diâmetro do cabo",
+        "value": "9.0 mm"
+      }
+    ],
+    "applications": [
+      "Características principais:",
+      "Modelo: PG9",
+      "Cor: Cinza",
+      "Grau de proteção: IP68 (proteção total contra poeira e imersão em água)",
+      "Diâmetro de cabo suportado: 4 a 8 mm",
+      "Material de alta durabilidade e resistência a impactos"
+    ],
+    "packageContents": [],
+    "warnings": [
+      "Prezado cliente, informo que, no momento, ainda não emito nota fiscal. Por favor, leve essa informação em consideração antes de finalizar sua compra.",
+      "Kit com 100 Prensa Cabos PG9 Cinza IP68 - Vedação e Segurança"
+    ],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-3957971855-kit-com-100-prensa-cabos-pg9-cinza-vedacao-ip68_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": true,
+    "bestSeller": false,
+    "newArrival": true,
+    "priority": 8,
+    "searchTerms": [
+      "Kit",
+      "Com",
+      "100",
+      "Prensa",
+      "Cabos",
+      "Pg9",
+      "Cinza",
+      "Veda",
+      "Ip68",
+      "Conectores",
+      "instala??o",
+      "Manuks",
+      "Ferramentas",
+      "PG9-GRAYI",
+      "PRENSA",
+      "CABO",
+      "CINZA",
+      "9MM"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb3963960643",
+    "mlbId": "MLB3963960643",
+    "slug": "10x-modulo-gps-ublox-gy-gps6mv2-para-arduino-drone-e-esp-mlb3963960643",
+    "name": "10x Módulo Gps Ublox Gy-gps6mv2 Para Arduino, Drone E Esp",
+    "shortName": "10x Módulo Gps Ublox Gy-gps6mv2 Para Arduino, Drone E Esp",
+    "category": "Placas e microcontroladores",
+    "subcategory": "Placas de microcontroladores",
+    "brand": "Casa Da Robótica",
+    "model": "Ublox GY-GPS6MV2",
+    "condition": "novo",
+    "quantityInKit": 10,
+    "price": 360.9,
+    "currency": "BRL",
+    "image": "/products/D_Q_NP_2X_907255-MLA99466124410_112025-AB.webp",
+    "gallery": [
+      "/products/D_Q_NP_2X_907255-MLA99466124410_112025-AB.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "VENDA DE KIT O ENVIO VAI SER DE 10 UNIDADES",
+    "fullDescription": "Descrição:\n\nVENDA DE KIT O ENVIO VAI SER DE 10 UNIDADES \n\nMódulo GPS Ublox GY-GPS6MV2, uma solução de alta precisão para projetos eletrônicos e de automação. Compatível com Arduino, ESP32, Raspberry Pi, drones e outros dispositivos, este módulo é ideal para aplicações que exigem localização precisa e confiável.\n\nCaracterísticas principais:\n\nModelo: Ublox GY-GPS6MV2 / GY-NEO6MV2\nChipset Ublox NEO-6M com alta sensibilidade e precisão\nSaída de dados em formato NMEA (GPGGA, GPGSA, GPRMC, etc.)\nTaxa de atualização ajustável (até 5 Hz)\nConector de antena externa para melhor recepção\nSuporte a detecção de localização em tempo real\nTensão de operação: 3.3V ~ 5V\nLED indicador para status de localização\nAplicações:\n\nNavegação de drones e robôs autônomos\nRastreamento GPS para projetos IoT\nSistemas de localização e monitoramento remoto\nDispositivos portáteis de navegação\nAutomação de veículos e monitoramento geográfico\nVantagens:\n\nAlta precisão e confiabilidade em localização\nFácil integração com plataformas de prototipagem\nCompacto e eficiente para diversos projetos\nAdquira já o Módulo GPS Ublox GY-GPS6MV2 e expanda suas possibilidades em projetos de localização e automação!",
+    "highlights": [
+      "Descrição:",
+      "VENDA DE KIT O ENVIO VAI SER DE 10 UNIDADES"
+    ],
+    "specifications": [
+      {
+        "label": "Marca",
+        "value": "Casa Da Robótica"
+      },
+      {
+        "label": "Modelo",
+        "value": "Ublox GY-GPS6MV2"
+      },
+      {
+        "label": "Microcontrolador",
+        "value": "GY-GPS6MV2"
+      },
+      {
+        "label": "Tensão de operação",
+        "value": "5V"
+      },
+      {
+        "label": "Comprimento",
+        "value": "2.0 cm"
+      },
+      {
+        "label": "Largura",
+        "value": "0.3 cm"
+      },
+      {
+        "label": "Altura",
+        "value": "0.3 cm"
+      },
+      {
+        "label": "Peso",
+        "value": "20.0 g"
+      }
+    ],
+    "applications": [
+      "Características principais:",
+      "Modelo: Ublox GY-GPS6MV2 / GY-NEO6MV2",
+      "Chipset Ublox NEO-6M com alta sensibilidade e precisão",
+      "Saída de dados em formato NMEA (GPGGA, GPGSA, GPRMC, etc.)",
+      "Taxa de atualização ajustável (até 5 Hz)",
+      "Conector de antena externa para melhor recepção"
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-3963960643-10x-modulo-gps-ublox-gy-gps6mv2-para-arduino-drone-e-esp_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": true,
+    "bestSeller": false,
+    "newArrival": true,
+    "priority": 9,
+    "searchTerms": [
+      "10x",
+      "dulo",
+      "Gps",
+      "Ublox",
+      "Gy-gps6mv2",
+      "Para",
+      "Arduino",
+      "Drone",
+      "Esp",
+      "Placas",
+      "microcontroladores",
+      "Casa",
+      "Rob",
+      "tica",
+      "GY-GPS6MV2"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb3963996985",
+    "mlbId": "MLB3963996985",
+    "slug": "kit-com-400-resistores-10k-ohms-5-tolerancia-mlb3963996985",
+    "name": "Kit Com 400 Resistores 10k Ohms 5% Tolerância",
+    "shortName": "Kit Com 400 Resistores 10k Ohms 5% Tolerância",
+    "category": "Componentes eletr?nicos",
+    "subcategory": "Resistores",
+    "brand": "",
+    "model": "",
+    "condition": "novo",
+    "quantityInKit": 400,
+    "price": 51.7,
+    "currency": "BRL",
+    "image": "/products/D_Q_NP_2X_942461-MLA99483689540_112025-AB.webp",
+    "gallery": [
+      "/products/D_Q_NP_2X_942461-MLA99483689540_112025-AB.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "Kit com 400 resistores de 10k Ohms com tolerância de 5%, ideais para projetos eletrônicos e protótipos. Esses resistores são amplamente utilizados em circuitos eletrônicos, prototipagem e ap",
+    "fullDescription": "Descrição:\nKit com 400 resistores de 10k Ohms com tolerância de 5%, ideais para projetos eletrônicos e protótipos. Esses resistores são amplamente utilizados em circuitos eletrônicos, prototipagem e aplicações com Arduino, Raspberry Pi e outras plataformas.\n\nCaracterísticas principais:\n\nResistência: 10k Ohms\nTolerância: 5%\nPotência nominal: 1/4W (0.25W)\nTecnologia de filme de carbono\nFácil identificação com código de cores\nConfiáveis para projetos de baixa e média potência\nCompatíveis com breadboards e perfboards\nAplicações:\n\nDivisores de tensão em circuitos eletrônicos\nLimitação de corrente para LEDs\nProjetos com microcontroladores como Arduino e ESP\nProtótipos de circuitos digitais e analógicos\nSistemas de automação e IoT\nVantagens:\n\nKit com grande quantidade para diversos projetos\nResistores de alta durabilidade e precisão\nVersáteis para uso em diferentes aplicações eletrônicas\nAdquira já o Kit com 400 Resistores de 10k Ohms e tenha sempre à disposição componentes essenciais para seus projetos eletrônicos!",
+    "highlights": [
+      "Descrição:"
+    ],
+    "specifications": [],
+    "applications": [
+      "Características principais:",
+      "Resistência: 10k Ohms",
+      "Tolerância: 5%",
+      "Potência nominal: 1/4W (0.25W)",
+      "Tecnologia de filme de carbono",
+      "Fácil identificação com código de cores"
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-3963996985-kit-com-400-resistores-10k-ohms-5-tolerancia_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": true,
+    "bestSeller": false,
+    "newArrival": true,
+    "priority": 10,
+    "searchTerms": [
+      "Kit",
+      "Com",
+      "400",
+      "Resistores",
+      "10k",
+      "Ohms",
+      "Toler",
+      "ncia",
+      "Componentes",
+      "eletr?nicos"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb3964028995",
+    "mlbId": "MLB3964028995",
+    "slug": "kit-com-400-resistores-100k-ohms-5-filme-de-carbono-mlb3964028995",
+    "name": "Kit Com 400 Resistores 100k Ohms 5% Filme De Carbono",
+    "shortName": "Kit Com 400 Resistores 100k Ohms 5% Filme De Carbono",
+    "category": "Componentes eletr?nicos",
+    "subcategory": "Resistores",
+    "brand": "",
+    "model": "",
+    "condition": "novo",
+    "quantityInKit": 400,
+    "price": 51.8,
+    "currency": "BRL",
+    "image": "/products/D_Q_NP_2X_970666-MLA106134164122_022026-AB.webp",
+    "gallery": [
+      "/products/D_Q_NP_2X_970666-MLA106134164122_022026-AB.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "Kit com 400 resistores de 100k Ohms, tolerância de 5%, fabricados com tecnologia de filme de carbono. Esses resistores são perfeitos para montagem de circuitos eletrônicos, prototipagem e de",
+    "fullDescription": "Descrição:\nKit com 400 resistores de 100k Ohms, tolerância de 5%, fabricados com tecnologia de filme de carbono. Esses resistores são perfeitos para montagem de circuitos eletrônicos, prototipagem e desenvolvimento de projetos com microcontroladores como Arduino, ESP e Raspberry Pi.\n\nCaracterísticas principais:\n\nResistência: 100k Ohms\nTolerância: 5%\nPotência nominal: 1/4W (0.25W)\nTecnologia de filme de carbono\nCódigo de cores padrão para fácil identificação\nConfiáveis para projetos de baixa e média potência\nFácil instalação em breadboards e perfboards\nAplicações:\n\nCircuitos de temporização e controle de sinal\nDivisores de tensão e limitadores de corrente\nProjetos de automação e IoT\nProtótipos de circuitos digitais e analógicos\nUso geral em eletrônica e microcontroladores\nVantagens:\n\nQuantidade ideal para diversos projetos eletrônicos\nAlta durabilidade e precisão confiável\nVersatilidade para uso em diferentes circuitos\nAdquira já seu Kit com 400 Resistores de 100k Ohms e garanta componentes essenciais para os seus projetos eletrônicos!",
+    "highlights": [
+      "Descrição:",
+      "Características principais:",
+      "Resistência: 100k Ohms",
+      "Tolerância: 5%",
+      "Potência nominal: 1/4W (0.25W)",
+      "Tecnologia de filme de carbono"
+    ],
+    "specifications": [],
+    "applications": [
+      "Circuitos de temporização e controle de sinal",
+      "Divisores de tensão e limitadores de corrente",
+      "Projetos de automação e IoT",
+      "Protótipos de circuitos digitais e analógicos",
+      "Uso geral em eletrônica e microcontroladores",
+      "Vantagens:"
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-3964028995-kit-com-400-resistores-100k-ohms-5-filme-de-carbono_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": true,
+    "bestSeller": false,
+    "newArrival": true,
+    "priority": 11,
+    "searchTerms": [
+      "Kit",
+      "Com",
+      "400",
+      "Resistores",
+      "100k",
+      "Ohms",
+      "Filme",
+      "Carbono",
+      "Componentes",
+      "eletr?nicos"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb3964934307",
+    "mlbId": "MLB3964934307",
+    "slug": "kit-com-9-sensores-de-corrente-ac-zmct123a-nao-invasivos-mlb3964934307",
+    "name": "Kit Com 9 Sensores De Corrente Ac Zmct123a Não Invasivos",
+    "shortName": "Kit Com 9 Sensores De Corrente Ac Zmct123a Não Invasivos",
+    "category": "Sensores e medi??o",
+    "subcategory": "Conversores de voltagem",
+    "brand": "Maxpow",
+    "model": "PZCT-2",
+    "condition": "novo",
+    "quantityInKit": 9,
+    "price": 129.9,
+    "currency": "BRL",
+    "image": "/products/D_Q_NP_2X_990084-MLB81309837992_122024-AB.webp",
+    "gallery": [
+      "/products/D_Q_NP_2X_990084-MLB81309837992_122024-AB.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "Kit com 9 transformadores/sensores de corrente AC ZMCT123A não invasivos, ideais para monitoramento de consumo elétrico em sistemas de automação e IoT. Esses sensores permitem medir corrente",
+    "fullDescription": "Kit com 9 transformadores/sensores de corrente AC ZMCT123A não invasivos, ideais para monitoramento de consumo elétrico em sistemas de automação e IoT. Esses sensores permitem medir corrente alternada de forma segura e eficiente, sem necessidade de cortar ou interromper o circuito.\n\nCaracterísticas principais:\n\nModelo: ZMCT123A\nTipo: Transformador/Sensor de corrente AC não invasivo\nFaixa de medição de corrente: 0~5A AC\nSaída analógica proporcional à corrente medida\nIsolamento galvânico para maior segurança\nCompacto e fácil de instalar\nIdeal para monitoramento remoto e projetos de automação\nAplicações:\n\nMonitoramento de consumo elétrico residencial e industrial\nSistemas de automação residencial (smart home)\nProjetos IoT para medição de corrente\nSistemas de proteção e controle de carga\nMedição de corrente em dispositivos alimentados por AC\nVantagens:\n\nMedição precisa e não invasiva\nFácil integração com microcontroladores como Arduino e ESP\nSegurança garantida com isolamento galvânico\nAdquira já o Kit com 3 Sensores de Corrente AC ZMCT123A e leve precisão e segurança aos seus projetos de monitoramento e automação!",
+    "highlights": [
+      "Características principais:",
+      "Modelo: ZMCT123A",
+      "Tipo: Transformador/Sensor de corrente AC não invasivo",
+      "Faixa de medição de corrente: 0~5A AC",
+      "Saída analógica proporcional à corrente medida",
+      "Isolamento galvânico para maior segurança"
+    ],
+    "specifications": [
+      {
+        "label": "Marca",
+        "value": "Maxpow"
+      },
+      {
+        "label": "Modelo",
+        "value": "PZCT-2"
+      },
+      {
+        "label": "Tensões de entrada",
+        "value": "110V"
+      },
+      {
+        "label": "Frequência",
+        "value": "50/60 HZ"
+      },
+      {
+        "label": "Tensões de saída",
+        "value": "220V"
+      },
+      {
+        "label": "Comprimento",
+        "value": "0.12 cm"
+      },
+      {
+        "label": "Largura",
+        "value": "0.24 cm"
+      },
+      {
+        "label": "Altura",
+        "value": "0.24 cm"
+      }
+    ],
+    "applications": [
+      "Monitoramento de consumo elétrico residencial e industrial",
+      "Sistemas de automação residencial (smart home)",
+      "Projetos IoT para medição de corrente",
+      "Sistemas de proteção e controle de carga",
+      "Medição de corrente em dispositivos alimentados por AC",
+      "Vantagens:"
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-3964934307-kit-com-9-sensores-de-corrente-ac-zmct123a-nao-invasivos_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": true,
+    "bestSeller": false,
+    "newArrival": true,
+    "priority": 12,
+    "searchTerms": [
+      "Kit",
+      "Com",
+      "Sensores",
+      "Corrente",
+      "Zmct123a",
+      "Invasivos",
+      "medi??o",
+      "Maxpow",
+      "PZCT-2"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb4051929221",
+    "mlbId": "MLB4051929221",
+    "slug": "kit-20x-modulos-esp32-ttgo-t-call-sim800l-antena-mlb4051929221",
+    "name": "Kit 20x Módulos Esp32 Ttgo T-call Sim800l + Antena",
+    "shortName": "Kit 20x Módulos Esp32 Ttgo T-call Sim800l + Antena",
+    "category": "Placas e microcontroladores",
+    "subcategory": "Placas de microcontroladores",
+    "brand": "Lilygo",
+    "model": "Kit 20x Módulos Esp32 Ttgo T-call Sim800l + Antena",
+    "condition": "novo",
+    "quantityInKit": 20,
+    "price": 1980.0,
+    "currency": "BRL",
+    "image": "/products/757733-MLA110012205690_042026-O.jpg",
+    "gallery": [
+      "/products/757733-MLA110012205690_042026-O.jpg",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "TRATA-SE DE PRODUTOS NOVOS - EMBALADOS E NUNCA ABERTOS",
+    "fullDescription": "*Venda somente para pessoas físicas.*\n\n* TRATA-SE DE PRODUTOS NOVOS - EMBALADOS E NUNCA ABERTOS *\n\n20 unidades de Módulos de Comunicação Sem Fio TTGO T-Call V1.4 – ESP32 + SIM800L\n\nO TTGO T-Call V1.4 é um módulo integrado que combina o ESP32-WROver-B com o SIM800L, proporcionando conectividade Wi-Fi, Bluetooth, GSM/GPRS e suporte a bateria de lítio. O produto já vem com os pinos soldados, facilitando a instalação e integração em projetos eletrônicos. Ideal para aplicações IoT, comunicação M2M e monitoramento remoto.\n\nDestaques do produto:\nProduto homologado pela ANATEL\nMódulo ESP32-WROver-B com conectividade Wi-Fi, Bluetooth e BLE\nMódulo SIM800L compatível com redes GSM/GPRS (850/900/1800/1900MHz)\nInterface TYPE-C para alimentação e depuração\nSuporte a SMS, chamadas de voz e transmissão de dados\nCompatível com cartão SIM 2G\nCircuito integrado para carregamento e proteção da bateria de lítio\nLED indicador de status\nPinos já soldados, pronto para uso\n\nEspecificações técnicas:\nTensão de operação: 3.6V ~ 5V\nInterface de carregamento: TYPE-C (5V, 500mA)\nFrequência GSM: 850/900/1800/1900MHz\nAplicações recomendadas:\n\nProjetos IoT, como automação residencial, rastreamento e monitoramento remoto\nComunicação M2M para integração entre dispositivos inteligentes\nDispositivos portáteis que exigem conectividade móvel\nSistemas de monitoramento, segurança e telemetria\nProduto pronto para uso e ideal para diversos projetos eletrônicos.",
+    "highlights": [
+      "Venda somente para pessoas físicas.",
+      "TRATA-SE DE PRODUTOS NOVOS - EMBALADOS E NUNCA ABERTOS",
+      "20 unidades de Módulos de Comunicação Sem Fio TTGO T-Call V1.4 – ESP32 + SIM800L"
+    ],
+    "specifications": [
+      {
+        "label": "Marca",
+        "value": "Lilygo"
+      },
+      {
+        "label": "Modelo",
+        "value": "Kit 20x Módulos Esp32 Ttgo T-call Sim800l + Antena"
+      },
+      {
+        "label": "Comprimento",
+        "value": "7.8 cm"
+      },
+      {
+        "label": "Largura",
+        "value": "1.1 cm"
+      },
+      {
+        "label": "Altura",
+        "value": "0.9 cm"
+      },
+      {
+        "label": "Peso",
+        "value": "80.0 g"
+      }
+    ],
+    "applications": [
+      "Destaques do produto:",
+      "Produto homologado pela ANATEL",
+      "Módulo ESP32-WROver-B com conectividade Wi-Fi, Bluetooth e BLE",
+      "Módulo SIM800L compatível com redes GSM/GPRS (850/900/1800/1900MHz)",
+      "Interface TYPE-C para alimentação e depuração",
+      "Suporte a SMS, chamadas de voz e transmissão de dados"
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-4051929221-kit-20x-modulos-esp32-ttgo-t-call-sim800l-antena_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": true,
+    "priority": 13,
+    "searchTerms": [
+      "Kit",
+      "20x",
+      "dulos",
+      "Esp32",
+      "Ttgo",
+      "T-call",
+      "Sim800l",
+      "Antena",
+      "Placas",
+      "microcontroladores",
+      "Lilygo"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb4051985849",
+    "mlbId": "MLB4051985849",
+    "slug": "kit-10x-modulos-esp32-ttgo-t-call-sim800l-antena-novo-mlb4051985849",
+    "name": "Kit 10x Módulos Esp32 Ttgo T-call Sim800l + Antena (novo)",
+    "shortName": "Kit 10x Módulos Esp32 Ttgo T-call Sim800l + Antena (novo)",
+    "category": "Placas e microcontroladores",
+    "subcategory": "Placas de microcontroladores",
+    "brand": "Lilygo",
+    "model": "Kit 20x Módulos Esp32 Ttgo T-call Sim800l + Antena",
+    "condition": "novo",
+    "quantityInKit": 10,
+    "price": 1259.0,
+    "currency": "BRL",
+    "image": "/products/D_NQ_985903-MLA113110801334_072026-OO.webp",
+    "gallery": [
+      "/products/D_NQ_985903-MLA113110801334_072026-OO.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "10 unidades de Módulos de Comunicação Sem Fio TTGO T-Call V1.4 – ESP32 + SIM800L",
+    "fullDescription": "*Venda somente para pessoas físicas.*\n\n10 unidades de Módulos de Comunicação Sem Fio TTGO T-Call V1.4 – ESP32 + SIM800L\n\nO TTGO T-Call V1.4 é um módulo integrado que combina o ESP32-WROver-B com o SIM800L, proporcionando conectividade Wi-Fi, Bluetooth, GSM/GPRS e suporte a bateria de lítio. O produto já vem com os pinos soldados, facilitando a instalação e integração em projetos eletrônicos. Ideal para aplicações IoT, comunicação M2M e monitoramento remoto.\n\nDestaques do produto:\nProduto homologado pela ANATEL\nMódulo ESP32-WROver-B com conectividade Wi-Fi, Bluetooth e BLE\nMódulo SIM800L compatível com redes GSM/GPRS (850/900/1800/1900MHz)\nInterface TYPE-C para alimentação e depuração\nSuporte a SMS, chamadas de voz e transmissão de dados\nCompatível com cartão SIM 2G\nCircuito integrado para carregamento e proteção da bateria de lítio\nLED indicador de status\nPinos já soldados, pronto para uso\n\nEspecificações técnicas:\nTensão de operação: 3.6V ~ 5V\nInterface de carregamento: TYPE-C (5V, 500mA)\nFrequência GSM: 850/900/1800/1900MHz\nAplicações recomendadas:\n\nProjetos IoT, como automação residencial, rastreamento e monitoramento remoto\nComunicação M2M para integração entre dispositivos inteligentes\nDispositivos portáteis que exigem conectividade móvel\nSistemas de monitoramento, segurança e telemetria\nProduto pronto para uso e ideal para diversos projetos eletrônicos.",
+    "highlights": [
+      "Venda somente para pessoas físicas.",
+      "10 unidades de Módulos de Comunicação Sem Fio TTGO T-Call V1.4 – ESP32 + SIM800L"
+    ],
+    "specifications": [
+      {
+        "label": "Marca",
+        "value": "Lilygo"
+      },
+      {
+        "label": "Modelo",
+        "value": "Kit 20x Módulos Esp32 Ttgo T-call Sim800l + Antena"
+      },
+      {
+        "label": "Microcontrolador",
+        "value": "ESP32"
+      },
+      {
+        "label": "Comprimento",
+        "value": "7.8 cm"
+      },
+      {
+        "label": "Largura",
+        "value": "1.1 cm"
+      },
+      {
+        "label": "Altura",
+        "value": "0.9 cm"
+      },
+      {
+        "label": "Peso",
+        "value": "80.0 g"
+      },
+      {
+        "label": "Inclui cabo usb",
+        "value": "Não"
+      }
+    ],
+    "applications": [
+      "Destaques do produto:",
+      "Produto homologado pela ANATEL",
+      "Módulo ESP32-WROver-B com conectividade Wi-Fi, Bluetooth e BLE",
+      "Módulo SIM800L compatível com redes GSM/GPRS (850/900/1800/1900MHz)",
+      "Interface TYPE-C para alimentação e depuração",
+      "Suporte a SMS, chamadas de voz e transmissão de dados"
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-4051985849-kit-10x-modulos-esp32-ttgo-t-call-sim800l-antena-novo_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": true,
+    "priority": 14,
+    "searchTerms": [
+      "Kit",
+      "10x",
+      "dulos",
+      "Esp32",
+      "Ttgo",
+      "T-call",
+      "Sim800l",
+      "Antena",
+      "novo",
+      "Placas",
+      "microcontroladores",
+      "Lilygo",
+      "20x"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb4669463663",
+    "mlbId": "MLB4669463663",
+    "slug": "10x-mini-fonte-chaveada-hi-link-hlk-pm01-5v-3w-mlb4669463663",
+    "name": "10x Mini Fonte Chaveada Hi-link Hlk-pm01 5v / 3w",
+    "shortName": "10x Mini Fonte Chaveada Hi-link Hlk-pm01 5v / 3w",
+    "category": "Fontes e alimenta??o",
+    "subcategory": "Fontes de alimentação comutadas integradas",
+    "brand": "Hi-Link",
+    "model": "HLK-PM01",
+    "condition": "novo",
+    "quantityInKit": 10,
+    "price": 298.0,
+    "currency": "BRL",
+    "image": "/products/D_NQ_NP_925680-MLA72842852904_112023-O.jpg",
+    "gallery": [
+      "/products/D_NQ_NP_925680-MLA72842852904_112023-O.jpg",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "KIT 10UN MINI FONTE HI LINK HLK-PM01 110-220VAC - 5VDC",
+    "fullDescription": "KIT 10UN MINI FONTE HI LINK HLK-PM01 110-220VAC - 5VDC\nFonte de alimentação chaveada compacta de baixa potência, ideal para integração em projetos eletrônicos que necessitam de uma saída regulada de 5VDC a partir da rede elétrica AC.\n\n\nINFORMAÇÕES ADICIONAIS\n- Kit com 10 unidades para projetos em escala ou revenda.\n- Alta eficiência energética.\n- Design compacto para montagem em placas de circuito impresso.\n- Proteção contra sobrecarga e curto-circuito.\n- Amplamente utilizada em automação residencial, IoT e sistemas de controle.\n\n\nCOMPATIBILIDADE\n- Compatível com qualquer dispositivo ou sistema que demande alimentação de 5VDC e corrente de até 600mA (0.6A).\n- Adequada para alimentar microcontroladores, sensores, módulos de comunicação e outros componentes eletrônicos de baixo consumo.\n\n\nESPECIFICAÇÕES TÉCNICAS\n- Modelo: HLK-PM01\n- Fabricante: Hi-Link\n- Tensão de Entrada: 100-240VAC (50/60Hz)\n- Tensão de Saída: 5VDC\n- Corrente de Saída Máxima: 600mA (0.6A)\n- Potência Máxima: 3W\n- Ripple e Ruído: Menos de 100mVp-p\n- Eficiência: Típica 75%\n- Temperatura de Operação: -20 a +60 graus Celsius\n- Dimensões: 39.5mm x 22.2mm x 16mm (aproximadamente)",
+    "highlights": [
+      "KIT 10UN MINI FONTE HI LINK HLK-PM01 110-220VAC - 5VDC",
+      "Fonte de alimentação chaveada compacta de baixa potência, ideal para integração em projetos eletrônicos que necessitam de uma saída regulada de 5VDC a partir da rede elétrica AC.",
+      "INFORMAÇÕES ADICIONAIS",
+      "Kit com 10 unidades para projetos em escala ou revenda.",
+      "Alta eficiência energética.",
+      "Design compacto para montagem em placas de circuito impresso."
+    ],
+    "specifications": [
+      {
+        "label": "Marca",
+        "value": "Hi-Link"
+      },
+      {
+        "label": "Modelo",
+        "value": "HLK-PM01"
+      },
+      {
+        "label": "Potência",
+        "value": "3.0 W"
+      },
+      {
+        "label": "Potência de saída",
+        "value": "3.0 W"
+      },
+      {
+        "label": "Materiais",
+        "value": "Alumínio"
+      },
+      {
+        "label": "Frequência",
+        "value": "50/60Hz"
+      },
+      {
+        "label": "Voltagem mínima de entrada",
+        "value": "100.0 V"
+      },
+      {
+        "label": "Voltagem máxima de entrada",
+        "value": "220V"
+      },
+      {
+        "label": "Voltagem mínima de saída",
+        "value": "5.0 V"
+      },
+      {
+        "label": "Voltagem máxima de saída",
+        "value": "5V"
+      },
+      {
+        "label": "Comprimento",
+        "value": "3.4 cm"
+      },
+      {
+        "label": "Largura",
+        "value": "2.02 cm"
+      },
+      {
+        "label": "Altura",
+        "value": "1.5 cm"
+      },
+      {
+        "label": "Temperatura mínima de operação",
+        "value": "0.0 °C"
+      },
+      {
+        "label": "Temperatura máxima de operação",
+        "value": "60.0 °C"
+      },
+      {
+        "label": "Com proteção contra curto-circuito",
+        "value": "Sim"
+      }
+    ],
+    "applications": [
+      "Projetos eletr?nicos e t?cnicos conforme caracter?sticas do an?ncio."
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-4669463663-10x-mini-fonte-chaveada-hi-link-hlk-pm01-5v-3w_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "priority": 15,
+    "searchTerms": [
+      "10x",
+      "Mini",
+      "Fonte",
+      "Chaveada",
+      "Hi-link",
+      "Hlk-pm01",
+      "Fontes",
+      "alimenta??o",
+      "Hi-Link",
+      "HLK-PM01"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb4669463945",
+    "mlbId": "MLB4669463945",
+    "slug": "kit-10un-mini-fonte-hi-link-hlk-pm01-110-220vac-5vdc-mlb4669463945",
+    "name": "Kit 10un Mini Fonte Hi Link Hlk-pm01 110-220vac - 5vdc",
+    "shortName": "Kit 10un Mini Fonte Hi Link Hlk-pm01 110-220vac - 5vdc",
+    "category": "Fontes e alimenta??o",
+    "subcategory": "Fontes de alimentação comutadas integradas",
+    "brand": "Hi-Link",
+    "model": "HLK-PM01",
+    "condition": "novo",
+    "quantityInKit": 10,
+    "price": 255.0,
+    "currency": "BRL",
+    "image": "/products/D_Q_NP_2X_614597-MLA94063638439_102025-AB.webp",
+    "gallery": [
+      "/products/D_Q_NP_2X_614597-MLA94063638439_102025-AB.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "KIT 10UN MINI FONTE HI LINK HLK-PM01 110-220VAC - 5VDC",
+    "fullDescription": "KIT 10UN MINI FONTE HI LINK HLK-PM01 110-220VAC - 5VDC\nFonte de alimentação chaveada compacta de baixa potência, ideal para integração em projetos eletrônicos que necessitam de uma saída regulada de 5VDC a partir da rede elétrica AC.\n\n\nINFORMAÇÕES ADICIONAIS\n- Kit com 10 unidades para projetos em escala ou revenda.\n- Alta eficiência energética.\n- Design compacto para montagem em placas de circuito impresso.\n- Proteção contra sobrecarga e curto-circuito.\n- Amplamente utilizada em automação residencial, IoT e sistemas de controle.\n\n\nCOMPATIBILIDADE\n- Compatível com qualquer dispositivo ou sistema que demande alimentação de 5VDC e corrente de até 600mA (0.6A).\n- Adequada para alimentar microcontroladores, sensores, módulos de comunicação e outros componentes eletrônicos de baixo consumo.\n\n\nESPECIFICAÇÕES TÉCNICAS\n- Modelo: HLK-PM01\n- Fabricante: Hi-Link\n- Tensão de Entrada: 100-240VAC (50/60Hz)\n- Tensão de Saída: 5VDC\n- Corrente de Saída Máxima: 600mA (0.6A)\n- Potência Máxima: 3W\n- Ripple e Ruído: Menos de 100mVp-p\n- Eficiência: Típica 75%\n- Temperatura de Operação: -20 a +60 graus Celsius\n- Dimensões: 39.5mm x 22.2mm x 16mm (aproximadamente)",
+    "highlights": [
+      "KIT 10UN MINI FONTE HI LINK HLK-PM01 110-220VAC - 5VDC",
+      "Fonte de alimentação chaveada compacta de baixa potência, ideal para integração em projetos eletrônicos que necessitam de uma saída regulada de 5VDC a partir da rede elétrica AC.",
+      "INFORMAÇÕES ADICIONAIS",
+      "Kit com 10 unidades para projetos em escala ou revenda.",
+      "Alta eficiência energética.",
+      "Design compacto para montagem em placas de circuito impresso."
+    ],
+    "specifications": [
+      {
+        "label": "Marca",
+        "value": "Hi-Link"
+      },
+      {
+        "label": "Modelo",
+        "value": "HLK-PM01"
+      },
+      {
+        "label": "Potência",
+        "value": "3.0 W"
+      },
+      {
+        "label": "Potência de saída",
+        "value": "3.0 W"
+      },
+      {
+        "label": "Materiais",
+        "value": "Alumínio"
+      },
+      {
+        "label": "Frequência",
+        "value": "50/60Hz"
+      },
+      {
+        "label": "Voltagem mínima de entrada",
+        "value": "100.0 V"
+      },
+      {
+        "label": "Voltagem máxima de entrada",
+        "value": "220V"
+      },
+      {
+        "label": "Voltagem mínima de saída",
+        "value": "5.0 V"
+      },
+      {
+        "label": "Voltagem máxima de saída",
+        "value": "5V"
+      },
+      {
+        "label": "Comprimento",
+        "value": "3.4 cm"
+      },
+      {
+        "label": "Largura",
+        "value": "2.02 cm"
+      },
+      {
+        "label": "Altura",
+        "value": "1.5 cm"
+      },
+      {
+        "label": "Temperatura mínima de operação",
+        "value": "0.0 °C"
+      },
+      {
+        "label": "Temperatura máxima de operação",
+        "value": "60.0 °C"
+      },
+      {
+        "label": "Com proteção contra curto-circuito",
+        "value": "Sim"
+      }
+    ],
+    "applications": [
+      "Projetos eletr?nicos e t?cnicos conforme caracter?sticas do an?ncio."
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-4669463945-kit-10un-mini-fonte-hi-link-hlk-pm01-110-220vac-5vdc_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "priority": 16,
+    "searchTerms": [
+      "Kit",
+      "10un",
+      "Mini",
+      "Fonte",
+      "Link",
+      "Hlk-pm01",
+      "110-220vac",
+      "5vdc",
+      "Fontes",
+      "alimenta??o",
+      "Hi-Link",
+      "HLK-PM01"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb4669465391",
+    "mlbId": "MLB4669465391",
+    "slug": "kit-c-3-sensor-de-corrente-ac-nao-invasivosct-013-100a-50ma-mlb4669465391",
+    "name": "Kit C/3 Sensor De Corrente Ac Não Invasivosct-013 100a 50ma",
+    "shortName": "Kit C/3 Sensor De Corrente Ac Não Invasivosct-013 100a 50ma",
+    "category": "Placas e microcontroladores",
+    "subcategory": "Placas de microcontroladores",
+    "brand": "Tecneu",
+    "model": "AC SCT-013",
+    "condition": "novo",
+    "quantityInKit": 1,
+    "price": 138.3,
+    "currency": "BRL",
+    "image": "/products/D_Q_NP_2X_620097-MLA96767173502_112025-AB.webp",
+    "gallery": [
+      "/products/D_Q_NP_2X_620097-MLA96767173502_112025-AB.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "Kit com 4 sensores de corrente SCT-013, ideal para monitoramento de consumo de energia em projetos de automação, Arduino, Raspberry Pi e medições elétricas sem necessidade de intervenção dir",
+    "fullDescription": "Kit com 4 sensores de corrente SCT-013, ideal para monitoramento de consumo de energia em projetos de automação, Arduino, Raspberry Pi e medições elétricas sem necessidade de intervenção direta no circuito.\n\nEspecificações técnicas:\nModelo: SCT-013-000\nTipo: Sensor de corrente não invasivo\nCorrente máxima: 100A\nSaída: 50mA\nPrecisão: Alta fidelidade na medição\nCompatibilidade: Funciona com Arduino, ESP32, Raspberry Pi, entre outros.\n\nVantagens do produto:\nMede corrente sem contato direto com o circuito\nAlta durabilidade e materiais de qualidade\nFácil instalação e uso\nIdeal para automação residencial e monitoramento de consumo de energia.\n\nDúvidas? Utilize o campo de perguntas, estamos à disposição para ajudar.",
+    "highlights": [
+      "Especificações técnicas:",
+      "Modelo: SCT-013-000",
+      "Tipo: Sensor de corrente não invasivo",
+      "Corrente máxima: 100A",
+      "Saída: 50mA",
+      "Precisão: Alta fidelidade na medição"
+    ],
+    "specifications": [
+      {
+        "label": "Marca",
+        "value": "Tecneu"
+      },
+      {
+        "label": "Modelo",
+        "value": "AC SCT-013"
+      },
+      {
+        "label": "Microcontrolador",
+        "value": "Sensor de Corriente Alterna"
+      },
+      {
+        "label": "Capacidade da memória flash",
+        "value": "0.0 KB"
+      },
+      {
+        "label": "Comprimento",
+        "value": "3.2 cm"
+      },
+      {
+        "label": "Largura",
+        "value": "5.7 cm"
+      },
+      {
+        "label": "Altura",
+        "value": "2.12 cm"
+      },
+      {
+        "label": "Inclui cabo usb",
+        "value": "Não"
+      }
+    ],
+    "applications": [
+      "Projetos eletr?nicos e t?cnicos conforme caracter?sticas do an?ncio."
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-4669465391-kit-c-3-sensor-de-corrente-ac-nao-invasivosct-013-100a-50ma_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "priority": 17,
+    "searchTerms": [
+      "Kit",
+      "Sensor",
+      "Corrente",
+      "Invasivosct-013",
+      "100a",
+      "50ma",
+      "Placas",
+      "microcontroladores",
+      "Tecneu",
+      "SCT-013"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb4669465397",
+    "mlbId": "MLB4669465397",
+    "slug": "sensor-de-corrente-ac-nao-invasivo-ac-sct-013-100a-50ma-mlb4669465397",
+    "name": "Sensor De Corrente Ac Não Invasivo Ac Sct-013 100a 50ma",
+    "shortName": "Sensor De Corrente Ac Não Invasivo Ac Sct-013 100a 50ma",
+    "category": "Placas e microcontroladores",
+    "subcategory": "Placas de microcontroladores",
+    "brand": "Tecneu",
+    "model": "AC SCT-013",
+    "condition": "novo",
+    "quantityInKit": 1,
+    "price": 138.3,
+    "currency": "BRL",
+    "image": "/products/D_Q_NP_2X_757282-MLA100045769531_122025-AB.webp",
+    "gallery": [
+      "/products/D_Q_NP_2X_757282-MLA100045769531_122025-AB.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "Oferta OMEGAIMPORTS para Sensor De Corrente Ac Não Invasivo Ac Sct-013 100a 50ma.",
+    "fullDescription": "",
+    "highlights": [
+      "Oferta OMEGAIMPORTS para Sensor De Corrente Ac Não Invasivo Ac Sct-013 100a 50ma."
+    ],
+    "specifications": [
+      {
+        "label": "Marca",
+        "value": "Tecneu"
+      },
+      {
+        "label": "Modelo",
+        "value": "AC SCT-013"
+      },
+      {
+        "label": "Microcontrolador",
+        "value": "Sensor de Corriente Alterna"
+      },
+      {
+        "label": "Capacidade da memória flash",
+        "value": "0 KB"
+      },
+      {
+        "label": "Comprimento",
+        "value": "3.2 cm"
+      },
+      {
+        "label": "Largura",
+        "value": "5.7 cm"
+      },
+      {
+        "label": "Altura",
+        "value": "2.12 cm"
+      },
+      {
+        "label": "Inclui cabo usb",
+        "value": "Não"
+      }
+    ],
+    "applications": [
+      "Projetos eletr?nicos e t?cnicos conforme caracter?sticas do an?ncio."
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-4669465397-sensor-de-corrente-ac-nao-invasivo-ac-sct-013-100a-50ma_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "priority": 18,
+    "searchTerms": [
+      "Sensor",
+      "Corrente",
+      "Invasivo",
+      "Sct-013",
+      "100a",
+      "50ma",
+      "Placas",
+      "microcontroladores",
+      "Tecneu",
+      "SCT-013"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb4669478861",
+    "mlbId": "MLB4669478861",
+    "slug": "40x-chave-micro-switch-kw1-103-15a-125vac-16a-250vac-mlb4669478861",
+    "name": "40x Chave Micro Switch Kw1-103 15a 125vac / 16a 250vac",
+    "shortName": "40x Chave Micro Switch Kw1-103 15a 125vac / 16a 250vac",
+    "category": "Automa??o e comando",
+    "subcategory": "Interruptores eletrônicos",
+    "brand": "Genérica",
+    "model": "KW1-103",
+    "condition": "novo",
+    "quantityInKit": 40,
+    "price": 214.0,
+    "currency": "BRL",
+    "image": "/products/D_Q_NP_2X_757573-MLA113356351957_062026-AB.webp",
+    "gallery": [
+      "/products/D_Q_NP_2X_757573-MLA113356351957_062026-AB.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "O Kit com 40 Chaves Micro Switch KW1-103 é ideal para diversas aplicações elétricas e eletrônicas que exigem alta confiabilidade e durabilidade. Esses micro switches suportam correntes de at",
+    "fullDescription": "O Kit com 40 Chaves Micro Switch KW1-103 é ideal para diversas aplicações elétricas e eletrônicas que exigem alta confiabilidade e durabilidade. Esses micro switches suportam correntes de até 15A a 125VAC ou 16A a 250VAC, garantindo excelente desempenho em ambientes industriais e residenciais.\n\nEspecificações:\nModelo: KW1-103\nCapacidade de corrente: 15A (125VAC) / 16A (250VAC)\nTipo: Chave micro switch\nMaterial: Corpo de plástico resistente e terminais metálicos\nQuantidade: 40 unidades\n\nAplicações:\nSistemas de automação\nControle de dispositivos eletrodomésticos\nMáquinas industriais\nProjetos eletrônicos e prototipagem\nEsse kit oferece a solução ideal para quem busca versatilidade, segurança e eficiência em projetos e instalações elétricas.",
+    "highlights": [
+      "O Kit com 40 Chaves Micro Switch KW1-103 é ideal para diversas aplicações elétricas e eletrônicas que exigem alta confiabilidade e durabilidade. Esses micro switches suportam correntes de at"
+    ],
+    "specifications": [
+      {
+        "label": "Cor",
+        "value": "Preto"
+      },
+      {
+        "label": "Marca",
+        "value": "Genérica"
+      },
+      {
+        "label": "Modelo",
+        "value": "KW1-103"
+      },
+      {
+        "label": "Tipo de interruptor",
+        "value": "Micro switch"
+      },
+      {
+        "label": "Modelo alfanumérico",
+        "value": "KW1-103"
+      },
+      {
+        "label": "Voltagem nominal",
+        "value": "125VAC / 250VAC"
+      },
+      {
+        "label": "Corrente nominal",
+        "value": "16.0 A"
+      },
+      {
+        "label": "Quantidade de terminais",
+        "value": "3"
+      },
+      {
+        "label": "Quantidade de canais",
+        "value": "1"
+      },
+      {
+        "label": "Com luz led",
+        "value": "Não"
+      },
+      {
+        "label": "Com wi-fi",
+        "value": "Não"
+      },
+      {
+        "label": "Posições",
+        "value": "2"
+      }
+    ],
+    "applications": [
+      "Especificações:",
+      "Modelo: KW1-103",
+      "Capacidade de corrente: 15A (125VAC) / 16A (250VAC)",
+      "Tipo: Chave micro switch",
+      "Material: Corpo de plástico resistente e terminais metálicos",
+      "Quantidade: 40 unidades"
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-4669478861-40x-chave-micro-switch-kw1-103-15a-125vac-16a-250vac_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "priority": 19,
+    "searchTerms": [
+      "40x",
+      "Chave",
+      "Micro",
+      "Switch",
+      "Kw1-103",
+      "15a",
+      "125vac",
+      "16a",
+      "250vac",
+      "Automa??o",
+      "comando",
+      "Gen",
+      "rica",
+      "KW1-103"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb4669479535",
+    "mlbId": "MLB4669479535",
+    "slug": "kit-100-barra-de-pinos-femea-1x15-2-54mm-pic-arduino-mlb4669479535",
+    "name": "Kit 100 Barra De Pinos - Fêmea - 1x15 - 2,54mm - Pic/arduino",
+    "shortName": "Kit 100 Barra De Pinos - Fêmea - 1x15 - 2,54mm - Pic/arduino",
+    "category": "Placas e microcontroladores",
+    "subcategory": "Conectores de áudio e vídeo",
+    "brand": "Genérica",
+    "model": "Barra de Pinos Fêmea 1x15 2.54mm",
+    "condition": "novo",
+    "quantityInKit": 100,
+    "price": 118.0,
+    "currency": "BRL",
+    "image": "/products/D_Q_NP_2X_765319-MLA99988235169_112025-AB.webp",
+    "gallery": [
+      "/products/D_Q_NP_2X_765319-MLA99988235169_112025-AB.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "Kit 100 Peças - Barra de Pinos Fêmea 1x15 Passo 2,54mm MCI 180°",
+    "fullDescription": "Kit 100 Peças - Barra de Pinos Fêmea 1x15 Passo 2,54mm MCI 180° \n\nEste kit de 100 barras de pinos fêmea 1x15 com passo de 2,54mm é ideal para projetos que exigem precisão e praticidade, proporcionando uma conexão segura e de alta qualidade. \n\nCaracterísticas Principais: \n- Compatibilidade ampla: Perfeito para Arduino Nano e ESP32 de 30 pinos, além de outros microcontroladores. \n- Passo de 2,54mm: Padrão universal que facilita a integração em diferentes projetos eletrônicos. \n- Conexão estável: Garante excelente condutividade e segurança em protótipos e montagens. \n- Ângulo de 180°: Facilita o encaixe em placas e módulos com ótimo aproveitamento de espaço. \n- Durabilidade: Fabricado com materiais de alta qualidade para maior resistência e vida útil. \n\nAplicações: \n- Prototipagem eletrônica: Montagem e teste de circuitos com facilidade. \n- Projetos IoT: Conexões rápidas e confiáveis para placas como o ESP32. \n- Desenvolvimento com Arduino: Compatível com vários modelos para montagem de shields e periféricos. \n- Automação e robótica: Ideal para conexões de motores, sensores e atuadores em projetos de robótica. \n- Educação e ensino: Excelente para aprendizado prático de eletrônica em cursos e oficinas. \n\nTransforme seus projetos com conexões confiáveis e seguras.",
+    "highlights": [
+      "Kit 100 Peças - Barra de Pinos Fêmea 1x15 Passo 2,54mm MCI 180°",
+      "Este kit de 100 barras de pinos fêmea 1x15 com passo de 2,54mm é ideal para projetos que exigem precisão e praticidade, proporcionando uma conexão segura e de alta qualidade.",
+      "Características Principais:",
+      "Compatibilidade ampla: Perfeito para Arduino Nano e ESP32 de 30 pinos, além de outros microcontroladores.",
+      "Passo de 2,54mm: Padrão universal que facilita a integração em diferentes projetos eletrônicos.",
+      "Conexão estável: Garante excelente condutividade e segurança em protótipos e montagens."
+    ],
+    "specifications": [
+      {
+        "label": "Cor",
+        "value": "Preto"
+      },
+      {
+        "label": "Marca",
+        "value": "Genérica"
+      },
+      {
+        "label": "Modelo",
+        "value": "Barra de Pinos Fêmea 1x15 2.54mm"
+      },
+      {
+        "label": "Formato de venda",
+        "value": "Kit"
+      },
+      {
+        "label": "Unidades por kit",
+        "value": "100"
+      },
+      {
+        "label": "Tipo de produto",
+        "value": "Conector"
+      },
+      {
+        "label": "Tipo de conector",
+        "value": "Pino"
+      },
+      {
+        "label": "Gênero do conector",
+        "value": "Fêmea"
+      },
+      {
+        "label": "Material de revestimento",
+        "value": "Plástico"
+      }
+    ],
+    "applications": [
+      "Prototipagem eletrônica: Montagem e teste de circuitos com facilidade.",
+      "Projetos IoT: Conexões rápidas e confiáveis para placas como o ESP32.",
+      "Desenvolvimento com Arduino: Compatível com vários modelos para montagem de shields e periféricos.",
+      "Automação e robótica: Ideal para conexões de motores, sensores e atuadores em projetos de robótica.",
+      "Educação e ensino: Excelente para aprendizado prático de eletrônica em cursos e oficinas.",
+      "Transforme seus projetos com conexões confiáveis e seguras."
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-4669479535-kit-100-barra-de-pinos-femea-1x15-2-54mm-pic-arduino_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "priority": 20,
+    "searchTerms": [
+      "Kit",
+      "100",
+      "Barra",
+      "Pinos",
+      "mea",
+      "1x15",
+      "54mm",
+      "Pic",
+      "arduino",
+      "Placas",
+      "microcontroladores",
+      "Gen",
+      "rica"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb4669503045",
+    "mlbId": "MLB4669503045",
+    "slug": "sensor-de-corrente-ac-nao-invasivo-sct-013-100a-50ma-mlb4669503045",
+    "name": "Sensor De Corrente Ac Não Invasivo Sct-013 100a 50ma",
+    "shortName": "Sensor De Corrente Ac Não Invasivo Sct-013 100a 50ma",
+    "category": "Placas e microcontroladores",
+    "subcategory": "Placas de microcontroladores",
+    "brand": "Tecneu",
+    "model": "AC SCT-013",
+    "condition": "novo",
+    "quantityInKit": 1,
+    "price": 63.0,
+    "currency": "BRL",
+    "image": "/products/D_Q_NP_2X_907255-MLA99466124410_112025-AB.webp",
+    "gallery": [
+      "/products/D_Q_NP_2X_907255-MLA99466124410_112025-AB.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "Sensores de corrente SCT-013, ideal para monitoramento de consumo de energia em projetos de automação, Arduino, Raspberry Pi e medições elétricas sem necessidade de intervenção direta no cir",
+    "fullDescription": "Sensores de corrente SCT-013, ideal para monitoramento de consumo de energia em projetos de automação, Arduino, Raspberry Pi e medições elétricas sem necessidade de intervenção direta no circuito.\n\nEspecificações técnicas:\nModelo: SCT-013-000\nTipo: Sensor de corrente não invasivo\nCorrente máxima: 100A\nSaída: 50mA\nPrecisão: Alta fidelidade na medição\nCompatibilidade: Funciona com Arduino, ESP32, Raspberry Pi, entre outros.\n\nVantagens do produto:\nMede corrente sem contato direto com o circuito\nAlta durabilidade e materiais de qualidade\nFácil instalação e uso\nIdeal para automação residencial e monitoramento de consumo de energia.\n\nDúvidas? Utilize o campo de perguntas, estamos à disposição para ajudar.",
+    "highlights": [
+      "Especificações técnicas:",
+      "Modelo: SCT-013-000",
+      "Tipo: Sensor de corrente não invasivo",
+      "Corrente máxima: 100A",
+      "Saída: 50mA",
+      "Precisão: Alta fidelidade na medição"
+    ],
+    "specifications": [
+      {
+        "label": "Marca",
+        "value": "Tecneu"
+      },
+      {
+        "label": "Modelo",
+        "value": "AC SCT-013"
+      },
+      {
+        "label": "Microcontrolador",
+        "value": "Sensor de Corriente Alterna"
+      },
+      {
+        "label": "Capacidade da memória flash",
+        "value": "0.0 KB"
+      },
+      {
+        "label": "Comprimento",
+        "value": "3.2 cm"
+      },
+      {
+        "label": "Largura",
+        "value": "5.7 cm"
+      },
+      {
+        "label": "Altura",
+        "value": "2.12 cm"
+      },
+      {
+        "label": "Inclui cabo usb",
+        "value": "Não"
+      }
+    ],
+    "applications": [
+      "Projetos eletr?nicos e t?cnicos conforme caracter?sticas do an?ncio."
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-4669503045-sensor-de-corrente-ac-nao-invasivo-sct-013-100a-50ma_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "priority": 21,
+    "searchTerms": [
+      "Sensor",
+      "Corrente",
+      "Invasivo",
+      "Sct-013",
+      "100a",
+      "50ma",
+      "Placas",
+      "microcontroladores",
+      "Tecneu",
+      "SCT-013"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb4669505143",
+    "mlbId": "MLB4669505143",
+    "slug": "50x-varistor-14k-250vac-s14d391-14d391k250vac-uso-geral-mlb4669505143",
+    "name": "50x Varistor 14k 250vac (s14d391 / 14d391k250vac) Uso Geral",
+    "shortName": "50x Varistor 14k 250vac (s14d391 / 14d391k250vac) Uso Geral",
+    "category": "Componentes eletr?nicos",
+    "subcategory": "Termistores",
+    "brand": "ChipSCE",
+    "model": "072-1450",
+    "condition": "novo",
+    "quantityInKit": 50,
+    "price": 110.0,
+    "currency": "BRL",
+    "image": "/products/D_Q_NP_2X_942461-MLA99483689540_112025-AB.webp",
+    "gallery": [
+      "/products/D_Q_NP_2X_942461-MLA99483689540_112025-AB.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "O Kit com 50 Varistores 14K 250VAC S14D391 / 14D391K250VAC é ideal para proteção de circuitos contra surtos e picos de tensão. Esses varistores são componentes essenciais em sistemas eletrôn",
+    "fullDescription": "O Kit com 50 Varistores 14K 250VAC S14D391 / 14D391K250VAC é ideal para proteção de circuitos contra surtos e picos de tensão. Esses varistores são componentes essenciais em sistemas eletrônicos, garantindo segurança e durabilidade para seus dispositivos.\n\nEspecificações:\nModelo: S14D391 / 14D391K\nTensão nominal: 250VAC\nCapacidade: 14K\nQuantidade: 50 unidades\nAplicação: Proteção contra surtos e sobretensão\nResposta rápida a variações de tensão\n\nAplicações:\nFontes de alimentação\nEquipamentos eletrônicos\nSistemas de automação\nControle de motores e circuitos de iluminação\nCom alto desempenho e confiabilidade, esse kit oferece uma solução eficiente para proteção de dispositivos eletrônicos em diferentes aplicações.\n\nTensão do varistor (mín.) 387 V",
+    "highlights": [
+      "Especificações:",
+      "Modelo: S14D391 / 14D391K",
+      "Tensão nominal: 250VAC",
+      "Capacidade: 14K",
+      "Quantidade: 50 unidades"
+    ],
+    "specifications": [
+      {
+        "label": "Marca",
+        "value": "ChipSCE"
+      },
+      {
+        "label": "Modelo",
+        "value": "072-1450"
+      }
+    ],
+    "applications": [
+      "Resposta rápida a variações de tensão",
+      "Fontes de alimentação",
+      "Equipamentos eletrônicos",
+      "Sistemas de automação",
+      "Controle de motores e circuitos de iluminação",
+      "Tensão do varistor (mín.) 387 V"
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-4669505143-50x-varistor-14k-250vac-s14d391-14d391k250vac-uso-geral_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "priority": 22,
+    "searchTerms": [
+      "50x",
+      "Varistor",
+      "14k",
+      "250vac",
+      "s14d391",
+      "14d391k250vac",
+      "Uso",
+      "Geral",
+      "Componentes",
+      "eletr?nicos",
+      "ChipSCE",
+      "072-1450"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb4669505471",
+    "mlbId": "MLB4669505471",
+    "slug": "filtro-supressor-de-ruidos-eicos-k-8-para-contatores-220v-mlb4669505471",
+    "name": "Filtro Supressor De Ruídos Eicos K-8 Para Contatores 220v",
+    "shortName": "Filtro Supressor De Ruídos Eicos K-8 Para Contatores 220v",
+    "category": "Automa??o e comando",
+    "subcategory": "Contatores e relés para eletrodomésticos",
+    "brand": "EICOS",
+    "model": "K-8; Filtro supressor",
+    "condition": "novo",
+    "quantityInKit": 1,
+    "price": 98.0,
+    "currency": "BRL",
+    "image": "/products/D_Q_NP_2X_970666-MLA106134164122_022026-AB.webp",
+    "gallery": [
+      "/products/D_Q_NP_2X_970666-MLA106134164122_022026-AB.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "Filtro Supressor de Ruídos K-8 – Eicos",
+    "fullDescription": "Filtro Supressor de Ruídos K-8 – Eicos\n\nElimina ruídos elétricos causados pela comutação de bobinas em contatores e relés de comando. Produto compacto, eficiente e de fácil instalação, ideal para garantir o bom funcionamento de sistemas elétricos.\n\nEspecificações Técnicas:  \nMarca: Eicos  \nModelo: K-8  \nTensão: 0–220V AC  \nPotência máxima: 8 VA  \nEncapsulamento: Resina epóxi  \nFixação: Fita dupla face  \nPeso: 7g  \nCorrente: Alternada (AC)  \n\nAplicações:  \nContatores com bobinas de 110V ou 220V  \nRelés de comando  \nAcompanha sensores de fluxo Eicos  \n\nVantagens:  \nElimina ruídos elétricos com eficiência  \nFácil instalação  \nCompacto e leve  \nAlta confiabilidade",
+    "highlights": [
+      "Filtro Supressor de Ruídos K-8 – Eicos",
+      "Especificações Técnicas:",
+      "Marca: Eicos",
+      "Modelo: K-8",
+      "Tensão: 0–220V AC",
+      "Potência máxima: 8 VA"
+    ],
+    "specifications": [
+      {
+        "label": "Marca",
+        "value": "EICOS"
+      },
+      {
+        "label": "Série",
+        "value": "K-8"
+      },
+      {
+        "label": "Modelo",
+        "value": "K-8; Filtro supressor"
+      },
+      {
+        "label": "Potência",
+        "value": "2 W"
+      },
+      {
+        "label": "Tipo de produto",
+        "value": "Relé"
+      },
+      {
+        "label": "Categorias de utilização",
+        "value": "Contatores e relés de comando,Elimina o ruído elétrico provocado pela comutação de bobinas.,filtro supressor,eicos,k8"
+      },
+      {
+        "label": "Tipo de montagem",
+        "value": "Fita dupla face"
+      },
+      {
+        "label": "Tipo de motor",
+        "value": "Corrente alternada (AC)"
+      },
+      {
+        "label": "Usos recomendados",
+        "value": "Supressor de ruídos para contator"
+      },
+      {
+        "label": "Com proteção contra sobrecarga",
+        "value": "Não"
+      }
+    ],
+    "applications": [
+      "Contatores com bobinas de 110V ou 220V",
+      "Relés de comando"
+    ],
+    "packageContents": [
+      "Vantagens:",
+      "Elimina ruídos elétricos com eficiência",
+      "Fácil instalação",
+      "Compacto e leve",
+      "Alta confiabilidade"
+    ],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-4669505471-filtro-supressor-de-ruidos-eicos-k-8-para-contatores-220v_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "priority": 23,
+    "searchTerms": [
+      "Filtro",
+      "Supressor",
+      "dos",
+      "Eicos",
+      "K-8",
+      "Para",
+      "Contatores",
+      "220v",
+      "Automa??o",
+      "comando",
+      "EICOS",
+      "supressor"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb4669565005",
+    "mlbId": "MLB4669565005",
+    "slug": "10x-varistor-14k-250vac-s14d391-14d391k250vac-uso-geral-mlb4669565005",
+    "name": "10x Varistor 14k 250vac (s14d391 / 14d391k250vac) Uso Geral",
+    "shortName": "10x Varistor 14k 250vac (s14d391 / 14d391k250vac) Uso Geral",
+    "category": "Componentes eletr?nicos",
+    "subcategory": "Termistores",
+    "brand": "ChipSCE",
+    "model": "072-1450",
+    "condition": "novo",
+    "quantityInKit": 10,
+    "price": 110.0,
+    "currency": "BRL",
+    "image": "/products/D_Q_NP_2X_990084-MLB81309837992_122024-AB.webp",
+    "gallery": [
+      "/products/D_Q_NP_2X_990084-MLB81309837992_122024-AB.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "VARISTOR \"Voltage Dependent Resistor\" (VDR) é um componente eletrônico que diminui a resistência conforme a tensão aumenta, muito utilizado na eletrônica para proteger aparelhos eletrônicos ",
+    "fullDescription": "VARISTOR \"Voltage Dependent Resistor\" (VDR) é um componente eletrônico que diminui a resistência conforme a tensão aumenta, muito utilizado na eletrônica para proteger aparelhos eletrônicos contra sobretensão.\n\nA utilização mais comum do varistor é para interromper a corrente em um circuito eletrônico quando a tensão está elevada por conexão em tomada errada ou por algum pico de energia na rede elétrica, que ocorre por vários motivos. Essa proteção é conseguida forçando um curto-circuito para queimar um fusível. É importante salientar que não se deve substituir um varistor por outro de tamanho e/ou tensão diferente.\n\nEspecificações Técnicas:\n\nVARISTOR 14D391K250VAC",
+    "highlights": [
+      "Especificações Técnicas:",
+      "VARISTOR 14D391K250VAC"
+    ],
+    "specifications": [
+      {
+        "label": "Marca",
+        "value": "ChipSCE"
+      },
+      {
+        "label": "Modelo",
+        "value": "072-1450"
+      }
+    ],
+    "applications": [
+      "Projetos eletr?nicos e t?cnicos conforme caracter?sticas do an?ncio."
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-4669565005-10x-varistor-14k-250vac-s14d391-14d391k250vac-uso-geral_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "priority": 24,
+    "searchTerms": [
+      "10x",
+      "Varistor",
+      "14k",
+      "250vac",
+      "s14d391",
+      "14d391k250vac",
+      "Uso",
+      "Geral",
+      "Componentes",
+      "eletr?nicos",
+      "ChipSCE",
+      "072-1450"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb4669565379",
+    "mlbId": "MLB4669565379",
+    "slug": "3x-filtro-supressor-de-ruidos-eicos-k-8-para-contatores-mlb4669565379",
+    "name": "3x Filtro Supressor De Ruídos Eicos K-8 Para Contatores",
+    "shortName": "3x Filtro Supressor De Ruídos Eicos K-8 Para Contatores",
+    "category": "Automa??o e comando",
+    "subcategory": "Contatores e relés para eletrodomésticos",
+    "brand": "EICOS",
+    "model": "K-8; Filtro supressor",
+    "condition": "novo",
+    "quantityInKit": 3,
+    "price": 98.0,
+    "currency": "BRL",
+    "image": "/products/757733-MLA110012205690_042026-O.jpg",
+    "gallery": [
+      "/products/757733-MLA110012205690_042026-O.jpg",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "O Filtro Supressor de Ruídos K-8 da Eicos é uma solução eficiente para minimizar ruídos e interferências gerados por contatores e dispositivos elétricos. Ideal para quem busca estabilidade e",
+    "fullDescription": "O Filtro Supressor de Ruídos K-8 da Eicos é uma solução eficiente para minimizar ruídos e interferências gerados por contatores e dispositivos elétricos. Ideal para quem busca estabilidade e proteção em sistemas de automação e controle, esse modelo garante um desempenho superior e maior durabilidade dos seus componentes.\n\nEspecificações:\nModelo: K-8\nMarca: Eicos\nFunção: Supressor de ruídos para contatores e circuitos elétricos\nQuantidade: 3 unidades\nAplicação: Contatores, motores elétricos e sistemas de automação\n\nBenefícios:\nReduz interferências eletromagnéticas\nProlonga a vida útil de contatores e dispositivos elétricos\nEstabiliza o funcionamento de sistemas automatizados\nIdeal para quem deseja maior eficiência e segurança em seus sistemas elétricos e projetos de automação.",
+    "highlights": [
+      "Especificações:",
+      "Modelo: K-8",
+      "Marca: Eicos",
+      "Função: Supressor de ruídos para contatores e circuitos elétricos",
+      "Quantidade: 3 unidades"
+    ],
+    "specifications": [
+      {
+        "label": "Marca",
+        "value": "EICOS"
+      },
+      {
+        "label": "Série",
+        "value": "K-8"
+      },
+      {
+        "label": "Modelo",
+        "value": "K-8; Filtro supressor"
+      },
+      {
+        "label": "Potência",
+        "value": "2.0 W"
+      },
+      {
+        "label": "Tipo de produto",
+        "value": "Relé"
+      },
+      {
+        "label": "Categorias de utilização",
+        "value": "Contatores e relés de comando,Elimina o ruído elétrico provocado pela comutação de bobinas.,eicos,filtro supressor,k8"
+      },
+      {
+        "label": "Tipo de montagem",
+        "value": "Fita dupla face"
+      },
+      {
+        "label": "Tipo de motor",
+        "value": "Corrente alternada (AC)"
+      },
+      {
+        "label": "Usos recomendados",
+        "value": "Supressor de ruídos para contator"
+      },
+      {
+        "label": "Com proteção contra sobrecarga",
+        "value": "Não"
+      }
+    ],
+    "applications": [
+      "Benefícios:",
+      "Reduz interferências eletromagnéticas",
+      "Prolonga a vida útil de contatores e dispositivos elétricos",
+      "Estabiliza o funcionamento de sistemas automatizados",
+      "Ideal para quem deseja maior eficiência e segurança em seus sistemas elétricos e projetos de automação."
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-4669565379-3x-filtro-supressor-de-ruidos-eicos-k-8-para-contatores_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "priority": 25,
+    "searchTerms": [
+      "Filtro",
+      "Supressor",
+      "dos",
+      "Eicos",
+      "K-8",
+      "Para",
+      "Contatores",
+      "Automa??o",
+      "comando",
+      "EICOS",
+      "supressor"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb4832454317",
+    "mlbId": "MLB4832454317",
+    "slug": "mini-fonte-chaveada-hi-link-hlk-pm01-5v-3w-mlb4832454317",
+    "name": "Mini Fonte Chaveada Hi-link Hlk-pm01 5v / 3w",
+    "shortName": "Mini Fonte Chaveada Hi-link Hlk-pm01 5v / 3w",
+    "category": "Fontes e alimenta??o",
+    "subcategory": "Fontes de alimentação comutadas integradas",
+    "brand": "",
+    "model": "",
+    "condition": "novo",
+    "quantityInKit": 1,
+    "price": 98.0,
+    "currency": "BRL",
+    "image": "/products/D_NQ_985903-MLA113110801334_072026-OO.webp",
+    "gallery": [
+      "/products/D_NQ_985903-MLA113110801334_072026-OO.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "Mini Fonte Chaveada Hi-link Hlk-pm01 5v / 3w",
+    "fullDescription": "Mini Fonte Chaveada Hi-link Hlk-pm01 5v / 3w",
+    "highlights": [
+      "Mini Fonte Chaveada Hi-link Hlk-pm01 5v / 3w"
+    ],
+    "specifications": [],
+    "applications": [
+      "Projetos eletr?nicos e t?cnicos conforme caracter?sticas do an?ncio."
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-4832454317-mini-fonte-chaveada-hi-link-hlk-pm01-5v-3w_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "priority": 26,
+    "searchTerms": [
+      "Mini",
+      "Fonte",
+      "Chaveada",
+      "Hi-link",
+      "Hlk-pm01",
+      "Fontes",
+      "alimenta??o"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb4875918503",
+    "mlbId": "MLB4875918503",
+    "slug": "modulo-gps-neo-6m-v2-com-antena-compativel-arduino-esp32-esp8266-raspberry-pi-rastreamento",
+    "name": "Módulo Gps Neo-6m V2 Com Antena Compatível Arduino Esp32 Esp8266 Raspberry Pi Rastreamento Navegação Telemetria Drone Robótica Geolocalização Projetos Blutu",
+    "shortName": "Módulo Gps Neo-6m V2 Com Antena Compatível Arduino Esp32 Esp8266",
+    "category": "Placas e microcontroladores",
+    "subcategory": "Placas de microcontroladores",
+    "brand": "",
+    "model": "",
+    "condition": "novo",
+    "quantityInKit": 1,
+    "price": 98.2,
+    "currency": "BRL",
+    "image": "/products/D_NQ_NP_925680-MLA72842852904_112023-O.jpg",
+    "gallery": [
+      "/products/D_NQ_NP_925680-MLA72842852904_112023-O.jpg",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "Módulo GPS NEO-6M V2 com Antena – Alta Precisão para Projetos Arduino, ESP32 e IoT",
+    "fullDescription": "Módulo GPS NEO-6M V2 com Antena – Alta Precisão para Projetos Arduino, ESP32 e IoT\n\nO Módulo GPS NEO-6M V2 é uma solução para projetos que exigem localização geográfica e rastreamento em tempo real.\nCompatível com Arduino, ESP32, ESP8266, STM32, Raspberry Pi e outros microcontroladores, é utilizado em sistemas embarcados, drones, rastreadores e robótica.\n\nBaseado no chipset UBlox NEO-6M, oferece desempenho, fixação rápida de sinal, sensibilidade e comunicação via interface UART (TTL).\nO módulo inclui antena ativa externa e LED indicador de status, garantindo integração e estabilidade em ambientes de sinal mais fraco.\n\nCaracterísticas Técnicas:\n\n• Chip: Ublox NEO-6M\n• Frequência: GPS L1\n• Interface de comunicação: UART (TX/RX)\n• Baud rate padrão: 9600 bps\n• Alimentação: 3.3V a 5V DC\n• Antena ativa externa com conector u.FL (inclusa)\n• LED indicador de fixação do sinal\n• Suporte a memória de backup (EEPROM)\n• Dimensões: 36mm x 26mm x 12mm\n• Compatível com: Arduino, ESP32, ESP8266, STM32, Raspberry Pi e outros controladores\n\nAplicações Indicadas:\n\n• Rastreamento veicular e pessoal\n• Drones e aeronaves de pequeno porte\n• Robótica e automação\n• Sistemas embarcados e IoT\n• Projetos de geolocalização com microcontroladores\n\nItens Inclusos:\n\n• 01 Módulo GPS NEO-6M V2\n• 01 Antena ativa externa com conector u.FL",
+    "highlights": [
+      "Módulo GPS NEO-6M V2 com Antena – Alta Precisão para Projetos Arduino, ESP32 e IoT",
+      "O Módulo GPS NEO-6M V2 é uma solução para projetos que exigem localização geográfica e rastreamento em tempo real.",
+      "Compatível com Arduino, ESP32, ESP8266, STM32, Raspberry Pi e outros microcontroladores, é utilizado em sistemas embarcados, drones, rastreadores e robótica.",
+      "Baseado no chipset UBlox NEO-6M, oferece desempenho, fixação rápida de sinal, sensibilidade e comunicação via interface UART (TTL).",
+      "O módulo inclui antena ativa externa e LED indicador de status, garantindo integração e estabilidade em ambientes de sinal mais fraco.",
+      "Características Técnicas:"
+    ],
+    "specifications": [],
+    "applications": [
+      "• Rastreamento veicular e pessoal",
+      "• Drones e aeronaves de pequeno porte",
+      "• Robótica e automação",
+      "• Sistemas embarcados e IoT",
+      "• Projetos de geolocalização com microcontroladores",
+      "Itens Inclusos:"
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-4875918503-modulo-gps-neo-6m-v2-com-antena-compativel-arduino-esp32-esp8266-raspberry-pi-rastreamento-navegacao-telemetri_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "priority": 27,
+    "searchTerms": [
+      "dulo",
+      "Gps",
+      "Neo-6m",
+      "Com",
+      "Antena",
+      "Compat",
+      "vel",
+      "Arduino",
+      "Esp32",
+      "Esp8266",
+      "Raspberry",
+      "Rastreamento",
+      "Navega",
+      "Telemetria",
+      "Drone",
+      "Rob",
+      "tica",
+      "Geolocaliza",
+      "Projetos",
+      "Blutu",
+      "Placas",
+      "microcontroladores"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb5249469476",
+    "mlbId": "MLB5249469476",
+    "slug": "kit-500-reguladores-de-tensao-ams1117-smd-3-3v-mlb5249469476",
+    "name": "Kit 500 Reguladores De Tensão Ams1117 Smd 3,3v",
+    "shortName": "Kit 500 Reguladores De Tensão Ams1117 Smd 3,3v",
+    "category": "Componentes eletr?nicos",
+    "subcategory": "Reguladores de voltagem",
+    "brand": "",
+    "model": "",
+    "condition": "novo",
+    "quantityInKit": 500,
+    "price": 199.9,
+    "currency": "BRL",
+    "image": "/products/D_Q_NP_2X_614597-MLA94063638439_102025-AB.webp",
+    "gallery": [
+      "/products/D_Q_NP_2X_614597-MLA94063638439_102025-AB.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "Este kit contém 500 reguladores de tensão AMS1117 SMD, ideais para aplicações que exigem conversão de tensão estável e precisa para 3,3V. Compactos e confiáveis, esses reguladores são amplam",
+    "fullDescription": "Este kit contém 500 reguladores de tensão AMS1117 SMD, ideais para aplicações que exigem conversão de tensão estável e precisa para 3,3V. Compactos e confiáveis, esses reguladores são amplamente utilizados em projetos de eletrônica, desenvolvimento de protótipos e circuitos de alimentação para microcontroladores.\n\nCaracterísticas Técnicas:\n\nModelo: AMS1117\nTensão de saída: 3,3V\nCorrente de saída: Até 1A\nFormato: SMD (montagem em superfície)\nTensão de entrada: Até 12V\nEficiência e estabilidade em diversas condições de carga\nAplicações:\n\nCircuitos de alimentação para microcontroladores (Arduino, ESP32, Raspberry Pi)\nProjetos IoT e prototipagem eletrônica\nFontes de alimentação para sensores e módulos diversos\nEstabilização de tensão em projetos eletrônicos sensíveis\nInvista em qualidade e praticidade com este kit de 100 reguladores AMS1117 para garantir o funcionamento estável dos seus projetos eletrônicos!",
+    "highlights": [
+      "Este kit contém 500 reguladores de tensão AMS1117 SMD, ideais para aplicações que exigem conversão de tensão estável e precisa para 3,3V. Compactos e confiáveis, esses reguladores são amplam"
+    ],
+    "specifications": [],
+    "applications": [
+      "Características Técnicas:",
+      "Modelo: AMS1117",
+      "Tensão de saída: 3,3V",
+      "Corrente de saída: Até 1A",
+      "Formato: SMD (montagem em superfície)",
+      "Tensão de entrada: Até 12V"
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-5249469476-kit-500-reguladores-de-tensao-ams1117-smd-3-3v_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "priority": 28,
+    "searchTerms": [
+      "Kit",
+      "500",
+      "Reguladores",
+      "Tens",
+      "Ams1117",
+      "Smd",
+      "Componentes",
+      "eletr?nicos"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb5265377782",
+    "mlbId": "MLB5265377782",
+    "slug": "conector-split-bolt-16mm2-intelli-cobre-eletrolitico-alta-condutibilidade-mlb5265377782",
+    "name": "Conector Split Bolt 16mm² Intelli Cobre Eletrolítico Alta Condutibilidade",
+    "shortName": "Conector Split Bolt 16mm² Intelli Cobre Eletrolítico Alta Condut",
+    "category": "Conectores e instala??o",
+    "subcategory": "Conectores de áudio e vídeo",
+    "brand": "Contel",
+    "model": "Split Bolt 16Mm²",
+    "condition": "novo",
+    "quantityInKit": 1,
+    "price": 199.8,
+    "currency": "BRL",
+    "image": "/products/D_Q_NP_2X_620097-MLA96767173502_112025-AB.webp",
+    "gallery": [
+      "/products/D_Q_NP_2X_620097-MLA96767173502_112025-AB.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "• Conector dimensionado para acomodar uma ampla gama de fios e cabos de cobre da série métrica.",
+    "fullDescription": "Conector Split Bolt 16mm²\n\nFabricado por Intelli\n\nCaracterísticas:\n• Conector dimensionado para acomodar uma ampla gama de fios e cabos de cobre da série métrica.\n• Alta condutibilidade elétrica e conexão por aperto.\n\nAplicações:\n• Condutores de Alumínio ou Cobre de 2,5mm² a 16mm²\n• Rede de energia elétrica (baixa, média) e aterramento em geral.\n\nFinalidade:\n• Destinado a derivação de conexões bimetálicas, condutores de cobre, aço cobreado, alumínio CA ou aço galvanizado à fogo.\n\nNorma:\n• NBR-5370 / NBR-5410\n\nCorpo:\n• Porca / Miolo \n\nMaterial:\n• Cobre Eletrolítico\n\nAcabamento:\n• Estanhado\n\nImagem Meramente Ilustrativa\n\nReferente a uma unidade'.",
+    "highlights": [
+      "Conector Split Bolt 16mm²",
+      "Fabricado por Intelli",
+      "Características:",
+      "• Conector dimensionado para acomodar uma ampla gama de fios e cabos de cobre da série métrica.",
+      "• Alta condutibilidade elétrica e conexão por aperto."
+    ],
+    "specifications": [
+      {
+        "label": "Marca",
+        "value": "Contel"
+      },
+      {
+        "label": "Modelo",
+        "value": "Split Bolt 16Mm²"
+      },
+      {
+        "label": "Unidades por kit",
+        "value": "1"
+      },
+      {
+        "label": "Tipo de conector",
+        "value": "Split Bolt"
+      },
+      {
+        "label": "Gênero do conector",
+        "value": "Emenda"
+      },
+      {
+        "label": "Material de revestimento",
+        "value": "Cobre eletrolítico"
+      }
+    ],
+    "applications": [
+      "• Condutores de Alumínio ou Cobre de 2,5mm² a 16mm²",
+      "• Rede de energia elétrica (baixa, média) e aterramento em geral.",
+      "Finalidade:",
+      "• Destinado a derivação de conexões bimetálicas, condutores de cobre, aço cobreado, alumínio CA ou aço galvanizado à fogo.",
+      "Norma:",
+      "• NBR-5370 / NBR-5410"
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-5265377782-conector-split-bolt-16mm2-intelli-cobre-eletrolitico-alta-condutibilidade_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "priority": 29,
+    "searchTerms": [
+      "Conector",
+      "Split",
+      "Bolt",
+      "16mm",
+      "Intelli",
+      "Cobre",
+      "Eletrol",
+      "tico",
+      "Alta",
+      "Condutibilidade",
+      "Conectores",
+      "instala??o",
+      "Contel",
+      "16Mm"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb5268487034",
+    "mlbId": "MLB5268487034",
+    "slug": "fonte-de-alimentacao-dc-hikari-hf-3205s-32v-5a-p-bancadas-mlb5268487034",
+    "name": "Fonte De Alimentação Dc Hikari Hf-3205s  32v/5a P/bancadas",
+    "shortName": "Fonte De Alimentação Dc Hikari Hf-3205s  32v/5a P/bancadas",
+    "category": "Fontes e alimenta??o",
+    "subcategory": "Fontes de alimentação comutadas integradas",
+    "brand": "",
+    "model": "",
+    "condition": "usado",
+    "quantityInKit": 1,
+    "price": 732.0,
+    "currency": "BRL",
+    "image": "/products/D_Q_NP_2X_757282-MLA100045769531_122025-AB.webp",
+    "gallery": [
+      "/products/D_Q_NP_2X_757282-MLA100045769531_122025-AB.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "Produto seminovo, em estado impecável, sem marcas de uso e com pleno funcionamento de todos os recursos.",
+    "fullDescription": "Produto seminovo, em estado impecável, sem marcas de uso e com pleno funcionamento de todos os recursos.\n\nA Fonte de Alimentação Simples Hikari HF-3205S é ideal para aplicações que exigem alimentação de corrente contínua estável e confiável. Com capacidade de saída de até 32V e 5A, esta fonte é amplamente utilizada em laboratórios, manutenção eletrônica, prototipagem e projetos de eletrônica.\n\nEspecificações técnicas:\nMarca: Hikari\nModelo: HF-3205S\nTipo: Fonte de alimentação simples\nTensão de saída: 0 a 32V\nCorrente de saída: 0 a 5A\nProteção contra sobrecarga e curto-circuito\nAjuste fino e preciso de tensão e corrente\nDisplay digital para leitura clara e precisa\nAplicações:\n\nBancadas de testes e manutenção de equipamentos eletrônicos\nDesenvolvimento de circuitos e protótipos\nLaboratórios de eletrônica\nAlimentação de dispositivos sensíveis\n\nBenefícios:\nAlta precisão no controle de tensão e corrente\nProteções integradas para maior segurança\nFácil de usar, com ajuste preciso e leitura digital\nA Fonte de Alimentação Hikari HF-3205S oferece desempenho e confiabilidade para todas as suas necessidades de eletrônica.\nDimensões: 156(A) x 110(L) x 260(P)mm;\nPeso: Aproximadamente 4.8kg;\n \nItens Inclusos>\nManual de Instruções\nCabo de Alimentação\nPonta de Prova (1 par)",
+    "highlights": [
+      "Produto seminovo, em estado impecável, sem marcas de uso e com pleno funcionamento de todos os recursos."
+    ],
+    "specifications": [],
+    "applications": [
+      "Especificações técnicas:",
+      "Marca: Hikari",
+      "Modelo: HF-3205S",
+      "Tipo: Fonte de alimentação simples",
+      "Tensão de saída: 0 a 32V",
+      "Corrente de saída: 0 a 5A"
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-5268487034-fonte-de-alimentacao-dc-hikari-hf-3205s-32v-5a-p-bancadas_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "priority": 30,
+    "searchTerms": [
+      "Fonte",
+      "Alimenta",
+      "Hikari",
+      "Hf-3205s",
+      "32v",
+      "bancadas",
+      "Fontes",
+      "alimenta??o"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb5268502876",
+    "mlbId": "MLB5268502876",
+    "slug": "kit-15-conectores-split-bolt-16mm-fendido-p-emenda-de-cabos-mlb5268502876",
+    "name": "Kit 15 Conectores Split Bolt 16mm Fendido P/emenda De Cabos",
+    "shortName": "Kit 15 Conectores Split Bolt 16mm Fendido P/emenda De Cabos",
+    "category": "Conectores e instala??o",
+    "subcategory": "Conectores de áudio e vídeo",
+    "brand": "Contel",
+    "model": "Split Bolt Conector Fendido Latão",
+    "condition": "novo",
+    "quantityInKit": 15,
+    "price": 75.9,
+    "currency": "BRL",
+    "image": "/products/D_Q_NP_2X_757573-MLA113356351957_062026-AB.webp",
+    "gallery": [
+      "/products/D_Q_NP_2X_757573-MLA113356351957_062026-AB.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "O Kit com 15 Conectores de Parafuso Fendido Split Bolt 16mm é ideal para realizar emendas de cabos elétricos com segurança e eficiência. Projetados para suportar alta pressão e garantir cone",
+    "fullDescription": "*Prezado cliente, informo que, no momento, ainda não emito nota fiscal. Por favor, leve essa informação em consideração antes de finalizar sua compra.*\n\nO Kit com 15 Conectores de Parafuso Fendido Split Bolt 16mm é ideal para realizar emendas de cabos elétricos com segurança e eficiência. Projetados para suportar alta pressão e garantir conexões firmes, os conectores split bolt são amplamente utilizados em instalações elétricas industriais e residenciais.\n\nEspecificações:\n\nTipo de conector: Split bolt (parafuso fendido)\nTamanho: 16mm\nMaterial: Cobre de alta condutividade\nAplicação: Emenda de cabos elétricos\nBenefícios:\n\nConexões seguras e estáveis\nFácil instalação com sistema de aperto por parafuso\nAlta resistência à corrosão e desgaste\nAdequado para uso em diversas aplicações elétricas\nEste kit é perfeito para profissionais e amadores que buscam qualidade e durabilidade nas conexões elétricas.",
+    "highlights": [
+      "O Kit com 15 Conectores de Parafuso Fendido Split Bolt 16mm é ideal para realizar emendas de cabos elétricos com segurança e eficiência. Projetados para suportar alta pressão e garantir cone"
+    ],
+    "specifications": [
+      {
+        "label": "Marca",
+        "value": "Contel"
+      },
+      {
+        "label": "Modelo",
+        "value": "Split Bolt Conector Fendido Latão"
+      },
+      {
+        "label": "Unidades por kit",
+        "value": "15"
+      },
+      {
+        "label": "Tipo de produto",
+        "value": "Conector"
+      },
+      {
+        "label": "Tipo de conector",
+        "value": "Split Bolt Conector Fendido Latão"
+      },
+      {
+        "label": "Gênero do conector",
+        "value": "Fêmea"
+      },
+      {
+        "label": "Material de revestimento",
+        "value": "Metal"
+      }
+    ],
+    "applications": [
+      "Benefícios:",
+      "Conexões seguras e estáveis",
+      "Fácil instalação com sistema de aperto por parafuso",
+      "Alta resistência à corrosão e desgaste",
+      "Este kit é perfeito para profissionais e amadores que buscam qualidade e durabilidade nas conexões elétricas."
+    ],
+    "packageContents": [],
+    "warnings": [
+      "Prezado cliente, informo que, no momento, ainda não emito nota fiscal. Por favor, leve essa informação em consideração antes de finalizar sua compra.",
+      "Especificações:",
+      "Tipo de conector: Split bolt (parafuso fendido)",
+      "Tamanho: 16mm"
+    ],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-5268502876-kit-15-conectores-split-bolt-16mm-fendido-p-emenda-de-cabos_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "priority": 31,
+    "searchTerms": [
+      "Kit",
+      "Conectores",
+      "Split",
+      "Bolt",
+      "16mm",
+      "Fendido",
+      "emenda",
+      "Cabos",
+      "instala??o",
+      "Contel",
+      "Conector",
+      "Lat"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb5268502882",
+    "mlbId": "MLB5268502882",
+    "slug": "kit15-conector-parafuso-fendido-emenda-cabos-split-bolt-16mm-mlb5268502882",
+    "name": "Kit15 Conector Parafuso Fendido Emenda Cabos Split Bolt 16mm",
+    "shortName": "Kit15 Conector Parafuso Fendido Emenda Cabos Split Bolt 16mm",
+    "category": "Conectores e instala??o",
+    "subcategory": "Conectores de áudio e vídeo",
+    "brand": "Contel",
+    "model": "Split Bolt Conector",
+    "condition": "novo",
+    "quantityInKit": 15,
+    "price": 75.9,
+    "currency": "BRL",
+    "image": "/products/D_Q_NP_2X_765319-MLA99988235169_112025-AB.webp",
+    "gallery": [
+      "/products/D_Q_NP_2X_765319-MLA99988235169_112025-AB.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "O Split Bolt 16mm é um conector especialmente dimensionado para acomodar uma vasta combinação de fios e cabos, com alta condutibilidade elétrica e conexão por aperto. É utilizado em condutor",
+    "fullDescription": "O Split Bolt 16mm é um conector especialmente dimensionado para acomodar uma vasta combinação de fios e cabos, com alta condutibilidade elétrica e conexão por aperto. É utilizado em condutores de Alumínio ou Cobre, rede de energia elétrica (baixa, média) e aterramento em geral. Destina-se à derivação de conexões bimetálicas, condutores de cobre, aço cobreado, alumínio CA ou aço galvanizado à fogo. \n\nTipo:\n• Fendido Split Bolt\n• Bitola: 16mm²\n• Derivação: 1,5 à 16m",
+    "highlights": [
+      "Tipo:",
+      "• Fendido Split Bolt",
+      "• Bitola: 16mm²",
+      "• Derivação: 1,5 à 16m"
+    ],
+    "specifications": [
+      {
+        "label": "Marca",
+        "value": "Contel"
+      },
+      {
+        "label": "Modelo",
+        "value": "Split Bolt Conector"
+      },
+      {
+        "label": "Unidades por kit",
+        "value": "15"
+      },
+      {
+        "label": "Tipo de produto",
+        "value": "Conector"
+      },
+      {
+        "label": "Tipo de conector",
+        "value": "Split Bolt Conector Fendido Latão"
+      },
+      {
+        "label": "Gênero do conector",
+        "value": "Fêmea"
+      },
+      {
+        "label": "Material de revestimento",
+        "value": "Metal"
+      }
+    ],
+    "applications": [
+      "Projetos eletr?nicos e t?cnicos conforme caracter?sticas do an?ncio."
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-5268502882-kit15-conector-parafuso-fendido-emenda-cabos-split-bolt-16mm_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "priority": 32,
+    "searchTerms": [
+      "Kit15",
+      "Conector",
+      "Parafuso",
+      "Fendido",
+      "Emenda",
+      "Cabos",
+      "Split",
+      "Bolt",
+      "16mm",
+      "Conectores",
+      "instala??o",
+      "Contel"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb5272537202",
+    "mlbId": "MLB5272537202",
+    "slug": "kit-10x-antena-gps-1575-42-mhz-com-suporte-a-3v-5v-mlb5272537202",
+    "name": "Kit 10x Antena Gps 1575.42 Mhz Com Suporte A 3v-5v",
+    "shortName": "Kit 10x Antena Gps 1575.42 Mhz Com Suporte A 3v-5v",
+    "category": "GPS e localiza??o",
+    "subcategory": "Antenas para GPS",
+    "brand": "Genérica",
+    "model": "GPS",
+    "condition": "novo",
+    "quantityInKit": 10,
+    "price": 299.8,
+    "currency": "BRL",
+    "image": "/products/D_Q_NP_2X_907255-MLA99466124410_112025-AB.webp",
+    "gallery": [
+      "/products/D_Q_NP_2X_907255-MLA99466124410_112025-AB.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "10 unidades da Antena GPS com frequência de 1575.42 MHz que é ideal para projetos de navegação, rastreamento e localização. Com suporte a voltagem de 3V a 5V, essa antena garante alta precis",
+    "fullDescription": "10 unidades da Antena GPS com frequência de 1575.42 MHz que é ideal para projetos de navegação, rastreamento e localização. Com suporte a voltagem de 3V a 5V, essa antena garante alta precisão e confiabilidade, sendo amplamente utilizada em sistemas IoT, drones, veículos e dispositivos portáteis.\n\nEspecificações:\n\nFrequência de operação: 1575.42 MHz\nVoltagem de operação: 3V a 5V\nAlta sensibilidade e precisão de sinal\nDesign compacto e leve\nFácil integração em projetos eletrônicos\nAplicações:\n\nSistemas de navegação e rastreamento\nDrones e veículos autônomos\nDispositivos portáteis de localização\nProjetos IoT com funcionalidade GPS\nEssa antena GPS é uma solução prática e eficiente para quem busca desempenho superior e estabilidade em projetos de localização.",
+    "highlights": [
+      "Especificações:",
+      "Frequência de operação: 1575.42 MHz",
+      "Voltagem de operação: 3V a 5V",
+      "Alta sensibilidade e precisão de sinal",
+      "Design compacto e leve",
+      "Fácil integração em projetos eletrônicos"
+    ],
+    "specifications": [
+      {
+        "label": "Marca",
+        "value": "Genérica"
+      },
+      {
+        "label": "Modelo",
+        "value": "GPS"
+      },
+      {
+        "label": "Conector de saída",
+        "value": "SMA"
+      },
+      {
+        "label": "Comprimento do cabo",
+        "value": "2.0 m"
+      },
+      {
+        "label": "Frequência",
+        "value": "50 Hz/60 Hz"
+      }
+    ],
+    "applications": [
+      "Sistemas de navegação e rastreamento",
+      "Drones e veículos autônomos",
+      "Dispositivos portáteis de localização",
+      "Projetos IoT com funcionalidade GPS",
+      "Essa antena GPS é uma solução prática e eficiente para quem busca desempenho superior e estabilidade em projetos de localização."
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-5272537202-kit-10x-antena-gps-1575-42-mhz-com-suporte-a-3v-5v_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "priority": 33,
+    "searchTerms": [
+      "Kit",
+      "10x",
+      "Antena",
+      "Gps",
+      "1575",
+      "Mhz",
+      "Com",
+      "Suporte",
+      "3v-5v",
+      "GPS",
+      "localiza??o",
+      "Gen",
+      "rica"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb5272637504",
+    "mlbId": "MLB5272637504",
+    "slug": "kit-30-placas-de-fenolite-ilhada-5x7-cm-pcb-perfurada-mlb5272637504",
+    "name": "Kit 30 Placas De Fenolite Ilhada 5x7 Cm Pcb Perfurada",
+    "shortName": "Kit 30 Placas De Fenolite Ilhada 5x7 Cm Pcb Perfurada",
+    "category": "Comunica??o GSM, GPRS e RF",
+    "subcategory": "Protoboards",
+    "brand": "",
+    "model": "",
+    "condition": "novo",
+    "quantityInKit": 30,
+    "price": 69.9,
+    "currency": "BRL",
+    "image": "/products/D_Q_NP_2X_942461-MLA99483689540_112025-AB.webp",
+    "gallery": [
+      "/products/D_Q_NP_2X_942461-MLA99483689540_112025-AB.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "O Kit com 30 Placas de Fenolite Ilhada 5x7 cm é ideal para projetos eletrônicos e protótipos. Cada placa é perfurada e ilhada, facilitando a criação de circuitos sem necessidade de trilhas. ",
+    "fullDescription": "O Kit com 30 Placas de Fenolite Ilhada 5x7 cm é ideal para projetos eletrônicos e protótipos. Cada placa é perfurada e ilhada, facilitando a criação de circuitos sem necessidade de trilhas. É amplamente utilizada por estudantes, técnicos e entusiastas para montagem e testes de projetos de forma prática e segura.\n\nEspecificações:\n\nTamanho: 5x7 cm\nMaterial: Fenolite de alta qualidade\nPerfuração com ilhas para fácil soldagem\nIdeal para prototipagem e desenvolvimento de circuitos eletrônicos\nCompatível com componentes convencionais e SMD\nAplicações:\n\nDesenvolvimento de protótipos eletrônicos\nTestes de circuitos e projetos DIY\nMontagem de pequenos dispositivos e projetos IoT\nProjetos educacionais e técnicos\nEssas placas oferecem uma solução prática e eficiente para quem busca montar e testar circuitos eletrônicos com qualidade e confiabilidade.",
+    "highlights": [
+      "Especificações:",
+      "Tamanho: 5x7 cm",
+      "Material: Fenolite de alta qualidade",
+      "Perfuração com ilhas para fácil soldagem",
+      "Ideal para prototipagem e desenvolvimento de circuitos eletrônicos",
+      "Compatível com componentes convencionais e SMD"
+    ],
+    "specifications": [],
+    "applications": [
+      "Desenvolvimento de protótipos eletrônicos",
+      "Testes de circuitos e projetos DIY",
+      "Montagem de pequenos dispositivos e projetos IoT",
+      "Projetos educacionais e técnicos",
+      "Essas placas oferecem uma solução prática e eficiente para quem busca montar e testar circuitos eletrônicos com qualidade e confiabilidade."
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-5272637504-kit-30-placas-de-fenolite-ilhada-5x7-cm-pcb-perfurada_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "priority": 34,
+    "searchTerms": [
+      "Kit",
+      "Placas",
+      "Fenolite",
+      "Ilhada",
+      "5x7",
+      "Pcb",
+      "Perfurada",
+      "Comunica??o",
+      "GSM",
+      "GPRS"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb5272662416",
+    "mlbId": "MLB5272662416",
+    "slug": "contator-hs-automacao-trifasico-4011-40a-3p-1na-1nf-220v-mlb5272662416",
+    "name": "Contator Hs Automação Trifásico 4011 40a 3p +1na+1nf 220v",
+    "shortName": "Contator Hs Automação Trifásico 4011 40a 3p +1na+1nf 220v",
+    "category": "Automa??o e comando",
+    "subcategory": "Contatores e relés para eletrodomésticos",
+    "brand": "HS Automação",
+    "model": "Contactor 4011 40A 3P +1NF",
+    "condition": "novo",
+    "quantityInKit": 1,
+    "price": 75.9,
+    "currency": "BRL",
+    "image": "/products/D_Q_NP_2X_970666-MLA106134164122_022026-AB.webp",
+    "gallery": [
+      "/products/D_Q_NP_2X_970666-MLA106134164122_022026-AB.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "Contatores de Potência Tripolares CJX2",
+    "fullDescription": "Contatores de Potência Tripolares CJX2\nO contator é um dispositivo de manobra.\nQuando a bobina do eletroimã é colocada sob tensão, o contator fecha e estabelece o circuito.\nQuando a bobina é colocada fora de tensão da alimentação, o circuito\nMagnético se desmagnetiza e o contator abre sob o efeito das molas de pressão dos pólos e da mola.\nEm corrente alternada (50/60 Hz).\n\nCaracterísticas Gerais do Produto:\n\n Corrente: 40A\n Contato Principal: 3 NA\n Dimensões: 120mm X 80mm X 130mm (Altura x Largura x Profundidade )\n Peso: Aproximadamente 1,200 Kg",
+    "highlights": [
+      "Contatores de Potência Tripolares CJX2",
+      "O contator é um dispositivo de manobra.",
+      "Quando a bobina do eletroimã é colocada sob tensão, o contator fecha e estabelece o circuito.",
+      "Quando a bobina é colocada fora de tensão da alimentação, o circuito",
+      "Magnético se desmagnetiza e o contator abre sob o efeito das molas de pressão dos pólos e da mola.",
+      "Em corrente alternada (50/60 Hz)."
+    ],
+    "specifications": [
+      {
+        "label": "Marca",
+        "value": "HS Automação"
+      },
+      {
+        "label": "Modelo",
+        "value": "Contactor 4011 40A 3P +1NF"
+      },
+      {
+        "label": "Potência",
+        "value": "60 W"
+      },
+      {
+        "label": "Tipo de produto",
+        "value": "Contator"
+      },
+      {
+        "label": "Categorias de utilização",
+        "value": "Acionamento"
+      },
+      {
+        "label": "Material de contacto",
+        "value": "Liga de prata"
+      },
+      {
+        "label": "Tipo de montagem",
+        "value": "Trilho DIN"
+      },
+      {
+        "label": "Tipos de contato auxiliar",
+        "value": "2482001,2482003"
+      },
+      {
+        "label": "Tipo de motor",
+        "value": "Trifásico"
+      },
+      {
+        "label": "Usos recomendados",
+        "value": "Bomba,Contator,PAINEL,Trilho,motor"
+      },
+      {
+        "label": "Quantidade de pólos principais",
+        "value": "3"
+      },
+      {
+        "label": "Quantidade de pólos auxiliares",
+        "value": "2"
+      },
+      {
+        "label": "Frequência",
+        "value": "60Hz"
+      },
+      {
+        "label": "Com proteção contra sobrecarga",
+        "value": "Não"
+      }
+    ],
+    "applications": [
+      "Projetos eletr?nicos e t?cnicos conforme caracter?sticas do an?ncio."
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-5272662416-contator-hs-automacao-trifasico-4011-40a-3p-1na-1nf-220v_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "priority": 35,
+    "searchTerms": [
+      "Contator",
+      "Automa",
+      "Trif",
+      "sico",
+      "4011",
+      "40a",
+      "1na",
+      "1nf",
+      "220v",
+      "Automa??o",
+      "comando",
+      "Contactor",
+      "40A",
+      "1NF"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb5272698878",
+    "mlbId": "MLB5272698878",
+    "slug": "contator-tripolar-4011-40a-220v-3p-com-contatos-auxiliares-mlb5272698878",
+    "name": "Contator Tripolar 4011 40a 220v 3p Com Contatos Auxiliares",
+    "shortName": "Contator Tripolar 4011 40a 220v 3p Com Contatos Auxiliares",
+    "category": "Automa??o e comando",
+    "subcategory": "Contatores e relés para eletrodomésticos",
+    "brand": "HS Automação",
+    "model": "Contator Tripolar 4011 40A 3P +1Na + 1 Nf",
+    "condition": "novo",
+    "quantityInKit": 1,
+    "price": 75.9,
+    "currency": "BRL",
+    "image": "/products/D_Q_NP_2X_990084-MLB81309837992_122024-AB.webp",
+    "gallery": [
+      "/products/D_Q_NP_2X_990084-MLB81309837992_122024-AB.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "O Contator Tripolar 4011 40A 220V com contatos auxiliares é uma solução robusta e confiável para o controle de circuitos elétricos. Com capacidade de corrente nominal de 40A e tensão de oper",
+    "fullDescription": "O Contator Tripolar 4011 40A 220V com contatos auxiliares é uma solução robusta e confiável para o controle de circuitos elétricos. Com capacidade de corrente nominal de 40A e tensão de operação de 220V, este contator é ideal para aplicações industriais e comerciais, oferecendo segurança e eficiência em diversos tipos de sistemas elétricos.\n\nEspecificações:\nModelo: 4011\nCorrente nominal: 40A\nTensão de operação: 220V\nConfiguração: Tripolar (3P)\nContatos auxiliares: Sim (1NA + 1NF)\nDurabilidade elétrica e mecânica elevada\n\nAplicações:\nControle de motores elétricos\nSistemas de automação industrial\nEquipamentos e painéis elétricos\nCircuitos de iluminação e ventilação\nEste contator combina alto desempenho com segurança e praticidade, sendo a escolha ideal para projetos elétricos que exigem qualidade e confiabilidade.",
+    "highlights": [
+      "O Contator Tripolar 4011 40A 220V com contatos auxiliares é uma solução robusta e confiável para o controle de circuitos elétricos. Com capacidade de corrente nominal de 40A e tensão de oper"
+    ],
+    "specifications": [
+      {
+        "label": "Marca",
+        "value": "HS Automação"
+      },
+      {
+        "label": "Modelo",
+        "value": "Contator Tripolar 4011 40A 3P +1Na + 1 Nf"
+      },
+      {
+        "label": "Potência",
+        "value": "60.0 W"
+      },
+      {
+        "label": "Tipo de produto",
+        "value": "Relé térmico"
+      },
+      {
+        "label": "Categorias de utilização",
+        "value": "Acionamento"
+      },
+      {
+        "label": "Material de contacto",
+        "value": "Liga de prata"
+      },
+      {
+        "label": "Tipo de montagem",
+        "value": "Trilho"
+      },
+      {
+        "label": "Tipos de contato auxiliar",
+        "value": "2482001,2482003"
+      },
+      {
+        "label": "Quantidade de pólos principais",
+        "value": "3"
+      },
+      {
+        "label": "Quantidade de pólos auxiliares",
+        "value": "2"
+      },
+      {
+        "label": "Frequência",
+        "value": "60"
+      },
+      {
+        "label": "Com proteção contra sobrecarga",
+        "value": "Não"
+      }
+    ],
+    "applications": [
+      "Especificações:",
+      "Modelo: 4011",
+      "Corrente nominal: 40A",
+      "Tensão de operação: 220V",
+      "Configuração: Tripolar (3P)",
+      "Contatos auxiliares: Sim (1NA + 1NF)"
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-5272698878-contator-tripolar-4011-40a-220v-3p-com-contatos-auxiliares_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "priority": 36,
+    "searchTerms": [
+      "Contator",
+      "Tripolar",
+      "4011",
+      "40a",
+      "220v",
+      "Com",
+      "Contatos",
+      "Auxiliares",
+      "Automa??o",
+      "comando",
+      "Automa",
+      "40A",
+      "1Na"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb5272831698",
+    "mlbId": "MLB5272831698",
+    "slug": "kit-com-6-pigtail-u-fi-ipx-para-rp-sma-femea-com-10-cm-mlb5272831698",
+    "name": "Kit Com 6 Pigtail U.fi Ipx Para Rp-sma Femêa Com 10 Cm",
+    "shortName": "Kit Com 6 Pigtail U.fi Ipx Para Rp-sma Femêa Com 10 Cm",
+    "category": "Comunica??o GSM, GPRS e RF",
+    "subcategory": "Produtos de telefonia e radiocomunicação",
+    "brand": "Genérica",
+    "model": "RP-SMA",
+    "condition": "novo",
+    "quantityInKit": 6,
+    "price": 59.9,
+    "currency": "BRL",
+    "image": "/products/757733-MLA110012205690_042026-O.jpg",
+    "gallery": [
+      "/products/757733-MLA110012205690_042026-O.jpg",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "Kit com 6 Pigtail U.FL IPX para RP-SMA Fêmea - Comprimento de 10 cm",
+    "fullDescription": "Kit com 6 Pigtail U.FL IPX para RP-SMA Fêmea - Comprimento de 10 cm \n\nConexões de alta performance para seus projetos de comunicação sem fio. Este kit oferece dois pigtails ideais para integrar módulos Wi-Fi, Bluetooth e antenas externas em projetos IoT e de redes de comunicação. \n\nCaracterísticas Principais: \n- Conector U.FL (IPX) para RP-SMA Fêmea: Permite a conexão entre módulos e antenas externas de forma prática e segura. \n- Comprimento de 10 cm: Tamanho compacto, ideal para projetos com espaço reduzido. \n- Alta compatibilidade: Compatível com placas ESP32, ESP8266, Raspberry Pi e outros dispositivos que utilizam U.FL e RP-SMA. \n- Conexão estável: Garante excelente desempenho de sinal e redução de perda de dados. \n- Ideal para antenas externas: Melhora a captação e transmissão de sinal em ambientes com obstáculos ou baixa recepção. \n\nAplicações: \n- Projetos IoT: Expanda a conectividade de dispositivos inteligentes. \n- Redes Wi-Fi e Bluetooth: Conexão otimizada para melhor desempenho de sinal. \n- Desenvolvimento de protótipos: Perfeito para testes de antenas externas. \n- Comunicação sem fio em ambientes internos e externos. \n\nGaranta já o seu kit com 2 pigtails e leve seu projeto para o próximo nível de conectividade!",
+    "highlights": [
+      "Kit com 6 Pigtail U.FL IPX para RP-SMA Fêmea - Comprimento de 10 cm",
+      "Características Principais:",
+      "Conector U.FL (IPX) para RP-SMA Fêmea: Permite a conexão entre módulos e antenas externas de forma prática e segura.",
+      "Comprimento de 10 cm: Tamanho compacto, ideal para projetos com espaço reduzido.",
+      "Alta compatibilidade: Compatível com placas ESP32, ESP8266, Raspberry Pi e outros dispositivos que utilizam U.FL e RP-SMA.",
+      "Conexão estável: Garante excelente desempenho de sinal e redução de perda de dados."
+    ],
+    "specifications": [
+      {
+        "label": "Cor",
+        "value": "Preto"
+      },
+      {
+        "label": "Marca do produto",
+        "value": "Genérica"
+      },
+      {
+        "label": "Modelo do produto",
+        "value": "RP-SMA"
+      },
+      {
+        "label": "Modelo alfanumérico",
+        "value": "IPEX MHF4 to RP-SMA Female"
+      }
+    ],
+    "applications": [
+      "Projetos IoT: Expanda a conectividade de dispositivos inteligentes.",
+      "Redes Wi-Fi e Bluetooth: Conexão otimizada para melhor desempenho de sinal.",
+      "Desenvolvimento de protótipos: Perfeito para testes de antenas externas.",
+      "Comunicação sem fio em ambientes internos e externos.",
+      "Garanta já o seu kit com 2 pigtails e leve seu projeto para o próximo nível de conectividade!"
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-5272831698-kit-com-6-pigtail-u-fi-ipx-para-rp-sma-femea-com-10-cm_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "priority": 37,
+    "searchTerms": [
+      "Kit",
+      "Com",
+      "Pigtail",
+      "Ipx",
+      "Para",
+      "Rp-sma",
+      "Fem",
+      "Comunica??o",
+      "GSM",
+      "GPRS",
+      "Gen",
+      "rica",
+      "RP-SMA"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb5272894966",
+    "mlbId": "MLB5272894966",
+    "slug": "kit-200-barra-de-pinos-femea-1x15-2-54mm-pic-arduino-mlb5272894966",
+    "name": "Kit 200 Barra De Pinos - Fêmea - 1x15 - 2,54mm - Pic/arduino",
+    "shortName": "Kit 200 Barra De Pinos - Fêmea - 1x15 - 2,54mm - Pic/arduino",
+    "category": "Placas e microcontroladores",
+    "subcategory": "Conectores de áudio e vídeo",
+    "brand": "Genérica",
+    "model": "Barra de Pinos Fêmea 1x15 2.54mm",
+    "condition": "novo",
+    "quantityInKit": 200,
+    "price": 209.0,
+    "currency": "BRL",
+    "image": "/products/D_NQ_985903-MLA113110801334_072026-OO.webp",
+    "gallery": [
+      "/products/D_NQ_985903-MLA113110801334_072026-OO.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "Kit 200 Peças - Barra de Pinos Fêmea 1x15 Passo 2,54mm MCI 180°",
+    "fullDescription": "Kit 200 Peças - Barra de Pinos Fêmea 1x15 Passo 2,54mm MCI 180° \n\nEste kit de 200 barras de pinos fêmea 1x15 com passo de 2,54mm é ideal para projetos que exigem precisão e praticidade, proporcionando uma conexão segura e de alta qualidade. \n\nCaracterísticas Principais: \n- Compatibilidade ampla: Perfeito para Arduino Nano e ESP32 de 30 pinos, além de outros microcontroladores. \n- Passo de 2,54mm: Padrão universal que facilita a integração em diferentes projetos eletrônicos. \n- Conexão estável: Garante excelente condutividade e segurança em protótipos e montagens. \n- Ângulo de 180°: Facilita o encaixe em placas e módulos com ótimo aproveitamento de espaço. \n- Durabilidade: Fabricado com materiais de alta qualidade para maior resistência e vida útil. \n\nAplicações: \n- Prototipagem eletrônica: Montagem e teste de circuitos com facilidade. \n- Projetos IoT: Conexões rápidas e confiáveis para placas como o ESP32. \n- Desenvolvimento com Arduino: Compatível com vários modelos para montagem de shields e periféricos. \n- Automação e robótica: Ideal para conexões de motores, sensores e atuadores em projetos de robótica. \n- Educação e ensino: Excelente para aprendizado prático de eletrônica em cursos e oficinas. \n\nTransforme seus projetos com conexões confiáveis e seguras. Garanta já o seu kit com 20 unidades!",
+    "highlights": [
+      "Kit 200 Peças - Barra de Pinos Fêmea 1x15 Passo 2,54mm MCI 180°",
+      "Este kit de 200 barras de pinos fêmea 1x15 com passo de 2,54mm é ideal para projetos que exigem precisão e praticidade, proporcionando uma conexão segura e de alta qualidade.",
+      "Características Principais:",
+      "Compatibilidade ampla: Perfeito para Arduino Nano e ESP32 de 30 pinos, além de outros microcontroladores.",
+      "Passo de 2,54mm: Padrão universal que facilita a integração em diferentes projetos eletrônicos.",
+      "Conexão estável: Garante excelente condutividade e segurança em protótipos e montagens."
+    ],
+    "specifications": [
+      {
+        "label": "Cor",
+        "value": "Preto"
+      },
+      {
+        "label": "Marca",
+        "value": "Genérica"
+      },
+      {
+        "label": "Modelo",
+        "value": "Barra de Pinos Fêmea 1x15 2.54mm"
+      },
+      {
+        "label": "Formato de venda",
+        "value": "Kit"
+      },
+      {
+        "label": "Unidades por kit",
+        "value": "20"
+      },
+      {
+        "label": "Tipo de produto",
+        "value": "Conector"
+      },
+      {
+        "label": "Tipo de conector",
+        "value": "Pino"
+      },
+      {
+        "label": "Gênero do conector",
+        "value": "Fêmea"
+      },
+      {
+        "label": "Material de revestimento",
+        "value": "Plástico"
+      }
+    ],
+    "applications": [
+      "Prototipagem eletrônica: Montagem e teste de circuitos com facilidade.",
+      "Projetos IoT: Conexões rápidas e confiáveis para placas como o ESP32.",
+      "Desenvolvimento com Arduino: Compatível com vários modelos para montagem de shields e periféricos.",
+      "Automação e robótica: Ideal para conexões de motores, sensores e atuadores em projetos de robótica.",
+      "Educação e ensino: Excelente para aprendizado prático de eletrônica em cursos e oficinas.",
+      "Transforme seus projetos com conexões confiáveis e seguras. Garanta já o seu kit com 20 unidades!"
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-5272894966-kit-200-barra-de-pinos-femea-1x15-2-54mm-pic-arduino_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "priority": 38,
+    "searchTerms": [
+      "Kit",
+      "200",
+      "Barra",
+      "Pinos",
+      "mea",
+      "1x15",
+      "54mm",
+      "Pic",
+      "arduino",
+      "Placas",
+      "microcontroladores",
+      "Gen",
+      "rica"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb5288865822",
+    "mlbId": "MLB5288865822",
+    "slug": "kit-com3x-transformador-de-corrente-ac-nao-invasivo-zmct123a-mlb5288865822",
+    "name": "Kit Com3x Transformador De Corrente Ac Não Invasivo Zmct123a",
+    "shortName": "Kit Com3x Transformador De Corrente Ac Não Invasivo Zmct123a",
+    "category": "Sensores e medi??o",
+    "subcategory": "Inversores de corrente",
+    "brand": "",
+    "model": "",
+    "condition": "novo",
+    "quantityInKit": 3,
+    "price": 49.18,
+    "currency": "BRL",
+    "image": "/products/D_NQ_NP_925680-MLA72842852904_112023-O.jpg",
+    "gallery": [
+      "/products/D_NQ_NP_925680-MLA72842852904_112023-O.jpg",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "Este kit contém 3 sensores de corrente AC modelo ZMCT123A, ideais para medição de corrente alternada em diversos projetos eletrônicos e de automação. Com sua tecnologia não invasiva, esses s",
+    "fullDescription": "**Sugestão de Descrição:**  \n\nEste kit contém 3 sensores de corrente AC modelo ZMCT123A, ideais para medição de corrente alternada em diversos projetos eletrônicos e de automação. Com sua tecnologia não invasiva, esses sensores permitem monitorar a corrente elétrica sem a necessidade de romper os fios, proporcionando segurança e facilidade de instalação.  \n\nEspecificações Técnicas:  \n- Modelo: ZMCT123A  \n- Faixa de Medição: 0~5A AC  \n- Saída analógica proporcional à corrente detectada  \n- Isolamento galvânico para segurança adicional  \n- Design compacto e leve  \n\nAplicações:  \n- Monitoramento de consumo de energia elétrica  \n- Automação residencial e industrial  \n- Sistemas de medição e proteção de corrente  \n- Projetos de IoT e monitoramento remoto  \n- Desenvolvimento de dispositivos de proteção e controle  \n\nBenefícios:  \n- Medição não invasiva para maior segurança  \n- Fácil integração com controladores como Arduino, Raspberry Pi e ESP32  \n- Solução prática e confiável para diversos projetos de eletrônica  \n\nAdquira já o kit com 3 sensores ZMCT123A e torne seus projetos eletrônicos mais eficientes e seguros!",
+    "highlights": [
+      "Sugestão de Descrição:",
+      "Especificações Técnicas:",
+      "Modelo: ZMCT123A",
+      "Faixa de Medição: 0~5A AC",
+      "Saída analógica proporcional à corrente detectada",
+      "Isolamento galvânico para segurança adicional"
+    ],
+    "specifications": [],
+    "applications": [
+      "Monitoramento de consumo de energia elétrica",
+      "Automação residencial e industrial",
+      "Sistemas de medição e proteção de corrente",
+      "Projetos de IoT e monitoramento remoto",
+      "Desenvolvimento de dispositivos de proteção e controle",
+      "Benefícios:"
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-5288865822-kit-com3x-transformador-de-corrente-ac-nao-invasivo-zmct123a_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "priority": 39,
+    "searchTerms": [
+      "Kit",
+      "Com3x",
+      "Transformador",
+      "Corrente",
+      "Invasivo",
+      "Zmct123a",
+      "Sensores",
+      "medi??o"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb5375622238",
+    "mlbId": "MLB5375622238",
+    "slug": "kit-20x-modulos-esp32-ttgo-t-call-sim800l-antena-novo-mlb5375622238",
+    "name": "Kit 20x Módulos Esp32 Ttgo T-call Sim800l + Antena (novo)",
+    "shortName": "Kit 20x Módulos Esp32 Ttgo T-call Sim800l + Antena (novo)",
+    "category": "Placas e microcontroladores",
+    "subcategory": "Placas de microcontroladores",
+    "brand": "Lilygo",
+    "model": "Ttgo T-call Sim800l + Antena",
+    "condition": "usado",
+    "quantityInKit": 20,
+    "price": 2698.0,
+    "currency": "BRL",
+    "image": "/products/D_Q_NP_2X_614597-MLA94063638439_102025-AB.webp",
+    "gallery": [
+      "/products/D_Q_NP_2X_614597-MLA94063638439_102025-AB.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "TRATA-SE DE PRODUTOS NOVOS - EMBALADOS E NUNCA ABERTOS",
+    "fullDescription": "Venda somente para pessoas físicas.\n\nTRATA-SE DE PRODUTOS NOVOS - EMBALADOS E NUNCA ABERTOS\n\n20 unidades de Módulos de Comunicação Sem Fio TTGO T-Call V1.4 – ESP32 + SIM800L\n\nO TTGO T-Call V1.4 é um módulo integrado que combina o ESP32-WROver-B com o SIM800L, proporcionando conectividade Wi-Fi, Bluetooth, GSM/GPRS e suporte a bateria de lítio. O produto já vem com os pinos soldados, facilitando a instalação e integração em projetos eletrônicos. Ideal para aplicações IoT, comunicação M2M e monitoramento remoto.\n\nDestaques do produto:\nProduto homologado pela ANATEL\nMódulo ESP32-WROver-B com conectividade Wi-Fi, Bluetooth e BLE\nMódulo SIM800L compatível com redes GSM/GPRS (850/900/1800/1900MHz)\nInterface TYPE-C para alimentação e depuração\nSuporte a SMS, chamadas de voz e transmissão de dados\nCompatível com cartão SIM 2G\nCircuito integrado para carregamento e proteção da bateria de lítio\nLED indicador de status\nPinos já soldados, pronto para uso\n\nEspecificações técnicas:\nTensão de operação: 3.6V ~ 5V\nInterface de carregamento: TYPE-C (5V, 500mA)\nFrequência GSM: 850/900/1800/1900MHz\nAplicações recomendadas:\n\nProjetos IoT, como automação residencial, rastreamento e monitoramento remoto\nComunicação M2M para integração entre dispositivos inteligentes\nDispositivos portáteis que exigem conectividade móvel\nSistemas de monitoramento, segurança e telemetria\nProduto pronto para uso e ideal para diversos projetos eletrônicos.\"",
+    "highlights": [
+      "Venda somente para pessoas físicas.",
+      "TRATA-SE DE PRODUTOS NOVOS - EMBALADOS E NUNCA ABERTOS",
+      "20 unidades de Módulos de Comunicação Sem Fio TTGO T-Call V1.4 – ESP32 + SIM800L"
+    ],
+    "specifications": [
+      {
+        "label": "Marca",
+        "value": "Lilygo"
+      },
+      {
+        "label": "Modelo",
+        "value": "Ttgo T-call Sim800l + Antena"
+      },
+      {
+        "label": "Microcontrolador",
+        "value": "ESP32"
+      },
+      {
+        "label": "Tensão de operação",
+        "value": "3,3v-5v"
+      },
+      {
+        "label": "Voltagem de entrada recomendado",
+        "value": "3,3 V - 5 V"
+      },
+      {
+        "label": "Voltagem de entrada límite",
+        "value": "3,3 V - 5 V"
+      },
+      {
+        "label": "Frequência do relógio",
+        "value": "240.0 MHz"
+      },
+      {
+        "label": "Capacidade da memória flash",
+        "value": "8.0 KB"
+      },
+      {
+        "label": "Comprimento",
+        "value": "7.8 cm"
+      },
+      {
+        "label": "Largura",
+        "value": "0.9 cm"
+      },
+      {
+        "label": "Altura",
+        "value": "1.1 cm"
+      },
+      {
+        "label": "Peso",
+        "value": "80.0 g"
+      },
+      {
+        "label": "Inclui cabo usb",
+        "value": "Não"
+      }
+    ],
+    "applications": [
+      "Destaques do produto:",
+      "Produto homologado pela ANATEL",
+      "Módulo ESP32-WROver-B com conectividade Wi-Fi, Bluetooth e BLE",
+      "Módulo SIM800L compatível com redes GSM/GPRS (850/900/1800/1900MHz)",
+      "Interface TYPE-C para alimentação e depuração",
+      "Suporte a SMS, chamadas de voz e transmissão de dados"
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-5375622238-kit-20x-modulos-esp32-ttgo-t-call-sim800l-antena-novo_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "priority": 40,
+    "searchTerms": [
+      "Kit",
+      "20x",
+      "dulos",
+      "Esp32",
+      "Ttgo",
+      "T-call",
+      "Sim800l",
+      "Antena",
+      "novo",
+      "Placas",
+      "microcontroladores",
+      "Lilygo"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb5375698778",
+    "mlbId": "MLB5375698778",
+    "slug": "kit-10x-modulos-esp32-ttgo-t-call-sim800l-antena-novo-mlb5375698778",
+    "name": "Kit 10x Módulos Esp32 Ttgo T-call Sim800l + Antena (novo)",
+    "shortName": "Kit 10x Módulos Esp32 Ttgo T-call Sim800l + Antena (novo)",
+    "category": "Placas e microcontroladores",
+    "subcategory": "Placas de microcontroladores",
+    "brand": "Lilygo",
+    "model": "Esp32 Ttgo T-call Sim800l + Antena",
+    "condition": "usado",
+    "quantityInKit": 10,
+    "price": 1259.0,
+    "currency": "BRL",
+    "image": "/products/D_Q_NP_2X_620097-MLA96767173502_112025-AB.webp",
+    "gallery": [
+      "/products/D_Q_NP_2X_620097-MLA96767173502_112025-AB.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "Oferta OMEGAIMPORTS para Kit 10x Módulos Esp32 Ttgo T-call Sim800l + Antena (novo).",
+    "fullDescription": "",
+    "highlights": [
+      "Oferta OMEGAIMPORTS para Kit 10x Módulos Esp32 Ttgo T-call Sim800l + Antena (novo)."
+    ],
+    "specifications": [
+      {
+        "label": "Marca",
+        "value": "Lilygo"
+      },
+      {
+        "label": "Modelo",
+        "value": "Esp32 Ttgo T-call Sim800l + Antena"
+      },
+      {
+        "label": "Microcontrolador",
+        "value": "ESP32"
+      },
+      {
+        "label": "Tensão de operação",
+        "value": "3,3v-5v"
+      },
+      {
+        "label": "Voltagem de entrada recomendado",
+        "value": "3,3 V - 5 V"
+      },
+      {
+        "label": "Voltagem de entrada límite",
+        "value": "3,3 V - 5 V"
+      },
+      {
+        "label": "Frequência do relógio",
+        "value": "240.0 MHz"
+      },
+      {
+        "label": "Capacidade da memória flash",
+        "value": "8.0 KB"
+      },
+      {
+        "label": "Comprimento",
+        "value": "7.8 cm"
+      },
+      {
+        "label": "Largura",
+        "value": "0.9 cm"
+      },
+      {
+        "label": "Altura",
+        "value": "1.1 cm"
+      },
+      {
+        "label": "Peso",
+        "value": "80.0 g"
+      }
+    ],
+    "applications": [
+      "Projetos eletr?nicos e t?cnicos conforme caracter?sticas do an?ncio."
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-5375698778-kit-10x-modulos-esp32-ttgo-t-call-sim800l-antena-novo_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "priority": 41,
+    "searchTerms": [
+      "Kit",
+      "10x",
+      "dulos",
+      "Esp32",
+      "Ttgo",
+      "T-call",
+      "Sim800l",
+      "Antena",
+      "novo",
+      "Placas",
+      "microcontroladores",
+      "Lilygo"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb5375724278",
+    "mlbId": "MLB5375724278",
+    "slug": "kit-5x-modulos-esp32-ttgo-t-call-sim800l-antena-novo-mlb5375724278",
+    "name": "Kit 5x Módulos Esp32 Ttgo T-call Sim800l + Antena (novo)",
+    "shortName": "Kit 5x Módulos Esp32 Ttgo T-call Sim800l + Antena (novo)",
+    "category": "Placas e microcontroladores",
+    "subcategory": "Placas de microcontroladores",
+    "brand": "Lilygo",
+    "model": "Kit 20x Módulos Esp32 Ttgo T-call Sim800l + Antena",
+    "condition": "usado",
+    "quantityInKit": 5,
+    "price": 592.0,
+    "currency": "BRL",
+    "image": "/products/D_Q_NP_2X_757282-MLA100045769531_122025-AB.webp",
+    "gallery": [
+      "/products/D_Q_NP_2X_757282-MLA100045769531_122025-AB.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "TRATA-SE DE PRODUTOS NOVOS - EMBALADOS E NUNCA ABERTOS",
+    "fullDescription": "*Venda somente para pessoas físicas.*\n\n* TRATA-SE DE PRODUTOS NOVOS - EMBALADOS E NUNCA ABERTOS *\n\n5 unidades de Módulos de Comunicação Sem Fio TTGO T-Call V1.4 – ESP32 + SIM800L\n\nO TTGO T-Call V1.4 é um módulo integrado que combina o ESP32-WROver-B com o SIM800L, proporcionando conectividade Wi-Fi, Bluetooth, GSM/GPRS e suporte a bateria de lítio. O produto já vem com os pinos soldados, facilitando a instalação e integração em projetos eletrônicos. Ideal para aplicações IoT, comunicação M2M e monitoramento remoto.\n\nDestaques do produto:\nProduto homologado pela ANATEL\nMódulo ESP32-WROver-B com conectividade Wi-Fi, Bluetooth e BLE\nMódulo SIM800L compatível com redes GSM/GPRS (850/900/1800/1900MHz)\nInterface TYPE-C para alimentação e depuração\nSuporte a SMS, chamadas de voz e transmissão de dados\nCompatível com cartão SIM 2G\nCircuito integrado para carregamento e proteção da bateria de lítio\nLED indicador de status\nPinos já soldados, pronto para uso\n\nEspecificações técnicas:\nTensão de operação: 3.6V ~ 5V\nInterface de carregamento: TYPE-C (5V, 500mA)\nFrequência GSM: 850/900/1800/1900MHz\nAplicações recomendadas:\n\nProjetos IoT, como automação residencial, rastreamento e monitoramento remoto\nComunicação M2M para integração entre dispositivos inteligentes\nDispositivos portáteis que exigem conectividade móvel\nSistemas de monitoramento, segurança e telemetria\nProduto pronto para uso e ideal para diversos projetos eletrônicos.",
+    "highlights": [
+      "Venda somente para pessoas físicas.",
+      "TRATA-SE DE PRODUTOS NOVOS - EMBALADOS E NUNCA ABERTOS",
+      "5 unidades de Módulos de Comunicação Sem Fio TTGO T-Call V1.4 – ESP32 + SIM800L"
+    ],
+    "specifications": [
+      {
+        "label": "Marca",
+        "value": "Lilygo"
+      },
+      {
+        "label": "Modelo",
+        "value": "Kit 20x Módulos Esp32 Ttgo T-call Sim800l + Antena"
+      },
+      {
+        "label": "Microcontrolador",
+        "value": "ESP32"
+      },
+      {
+        "label": "Comprimento",
+        "value": "7.8 cm"
+      },
+      {
+        "label": "Largura",
+        "value": "11.0 cm"
+      },
+      {
+        "label": "Altura",
+        "value": "0.9 cm"
+      },
+      {
+        "label": "Peso",
+        "value": "80.0 g"
+      }
+    ],
+    "applications": [
+      "Destaques do produto:",
+      "Produto homologado pela ANATEL",
+      "Módulo ESP32-WROver-B com conectividade Wi-Fi, Bluetooth e BLE",
+      "Módulo SIM800L compatível com redes GSM/GPRS (850/900/1800/1900MHz)",
+      "Interface TYPE-C para alimentação e depuração",
+      "Suporte a SMS, chamadas de voz e transmissão de dados"
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-5375724278-kit-5x-modulos-esp32-ttgo-t-call-sim800l-antena-novo_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "priority": 42,
+    "searchTerms": [
+      "Kit",
+      "dulos",
+      "Esp32",
+      "Ttgo",
+      "T-call",
+      "Sim800l",
+      "Antena",
+      "novo",
+      "Placas",
+      "microcontroladores",
+      "Lilygo",
+      "20x"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb6747662378",
+    "mlbId": "MLB6747662378",
+    "slug": "fonte-de-alimentacao-dc-variavel-bancada-hikari-3a-hf-3203s-mlb6747662378",
+    "name": "Fonte De Alimentação Dc Variável Bancada Hikari 3a Hf-3203s",
+    "shortName": "Fonte De Alimentação Dc Variável Bancada Hikari 3a Hf-3203s",
+    "category": "Sensores e medi??o",
+    "subcategory": "Voltímetros",
+    "brand": "Hikari",
+    "model": "HF-3203S",
+    "condition": "usado",
+    "quantityInKit": 1,
+    "price": 755.3,
+    "currency": "BRL",
+    "image": "/products/D_Q_NP_2X_757573-MLA113356351957_062026-AB.webp",
+    "gallery": [
+      "/products/D_Q_NP_2X_757573-MLA113356351957_062026-AB.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "Produto seminovo, em estado impecável, sem marcas de uso e com pleno funcionamento de todos os recursos.",
+    "fullDescription": "Produto seminovo, em estado impecável, sem marcas de uso e com pleno funcionamento de todos os recursos.\n\nA Fonte de Alimentação Simples Hikari HF-3205S é ideal para aplicações que exigem alimentação de corrente contínua estável e confiável. Com capacidade de saída de até 32V e 5A, esta fonte é amplamente utilizada em laboratórios, manutenção eletrônica, prototipagem e projetos de eletrônica.\n\nEspecificações técnicas:\nMarca: Hikari\nModelo: HF-3205S\nTipo: Fonte de alimentação simples\nTensão de saída: 0 a 32V\nCorrente de saída: 0 a 5A\nProteção contra sobrecarga e curto-circuito\nAjuste fino e preciso de tensão e corrente\nDisplay digital para leitura clara e precisa\nAplicações:\n\nBancadas de testes e manutenção de equipamentos eletrônicos\nDesenvolvimento de circuitos e protótipos\nLaboratórios de eletrônica\nAlimentação de dispositivos sensíveis\n\nBenefícios:\nAlta precisão no controle de tensão e corrente\nProteções integradas para maior segurança\nFácil de usar, com ajuste preciso e leitura digital\nA Fonte de Alimentação Hikari HF-3205S oferece desempenho e confiabilidade para todas as suas necessidades de eletrônica.\nDimensões: 156(A) x 110(L) x 260(P)mm;\nPeso: Aproximadamente 4.8kg;\n \nItens Inclusos\nManual de Instruções\nCabo de Alimentação\nPonta de Prova (1 par)",
+    "highlights": [
+      "Produto seminovo, em estado impecável, sem marcas de uso e com pleno funcionamento de todos os recursos."
+    ],
+    "specifications": [
+      {
+        "label": "Marca",
+        "value": "Hikari"
+      },
+      {
+        "label": "Modelo",
+        "value": "HF-3203S"
+      },
+      {
+        "label": "Formato de venda",
+        "value": "Unidade"
+      },
+      {
+        "label": "Unidades por kit",
+        "value": "1"
+      },
+      {
+        "label": "Tensão de alimentação mínima",
+        "value": "127V"
+      },
+      {
+        "label": "Tensão de alimentação máxima",
+        "value": "220V"
+      },
+      {
+        "label": "Temperatura mínima de operação",
+        "value": "1.0 °C"
+      },
+      {
+        "label": "Temperatura máxima de operação",
+        "value": "60.0 °C"
+      }
+    ],
+    "applications": [
+      "Especificações técnicas:",
+      "Marca: Hikari",
+      "Modelo: HF-3205S",
+      "Tipo: Fonte de alimentação simples",
+      "Tensão de saída: 0 a 32V",
+      "Corrente de saída: 0 a 5A"
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-6747662378-fonte-de-alimentacao-dc-variavel-bancada-hikari-3a-hf-3203s_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "priority": 43,
+    "searchTerms": [
+      "Fonte",
+      "Alimenta",
+      "Vari",
+      "vel",
+      "Bancada",
+      "Hikari",
+      "Hf-3203s",
+      "Sensores",
+      "medi??o",
+      "HF-3203S"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb6747664364",
+    "mlbId": "MLB6747664364",
+    "slug": "gerador-de-funcao-minipa-2mhz-mfg-4202a-portatil-manual-2kg-mlb6747664364",
+    "name": "Gerador De Função Minipa 2mhz Mfg-4202a Portátil Manual 2kg",
+    "shortName": "Gerador De Função Minipa 2mhz Mfg-4202a Portátil Manual 2kg",
+    "category": "Instrumentos de bancada",
+    "subcategory": "Geradores de energia portáteis",
+    "brand": "Minipa",
+    "model": "Gerador De Função 2Mhz Minipa Mfg-4202A",
+    "condition": "usado",
+    "quantityInKit": 1,
+    "price": 852.3,
+    "currency": "BRL",
+    "image": "/products/D_Q_NP_2X_765319-MLA99988235169_112025-AB.webp",
+    "gallery": [
+      "/products/D_Q_NP_2X_765319-MLA99988235169_112025-AB.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "A especificação é válida para temperatura 23C5C, umidade relativa  80% e tempo de aquecimento mínimo de 30 minutos. Ciclo de calibração recomendado de 1 ano.",
+    "fullDescription": "GERAL\n\nA especificação é válida para temperatura 23C5C, umidade relativa  80% e tempo de aquecimento mínimo de 30 minutos. Ciclo de calibração recomendado de 1 ano.\n\n \n\nCARACTERÍSTICAS\n\nDisplay: 6 dígitos para frequência, LED;\n\nAmbiente de Operação: 0 ~ 40 C, UR  80%;\n\nAmbiente de Armazenamento: -10 ~ 50 C, UR  80%\n\nAlimentação: 110 V / 220 V AC 10%, 50 Hz / 60 Hz 5%;\n\nConsumo:  20 W;\n\nGrau de Poluição: 2;\n\nDimensões: 230 (A) x 85 (L) x 240 (P)mm;\n\nPeso Aprox.: 2,0 Kg;\n\nUso Interno;\n\nACESSÓRIOS\n\n1. Manual de Instruções\n\n2. Cabo de Alimentação\n\n3. Cabo BNC/Jacaré\n\n \n\nSAÍDA\n\nFormas de Onda: Senoidal, Quadrada e Triangular;\n\nFaixa de Frequência: 6 faixas de 2 Hz a 2 MHz;\n\nImpedância de Saída: 50 10%\n\nAtenuador: 0, 20 e 40 dB;\n\nAmplitude de Saída: 8 Vpp (Carga de 50 ); 16 Vpp (Em aberto).\n\n \n\nONDA SENOIDAL\n\nDistorção:  2% (20 Hz ~ 20 KHz)\n\n \n\nONDA QUADRADA\n\nTempo de Subida e Descida:  40 ns\n\n \n\nONDA TRIANGULAR\n\nLinearidade:  98% ( 100 KHz); 95% (  100 KHz).\n\n \n\nINDICADOR DE FREQUÊNCIA\n\nPrecisão:  (0,1% Leitura + 1 Dígito);\n\nBase de Tempo: 1 s (X10 Hz ~ X1 MHz), 10 s (X1 Hz);\n\nEstabilidade de Base de Tempo: 100 ppm",
+    "highlights": [
+      "GERAL",
+      "A especificação é válida para temperatura 23C5C, umidade relativa  80% e tempo de aquecimento mínimo de 30 minutos. Ciclo de calibração recomendado de 1 ano.",
+      "CARACTERÍSTICAS",
+      "Display: 6 dígitos para frequência, LED;",
+      "Ambiente de Operação: 0 ~ 40 C, UR  80%;",
+      "Ambiente de Armazenamento: -10 ~ 50 C, UR  80%"
+    ],
+    "specifications": [
+      {
+        "label": "Marca",
+        "value": "Minipa"
+      },
+      {
+        "label": "Modelo",
+        "value": "Gerador De Função 2Mhz Minipa Mfg-4202A"
+      },
+      {
+        "label": "Tipo de tecnologia",
+        "value": "Manual"
+      },
+      {
+        "label": "Métodos de arranque",
+        "value": "Manual"
+      },
+      {
+        "label": "Potência máxima",
+        "value": "20.0 W"
+      }
+    ],
+    "applications": [
+      "Projetos eletr?nicos e t?cnicos conforme caracter?sticas do an?ncio."
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-6747664364-gerador-de-funcao-minipa-2mhz-mfg-4202a-portatil-manual-2kg_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "priority": 44,
+    "searchTerms": [
+      "Gerador",
+      "Fun",
+      "Minipa",
+      "2mhz",
+      "Mfg-4202a",
+      "Port",
+      "til",
+      "Manual",
+      "2kg",
+      "Instrumentos",
+      "bancada",
+      "2Mhz",
+      "Mfg-4202A"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb6747664922",
+    "mlbId": "MLB6747664922",
+    "slug": "sensor-de-corrente-ac-nao-invasivo-ac-sct-013-100a-50ma-mlb6747664922",
+    "name": "Sensor De Corrente Ac Não Invasivo Ac Sct-013 100a 50ma",
+    "shortName": "Sensor De Corrente Ac Não Invasivo Ac Sct-013 100a 50ma",
+    "category": "Placas e microcontroladores",
+    "subcategory": "Placas de microcontroladores",
+    "brand": "Tecneu",
+    "model": "AC SCT-013",
+    "condition": "novo",
+    "quantityInKit": 1,
+    "price": 63.0,
+    "currency": "BRL",
+    "image": "/products/D_Q_NP_2X_907255-MLA99466124410_112025-AB.webp",
+    "gallery": [
+      "/products/D_Q_NP_2X_907255-MLA99466124410_112025-AB.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "Oferta OMEGAIMPORTS para Sensor De Corrente Ac Não Invasivo Ac Sct-013 100a 50ma.",
+    "fullDescription": "",
+    "highlights": [
+      "Oferta OMEGAIMPORTS para Sensor De Corrente Ac Não Invasivo Ac Sct-013 100a 50ma."
+    ],
+    "specifications": [
+      {
+        "label": "Marca",
+        "value": "Tecneu"
+      },
+      {
+        "label": "Modelo",
+        "value": "AC SCT-013"
+      },
+      {
+        "label": "Microcontrolador",
+        "value": "Sensor de Corriente Alterna"
+      },
+      {
+        "label": "Capacidade da memória flash",
+        "value": "0 KB"
+      },
+      {
+        "label": "Comprimento",
+        "value": "3.2 cm"
+      },
+      {
+        "label": "Largura",
+        "value": "5.7 cm"
+      },
+      {
+        "label": "Altura",
+        "value": "2.12 cm"
+      },
+      {
+        "label": "Inclui cabo usb",
+        "value": "Não"
+      }
+    ],
+    "applications": [
+      "Projetos eletr?nicos e t?cnicos conforme caracter?sticas do an?ncio."
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-6747664922-sensor-de-corrente-ac-nao-invasivo-ac-sct-013-100a-50ma_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "priority": 45,
+    "searchTerms": [
+      "Sensor",
+      "Corrente",
+      "Invasivo",
+      "Sct-013",
+      "100a",
+      "50ma",
+      "Placas",
+      "microcontroladores",
+      "Tecneu",
+      "SCT-013"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb7070502622",
+    "mlbId": "MLB7070502622",
+    "slug": "modulo-de-comunicacao-ttgo-t-call-sim800l-lilygo-aberto-mlb7070502622",
+    "name": "Módulo De Comunicação Ttgo T-call, Sim800l Lilygo (aberto)",
+    "shortName": "Módulo De Comunicação Ttgo T-call, Sim800l Lilygo (aberto)",
+    "category": "Placas e microcontroladores",
+    "subcategory": "Placas de microcontroladores",
+    "brand": "",
+    "model": "",
+    "condition": "usado",
+    "quantityInKit": 1,
+    "price": 98.2,
+    "currency": "BRL",
+    "image": "/products/D_Q_NP_2X_942461-MLA99483689540_112025-AB.webp",
+    "gallery": [
+      "/products/D_Q_NP_2X_942461-MLA99483689540_112025-AB.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "Aberto somente para verificação do funcionamento, sem solda ou conexões, garantia de funcionamento em perfeito estado",
+    "fullDescription": "Aberto somente para verificação do funcionamento, sem solda ou conexões, garantia de funcionamento em perfeito estado\n\nMódulo de Comunicação Sem Fio TTGO T-Call, SIM800L, Antena FPC, Cartão SIM, V1.4, ESP32\n\nO Módulo de Comunicação Sem Fio TTGO T-Call é uma solução integrada que combina os módulos ESP32-WROver-B e SIM800L, oferecendo Wi-Fi, Bluetooth, GSM/GPRS e capacidades de carregamento de bateria.\n\n\nCaracterísticas Principais:\n\n- Produto homologado pela ANATEL\n- Módulo ESP32-WROver-B com Wi-Fi, Bluetooth e BLE\n- Módulo SIM800L com GSM/GPRS (850/900/1800/1900MHz)\n- Interface TYPE-C para depuração e carregamento\n- Suporte a transmissão de voz, SMS e dados\n- Dois portos áudio: entrada e saída para microfone\n- Luz indicadora LED azul\n- Suporte a cartão SIM 2G\n- Circuito de carga e descarga de bateria de lítio\n- Proteção contra sobrecarga e descarga\n\n\nEspecificações Técnicas:\n\n- Tensão de alimentação: DC 3.6V ~ 5V\n- Interface de bateria de lítio: TYPE-C (5V, 500mA)\n- Frequência operacional: 850/900/1800/1900MHz\n\n\nAplicações:\n\n- Projetos IoT\n- Comunicação M2M\n- Dispositivos portáteis\n- Sistemas de monitoramento remoto",
+    "highlights": [
+      "Aberto somente para verificação do funcionamento, sem solda ou conexões, garantia de funcionamento em perfeito estado",
+      "Módulo de Comunicação Sem Fio TTGO T-Call, SIM800L, Antena FPC, Cartão SIM, V1.4, ESP32",
+      "Características Principais:",
+      "Produto homologado pela ANATEL",
+      "Módulo ESP32-WROver-B com Wi-Fi, Bluetooth e BLE",
+      "Módulo SIM800L com GSM/GPRS (850/900/1800/1900MHz)"
+    ],
+    "specifications": [],
+    "applications": [
+      "Projetos IoT",
+      "Comunicação M2M",
+      "Dispositivos portáteis",
+      "Sistemas de monitoramento remoto"
+    ],
+    "packageContents": [],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-7070502622-modulo-de-comunicacao-ttgo-t-call-sim800l-lilygo-aberto_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "priority": 46,
+    "searchTerms": [
+      "dulo",
+      "Comunica",
+      "Ttgo",
+      "T-call",
+      "Sim800l",
+      "Lilygo",
+      "aberto",
+      "Placas",
+      "microcontroladores"
+    ],
+    "linkStatus": "derivedFromExport"
+  },
+  {
+    "id": "mlb7143332292",
+    "mlbId": "MLB7143332292",
+    "slug": "kit-3x-modulo-gps-neo-6m-v2-com-antena-arduino-esp32-esp8266-mlb7143332292",
+    "name": "Kit 3x Módulo Gps Neo-6m V2 Com Antena Arduino Esp32 Esp8266",
+    "shortName": "Kit 3x Módulo Gps Neo-6m V2 Com Antena Arduino Esp32 Esp8266",
+    "category": "Placas e microcontroladores",
+    "subcategory": "Placas de microcontroladores",
+    "brand": "",
+    "model": "",
+    "condition": "novo",
+    "quantityInKit": 3,
+    "price": 98.2,
+    "currency": "BRL",
+    "image": "/products/D_Q_NP_2X_970666-MLA106134164122_022026-AB.webp",
+    "gallery": [
+      "/products/D_Q_NP_2X_970666-MLA106134164122_022026-AB.webp",
+      "/products/omega-store-product.jpg"
+    ],
+    "shortDescription": "O módulo GPS GY-NEO6MV2 é baseado no chip Ublox NEO-6M, reconhecido pela sua alta precisão, baixo consumo de energia e excelente recepção de sinal. Ele é ideal para projetos com Arduino, ESP",
+    "fullDescription": "O módulo GPS GY-NEO6MV2 é baseado no chip Ublox NEO-6M, reconhecido pela sua alta precisão, baixo consumo de energia e excelente recepção de sinal. Ele é ideal para projetos com Arduino, ESP32, Raspberry Pi, drones, robôs, sistemas de navegação e rastreamento veicular.\n\nAcompanha antena cerâmica integrada e conector UART (TX/RX) para comunicação direta com microcontroladores. Possui ainda entrada para bateria externa de backup, permitindo retenção dos dados de posicionamento (como últimas coordenadas e efemérides).\n\nPRINCIPAIS CARACTERÍSTICAS:\n- Chip GPS: Ublox NEO-6M\n- Tensão de operação: 3V a 5V\n- Comunicação: Serial UART (TX/RX)\n- Taxa de baud padrão: 9600 bps\n- Precisão: até 2,5 metros\n- Antena cerâmica integrada (incluída)\n- LED indicador de fixação de satélite\n- Pino PPS (Pulse per Second) disponível\n- Dimensões aproximadas: 23 mm x 30 mm\n\nCONTEÚDO:\n1x - Módulo GPS Ublox GY-GPS6MV2 GY-NEO6MV2",
+    "highlights": [
+      "O módulo GPS GY-NEO6MV2 é baseado no chip Ublox NEO-6M, reconhecido pela sua alta precisão, baixo consumo de energia e excelente recepção de sinal. Ele é ideal para projetos com Arduino, ESP"
+    ],
+    "specifications": [],
+    "applications": [
+      "Projetos eletr?nicos e t?cnicos conforme caracter?sticas do an?ncio."
+    ],
+    "packageContents": [
+      "PRINCIPAIS CARACTERÍSTICAS:",
+      "Chip GPS: Ublox NEO-6M",
+      "Tensão de operação: 3V a 5V",
+      "Comunicação: Serial UART (TX/RX)",
+      "Taxa de baud padrão: 9600 bps",
+      "Precisão: até 2,5 metros"
+    ],
+    "warnings": [],
+    "mercadoLivreUrl": "https://produto.mercadolivre.com.br/MLB-7143332292-kit-3x-modulo-gps-neo-6m-v2-com-antena-arduino-esp32-esp8266_JM",
+    "storeUrl": "https://www.mercadolivre.com.br/pagina/omegaimports",
+    "active": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "priority": 47,
+    "searchTerms": [
+      "Kit",
+      "dulo",
+      "Gps",
+      "Neo-6m",
+      "Com",
+      "Antena",
+      "Arduino",
+      "Esp32",
+      "Esp8266",
+      "Placas",
+      "microcontroladores"
+    ],
+    "linkStatus": "derivedFromExport"
+  }
+] satisfies Product[];
