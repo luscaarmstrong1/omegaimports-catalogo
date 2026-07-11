@@ -21,38 +21,55 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11.7.0
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
+          cache: pnpm
 
       - name: Install
-        run: npm ci
+        run: pnpm install --frozen-lockfile
+
+      - name: Build product database
+        run: pnpm run products:build
 
       - name: Lint
-        run: npm run lint
+        run: pnpm run lint
 
       - name: Typecheck
-        run: npm run typecheck
+        run: pnpm run typecheck
 
       - name: Audit products
-        run: npm run audit:products
+        run: pnpm run audit:products
+
+      - name: Audit images
+        run: pnpm run audit:images
 
       - name: Audit encoding
-        run: npm run audit:encoding
+        run: pnpm run audit:encoding
 
       - name: Audit links
-        run: npm run audit:links
+        run: pnpm run audit:links
+
+      - name: Audit specifications
+        run: pnpm run audit:specifications
+
+      - name: Audit marketplace
+        run: pnpm run audit:marketplace
 
       - name: Test
-        run: npm test
+        run: pnpm run test
 
       - name: Build
-        run: npm run build
+        run: pnpm run build
 
       - name: Static E2E
-        run: npm run test:e2e
+        run: pnpm run test:e2e
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
