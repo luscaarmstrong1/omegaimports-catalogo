@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "OMEGAIMPORTS",
-  founded: "dezembro de 2024",
-  tagline: "Componentes técnicos para tirar projetos do papel.",
+  founded: "23 de dezembro de 2024",
+  tagline: "Tecnologia, componentes e cuidado em cada pedido.",
   description:
     "Módulos, sensores, fontes e dispositivos para prototipagem, telemetria, medição e automação.",
   site: "https://luscaarmstrong1.github.io",

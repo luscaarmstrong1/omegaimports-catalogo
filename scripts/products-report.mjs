@@ -2,7 +2,8 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { loadProducts } from "./shared.mjs";
 import { validateProducts } from "./products-utils.mjs";
 
-const products = loadProducts();
+const products = loadProducts({ all: true });
+const publicProducts = loadProducts();
 const { issues, critical } = validateProducts(products);
 mkdirSync("reports", { recursive: true });
 writeFileSync(
@@ -11,9 +12,10 @@ writeFileSync(
     {
       generatedAt: new Date().toISOString(),
       total: products.length,
-      published: products.filter((p) => p.status !== "hidden").length,
+      published: publicProducts.length,
+      hiddenOrPending: products.length - publicProducts.length,
       verifiedImages: products.filter((p) => p.imageStatus === "verified").length,
-      needsReviewImages: products.filter((p) => p.imageStatus === "needs-review").length,
+      pendingImages: products.filter((p) => p.imageStatus !== "verified").length,
       issues,
       critical,
     },

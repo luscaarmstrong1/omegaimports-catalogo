@@ -35,3 +35,13 @@ tsconfig.tsbuildinfo
 products-report.json
 work-dev*.log
 /.wrangler/
+
+# local Mercado Livre exports, dashboards and private browser captures
+/imports/private/
+/work/private/
+*cookies*
+*.har
+Anúncios*.html
+Anuncios*.html
+OMEGAIMPORTS _ Página do vendedor*.html
+*_files/
