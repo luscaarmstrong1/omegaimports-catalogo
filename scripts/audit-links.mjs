@@ -1,11 +1,11 @@
 import { loadProducts } from "./shared.mjs";
 
 const failures = [];
-for (const product of loadProducts()) {
+for (const product of loadProducts({ all: true })) {
   try {
-    const url = new URL(product.marketplaceUrl);
+    const url = new URL(product.permalink);
     if (url.protocol !== "https:" || !url.hostname.endsWith("mercadolivre.com.br")) failures.push(`${product.mlbId}: domínio inválido`);
-    if (!product.marketplaceUrl.includes(product.mlbId.replace("MLB", ""))) failures.push(`${product.mlbId}: URL não contém MLB`);
+    if (!product.permalink.includes(product.mlbId.replace("MLB", ""))) failures.push(`${product.mlbId}: URL não contém MLB`);
   } catch {
     failures.push(`${product.mlbId}: URL inválida`);
   }

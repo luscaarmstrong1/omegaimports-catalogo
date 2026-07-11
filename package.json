@@ -11,9 +11,26 @@
     "test": "node --test tests/catalog.test.mjs",
     "test:e2e": "node scripts/test-e2e.mjs",
     "audit:products": "node scripts/audit-products.mjs",
+    "audit:images": "node scripts/audit-images.mjs",
     "audit:encoding": "node scripts/audit-encoding.mjs",
     "audit:links": "node scripts/audit-links.mjs",
+    "audit:specifications": "node scripts/audit-specifications.mjs",
+    "audit:marketplace": "node scripts/audit-marketplace.mjs",
+    "lighthouse": "node scripts/lighthouse.mjs",
+    "sync:meli": "node scripts/fetch-meli-snapshot.mjs && node scripts/normalize-meli-products.mjs && node scripts/download-product-images.mjs && node scripts/build-product-families.mjs",
+    "sync:meli:offline": "node scripts/build-product-database.mjs --mode=offline",
+    "sync:meli:legacy-api": "node scripts/sync-mercadolivre.mjs",
+    "sync:meli:refresh-token": "node scripts/refresh-mercadolivre-token.mjs",
+    "sync:meli:dashboard": "node scripts/parse-seller-dashboard.mjs",
+    "sync:meli:xlsx": "node scripts/import-mercadolivre-export.mjs",
+    "products:build": "node scripts/build-product-database.mjs",
+    "products:families": "node scripts/build-product-families.mjs",
     "products:validate": "node scripts/audit-products.mjs",
-    "products:report": "node scripts/products-report.mjs"
+    "products:report": "node scripts/products-report.mjs",
+    "products:contact-sheet": "node scripts/generate-contact-sheet.mjs"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.3",
+    "xlsx": "^0.18.5"
   }
 }

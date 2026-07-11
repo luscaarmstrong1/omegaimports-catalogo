@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#040914"/><stop offset="1" stop-color="#0B203C"/></linearGradient></defs>
+  <rect width="1200" height="760" fill="url(#g)"/>
+  <g opacity=".23" fill="none" stroke="#00C8F8" stroke-width="3">
+    <path d="M70 120h220v86h130v160h210v120h250"/>
+    <path d="M126 590h190V452h220V270h160"/>
+    <path d="M812 96v190h230v242"/>
+    <path d="M920 638H710V520H510"/>
+    <circle cx="70" cy="120" r="12"/><circle cx="420" cy="206" r="12"/><circle cx="630" cy="366" r="12"/><circle cx="880" cy="486" r="12"/>
+    <circle cx="126" cy="590" r="12"/><circle cx="536" cy="452" r="12"/><circle cx="696" cy="270" r="12"/><circle cx="812" cy="96" r="12"/>
+  </g>
+  <g opacity=".14" fill="#00C8F8">
+    <circle cx="80" cy="80" r="3"/><circle cx="177" cy="231" r="4"/><circle cx="274" cy="382" r="5"/><circle cx="371" cy="533" r="6"/><circle cx="468" cy="684" r="3"/><circle cx="565" cy="215" r="4"/><circle cx="662" cy="366" r="5"/><circle cx="759" cy="517" r="6"/><circle cx="856" cy="668" r="3"/><circle cx="953" cy="199" r="4"/><circle cx="1050" cy="350" r="5"/><circle cx="87" cy="501" r="6"/><circle cx="184" cy="652" r="3"/><circle cx="281" cy="183" r="4"/><circle cx="378" cy="334" r="5"/><circle cx="475" cy="485" r="6"/><circle cx="572" cy="636" r="3"/><circle cx="669" cy="167" r="4"/><circle cx="766" cy="318" r="5"/><circle cx="863" cy="469" r="6"/><circle cx="960" cy="620" r="3"/><circle cx="1057" cy="151" r="4"/><circle cx="94" cy="302" r="5"/><circle cx="191" cy="453" r="6"/><circle cx="288" cy="604" r="3"/><circle cx="385" cy="135" r="4"/><circle cx="482" cy="286" r="5"/><circle cx="579" cy="437" r="6"/><circle cx="676" cy="588" r="3"/><circle cx="773" cy="119" r="4"/><circle cx="870" cy="270" r="5"/><circle cx="967" cy="421" r="6"/><circle cx="1064" cy="572" r="3"/><circle cx="101" cy="103" r="4"/><circle cx="198" cy="254" r="5"/><circle cx="295" cy="405" r="6"/>
+  </g>
+  <title>Padrão abstrato de rodapé OMEGAIMPORTS</title>
+</svg>

@@ -1,97 +1,94 @@
 # OMEGAIMPORTS Catálogo
 
-Site oficial estático da OMEGAIMPORTS, operação de e-commerce fundada em dezembro de 2024 e especializada em componentes eletroeletrônicos, IoT, telemetria, energia e automação.
-
-Produção prevista:
+Site estático oficial da OMEGAIMPORTS para GitHub Pages:
 
 https://luscaarmstrong1.github.io/omegaimports-catalogo/
 
-## Stack
+O site não possui checkout próprio. A compra, pagamento, frete e entrega são finalizados no Mercado Livre.
 
-- HTML estático gerado por scripts Node.
-- TypeScript strict para tipos de dados.
-- CSS moderno com tokens dark premium.
-- JavaScript mínimo para busca, filtros, menu mobile e eventos.
-- GitHub Pages com GitHub Actions.
+## Arquitetura
+
+- Build estático em `dist/`.
+- Dados públicos em `src/data/products.json`.
+- Snapshot legado para comparação em `src/data/products-source.legacy.json`.
+- Assets de marca em `public/brand/`.
+- Assets decorativos em `public/brand/visuals/`.
+- Auditorias em `reports/`.
+- Deploy via GitHub Actions em `.github/workflows/deploy-pages.yml`.
+- Sincronização Mercado Livre em `.github/workflows/sync-mercadolivre.yml`.
+
+## Regra de publicação
+
+Um produto só aparece publicamente quando:
+
+- possui MLB válido;
+- possui permalink válido;
+- está ativo;
+- não possui bloqueios críticos;
+- possui imagem real verificada do anúncio exato;
+- possui condição e quantidade coerentes;
+- possui categoria interna válida;
+- possui preço com data de atualização.
+
+Produtos sem validação ficam como `pending-review` e são ocultados do catálogo público.
+
+## Variáveis
+
+Copie `.env.example` e configure apenas em ambiente seguro:
+
+- `PUBLIC_WHATSAPP_NUMBER`
+- `PUBLIC_GA_ID`
+- `PUBLIC_CLARITY_ID`
+- `MELI_CLIENT_ID`
+- `MELI_CLIENT_SECRET`
+- `MELI_ACCESS_TOKEN`
+- `MELI_REFRESH_TOKEN`
+- `MELI_SELLER_ID`
+
+Tokens Mercado Livre nunca devem ir para JavaScript entregue ao navegador.
 
 ## Comandos
 
 ```bash
-npm ci
-npm run dev
-npm run lint
-npm run typecheck
-npm test
-npm run audit:products
-npm run audit:encoding
-npm run audit:links
-npm run build
-npm run test:e2e
+pnpm install
+pnpm run products:build
+pnpm run build
+pnpm run test
+pnpm run audit:products
+pnpm run audit:images
+pnpm run audit:encoding
+pnpm run audit:links
+pnpm run audit:specifications
+pnpm run audit:marketplace
+pnpm run test:e2e
+pnpm run lighthouse
 ```
 
-## Estrutura
+Sincronização:
 
-- `src/data/products.json`: fonte central dos produtos.
-- `src/data/products.ts`: versão tipada dos produtos.
-- `src/data/store.ts`: configuração institucional, categorias e guias.
-- `src/types/product.ts`: contrato do produto.
-- `public/brand/`: logos, favicon e Open Graph.
-- `public/assets/`: CSS, JS e placeholder.
-- `scripts/`: build, auditorias e relatórios.
-- `reports/`: auditoria inicial, CSV e galeria de auditoria.
-- `dist/`: saída de build para GitHub Pages.
+```bash
+pnpm run sync:meli -- --source=api
+pnpm run sync:meli -- --source=dashboard
+pnpm run sync:meli -- --source=xlsx
+pnpm run sync:meli -- --source=offline
+```
 
-## Atualizar produtos
+Quando os secrets Mercado Livre não estão configurados, o modo API registra `skipped` em `reports/sync-mercadolivre.json` e mantém a última base validada.
 
-1. Atualize `src/data/products.json` e reflita a alteração em `src/data/products.ts`.
-2. Garanta que cada produto tenha `mlbId`, `slug`, `title`, `categorySlug`, `marketplaceUrl`, `imageStatus`, `lastVerifiedAt`.
-3. Adicione imagens verificadas em `public/products/MLB0000000000/`.
-4. Troque `imageStatus` para `verified` somente quando imagem, título, condição, quantidade e URL forem do mesmo MLB.
-5. Execute `npm run audit:products`.
-6. Revise `reports/galeria-auditoria.html`.
-7. Execute `npm run build`.
+## Relatórios principais
 
-## Validar um MLB ID
+- `reports/auditoria-v2.md`
+- `reports/catalog.csv`
+- `reports/product-differences.csv`
+- `reports/hidden-products.csv`
+- `reports/image-duplicates.csv`
+- `reports/image-mismatches.csv`
+- `reports/specification-issues.csv`
+- `reports/contact-sheet-products.html`
+- `reports/contact-sheet-products.jpg`
+- `reports/marketplace-audit.csv`
+- `reports/screenshots/`
 
-- O `mlbId` deve seguir `MLB0000000000`.
-- A URL do Mercado Livre deve conter o número do MLB.
-- A imagem só pode ser marcada como verificada quando vier do anúncio exato.
+## Observação de segurança
 
-## Destacar produto
-
-Defina `featured: true` apenas se:
-
-- `status` não for `hidden`;
-- `imageStatus` for `verified`;
-- condição, quantidade, preço e URL tiverem sido revisados.
-
-## Preços
-
-Preços vêm da exportação fornecida e precisam de `priceLastVerifiedAt`. Se a data ficar vencida, substitua no dado público por consulta no anúncio.
-
-## Publicação
-
-O workflow `.github/workflows/deploy-pages.yml` executa:
-
-1. checkout;
-2. setup Node;
-3. `npm ci`;
-4. lint;
-5. typecheck;
-6. auditorias;
-7. testes;
-8. build;
-9. upload de `dist`;
-10. deploy GitHub Pages.
-
-## Identidade
-
-Use apenas os arquivos em `public/brand/`. Não use o caractere Omega digitado como substituto de logo. Não publique assets com checkerboard visível.
-
-## Manutenção mensal
-
-- Revisar anúncios ativos no Mercado Livre.
-- Atualizar exportação de produtos.
-- Validar imagens por MLB.
-- Corrigir pendências do CSV de auditoria.
-- Rodar build e workflow.
+HTMLs exportados do painel, cookies, CSRF tokens, HARs e arquivos de sessão são fontes locais temporárias e não devem ser commitados.

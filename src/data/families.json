@@ -1,0 +1,112 @@
+[
+  {
+    "slug": "ttgo-t-call",
+    "offers": [
+      "MLB3939451361",
+      "MLB5288925380",
+      "MLB4417997973",
+      "MLB7070500932",
+      "MLB4051929221",
+      "MLB4051985849",
+      "MLB5375622238",
+      "MLB5375698778",
+      "MLB5375724278",
+      "MLB7070502622"
+    ],
+    "minPrice": 98.2,
+    "maxPrice": 2698
+  },
+  {
+    "slug": "gps-neo-6m",
+    "offers": [
+      "MLB5272829812",
+      "MLB3963960643",
+      "MLB4875918503",
+      "MLB7143332292"
+    ],
+    "minPrice": 98.2,
+    "maxPrice": 360.9
+  },
+  {
+    "slug": "contatores",
+    "offers": [
+      "MLB3939446645",
+      "MLB4669505471",
+      "MLB4669565379",
+      "MLB5272662416",
+      "MLB5272698878"
+    ],
+    "minPrice": 75.9,
+    "maxPrice": 98
+  },
+  {
+    "slug": "split-bolt",
+    "offers": [
+      "MLB3948176139",
+      "MLB5265377782",
+      "MLB5268502876",
+      "MLB5268502882"
+    ],
+    "minPrice": 75.9,
+    "maxPrice": 199.8
+  },
+  {
+    "slug": "sem-familia",
+    "offers": [
+      "MLB3957971855",
+      "MLB3963996985",
+      "MLB3964028995",
+      "MLB4669478861",
+      "MLB4669479535",
+      "MLB5272537202",
+      "MLB5272637504",
+      "MLB5272831698",
+      "MLB5272894966"
+    ],
+    "minPrice": 51.7,
+    "maxPrice": 299.8
+  },
+  {
+    "slug": "sensores-de-corrente",
+    "offers": [
+      "MLB3964934307",
+      "MLB4669465391",
+      "MLB4669465397",
+      "MLB4669503045",
+      "MLB5288865822",
+      "MLB6747664922"
+    ],
+    "minPrice": 49.18,
+    "maxPrice": 138.3
+  },
+  {
+    "slug": "hi-link-hlk-pm01",
+    "offers": [
+      "MLB4669463663",
+      "MLB4669463945",
+      "MLB4832454317"
+    ],
+    "minPrice": 98,
+    "maxPrice": 298
+  },
+  {
+    "slug": "varistores",
+    "offers": [
+      "MLB4669505143",
+      "MLB4669565005"
+    ],
+    "minPrice": 110,
+    "maxPrice": 110
+  },
+  {
+    "slug": "instrumentos-e-fontes",
+    "offers": [
+      "MLB5249469476",
+      "MLB5268487034",
+      "MLB6747662378",
+      "MLB6747664364"
+    ],
+    "minPrice": 199.9,
+    "maxPrice": 852.3
+  }
+]

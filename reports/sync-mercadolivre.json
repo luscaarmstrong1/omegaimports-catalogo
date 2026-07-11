@@ -1,0 +1,10 @@
+{
+  "source": "api",
+  "status": "skipped",
+  "reason": "missing-secrets",
+  "missing": [
+    "MELI_ACCESS_TOKEN",
+    "MELI_SELLER_ID"
+  ],
+  "finishedAt": "2026-07-11T03:04:27.208Z"
+}

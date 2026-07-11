@@ -1,0 +1,7 @@
+{
+  "status": "not-run",
+  "reason": "Lighthouse/Chrome indisponível no ambiente local ou servidor não iniciado.",
+  "url": "http://localhost:4173/omegaimports-catalogo/",
+  "stderr": "",
+  "checkedAt": "2026-07-11T03:06:39.449Z"
+}
