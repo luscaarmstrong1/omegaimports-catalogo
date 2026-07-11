@@ -2,17 +2,6 @@ name: Sync Mercado Livre
 
 on:
   workflow_dispatch:
-    inputs:
-      source:
-        description: Fonte de sincronização
-        required: true
-        default: api
-        type: choice
-        options:
-          - api
-          - xlsx
-          - dashboard
-          - offline
   schedule:
     - cron: "17 8 * * *"
 
@@ -28,11 +17,8 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     env:
-      MELI_CLIENT_ID: ${{ secrets.MELI_CLIENT_ID }}
-      MELI_CLIENT_SECRET: ${{ secrets.MELI_CLIENT_SECRET }}
-      MELI_ACCESS_TOKEN: ${{ secrets.MELI_ACCESS_TOKEN }}
-      MELI_REFRESH_TOKEN: ${{ secrets.MELI_REFRESH_TOKEN }}
-      MELI_SELLER_ID: ${{ secrets.MELI_SELLER_ID }}
+      MELI_SYNC_SERVICE_URL: ${{ secrets.MELI_SYNC_SERVICE_URL }}
+      MELI_SYNC_API_KEY: ${{ secrets.MELI_SYNC_API_KEY }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -51,8 +37,14 @@ jobs:
       - name: Install
         run: pnpm install --frozen-lockfile
 
-      - name: Sync Mercado Livre
-        run: pnpm run sync:meli -- --source=${{ inputs.source || 'api' }}
+      - name: Fetch sanitized snapshot
+        run: pnpm run sync:meli
+
+      - name: Build product database
+        run: pnpm run products:build
+
+      - name: Product report
+        run: pnpm run products:report
 
       - name: Audit products
         run: pnpm run audit:products
@@ -63,8 +55,20 @@ jobs:
       - name: Audit specifications
         run: pnpm run audit:specifications
 
+      - name: Audit encoding
+        run: pnpm run audit:encoding
+
+      - name: Audit links
+        run: pnpm run audit:links
+
       - name: Test
         run: pnpm run test
+
+      - name: Build
+        run: pnpm run build
+
+      - name: Static E2E
+        run: pnpm run test:e2e
 
       - name: Create Pull Request
         env:
@@ -78,7 +82,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -b "$branch"
-          git add src/data reports public/products || true
+          git add src/data public/products reports || true
           git commit -m "chore: sync Mercado Livre catalog"
           git push origin "$branch"
-          gh pr create --base main --head "$branch" --title "chore: sync Mercado Livre catalog" --body "Sincronização automática do catálogo Mercado Livre. Não mesclar quando houver divergências críticas nos relatórios."
+          gh pr create --base main --head "$branch" --title "chore: sync Mercado Livre catalog" --body "Sincronização via snapshot sanitizado do serviço privado. Não mesclar quando houver divergências críticas nos relatórios."
