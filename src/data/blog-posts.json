@@ -1,0 +1,218 @@
+[
+  {
+    "slug": "como-escolher-sensor-corrente-monitoramento-energia",
+    "title": "Como escolher um sensor de corrente para monitoramento de energia",
+    "summary": "Entenda quando usar sensores não invasivos, transformadores de corrente e módulos de medição em projetos de energia.",
+    "category": "Sensores e medição",
+    "tags": ["sensores", "energia", "SCT-013", "ZMCT123A"],
+    "relatedCategories": ["sensores-e-medicao"],
+    "relatedFamilies": ["sensores-de-corrente"],
+    "readingTime": "7 min",
+    "publishedAt": "2026-07-13",
+    "updatedAt": "2026-07-13",
+    "references": ["Datasheets dos módulos SCT-013 e ZMCT123A.", "Documentação técnica do fabricante do circuito de aquisição utilizado no projeto."],
+    "sections": [
+      ["Quando esse tipo de sensor faz sentido", "Sensores de corrente ajudam a acompanhar consumo, acionamentos e comportamento de cargas sem transformar o painel em um projeto maior do que o necessário. Antes de escolher, defina se a medição será apenas indicativa ou parte de um sistema de controle."],
+      ["Faixa, saída e instalação", "Compare a faixa de corrente, o tipo de saída, o espaço físico disponível e o isolamento necessário. Modelos não invasivos simplificam a instalação, mas ainda exigem atenção ao circuito de leitura e à segurança elétrica."],
+      ["Cuidados práticos", "Confirme compatibilidade elétrica, acessórios, conectores e documentação do módulo antes da compra. Em instalações de rede elétrica, conte com profissional habilitado."]
+    ]
+  },
+  {
+    "slug": "sct-013-zmct123a-diferencas-aplicacoes",
+    "title": "SCT-013 e ZMCT123A: diferenças e aplicações",
+    "summary": "Veja como comparar sensores de corrente por formato, faixa de uso, instalação e circuito de leitura.",
+    "category": "Sensores e medição",
+    "tags": ["SCT-013", "ZMCT123A", "corrente AC"],
+    "relatedCategories": ["sensores-e-medicao"],
+    "relatedFamilies": ["sensores-de-corrente"],
+    "readingTime": "6 min",
+    "publishedAt": "2026-07-13",
+    "updatedAt": "2026-07-13",
+    "references": ["Datasheets dos sensores informados pelo fabricante.", "Notas de aplicação sobre transformadores de corrente."],
+    "sections": [
+      ["Formato e instalação", "O SCT-013 costuma ser procurado quando a instalação não invasiva é prioridade. O ZMCT123A aparece em projetos compactos, normalmente integrado a uma placa ou circuito de condicionamento."],
+      ["Leitura e condicionamento", "Nenhum dos dois deve ser tratado como sensor universal. A saída precisa ser compatível com o conversor analógico, resistor de carga e isolamento do projeto."],
+      ["Como decidir", "Escolha pelo ambiente de instalação, faixa de corrente, espaço disponível e nível de precisão esperado. A página do produto deve confirmar o modelo exato vendido."]
+    ]
+  },
+  {
+    "slug": "como-utilizar-fonte-hi-link-hlk-pm01",
+    "title": "Como utilizar a fonte Hi-Link HLK-PM01 em projetos eletrônicos",
+    "summary": "Pontos essenciais para avaliar a HLK-PM01 em alimentação compacta AC/DC.",
+    "category": "Fontes e alimentação",
+    "tags": ["HLK-PM01", "AC/DC", "5 V", "3 W"],
+    "relatedCategories": ["fontes-e-alimentacao"],
+    "relatedFamilies": ["hi-link-hlk-pm01"],
+    "readingTime": "7 min",
+    "publishedAt": "2026-07-13",
+    "updatedAt": "2026-07-13",
+    "references": ["Datasheet oficial Hi-Link HLK-PM01.", "Boas práticas de projeto para fontes AC/DC isoladas."],
+    "sections": [
+      ["O que verificar primeiro", "A HLK-PM01 é usada em projetos compactos que precisam converter rede AC para baixa tensão DC. Verifique tensão de entrada, potência, isolamento, temperatura e requisitos normativos do seu produto."],
+      ["Integração segura", "A fonte não elimina a necessidade de proteção, fusível, espaçamento, caixa adequada e revisão elétrica. Em projetos conectados à rede, a montagem deve seguir práticas de segurança."],
+      ["Quando procurar outra opção", "Se o projeto exige mais potência, certificação específica ou ambiente severo, uma fonte diferente pode ser mais adequada."]
+    ]
+  },
+  {
+    "slug": "cuidados-fontes-ac-dc-compactas",
+    "title": "Cuidados no uso de fontes AC/DC compactas",
+    "summary": "Como avaliar margem de potência, isolamento, temperatura e proteção em fontes compactas.",
+    "category": "Fontes e alimentação",
+    "tags": ["fontes", "AC/DC", "segurança"],
+    "relatedCategories": ["fontes-e-alimentacao"],
+    "relatedFamilies": ["hi-link-hlk-pm01", "instrumentos-e-fontes"],
+    "readingTime": "6 min",
+    "publishedAt": "2026-07-13",
+    "updatedAt": "2026-07-13",
+    "references": ["Datasheets dos módulos de fonte.", "Recomendações de segurança para circuitos ligados à rede elétrica."],
+    "sections": [
+      ["Margem de potência", "Evite operar no limite. Componentes aquecem, cargas variam e a margem reduz risco de instabilidade."],
+      ["Proteção e montagem", "Use fusível, invólucro, isolamento e espaçamentos adequados ao ambiente. A escolha da fonte é só uma parte do projeto."],
+      ["Validação", "Teste o conjunto final com carga real, temperatura de operação e variações esperadas de rede."]
+    ]
+  },
+  {
+    "slug": "ttgo-t-call-esp32-sim800l-conectividade-gsm",
+    "title": "TTGO T-Call: ESP32, SIM800L e conectividade GSM",
+    "summary": "Critérios para avaliar módulos com ESP32, modem SIM800L, antena e alimentação em telemetria.",
+    "category": "IoT e conectividade",
+    "tags": ["TTGO T-Call", "ESP32", "SIM800L", "2G"],
+    "relatedCategories": ["iot-gsm-e-comunicacao"],
+    "relatedFamilies": ["ttgo-t-call"],
+    "readingTime": "8 min",
+    "publishedAt": "2026-07-13",
+    "updatedAt": "2026-07-13",
+    "references": ["Documentação Espressif ESP32.", "Documentação SIMCom SIM800L."],
+    "sections": [
+      ["Rede e disponibilidade", "Antes de escolher um módulo GSM, confirme cobertura 2G na região e requisitos de operadora."],
+      ["Alimentação", "Modems celulares têm picos de corrente. Uma fonte subdimensionada causa resets e falhas intermitentes."],
+      ["Antena e instalação", "A posição da antena, caixa e aterramento influenciam a estabilidade de comunicação."]
+    ]
+  },
+  {
+    "slug": "gps-neo-6m-alimentacao-antena-posicionamento",
+    "title": "GPS NEO-6M: alimentação, antena e posicionamento",
+    "summary": "Boas práticas para usar módulos GPS NEO-6M em rastreamento, telemetria e protótipos.",
+    "category": "IoT e conectividade",
+    "tags": ["GPS", "NEO-6M", "telemetria"],
+    "relatedCategories": ["gps-e-localizacao"],
+    "relatedFamilies": ["gps-neo-6m"],
+    "readingTime": "6 min",
+    "publishedAt": "2026-07-13",
+    "updatedAt": "2026-07-13",
+    "references": ["Documentação u-blox NEO-6.", "Notas de aplicação sobre posicionamento de antenas GNSS."],
+    "sections": [
+      ["Céu aberto ajuda muito", "Módulos GPS dependem de recepção de satélites. Caixas metálicas, ambientes internos e antenas mal posicionadas prejudicam o tempo de fix."],
+      ["Alimentação estável", "Ruído e queda de tensão podem afetar a comunicação serial e a estabilidade do módulo."],
+      ["Integração", "Verifique nível lógico, baud rate, antena, bateria de backup e formato do conector antes de integrar."]
+    ]
+  },
+  {
+    "slug": "como-escolher-fonte-bancada",
+    "title": "Como escolher uma fonte de bancada",
+    "summary": "Tensão, corrente, proteções e uso prático na escolha de uma fonte para laboratório e manutenção.",
+    "category": "Instrumentação",
+    "tags": ["fonte de bancada", "laboratório", "teste"],
+    "relatedCategories": ["instrumentos-de-bancada"],
+    "relatedFamilies": ["instrumentos-e-fontes"],
+    "readingTime": "6 min",
+    "publishedAt": "2026-07-13",
+    "updatedAt": "2026-07-13",
+    "references": ["Manuais dos modelos de fonte de bancada.", "Boas práticas de laboratório eletrônico."],
+    "sections": [
+      ["Faixa de uso", "Defina a tensão e a corrente máximas que aparecem nos seus projetos. Uma fonte adequada deve cobrir o uso comum com margem."],
+      ["Proteções", "Recursos como limitação de corrente ajudam no teste de placas e reduzem danos durante prototipagem."],
+      ["Leitura e ergonomia", "Display, ajuste fino e qualidade dos cabos influenciam o trabalho diário."]
+    ]
+  },
+  {
+    "slug": "resistores-10k-100k-quando-utilizar",
+    "title": "Resistores de 10 kΩ e 100 kΩ: quando utilizar cada valor",
+    "summary": "Entenda o papel de resistores em pull-up, divisores, polarização e prototipagem.",
+    "category": "Prototipagem",
+    "tags": ["resistores", "10 kΩ", "100 kΩ"],
+    "relatedCategories": ["componentes-eletronicos"],
+    "relatedFamilies": [],
+    "readingTime": "5 min",
+    "publishedAt": "2026-07-13",
+    "updatedAt": "2026-07-13",
+    "references": ["Literatura básica de eletrônica analógica.", "Datasheets dos circuitos integrados usados no projeto."],
+    "sections": [
+      ["Valor depende da função", "Resistores de 10 kΩ e 100 kΩ aparecem em pull-up, pull-down, divisores e redes de polarização, mas não são intercambiáveis em qualquer circuito."],
+      ["Corrente e ruído", "Valores mais altos consomem menos corrente, porém podem ficar mais sensíveis a ruído e capacitâncias parasitas."],
+      ["Como confirmar", "Use o datasheet do componente principal e calcule a corrente esperada antes de fechar o valor."]
+    ]
+  },
+  {
+    "slug": "varistores-protecao-surtos-circuitos",
+    "title": "Varistores: proteção contra surtos em circuitos eletrônicos",
+    "summary": "O que observar ao selecionar varistores para proteção e absorção de surtos.",
+    "category": "Automação",
+    "tags": ["varistor", "proteção", "surtos"],
+    "relatedCategories": ["componentes-eletronicos", "automacao-e-comando"],
+    "relatedFamilies": ["varistores"],
+    "readingTime": "6 min",
+    "publishedAt": "2026-07-13",
+    "updatedAt": "2026-07-13",
+    "references": ["Datasheets dos varistores.", "Notas de aplicação de proteção contra surtos."],
+    "sections": [
+      ["Função do varistor", "O varistor limita surtos transitórios desviando energia quando a tensão ultrapassa determinado limiar."],
+      ["Seleção", "Considere tensão nominal, energia suportada, ambiente e coordenação com fusíveis ou outros elementos de proteção."],
+      ["Limites", "Varistores envelhecem e não substituem um projeto de proteção completo."]
+    ]
+  },
+  {
+    "slug": "contatores-supressores-protecao-bobinas-comandos",
+    "title": "Contatores e supressores: proteção de bobinas e comandos",
+    "summary": "Como reduzir transientes e melhorar a confiabilidade em circuitos de comando.",
+    "category": "Automação",
+    "tags": ["contator", "supressor", "comando"],
+    "relatedCategories": ["automacao-e-comando"],
+    "relatedFamilies": ["contatores"],
+    "readingTime": "6 min",
+    "publishedAt": "2026-07-13",
+    "updatedAt": "2026-07-13",
+    "references": ["Manuais dos contatores utilizados.", "Notas de aplicação para supressão de transientes em bobinas."],
+    "sections": [
+      ["Por que suprimir transientes", "Bobinas podem gerar picos de tensão ao desligar. Isso afeta contatos, relés, controladores e módulos eletrônicos próximos."],
+      ["Escolha do supressor", "A tensão da bobina, tipo de alimentação e ambiente determinam o supressor adequado."],
+      ["Instalação", "Comando elétrico deve ser montado por profissional habilitado e conforme normas aplicáveis."]
+    ]
+  },
+  {
+    "slug": "split-bolt-prensa-cabos-organizacao-instalacoes",
+    "title": "Split Bolt e prensa-cabos: organização e conexão em instalações",
+    "summary": "Aplicações típicas de conectores, prensa-cabos e itens de montagem em painéis e protótipos.",
+    "category": "Conectores",
+    "tags": ["Split Bolt", "prensa-cabos", "conexão"],
+    "relatedCategories": ["conectores-e-instalacao"],
+    "relatedFamilies": ["split-bolt"],
+    "readingTime": "5 min",
+    "publishedAt": "2026-07-13",
+    "updatedAt": "2026-07-13",
+    "references": ["Especificações do fabricante do conector.", "Boas práticas de montagem e fixação de cabos."],
+    "sections": [
+      ["Organização importa", "Conectores e prensa-cabos reduzem improviso, protegem entradas de cabos e ajudam na manutenção."],
+      ["Compatibilidade mecânica", "Confira bitola, material, rosca, diâmetro do cabo e ambiente de instalação."],
+      ["Segurança", "Conexões elétricas exigem aperto adequado, proteção contra contato acidental e dimensionamento correto."]
+    ]
+  },
+  {
+    "slug": "placa-fenolite-prototipos-eletronicos",
+    "title": "Placa de fenolite: quando utilizar em protótipos eletrônicos",
+    "summary": "Quando placas perfuradas ajudam na montagem, validação e pequenos circuitos.",
+    "category": "Prototipagem",
+    "tags": ["fenolite", "protótipo", "placa perfurada"],
+    "relatedCategories": ["componentes-eletronicos"],
+    "relatedFamilies": [],
+    "readingTime": "5 min",
+    "publishedAt": "2026-07-13",
+    "updatedAt": "2026-07-13",
+    "references": ["Boas práticas de soldagem e prototipagem eletrônica.", "Datasheets dos componentes montados no circuito."],
+    "sections": [
+      ["Uso típico", "Placas de fenolite perfuradas são úteis para circuitos simples, validações e pequenas montagens permanentes."],
+      ["Limitações", "Projetos de alta frequência, alta corrente ou requisitos mecânicos severos podem exigir PCB dedicada."],
+      ["Montagem", "Planeje trilhas, espaçamento, fixação e alívio de tensão dos cabos antes de soldar."]
+    ]
+  }
+]

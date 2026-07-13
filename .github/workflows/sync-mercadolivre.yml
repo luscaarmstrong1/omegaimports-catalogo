@@ -70,6 +70,12 @@ jobs:
       - name: Audit dist images
         run: pnpm run audit:dist-images
 
+      - name: Audit copy
+        run: pnpm run audit:copy
+
+      - name: Audit SEO
+        run: pnpm run audit:seo
+
       - name: Static E2E
         run: pnpm run test:e2e
 

@@ -23,7 +23,7 @@ const patternSources = [
   "Î©",
 ];
 const bad = patternSources.map((source) => new RegExp(source, "i"));
-const allowedBinary = /\.(png|jpg|jpeg|webp|ico)$/i;
+const textFile = /\.(html|css|js|mjs|json|xml|txt|md|csv|svg)$/i;
 const findings = [];
 
 function walk(dir) {
@@ -31,7 +31,7 @@ function walk(dir) {
     const path = join(dir, entry);
     const st = statSync(path);
     if (st.isDirectory()) walk(path);
-    else if (!allowedBinary.test(path)) {
+    else if (textFile.test(path)) {
       const text = readFileSync(path, "utf8");
       for (const pattern of bad) {
         if (pattern.test(text)) findings.push(`${path}: ${pattern}`);

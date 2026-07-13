@@ -5,7 +5,7 @@ export const rootUrl = new URL("../", import.meta.url);
 export const site = {
   name: "OMEGAIMPORTS",
   founded: "23 de dezembro de 2024",
-  tagline: "Tecnologia, componentes e cuidado em cada pedido.",
+  tagline: "Componentes eletrônicos, IoT e automação com curadoria técnica.",
   site: "https://luscaarmstrong1.github.io",
   base: "/omegaimports-catalogo",
   productionUrl: "https://luscaarmstrong1.github.io/omegaimports-catalogo/",
@@ -13,42 +13,42 @@ export const site = {
 };
 
 export const categories = [
-  ["Placas e Microcontroladores", "placas-e-microcontroladores", "ESP32, modulos de desenvolvimento e acessorios para prototipagem.", "microcontroller"],
-  ["IoT, GSM e Comunicacao", "iot-gsm-e-comunicacao", "GSM/GPRS, RF, antenas, pigtails e conectividade para telemetria.", "antenna"],
-  ["GPS e Localizacao", "gps-e-localizacao", "Modulos GPS e antenas para rastreamento, telemetria e navegacao.", "gps"],
-  ["Sensores e Medicao", "sensores-e-medicao", "Sensores de corrente, transformadores e medicao de energia.", "meter"],
-  ["Fontes e Alimentacao", "fontes-e-alimentacao", "Fontes AC/DC, reguladores e alimentacao compacta.", "power"],
-  ["Automacao e Comando", "automacao-e-comando", "Contatores, reles, supressores e componentes de comando.", "command"],
-  ["Componentes Eletronicos", "componentes-eletronicos", "Resistores, varistores, headers, chaves e placas de prototipagem.", "components"],
-  ["Conectores e Instalacao", "conectores-e-instalacao", "Split Bolt, prensa-cabos, conectores e itens de montagem.", "connectors"],
-  ["Instrumentos de Bancada", "instrumentos-de-bancada", "Fontes de bancada, geradores de funcao e instrumentos de teste.", "instruments"],
+  ["Placas e microcontroladores", "placas-e-microcontroladores", "ESP32, módulos de desenvolvimento e acessórios para prototipagem.", "cpu"],
+  ["IoT, GSM e comunicação", "iot-gsm-e-comunicacao", "GSM/GPRS, RF, antenas, pigtails e conectividade para telemetria.", "radio"],
+  ["GPS e localização", "gps-e-localizacao", "Módulos GPS e antenas para rastreamento, telemetria e navegação.", "map-pin"],
+  ["Sensores e medição", "sensores-e-medicao", "Sensores de corrente, transformadores e leitura de energia.", "gauge"],
+  ["Fontes e alimentação", "fontes-e-alimentacao", "Fontes AC/DC, reguladores e alimentação compacta para circuitos.", "zap"],
+  ["Automação e comando", "automacao-e-comando", "Contatores, relés, supressores e componentes de comando.", "circuit-board"],
+  ["Componentes eletrônicos", "componentes-eletronicos", "Resistores, varistores, headers, chaves e placas de prototipagem.", "cpu"],
+  ["Conectores e instalação", "conectores-e-instalacao", "Split Bolt, prensa-cabos, conectores e itens de montagem.", "cable"],
+  ["Instrumentos de bancada", "instrumentos-de-bancada", "Fontes de bancada, geradores de função e instrumentos de teste.", "gauge"],
 ].map(([label, slug, description, icon]) => ({ label, slug, description, icon }));
 
 export const familyCards = [
-  ["TTGO T-Call", "ttgo-t-call", "Ofertas unitarias, abertas e kits de modulos ESP32 + SIM800L."],
-  ["GPS NEO-6M", "gps-neo-6m", "Modulos e kits para localizacao, rastreamento e telemetria."],
-  ["Hi-Link HLK-PM01", "hi-link-hlk-pm01", "Fontes AC/DC compactas para integracao em circuitos."],
-  ["Sensores de corrente", "sensores-de-corrente", "SCT-013, ZMCT123A e opcoes para medicao de energia."],
-  ["Contatores", "contatores", "Comando eletrico, supressores e acionamento."],
-  ["Split Bolt", "split-bolt", "Conectores para emenda, montagem e instalacao."],
+  ["TTGO T-Call", "ttgo-t-call", "Módulos ESP32 com SIM800L para conectividade GSM."],
+  ["GPS NEO-6M", "gps-neo-6m", "Módulos e kits para localização, rastreamento e telemetria."],
+  ["Hi-Link HLK-PM01", "hi-link-hlk-pm01", "Fontes AC/DC compactas para integração em circuitos."],
+  ["SCT-013 e ZMCT123A", "sensores-de-corrente", "Sensores e transformadores para medição de corrente."],
+  ["Contatores", "contatores", "Comando elétrico, supressores e acionamento."],
+  ["Split Bolt", "split-bolt", "Conectores para emenda, montagem e instalação."],
 ].map(([label, slug, description]) => ({ label, slug, description }));
 
 export const applicationCards = [
-  ["Telemetria e conectividade", "telemetria-e-conectividade", "GSM, GPS, antenas e modulos para comunicacao em campo."],
-  ["Monitoramento de energia", "monitoramento-de-energia", "Sensores e transformadores para leitura de corrente e energia."],
-  ["Automacao e comando", "automacao-e-comando", "Contatores, supressores e componentes de acionamento."],
-  ["Prototipagem eletronica", "prototipagem-eletronica", "Placas, headers, chaves, resistores e componentes de bancada."],
+  ["Monitoramento de energia", "monitoramento-de-energia", "Sensores, transformadores e fontes para leitura e supervisão."],
+  ["Telemetria e conectividade", "telemetria-e-conectividade", "GSM, GPS, antenas e módulos para comunicação em campo."],
+  ["Automação e comando", "automacao-e-comando", "Contatores, supressores e componentes de acionamento."],
+  ["Prototipagem eletrônica", "prototipagem-eletronica", "Placas, headers, chaves, resistores e componentes de bancada."],
+  ["Alimentação de circuitos", "alimentacao-de-circuitos", "Fontes AC/DC compactas e fontes de bancada para validação."],
+  ["Instrumentação de bancada", "instrumentacao-de-bancada", "Equipamentos de teste, ajuste e manutenção eletrônica."],
 ].map(([label, slug, description]) => ({ label, slug, description }));
-
-export const guides = [
-  ["como-escolher-sensor-corrente", "Como escolher um sensor de corrente", "Criterios praticos para comparar faixa, instalacao, tipo de saida e aplicacao."],
-  ["ttgo-tcall-alimentacao-rede-2g-integracao", "TTGO T-Call: alimentacao, rede 2G e integracao", "Pontos de atencao ao usar ESP32, SIM800L, USB-C, bateria e antena em projetos IoT."],
-  ["como-escolher-fonte-ac-dc-compacta", "Como escolher uma fonte AC/DC compacta", "Como avaliar tensao, corrente, isolamento, ambiente e margem de operacao."],
-].map(([slug, title, summary]) => ({ slug, title, summary }));
 
 export function loadProducts({ all = false } = {}) {
   const products = JSON.parse(readFileSync(new URL("../src/data/products.json", import.meta.url), "utf8"));
   return all ? products : products.filter((product) => product.status === "published");
+}
+
+export function loadBlogPosts() {
+  return JSON.parse(readFileSync(new URL("../src/data/blog-posts.json", import.meta.url), "utf8"));
 }
 
 export function pageUrl(path = "") {
@@ -80,7 +80,7 @@ export function normalizeText(value = "") {
 }
 
 export function formatPrice(product) {
-  if (!product.price || !product.priceLastVerifiedAt) return "Consulte no anuncio";
+  if (!product.price || !product.priceLastVerifiedAt) return "Consulte no anúncio";
   return new Intl.NumberFormat("pt-BR", { style: "currency", currency: product.currency || "BRL" }).format(product.price);
 }
 
@@ -101,7 +101,7 @@ export function conditionLabel(product) {
 
 export function productAlt(product) {
   const kit = product.quantity > 1 ? `Kit com ${product.quantity} unidades` : "Unidade";
-  return `${kit} - ${product.shortTitle || product.title} (${product.mlbId})`;
+  return `${kit} - ${product.shortTitle || product.title}`;
 }
 
 export function productImagePaths(product) {
@@ -131,50 +131,75 @@ export function productPicture(product, { className = "product-picture", width =
   </picture>`;
 }
 
-export function productCard(product, index = 0) {
+export function icon(name, className = "icon") {
+  const paths = {
+    search: '<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>',
+    "arrow-right": '<path d="M5 12h14"/><path d="m13 5 7 7-7 7"/>',
+    external: '<path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>',
+    cpu: '<rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/>',
+    "circuit-board": '<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 8h.01M16 8h.01M8 16h.01M16 16h.01M8 8h8v8H8z"/>',
+    radio: '<path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/><path d="M7.8 16.2a6 6 0 0 1 0-8.5"/><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8a6 6 0 0 1 0 8.5"/><path d="M19.1 4.9c3.9 3.9 3.9 10.2 0 14.1"/>',
+    "map-pin": '<path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/>',
+    gauge: '<path d="m12 14 4-4"/><path d="M3.3 19a10 10 0 1 1 17.4 0"/><path d="M12 3v2M4.6 7.6 6 9M19.4 7.6 18 9"/>',
+    zap: '<path d="M13 2 3 14h8l-1 8 11-14h-8l1-6Z"/>',
+    cable: '<path d="M17 7 7 17"/><path d="M14 4l6 6"/><path d="M4 14l6 6"/><path d="m7 17 3 3"/><path d="m14 4 3 3"/>',
+    shield: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/>',
+    package: '<path d="m7.5 4.3 9 5.2"/><path d="M21 8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.7Z"/><path d="M3.3 7 12 12l8.7-5"/><path d="M12 22V12"/>',
+    book: '<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M4 4v15.5A2.5 2.5 0 0 1 6.5 17H20V4Z"/>',
+    menu: '<path d="M4 6h16M4 12h16M4 18h16"/>',
+    x: '<path d="M18 6 6 18M6 6l12 12"/>',
+  };
+  return `<svg class="${className}" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">${paths[name] || paths.cpu}</svg>`;
+}
+
+export function productCard(product, index = 0, { featured = false } = {}) {
   const description = product.cardDescription || "";
-  return `<article class="product-card" data-title="${escapeHtml(normalizeText(product.title))}" data-family="${escapeHtml(normalizeText(product.familyId || ""))}" data-category="${product.internalCategorySlug}" data-condition="${product.condition}" data-package="${product.packageType}" data-quantity="${product.quantity}" data-price="${product.price || ""}" data-mlb="${product.mlbId}">
+  const cardClass = featured ? "product-card product-card--lead" : "product-card";
+  return `<article class="${cardClass}" data-title="${escapeHtml(normalizeText(product.title))}" data-family="${escapeHtml(normalizeText(product.familyId || ""))}" data-category="${product.internalCategorySlug}" data-condition="${product.condition}" data-package="${product.packageType}" data-quantity="${product.quantity}" data-price="${product.price || ""}" data-mlb="${product.mlbId}">
     <a class="product-media" href="${pageUrl(`produtos/${product.slug}/`)}" aria-label="Ver detalhes de ${escapeHtml(product.shortTitle || product.title)}">
+      <span class="product-chip">${escapeHtml(product.internalCategory)}</span>
       ${productPicture(product, { loading: index < 4 ? "eager" : "lazy", fetchpriority: index === 0 ? "high" : "auto" })}
     </a>
     <div class="product-content">
-      <p class="eyebrow">${escapeHtml(product.internalCategory)}</p>
-      <h3>${escapeHtml(product.title)}</h3>
+      <p class="product-category">${escapeHtml(product.internalCategory)}</p>
+      <h3><a href="${pageUrl(`produtos/${product.slug}/`)}">${escapeHtml(product.title)}</a></h3>
       ${description ? `<p class="card-description">${escapeHtml(description)}</p>` : ""}
-      <dl class="product-meta">
-        <div><dt>Formato</dt><dd>${productFormat(product)}</dd></div>
-        <div><dt>Condicao</dt><dd><span class="condition-chip">${conditionLabel(product)}</span></dd></div>
-      </dl>
       <p class="product-price">${formatPrice(product)}</p>
-      ${product.priceLastVerifiedAt ? `<p class="updated-at">Atualizado em ${formatDate(product.priceLastVerifiedAt)}</p>` : ""}
       <div class="card-actions">
-        <a class="primary-action marketplace-link" href="${product.permalink}" target="_blank" rel="noopener noreferrer sponsored" data-event="marketplace_click" data-mlb="${product.mlbId}" data-title="${escapeHtml(product.title)}" data-category="${escapeHtml(product.internalCategory)}" data-position="${index + 1}">Ver oferta</a>
-        <a class="secondary-action" href="${pageUrl(`produtos/${product.slug}/`)}">Detalhes</a>
+        <a class="primary-action marketplace-link" href="${product.permalink}" target="_blank" rel="noopener noreferrer sponsored" data-event="marketplace_click" data-mlb="${product.mlbId}" data-title="${escapeHtml(product.title)}" data-category="${escapeHtml(product.internalCategory)}" data-position="${index + 1}">Ver oferta ${icon("external", "btn-icon")}</a>
+        <a class="text-link" href="${pageUrl(`produtos/${product.slug}/`)}">Detalhes técnicos ${icon("arrow-right", "text-link-icon")}</a>
       </div>
     </div>
   </article>`;
 }
 
-export function pageShell({ title, description, path = "", body, extraHead = "", ogImage = "brand/visuals/og-home.jpg" }) {
+export function pageShell({ title, description, path = "", body, extraHead = "", ogImage = "brand/visuals/og-home.jpg", type = "website" }) {
   const canonical = absolute(path);
+  const isHome = !path;
+  const metaTitle = fitText(title, 72);
+  const metaDescription = fitDescription(description);
+  const headerSearch = isHome ? "" : `<form class="header-search" action="${pageUrl("produtos/")}" role="search">
+      <label class="sr-only" for="site-search">Buscar no catálogo</label>
+      <input id="site-search" name="q" type="search" placeholder="Buscar componente..." autocomplete="off">
+    </form>`;
   return `<!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>${escapeHtml(title)} | OMEGAIMPORTS</title>
-  <meta name="description" content="${escapeHtml(description)}">
+  <title>${escapeHtml(metaTitle)} | OMEGAIMPORTS</title>
+  <meta name="description" content="${escapeHtml(metaDescription)}">
   <link rel="canonical" href="${canonical}">
-  <meta property="og:title" content="${escapeHtml(title)} | OMEGAIMPORTS">
-  <meta property="og:description" content="${escapeHtml(description)}">
-  <meta property="og:type" content="website">
+  <meta property="og:title" content="${escapeHtml(metaTitle)} | OMEGAIMPORTS">
+  <meta property="og:description" content="${escapeHtml(metaDescription)}">
+  <meta property="og:type" content="${type}">
   <meta property="og:url" content="${canonical}">
   <meta property="og:image" content="${absolute(ogImage)}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#071426">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" href="${assetUrl("brand/favicon.svg")}" type="image/svg+xml">
   <link rel="icon" href="${assetUrl("brand/favicon-32.png")}" sizes="32x32">
   <link rel="apple-touch-icon" href="${assetUrl("brand/apple-touch-icon.png")}">
@@ -200,55 +225,65 @@ export function pageShell({ title, description, path = "", body, extraHead = "",
   })}</script>
   ${extraHead}
 </head>
-<body>
-  <a class="skip-link" href="#conteudo">Pular para o conteudo</a>
-  <div class="topbar">Catalogo atualizado com ofertas oficiais da OMEGAIMPORTS no Mercado Livre</div>
+<body class="${isHome ? "home-shell" : "inner-shell"}">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="topbar">Compra protegida e finalização pelo Mercado Livre</div>
   <header class="site-header">
     <a class="brand" href="${pageUrl()}"><img src="${assetUrl("brand/logo-horizontal.webp")}" width="220" height="64" alt="OMEGAIMPORTS"></a>
-    <form class="header-search" action="${pageUrl("produtos/")}" role="search">
-      <label class="sr-only" for="site-search">Buscar no catalogo</label>
-      <input id="site-search" name="q" type="search" placeholder="ESP32, GPS, SCT-013..." autocomplete="off">
-    </form>
+    ${headerSearch}
     <nav class="main-nav" aria-label="Principal">
       <a href="${pageUrl("produtos/")}">Produtos</a>
       <a href="${pageUrl("categorias/")}">Categorias</a>
-      <a href="${pageUrl("aplicacoes/")}">Aplicacoes</a>
-      <a href="${pageUrl("guias/")}">Guias</a>
+      <a href="${pageUrl("blog/")}">Blog</a>
+      <a href="${pageUrl("sobre/")}">Sobre</a>
     </nav>
-    <a class="header-cta marketplace-link" href="${site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored">Loja no Mercado Livre</a>
-    <button class="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false">Menu</button>
+    <a class="header-cta marketplace-link" href="${site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored">Loja no Mercado Livre ${icon("external", "btn-icon")}</a>
+    <button class="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menu">${icon("menu", "btn-icon")}</button>
   </header>
   <div class="mobile-menu" id="mobile-menu" hidden>
     <a href="${pageUrl("produtos/")}">Produtos</a>
     <a href="${pageUrl("categorias/")}">Categorias</a>
-    <a href="${pageUrl("aplicacoes/")}">Aplicacoes</a>
-    <a href="${pageUrl("guias/")}">Guias</a>
+    <a href="${pageUrl("blog/")}">Blog</a>
     <a href="${pageUrl("sobre/")}">Sobre</a>
-    <a href="${pageUrl("como-comprar/")}">Como comprar</a>
-    <a class="marketplace-link" href="${site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored">Loja no Mercado Livre</a>
+    <a class="marketplace-link" href="${site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored">Loja no Mercado Livre ${icon("external", "btn-icon")}</a>
   </div>
   <main id="conteudo">${body}</main>
   <footer class="footer">
     <div>
       <img src="${assetUrl("brand/logo-horizontal.webp")}" width="230" height="68" alt="OMEGAIMPORTS">
-      <p>OMEGAIMPORTS - tecnologia, componentes e cuidado em cada pedido.</p>
-      <p>Operacao fundada em 23 de dezembro de 2024, especializada em componentes eletroeletronicos, IoT, telemetria, energia, prototipagem e automacao.</p>
+      <p>Componentes eletrônicos, IoT, automação e bancada organizados para compra técnica.</p>
+      <p class="fine-print">Preços, estoque, frete e condições de pagamento são confirmados no anúncio oficial do Mercado Livre.</p>
     </div>
-    <nav aria-label="Rodape">
+    <nav aria-label="Produtos">
+      <strong>Catálogo</strong>
       <a href="${pageUrl("produtos/")}">Produtos</a>
-      <a href="${pageUrl("familias/")}">Familias</a>
       <a href="${pageUrl("categorias/")}">Categorias</a>
-      <a href="${pageUrl("aplicacoes/")}">Aplicacoes</a>
-      <a href="${pageUrl("guias/")}">Guias tecnicos</a>
+      <a href="${pageUrl("blog/")}">Blog</a>
       <a href="${pageUrl("sobre/")}">Sobre</a>
-      <a href="${pageUrl("como-comprar/")}">Como comprar</a>
-      <a href="${pageUrl("duvidas-frequentes/")}">Duvidas frequentes</a>
-      <a href="${pageUrl("contato/")}">Contato</a>
-      <a href="${pageUrl("politica-de-privacidade/")}">Privacidade</a>
-      <a href="${pageUrl("termos-de-uso/")}">Termos</a>
     </nav>
-    <p class="fine-print">Precos, disponibilidade, frete, pagamento e condicoes finais de compra devem ser confirmados no anuncio correspondente no Mercado Livre.</p>
+    <nav aria-label="Atendimento e políticas">
+      <strong>Atendimento</strong>
+      <a href="${pageUrl("como-comprar/")}">Como comprar</a>
+      <a href="${pageUrl("politica-de-privacidade/")}">Política de privacidade</a>
+      <a href="${pageUrl("termos-de-uso/")}">Termos de uso</a>
+      <a href="${site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored">Mercado Livre</a>
+    </nav>
+    <p class="copyright">© 2026 OMEGAIMPORTS. Todos os direitos reservados.</p>
   </footer>
 </body>
 </html>`;
+}
+
+function fitText(value = "", max = 72) {
+  const text = String(value).replace(/\s+/g, " ").trim();
+  if (text.length <= max) return text;
+  return `${text.slice(0, max - 1).replace(/\s+\S*$/, "")}…`;
+}
+
+function fitDescription(value = "") {
+  const fallback = "Catálogo técnico OMEGAIMPORTS com componentes eletrônicos, IoT, sensores, fontes e automação, com compra finalizada no Mercado Livre.";
+  const text = String(value || fallback).replace(/\s+/g, " ").trim();
+  const base = text.length < 55 ? `${text} ${fallback}` : text;
+  if (base.length <= 168) return base;
+  return `${base.slice(0, 165).replace(/\s+\S*$/, "")}.`;
 }
