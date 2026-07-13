@@ -47,6 +47,12 @@ jobs:
       - name: Audit products
         run: pnpm run audit:products
 
+      - name: Audit owned items
+        run: pnpm run audit:owned-items
+
+      - name: Audit catalog listings
+        run: pnpm run audit:catalog-listings
+
       - name: Audit images
         run: pnpm run audit:images
 
@@ -76,6 +82,9 @@ jobs:
 
       - name: Audit SEO
         run: pnpm run audit:seo
+
+      - name: Audit Blog
+        run: pnpm run audit:blog
 
       - name: Static E2E
         run: pnpm run test:e2e

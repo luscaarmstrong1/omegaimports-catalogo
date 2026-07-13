@@ -35,6 +35,15 @@ test("public products require verified images and no blocking issues", () => {
   }
 });
 
+test("public products are owned non-catalog seller listings", () => {
+  for (const product of publicProducts) {
+    assert.equal(String(product.sellerId), "194516027");
+    assert.equal(product.returnedBySellerItemsSearch, true);
+    assert.equal(product.catalogListing, false);
+    assert.match(product.mlbId, /^MLB\d+$/);
+  }
+});
+
 test("product audit has no critical issues", () => {
   const { critical } = validateProducts(products);
   assert.deepEqual(critical, []);

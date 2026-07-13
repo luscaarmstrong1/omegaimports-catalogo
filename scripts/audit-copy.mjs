@@ -22,6 +22,11 @@ const forbidden = [
   ["pending-review", "Status interno exposto"],
   ["imageStatus", "Campo interno exposto"],
   ["needs-review", "Status interno exposto"],
+  ["API", "Termo interno de integração exposto"],
+  ["image-filter", "Controle interno de imagem exposto"],
+  ["Garanta já", "Chamada genérica exposta"],
+  ["produto incrível", "Copy genérica exposta"],
+  ["Atualizar catálogo", "Ação administrativa exposta"],
   ["Lorem ipsum", "Placeholder exposto"],
   ["adclean", "Código de extensão detectado"],
   ["ismanga", "Código de extensão detectado"],
@@ -33,14 +38,15 @@ for (const file of htmlFiles()) {
   for (const [term, issue] of forbidden) {
     if (visible.includes(term) || html.includes(term)) failures.push([file, issue, term]);
   }
-  if (/[ÃÂ�]/.test(visible) || /Î©/.test(visible)) failures.push([file, "Caractere corrompido detectado", "mojibake"]);
+  if (/(Ãƒ|Ã‚|\uFFFD|Î©)/.test(visible)) failures.push([file, "Caractere corrompido detectado", "mojibake"]);
   if (/\*\*/.test(visible)) failures.push([file, "Markdown exposto", "**"]);
+  if (/\b\d+[vVwWaA]\b|\b\d+\s*ma\b|\b\d+k\s+ohms?\b|\b(Ac|Dc)\b/.test(visible)) failures.push([file, "Unidade técnica fora do padrão v6", "unit-format"]);
   if (/\s{2,}/.test(visible.replace(/\s*\n\s*/g, " "))) warnings.push([file, "Espaço duplicado em texto visível", "whitespace"]);
   if (/\b(com|de|da|do|para|por)\./i.test(visible)) warnings.push([file, "Possível frase terminando em preposição", "preposition"]);
 }
 
-writeFileSync("reports/auditoria-copy-v5.md", [
-  "# Auditoria de copy v5",
+writeFileSync("reports/v6-copy-audit.md", [
+  "# Auditoria de copy v6",
   "",
   `Arquivos HTML analisados: ${htmlFiles().length}.`,
   `Erros críticos: ${failures.length}.`,

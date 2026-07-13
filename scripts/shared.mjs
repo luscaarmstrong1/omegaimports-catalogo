@@ -10,6 +10,8 @@ export const site = {
   base: "/omegaimports-catalogo",
   productionUrl: "https://luscaarmstrong1.github.io/omegaimports-catalogo/",
   marketplaceUrl: "https://www.mercadolivre.com.br/pagina/omegaimports",
+  whatsappNumber: "+55 35 99952-8858",
+  whatsappUrl: "https://wa.me/5535999528858?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20OMEGAIMPORTS%20e%20gostaria%20de%20ajuda%20para%20escolher%20um%20produto.",
 };
 
 export const categories = [
@@ -131,6 +133,15 @@ export function productPicture(product, { className = "product-picture", width =
   </picture>`;
 }
 
+export function blogCoverPicture(post, { className = "article-cover-picture", width = 800, height = 450, loading = "lazy", fetchpriority = "auto", sizes = "(min-width: 900px) 33vw, 100vw" } = {}) {
+  const base = post.cover || `blog/covers/${post.slug}`;
+  return `<picture class="${className}">
+    <source srcset="${assetUrl(`${base}.avif`)}" type="image/avif" sizes="${escapeHtml(sizes)}">
+    <source srcset="${assetUrl(`${base}.webp`)}" type="image/webp" sizes="${escapeHtml(sizes)}">
+    <img src="${assetUrl(`${base}.jpg`)}" alt="${escapeHtml(post.coverAlt || `Capa do artigo ${post.title}`)}" width="${width}" height="${height}" loading="${loading}" decoding="async"${fetchpriority !== "auto" ? ` fetchpriority="${fetchpriority}"` : ""}>
+  </picture>`;
+}
+
 export function icon(name, className = "icon") {
   const paths = {
     search: '<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>',
@@ -140,6 +151,7 @@ export function icon(name, className = "icon") {
     "circuit-board": '<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 8h.01M16 8h.01M8 16h.01M16 16h.01M8 8h8v8H8z"/>',
     radio: '<path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/><path d="M7.8 16.2a6 6 0 0 1 0-8.5"/><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8a6 6 0 0 1 0 8.5"/><path d="M19.1 4.9c3.9 3.9 3.9 10.2 0 14.1"/>',
     "map-pin": '<path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/>',
+    message: '<path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"/><path d="M8 9h8M8 13h5"/>',
     gauge: '<path d="m12 14 4-4"/><path d="M3.3 19a10 10 0 1 1 17.4 0"/><path d="M12 3v2M4.6 7.6 6 9M19.4 7.6 18 9"/>',
     zap: '<path d="M13 2 3 14h8l-1 8 11-14h-8l1-6Z"/>',
     cable: '<path d="M17 7 7 17"/><path d="M14 4l6 6"/><path d="M4 14l6 6"/><path d="m7 17 3 3"/><path d="m14 4 3 3"/>',
@@ -153,7 +165,6 @@ export function icon(name, className = "icon") {
 }
 
 export function productCard(product, index = 0, { featured = false } = {}) {
-  const description = product.cardDescription || "";
   const cardClass = featured ? "product-card product-card--lead" : "product-card";
   return `<article class="${cardClass}" data-title="${escapeHtml(normalizeText(product.title))}" data-family="${escapeHtml(normalizeText(product.familyId || ""))}" data-category="${product.internalCategorySlug}" data-condition="${product.condition}" data-package="${product.packageType}" data-quantity="${product.quantity}" data-price="${product.price || ""}" data-mlb="${product.mlbId}">
     <a class="product-media" href="${pageUrl(`produtos/${product.slug}/`)}" aria-label="Ver detalhes de ${escapeHtml(product.shortTitle || product.title)}">
@@ -163,11 +174,10 @@ export function productCard(product, index = 0, { featured = false } = {}) {
     <div class="product-content">
       <p class="product-category">${escapeHtml(product.internalCategory)}</p>
       <h3><a href="${pageUrl(`produtos/${product.slug}/`)}">${escapeHtml(product.title)}</a></h3>
-      ${description ? `<p class="card-description">${escapeHtml(description)}</p>` : ""}
       <p class="product-price">${formatPrice(product)}</p>
       <div class="card-actions">
         <a class="primary-action marketplace-link" href="${product.permalink}" target="_blank" rel="noopener noreferrer sponsored" data-event="marketplace_click" data-mlb="${product.mlbId}" data-title="${escapeHtml(product.title)}" data-category="${escapeHtml(product.internalCategory)}" data-position="${index + 1}">Ver oferta ${icon("external", "btn-icon")}</a>
-        <a class="text-link" href="${pageUrl(`produtos/${product.slug}/`)}">Detalhes técnicos ${icon("arrow-right", "text-link-icon")}</a>
+        <a class="text-link" href="${pageUrl(`produtos/${product.slug}/`)}">Detalhes ${icon("arrow-right", "text-link-icon")}</a>
       </div>
     </div>
   </article>`;
@@ -229,7 +239,7 @@ export function pageShell({ title, description, path = "", body, extraHead = "",
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
   <div class="topbar">Compra protegida e finalização pelo Mercado Livre</div>
   <header class="site-header">
-    <a class="brand" href="${pageUrl()}"><img src="${assetUrl("brand/logo-horizontal.webp")}" width="220" height="64" alt="OMEGAIMPORTS"></a>
+    <a class="brand" href="${pageUrl()}"><img src="${assetUrl("brand/logo-horizontal-light.webp")}" width="250" height="62" alt="OMEGAIMPORTS"></a>
     ${headerSearch}
     <nav class="main-nav" aria-label="Principal">
       <a href="${pageUrl("produtos/")}">Produtos</a>
@@ -245,17 +255,17 @@ export function pageShell({ title, description, path = "", body, extraHead = "",
     <a href="${pageUrl("categorias/")}">Categorias</a>
     <a href="${pageUrl("blog/")}">Blog</a>
     <a href="${pageUrl("sobre/")}">Sobre</a>
+    <a class="whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">WhatsApp ${icon("message", "btn-icon")}</a>
     <a class="marketplace-link" href="${site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored">Loja no Mercado Livre ${icon("external", "btn-icon")}</a>
   </div>
   <main id="conteudo">${body}</main>
   <footer class="footer">
     <div>
-      <img src="${assetUrl("brand/logo-horizontal.webp")}" width="230" height="68" alt="OMEGAIMPORTS">
+      <img src="${assetUrl("brand/logo-horizontal-light.webp")}" width="220" height="62" alt="OMEGAIMPORTS">
       <p>Componentes eletrônicos, IoT, automação e bancada organizados para compra técnica.</p>
-      <p class="fine-print">Preços, estoque, frete e condições de pagamento são confirmados no anúncio oficial do Mercado Livre.</p>
     </div>
     <nav aria-label="Produtos">
-      <strong>Catálogo</strong>
+      <strong>Produtos</strong>
       <a href="${pageUrl("produtos/")}">Produtos</a>
       <a href="${pageUrl("categorias/")}">Categorias</a>
       <a href="${pageUrl("blog/")}">Blog</a>
@@ -268,6 +278,12 @@ export function pageShell({ title, description, path = "", body, extraHead = "",
       <a href="${pageUrl("termos-de-uso/")}">Termos de uso</a>
       <a href="${site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored">Mercado Livre</a>
     </nav>
+    <nav aria-label="WhatsApp">
+      <strong>WhatsApp</strong>
+      <a class="whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">${site.whatsappNumber}</a>
+      <span>Ajuda para identificar o componente adequado.</span>
+    </nav>
+    <p class="fine-print">Preços, estoque, frete e condições são confirmados no anúncio oficial do Mercado Livre.</p>
     <p class="copyright">© 2026 OMEGAIMPORTS. Todos os direitos reservados.</p>
   </footer>
 </body>

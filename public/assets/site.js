@@ -66,6 +66,24 @@ document.querySelectorAll(".marketplace-link").forEach((link) => {
   });
 });
 
+document.querySelectorAll(".whatsapp-link").forEach((link) => {
+  link.addEventListener("click", () => {
+    track("whatsapp_click", {
+      sourcePage: location.pathname,
+    });
+  });
+});
+
+document.querySelectorAll("[data-event='category_click']").forEach((link) => {
+  link.addEventListener("click", () => {
+    track("category_click", {
+      category: link.dataset.category,
+      position: link.dataset.position,
+      sourcePage: location.pathname,
+    });
+  });
+});
+
 const search = document.querySelector("#catalog-search");
 const category = document.querySelector("#category-filter");
 const family = document.querySelector("#family-filter");
@@ -161,6 +179,13 @@ if (list) {
   });
   applyFilters();
 }
+
+document.querySelectorAll("form[role='search']").forEach((form) => {
+  form.addEventListener("submit", () => {
+    const input = form.querySelector("input[type='search']");
+    track("search", { sourcePage: location.pathname, hasQuery: Boolean(input?.value) });
+  });
+});
 
 const blogSearch = document.querySelector("#blog-search");
 const articleCards = document.querySelectorAll(".article-card");

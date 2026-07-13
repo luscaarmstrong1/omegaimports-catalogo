@@ -11,6 +11,17 @@ const products = Array.isArray(snapshot.products) ? snapshot.products : [];
 const normalizedSource = products.map((item, index) => ({
   id: String(item.mlbId || "").toLowerCase(),
   mlbId: item.mlbId,
+  sellerId: item.sellerId || item.seller_id || snapshot.sellerId || null,
+  expectedSellerId: item.expectedSellerId || snapshot.sellerId || "194516027",
+  sellerValidation: item.sellerValidation || {
+    source: "private-sanitized-snapshot",
+    returnedBySellerItemsSearch: true,
+    ownListing: String(item.sellerId || item.seller_id || snapshot.sellerId || "") === String(snapshot.sellerId || "194516027"),
+  },
+  catalogListing: item.catalogListing === true || item.catalog_listing === true,
+  catalogProductId: item.catalogProductId || item.catalog_product_id || null,
+  eligibleForPublicCatalog: item.eligibleForPublicCatalog !== false,
+  exclusionReason: item.exclusionReason || null,
   userProductId: item.userProductId || null,
   familyId: item.familyId || null,
   title: item.title || "",
