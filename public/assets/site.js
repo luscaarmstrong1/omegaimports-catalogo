@@ -46,7 +46,7 @@ const category = document.querySelector("#category-filter");
 const family = document.querySelector("#family-filter");
 const condition = document.querySelector("#condition-filter");
 const packageFilter = document.querySelector("#package-filter");
-const imageFilter = document.querySelector("#image-filter");
+const priceFilter = document.querySelector("#price-filter");
 const sortFilter = document.querySelector("#sort-filter");
 const clearButton = document.querySelector("#clear-filters");
 const list = document.querySelector("#product-list");
@@ -64,7 +64,7 @@ function syncFromUrl() {
   if (family) family.value = params.get("familia") || "";
   if (condition) condition.value = params.get("condicao") || "";
   if (packageFilter) packageFilter.value = params.get("formato") || "";
-  if (imageFilter) imageFilter.value = params.get("imagem") || "";
+  if (priceFilter) priceFilter.value = params.get("preco") || "";
   if (sortFilter) sortFilter.value = params.get("ordem") || "relevance";
 }
 
@@ -81,17 +81,19 @@ function applyFilters() {
   const fam = family?.value || "";
   const cond = condition?.value || "";
   const pack = packageFilter?.value || "";
-  const img = imageFilter?.value || "";
+  const priceRange = priceFilter?.value || "";
+  const [priceMin, priceMax] = priceRange ? priceRange.split("-").map(Number) : [0, Infinity];
   let visible = 0;
 
   for (const card of cards) {
+    const price = Number(card.dataset.price || 0);
     const ok =
       (!q || normalize(card.textContent || "").includes(q) || normalize(card.dataset.mlb || "").includes(q)) &&
       (!cat || card.dataset.category === cat) &&
       (!fam || card.dataset.family === fam) &&
       (!cond || card.dataset.condition === cond) &&
       (!pack || card.dataset.package === pack) &&
-      (!img || card.dataset.imageStatus === img);
+      (!priceRange || (price >= priceMin && price <= priceMax));
     card.hidden = !ok;
     if (ok) visible++;
   }
@@ -115,7 +117,7 @@ function applyFilters() {
   setParam(params, "familia", family?.value || "");
   setParam(params, "condicao", condition?.value || "");
   setParam(params, "formato", packageFilter?.value || "");
-  setParam(params, "imagem", imageFilter?.value || "");
+  setParam(params, "preco", priceFilter?.value || "");
   setParam(params, "ordem", sortFilter?.value && sortFilter.value !== "relevance" ? sortFilter.value : "");
   history.replaceState(null, "", `${location.pathname}${params.toString() ? `?${params}` : ""}`);
   track("catalog_filter_used", { query: search?.value || "", results: visible });
@@ -123,9 +125,9 @@ function applyFilters() {
 
 if (list) {
   syncFromUrl();
-  [search, category, family, condition, packageFilter, imageFilter, sortFilter].forEach((input) => input?.addEventListener("input", applyFilters));
+  [search, category, family, condition, packageFilter, priceFilter, sortFilter].forEach((input) => input?.addEventListener("input", applyFilters));
   clearButton?.addEventListener("click", () => {
-    [search, category, family, condition, packageFilter, imageFilter].forEach((input) => {
+    [search, category, family, condition, packageFilter, priceFilter].forEach((input) => {
       if (input) input.value = "";
     });
     if (sortFilter) sortFilter.value = "relevance";
