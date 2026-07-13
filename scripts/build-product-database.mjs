@@ -46,11 +46,11 @@ function normalizeTechnicalUnits(value = "") {
     .replace(/\bMedicao\b/gi, "Medição")
     .replace(/\bAlimentacao\b/gi, "Alimentação")
     .replace(/\bFuncao\b/gi, "Função")
+    .replace(/\b(\d+)\s*m[aA]\b/g, "$1 mA")
     .replace(/\b(\d+)\s*[vV]\b/g, "$1 V")
     .replace(/\b(\d+)\s*[wW]\b/g, "$1 W")
     .replace(/\b(\d+)\s*[aA]\b/g, "$1 A")
-    .replace(/\b(\d+)\s*m[aA]\b/g, "$1 mA")
-    .replace(/\b(\d+)\s*k(?:ohm|Ω|Î©)\b/gi, "$1 kΩ")
+    .replace(/\b(\d+)\s*k\s*(?:ohms?|Ω|Î©)\b/gi, "$1 kΩ")
     .replace(/\b2g\b/gi, "2G")
     .replace(/\b2[,.]?54\s*mm\b/gi, "2,54 mm")
     .replace(/\bhi[-\s]?link\b/gi, "Hi-Link")
@@ -61,8 +61,8 @@ function normalizeTechnicalUnits(value = "") {
     .replace(/\besp32\b/gi, "ESP32")
     .replace(/\bsim800l\b/gi, "SIM800L")
     .replace(/\bgps\b/gi, "GPS")
-    .replace(/\bac\b/g, "AC")
-    .replace(/\bdc\b/g, "DC")
+    .replace(/\bac\b/gi, "AC")
+    .replace(/\bdc\b/gi, "DC")
     .replace(/\s+\/\s+/g, " / ")
     .replace(/\s+/g, " ")
     .trim();
@@ -91,6 +91,12 @@ function normalizeProductTitle(value = "") {
     .replace(/\bKit Com\b/g, "Kit com")
     .replace(/\bFonte De\b/g, "Fonte de")
     .replace(/\bMódulo De\b/g, "Módulo de")
+    .replace(/\bAc\b/g, "AC")
+    .replace(/\bDc\b/g, "DC")
+    .replace(/\bMm\b/g, "mm")
+    .replace(/\bMhz\b/g, "MHz")
+    .replace(/\b10k Ohms\b/gi, "10 kΩ")
+    .replace(/\b100k Ohms\b/gi, "100 kΩ")
     .trim();
 }
 
@@ -197,6 +203,12 @@ function verifiedImageFor(product) {
 
 function mapProduct(product) {
   const sourceRef = product.mlbId || product.id;
+  const expectedSellerId = String(product.expectedSellerId || "194516027");
+  const sellerId = String(product.sellerId || product.seller_id || product.seller?.id || expectedSellerId);
+  const returnedBySellerItemsSearch = product.sellerValidation?.returnedBySellerItemsSearch ?? (mode === "api");
+  const ownListing = sellerId === expectedSellerId && returnedBySellerItemsSearch;
+  const catalogListing = product.catalogListing === true || product.catalog_listing === true;
+  const sourceOnlyCatalog = !product.mlbId && Boolean(product.catalogProductId || product.catalog_product_id || product.userProductId);
   const title = normalizeProductTitle(product.title || product.shortTitle || "");
   const fullText = `${title} ${product.shortDescription || ""} ${product.fullDescription || ""}`;
   const category = inferCategory(product);
@@ -214,6 +226,10 @@ function mapProduct(product) {
   const blockingIssues = [];
 
   if (!/^MLB\d+$/.test(product.mlbId || "")) blockingIssues.push("MLB inválido ou ausente");
+  if (!ownListing) blockingIssues.push("anúncio não pertence ao vendedor autorizado");
+  if (!returnedBySellerItemsSearch) blockingIssues.push("item não comprovado na busca oficial do vendedor");
+  if (catalogListing) blockingIssues.push("anúncio de catálogo excluído");
+  if (sourceOnlyCatalog) blockingIssues.push("registro baseado somente em catálogo ou user product");
   if (!product.marketplaceUrl || !product.marketplaceUrl.includes((product.mlbId || "").replace("MLB", ""))) blockingIssues.push("permalink não confirmado para o MLB");
   if (imageStatus !== "verified") blockingIssues.push("imagem real do anúncio exato não verificada");
   if (quantityDiverges) blockingIssues.push(`quantidade divergente: cadastro=${product.quantity || 1}, texto=${expectedQuantity}`);
@@ -227,6 +243,18 @@ function mapProduct(product) {
   return {
     id: (product.id || product.mlbId || "").toLowerCase(),
     mlbId: product.mlbId,
+    sellerId,
+    expectedSellerId,
+    returnedBySellerItemsSearch,
+    sellerValidation: {
+      source: product.sellerValidation?.source || (mode === "api" ? "private-sanitized-snapshot" : "legacy-comparison"),
+      returnedBySellerItemsSearch,
+      ownListing,
+    },
+    catalogListing,
+    catalogProductId: product.catalogProductId || product.catalog_product_id || null,
+    eligibleForPublicCatalog: ownListing && !catalogListing && !sourceOnlyCatalog,
+    exclusionReason: product.exclusionReason || null,
     userProductId: product.userProductId || null,
     familyId,
     title,
@@ -309,6 +337,36 @@ writeFileSync("reports/hidden-products.csv", [
   ...normalizedProducts.filter((product) => product.status !== "published").map((product) => [product.mlbId, product.title, product.status, product.blockingIssues.join("; ")].map(csvEscape).join(",")),
 ].join("\n"), "utf8");
 
+writeFileSync("reports/catalog-listings-excluded.csv", [
+  "item_id,title,seller_id,catalog_listing,catalog_product_id,status,permalink,reason,excluded_at",
+  ...normalizedProducts.filter((product) => product.catalogListing === true).map((product) => [
+    product.mlbId,
+    product.title,
+    product.sellerId,
+    product.catalogListing,
+    product.catalogProductId,
+    product.status,
+    product.permalink,
+    product.blockingIssues.join("; ") || "catalog_listing true",
+    now,
+  ].map(csvEscape).join(",")),
+].join("\n"), "utf8");
+
+writeFileSync("reports/non-owned-products-blocked.csv", [
+  "item_id,title,seller_id,expected_seller_id,returned_by_seller_items_search,status,permalink,reason,blocked_at",
+  ...normalizedProducts.filter((product) => product.sellerId !== product.expectedSellerId || product.returnedBySellerItemsSearch !== true).map((product) => [
+    product.mlbId,
+    product.title,
+    product.sellerId,
+    product.expectedSellerId,
+    product.returnedBySellerItemsSearch,
+    product.status,
+    product.permalink,
+    product.blockingIssues.join("; ") || "ownership mismatch",
+    now,
+  ].map(csvEscape).join(",")),
+].join("\n"), "utf8");
+
 writeFileSync("reports/specification-issues.csv", [
   "mlbId,title,label,value,issue",
   ...normalizedProducts.flatMap((product) => product.specifications.filter((spec) => badSpecification(spec)).map((spec) => [product.mlbId, product.title, spec.label, spec.value, "suspect-specification"].map(csvEscape).join(","))),
@@ -320,4 +378,4 @@ writeFileSync("reports/product-differences.csv", [
 ].join("\n"), "utf8");
 
 const published = normalizedProducts.filter((product) => product.status === "published").length;
-console.log(`Base pública v5 gerada: ${normalizedProducts.length} itens analisados, ${published} publicados, ${normalizedProducts.length - published} pendentes/ocultos.`);
+console.log(`Base pública v6 gerada: ${normalizedProducts.length} itens analisados, ${published} publicados, ${normalizedProducts.length - published} pendentes/ocultos.`);

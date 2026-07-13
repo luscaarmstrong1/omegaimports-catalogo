@@ -5,6 +5,7 @@ import {
   absolute,
   applicationCards,
   assetUrl,
+  blogCoverPicture,
   categories,
   conditionLabel,
   escapeHtml,
@@ -31,6 +32,8 @@ const blogPosts = loadBlogPosts();
 const merchandising = JSON.parse(readFileSync(new URL("../src/data/home-merchandising.json", import.meta.url), "utf8"));
 const categoryCounts = Object.fromEntries(categories.map((category) => [category.slug, published.filter((product) => product.internalCategorySlug === category.slug).length]));
 const visibleCategories = categories.filter((category) => (categoryCounts[category.slug] || 0) > 0);
+const homeCategorySlugs = ["iot-gsm-e-comunicacao", "sensores-e-medicao", "fontes-e-alimentacao", "automacao-e-comando", "componentes-eletronicos", "instrumentos-de-bancada"];
+const homeCategories = homeCategorySlugs.map((slug) => visibleCategories.find((category) => category.slug === slug)).filter(Boolean);
 const visibleFamilies = familyCards.filter((family) => published.some((product) => product.familyId === family.slug));
 
 function out(path, html) {
@@ -43,6 +46,7 @@ function copyAssets() {
   rmSync(dist, { recursive: true, force: true });
   mkdirSync(dist, { recursive: true });
   cpSync(new URL("../public/brand/", import.meta.url), new URL("brand/", dist), { recursive: true });
+  cpSync(new URL("../public/blog/", import.meta.url), new URL("blog/", dist), { recursive: true });
   cpSync(new URL("../public/assets/", import.meta.url), new URL("assets/", dist), { recursive: true });
   cpSync(new URL("../public/products/", import.meta.url), new URL("products/", dist), { recursive: true });
 }
@@ -137,8 +141,7 @@ function heroProduct(product, index) {
 }
 
 function categoryCard(category, index) {
-  const large = index < 2 ? " category-card--large" : "";
-  return `<a class="category-card${large}" href="${pageUrl(`categorias/${category.slug}/`)}">
+  return `<a class="category-card" href="${pageUrl(`categorias/${category.slug}/`)}" data-event="category_click" data-category="${category.slug}" data-position="${index + 1}">
     ${icon(category.icon, "category-icon")}
     <span class="category-count">${categoryCounts[category.slug]}</span>
     <h3>${escapeHtml(category.label)}</h3>
@@ -148,10 +151,10 @@ function categoryCard(category, index) {
 }
 
 function blogCard(post, index = 0) {
-  return `<article class="article-card ${index === 0 ? "article-card--featured" : ""}">
-    <a class="article-cover" href="${pageUrl(`blog/${post.slug}/`)}">${icon("book", "article-icon")}<span>${escapeHtml(post.category)}</span></a>
+  return `<article class="article-card">
+    <a class="article-cover" href="${pageUrl(`blog/${post.slug}/`)}">${blogCoverPicture(post, { loading: index < 3 ? "eager" : "lazy", fetchpriority: index === 0 ? "high" : "auto" })}</a>
     <div class="article-card-content">
-      <p class="eyebrow">${escapeHtml(post.category)} · ${escapeHtml(post.readingTime)}</p>
+      <p class="eyebrow">${escapeHtml(post.category)} · ${formatDate(post.publishedAt)} · ${escapeHtml(post.readingTime)}</p>
       <h3><a href="${pageUrl(`blog/${post.slug}/`)}">${escapeHtml(post.title)}</a></h3>
       <p>${escapeHtml(post.summary)}</p>
       <a class="text-link" href="${pageUrl(`blog/${post.slug}/`)}">Ler artigo ${icon("arrow-right", "text-link-icon")}</a>
@@ -176,22 +179,17 @@ function relatedPostsForProduct(product, limit = 3) {
 function home() {
   const homeProducts = selectHomeProducts();
   const heroProducts = selectByPriority().slice(0, 3);
-  const visibleApplications = applicationCards.filter((app) => collectionItems(app, "aplicacoes").length > 0);
+  const recentPosts = [...blogPosts].sort((a, b) => String(b.publishedAt).localeCompare(String(a.publishedAt))).slice(0, 3);
   const body = `
     <section class="hero-premium">
       <div class="hero-grid">
         <div class="hero-copy">
-          <p class="hero-eyebrow">Eletrônica · IoT · Automação · Energia</p>
+          <p class="hero-eyebrow">ELETRÔNICA · IOT · AUTOMAÇÃO</p>
           <h1>A peça certa para o seu projeto avançar.</h1>
-          <p>Componentes técnicos organizados por aplicação, com imagens reais, informações objetivas e acesso direto às ofertas oficiais da OMEGAIMPORTS no Mercado Livre.</p>
+          <p>Componentes eletrônicos, sensores, fontes e módulos para projetos técnicos, com acesso direto às ofertas oficiais da OMEGAIMPORTS.</p>
           <div class="hero-actions">
-            <a class="secondary-action" href="${pageUrl("produtos/")}">Explorar catálogo ${icon("arrow-right", "btn-icon")}</a>
+            <a class="secondary-action" href="${pageUrl("produtos/")}">Explorar produtos ${icon("arrow-right", "btn-icon")}</a>
             <a class="primary-action marketplace-link" href="${site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored">Comprar no Mercado Livre ${icon("external", "btn-icon")}</a>
-          </div>
-          <div class="hero-proof" aria-label="Provas de confiança">
-            <div><strong>${published.length}</strong><span>produtos disponíveis</span></div>
-            <div><strong>Fotos reais</strong><span>dos anúncios oficiais</span></div>
-            <div><strong>Compra protegida</strong><span>pelo Mercado Livre</span></div>
           </div>
         </div>
         <div class="hero-stage" aria-label="Produtos em destaque">
@@ -205,25 +203,24 @@ function home() {
         <form action="${pageUrl("produtos/")}" role="search">
           ${icon("search", "search-icon")}
           <label class="sr-only" for="home-search">Buscar componente</label>
-          <input id="home-search" name="q" type="search" placeholder="Busque por modelo, aplicação ou componente...">
-          <button class="secondary-action" type="submit">Buscar componente ${icon("arrow-right", "btn-icon")}</button>
+          <input id="home-search" name="q" type="search" placeholder="Busque por ESP32, GPS, SCT-013, Hi-Link...">
+          <button class="secondary-action" type="submit">Buscar ${icon("arrow-right", "btn-icon")}</button>
         </form>
         <div class="chips">${["ESP32", "GPS", "SCT-013", "ZMCT123A", "HLK-PM01", "fonte de bancada"].map((chip) => `<a href="${pageUrl(`produtos/?q=${encodeURIComponent(chip)}`)}">${chip}</a>`).join("")}</div>
       </section>
     </section>
     <section class="trust-grid" aria-label="Confiança">
-      <article>${icon("shield", "trust-icon")}<strong>Compra protegida</strong><p>Pagamento, frete e prazo são confirmados dentro do Mercado Livre.</p></article>
-      <article>${icon("package", "trust-icon")}<strong>Catálogo organizado</strong><p>Produtos agrupados por categoria, família e aplicação técnica.</p></article>
-      <article>${icon("search", "trust-icon")}<strong>Busca objetiva</strong><p>Encontre por modelo, sigla, aplicação, categoria ou faixa de preço.</p></article>
+      <article>${icon("shield", "trust-icon")}<strong>Compra protegida</strong><p>Pagamento, frete e entrega pelo Mercado Livre.</p></article>
+      <article>${icon("package", "trust-icon")}<strong>Produtos reais</strong><p>Imagens e dados vinculados aos anúncios da OMEGAIMPORTS.</p></article>
+      <article>${icon("message", "trust-icon")}<strong>Atendimento</strong><p>Ajuda para identificar o componente adequado pelo WhatsApp.</p></article>
     </section>
-    ${section({ eyebrow: "Organização técnica", title: "Categorias para chegar rápido ao componente certo", description: "A vitrine prioriza famílias reais do catálogo e evita categorias vazias.", className: "section section--white", content: `<div class="category-grid category-grid--bento">${visibleCategories.map(categoryCard).join("")}</div>` })}
-    ${section({ eyebrow: "Seleção OMEGAIMPORTS", title: "Destaques para projetos reais", description: "Uma curadoria com alimentação, medição, automação, conectividade e prototipagem.", action: `<a class="text-link" href="${pageUrl("produtos/")}">Ver todos os produtos ${icon("arrow-right", "text-link-icon")}</a>`, content: `<div class="product-grid product-grid--editorial">${homeProducts.map((product, index) => productCard(product, index, { featured: index === 0 })).join("")}</div>` })}
-    ${section({ eyebrow: "Compra guiada", title: "Compre por aplicação ou família", description: "Use a linguagem do projeto quando você ainda não sabe o nome exato do componente.", className: "section section--white", content: `<div class="switch-grid"><div><h3>Comprar por aplicação</h3><div class="compact-list">${visibleApplications.map((app) => `<a href="${appUrl(app)}"><strong>${escapeHtml(app.label)}</strong><span>${escapeHtml(app.description)}</span></a>`).join("")}</div></div><div><h3>Comprar por família</h3><div class="compact-list">${visibleFamilies.map((family) => `<a href="${familyUrl(family)}"><strong>${escapeHtml(family.label)}</strong><span>${escapeHtml(family.description)}</span></a>`).join("")}</div></div></div>` })}
-    ${section({ eyebrow: "Blog técnico", title: "Guias para escolher com mais segurança", description: "Conteúdos práticos conectados aos produtos reais do catálogo.", action: `<a class="text-link" href="${pageUrl("blog/")}">Ver Blog ${icon("arrow-right", "text-link-icon")}</a>`, content: `<div class="article-grid">${blogPosts.slice(0, 4).map(blogCard).join("")}</div>` })}
-    <section class="final-cta"><p class="eyebrow">Compra pelo Mercado Livre</p><h2>Escolha no catálogo, confirme no anúncio oficial e finalize com compra protegida.</h2><p>Use a OMEGAIMPORTS para comparar categorias, aplicações e famílias. Preço, estoque, frete e pagamento são sempre confirmados no Mercado Livre.</p><a class="secondary-action" href="${pageUrl("produtos/")}">Explorar catálogo ${icon("arrow-right", "btn-icon")}</a><a class="primary-action marketplace-link" href="${site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored">Loja no Mercado Livre ${icon("external", "btn-icon")}</a></section>`;
+    ${section({ eyebrow: "Categorias", title: "Principais departamentos técnicos", description: "Acesso rápido aos grupos mais usados em eletrônica, IoT, medição, energia e bancada.", className: "section section--white", content: `<div class="category-grid category-grid--home">${homeCategories.map(categoryCard).join("")}</div><a class="text-link section-after-link" href="${pageUrl("categorias/")}">Ver todas as categorias ${icon("arrow-right", "text-link-icon")}</a>` })}
+    ${section({ eyebrow: "Produtos em destaque", title: "Produtos em destaque", description: "Uma vitrine única com itens próprios, ativos, não catálogo e com imagem validada.", action: `<a class="text-link" href="${pageUrl("produtos/")}">Ver todos os produtos ${icon("arrow-right", "text-link-icon")}</a>`, content: `<div class="product-grid product-grid--home">${homeProducts.map((product, index) => productCard(product, index)).join("")}</div>` })}
+    ${section({ eyebrow: "Blog técnico", title: "Conteúdo para escolher e aplicar melhor", description: "Artigos práticos conectados aos produtos reais do catálogo.", action: `<a class="text-link" href="${pageUrl("blog/")}">Ver todos os artigos ${icon("arrow-right", "text-link-icon")}</a>`, content: `<div class="article-grid">${recentPosts.map(blogCard).join("")}</div>` })}
+    <section class="whatsapp-band">${icon("message", "whatsapp-band-icon")}<div><p class="eyebrow">Atendimento</p><h2>Precisa confirmar o componente certo?</h2><p>Fale pelo WhatsApp oficial da OMEGAIMPORTS para receber ajuda antes de abrir a oferta no Mercado Livre.</p></div><a class="whatsapp-action whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp ${icon("message", "btn-icon")}</a></section>`;
   out("index.html", pageShell({
     title: "Componentes eletrônicos, IoT e automação",
-    description: "Encontre componentes eletrônicos, sensores, fontes, módulos IoT e itens de automação da OMEGAIMPORTS, com acesso direto às ofertas oficiais no Mercado Livre.",
+    description: "Componentes eletrônicos, sensores, fontes, módulos IoT e itens de automação da OMEGAIMPORTS, com compra pelo Mercado Livre e atendimento pelo WhatsApp.",
     body,
   }));
 }
@@ -317,10 +314,12 @@ function blogPages() {
     const body = `<nav class="breadcrumb"><a href="${pageUrl()}">Início</a><a href="${pageUrl("blog/")}">Blog</a><span>${escapeHtml(post.title)}</span></nav>
       <article class="article article-detail">
         <header class="article-header"><p class="eyebrow">${escapeHtml(post.category)} · ${escapeHtml(post.readingTime)}</p><h1>${escapeHtml(post.title)}</h1><p>${escapeHtml(post.summary)}</p><div class="article-meta"><span>Equipe OMEGAIMPORTS</span><span>Publicado em ${formatDate(post.publishedAt)}</span><span>Revisado em ${formatDate(post.updatedAt)}</span></div></header>
+        ${blogCoverPicture(post, { className: "article-hero-cover", width: 1200, height: 675, loading: "eager", fetchpriority: "high", sizes: "(min-width: 900px) 900px, 100vw" })}
         <aside class="toc" aria-label="Sumário"><strong>Sumário</strong>${post.sections.map(([title], index) => `<a href="#secao-${index + 1}">${escapeHtml(title)}</a>`).join("")}</aside>
         ${post.sections.map(([title, text], index) => `<section id="secao-${index + 1}"><h2>${escapeHtml(title)}</h2><p>${escapeHtml(text)}</p></section>`).join("")}
         <section><h2>Conclusão</h2><p>Use o artigo como ponto de partida e confirme modelo, tensão, corrente, acessórios e disponibilidade no anúncio oficial antes da compra.</p></section>
         <section><h2>Referências técnicas</h2><ul>${post.references.map((reference) => `<li>${escapeHtml(reference)}</li>`).join("")}</ul></section>
+        <section class="article-whatsapp"><h2>Precisa de ajuda para escolher?</h2><p>Envie sua dúvida pelo WhatsApp oficial da OMEGAIMPORTS e informe o tipo de projeto, tensão, corrente e aplicação desejada.</p><a class="whatsapp-action whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp ${icon("message", "btn-icon")}</a></section>
       </article>
       ${relatedProducts.length ? section({ eyebrow: "Produtos relacionados", title: "Itens do catálogo ligados a este tema", className: "section section--white", content: `<div class="product-grid">${relatedProducts.map(productCard).join("")}</div>` }) : ""}
       ${relatedPosts.length ? section({ eyebrow: "Continue lendo", title: "Artigos relacionados", content: `<div class="article-grid article-grid--compact">${relatedPosts.map(blogCard).join("")}</div>` }) : ""}`;
@@ -329,24 +328,24 @@ function blogPages() {
       "@type": "BlogPosting",
       headline: post.title,
       description: post.summary,
-      image: absolute("brand/visuals/og-home.jpg"),
+      image: absolute(`${post.cover}-og.jpg`),
       author: { "@type": "Organization", name: "OMEGAIMPORTS" },
       publisher: { "@type": "Organization", name: "OMEGAIMPORTS" },
       datePublished: post.publishedAt,
       dateModified: post.updatedAt,
       mainEntityOfPage: absolute(`blog/${post.slug}/`),
     };
-    out(`blog/${post.slug}/index.html`, pageShell({ title: post.title, description: post.summary, path: `blog/${post.slug}/`, body, type: "article", extraHead: `<script type="application/ld+json">${JSON.stringify(schema)}</script>` }));
+    out(`blog/${post.slug}/index.html`, pageShell({ title: post.title, description: post.summary, path: `blog/${post.slug}/`, body, type: "article", ogImage: `${post.cover}-og.jpg`, extraHead: `<script type="application/ld+json">${JSON.stringify(schema)}</script>` }));
   }
 }
 
 function simplePages() {
   const pages = [
-    ["sobre", "Sobre a OMEGAIMPORTS", "A OMEGAIMPORTS organiza componentes eletrônicos, IoT, telemetria, energia, prototipagem e automação em uma vitrine técnica ligada aos anúncios oficiais no Mercado Livre.", `<section class="page-hero"><p class="eyebrow">Sobre</p><h1>Uma vitrine técnica para comprar componentes com mais clareza.</h1><p>A OMEGAIMPORTS iniciou suas operações em dezembro de 2024 e atua com componentes eletrônicos, IoT, sensores, fontes, conectores, instrumentos de bancada e itens de prototipagem.</p></section><section class="detail-grid"><div class="detail-block"><h2>Proposta</h2><p>Organizar produtos reais por categoria, aplicação e família técnica, sem transformar a compra em um relatório interno.</p></div><div class="detail-block"><h2>Mercado Livre</h2><p>A finalização da compra acontece no anúncio oficial, onde preço, estoque, frete e pagamento são confirmados.</p></div><div class="detail-block"><h2>Clareza técnica</h2><p>Os textos priorizam informação objetiva, cuidados de uso e relação entre produto, aplicação e conteúdo editorial.</p></div><div class="detail-block"><h2>Contato</h2><p>Para dúvidas sobre produto, compatibilidade, quantidade, frete ou prazo, use o campo de perguntas do anúncio correspondente.</p></div></section>`],
+    ["sobre", "Sobre a OMEGAIMPORTS", "A OMEGAIMPORTS organiza componentes eletrônicos, IoT, telemetria, energia, prototipagem e automação em uma vitrine técnica ligada aos anúncios oficiais no Mercado Livre.", `<section class="page-hero"><p class="eyebrow">Sobre</p><h1>Uma vitrine técnica para comprar componentes com mais clareza.</h1><p>A OMEGAIMPORTS iniciou suas operações em dezembro de 2024 e atua com componentes eletrônicos, IoT, sensores, fontes, conectores, instrumentos de bancada e itens de prototipagem.</p></section><section class="detail-grid"><div class="detail-block"><h2>Proposta</h2><p>Organizar produtos reais por categoria, aplicação e família técnica, sem transformar a compra em um relatório interno.</p></div><div class="detail-block"><h2>Mercado Livre</h2><p>A finalização da compra acontece no anúncio oficial, onde preço, estoque, frete e pagamento são confirmados.</p></div><div class="detail-block"><h2>Clareza técnica</h2><p>Os textos priorizam informação objetiva, cuidados de uso e relação entre produto, aplicação e conteúdo editorial.</p></div><div class="detail-block"><h2>WhatsApp</h2><p>Para dúvidas sobre escolha de componente, compatibilidade ou aplicação, fale com a OMEGAIMPORTS pelo WhatsApp oficial.</p><a class="whatsapp-action whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp ${icon("message", "btn-icon")}</a></div></section>`],
     ["como-comprar", "Como comprar", "Encontre o produto, confira modelo e condição, abra o anúncio oficial e finalize a compra pelo Mercado Livre.", `<section class="page-hero"><h1>Como comprar</h1><p>Use o catálogo para comparar componentes e finalize sempre no anúncio oficial da OMEGAIMPORTS no Mercado Livre.</p></section>`],
     ["politica-de-privacidade", "Política de privacidade", "Este site é uma vitrine estática. Não cria contas, não processa pagamentos e não armazena dados de checkout.", `<section class="page-hero"><h1>Política de privacidade</h1><p>Este site é uma vitrine estática. Não cria contas, não processa pagamentos e não armazena dados de checkout.</p></section>`],
     ["termos-de-uso", "Termos de uso", "As informações ajudam a organizar e comparar produtos. Condições finais devem ser confirmadas no Mercado Livre.", `<section class="page-hero"><h1>Termos de uso</h1><p>Preços, disponibilidade, frete, pagamento e condições finais devem ser confirmados no anúncio oficial do Mercado Livre.</p></section>`],
-    ["contato", "Contato", "Use o campo de perguntas do anúncio correspondente no Mercado Livre para dúvidas sobre produto, frete ou prazo.", `<section class="page-hero"><h1>Contato</h1><p>Para dúvidas sobre produto, compatibilidade, quantidade, frete ou prazo, use o campo de perguntas do anúncio correspondente no Mercado Livre.</p></section>`],
+    ["contato", "Contato", "Atendimento pelo WhatsApp oficial da OMEGAIMPORTS e compra finalizada pelo Mercado Livre.", `<section class="page-hero"><h1>Contato</h1><p>Para dúvidas sobre produto, compatibilidade, quantidade, frete ou prazo, fale pelo WhatsApp oficial da OMEGAIMPORTS.</p><a class="whatsapp-action whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp ${icon("message", "btn-icon")}</a></section>`],
     ["duvidas-frequentes", "Dúvidas frequentes", "O site não tem checkout próprio. Preço, frete, estoque e prazo são confirmados no Mercado Livre.", `<section class="page-hero"><h1>Dúvidas frequentes</h1><p>O site não tem checkout próprio. Preço, frete, estoque e prazo são confirmados no Mercado Livre.</p></section>`],
   ];
   for (const [slug, title, description, body] of pages) out(`${slug}/index.html`, pageShell({ title, description, path: `${slug}/`, body }));
