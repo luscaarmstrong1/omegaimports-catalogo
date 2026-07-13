@@ -68,6 +68,9 @@ jobs:
       - name: Build
         run: pnpm run build
 
+      - name: Audit dist images
+        run: pnpm run audit:dist-images
+
       - name: Static E2E
         run: pnpm run test:e2e
 

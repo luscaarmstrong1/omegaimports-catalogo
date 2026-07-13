@@ -41,6 +41,27 @@ function field(value, sourceRef, confidence = "low", reviewStatus = "pending-rev
 
 function inferCategory(product) {
   const text = normalizeText(`${product.title} ${product.shortDescription} ${product.fullDescription} ${product.category} ${product.model}`);
+  const family = inferFamily(product);
+  const manual = {
+    MLB5272637504: categories.components,
+    MLB5268487034: categories.instruments,
+    MLB4669500229: categories.instruments,
+    MLB6747662378: categories.instruments,
+  };
+  if (manual[product.mlbId]) return manual[product.mlbId];
+  if (family === "ttgo-t-call") return categories.iot;
+  if (family === "gps-neo-6m") return categories.gps;
+  if (family === "hi-link-hlk-pm01") return categories.power;
+  if (family === "sensores-de-corrente") return categories.sensors;
+  if (family === "contatores") return categories.automation;
+  if (family === "varistores") return categories.components;
+  if (family === "split-bolt") return categories.connectors;
+  if (family === "instrumentos-e-fontes") return categories.instruments;
+  if (/fenolite|barra de pinos|header|resistor|varistor|micro switch|chave/.test(text)) return categories.components;
+  if (/prensa|split bolt|conector|pigtail|ipex/.test(text)) return categories.connectors;
+  if (/contator|supressor|rele|rel/.test(text)) return categories.automation;
+  if (/hikari|fonte de bancada|gerador de funcao|gerador de fun/.test(text)) return categories.instruments;
+  if (/hlk|hi-?link|pm01|fonte chaveada|retificador/.test(text)) return categories.power;
   if (/\bgps\b|neo-?6m|ublox/.test(text)) return categories.gps;
   if (/sct-?013|zmct|corrente|energia|medicao|medição/.test(text)) return categories.sensors;
   if (/fonte|hlk|hi-?link|alimentacao|alimentação|bancada hikari/.test(text)) return /bancada/.test(text) ? categories.instruments : categories.power;
@@ -83,6 +104,23 @@ function cleanMarketing(text = "") {
     .join(" ")
     .replace(/\s+/g, " ")
     .slice(0, 240);
+}
+
+function cleanCardDescription(product) {
+  const raw = cleanMarketing(product.shortDescription || product.fullDescription || "");
+  const cleaned = raw
+    .replace(/\*\*/g, "")
+    .replace(/sugest[aã]o de descri[cç][aã]o:?/gi, "")
+    .replace(/\bgaranta j[aá]\b.*$/i, "")
+    .replace(/^[\s:;.,-]+/, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!cleaned || normalizeText(cleaned) === normalizeText(product.title || "")) return "";
+  const target = cleaned.length > 160 ? cleaned.slice(0, 157) : cleaned;
+  const cut = target.length < cleaned.length ? target.replace(/\s+\S*$/, "") : target;
+  const sentence = cut.replace(/[.,;:\s]+$/, "");
+  if (sentence.length < 80) return "";
+  return `${sentence}.`;
 }
 
 function badSpecification(spec) {
@@ -175,6 +213,7 @@ function mapProduct(product) {
     gallery: imageStatus === "verified" ? [productImage, ...(product.gallery || []).filter((image) => image !== productImage)] : [],
     description: product.fullDescription || "",
     shortDescription: product.shortDescription || cleanMarketing(fullText) || `Oferta OMEGAIMPORTS para ${title}.`,
+    cardDescription: cleanCardDescription(product),
     technicalSummary: cleanMarketing(product.shortDescription || product.fullDescription || title),
     attributes: [],
     specifications: (product.specifications || []).map((spec) => ({ ...spec, source: "legacy-comparison", confidence: badSpecification(spec) ? "low" : "medium" })),
