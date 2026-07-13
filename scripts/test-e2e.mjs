@@ -4,44 +4,70 @@ import { extname, join } from "node:path";
 const required = [
   "dist/index.html",
   "dist/produtos/index.html",
-  "dist/familias/index.html",
   "dist/categorias/index.html",
-  "dist/aplicacoes/index.html",
-  "dist/guias/index.html",
-  "dist/duvidas-frequentes/index.html",
+  "dist/blog/index.html",
+  "dist/sobre/index.html",
+  "dist/como-comprar/index.html",
   "dist/404.html",
   "dist/sitemap.xml",
   "dist/robots.txt",
 ];
 
 for (const file of required) {
-  if (!existsSync(file)) throw new Error(`${file} nao foi gerado`);
+  if (!existsSync(file)) throw new Error(`${file} não foi gerado`);
 }
 
 const home = readFileSync("dist/index.html", "utf8");
 if (!home.includes("/omegaimports-catalogo/assets/site.css")) throw new Error("base path do CSS ausente");
 if (!home.includes("logo-horizontal.webp")) throw new Error("logo ausente na Home");
+if (!home.includes("A peça certa para o seu projeto avançar.")) throw new Error("Hero v5 ausente");
+if ((home.match(/class="orbit-product/g)?.length || 0) < 3) throw new Error("Hero precisa usar três produtos reais");
+if ((home.match(/class="product-card/g)?.length || 0) < 6) throw new Error("Home precisa exibir pelo menos 6 produtos");
+if (!home.includes("/omegaimports-catalogo/blog/")) throw new Error("Blog não aparece na Home");
+
+const header = home.match(/<header class="site-header">([\s\S]*?)<\/header>/)?.[1] || "";
+for (const item of ["Produtos", "Categorias", "Blog", "Sobre"]) {
+  if (!header.includes(`>${item}</a>`)) throw new Error(`Header sem aba principal: ${item}`);
+}
+for (const forbidden of ["Aplicações", "Guias", "Famílias", "Como comprar", "Aplicacoes", "Familias"]) {
+  if (header.includes(forbidden)) throw new Error(`Header contém aba proibida: ${forbidden}`);
+}
 
 for (const forbidden of [
-  "Catalogo publico em revisao tecnica",
   "Catálogo público em revisão técnica",
+  "Catalogo publico em revisao tecnica",
   "Imagem verificada",
   "image-filter",
   "product-placeholder",
   "Como validamos os produtos",
+  "pending-review",
+  "imageStatus",
+  "adclean",
+  "ismanga",
 ]) {
-  if (home.includes(forbidden)) throw new Error(`conteudo interno/placeholder encontrado na Home: ${forbidden}`);
+  if (home.includes(forbidden)) throw new Error(`conteúdo interno/placeholder encontrado na Home: ${forbidden}`);
 }
 
-const productCards = home.match(/class="product-card"/g)?.length || 0;
-if (productCards < 6) throw new Error(`Home precisa exibir pelo menos 6 cards, encontrou ${productCards}`);
-if ((home.match(/class="hero-product/g)?.length || 0) < 3) throw new Error("Hero precisa usar imagens reais de produtos");
-if ((home.match(/<picture class="product-picture"/g)?.length || 0) < productCards) throw new Error("Cards precisam renderizar <picture>");
-
 const catalog = readFileSync("dist/produtos/index.html", "utf8");
-if (catalog.includes("image-filter") || catalog.includes('name="imagem"')) throw new Error("catalogo contem filtro interno de imagem");
-if (!catalog.includes("price-filter")) throw new Error("catalogo sem filtro publico de preco");
-if (!catalog.includes('<source srcset="/omegaimports-catalogo/products/')) throw new Error("catalogo sem imagens locais otimizadas");
+if (catalog.includes("image-filter") || catalog.includes('name="imagem"')) throw new Error("catálogo contém filtro interno de imagem");
+if (!catalog.includes("price-filter")) throw new Error("catálogo sem filtro público de preço");
+if (!catalog.includes('<source srcset="/omegaimports-catalogo/products/')) throw new Error("catálogo sem imagens locais otimizadas");
+
+const blog = readFileSync("dist/blog/index.html", "utf8");
+if ((blog.match(/class="article-card/g)?.length || 0) < 10) throw new Error("Blog precisa listar artigos editoriais");
+const articleFile = htmlFiles("dist/blog").find((file) => slash(file) !== "dist/blog/index.html");
+if (!articleFile) throw new Error("Nenhum artigo do Blog foi gerado");
+const article = readFileSync(articleFile, "utf8");
+for (const expected of ["Sumário", "Referências técnicas", "Produtos relacionados"]) {
+  if (!article.includes(expected)) throw new Error(`Artigo sem seção obrigatória: ${expected}`);
+}
+if (!article.includes("BlogPosting")) throw new Error("Artigo sem schema BlogPosting");
+
+const productFile = htmlFiles("dist/produtos").find((file) => slash(file) !== "dist/produtos/index.html");
+if (!productFile) throw new Error("Nenhuma página de produto foi gerada");
+const product = readFileSync(productFile, "utf8");
+if (!product.includes("Conteúdo relacionado")) throw new Error("Produto sem artigos relacionados");
+if (/\(\s*MLB\d+\s*\)/.test(product)) throw new Error("Alt text ou conteúdo público expõe MLB de forma excessiva");
 
 const brokenLinks = [];
 for (const file of htmlFiles("dist")) {
@@ -56,7 +82,7 @@ for (const file of htmlFiles("dist")) {
 }
 if (brokenLinks.length) throw new Error(`links internos quebrados:\n${brokenLinks.join("\n")}`);
 
-console.log("Teste E2E estatico concluido.");
+console.log("Teste E2E estático v5 concluído.");
 
 function htmlFiles(dir) {
   const files = [];
@@ -67,4 +93,8 @@ function htmlFiles(dir) {
     else if (extname(path) === ".html") files.push(path);
   }
   return files;
+}
+
+function slash(path) {
+  return path.replaceAll("\\", "/");
 }
