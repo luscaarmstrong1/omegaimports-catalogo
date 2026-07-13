@@ -1,17 +1,19 @@
 {
-  "generatedAt": "2026-07-11T03:04:27.254Z",
-  "total": 47,
-  "published": 0,
-  "hiddenOrPending": 47,
-  "verifiedImages": 0,
-  "pendingImages": 47,
+  "generatedAt": "2026-07-13T17:00:18.855Z",
+  "total": 64,
+  "published": 41,
+  "hiddenOrPending": 23,
+  "verifiedImages": 57,
+  "pendingImages": 7,
   "issues": [
+    "MLB3963871285 Modulo Rele 1 Canal Led Indicador Para Arduino Pi Pic 5v/10a: condição novo contradita por título/descrição",
+    "MLB5375724278 Kit 5x Módulos Esp32 Ttgo T-call Sim800l + Antena (novo): condição usado contradita por título/descrição",
+    "MLB5375622238 Kit 20x Módulos Esp32 Ttgo T-call Sim800l + Antena (novo): condição usado contradita por título/descrição",
     "MLB4417997973 Kit 2x Módulos Esp32 Ttgo T-call Sim800l + Antena (novo): possível divergência de quantidade (2 x texto 5)",
     "MLB4417997973 Kit 2x Módulos Esp32 Ttgo T-call Sim800l + Antena (novo): condição usado contradita por título/descrição",
     "MLB4417997973 Kit 2x Módulos Esp32 Ttgo T-call Sim800l + Antena (novo): divergência conhecida de condição/quantidade exige revisão manual",
-    "MLB5375622238 Kit 20x Módulos Esp32 Ttgo T-call Sim800l + Antena (novo): condição usado contradita por título/descrição",
     "MLB5375698778 Kit 10x Módulos Esp32 Ttgo T-call Sim800l + Antena (novo): condição usado contradita por título/descrição",
-    "MLB5375724278 Kit 5x Módulos Esp32 Ttgo T-call Sim800l + Antena (novo): condição usado contradita por título/descrição"
+    "MLB7141642274 Bateria Para Notebook Acer Aspire Ap18c8k 4471 Mah Original Preto: condição usado contradita por título/descrição"
   ],
   "critical": []
 }
