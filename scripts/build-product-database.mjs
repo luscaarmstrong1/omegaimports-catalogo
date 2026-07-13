@@ -1,4 +1,4 @@
-import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { normalizeText } from "./shared.mjs";
 
 const now = new Date().toISOString();
@@ -95,6 +95,23 @@ function badSpecification(spec) {
   );
 }
 
+function verifiedImageFor(product) {
+  if (!product.mlbId) return null;
+  const base = `public/products/${product.mlbId}`;
+  const manifestPath = `${base}/manifest.json`;
+  const webpPath = `${base}/optimized/main.webp`;
+  if (!existsSync(manifestPath) || !existsSync(webpPath)) return null;
+  try {
+    const manifest = JSON.parse(readFileSync(manifestPath, "utf8"));
+    if (manifest.validationStatus !== "verified") return null;
+    if (manifest.mlbId !== product.mlbId) return null;
+    if (manifest.itemUrl && product.marketplaceUrl && manifest.itemUrl !== product.marketplaceUrl) return null;
+    return `/products/${product.mlbId}/optimized/main.webp`;
+  } catch {
+    return null;
+  }
+}
+
 function mapProduct(product) {
   const sourceRef = product.mlbId || product.id;
   const title = product.title || product.shortTitle || "";
@@ -106,8 +123,10 @@ function mapProduct(product) {
   const quantityDiverges = Number(product.quantity || 1) !== expectedQuantity;
   const conditionText = normalizeText(fullText);
   const conditionDiverges = (product.condition === "novo" && /\busado\b|\baberto\b/.test(conditionText)) || (product.condition === "usado" && /\bnovo\b|nunca aberto|embalado/.test(conditionText));
+  const verifiedImage = verifiedImageFor(product);
   const hasPlaceholder = !product.image || product.image.includes("product-placeholder");
-  const imageStatus = product.imageStatus === "verified" && !hasPlaceholder ? "verified" : hasPlaceholder ? "missing" : "pending-review";
+  const imageStatus = verifiedImage || (product.imageStatus === "verified" && !hasPlaceholder) ? "verified" : hasPlaceholder ? "missing" : "pending-review";
+  const productImage = verifiedImage || product.image;
   const specificationIssues = (product.specifications || []).filter(badSpecification);
   const blockingIssues = [];
 
@@ -148,12 +167,12 @@ function mapProduct(product) {
     currency: product.currency || "BRL",
     priceLastVerifiedAt: product.priceLastVerifiedAt || null,
     permalink: product.marketplaceUrl || product.storeUrl || "",
-    thumbnail: imageStatus === "verified" ? product.image : null,
+    thumbnail: imageStatus === "verified" ? productImage : null,
     pictures: [],
     imageStatus,
     imageVerifiedAt: imageStatus === "verified" ? product.lastVerifiedAt || now : null,
-    image: imageStatus === "verified" ? product.image : "/assets/product-placeholder.svg",
-    gallery: imageStatus === "verified" ? product.gallery || [] : [],
+    image: imageStatus === "verified" ? productImage : "/assets/product-placeholder.svg",
+    gallery: imageStatus === "verified" ? [productImage, ...(product.gallery || []).filter((image) => image !== productImage)] : [],
     description: product.fullDescription || "",
     shortDescription: product.shortDescription || cleanMarketing(fullText) || `Oferta OMEGAIMPORTS para ${title}.`,
     technicalSummary: cleanMarketing(product.shortDescription || product.fullDescription || title),
@@ -177,7 +196,7 @@ function mapProduct(product) {
         quantity: field(Number(product.quantity || 1), sourceRef, "low"),
         price: field(product.price ?? null, sourceRef, "low"),
         permalink: field(product.marketplaceUrl || "", sourceRef, "low"),
-        image: field(imageStatus === "verified" ? product.image : null, sourceRef, "low"),
+        image: field(imageStatus === "verified" ? productImage : null, sourceRef, verifiedImage ? "high" : "low"),
       },
     },
     fetchedAt: product.lastVerifiedAt ? `${product.lastVerifiedAt}T00:00:00.000Z` : now,

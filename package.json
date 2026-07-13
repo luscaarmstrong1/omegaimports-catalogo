@@ -17,7 +17,7 @@
     "audit:specifications": "node scripts/audit-specifications.mjs",
     "audit:marketplace": "node scripts/audit-marketplace.mjs",
     "lighthouse": "node scripts/lighthouse.mjs",
-    "sync:meli": "node scripts/fetch-meli-snapshot.mjs && node scripts/normalize-meli-products.mjs && node scripts/download-product-images.mjs && node scripts/build-product-families.mjs",
+    "sync:meli": "node scripts/fetch-meli-snapshot.mjs && node scripts/normalize-meli-products.mjs && node scripts/download-product-images.mjs && node scripts/build-product-database.mjs --mode=api --source-file=src/data/products-source.meli.json && node scripts/build-product-families.mjs",
     "sync:meli:offline": "node scripts/build-product-database.mjs --mode=offline",
     "sync:meli:legacy-api": "node scripts/sync-mercadolivre.mjs",
     "sync:meli:refresh-token": "node scripts/refresh-mercadolivre-token.mjs",

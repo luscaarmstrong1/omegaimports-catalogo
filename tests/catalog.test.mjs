@@ -1,13 +1,18 @@
 import assert from "node:assert/strict";
+import { existsSync, readFileSync } from "node:fs";
 import test from "node:test";
 import { categories, loadProducts } from "../scripts/shared.mjs";
 import { validateProducts } from "../scripts/products-utils.mjs";
 
 const products = loadProducts({ all: true });
 const publicProducts = loadProducts();
+const sourceProducts = existsSync("src/data/products-source.meli.json")
+  ? JSON.parse(readFileSync("src/data/products-source.meli.json", "utf8"))
+  : null;
 
 test("keeps all imported Mercado Livre products with MLB IDs", () => {
-  assert.equal(products.length, 47);
+  if (sourceProducts) assert.equal(products.length, sourceProducts.length);
+  else assert.ok(products.length >= 47);
   for (const product of products) assert.match(product.mlbId, /^MLB\d+$/);
 });
 
