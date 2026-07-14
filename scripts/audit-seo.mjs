@@ -3,6 +3,7 @@ import { extname, join } from "node:path";
 
 const failures = [];
 const rows = [["file", "title", "description", "canonical", "jsonLdCount", "issue"].join(",")];
+const expectedCanonicalBase = "https://omegaimports-catalogo.site/";
 mkdirSync("reports", { recursive: true });
 
 for (const file of htmlFiles("dist")) {
@@ -14,7 +15,7 @@ for (const file of htmlFiles("dist")) {
   const issues = [];
   if (!title || title.length < 18 || title.length > 90) issues.push("invalid-title");
   if (!description || description.length < 50 || description.length > 180) issues.push("invalid-description");
-  if (!canonical || !canonical.startsWith("https://luscaarmstrong1.github.io/omegaimports-catalogo/")) issues.push("invalid-canonical");
+  if (!canonical || !canonical.startsWith(expectedCanonicalBase)) issues.push("invalid-canonical");
   if (!html.includes('property="og:title"')) issues.push("missing-og-title");
   if (!html.includes('name="twitter:card"')) issues.push("missing-twitter-card");
   if (jsonLdCount < 2) issues.push("missing-json-ld");

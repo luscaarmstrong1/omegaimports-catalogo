@@ -49,6 +49,7 @@ function copyAssets() {
   cpSync(new URL("../public/blog/", import.meta.url), new URL("blog/", dist), { recursive: true });
   cpSync(new URL("../public/assets/", import.meta.url), new URL("assets/", dist), { recursive: true });
   cpSync(new URL("../public/products/", import.meta.url), new URL("products/", dist), { recursive: true });
+  cpSync(new URL("../public/manifest.webmanifest", import.meta.url), new URL("manifest.webmanifest", dist));
 }
 
 function section({ eyebrow, title, description = "", action = "", content, className = "section" }) {
@@ -366,6 +367,7 @@ function supportFiles() {
   const urls = ["", "produtos/", "categorias/", "blog/", "sobre/", "como-comprar/", "politica-de-privacidade/", "termos-de-uso/", ...published.map((p) => `produtos/${p.slug}/`), ...visibleCategories.map((c) => `categorias/${c.slug}/`), ...blogPosts.map((post) => `blog/${post.slug}/`)];
   out("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((url) => `  <url><loc>${absolute(url)}</loc></url>`).join("\n")}\n</urlset>`);
   out("robots.txt", `User-agent: *\nAllow: /\nSitemap: ${absolute("sitemap.xml")}\n`);
+  out("CNAME", "omegaimports-catalogo.site\n");
   out("404.html", pageShell({ title: "Página não encontrada", description: "Página não encontrada.", path: "404.html", body: `<section class="page-hero"><h1>Página não encontrada</h1><p>O endereço pode ter mudado.</p><a class="secondary-action" href="${pageUrl("produtos/")}">Ver produtos ${icon("arrow-right", "btn-icon")}</a></section>` }));
 }
 

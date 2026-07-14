@@ -6,9 +6,9 @@ export const site = {
   name: "OMEGAIMPORTS",
   founded: "23 de dezembro de 2024",
   tagline: "Componentes eletrônicos, IoT e automação com curadoria técnica.",
-  site: "https://luscaarmstrong1.github.io",
-  base: "/omegaimports-catalogo",
-  productionUrl: "https://luscaarmstrong1.github.io/omegaimports-catalogo/",
+  site: "https://omegaimports-catalogo.site",
+  base: "",
+  productionUrl: "https://omegaimports-catalogo.site/",
   marketplaceUrl: "https://www.mercadolivre.com.br/pagina/omegaimports",
   whatsappNumber: "+55 35 99952-8858",
   whatsappUrl: "https://wa.me/5535999528858?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20OMEGAIMPORTS%20e%20gostaria%20de%20ajuda%20para%20escolher%20um%20produto.",
@@ -213,6 +213,7 @@ export function pageShell({ title, description, path = "", body, extraHead = "",
   <link rel="icon" href="${assetUrl("brand/favicon.svg")}" type="image/svg+xml">
   <link rel="icon" href="${assetUrl("brand/favicon-32.png")}" sizes="32x32">
   <link rel="apple-touch-icon" href="${assetUrl("brand/apple-touch-icon.png")}">
+  <link rel="manifest" href="${assetUrl("manifest.webmanifest")}">
   <link rel="stylesheet" href="${assetUrl("assets/site.css")}">
   <script defer src="${assetUrl("assets/site.js")}"></script>
   <script type="application/ld+json">${JSON.stringify({
