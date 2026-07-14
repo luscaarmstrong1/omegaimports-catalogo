@@ -11,4 +11,4 @@ createServer((req, res) => {
   if (!existsSync(file)) file = "dist/404.html";
   res.setHeader("content-type", types[extname(file)] || "application/octet-stream");
   res.end(readFileSync(file));
-}).listen(4173, () => console.log("Preview: http://localhost:4173/"));
+}).listen(4173, () => console.log("Preview: http://localhost:4173/omegaimports-catalogo/"));

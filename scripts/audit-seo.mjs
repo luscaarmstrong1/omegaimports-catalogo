@@ -3,7 +3,7 @@ import { extname, join } from "node:path";
 
 const failures = [];
 const rows = [["file", "title", "description", "canonical", "jsonLdCount", "issue"].join(",")];
-const expectedCanonicalBase = "https://omegaimports-catalogo.site/";
+const expectedCanonicalBase = "https://luscaarmstrong1.github.io/omegaimports-catalogo/";
 mkdirSync("reports", { recursive: true });
 
 for (const file of htmlFiles("dist")) {

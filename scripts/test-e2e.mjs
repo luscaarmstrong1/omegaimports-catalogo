@@ -18,14 +18,14 @@ for (const file of required) {
 }
 
 const home = readFileSync("dist/index.html", "utf8");
-if (!home.includes("/assets/site.css")) throw new Error("base path do CSS ausente");
-if (!home.includes("logo-horizontal-light.webp")) throw new Error("logo clara ausente na Home");
+if (!home.includes("/omegaimports-catalogo/assets/site.css")) throw new Error("base path do CSS ausente");
+if (!home.includes("logo-horizontal.webp")) throw new Error("logo oficial ausente na Home");
 if (!home.includes("A peça certa para o seu projeto avançar.")) throw new Error("Hero v6 ausente");
 if ((home.match(/class="orbit-product(?:\s|")/g)?.length || 0) !== 3) throw new Error("Hero precisa usar um produto principal e dois secundários");
 if ((home.match(/class="category-card/g)?.length || 0) !== 6) throw new Error("Home precisa exibir exatamente 6 categorias");
 if ((home.match(/class="product-card/g)?.length || 0) !== 8) throw new Error("Home precisa exibir exatamente 8 produtos");
 if ((home.match(/class="article-card(?:\s|")/g)?.length || 0) !== 3) throw new Error("Home precisa exibir exatamente 3 artigos");
-if (!home.includes("/blog/")) throw new Error("Blog não aparece na Home");
+if (!home.includes("/omegaimports-catalogo/blog/")) throw new Error("Blog não aparece na Home");
 if (!home.includes("wa.me/5535999528858")) throw new Error("WhatsApp oficial não aparece na Home");
 
 const header = home.match(/<header class="site-header">([\s\S]*?)<\/header>/)?.[1] || "";
@@ -59,7 +59,7 @@ for (const forbidden of [
 const catalog = readFileSync("dist/produtos/index.html", "utf8");
 if (catalog.includes("image-filter") || catalog.includes('name="imagem"')) throw new Error("catálogo contém filtro interno de imagem");
 if (!catalog.includes("price-filter")) throw new Error("catálogo sem filtro público de preço");
-if (!catalog.includes('<source srcset="/products/')) throw new Error("catálogo sem imagens locais otimizadas");
+if (!catalog.includes('<source srcset="/omegaimports-catalogo/products/')) throw new Error("catálogo sem imagens locais otimizadas");
 
 const blog = readFileSync("dist/blog/index.html", "utf8");
 if ((blog.match(/class="article-card/g)?.length || 0) < 15) throw new Error("Blog precisa listar 15 artigos editoriais");
@@ -84,10 +84,9 @@ const brokenLinks = [];
 for (const file of htmlFiles("dist")) {
   const html = readFileSync(file, "utf8");
   for (const [, href] of html.matchAll(/href="([^"]+)"/g)) {
-    if (!href.startsWith("/")) continue;
-    if (href.startsWith("//")) continue;
+    if (!href.startsWith("/omegaimports-catalogo/")) continue;
     if (href.includes("/assets/") || href.includes("/brand/") || href.includes("/products/")) continue;
-    const clean = href.replace(/^\//, "").split(/[?#]/)[0];
+    const clean = href.replace("/omegaimports-catalogo/", "").split(/[?#]/)[0];
     const target = clean.endsWith("/") || clean === "" ? join("dist", clean, "index.html") : join("dist", clean);
     if (!existsSync(target)) brokenLinks.push(`${file} -> ${href}`);
   }
