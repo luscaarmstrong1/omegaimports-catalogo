@@ -93,7 +93,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           if git diff --quiet; then
-            echo "Sem alterações para PR."
+            echo "Sem alteracoes para PR."
             exit 0
           fi
           branch="chore/sync-mercadolivre-${{ github.run_id }}"
@@ -103,4 +103,7 @@ jobs:
           git add src/data public/products reports || true
           git commit -m "chore: sync Mercado Livre catalog"
           git push origin "$branch"
-          gh pr create --base main --head "$branch" --title "chore: sync Mercado Livre catalog" --body "Sincronização via snapshot sanitizado do serviço privado. Não mesclar quando houver divergências críticas nos relatórios."
+          if ! gh pr create --base main --head "$branch" --title "chore: sync Mercado Livre catalog" --body "Sincronizacao via snapshot sanitizado do servico privado. Nao mesclar quando houver divergencias criticas nos relatorios."; then
+            echo "GitHub Actions nao pode criar PR neste repositorio. Branch publicado: $branch"
+            echo "Abra manualmente: https://github.com/${{ github.repository }}/pull/new/$branch"
+          fi
