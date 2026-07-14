@@ -165,6 +165,7 @@ export function icon(name, className = "icon") {
     package: '<path d="m7.5 4.3 9 5.2"/><path d="M21 8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.7Z"/><path d="M3.3 7 12 12l8.7-5"/><path d="M12 22V12"/>',
     book: '<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M4 4v15.5A2.5 2.5 0 0 1 6.5 17H20V4Z"/>',
     menu: '<path d="M4 6h16M4 12h16M4 18h16"/>',
+    sliders: '<path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3"/><path d="M2 14h4M10 8h4M18 16h4"/>',
     x: '<path d="M18 6 6 18M6 6l12 12"/>',
   };
   return `<svg class="${className}" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">${paths[name] || paths.cpu}</svg>`;
@@ -198,6 +199,14 @@ export function pageShell({ title, description, path = "", body, extraHead = "",
       <label class="sr-only" for="site-search">Buscar no catálogo</label>
       <input id="site-search" name="q" type="search" placeholder="Buscar componente..." autocomplete="off">
     </form>`;
+  const mobileSearch = `<div class="mobile-search-panel" id="mobile-search-panel" hidden>
+    <form action="${pageUrl("produtos/")}" role="search">
+      ${icon("search", "search-icon")}
+      <label class="sr-only" for="mobile-site-search">Buscar no catálogo</label>
+      <input id="mobile-site-search" name="q" type="search" placeholder="Buscar componente..." autocomplete="off">
+      <button class="mobile-search-close" type="button" aria-label="Fechar busca">${icon("x", "btn-icon")}</button>
+    </form>
+  </div>`;
   return `<!doctype html>
 <html lang="pt-BR">
 <head>
@@ -255,41 +264,51 @@ export function pageShell({ title, description, path = "", body, extraHead = "",
       <a href="${navUrl("sobre/")}">Sobre</a>
     </nav>
     <a class="header-cta marketplace-link" href="${site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored">Loja no Mercado Livre ${icon("external", "btn-icon")}</a>
+    <button class="search-toggle" type="button" aria-controls="mobile-search-panel" aria-expanded="false" aria-label="Abrir busca">${icon("search", "btn-icon")}</button>
     <button class="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menu">${icon("menu", "btn-icon")}</button>
   </header>
-  <div class="mobile-menu" id="mobile-menu" hidden>
-    <a href="${pageUrl("produtos/")}">Produtos</a>
-    <a href="${navUrl("categorias/")}">Categorias</a>
-    <a href="${navUrl("blog/")}">Blog</a>
-    <a href="${navUrl("sobre/")}">Sobre</a>
-    <a class="whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">WhatsApp ${icon("message", "btn-icon")}</a>
-    <a class="marketplace-link" href="${site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored">Loja no Mercado Livre ${icon("external", "btn-icon")}</a>
-  </div>
+  ${mobileSearch}
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay" hidden></div>
+  <aside class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu principal" hidden>
+    <div class="mobile-menu-head">
+      <span class="mobile-menu-title">OMEGAIMPORTS</span>
+      <button class="mobile-menu-close" type="button" aria-label="Fechar menu">${icon("x", "btn-icon")}</button>
+    </div>
+    <nav aria-label="Menu móvel">
+      <a href="${pageUrl("produtos/")}">Produtos</a>
+      <a href="${navUrl("categorias/")}">Categorias</a>
+      <a href="${navUrl("blog/")}">Blog</a>
+      <a href="${navUrl("sobre/")}">Sobre</a>
+      <a class="whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">WhatsApp ${icon("message", "btn-icon")}</a>
+      <a class="marketplace-link" href="${site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored">Loja no Mercado Livre ${icon("external", "btn-icon")}</a>
+    </nav>
+  </aside>
   <main id="conteudo">${body}</main>
+  <a class="whatsapp-float whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer" aria-label="Chamar OMEGAIMPORTS no WhatsApp">${icon("message", "btn-icon")}</a>
   <footer class="footer">
     <div>
       <span class="footer-brand"><img src="${assetUrl("brand/logo-horizontal.webp")}" width="210" height="58" alt="OMEGAIMPORTS"></span>
       <p>Componentes eletrônicos, IoT, automação e bancada organizados para compra técnica.</p>
     </div>
-    <nav aria-label="Produtos">
-      <strong>Produtos</strong>
+    <details class="footer-group" open>
+      <summary>Produtos</summary>
       <a href="${pageUrl("produtos/")}">Produtos</a>
       <a href="${navUrl("categorias/")}">Categorias</a>
       <a href="${navUrl("blog/")}">Blog</a>
       <a href="${navUrl("sobre/")}">Sobre</a>
-    </nav>
-    <nav aria-label="Atendimento e políticas">
-      <strong>Atendimento</strong>
+    </details>
+    <details class="footer-group" open>
+      <summary>Atendimento</summary>
       <a href="${pageUrl("como-comprar/")}">Como comprar</a>
       <a href="${pageUrl("politica-de-privacidade/")}">Política de privacidade</a>
       <a href="${pageUrl("termos-de-uso/")}">Termos de uso</a>
       <a href="${site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored">Mercado Livre</a>
-    </nav>
-    <nav aria-label="WhatsApp">
-      <strong>WhatsApp</strong>
+    </details>
+    <details class="footer-group" open>
+      <summary>WhatsApp</summary>
       <a class="whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">${site.whatsappNumber}</a>
       <span>Ajuda para identificar o componente adequado.</span>
-    </nav>
+    </details>
     <p class="fine-print">Preços, estoque, frete e condições são confirmados no anúncio oficial do Mercado Livre.</p>
     <p class="copyright">© 2026 OMEGAIMPORTS. Todos os direitos reservados.</p>
   </footer>

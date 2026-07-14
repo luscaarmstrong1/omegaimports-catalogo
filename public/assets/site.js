@@ -1,6 +1,12 @@
 const menuButton = document.querySelector(".menu-toggle");
 const mobileMenu = document.querySelector("#mobile-menu");
+const menuOverlay = document.querySelector("#mobile-menu-overlay");
+const menuCloseButton = document.querySelector(".mobile-menu-close");
+const searchButton = document.querySelector(".search-toggle");
+const mobileSearchPanel = document.querySelector("#mobile-search-panel");
+const mobileSearchClose = document.querySelector(".mobile-search-close");
 let lastFocusedBeforeMenu = null;
+let lastFocusedBeforeSearch = null;
 
 function track(name, payload = {}) {
   window.dataLayer = window.dataLayer || [];
@@ -8,32 +14,77 @@ function track(name, payload = {}) {
   if (typeof window.gtag === "function") window.gtag("event", name, payload);
 }
 
+function setHidden(element, hidden) {
+  if (!element) return;
+  if (hidden) element.setAttribute("hidden", "");
+  else element.removeAttribute("hidden");
+}
+
+function isHidden(element) {
+  return !element || element.hasAttribute("hidden");
+}
+
+function focusFirst(container) {
+  container?.querySelector("button, a, input, select, textarea, [tabindex]:not([tabindex='-1'])")?.focus();
+}
+
+if (searchButton && mobileSearchPanel) {
+  const closeSearch = ({ restoreFocus = true } = {}) => {
+    setHidden(mobileSearchPanel, true);
+    searchButton.setAttribute("aria-expanded", "false");
+    searchButton.setAttribute("aria-label", "Abrir busca");
+    document.body.classList.remove("search-open");
+    if (restoreFocus) lastFocusedBeforeSearch?.focus();
+  };
+  const openSearch = () => {
+    if (mobileMenu && !isHidden(mobileMenu)) menuCloseButton?.click();
+    lastFocusedBeforeSearch = document.activeElement;
+    setHidden(mobileSearchPanel, false);
+    searchButton.setAttribute("aria-expanded", "true");
+    searchButton.setAttribute("aria-label", "Fechar busca");
+    document.body.classList.add("search-open");
+    mobileSearchPanel.querySelector("input")?.focus();
+  };
+  searchButton.addEventListener("click", () => {
+    if (isHidden(mobileSearchPanel)) openSearch();
+    else closeSearch();
+  });
+  mobileSearchClose?.addEventListener("click", () => closeSearch());
+}
+
 if (menuButton && mobileMenu) {
   const closeMenu = () => {
-    mobileMenu.setAttribute("hidden", "");
+    setHidden(mobileMenu, true);
+    setHidden(menuOverlay, true);
     menuButton.setAttribute("aria-expanded", "false");
     menuButton.setAttribute("aria-label", "Abrir menu");
     document.body.classList.remove("menu-open");
     lastFocusedBeforeMenu?.focus();
   };
   const openMenu = () => {
+    if (mobileSearchPanel && !isHidden(mobileSearchPanel)) mobileSearchClose?.click();
     lastFocusedBeforeMenu = document.activeElement;
-    mobileMenu.removeAttribute("hidden");
+    setHidden(mobileMenu, false);
+    setHidden(menuOverlay, false);
     menuButton.setAttribute("aria-expanded", "true");
     menuButton.setAttribute("aria-label", "Fechar menu");
     document.body.classList.add("menu-open");
-    mobileMenu.querySelector("a")?.focus();
+    focusFirst(mobileMenu);
   };
   menuButton.addEventListener("click", () => {
-    const open = mobileMenu.hasAttribute("hidden");
-    if (open) openMenu();
+    if (isHidden(mobileMenu)) openMenu();
     else closeMenu();
   });
+  menuOverlay?.addEventListener("click", closeMenu);
+  menuCloseButton?.addEventListener("click", closeMenu);
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && !mobileMenu.hasAttribute("hidden")) {
+    if (event.key === "Escape" && !isHidden(mobileMenu)) {
       closeMenu();
     }
-    if (event.key === "Tab" && !mobileMenu.hasAttribute("hidden")) {
+    if (event.key === "Escape" && !isHidden(mobileSearchPanel)) {
+      mobileSearchClose?.click();
+    }
+    if (event.key === "Tab" && !isHidden(mobileMenu)) {
       const focusable = [...mobileMenu.querySelectorAll("a, button")];
       if (!focusable.length) return;
       const first = focusable[0];
@@ -48,7 +99,7 @@ if (menuButton && mobileMenu) {
     }
   });
   mobileMenu.addEventListener("click", (event) => {
-    if (event.target instanceof HTMLAnchorElement) {
+    if (event.target instanceof Element && event.target.closest("a")) {
       closeMenu();
     }
   });
@@ -92,6 +143,11 @@ const packageFilter = document.querySelector("#package-filter");
 const priceFilter = document.querySelector("#price-filter");
 const sortFilter = document.querySelector("#sort-filter");
 const clearButton = document.querySelector("#clear-filters");
+const applyFilterButton = document.querySelector("#apply-filters");
+const filterToggle = document.querySelector(".filter-toggle");
+const filterClose = document.querySelector(".filter-close");
+const filtersPanel = document.querySelector("#catalog-filters");
+const filterScrim = document.querySelector("#filter-scrim");
 const list = document.querySelector("#product-list");
 const empty = document.querySelector("#empty-state");
 const count = document.querySelector("#result-count");
@@ -153,6 +209,13 @@ function applyFilters() {
 
   if (count) count.textContent = String(visible);
   if (empty) empty.hidden = visible !== 0;
+  const activeFilters = [search, category, family, condition, packageFilter, priceFilter].filter((input) => input?.value).length;
+  if (filterToggle) {
+    filterToggle.setAttribute("aria-label", activeFilters ? `Filtrar e ordenar, ${activeFilters} filtros ativos` : "Filtrar e ordenar");
+    const label = activeFilters ? `Filtrar (${activeFilters})` : "Filtrar e ordenar";
+    const icon = filterToggle.querySelector("svg")?.outerHTML || "";
+    filterToggle.innerHTML = `${icon} ${label}`;
+  }
 
   const params = new URLSearchParams(location.search);
   setParam(params, "q", search?.value || "");
@@ -166,9 +229,35 @@ function applyFilters() {
   track("catalog_filter_used", { query: search?.value || "", results: visible });
 }
 
+function closeFilters() {
+  filtersPanel?.classList.remove("is-open");
+  filterToggle?.setAttribute("aria-expanded", "false");
+  setHidden(filterScrim, true);
+  document.body.classList.remove("filters-open");
+  filterToggle?.focus();
+}
+
+function openFilters() {
+  filtersPanel?.classList.add("is-open");
+  filterToggle?.setAttribute("aria-expanded", "true");
+  setHidden(filterScrim, false);
+  document.body.classList.add("filters-open");
+  focusFirst(filtersPanel);
+}
+
 if (list) {
   syncFromUrl();
   [search, category, family, condition, packageFilter, priceFilter, sortFilter].forEach((input) => input?.addEventListener("input", applyFilters));
+  filterToggle?.addEventListener("click", () => {
+    if (filtersPanel?.classList.contains("is-open")) closeFilters();
+    else openFilters();
+  });
+  filterClose?.addEventListener("click", closeFilters);
+  filterScrim?.addEventListener("click", closeFilters);
+  applyFilterButton?.addEventListener("click", closeFilters);
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && filtersPanel?.classList.contains("is-open")) closeFilters();
+  });
   clearButton?.addEventListener("click", () => {
     [search, category, family, condition, packageFilter, priceFilter].forEach((input) => {
       if (input) input.value = "";
