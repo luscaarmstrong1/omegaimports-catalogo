@@ -6,9 +6,9 @@ export const site = {
   name: "OMEGAIMPORTS",
   founded: "23 de dezembro de 2024",
   tagline: "Componentes eletrônicos, IoT e automação com curadoria técnica.",
-  site: "https://omegaimports-catalogo.site",
-  base: "",
-  productionUrl: "https://omegaimports-catalogo.site/",
+  site: "https://luscaarmstrong1.github.io",
+  base: "/omegaimports-catalogo",
+  productionUrl: "https://luscaarmstrong1.github.io/omegaimports-catalogo/",
   marketplaceUrl: "https://www.mercadolivre.com.br/pagina/omegaimports",
   whatsappNumber: "+55 35 99952-8858",
   whatsappUrl: "https://wa.me/5535999528858?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20OMEGAIMPORTS%20e%20gostaria%20de%20ajuda%20para%20escolher%20um%20produto.",
@@ -240,7 +240,7 @@ export function pageShell({ title, description, path = "", body, extraHead = "",
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
   <div class="topbar">Compra protegida e finalização pelo Mercado Livre</div>
   <header class="site-header">
-    <a class="brand" href="${pageUrl()}"><img src="${assetUrl("brand/logo-horizontal-light.webp")}" width="250" height="62" alt="OMEGAIMPORTS"></a>
+    <a class="brand" href="${pageUrl()}"><img src="${assetUrl("brand/logo-horizontal.webp")}" width="250" height="66" alt="OMEGAIMPORTS"></a>
     ${headerSearch}
     <nav class="main-nav" aria-label="Principal">
       <a href="${pageUrl("produtos/")}">Produtos</a>
@@ -262,7 +262,7 @@ export function pageShell({ title, description, path = "", body, extraHead = "",
   <main id="conteudo">${body}</main>
   <footer class="footer">
     <div>
-      <img src="${assetUrl("brand/logo-horizontal-light.webp")}" width="220" height="62" alt="OMEGAIMPORTS">
+      <img src="${assetUrl("brand/logo-horizontal.webp")}" width="220" height="58" alt="OMEGAIMPORTS">
       <p>Componentes eletrônicos, IoT, automação e bancada organizados para compra técnica.</p>
     </div>
     <nav aria-label="Produtos">

@@ -39,7 +39,7 @@ for (const page of ["dist/index.html", "dist/produtos/index.html"]) {
     if (html.includes(forbidden)) failures.push(`${page}: forbidden-${forbidden}`);
   }
   if (!html.includes("<picture")) failures.push(`${page}: missing-picture`);
-  if (!html.includes("/products/")) failures.push(`${page}: missing-product-base-url`);
+  if (!html.includes("/omegaimports-catalogo/products/")) failures.push(`${page}: missing-product-base-url`);
 }
 
 writeFileSync("reports/dist-image-audit.csv", `${rows.join("\n")}\n`, "utf8");
