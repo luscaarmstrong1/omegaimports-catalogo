@@ -408,18 +408,22 @@ dd { margin: 0; font-weight: 750; }
 .blog-result-count, .blog-empty-state { max-width: var(--max); margin-inline: auto; }
 .blog-result-count { padding: 0 max(24px, calc((100vw - var(--max)) / 2)); }
 .blog-empty-state { margin-bottom: 72px; padding: 28px; }
-.article { max-width: 1120px; margin-inline: auto; }
-.article-detail { display: grid; gap: 34px; }
+.article { width: 100%; max-width: none; margin-inline: auto; padding-inline: max(24px, calc((100vw - 1360px) / 2)); }
+.article-detail { display: grid; gap: 38px; }
 .article-header h1 { font-size: clamp(2.5rem, 5vw, 4.6rem); }
-.article-header > p { max-width: 82ch; color: var(--text-500); font-size: 20px; }
+.article-header { max-width: 1120px; }
+.article-header > p { max-width: 92ch; color: var(--text-500); font-size: 20px; }
 .article-meta { display: flex; flex-wrap: wrap; gap: 10px; color: var(--text-500); font-size: 14px; }
 .article-hero-cover { display: block; overflow: hidden; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); aspect-ratio: 16 / 9; background: var(--navy-850); }
 .article-hero-cover img { width: 100%; height: 100%; object-fit: cover; }
-.toc { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 18px; border: 1px solid var(--border); border-radius: var(--radius-lg); background: white; padding: 22px; }
+.toc { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px 18px; border: 1px solid var(--border); border-radius: var(--radius-lg); background: white; padding: 22px; }
 .toc strong { grid-column: 1 / -1; }
 .toc a { color: var(--blue-600); font-weight: 700; }
+.article-section-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px 44px; align-items: start; }
+.article-section { min-width: 0; }
+.article-section--wide { grid-column: 1 / -1; max-width: 98ch; }
 .article h2 { margin-top: 12px; font-size: clamp(30px, 3vw, 38px); }
-.article p, .article li { color: var(--text-700); font-size: 18px; line-height: 1.82; }
+.article p, .article li { color: var(--text-700); font-size: 18px; line-height: 1.78; }
 .article-whatsapp { border: 1px solid var(--border); border-radius: var(--radius-lg); background: white; padding: 24px; }
 
 .whatsapp-band { display: grid; grid-template-columns: auto 1fr auto; gap: 22px; align-items: center; padding: 48px max(24px, calc((100vw - var(--max)) / 2)); background: white; border-top: 1px solid var(--border); }
@@ -455,6 +459,9 @@ dd { margin: 0; font-weight: 750; }
   .trust-grid, .switch-grid, .catalog-layout, .product-detail, .detail-grid, .footer, .whatsapp-band { grid-template-columns: 1fr; }
   .filters { position: static; }
   .article-grid, .article-grid--compact { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .toc { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .article-section-grid { grid-template-columns: 1fr; }
+  .article-section--wide { max-width: none; }
   .section-heading { display: block; }
 }
 
