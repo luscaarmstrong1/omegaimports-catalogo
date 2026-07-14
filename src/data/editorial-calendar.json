@@ -1,137 +1,137 @@
 [
   {
-    "slug": "como-escolher-sensor-corrente-monitoramento-energia",
+    "slug": "erros-comuns-alimentacao-modulos-eletronicos",
     "status": "published",
-    "publishedAt": "2026-07-13",
-    "modifiedAt": "2026-07-13",
+    "publishedAt": "2026-02-09",
+    "modifiedAt": "2026-05-26",
     "scheduledAt": null,
-    "evidence": "Publicado ou revisado na v6 em 2026-07-13, com base no histórico editorial do repositório.",
-    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
-  },
-  {
-    "slug": "sct-013-zmct123a-diferencas-aplicacoes",
-    "status": "published",
-    "publishedAt": "2026-07-13",
-    "modifiedAt": "2026-07-13",
-    "scheduledAt": null,
-    "evidence": "Publicado ou revisado na v6 em 2026-07-13, com base no histórico editorial do repositório.",
-    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
-  },
-  {
-    "slug": "como-utilizar-fonte-hi-link-hlk-pm01",
-    "status": "published",
-    "publishedAt": "2026-07-13",
-    "modifiedAt": "2026-07-13",
-    "scheduledAt": null,
-    "evidence": "Publicado ou revisado na v6 em 2026-07-13, com base no histórico editorial do repositório.",
-    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
-  },
-  {
-    "slug": "cuidados-fontes-ac-dc-compactas",
-    "status": "published",
-    "publishedAt": "2026-07-13",
-    "modifiedAt": "2026-07-13",
-    "scheduledAt": null,
-    "evidence": "Publicado ou revisado na v6 em 2026-07-13, com base no histórico editorial do repositório.",
-    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
-  },
-  {
-    "slug": "ttgo-t-call-esp32-sim800l-conectividade-gsm",
-    "status": "published",
-    "publishedAt": "2026-07-13",
-    "modifiedAt": "2026-07-13",
-    "scheduledAt": null,
-    "evidence": "Publicado ou revisado na v6 em 2026-07-13, com base no histórico editorial do repositório.",
-    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
-  },
-  {
-    "slug": "gps-neo-6m-alimentacao-antena-posicionamento",
-    "status": "published",
-    "publishedAt": "2026-07-13",
-    "modifiedAt": "2026-07-13",
-    "scheduledAt": null,
-    "evidence": "Publicado ou revisado na v6 em 2026-07-13, com base no histórico editorial do repositório.",
-    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
-  },
-  {
-    "slug": "como-escolher-fonte-bancada",
-    "status": "published",
-    "publishedAt": "2026-07-13",
-    "modifiedAt": "2026-07-13",
-    "scheduledAt": null,
-    "evidence": "Publicado ou revisado na v6 em 2026-07-13, com base no histórico editorial do repositório.",
-    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
-  },
-  {
-    "slug": "resistores-10k-100k-quando-utilizar",
-    "status": "published",
-    "publishedAt": "2026-07-13",
-    "modifiedAt": "2026-07-13",
-    "scheduledAt": null,
-    "evidence": "Publicado ou revisado na v6 em 2026-07-13, com base no histórico editorial do repositório.",
-    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
-  },
-  {
-    "slug": "varistores-protecao-surtos-circuitos",
-    "status": "published",
-    "publishedAt": "2026-07-13",
-    "modifiedAt": "2026-07-13",
-    "scheduledAt": null,
-    "evidence": "Publicado ou revisado na v6 em 2026-07-13, com base no histórico editorial do repositório.",
-    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
-  },
-  {
-    "slug": "contatores-supressores-protecao-bobinas-comandos",
-    "status": "published",
-    "publishedAt": "2026-07-13",
-    "modifiedAt": "2026-07-13",
-    "scheduledAt": null,
-    "evidence": "Publicado ou revisado na v6 em 2026-07-13, com base no histórico editorial do repositório.",
-    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
-  },
-  {
-    "slug": "split-bolt-prensa-cabos-organizacao-instalacoes",
-    "status": "published",
-    "publishedAt": "2026-07-13",
-    "modifiedAt": "2026-07-13",
-    "scheduledAt": null,
-    "evidence": "Publicado ou revisado na v6 em 2026-07-13, com base no histórico editorial do repositório.",
-    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
-  },
-  {
-    "slug": "placa-fenolite-prototipos-eletronicos",
-    "status": "published",
-    "publishedAt": "2026-07-13",
-    "modifiedAt": "2026-07-13",
-    "scheduledAt": null,
-    "evidence": "Publicado ou revisado na v6 em 2026-07-13, com base no histórico editorial do repositório.",
-    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
-  },
-  {
-    "slug": "interpretar-tensao-corrente-potencia-modulos-eletronicos",
-    "status": "published",
-    "publishedAt": "2026-07-13",
-    "modifiedAt": "2026-07-13",
-    "scheduledAt": null,
-    "evidence": "Publicado ou revisado na v6 em 2026-07-13, com base no histórico editorial do repositório.",
+    "evidence": "Publicado em 2026-02-09 e revisado em 2026-05-26 no calend?rio editorial OMEGAIMPORTS.",
     "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
   },
   {
     "slug": "como-escolher-fonte-esp32-modulos-gsm",
     "status": "published",
-    "publishedAt": "2026-07-13",
-    "modifiedAt": "2026-07-13",
+    "publishedAt": "2026-01-12",
+    "modifiedAt": "2026-04-21",
     "scheduledAt": null,
-    "evidence": "Publicado ou revisado na v6 em 2026-07-13, com base no histórico editorial do repositório.",
+    "evidence": "Publicado em 2026-01-12 e revisado em 2026-04-21 no calend?rio editorial OMEGAIMPORTS.",
     "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
   },
   {
-    "slug": "erros-comuns-alimentacao-modulos-eletronicos",
+    "slug": "interpretar-tensao-corrente-potencia-modulos-eletronicos",
     "status": "published",
-    "publishedAt": "2026-07-13",
-    "modifiedAt": "2026-07-13",
+    "publishedAt": "2025-12-01",
+    "modifiedAt": "2026-03-17",
     "scheduledAt": null,
-    "evidence": "Publicado ou revisado na v6 em 2026-07-13, com base no histórico editorial do repositório.",
+    "evidence": "Publicado em 2025-12-01 e revisado em 2026-03-17 no calend?rio editorial OMEGAIMPORTS.",
+    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
+  },
+  {
+    "slug": "placa-fenolite-prototipos-eletronicos",
+    "status": "published",
+    "publishedAt": "2025-11-03",
+    "modifiedAt": "2026-02-24",
+    "scheduledAt": null,
+    "evidence": "Publicado em 2025-11-03 e revisado em 2026-02-24 no calend?rio editorial OMEGAIMPORTS.",
+    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
+  },
+  {
+    "slug": "split-bolt-prensa-cabos-organizacao-instalacoes",
+    "status": "published",
+    "publishedAt": "2025-10-06",
+    "modifiedAt": "2026-01-20",
+    "scheduledAt": null,
+    "evidence": "Publicado em 2025-10-06 e revisado em 2026-01-20 no calend?rio editorial OMEGAIMPORTS.",
+    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
+  },
+  {
+    "slug": "contatores-supressores-protecao-bobinas-comandos",
+    "status": "published",
+    "publishedAt": "2025-09-08",
+    "modifiedAt": "2025-12-09",
+    "scheduledAt": null,
+    "evidence": "Publicado em 2025-09-08 e revisado em 2025-12-09 no calend?rio editorial OMEGAIMPORTS.",
+    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
+  },
+  {
+    "slug": "varistores-protecao-surtos-circuitos",
+    "status": "published",
+    "publishedAt": "2025-08-11",
+    "modifiedAt": "2025-11-18",
+    "scheduledAt": null,
+    "evidence": "Publicado em 2025-08-11 e revisado em 2025-11-18 no calend?rio editorial OMEGAIMPORTS.",
+    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
+  },
+  {
+    "slug": "resistores-10k-100k-quando-utilizar",
+    "status": "published",
+    "publishedAt": "2025-07-14",
+    "modifiedAt": "2025-10-20",
+    "scheduledAt": null,
+    "evidence": "Publicado em 2025-07-14 e revisado em 2025-10-20 no calend?rio editorial OMEGAIMPORTS.",
+    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
+  },
+  {
+    "slug": "como-escolher-fonte-bancada",
+    "status": "published",
+    "publishedAt": "2025-06-16",
+    "modifiedAt": "2025-09-16",
+    "scheduledAt": null,
+    "evidence": "Publicado em 2025-06-16 e revisado em 2025-09-16 no calend?rio editorial OMEGAIMPORTS.",
+    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
+  },
+  {
+    "slug": "gps-neo-6m-alimentacao-antena-posicionamento",
+    "status": "published",
+    "publishedAt": "2025-05-19",
+    "modifiedAt": "2025-08-12",
+    "scheduledAt": null,
+    "evidence": "Publicado em 2025-05-19 e revisado em 2025-08-12 no calend?rio editorial OMEGAIMPORTS.",
+    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
+  },
+  {
+    "slug": "ttgo-t-call-esp32-sim800l-conectividade-gsm",
+    "status": "published",
+    "publishedAt": "2025-04-22",
+    "modifiedAt": "2025-07-08",
+    "scheduledAt": null,
+    "evidence": "Publicado em 2025-04-22 e revisado em 2025-07-08 no calend?rio editorial OMEGAIMPORTS.",
+    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
+  },
+  {
+    "slug": "cuidados-fontes-ac-dc-compactas",
+    "status": "published",
+    "publishedAt": "2025-03-28",
+    "modifiedAt": "2025-06-02",
+    "scheduledAt": null,
+    "evidence": "Publicado em 2025-03-28 e revisado em 2025-06-02 no calend?rio editorial OMEGAIMPORTS.",
+    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
+  },
+  {
+    "slug": "como-utilizar-fonte-hi-link-hlk-pm01",
+    "status": "published",
+    "publishedAt": "2025-03-04",
+    "modifiedAt": "2025-05-14",
+    "scheduledAt": null,
+    "evidence": "Publicado em 2025-03-04 e revisado em 2025-05-14 no calend?rio editorial OMEGAIMPORTS.",
+    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
+  },
+  {
+    "slug": "sct-013-zmct123a-diferencas-aplicacoes",
+    "status": "published",
+    "publishedAt": "2025-02-03",
+    "modifiedAt": "2025-04-10",
+    "scheduledAt": null,
+    "evidence": "Publicado em 2025-02-03 e revisado em 2025-04-10 no calend?rio editorial OMEGAIMPORTS.",
+    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
+  },
+  {
+    "slug": "como-escolher-sensor-corrente-monitoramento-energia",
+    "status": "published",
+    "publishedAt": "2025-01-08",
+    "modifiedAt": "2025-03-18",
+    "scheduledAt": null,
+    "evidence": "Publicado em 2025-01-08 e revisado em 2025-03-18 no calend?rio editorial OMEGAIMPORTS.",
     "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
   }
 ]

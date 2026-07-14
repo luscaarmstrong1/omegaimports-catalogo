@@ -240,7 +240,7 @@ export function pageShell({ title, description, path = "", body, extraHead = "",
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
   <div class="topbar">Compra protegida e finalização pelo Mercado Livre</div>
   <header class="site-header">
-    <a class="brand" href="${pageUrl()}"><img src="${assetUrl("brand/logo-horizontal.webp")}" width="250" height="66" alt="OMEGAIMPORTS"></a>
+    <a class="brand brand--header" href="${pageUrl()}"><img src="${assetUrl("brand/logo-horizontal.webp")}" width="220" height="61" alt="OMEGAIMPORTS"></a>
     ${headerSearch}
     <nav class="main-nav" aria-label="Principal">
       <a href="${pageUrl("produtos/")}">Produtos</a>
@@ -262,7 +262,7 @@ export function pageShell({ title, description, path = "", body, extraHead = "",
   <main id="conteudo">${body}</main>
   <footer class="footer">
     <div>
-      <img src="${assetUrl("brand/logo-horizontal.webp")}" width="220" height="58" alt="OMEGAIMPORTS">
+      <span class="footer-brand"><img src="${assetUrl("brand/logo-horizontal.webp")}" width="210" height="58" alt="OMEGAIMPORTS"></span>
       <p>Componentes eletrônicos, IoT, automação e bancada organizados para compra técnica.</p>
     </div>
     <nav aria-label="Produtos">

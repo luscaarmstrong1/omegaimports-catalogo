@@ -189,13 +189,38 @@ document.querySelectorAll("form[role='search']").forEach((form) => {
 
 const blogSearch = document.querySelector("#blog-search");
 const articleCards = document.querySelectorAll(".article-card");
+const blogCount = document.querySelector("#blog-result-count");
+const blogEmpty = document.querySelector("#blog-empty-state");
+const blogCategoryChips = document.querySelectorAll("[data-blog-category]");
 if (blogSearch && articleCards.length) {
-  blogSearch.addEventListener("input", () => {
+  const params = new URLSearchParams(location.search);
+  const activeCategoryLabel = params.get("categoria") || "";
+  const activeCategory = normalize(activeCategoryLabel);
+  blogSearch.value = params.get("q") || "";
+
+  function applyBlogFilters() {
     const query = normalize(blogSearch.value);
+    let visible = 0;
     articleCards.forEach((card) => {
-      card.hidden = query && !normalize(card.textContent || "").includes(query);
+      const categoryOk = !activeCategory || card.dataset.blogCategory === activeCategory;
+      const queryOk = !query || normalize(card.textContent || "").includes(query);
+      card.hidden = !(categoryOk && queryOk);
+      if (!card.hidden) visible++;
     });
+    if (blogCount) blogCount.textContent = String(visible);
+    if (blogEmpty) blogEmpty.hidden = visible !== 0;
+    const next = new URLSearchParams(location.search);
+    setParam(next, "q", blogSearch.value || "");
+    history.replaceState(null, "", `${location.pathname}${next.toString() ? `?${next}` : ""}`);
+  }
+
+  blogCategoryChips.forEach((chip) => {
+    const isActive = chip.dataset.blogCategory === activeCategory;
+    chip.toggleAttribute("aria-current", isActive);
   });
+
+  blogSearch.addEventListener("input", applyBlogFilters);
+  applyBlogFilters();
 }
 
 const article = document.querySelector(".article-detail");

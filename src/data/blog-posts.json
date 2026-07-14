@@ -1,761 +1,40 @@
 [
   {
-    "slug": "como-escolher-sensor-corrente-monitoramento-energia",
-    "title": "Como escolher um sensor de corrente para monitoramento de energia",
-    "summary": "Entenda quando usar sensores não invasivos, transformadores de corrente e módulos de medição em projetos de energia.",
-    "category": "Sensores e medição",
-    "tags": [
-      "sensores",
-      "energia",
-      "SCT-013",
-      "ZMCT123A"
-    ],
-    "relatedCategories": [
-      "sensores-e-medicao"
-    ],
-    "relatedFamilies": [
-      "sensores-de-corrente"
-    ],
-    "readingTime": "7 min",
-    "publishedAt": "2026-07-13",
-    "updatedAt": "2026-07-13",
-    "references": [
-      "Datasheets dos módulos SCT-013 e ZMCT123A.",
-      "Documentação técnica do fabricante do circuito de aquisição utilizado no projeto."
-    ],
-    "sections": [
-      [
-        "Quando este tema aparece no projeto",
-        "Como escolher um sensor de corrente para monitoramento de energia entra na decisão quando o projeto precisa sair da ideia e chegar a uma montagem confiável. Antes de escolher o item, registre carga, tensão, corrente, ambiente de instalação, espaço físico, limitações de manutenção e forma de teste. Esse levantamento evita compras por aparência, reduz retrabalho e ajuda a separar o componente realmente necessário de alternativas parecidas. Quando o projeto envolve rede elétrica, comando ou comunicação em campo, essa etapa também protege a instalação e a pessoa que fará a montagem."
-      ],
-      [
-        "Conceitos que precisam estar claros",
-        "O ponto central é entender a função do componente dentro do sistema. Em sensores e medição, pequenos detalhes como faixa de operação, isolamento, dissipação, conector, tolerância, firmware, margem de segurança e condição de instalação mudam o resultado. Use o título do anúncio como ponto de partida, mas confirme dados técnicos no datasheet, no manual, nas imagens e na descrição oficial. Se houver divergência entre nome comercial e especificação, trate a especificação como prioridade."
-      ],
-      [
-        "Critérios de escolha",
-        "Compare primeiro os requisitos elétricos e mecânicos. Depois observe compatibilidade com o restante do circuito, disponibilidade de acessórios, facilidade de montagem, possibilidade de teste e margem para variação de carga. Quando houver modelos semelhantes, priorize o que tiver especificação mais clara e margem adequada para a aplicação real, não apenas o menor preço. Em kits, confirme quantidade, condição e itens inclusos."
-      ],
-      [
-        "Aplicações típicas",
-        "Produtos ligados a sensores, energia, SCT-013, ZMCT123A aparecem em protótipos, manutenção, automação, telemetria, bancada e pequenas instalações técnicas. Em cada caso, a escolha muda: bancada pede ergonomia e ajuste; campo pede robustez; protótipo pede facilidade de ligação; produto final exige repetibilidade, fixação e segurança. O mesmo componente pode funcionar bem em uma bancada e ser inadequado para uma caixa fechada, quente ou sujeita a vibração."
-      ],
-      [
-        "Limitações e cuidados",
-        "Nenhum módulo resolve sozinho problemas de projeto. Fontes precisam de proteção e ventilação, sensores precisam de condicionamento, conectores precisam de dimensionamento, resistores dissipam calor e módulos de comunicação precisam de alimentação estável. Em circuitos ligados à rede elétrica ou comando de carga, conte com profissional habilitado e siga normas aplicáveis. Não use imagem, cor ou formato como prova de compatibilidade."
-      ],
-      [
-        "Erros comuns",
-        "Os erros mais frequentes são usar fonte no limite, ignorar picos de corrente, misturar AC/DC na leitura do anúncio, escolher cabo ou conector subdimensionado, confiar em imagem sem conferir o modelo e deixar de testar o conjunto com carga real. Também é comum comprar por uma sigla conhecida e esquecer tensão, pinagem, acessórios, tamanho físico, temperatura ou isolamento. Em projetos repetitivos, um erro pequeno se multiplica rapidamente."
-      ],
-      [
-        "Como validar antes da compra",
-        "Abra o anúncio oficial, confira o MLB, veja as imagens, compare modelo e especificações, confirme preço, estoque e frete. Se o projeto tiver restrição crítica, liste os requisitos e faça a pergunta antes de comprar. Essa etapa é simples, mas reduz bastante a chance de incompatibilidade. Para componentes de alimentação, meça tensão com carga e observe aquecimento durante o teste."
-      ],
-      [
-        "Segurança e documentação",
-        "Guarde datasheets, manuais e notas de aplicação usados na decisão. Documente tensão, corrente, potência, ligação, proteção, firmware, conexões e testes realizados. Esse registro ajuda na manutenção e evita que uma montagem aparentemente funcional seja repetida de forma insegura. Sempre que houver dúvida, valide com medição e com a documentação do fabricante."
-      ]
-    ],
-    "cover": "blog/covers/como-escolher-sensor-corrente-monitoramento-energia",
-    "coverAlt": "Capa técnica do artigo Como escolher um sensor de corrente para monitoramento de energia"
-  },
-  {
-    "slug": "sct-013-zmct123a-diferencas-aplicacoes",
-    "title": "SCT-013 e ZMCT123A: diferenças e aplicações",
-    "summary": "Veja como comparar sensores de corrente por formato, faixa de uso, instalação e circuito de leitura.",
-    "category": "Sensores e medição",
-    "tags": [
-      "SCT-013",
-      "ZMCT123A",
-      "corrente AC"
-    ],
-    "relatedCategories": [
-      "sensores-e-medicao"
-    ],
-    "relatedFamilies": [
-      "sensores-de-corrente"
-    ],
-    "readingTime": "6 min",
-    "publishedAt": "2026-07-13",
-    "updatedAt": "2026-07-13",
-    "references": [
-      "Datasheets dos sensores informados pelo fabricante.",
-      "Notas de aplicação sobre transformadores de corrente."
-    ],
-    "sections": [
-      [
-        "Quando este tema aparece no projeto",
-        "SCT-013 e ZMCT123A: diferenças e aplicações entra na decisão quando o projeto precisa sair da ideia e chegar a uma montagem confiável. Antes de escolher o item, registre carga, tensão, corrente, ambiente de instalação, espaço físico, limitações de manutenção e forma de teste. Esse levantamento evita compras por aparência, reduz retrabalho e ajuda a separar o componente realmente necessário de alternativas parecidas. Quando o projeto envolve rede elétrica, comando ou comunicação em campo, essa etapa também protege a instalação e a pessoa que fará a montagem."
-      ],
-      [
-        "Conceitos que precisam estar claros",
-        "O ponto central é entender a função do componente dentro do sistema. Em sensores e medição, pequenos detalhes como faixa de operação, isolamento, dissipação, conector, tolerância, firmware, margem de segurança e condição de instalação mudam o resultado. Use o título do anúncio como ponto de partida, mas confirme dados técnicos no datasheet, no manual, nas imagens e na descrição oficial. Se houver divergência entre nome comercial e especificação, trate a especificação como prioridade."
-      ],
-      [
-        "Critérios de escolha",
-        "Compare primeiro os requisitos elétricos e mecânicos. Depois observe compatibilidade com o restante do circuito, disponibilidade de acessórios, facilidade de montagem, possibilidade de teste e margem para variação de carga. Quando houver modelos semelhantes, priorize o que tiver especificação mais clara e margem adequada para a aplicação real, não apenas o menor preço. Em kits, confirme quantidade, condição e itens inclusos."
-      ],
-      [
-        "Aplicações típicas",
-        "Produtos ligados a SCT-013, ZMCT123A, corrente AC aparecem em protótipos, manutenção, automação, telemetria, bancada e pequenas instalações técnicas. Em cada caso, a escolha muda: bancada pede ergonomia e ajuste; campo pede robustez; protótipo pede facilidade de ligação; produto final exige repetibilidade, fixação e segurança. O mesmo componente pode funcionar bem em uma bancada e ser inadequado para uma caixa fechada, quente ou sujeita a vibração."
-      ],
-      [
-        "Limitações e cuidados",
-        "Nenhum módulo resolve sozinho problemas de projeto. Fontes precisam de proteção e ventilação, sensores precisam de condicionamento, conectores precisam de dimensionamento, resistores dissipam calor e módulos de comunicação precisam de alimentação estável. Em circuitos ligados à rede elétrica ou comando de carga, conte com profissional habilitado e siga normas aplicáveis. Não use imagem, cor ou formato como prova de compatibilidade."
-      ],
-      [
-        "Erros comuns",
-        "Os erros mais frequentes são usar fonte no limite, ignorar picos de corrente, misturar AC/DC na leitura do anúncio, escolher cabo ou conector subdimensionado, confiar em imagem sem conferir o modelo e deixar de testar o conjunto com carga real. Também é comum comprar por uma sigla conhecida e esquecer tensão, pinagem, acessórios, tamanho físico, temperatura ou isolamento. Em projetos repetitivos, um erro pequeno se multiplica rapidamente."
-      ],
-      [
-        "Como validar antes da compra",
-        "Abra o anúncio oficial, confira o MLB, veja as imagens, compare modelo e especificações, confirme preço, estoque e frete. Se o projeto tiver restrição crítica, liste os requisitos e faça a pergunta antes de comprar. Essa etapa é simples, mas reduz bastante a chance de incompatibilidade. Para componentes de alimentação, meça tensão com carga e observe aquecimento durante o teste."
-      ],
-      [
-        "Segurança e documentação",
-        "Guarde datasheets, manuais e notas de aplicação usados na decisão. Documente tensão, corrente, potência, ligação, proteção, firmware, conexões e testes realizados. Esse registro ajuda na manutenção e evita que uma montagem aparentemente funcional seja repetida de forma insegura. Sempre que houver dúvida, valide com medição e com a documentação do fabricante."
-      ]
-    ],
-    "cover": "blog/covers/sct-013-zmct123a-diferencas-aplicacoes",
-    "coverAlt": "Capa técnica do artigo SCT-013 e ZMCT123A: diferenças e aplicações"
-  },
-  {
-    "slug": "como-utilizar-fonte-hi-link-hlk-pm01",
-    "title": "Como utilizar a fonte Hi-Link HLK-PM01 em projetos eletrônicos",
-    "summary": "Pontos essenciais para avaliar a HLK-PM01 em alimentação compacta AC/DC.",
+    "slug": "erros-comuns-alimentacao-modulos-eletronicos",
+    "title": "Erros comuns na alimentação de módulos eletrônicos",
+    "summary": "Falhas típicas de bancada e campo: fonte subdimensionada, cabos finos, aterramento ruim, ruído e ausência de proteção.",
     "category": "Fontes e alimentação",
     "tags": [
-      "HLK-PM01",
-      "AC/DC",
-      "5 V",
-      "3 W"
-    ],
-    "relatedCategories": [
-      "fontes-e-alimentacao"
-    ],
-    "relatedFamilies": [
-      "hi-link-hlk-pm01"
-    ],
-    "readingTime": "7 min",
-    "publishedAt": "2026-07-13",
-    "updatedAt": "2026-07-13",
-    "references": [
-      "Datasheet oficial Hi-Link HLK-PM01.",
-      "Boas práticas de projeto para fontes AC/DC isoladas."
-    ],
-    "sections": [
-      [
-        "Quando este tema aparece no projeto",
-        "Como utilizar a fonte Hi-Link HLK-PM01 em projetos eletrônicos entra na decisão quando o projeto precisa sair da ideia e chegar a uma montagem confiável. Antes de escolher o item, registre carga, tensão, corrente, ambiente de instalação, espaço físico, limitações de manutenção e forma de teste. Esse levantamento evita compras por aparência, reduz retrabalho e ajuda a separar o componente realmente necessário de alternativas parecidas. Quando o projeto envolve rede elétrica, comando ou comunicação em campo, essa etapa também protege a instalação e a pessoa que fará a montagem."
-      ],
-      [
-        "Conceitos que precisam estar claros",
-        "O ponto central é entender a função do componente dentro do sistema. Em fontes e alimentação, pequenos detalhes como faixa de operação, isolamento, dissipação, conector, tolerância, firmware, margem de segurança e condição de instalação mudam o resultado. Use o título do anúncio como ponto de partida, mas confirme dados técnicos no datasheet, no manual, nas imagens e na descrição oficial. Se houver divergência entre nome comercial e especificação, trate a especificação como prioridade."
-      ],
-      [
-        "Critérios de escolha",
-        "Compare primeiro os requisitos elétricos e mecânicos. Depois observe compatibilidade com o restante do circuito, disponibilidade de acessórios, facilidade de montagem, possibilidade de teste e margem para variação de carga. Quando houver modelos semelhantes, priorize o que tiver especificação mais clara e margem adequada para a aplicação real, não apenas o menor preço. Em kits, confirme quantidade, condição e itens inclusos."
-      ],
-      [
-        "Aplicações típicas",
-        "Produtos ligados a HLK-PM01, AC/DC, 5 V, 3 W aparecem em protótipos, manutenção, automação, telemetria, bancada e pequenas instalações técnicas. Em cada caso, a escolha muda: bancada pede ergonomia e ajuste; campo pede robustez; protótipo pede facilidade de ligação; produto final exige repetibilidade, fixação e segurança. O mesmo componente pode funcionar bem em uma bancada e ser inadequado para uma caixa fechada, quente ou sujeita a vibração."
-      ],
-      [
-        "Limitações e cuidados",
-        "Nenhum módulo resolve sozinho problemas de projeto. Fontes precisam de proteção e ventilação, sensores precisam de condicionamento, conectores precisam de dimensionamento, resistores dissipam calor e módulos de comunicação precisam de alimentação estável. Em circuitos ligados à rede elétrica ou comando de carga, conte com profissional habilitado e siga normas aplicáveis. Não use imagem, cor ou formato como prova de compatibilidade."
-      ],
-      [
-        "Erros comuns",
-        "Os erros mais frequentes são usar fonte no limite, ignorar picos de corrente, misturar AC/DC na leitura do anúncio, escolher cabo ou conector subdimensionado, confiar em imagem sem conferir o modelo e deixar de testar o conjunto com carga real. Também é comum comprar por uma sigla conhecida e esquecer tensão, pinagem, acessórios, tamanho físico, temperatura ou isolamento. Em projetos repetitivos, um erro pequeno se multiplica rapidamente."
-      ],
-      [
-        "Como validar antes da compra",
-        "Abra o anúncio oficial, confira o MLB, veja as imagens, compare modelo e especificações, confirme preço, estoque e frete. Se o projeto tiver restrição crítica, liste os requisitos e faça a pergunta antes de comprar. Essa etapa é simples, mas reduz bastante a chance de incompatibilidade. Para componentes de alimentação, meça tensão com carga e observe aquecimento durante o teste."
-      ],
-      [
-        "Segurança e documentação",
-        "Guarde datasheets, manuais e notas de aplicação usados na decisão. Documente tensão, corrente, potência, ligação, proteção, firmware, conexões e testes realizados. Esse registro ajuda na manutenção e evita que uma montagem aparentemente funcional seja repetida de forma insegura. Sempre que houver dúvida, valide com medição e com a documentação do fabricante."
-      ]
-    ],
-    "cover": "blog/covers/como-utilizar-fonte-hi-link-hlk-pm01",
-    "coverAlt": "Capa técnica do artigo Como utilizar a fonte Hi-Link HLK-PM01 em projetos eletrônicos"
-  },
-  {
-    "slug": "cuidados-fontes-ac-dc-compactas",
-    "title": "Cuidados no uso de fontes AC/DC compactas",
-    "summary": "Como avaliar margem de potência, isolamento, temperatura e proteção em fontes compactas.",
-    "category": "Fontes e alimentação",
-    "tags": [
-      "fontes",
-      "AC/DC",
-      "segurança"
-    ],
-    "relatedCategories": [
-      "fontes-e-alimentacao"
-    ],
-    "relatedFamilies": [
-      "hi-link-hlk-pm01",
-      "instrumentos-e-fontes"
-    ],
-    "readingTime": "6 min",
-    "publishedAt": "2026-07-13",
-    "updatedAt": "2026-07-13",
-    "references": [
-      "Datasheets dos módulos de fonte.",
-      "Recomendações de segurança para circuitos ligados à rede elétrica."
-    ],
-    "sections": [
-      [
-        "Quando este tema aparece no projeto",
-        "Cuidados no uso de fontes AC/DC compactas entra na decisão quando o projeto precisa sair da ideia e chegar a uma montagem confiável. Antes de escolher o item, registre carga, tensão, corrente, ambiente de instalação, espaço físico, limitações de manutenção e forma de teste. Esse levantamento evita compras por aparência, reduz retrabalho e ajuda a separar o componente realmente necessário de alternativas parecidas. Quando o projeto envolve rede elétrica, comando ou comunicação em campo, essa etapa também protege a instalação e a pessoa que fará a montagem."
-      ],
-      [
-        "Conceitos que precisam estar claros",
-        "O ponto central é entender a função do componente dentro do sistema. Em fontes e alimentação, pequenos detalhes como faixa de operação, isolamento, dissipação, conector, tolerância, firmware, margem de segurança e condição de instalação mudam o resultado. Use o título do anúncio como ponto de partida, mas confirme dados técnicos no datasheet, no manual, nas imagens e na descrição oficial. Se houver divergência entre nome comercial e especificação, trate a especificação como prioridade."
-      ],
-      [
-        "Critérios de escolha",
-        "Compare primeiro os requisitos elétricos e mecânicos. Depois observe compatibilidade com o restante do circuito, disponibilidade de acessórios, facilidade de montagem, possibilidade de teste e margem para variação de carga. Quando houver modelos semelhantes, priorize o que tiver especificação mais clara e margem adequada para a aplicação real, não apenas o menor preço. Em kits, confirme quantidade, condição e itens inclusos."
-      ],
-      [
-        "Aplicações típicas",
-        "Produtos ligados a fontes, AC/DC, segurança aparecem em protótipos, manutenção, automação, telemetria, bancada e pequenas instalações técnicas. Em cada caso, a escolha muda: bancada pede ergonomia e ajuste; campo pede robustez; protótipo pede facilidade de ligação; produto final exige repetibilidade, fixação e segurança. O mesmo componente pode funcionar bem em uma bancada e ser inadequado para uma caixa fechada, quente ou sujeita a vibração."
-      ],
-      [
-        "Limitações e cuidados",
-        "Nenhum módulo resolve sozinho problemas de projeto. Fontes precisam de proteção e ventilação, sensores precisam de condicionamento, conectores precisam de dimensionamento, resistores dissipam calor e módulos de comunicação precisam de alimentação estável. Em circuitos ligados à rede elétrica ou comando de carga, conte com profissional habilitado e siga normas aplicáveis. Não use imagem, cor ou formato como prova de compatibilidade."
-      ],
-      [
-        "Erros comuns",
-        "Os erros mais frequentes são usar fonte no limite, ignorar picos de corrente, misturar AC/DC na leitura do anúncio, escolher cabo ou conector subdimensionado, confiar em imagem sem conferir o modelo e deixar de testar o conjunto com carga real. Também é comum comprar por uma sigla conhecida e esquecer tensão, pinagem, acessórios, tamanho físico, temperatura ou isolamento. Em projetos repetitivos, um erro pequeno se multiplica rapidamente."
-      ],
-      [
-        "Como validar antes da compra",
-        "Abra o anúncio oficial, confira o MLB, veja as imagens, compare modelo e especificações, confirme preço, estoque e frete. Se o projeto tiver restrição crítica, liste os requisitos e faça a pergunta antes de comprar. Essa etapa é simples, mas reduz bastante a chance de incompatibilidade. Para componentes de alimentação, meça tensão com carga e observe aquecimento durante o teste."
-      ],
-      [
-        "Segurança e documentação",
-        "Guarde datasheets, manuais e notas de aplicação usados na decisão. Documente tensão, corrente, potência, ligação, proteção, firmware, conexões e testes realizados. Esse registro ajuda na manutenção e evita que uma montagem aparentemente funcional seja repetida de forma insegura. Sempre que houver dúvida, valide com medição e com a documentação do fabricante."
-      ]
-    ],
-    "cover": "blog/covers/cuidados-fontes-ac-dc-compactas",
-    "coverAlt": "Capa técnica do artigo Cuidados no uso de fontes AC/DC compactas"
-  },
-  {
-    "slug": "ttgo-t-call-esp32-sim800l-conectividade-gsm",
-    "title": "TTGO T-Call: ESP32, SIM800L e conectividade GSM",
-    "summary": "Critérios para avaliar módulos com ESP32, modem SIM800L, antena e alimentação em telemetria.",
-    "category": "IoT e conectividade",
-    "tags": [
-      "TTGO T-Call",
-      "ESP32",
-      "SIM800L",
-      "2G"
-    ],
-    "relatedCategories": [
-      "iot-gsm-e-comunicacao"
-    ],
-    "relatedFamilies": [
-      "ttgo-t-call"
-    ],
-    "readingTime": "8 min",
-    "publishedAt": "2026-07-13",
-    "updatedAt": "2026-07-13",
-    "references": [
-      "Documentação Espressif ESP32.",
-      "Documentação SIMCom SIM800L."
-    ],
-    "sections": [
-      [
-        "Quando este tema aparece no projeto",
-        "TTGO T-Call: ESP32, SIM800L e conectividade GSM entra na decisão quando o projeto precisa sair da ideia e chegar a uma montagem confiável. Antes de escolher o item, registre carga, tensão, corrente, ambiente de instalação, espaço físico, limitações de manutenção e forma de teste. Esse levantamento evita compras por aparência, reduz retrabalho e ajuda a separar o componente realmente necessário de alternativas parecidas. Quando o projeto envolve rede elétrica, comando ou comunicação em campo, essa etapa também protege a instalação e a pessoa que fará a montagem."
-      ],
-      [
-        "Conceitos que precisam estar claros",
-        "O ponto central é entender a função do componente dentro do sistema. Em iot e conectividade, pequenos detalhes como faixa de operação, isolamento, dissipação, conector, tolerância, firmware, margem de segurança e condição de instalação mudam o resultado. Use o título do anúncio como ponto de partida, mas confirme dados técnicos no datasheet, no manual, nas imagens e na descrição oficial. Se houver divergência entre nome comercial e especificação, trate a especificação como prioridade."
-      ],
-      [
-        "Critérios de escolha",
-        "Compare primeiro os requisitos elétricos e mecânicos. Depois observe compatibilidade com o restante do circuito, disponibilidade de acessórios, facilidade de montagem, possibilidade de teste e margem para variação de carga. Quando houver modelos semelhantes, priorize o que tiver especificação mais clara e margem adequada para a aplicação real, não apenas o menor preço. Em kits, confirme quantidade, condição e itens inclusos."
-      ],
-      [
-        "Aplicações típicas",
-        "Produtos ligados a TTGO T-Call, ESP32, SIM800L, 2G aparecem em protótipos, manutenção, automação, telemetria, bancada e pequenas instalações técnicas. Em cada caso, a escolha muda: bancada pede ergonomia e ajuste; campo pede robustez; protótipo pede facilidade de ligação; produto final exige repetibilidade, fixação e segurança. O mesmo componente pode funcionar bem em uma bancada e ser inadequado para uma caixa fechada, quente ou sujeita a vibração."
-      ],
-      [
-        "Limitações e cuidados",
-        "Nenhum módulo resolve sozinho problemas de projeto. Fontes precisam de proteção e ventilação, sensores precisam de condicionamento, conectores precisam de dimensionamento, resistores dissipam calor e módulos de comunicação precisam de alimentação estável. Em circuitos ligados à rede elétrica ou comando de carga, conte com profissional habilitado e siga normas aplicáveis. Não use imagem, cor ou formato como prova de compatibilidade."
-      ],
-      [
-        "Erros comuns",
-        "Os erros mais frequentes são usar fonte no limite, ignorar picos de corrente, misturar AC/DC na leitura do anúncio, escolher cabo ou conector subdimensionado, confiar em imagem sem conferir o modelo e deixar de testar o conjunto com carga real. Também é comum comprar por uma sigla conhecida e esquecer tensão, pinagem, acessórios, tamanho físico, temperatura ou isolamento. Em projetos repetitivos, um erro pequeno se multiplica rapidamente."
-      ],
-      [
-        "Como validar antes da compra",
-        "Abra o anúncio oficial, confira o MLB, veja as imagens, compare modelo e especificações, confirme preço, estoque e frete. Se o projeto tiver restrição crítica, liste os requisitos e faça a pergunta antes de comprar. Essa etapa é simples, mas reduz bastante a chance de incompatibilidade. Para componentes de alimentação, meça tensão com carga e observe aquecimento durante o teste."
-      ],
-      [
-        "Segurança e documentação",
-        "Guarde datasheets, manuais e notas de aplicação usados na decisão. Documente tensão, corrente, potência, ligação, proteção, firmware, conexões e testes realizados. Esse registro ajuda na manutenção e evita que uma montagem aparentemente funcional seja repetida de forma insegura. Sempre que houver dúvida, valide com medição e com a documentação do fabricante."
-      ]
-    ],
-    "cover": "blog/covers/ttgo-t-call-esp32-sim800l-conectividade-gsm",
-    "coverAlt": "Capa técnica do artigo TTGO T-Call: ESP32, SIM800L e conectividade GSM"
-  },
-  {
-    "slug": "gps-neo-6m-alimentacao-antena-posicionamento",
-    "title": "GPS NEO-6M: alimentação, antena e posicionamento",
-    "summary": "Boas práticas para usar módulos GPS NEO-6M em rastreamento, telemetria e protótipos.",
-    "category": "IoT e conectividade",
-    "tags": [
-      "GPS",
-      "NEO-6M",
-      "telemetria"
-    ],
-    "relatedCategories": [
-      "gps-e-localizacao"
-    ],
-    "relatedFamilies": [
-      "gps-neo-6m"
-    ],
-    "readingTime": "6 min",
-    "publishedAt": "2026-07-13",
-    "updatedAt": "2026-07-13",
-    "references": [
-      "Documentação u-blox NEO-6.",
-      "Notas de aplicação sobre posicionamento de antenas GNSS."
-    ],
-    "sections": [
-      [
-        "Quando este tema aparece no projeto",
-        "GPS NEO-6M: alimentação, antena e posicionamento entra na decisão quando o projeto precisa sair da ideia e chegar a uma montagem confiável. Antes de escolher o item, registre carga, tensão, corrente, ambiente de instalação, espaço físico, limitações de manutenção e forma de teste. Esse levantamento evita compras por aparência, reduz retrabalho e ajuda a separar o componente realmente necessário de alternativas parecidas. Quando o projeto envolve rede elétrica, comando ou comunicação em campo, essa etapa também protege a instalação e a pessoa que fará a montagem."
-      ],
-      [
-        "Conceitos que precisam estar claros",
-        "O ponto central é entender a função do componente dentro do sistema. Em iot e conectividade, pequenos detalhes como faixa de operação, isolamento, dissipação, conector, tolerância, firmware, margem de segurança e condição de instalação mudam o resultado. Use o título do anúncio como ponto de partida, mas confirme dados técnicos no datasheet, no manual, nas imagens e na descrição oficial. Se houver divergência entre nome comercial e especificação, trate a especificação como prioridade."
-      ],
-      [
-        "Critérios de escolha",
-        "Compare primeiro os requisitos elétricos e mecânicos. Depois observe compatibilidade com o restante do circuito, disponibilidade de acessórios, facilidade de montagem, possibilidade de teste e margem para variação de carga. Quando houver modelos semelhantes, priorize o que tiver especificação mais clara e margem adequada para a aplicação real, não apenas o menor preço. Em kits, confirme quantidade, condição e itens inclusos."
-      ],
-      [
-        "Aplicações típicas",
-        "Produtos ligados a GPS, NEO-6M, telemetria aparecem em protótipos, manutenção, automação, telemetria, bancada e pequenas instalações técnicas. Em cada caso, a escolha muda: bancada pede ergonomia e ajuste; campo pede robustez; protótipo pede facilidade de ligação; produto final exige repetibilidade, fixação e segurança. O mesmo componente pode funcionar bem em uma bancada e ser inadequado para uma caixa fechada, quente ou sujeita a vibração."
-      ],
-      [
-        "Limitações e cuidados",
-        "Nenhum módulo resolve sozinho problemas de projeto. Fontes precisam de proteção e ventilação, sensores precisam de condicionamento, conectores precisam de dimensionamento, resistores dissipam calor e módulos de comunicação precisam de alimentação estável. Em circuitos ligados à rede elétrica ou comando de carga, conte com profissional habilitado e siga normas aplicáveis. Não use imagem, cor ou formato como prova de compatibilidade."
-      ],
-      [
-        "Erros comuns",
-        "Os erros mais frequentes são usar fonte no limite, ignorar picos de corrente, misturar AC/DC na leitura do anúncio, escolher cabo ou conector subdimensionado, confiar em imagem sem conferir o modelo e deixar de testar o conjunto com carga real. Também é comum comprar por uma sigla conhecida e esquecer tensão, pinagem, acessórios, tamanho físico, temperatura ou isolamento. Em projetos repetitivos, um erro pequeno se multiplica rapidamente."
-      ],
-      [
-        "Como validar antes da compra",
-        "Abra o anúncio oficial, confira o MLB, veja as imagens, compare modelo e especificações, confirme preço, estoque e frete. Se o projeto tiver restrição crítica, liste os requisitos e faça a pergunta antes de comprar. Essa etapa é simples, mas reduz bastante a chance de incompatibilidade. Para componentes de alimentação, meça tensão com carga e observe aquecimento durante o teste."
-      ],
-      [
-        "Segurança e documentação",
-        "Guarde datasheets, manuais e notas de aplicação usados na decisão. Documente tensão, corrente, potência, ligação, proteção, firmware, conexões e testes realizados. Esse registro ajuda na manutenção e evita que uma montagem aparentemente funcional seja repetida de forma insegura. Sempre que houver dúvida, valide com medição e com a documentação do fabricante."
-      ]
-    ],
-    "cover": "blog/covers/gps-neo-6m-alimentacao-antena-posicionamento",
-    "coverAlt": "Capa técnica do artigo GPS NEO-6M: alimentação, antena e posicionamento"
-  },
-  {
-    "slug": "como-escolher-fonte-bancada",
-    "title": "Como escolher uma fonte de bancada",
-    "summary": "Tensão, corrente, proteções e uso prático na escolha de uma fonte para laboratório e manutenção.",
-    "category": "Instrumentação",
-    "tags": [
-      "fonte de bancada",
-      "laboratório",
-      "teste"
-    ],
-    "relatedCategories": [
-      "instrumentos-de-bancada"
-    ],
-    "relatedFamilies": [
-      "instrumentos-e-fontes"
-    ],
-    "readingTime": "6 min",
-    "publishedAt": "2026-07-13",
-    "updatedAt": "2026-07-13",
-    "references": [
-      "Manuais dos modelos de fonte de bancada.",
-      "Boas práticas de laboratório eletrônico."
-    ],
-    "sections": [
-      [
-        "Quando este tema aparece no projeto",
-        "Como escolher uma fonte de bancada entra na decisão quando o projeto precisa sair da ideia e chegar a uma montagem confiável. Antes de escolher o item, registre carga, tensão, corrente, ambiente de instalação, espaço físico, limitações de manutenção e forma de teste. Esse levantamento evita compras por aparência, reduz retrabalho e ajuda a separar o componente realmente necessário de alternativas parecidas. Quando o projeto envolve rede elétrica, comando ou comunicação em campo, essa etapa também protege a instalação e a pessoa que fará a montagem."
-      ],
-      [
-        "Conceitos que precisam estar claros",
-        "O ponto central é entender a função do componente dentro do sistema. Em instrumentação, pequenos detalhes como faixa de operação, isolamento, dissipação, conector, tolerância, firmware, margem de segurança e condição de instalação mudam o resultado. Use o título do anúncio como ponto de partida, mas confirme dados técnicos no datasheet, no manual, nas imagens e na descrição oficial. Se houver divergência entre nome comercial e especificação, trate a especificação como prioridade."
-      ],
-      [
-        "Critérios de escolha",
-        "Compare primeiro os requisitos elétricos e mecânicos. Depois observe compatibilidade com o restante do circuito, disponibilidade de acessórios, facilidade de montagem, possibilidade de teste e margem para variação de carga. Quando houver modelos semelhantes, priorize o que tiver especificação mais clara e margem adequada para a aplicação real, não apenas o menor preço. Em kits, confirme quantidade, condição e itens inclusos."
-      ],
-      [
-        "Aplicações típicas",
-        "Produtos ligados a fonte de bancada, laboratório, teste aparecem em protótipos, manutenção, automação, telemetria, bancada e pequenas instalações técnicas. Em cada caso, a escolha muda: bancada pede ergonomia e ajuste; campo pede robustez; protótipo pede facilidade de ligação; produto final exige repetibilidade, fixação e segurança. O mesmo componente pode funcionar bem em uma bancada e ser inadequado para uma caixa fechada, quente ou sujeita a vibração."
-      ],
-      [
-        "Limitações e cuidados",
-        "Nenhum módulo resolve sozinho problemas de projeto. Fontes precisam de proteção e ventilação, sensores precisam de condicionamento, conectores precisam de dimensionamento, resistores dissipam calor e módulos de comunicação precisam de alimentação estável. Em circuitos ligados à rede elétrica ou comando de carga, conte com profissional habilitado e siga normas aplicáveis. Não use imagem, cor ou formato como prova de compatibilidade."
-      ],
-      [
-        "Erros comuns",
-        "Os erros mais frequentes são usar fonte no limite, ignorar picos de corrente, misturar AC/DC na leitura do anúncio, escolher cabo ou conector subdimensionado, confiar em imagem sem conferir o modelo e deixar de testar o conjunto com carga real. Também é comum comprar por uma sigla conhecida e esquecer tensão, pinagem, acessórios, tamanho físico, temperatura ou isolamento. Em projetos repetitivos, um erro pequeno se multiplica rapidamente."
-      ],
-      [
-        "Como validar antes da compra",
-        "Abra o anúncio oficial, confira o MLB, veja as imagens, compare modelo e especificações, confirme preço, estoque e frete. Se o projeto tiver restrição crítica, liste os requisitos e faça a pergunta antes de comprar. Essa etapa é simples, mas reduz bastante a chance de incompatibilidade. Para componentes de alimentação, meça tensão com carga e observe aquecimento durante o teste."
-      ],
-      [
-        "Segurança e documentação",
-        "Guarde datasheets, manuais e notas de aplicação usados na decisão. Documente tensão, corrente, potência, ligação, proteção, firmware, conexões e testes realizados. Esse registro ajuda na manutenção e evita que uma montagem aparentemente funcional seja repetida de forma insegura. Sempre que houver dúvida, valide com medição e com a documentação do fabricante."
-      ]
-    ],
-    "cover": "blog/covers/como-escolher-fonte-bancada",
-    "coverAlt": "Capa técnica do artigo Como escolher uma fonte de bancada"
-  },
-  {
-    "slug": "resistores-10k-100k-quando-utilizar",
-    "title": "Resistores de 10 kΩ e 100 kΩ: quando utilizar cada valor",
-    "summary": "Entenda o papel de resistores em pull-up, divisores, polarização e prototipagem.",
-    "category": "Prototipagem",
-    "tags": [
-      "resistores",
-      "10 kΩ",
-      "100 kΩ"
-    ],
-    "relatedCategories": [
-      "componentes-eletronicos"
-    ],
-    "relatedFamilies": [],
-    "readingTime": "5 min",
-    "publishedAt": "2026-07-13",
-    "updatedAt": "2026-07-13",
-    "references": [
-      "Literatura básica de eletrônica analógica.",
-      "Datasheets dos circuitos integrados usados no projeto."
-    ],
-    "sections": [
-      [
-        "Quando este tema aparece no projeto",
-        "Resistores de 10 kΩ e 100 kΩ: quando utilizar cada valor entra na decisão quando o projeto precisa sair da ideia e chegar a uma montagem confiável. Antes de escolher o item, registre carga, tensão, corrente, ambiente de instalação, espaço físico, limitações de manutenção e forma de teste. Esse levantamento evita compras por aparência, reduz retrabalho e ajuda a separar o componente realmente necessário de alternativas parecidas. Quando o projeto envolve rede elétrica, comando ou comunicação em campo, essa etapa também protege a instalação e a pessoa que fará a montagem."
-      ],
-      [
-        "Conceitos que precisam estar claros",
-        "O ponto central é entender a função do componente dentro do sistema. Em prototipagem, pequenos detalhes como faixa de operação, isolamento, dissipação, conector, tolerância, firmware, margem de segurança e condição de instalação mudam o resultado. Use o título do anúncio como ponto de partida, mas confirme dados técnicos no datasheet, no manual, nas imagens e na descrição oficial. Se houver divergência entre nome comercial e especificação, trate a especificação como prioridade."
-      ],
-      [
-        "Critérios de escolha",
-        "Compare primeiro os requisitos elétricos e mecânicos. Depois observe compatibilidade com o restante do circuito, disponibilidade de acessórios, facilidade de montagem, possibilidade de teste e margem para variação de carga. Quando houver modelos semelhantes, priorize o que tiver especificação mais clara e margem adequada para a aplicação real, não apenas o menor preço. Em kits, confirme quantidade, condição e itens inclusos."
-      ],
-      [
-        "Aplicações típicas",
-        "Produtos ligados a resistores, 10 kΩ, 100 kΩ aparecem em protótipos, manutenção, automação, telemetria, bancada e pequenas instalações técnicas. Em cada caso, a escolha muda: bancada pede ergonomia e ajuste; campo pede robustez; protótipo pede facilidade de ligação; produto final exige repetibilidade, fixação e segurança. O mesmo componente pode funcionar bem em uma bancada e ser inadequado para uma caixa fechada, quente ou sujeita a vibração."
-      ],
-      [
-        "Limitações e cuidados",
-        "Nenhum módulo resolve sozinho problemas de projeto. Fontes precisam de proteção e ventilação, sensores precisam de condicionamento, conectores precisam de dimensionamento, resistores dissipam calor e módulos de comunicação precisam de alimentação estável. Em circuitos ligados à rede elétrica ou comando de carga, conte com profissional habilitado e siga normas aplicáveis. Não use imagem, cor ou formato como prova de compatibilidade."
-      ],
-      [
-        "Erros comuns",
-        "Os erros mais frequentes são usar fonte no limite, ignorar picos de corrente, misturar AC/DC na leitura do anúncio, escolher cabo ou conector subdimensionado, confiar em imagem sem conferir o modelo e deixar de testar o conjunto com carga real. Também é comum comprar por uma sigla conhecida e esquecer tensão, pinagem, acessórios, tamanho físico, temperatura ou isolamento. Em projetos repetitivos, um erro pequeno se multiplica rapidamente."
-      ],
-      [
-        "Como validar antes da compra",
-        "Abra o anúncio oficial, confira o MLB, veja as imagens, compare modelo e especificações, confirme preço, estoque e frete. Se o projeto tiver restrição crítica, liste os requisitos e faça a pergunta antes de comprar. Essa etapa é simples, mas reduz bastante a chance de incompatibilidade. Para componentes de alimentação, meça tensão com carga e observe aquecimento durante o teste."
-      ],
-      [
-        "Segurança e documentação",
-        "Guarde datasheets, manuais e notas de aplicação usados na decisão. Documente tensão, corrente, potência, ligação, proteção, firmware, conexões e testes realizados. Esse registro ajuda na manutenção e evita que uma montagem aparentemente funcional seja repetida de forma insegura. Sempre que houver dúvida, valide com medição e com a documentação do fabricante."
-      ]
-    ],
-    "cover": "blog/covers/resistores-10k-100k-quando-utilizar",
-    "coverAlt": "Capa técnica do artigo Resistores de 10 kΩ e 100 kΩ: quando utilizar cada valor"
-  },
-  {
-    "slug": "varistores-protecao-surtos-circuitos",
-    "title": "Varistores: proteção contra surtos em circuitos eletrônicos",
-    "summary": "O que observar ao selecionar varistores para proteção e absorção de surtos.",
-    "category": "Automação",
-    "tags": [
-      "varistor",
+      "alimentação",
+      "erros comuns",
       "proteção",
-      "surtos"
-    ],
-    "relatedCategories": [
-      "componentes-eletronicos",
-      "automacao-e-comando"
-    ],
-    "relatedFamilies": [
-      "varistores"
-    ],
-    "readingTime": "6 min",
-    "publishedAt": "2026-07-13",
-    "updatedAt": "2026-07-13",
-    "references": [
-      "Datasheets dos varistores.",
-      "Notas de aplicação de proteção contra surtos."
-    ],
-    "sections": [
-      [
-        "Quando este tema aparece no projeto",
-        "Varistores: proteção contra surtos em circuitos eletrônicos entra na decisão quando o projeto precisa sair da ideia e chegar a uma montagem confiável. Antes de escolher o item, registre carga, tensão, corrente, ambiente de instalação, espaço físico, limitações de manutenção e forma de teste. Esse levantamento evita compras por aparência, reduz retrabalho e ajuda a separar o componente realmente necessário de alternativas parecidas. Quando o projeto envolve rede elétrica, comando ou comunicação em campo, essa etapa também protege a instalação e a pessoa que fará a montagem."
-      ],
-      [
-        "Conceitos que precisam estar claros",
-        "O ponto central é entender a função do componente dentro do sistema. Em automação, pequenos detalhes como faixa de operação, isolamento, dissipação, conector, tolerância, firmware, margem de segurança e condição de instalação mudam o resultado. Use o título do anúncio como ponto de partida, mas confirme dados técnicos no datasheet, no manual, nas imagens e na descrição oficial. Se houver divergência entre nome comercial e especificação, trate a especificação como prioridade."
-      ],
-      [
-        "Critérios de escolha",
-        "Compare primeiro os requisitos elétricos e mecânicos. Depois observe compatibilidade com o restante do circuito, disponibilidade de acessórios, facilidade de montagem, possibilidade de teste e margem para variação de carga. Quando houver modelos semelhantes, priorize o que tiver especificação mais clara e margem adequada para a aplicação real, não apenas o menor preço. Em kits, confirme quantidade, condição e itens inclusos."
-      ],
-      [
-        "Aplicações típicas",
-        "Produtos ligados a varistor, proteção, surtos aparecem em protótipos, manutenção, automação, telemetria, bancada e pequenas instalações técnicas. Em cada caso, a escolha muda: bancada pede ergonomia e ajuste; campo pede robustez; protótipo pede facilidade de ligação; produto final exige repetibilidade, fixação e segurança. O mesmo componente pode funcionar bem em uma bancada e ser inadequado para uma caixa fechada, quente ou sujeita a vibração."
-      ],
-      [
-        "Limitações e cuidados",
-        "Nenhum módulo resolve sozinho problemas de projeto. Fontes precisam de proteção e ventilação, sensores precisam de condicionamento, conectores precisam de dimensionamento, resistores dissipam calor e módulos de comunicação precisam de alimentação estável. Em circuitos ligados à rede elétrica ou comando de carga, conte com profissional habilitado e siga normas aplicáveis. Não use imagem, cor ou formato como prova de compatibilidade."
-      ],
-      [
-        "Erros comuns",
-        "Os erros mais frequentes são usar fonte no limite, ignorar picos de corrente, misturar AC/DC na leitura do anúncio, escolher cabo ou conector subdimensionado, confiar em imagem sem conferir o modelo e deixar de testar o conjunto com carga real. Também é comum comprar por uma sigla conhecida e esquecer tensão, pinagem, acessórios, tamanho físico, temperatura ou isolamento. Em projetos repetitivos, um erro pequeno se multiplica rapidamente."
-      ],
-      [
-        "Como validar antes da compra",
-        "Abra o anúncio oficial, confira o MLB, veja as imagens, compare modelo e especificações, confirme preço, estoque e frete. Se o projeto tiver restrição crítica, liste os requisitos e faça a pergunta antes de comprar. Essa etapa é simples, mas reduz bastante a chance de incompatibilidade. Para componentes de alimentação, meça tensão com carga e observe aquecimento durante o teste."
-      ],
-      [
-        "Segurança e documentação",
-        "Guarde datasheets, manuais e notas de aplicação usados na decisão. Documente tensão, corrente, potência, ligação, proteção, firmware, conexões e testes realizados. Esse registro ajuda na manutenção e evita que uma montagem aparentemente funcional seja repetida de forma insegura. Sempre que houver dúvida, valide com medição e com a documentação do fabricante."
-      ]
-    ],
-    "cover": "blog/covers/varistores-protecao-surtos-circuitos",
-    "coverAlt": "Capa técnica do artigo Varistores: proteção contra surtos em circuitos eletrônicos"
-  },
-  {
-    "slug": "contatores-supressores-protecao-bobinas-comandos",
-    "title": "Contatores e supressores: proteção de bobinas e comandos",
-    "summary": "Como reduzir transientes e melhorar a confiabilidade em circuitos de comando.",
-    "category": "Automação",
-    "tags": [
-      "contator",
-      "supressor",
-      "comando"
-    ],
-    "relatedCategories": [
-      "automacao-e-comando"
-    ],
-    "relatedFamilies": [
-      "contatores"
-    ],
-    "readingTime": "6 min",
-    "publishedAt": "2026-07-13",
-    "updatedAt": "2026-07-13",
-    "references": [
-      "Manuais dos contatores utilizados.",
-      "Notas de aplicação para supressão de transientes em bobinas."
-    ],
-    "sections": [
-      [
-        "Quando este tema aparece no projeto",
-        "Contatores e supressores: proteção de bobinas e comandos entra na decisão quando o projeto precisa sair da ideia e chegar a uma montagem confiável. Antes de escolher o item, registre carga, tensão, corrente, ambiente de instalação, espaço físico, limitações de manutenção e forma de teste. Esse levantamento evita compras por aparência, reduz retrabalho e ajuda a separar o componente realmente necessário de alternativas parecidas. Quando o projeto envolve rede elétrica, comando ou comunicação em campo, essa etapa também protege a instalação e a pessoa que fará a montagem."
-      ],
-      [
-        "Conceitos que precisam estar claros",
-        "O ponto central é entender a função do componente dentro do sistema. Em automação, pequenos detalhes como faixa de operação, isolamento, dissipação, conector, tolerância, firmware, margem de segurança e condição de instalação mudam o resultado. Use o título do anúncio como ponto de partida, mas confirme dados técnicos no datasheet, no manual, nas imagens e na descrição oficial. Se houver divergência entre nome comercial e especificação, trate a especificação como prioridade."
-      ],
-      [
-        "Critérios de escolha",
-        "Compare primeiro os requisitos elétricos e mecânicos. Depois observe compatibilidade com o restante do circuito, disponibilidade de acessórios, facilidade de montagem, possibilidade de teste e margem para variação de carga. Quando houver modelos semelhantes, priorize o que tiver especificação mais clara e margem adequada para a aplicação real, não apenas o menor preço. Em kits, confirme quantidade, condição e itens inclusos."
-      ],
-      [
-        "Aplicações típicas",
-        "Produtos ligados a contator, supressor, comando aparecem em protótipos, manutenção, automação, telemetria, bancada e pequenas instalações técnicas. Em cada caso, a escolha muda: bancada pede ergonomia e ajuste; campo pede robustez; protótipo pede facilidade de ligação; produto final exige repetibilidade, fixação e segurança. O mesmo componente pode funcionar bem em uma bancada e ser inadequado para uma caixa fechada, quente ou sujeita a vibração."
-      ],
-      [
-        "Limitações e cuidados",
-        "Nenhum módulo resolve sozinho problemas de projeto. Fontes precisam de proteção e ventilação, sensores precisam de condicionamento, conectores precisam de dimensionamento, resistores dissipam calor e módulos de comunicação precisam de alimentação estável. Em circuitos ligados à rede elétrica ou comando de carga, conte com profissional habilitado e siga normas aplicáveis. Não use imagem, cor ou formato como prova de compatibilidade."
-      ],
-      [
-        "Erros comuns",
-        "Os erros mais frequentes são usar fonte no limite, ignorar picos de corrente, misturar AC/DC na leitura do anúncio, escolher cabo ou conector subdimensionado, confiar em imagem sem conferir o modelo e deixar de testar o conjunto com carga real. Também é comum comprar por uma sigla conhecida e esquecer tensão, pinagem, acessórios, tamanho físico, temperatura ou isolamento. Em projetos repetitivos, um erro pequeno se multiplica rapidamente."
-      ],
-      [
-        "Como validar antes da compra",
-        "Abra o anúncio oficial, confira o MLB, veja as imagens, compare modelo e especificações, confirme preço, estoque e frete. Se o projeto tiver restrição crítica, liste os requisitos e faça a pergunta antes de comprar. Essa etapa é simples, mas reduz bastante a chance de incompatibilidade. Para componentes de alimentação, meça tensão com carga e observe aquecimento durante o teste."
-      ],
-      [
-        "Segurança e documentação",
-        "Guarde datasheets, manuais e notas de aplicação usados na decisão. Documente tensão, corrente, potência, ligação, proteção, firmware, conexões e testes realizados. Esse registro ajuda na manutenção e evita que uma montagem aparentemente funcional seja repetida de forma insegura. Sempre que houver dúvida, valide com medição e com a documentação do fabricante."
-      ]
-    ],
-    "cover": "blog/covers/contatores-supressores-protecao-bobinas-comandos",
-    "coverAlt": "Capa técnica do artigo Contatores e supressores: proteção de bobinas e comandos"
-  },
-  {
-    "slug": "split-bolt-prensa-cabos-organizacao-instalacoes",
-    "title": "Split Bolt e prensa-cabos: organização e conexão em instalações",
-    "summary": "Aplicações típicas de conectores, prensa-cabos e itens de montagem em painéis e protótipos.",
-    "category": "Conectores",
-    "tags": [
-      "Split Bolt",
-      "prensa-cabos",
-      "conexão"
-    ],
-    "relatedCategories": [
-      "conectores-e-instalacao"
-    ],
-    "relatedFamilies": [
-      "split-bolt"
-    ],
-    "readingTime": "5 min",
-    "publishedAt": "2026-07-13",
-    "updatedAt": "2026-07-13",
-    "references": [
-      "Especificações do fabricante do conector.",
-      "Boas práticas de montagem e fixação de cabos."
-    ],
-    "sections": [
-      [
-        "Quando este tema aparece no projeto",
-        "Split Bolt e prensa-cabos: organização e conexão em instalações entra na decisão quando o projeto precisa sair da ideia e chegar a uma montagem confiável. Antes de escolher o item, registre carga, tensão, corrente, ambiente de instalação, espaço físico, limitações de manutenção e forma de teste. Esse levantamento evita compras por aparência, reduz retrabalho e ajuda a separar o componente realmente necessário de alternativas parecidas. Quando o projeto envolve rede elétrica, comando ou comunicação em campo, essa etapa também protege a instalação e a pessoa que fará a montagem."
-      ],
-      [
-        "Conceitos que precisam estar claros",
-        "O ponto central é entender a função do componente dentro do sistema. Em conectores, pequenos detalhes como faixa de operação, isolamento, dissipação, conector, tolerância, firmware, margem de segurança e condição de instalação mudam o resultado. Use o título do anúncio como ponto de partida, mas confirme dados técnicos no datasheet, no manual, nas imagens e na descrição oficial. Se houver divergência entre nome comercial e especificação, trate a especificação como prioridade."
-      ],
-      [
-        "Critérios de escolha",
-        "Compare primeiro os requisitos elétricos e mecânicos. Depois observe compatibilidade com o restante do circuito, disponibilidade de acessórios, facilidade de montagem, possibilidade de teste e margem para variação de carga. Quando houver modelos semelhantes, priorize o que tiver especificação mais clara e margem adequada para a aplicação real, não apenas o menor preço. Em kits, confirme quantidade, condição e itens inclusos."
-      ],
-      [
-        "Aplicações típicas",
-        "Produtos ligados a Split Bolt, prensa-cabos, conexão aparecem em protótipos, manutenção, automação, telemetria, bancada e pequenas instalações técnicas. Em cada caso, a escolha muda: bancada pede ergonomia e ajuste; campo pede robustez; protótipo pede facilidade de ligação; produto final exige repetibilidade, fixação e segurança. O mesmo componente pode funcionar bem em uma bancada e ser inadequado para uma caixa fechada, quente ou sujeita a vibração."
-      ],
-      [
-        "Limitações e cuidados",
-        "Nenhum módulo resolve sozinho problemas de projeto. Fontes precisam de proteção e ventilação, sensores precisam de condicionamento, conectores precisam de dimensionamento, resistores dissipam calor e módulos de comunicação precisam de alimentação estável. Em circuitos ligados à rede elétrica ou comando de carga, conte com profissional habilitado e siga normas aplicáveis. Não use imagem, cor ou formato como prova de compatibilidade."
-      ],
-      [
-        "Erros comuns",
-        "Os erros mais frequentes são usar fonte no limite, ignorar picos de corrente, misturar AC/DC na leitura do anúncio, escolher cabo ou conector subdimensionado, confiar em imagem sem conferir o modelo e deixar de testar o conjunto com carga real. Também é comum comprar por uma sigla conhecida e esquecer tensão, pinagem, acessórios, tamanho físico, temperatura ou isolamento. Em projetos repetitivos, um erro pequeno se multiplica rapidamente."
-      ],
-      [
-        "Como validar antes da compra",
-        "Abra o anúncio oficial, confira o MLB, veja as imagens, compare modelo e especificações, confirme preço, estoque e frete. Se o projeto tiver restrição crítica, liste os requisitos e faça a pergunta antes de comprar. Essa etapa é simples, mas reduz bastante a chance de incompatibilidade. Para componentes de alimentação, meça tensão com carga e observe aquecimento durante o teste."
-      ],
-      [
-        "Segurança e documentação",
-        "Guarde datasheets, manuais e notas de aplicação usados na decisão. Documente tensão, corrente, potência, ligação, proteção, firmware, conexões e testes realizados. Esse registro ajuda na manutenção e evita que uma montagem aparentemente funcional seja repetida de forma insegura. Sempre que houver dúvida, valide com medição e com a documentação do fabricante."
-      ]
-    ],
-    "cover": "blog/covers/split-bolt-prensa-cabos-organizacao-instalacoes",
-    "coverAlt": "Capa técnica do artigo Split Bolt e prensa-cabos: organização e conexão em instalações"
-  },
-  {
-    "slug": "placa-fenolite-prototipos-eletronicos",
-    "title": "Placa de fenolite: quando utilizar em protótipos eletrônicos",
-    "summary": "Quando placas perfuradas ajudam na montagem, validação e pequenos circuitos.",
-    "category": "Prototipagem",
-    "tags": [
-      "fenolite",
-      "protótipo",
-      "placa perfurada"
-    ],
-    "relatedCategories": [
-      "componentes-eletronicos"
-    ],
-    "relatedFamilies": [],
-    "readingTime": "5 min",
-    "publishedAt": "2026-07-13",
-    "updatedAt": "2026-07-13",
-    "references": [
-      "Boas práticas de soldagem e prototipagem eletrônica.",
-      "Datasheets dos componentes montados no circuito."
-    ],
-    "sections": [
-      [
-        "Quando este tema aparece no projeto",
-        "Placa de fenolite: quando utilizar em protótipos eletrônicos entra na decisão quando o projeto precisa sair da ideia e chegar a uma montagem confiável. Antes de escolher o item, registre carga, tensão, corrente, ambiente de instalação, espaço físico, limitações de manutenção e forma de teste. Esse levantamento evita compras por aparência, reduz retrabalho e ajuda a separar o componente realmente necessário de alternativas parecidas. Quando o projeto envolve rede elétrica, comando ou comunicação em campo, essa etapa também protege a instalação e a pessoa que fará a montagem."
-      ],
-      [
-        "Conceitos que precisam estar claros",
-        "O ponto central é entender a função do componente dentro do sistema. Em prototipagem, pequenos detalhes como faixa de operação, isolamento, dissipação, conector, tolerância, firmware, margem de segurança e condição de instalação mudam o resultado. Use o título do anúncio como ponto de partida, mas confirme dados técnicos no datasheet, no manual, nas imagens e na descrição oficial. Se houver divergência entre nome comercial e especificação, trate a especificação como prioridade."
-      ],
-      [
-        "Critérios de escolha",
-        "Compare primeiro os requisitos elétricos e mecânicos. Depois observe compatibilidade com o restante do circuito, disponibilidade de acessórios, facilidade de montagem, possibilidade de teste e margem para variação de carga. Quando houver modelos semelhantes, priorize o que tiver especificação mais clara e margem adequada para a aplicação real, não apenas o menor preço. Em kits, confirme quantidade, condição e itens inclusos."
-      ],
-      [
-        "Aplicações típicas",
-        "Produtos ligados a fenolite, protótipo, placa perfurada aparecem em protótipos, manutenção, automação, telemetria, bancada e pequenas instalações técnicas. Em cada caso, a escolha muda: bancada pede ergonomia e ajuste; campo pede robustez; protótipo pede facilidade de ligação; produto final exige repetibilidade, fixação e segurança. O mesmo componente pode funcionar bem em uma bancada e ser inadequado para uma caixa fechada, quente ou sujeita a vibração."
-      ],
-      [
-        "Limitações e cuidados",
-        "Nenhum módulo resolve sozinho problemas de projeto. Fontes precisam de proteção e ventilação, sensores precisam de condicionamento, conectores precisam de dimensionamento, resistores dissipam calor e módulos de comunicação precisam de alimentação estável. Em circuitos ligados à rede elétrica ou comando de carga, conte com profissional habilitado e siga normas aplicáveis. Não use imagem, cor ou formato como prova de compatibilidade."
-      ],
-      [
-        "Erros comuns",
-        "Os erros mais frequentes são usar fonte no limite, ignorar picos de corrente, misturar AC/DC na leitura do anúncio, escolher cabo ou conector subdimensionado, confiar em imagem sem conferir o modelo e deixar de testar o conjunto com carga real. Também é comum comprar por uma sigla conhecida e esquecer tensão, pinagem, acessórios, tamanho físico, temperatura ou isolamento. Em projetos repetitivos, um erro pequeno se multiplica rapidamente."
-      ],
-      [
-        "Como validar antes da compra",
-        "Abra o anúncio oficial, confira o MLB, veja as imagens, compare modelo e especificações, confirme preço, estoque e frete. Se o projeto tiver restrição crítica, liste os requisitos e faça a pergunta antes de comprar. Essa etapa é simples, mas reduz bastante a chance de incompatibilidade. Para componentes de alimentação, meça tensão com carga e observe aquecimento durante o teste."
-      ],
-      [
-        "Segurança e documentação",
-        "Guarde datasheets, manuais e notas de aplicação usados na decisão. Documente tensão, corrente, potência, ligação, proteção, firmware, conexões e testes realizados. Esse registro ajuda na manutenção e evita que uma montagem aparentemente funcional seja repetida de forma insegura. Sempre que houver dúvida, valide com medição e com a documentação do fabricante."
-      ]
-    ],
-    "cover": "blog/covers/placa-fenolite-prototipos-eletronicos",
-    "coverAlt": "Capa técnica do artigo Placa de fenolite: quando utilizar em protótipos eletrônicos"
-  },
-  {
-    "slug": "interpretar-tensao-corrente-potencia-modulos-eletronicos",
-    "title": "Como interpretar tensão, corrente e potência em módulos eletrônicos",
-    "summary": "Conceitos práticos para dimensionar alimentação, carga e margem em módulos eletrônicos sem confundir V, A, mA e W.",
-    "category": "Fundamentos",
-    "tags": [
-      "tensão",
-      "corrente",
-      "potência",
-      "dimensionamento"
+      "bancada"
     ],
     "relatedCategories": [
       "fontes-e-alimentacao",
-      "componentes-eletronicos"
+      "instrumentos-de-bancada"
     ],
     "relatedFamilies": [
-      "hi-link-hlk-pm01",
-      "instrumentos-e-fontes"
+      "instrumentos-e-fontes",
+      "hi-link-hlk-pm01"
     ],
     "readingTime": "9 min",
     "references": [
-      "Datasheets dos módulos e fontes usados no projeto.",
-      "Literatura básica de eletrônica sobre potência elétrica e dissipação térmica."
+      "Manuais de fontes de bancada.",
+      "Boas práticas de montagem e validação de circuitos eletrônicos."
     ],
-    "publishedAt": "2026-07-13",
-    "updatedAt": "2026-07-13",
-    "cover": "blog/covers/interpretar-tensao-corrente-potencia-modulos-eletronicos",
-    "coverAlt": "Capa técnica do artigo Como interpretar tensão, corrente e potência em módulos eletrônicos",
+    "publishedAt": "2026-02-09",
+    "updatedAt": "2026-05-26",
+    "cover": "blog/covers/erros-comuns-alimentacao-modulos-eletronicos",
+    "coverAlt": "Capa técnica do artigo Erros comuns na alimentação de módulos eletrônicos",
     "sections": [
       [
         "Quando este tema aparece no projeto",
-        "Como interpretar tensão, corrente e potência em módulos eletrônicos entra na decisão quando o projeto precisa sair da ideia e chegar a uma montagem confiável. Antes de escolher o item, registre carga, tensão, corrente, ambiente de instalação, espaço físico, limitações de manutenção e forma de teste. Esse levantamento evita compras por aparência, reduz retrabalho e ajuda a separar o componente realmente necessário de alternativas parecidas. Quando o projeto envolve rede elétrica, comando ou comunicação em campo, essa etapa também protege a instalação e a pessoa que fará a montagem."
+        "Erros comuns na alimentação de módulos eletrônicos entra na decisão quando o projeto precisa sair da ideia e chegar a uma montagem confiável. Antes de escolher o item, registre carga, tensão, corrente, ambiente de instalação, espaço físico, limitações de manutenção e forma de teste. Esse levantamento evita compras por aparência, reduz retrabalho e ajuda a separar o componente realmente necessário de alternativas parecidas. Quando o projeto envolve rede elétrica, comando ou comunicação em campo, essa etapa também protege a instalação e a pessoa que fará a montagem."
       ],
       [
         "Conceitos que precisam estar claros",
-        "O ponto central é entender a função do componente dentro do sistema. Em fundamentos, pequenos detalhes como faixa de operação, isolamento, dissipação, conector, tolerância, firmware, margem de segurança e condição de instalação mudam o resultado. Use o título do anúncio como ponto de partida, mas confirme dados técnicos no datasheet, no manual, nas imagens e na descrição oficial. Se houver divergência entre nome comercial e especificação, trate a especificação como prioridade."
+        "O ponto central é entender a função do componente dentro do sistema. Em fontes e alimentação, pequenos detalhes como faixa de operação, isolamento, dissipação, conector, tolerância, firmware, margem de segurança e condição de instalação mudam o resultado. Use o título do anúncio como ponto de partida, mas confirme dados técnicos no datasheet, no manual, nas imagens e na descrição oficial. Se houver divergência entre nome comercial e especificação, trate a especificação como prioridade."
       ],
       [
         "Critérios de escolha",
@@ -763,7 +42,7 @@
       ],
       [
         "Aplicações típicas",
-        "Produtos ligados a tens?o, corrente, pot?ncia, dimensionamento aparecem em protótipos, manutenção, automação, telemetria, bancada e pequenas instalações técnicas. Em cada caso, a escolha muda: bancada pede ergonomia e ajuste; campo pede robustez; protótipo pede facilidade de ligação; produto final exige repetibilidade, fixação e segurança. O mesmo componente pode funcionar bem em uma bancada e ser inadequado para uma caixa fechada, quente ou sujeita a vibração."
+        "Produtos ligados a alimentação, erros comuns, proteção, bancada aparecem em protótipos, manutenção, automação, telemetria, bancada e pequenas instalações técnicas. Em cada caso, a escolha muda: bancada pede ergonomia e ajuste; campo pede robustez; protótipo pede facilidade de ligação; produto final exige repetibilidade, fixação e segurança. O mesmo componente pode funcionar bem em uma bancada e ser inadequado para uma caixa fechada, quente ou sujeita a vibração."
       ],
       [
         "Limitações e cuidados",
@@ -808,8 +87,8 @@
       "Documentação SIMCom SIM800L.",
       "Notas de aplicação sobre alimentação de modems celulares."
     ],
-    "publishedAt": "2026-07-13",
-    "updatedAt": "2026-07-13",
+    "publishedAt": "2026-01-12",
+    "updatedAt": "2026-04-21",
     "cover": "blog/covers/como-escolher-fonte-esp32-modulos-gsm",
     "coverAlt": "Capa técnica do artigo Como escolher uma fonte para ESP32 e módulos GSM",
     "sections": [
@@ -848,41 +127,41 @@
     ]
   },
   {
-    "slug": "erros-comuns-alimentacao-modulos-eletronicos",
-    "title": "Erros comuns na alimentação de módulos eletrônicos",
-    "summary": "Falhas típicas de bancada e campo: fonte subdimensionada, cabos finos, aterramento ruim, ruído e ausência de proteção.",
-    "category": "Fontes e alimentação",
+    "slug": "interpretar-tensao-corrente-potencia-modulos-eletronicos",
+    "title": "Como interpretar tensão, corrente e potência em módulos eletrônicos",
+    "summary": "Conceitos práticos para dimensionar alimentação, carga e margem em módulos eletrônicos sem confundir V, A, mA e W.",
+    "category": "Fundamentos",
     "tags": [
-      "alimentação",
-      "erros comuns",
-      "proteção",
-      "bancada"
+      "tensão",
+      "corrente",
+      "potência",
+      "dimensionamento"
     ],
     "relatedCategories": [
       "fontes-e-alimentacao",
-      "instrumentos-de-bancada"
+      "componentes-eletronicos"
     ],
     "relatedFamilies": [
-      "instrumentos-e-fontes",
-      "hi-link-hlk-pm01"
+      "hi-link-hlk-pm01",
+      "instrumentos-e-fontes"
     ],
     "readingTime": "9 min",
     "references": [
-      "Manuais de fontes de bancada.",
-      "Boas práticas de montagem e validação de circuitos eletrônicos."
+      "Datasheets dos módulos e fontes usados no projeto.",
+      "Literatura básica de eletrônica sobre potência elétrica e dissipação térmica."
     ],
-    "publishedAt": "2026-07-13",
-    "updatedAt": "2026-07-13",
-    "cover": "blog/covers/erros-comuns-alimentacao-modulos-eletronicos",
-    "coverAlt": "Capa técnica do artigo Erros comuns na alimentação de módulos eletrônicos",
+    "publishedAt": "2025-12-01",
+    "updatedAt": "2026-03-17",
+    "cover": "blog/covers/interpretar-tensao-corrente-potencia-modulos-eletronicos",
+    "coverAlt": "Capa técnica do artigo Como interpretar tensão, corrente e potência em módulos eletrônicos",
     "sections": [
       [
         "Quando este tema aparece no projeto",
-        "Erros comuns na alimentação de módulos eletrônicos entra na decisão quando o projeto precisa sair da ideia e chegar a uma montagem confiável. Antes de escolher o item, registre carga, tensão, corrente, ambiente de instalação, espaço físico, limitações de manutenção e forma de teste. Esse levantamento evita compras por aparência, reduz retrabalho e ajuda a separar o componente realmente necessário de alternativas parecidas. Quando o projeto envolve rede elétrica, comando ou comunicação em campo, essa etapa também protege a instalação e a pessoa que fará a montagem."
+        "Como interpretar tensão, corrente e potência em módulos eletrônicos entra na decisão quando o projeto precisa sair da ideia e chegar a uma montagem confiável. Antes de escolher o item, registre carga, tensão, corrente, ambiente de instalação, espaço físico, limitações de manutenção e forma de teste. Esse levantamento evita compras por aparência, reduz retrabalho e ajuda a separar o componente realmente necessário de alternativas parecidas. Quando o projeto envolve rede elétrica, comando ou comunicação em campo, essa etapa também protege a instalação e a pessoa que fará a montagem."
       ],
       [
         "Conceitos que precisam estar claros",
-        "O ponto central é entender a função do componente dentro do sistema. Em fontes e alimentação, pequenos detalhes como faixa de operação, isolamento, dissipação, conector, tolerância, firmware, margem de segurança e condição de instalação mudam o resultado. Use o título do anúncio como ponto de partida, mas confirme dados técnicos no datasheet, no manual, nas imagens e na descrição oficial. Se houver divergência entre nome comercial e especificação, trate a especificação como prioridade."
+        "O ponto central é entender a função do componente dentro do sistema. Em fundamentos, pequenos detalhes como faixa de operação, isolamento, dissipação, conector, tolerância, firmware, margem de segurança e condição de instalação mudam o resultado. Use o título do anúncio como ponto de partida, mas confirme dados técnicos no datasheet, no manual, nas imagens e na descrição oficial. Se houver divergência entre nome comercial e especificação, trate a especificação como prioridade."
       ],
       [
         "Critérios de escolha",
@@ -890,7 +169,7 @@
       ],
       [
         "Aplicações típicas",
-        "Produtos ligados a alimentação, erros comuns, proteção, bancada aparecem em protótipos, manutenção, automação, telemetria, bancada e pequenas instalações técnicas. Em cada caso, a escolha muda: bancada pede ergonomia e ajuste; campo pede robustez; protótipo pede facilidade de ligação; produto final exige repetibilidade, fixação e segurança. O mesmo componente pode funcionar bem em uma bancada e ser inadequado para uma caixa fechada, quente ou sujeita a vibração."
+        "Produtos ligados a tens?o, corrente, pot?ncia, dimensionamento aparecem em protótipos, manutenção, automação, telemetria, bancada e pequenas instalações técnicas. Em cada caso, a escolha muda: bancada pede ergonomia e ajuste; campo pede robustez; protótipo pede facilidade de ligação; produto final exige repetibilidade, fixação e segurança. O mesmo componente pode funcionar bem em uma bancada e ser inadequado para uma caixa fechada, quente ou sujeita a vibração."
       ],
       [
         "Limitações e cuidados",
@@ -909,5 +188,726 @@
         "Guarde datasheets, manuais e notas de aplicação usados na decisão. Documente tensão, corrente, potência, ligação, proteção, firmware, conexões e testes realizados. Esse registro ajuda na manutenção e evita que uma montagem aparentemente funcional seja repetida de forma insegura. Sempre que houver dúvida, valide com medição e com a documentação do fabricante."
       ]
     ]
+  },
+  {
+    "slug": "placa-fenolite-prototipos-eletronicos",
+    "title": "Placa de fenolite: quando utilizar em protótipos eletrônicos",
+    "summary": "Quando placas perfuradas ajudam na montagem, validação e pequenos circuitos.",
+    "category": "Prototipagem",
+    "tags": [
+      "fenolite",
+      "protótipo",
+      "placa perfurada"
+    ],
+    "relatedCategories": [
+      "componentes-eletronicos"
+    ],
+    "relatedFamilies": [],
+    "readingTime": "5 min",
+    "publishedAt": "2025-11-03",
+    "updatedAt": "2026-02-24",
+    "references": [
+      "Boas práticas de soldagem e prototipagem eletrônica.",
+      "Datasheets dos componentes montados no circuito."
+    ],
+    "sections": [
+      [
+        "Quando este tema aparece no projeto",
+        "Placa de fenolite: quando utilizar em protótipos eletrônicos entra na decisão quando o projeto precisa sair da ideia e chegar a uma montagem confiável. Antes de escolher o item, registre carga, tensão, corrente, ambiente de instalação, espaço físico, limitações de manutenção e forma de teste. Esse levantamento evita compras por aparência, reduz retrabalho e ajuda a separar o componente realmente necessário de alternativas parecidas. Quando o projeto envolve rede elétrica, comando ou comunicação em campo, essa etapa também protege a instalação e a pessoa que fará a montagem."
+      ],
+      [
+        "Conceitos que precisam estar claros",
+        "O ponto central é entender a função do componente dentro do sistema. Em prototipagem, pequenos detalhes como faixa de operação, isolamento, dissipação, conector, tolerância, firmware, margem de segurança e condição de instalação mudam o resultado. Use o título do anúncio como ponto de partida, mas confirme dados técnicos no datasheet, no manual, nas imagens e na descrição oficial. Se houver divergência entre nome comercial e especificação, trate a especificação como prioridade."
+      ],
+      [
+        "Critérios de escolha",
+        "Compare primeiro os requisitos elétricos e mecânicos. Depois observe compatibilidade com o restante do circuito, disponibilidade de acessórios, facilidade de montagem, possibilidade de teste e margem para variação de carga. Quando houver modelos semelhantes, priorize o que tiver especificação mais clara e margem adequada para a aplicação real, não apenas o menor preço. Em kits, confirme quantidade, condição e itens inclusos."
+      ],
+      [
+        "Aplicações típicas",
+        "Produtos ligados a fenolite, protótipo, placa perfurada aparecem em protótipos, manutenção, automação, telemetria, bancada e pequenas instalações técnicas. Em cada caso, a escolha muda: bancada pede ergonomia e ajuste; campo pede robustez; protótipo pede facilidade de ligação; produto final exige repetibilidade, fixação e segurança. O mesmo componente pode funcionar bem em uma bancada e ser inadequado para uma caixa fechada, quente ou sujeita a vibração."
+      ],
+      [
+        "Limitações e cuidados",
+        "Nenhum módulo resolve sozinho problemas de projeto. Fontes precisam de proteção e ventilação, sensores precisam de condicionamento, conectores precisam de dimensionamento, resistores dissipam calor e módulos de comunicação precisam de alimentação estável. Em circuitos ligados à rede elétrica ou comando de carga, conte com profissional habilitado e siga normas aplicáveis. Não use imagem, cor ou formato como prova de compatibilidade."
+      ],
+      [
+        "Erros comuns",
+        "Os erros mais frequentes são usar fonte no limite, ignorar picos de corrente, misturar AC/DC na leitura do anúncio, escolher cabo ou conector subdimensionado, confiar em imagem sem conferir o modelo e deixar de testar o conjunto com carga real. Também é comum comprar por uma sigla conhecida e esquecer tensão, pinagem, acessórios, tamanho físico, temperatura ou isolamento. Em projetos repetitivos, um erro pequeno se multiplica rapidamente."
+      ],
+      [
+        "Como validar antes da compra",
+        "Abra o anúncio oficial, confira o MLB, veja as imagens, compare modelo e especificações, confirme preço, estoque e frete. Se o projeto tiver restrição crítica, liste os requisitos e faça a pergunta antes de comprar. Essa etapa é simples, mas reduz bastante a chance de incompatibilidade. Para componentes de alimentação, meça tensão com carga e observe aquecimento durante o teste."
+      ],
+      [
+        "Segurança e documentação",
+        "Guarde datasheets, manuais e notas de aplicação usados na decisão. Documente tensão, corrente, potência, ligação, proteção, firmware, conexões e testes realizados. Esse registro ajuda na manutenção e evita que uma montagem aparentemente funcional seja repetida de forma insegura. Sempre que houver dúvida, valide com medição e com a documentação do fabricante."
+      ]
+    ],
+    "cover": "blog/covers/placa-fenolite-prototipos-eletronicos",
+    "coverAlt": "Capa técnica do artigo Placa de fenolite: quando utilizar em protótipos eletrônicos"
+  },
+  {
+    "slug": "split-bolt-prensa-cabos-organizacao-instalacoes",
+    "title": "Split Bolt e prensa-cabos: organização e conexão em instalações",
+    "summary": "Aplicações típicas de conectores, prensa-cabos e itens de montagem em painéis e protótipos.",
+    "category": "Conectores",
+    "tags": [
+      "Split Bolt",
+      "prensa-cabos",
+      "conexão"
+    ],
+    "relatedCategories": [
+      "conectores-e-instalacao"
+    ],
+    "relatedFamilies": [
+      "split-bolt"
+    ],
+    "readingTime": "5 min",
+    "publishedAt": "2025-10-06",
+    "updatedAt": "2026-01-20",
+    "references": [
+      "Especificações do fabricante do conector.",
+      "Boas práticas de montagem e fixação de cabos."
+    ],
+    "sections": [
+      [
+        "Quando este tema aparece no projeto",
+        "Split Bolt e prensa-cabos: organização e conexão em instalações entra na decisão quando o projeto precisa sair da ideia e chegar a uma montagem confiável. Antes de escolher o item, registre carga, tensão, corrente, ambiente de instalação, espaço físico, limitações de manutenção e forma de teste. Esse levantamento evita compras por aparência, reduz retrabalho e ajuda a separar o componente realmente necessário de alternativas parecidas. Quando o projeto envolve rede elétrica, comando ou comunicação em campo, essa etapa também protege a instalação e a pessoa que fará a montagem."
+      ],
+      [
+        "Conceitos que precisam estar claros",
+        "O ponto central é entender a função do componente dentro do sistema. Em conectores, pequenos detalhes como faixa de operação, isolamento, dissipação, conector, tolerância, firmware, margem de segurança e condição de instalação mudam o resultado. Use o título do anúncio como ponto de partida, mas confirme dados técnicos no datasheet, no manual, nas imagens e na descrição oficial. Se houver divergência entre nome comercial e especificação, trate a especificação como prioridade."
+      ],
+      [
+        "Critérios de escolha",
+        "Compare primeiro os requisitos elétricos e mecânicos. Depois observe compatibilidade com o restante do circuito, disponibilidade de acessórios, facilidade de montagem, possibilidade de teste e margem para variação de carga. Quando houver modelos semelhantes, priorize o que tiver especificação mais clara e margem adequada para a aplicação real, não apenas o menor preço. Em kits, confirme quantidade, condição e itens inclusos."
+      ],
+      [
+        "Aplicações típicas",
+        "Produtos ligados a Split Bolt, prensa-cabos, conexão aparecem em protótipos, manutenção, automação, telemetria, bancada e pequenas instalações técnicas. Em cada caso, a escolha muda: bancada pede ergonomia e ajuste; campo pede robustez; protótipo pede facilidade de ligação; produto final exige repetibilidade, fixação e segurança. O mesmo componente pode funcionar bem em uma bancada e ser inadequado para uma caixa fechada, quente ou sujeita a vibração."
+      ],
+      [
+        "Limitações e cuidados",
+        "Nenhum módulo resolve sozinho problemas de projeto. Fontes precisam de proteção e ventilação, sensores precisam de condicionamento, conectores precisam de dimensionamento, resistores dissipam calor e módulos de comunicação precisam de alimentação estável. Em circuitos ligados à rede elétrica ou comando de carga, conte com profissional habilitado e siga normas aplicáveis. Não use imagem, cor ou formato como prova de compatibilidade."
+      ],
+      [
+        "Erros comuns",
+        "Os erros mais frequentes são usar fonte no limite, ignorar picos de corrente, misturar AC/DC na leitura do anúncio, escolher cabo ou conector subdimensionado, confiar em imagem sem conferir o modelo e deixar de testar o conjunto com carga real. Também é comum comprar por uma sigla conhecida e esquecer tensão, pinagem, acessórios, tamanho físico, temperatura ou isolamento. Em projetos repetitivos, um erro pequeno se multiplica rapidamente."
+      ],
+      [
+        "Como validar antes da compra",
+        "Abra o anúncio oficial, confira o MLB, veja as imagens, compare modelo e especificações, confirme preço, estoque e frete. Se o projeto tiver restrição crítica, liste os requisitos e faça a pergunta antes de comprar. Essa etapa é simples, mas reduz bastante a chance de incompatibilidade. Para componentes de alimentação, meça tensão com carga e observe aquecimento durante o teste."
+      ],
+      [
+        "Segurança e documentação",
+        "Guarde datasheets, manuais e notas de aplicação usados na decisão. Documente tensão, corrente, potência, ligação, proteção, firmware, conexões e testes realizados. Esse registro ajuda na manutenção e evita que uma montagem aparentemente funcional seja repetida de forma insegura. Sempre que houver dúvida, valide com medição e com a documentação do fabricante."
+      ]
+    ],
+    "cover": "blog/covers/split-bolt-prensa-cabos-organizacao-instalacoes",
+    "coverAlt": "Capa técnica do artigo Split Bolt e prensa-cabos: organização e conexão em instalações"
+  },
+  {
+    "slug": "contatores-supressores-protecao-bobinas-comandos",
+    "title": "Contatores e supressores: proteção de bobinas e comandos",
+    "summary": "Como reduzir transientes e melhorar a confiabilidade em circuitos de comando.",
+    "category": "Automação",
+    "tags": [
+      "contator",
+      "supressor",
+      "comando"
+    ],
+    "relatedCategories": [
+      "automacao-e-comando"
+    ],
+    "relatedFamilies": [
+      "contatores"
+    ],
+    "readingTime": "6 min",
+    "publishedAt": "2025-09-08",
+    "updatedAt": "2025-12-09",
+    "references": [
+      "Manuais dos contatores utilizados.",
+      "Notas de aplicação para supressão de transientes em bobinas."
+    ],
+    "sections": [
+      [
+        "Quando este tema aparece no projeto",
+        "Contatores e supressores: proteção de bobinas e comandos entra na decisão quando o projeto precisa sair da ideia e chegar a uma montagem confiável. Antes de escolher o item, registre carga, tensão, corrente, ambiente de instalação, espaço físico, limitações de manutenção e forma de teste. Esse levantamento evita compras por aparência, reduz retrabalho e ajuda a separar o componente realmente necessário de alternativas parecidas. Quando o projeto envolve rede elétrica, comando ou comunicação em campo, essa etapa também protege a instalação e a pessoa que fará a montagem."
+      ],
+      [
+        "Conceitos que precisam estar claros",
+        "O ponto central é entender a função do componente dentro do sistema. Em automação, pequenos detalhes como faixa de operação, isolamento, dissipação, conector, tolerância, firmware, margem de segurança e condição de instalação mudam o resultado. Use o título do anúncio como ponto de partida, mas confirme dados técnicos no datasheet, no manual, nas imagens e na descrição oficial. Se houver divergência entre nome comercial e especificação, trate a especificação como prioridade."
+      ],
+      [
+        "Critérios de escolha",
+        "Compare primeiro os requisitos elétricos e mecânicos. Depois observe compatibilidade com o restante do circuito, disponibilidade de acessórios, facilidade de montagem, possibilidade de teste e margem para variação de carga. Quando houver modelos semelhantes, priorize o que tiver especificação mais clara e margem adequada para a aplicação real, não apenas o menor preço. Em kits, confirme quantidade, condição e itens inclusos."
+      ],
+      [
+        "Aplicações típicas",
+        "Produtos ligados a contator, supressor, comando aparecem em protótipos, manutenção, automação, telemetria, bancada e pequenas instalações técnicas. Em cada caso, a escolha muda: bancada pede ergonomia e ajuste; campo pede robustez; protótipo pede facilidade de ligação; produto final exige repetibilidade, fixação e segurança. O mesmo componente pode funcionar bem em uma bancada e ser inadequado para uma caixa fechada, quente ou sujeita a vibração."
+      ],
+      [
+        "Limitações e cuidados",
+        "Nenhum módulo resolve sozinho problemas de projeto. Fontes precisam de proteção e ventilação, sensores precisam de condicionamento, conectores precisam de dimensionamento, resistores dissipam calor e módulos de comunicação precisam de alimentação estável. Em circuitos ligados à rede elétrica ou comando de carga, conte com profissional habilitado e siga normas aplicáveis. Não use imagem, cor ou formato como prova de compatibilidade."
+      ],
+      [
+        "Erros comuns",
+        "Os erros mais frequentes são usar fonte no limite, ignorar picos de corrente, misturar AC/DC na leitura do anúncio, escolher cabo ou conector subdimensionado, confiar em imagem sem conferir o modelo e deixar de testar o conjunto com carga real. Também é comum comprar por uma sigla conhecida e esquecer tensão, pinagem, acessórios, tamanho físico, temperatura ou isolamento. Em projetos repetitivos, um erro pequeno se multiplica rapidamente."
+      ],
+      [
+        "Como validar antes da compra",
+        "Abra o anúncio oficial, confira o MLB, veja as imagens, compare modelo e especificações, confirme preço, estoque e frete. Se o projeto tiver restrição crítica, liste os requisitos e faça a pergunta antes de comprar. Essa etapa é simples, mas reduz bastante a chance de incompatibilidade. Para componentes de alimentação, meça tensão com carga e observe aquecimento durante o teste."
+      ],
+      [
+        "Segurança e documentação",
+        "Guarde datasheets, manuais e notas de aplicação usados na decisão. Documente tensão, corrente, potência, ligação, proteção, firmware, conexões e testes realizados. Esse registro ajuda na manutenção e evita que uma montagem aparentemente funcional seja repetida de forma insegura. Sempre que houver dúvida, valide com medição e com a documentação do fabricante."
+      ]
+    ],
+    "cover": "blog/covers/contatores-supressores-protecao-bobinas-comandos",
+    "coverAlt": "Capa técnica do artigo Contatores e supressores: proteção de bobinas e comandos"
+  },
+  {
+    "slug": "varistores-protecao-surtos-circuitos",
+    "title": "Varistores: proteção contra surtos em circuitos eletrônicos",
+    "summary": "O que observar ao selecionar varistores para proteção e absorção de surtos.",
+    "category": "Automação",
+    "tags": [
+      "varistor",
+      "proteção",
+      "surtos"
+    ],
+    "relatedCategories": [
+      "componentes-eletronicos",
+      "automacao-e-comando"
+    ],
+    "relatedFamilies": [
+      "varistores"
+    ],
+    "readingTime": "6 min",
+    "publishedAt": "2025-08-11",
+    "updatedAt": "2025-11-18",
+    "references": [
+      "Datasheets dos varistores.",
+      "Notas de aplicação de proteção contra surtos."
+    ],
+    "sections": [
+      [
+        "Quando este tema aparece no projeto",
+        "Varistores: proteção contra surtos em circuitos eletrônicos entra na decisão quando o projeto precisa sair da ideia e chegar a uma montagem confiável. Antes de escolher o item, registre carga, tensão, corrente, ambiente de instalação, espaço físico, limitações de manutenção e forma de teste. Esse levantamento evita compras por aparência, reduz retrabalho e ajuda a separar o componente realmente necessário de alternativas parecidas. Quando o projeto envolve rede elétrica, comando ou comunicação em campo, essa etapa também protege a instalação e a pessoa que fará a montagem."
+      ],
+      [
+        "Conceitos que precisam estar claros",
+        "O ponto central é entender a função do componente dentro do sistema. Em automação, pequenos detalhes como faixa de operação, isolamento, dissipação, conector, tolerância, firmware, margem de segurança e condição de instalação mudam o resultado. Use o título do anúncio como ponto de partida, mas confirme dados técnicos no datasheet, no manual, nas imagens e na descrição oficial. Se houver divergência entre nome comercial e especificação, trate a especificação como prioridade."
+      ],
+      [
+        "Critérios de escolha",
+        "Compare primeiro os requisitos elétricos e mecânicos. Depois observe compatibilidade com o restante do circuito, disponibilidade de acessórios, facilidade de montagem, possibilidade de teste e margem para variação de carga. Quando houver modelos semelhantes, priorize o que tiver especificação mais clara e margem adequada para a aplicação real, não apenas o menor preço. Em kits, confirme quantidade, condição e itens inclusos."
+      ],
+      [
+        "Aplicações típicas",
+        "Produtos ligados a varistor, proteção, surtos aparecem em protótipos, manutenção, automação, telemetria, bancada e pequenas instalações técnicas. Em cada caso, a escolha muda: bancada pede ergonomia e ajuste; campo pede robustez; protótipo pede facilidade de ligação; produto final exige repetibilidade, fixação e segurança. O mesmo componente pode funcionar bem em uma bancada e ser inadequado para uma caixa fechada, quente ou sujeita a vibração."
+      ],
+      [
+        "Limitações e cuidados",
+        "Nenhum módulo resolve sozinho problemas de projeto. Fontes precisam de proteção e ventilação, sensores precisam de condicionamento, conectores precisam de dimensionamento, resistores dissipam calor e módulos de comunicação precisam de alimentação estável. Em circuitos ligados à rede elétrica ou comando de carga, conte com profissional habilitado e siga normas aplicáveis. Não use imagem, cor ou formato como prova de compatibilidade."
+      ],
+      [
+        "Erros comuns",
+        "Os erros mais frequentes são usar fonte no limite, ignorar picos de corrente, misturar AC/DC na leitura do anúncio, escolher cabo ou conector subdimensionado, confiar em imagem sem conferir o modelo e deixar de testar o conjunto com carga real. Também é comum comprar por uma sigla conhecida e esquecer tensão, pinagem, acessórios, tamanho físico, temperatura ou isolamento. Em projetos repetitivos, um erro pequeno se multiplica rapidamente."
+      ],
+      [
+        "Como validar antes da compra",
+        "Abra o anúncio oficial, confira o MLB, veja as imagens, compare modelo e especificações, confirme preço, estoque e frete. Se o projeto tiver restrição crítica, liste os requisitos e faça a pergunta antes de comprar. Essa etapa é simples, mas reduz bastante a chance de incompatibilidade. Para componentes de alimentação, meça tensão com carga e observe aquecimento durante o teste."
+      ],
+      [
+        "Segurança e documentação",
+        "Guarde datasheets, manuais e notas de aplicação usados na decisão. Documente tensão, corrente, potência, ligação, proteção, firmware, conexões e testes realizados. Esse registro ajuda na manutenção e evita que uma montagem aparentemente funcional seja repetida de forma insegura. Sempre que houver dúvida, valide com medição e com a documentação do fabricante."
+      ]
+    ],
+    "cover": "blog/covers/varistores-protecao-surtos-circuitos",
+    "coverAlt": "Capa técnica do artigo Varistores: proteção contra surtos em circuitos eletrônicos"
+  },
+  {
+    "slug": "resistores-10k-100k-quando-utilizar",
+    "title": "Resistores de 10 kΩ e 100 kΩ: quando utilizar cada valor",
+    "summary": "Entenda o papel de resistores em pull-up, divisores, polarização e prototipagem.",
+    "category": "Prototipagem",
+    "tags": [
+      "resistores",
+      "10 kΩ",
+      "100 kΩ"
+    ],
+    "relatedCategories": [
+      "componentes-eletronicos"
+    ],
+    "relatedFamilies": [],
+    "readingTime": "5 min",
+    "publishedAt": "2025-07-14",
+    "updatedAt": "2025-10-20",
+    "references": [
+      "Literatura básica de eletrônica analógica.",
+      "Datasheets dos circuitos integrados usados no projeto."
+    ],
+    "sections": [
+      [
+        "Quando este tema aparece no projeto",
+        "Resistores de 10 kΩ e 100 kΩ: quando utilizar cada valor entra na decisão quando o projeto precisa sair da ideia e chegar a uma montagem confiável. Antes de escolher o item, registre carga, tensão, corrente, ambiente de instalação, espaço físico, limitações de manutenção e forma de teste. Esse levantamento evita compras por aparência, reduz retrabalho e ajuda a separar o componente realmente necessário de alternativas parecidas. Quando o projeto envolve rede elétrica, comando ou comunicação em campo, essa etapa também protege a instalação e a pessoa que fará a montagem."
+      ],
+      [
+        "Conceitos que precisam estar claros",
+        "O ponto central é entender a função do componente dentro do sistema. Em prototipagem, pequenos detalhes como faixa de operação, isolamento, dissipação, conector, tolerância, firmware, margem de segurança e condição de instalação mudam o resultado. Use o título do anúncio como ponto de partida, mas confirme dados técnicos no datasheet, no manual, nas imagens e na descrição oficial. Se houver divergência entre nome comercial e especificação, trate a especificação como prioridade."
+      ],
+      [
+        "Critérios de escolha",
+        "Compare primeiro os requisitos elétricos e mecânicos. Depois observe compatibilidade com o restante do circuito, disponibilidade de acessórios, facilidade de montagem, possibilidade de teste e margem para variação de carga. Quando houver modelos semelhantes, priorize o que tiver especificação mais clara e margem adequada para a aplicação real, não apenas o menor preço. Em kits, confirme quantidade, condição e itens inclusos."
+      ],
+      [
+        "Aplicações típicas",
+        "Produtos ligados a resistores, 10 kΩ, 100 kΩ aparecem em protótipos, manutenção, automação, telemetria, bancada e pequenas instalações técnicas. Em cada caso, a escolha muda: bancada pede ergonomia e ajuste; campo pede robustez; protótipo pede facilidade de ligação; produto final exige repetibilidade, fixação e segurança. O mesmo componente pode funcionar bem em uma bancada e ser inadequado para uma caixa fechada, quente ou sujeita a vibração."
+      ],
+      [
+        "Limitações e cuidados",
+        "Nenhum módulo resolve sozinho problemas de projeto. Fontes precisam de proteção e ventilação, sensores precisam de condicionamento, conectores precisam de dimensionamento, resistores dissipam calor e módulos de comunicação precisam de alimentação estável. Em circuitos ligados à rede elétrica ou comando de carga, conte com profissional habilitado e siga normas aplicáveis. Não use imagem, cor ou formato como prova de compatibilidade."
+      ],
+      [
+        "Erros comuns",
+        "Os erros mais frequentes são usar fonte no limite, ignorar picos de corrente, misturar AC/DC na leitura do anúncio, escolher cabo ou conector subdimensionado, confiar em imagem sem conferir o modelo e deixar de testar o conjunto com carga real. Também é comum comprar por uma sigla conhecida e esquecer tensão, pinagem, acessórios, tamanho físico, temperatura ou isolamento. Em projetos repetitivos, um erro pequeno se multiplica rapidamente."
+      ],
+      [
+        "Como validar antes da compra",
+        "Abra o anúncio oficial, confira o MLB, veja as imagens, compare modelo e especificações, confirme preço, estoque e frete. Se o projeto tiver restrição crítica, liste os requisitos e faça a pergunta antes de comprar. Essa etapa é simples, mas reduz bastante a chance de incompatibilidade. Para componentes de alimentação, meça tensão com carga e observe aquecimento durante o teste."
+      ],
+      [
+        "Segurança e documentação",
+        "Guarde datasheets, manuais e notas de aplicação usados na decisão. Documente tensão, corrente, potência, ligação, proteção, firmware, conexões e testes realizados. Esse registro ajuda na manutenção e evita que uma montagem aparentemente funcional seja repetida de forma insegura. Sempre que houver dúvida, valide com medição e com a documentação do fabricante."
+      ]
+    ],
+    "cover": "blog/covers/resistores-10k-100k-quando-utilizar",
+    "coverAlt": "Capa técnica do artigo Resistores de 10 kΩ e 100 kΩ: quando utilizar cada valor"
+  },
+  {
+    "slug": "como-escolher-fonte-bancada",
+    "title": "Como escolher uma fonte de bancada",
+    "summary": "Tensão, corrente, proteções e uso prático na escolha de uma fonte para laboratório e manutenção.",
+    "category": "Instrumentação",
+    "tags": [
+      "fonte de bancada",
+      "laboratório",
+      "teste"
+    ],
+    "relatedCategories": [
+      "instrumentos-de-bancada"
+    ],
+    "relatedFamilies": [
+      "instrumentos-e-fontes"
+    ],
+    "readingTime": "6 min",
+    "publishedAt": "2025-06-16",
+    "updatedAt": "2025-09-16",
+    "references": [
+      "Manuais dos modelos de fonte de bancada.",
+      "Boas práticas de laboratório eletrônico."
+    ],
+    "sections": [
+      [
+        "Quando este tema aparece no projeto",
+        "Como escolher uma fonte de bancada entra na decisão quando o projeto precisa sair da ideia e chegar a uma montagem confiável. Antes de escolher o item, registre carga, tensão, corrente, ambiente de instalação, espaço físico, limitações de manutenção e forma de teste. Esse levantamento evita compras por aparência, reduz retrabalho e ajuda a separar o componente realmente necessário de alternativas parecidas. Quando o projeto envolve rede elétrica, comando ou comunicação em campo, essa etapa também protege a instalação e a pessoa que fará a montagem."
+      ],
+      [
+        "Conceitos que precisam estar claros",
+        "O ponto central é entender a função do componente dentro do sistema. Em instrumentação, pequenos detalhes como faixa de operação, isolamento, dissipação, conector, tolerância, firmware, margem de segurança e condição de instalação mudam o resultado. Use o título do anúncio como ponto de partida, mas confirme dados técnicos no datasheet, no manual, nas imagens e na descrição oficial. Se houver divergência entre nome comercial e especificação, trate a especificação como prioridade."
+      ],
+      [
+        "Critérios de escolha",
+        "Compare primeiro os requisitos elétricos e mecânicos. Depois observe compatibilidade com o restante do circuito, disponibilidade de acessórios, facilidade de montagem, possibilidade de teste e margem para variação de carga. Quando houver modelos semelhantes, priorize o que tiver especificação mais clara e margem adequada para a aplicação real, não apenas o menor preço. Em kits, confirme quantidade, condição e itens inclusos."
+      ],
+      [
+        "Aplicações típicas",
+        "Produtos ligados a fonte de bancada, laboratório, teste aparecem em protótipos, manutenção, automação, telemetria, bancada e pequenas instalações técnicas. Em cada caso, a escolha muda: bancada pede ergonomia e ajuste; campo pede robustez; protótipo pede facilidade de ligação; produto final exige repetibilidade, fixação e segurança. O mesmo componente pode funcionar bem em uma bancada e ser inadequado para uma caixa fechada, quente ou sujeita a vibração."
+      ],
+      [
+        "Limitações e cuidados",
+        "Nenhum módulo resolve sozinho problemas de projeto. Fontes precisam de proteção e ventilação, sensores precisam de condicionamento, conectores precisam de dimensionamento, resistores dissipam calor e módulos de comunicação precisam de alimentação estável. Em circuitos ligados à rede elétrica ou comando de carga, conte com profissional habilitado e siga normas aplicáveis. Não use imagem, cor ou formato como prova de compatibilidade."
+      ],
+      [
+        "Erros comuns",
+        "Os erros mais frequentes são usar fonte no limite, ignorar picos de corrente, misturar AC/DC na leitura do anúncio, escolher cabo ou conector subdimensionado, confiar em imagem sem conferir o modelo e deixar de testar o conjunto com carga real. Também é comum comprar por uma sigla conhecida e esquecer tensão, pinagem, acessórios, tamanho físico, temperatura ou isolamento. Em projetos repetitivos, um erro pequeno se multiplica rapidamente."
+      ],
+      [
+        "Como validar antes da compra",
+        "Abra o anúncio oficial, confira o MLB, veja as imagens, compare modelo e especificações, confirme preço, estoque e frete. Se o projeto tiver restrição crítica, liste os requisitos e faça a pergunta antes de comprar. Essa etapa é simples, mas reduz bastante a chance de incompatibilidade. Para componentes de alimentação, meça tensão com carga e observe aquecimento durante o teste."
+      ],
+      [
+        "Segurança e documentação",
+        "Guarde datasheets, manuais e notas de aplicação usados na decisão. Documente tensão, corrente, potência, ligação, proteção, firmware, conexões e testes realizados. Esse registro ajuda na manutenção e evita que uma montagem aparentemente funcional seja repetida de forma insegura. Sempre que houver dúvida, valide com medição e com a documentação do fabricante."
+      ]
+    ],
+    "cover": "blog/covers/como-escolher-fonte-bancada",
+    "coverAlt": "Capa técnica do artigo Como escolher uma fonte de bancada"
+  },
+  {
+    "slug": "gps-neo-6m-alimentacao-antena-posicionamento",
+    "title": "GPS NEO-6M: alimentação, antena e posicionamento",
+    "summary": "Boas práticas para usar módulos GPS NEO-6M em rastreamento, telemetria e protótipos.",
+    "category": "IoT e conectividade",
+    "tags": [
+      "GPS",
+      "NEO-6M",
+      "telemetria"
+    ],
+    "relatedCategories": [
+      "gps-e-localizacao"
+    ],
+    "relatedFamilies": [
+      "gps-neo-6m"
+    ],
+    "readingTime": "6 min",
+    "publishedAt": "2025-05-19",
+    "updatedAt": "2025-08-12",
+    "references": [
+      "Documentação u-blox NEO-6.",
+      "Notas de aplicação sobre posicionamento de antenas GNSS."
+    ],
+    "sections": [
+      [
+        "Quando este tema aparece no projeto",
+        "GPS NEO-6M: alimentação, antena e posicionamento entra na decisão quando o projeto precisa sair da ideia e chegar a uma montagem confiável. Antes de escolher o item, registre carga, tensão, corrente, ambiente de instalação, espaço físico, limitações de manutenção e forma de teste. Esse levantamento evita compras por aparência, reduz retrabalho e ajuda a separar o componente realmente necessário de alternativas parecidas. Quando o projeto envolve rede elétrica, comando ou comunicação em campo, essa etapa também protege a instalação e a pessoa que fará a montagem."
+      ],
+      [
+        "Conceitos que precisam estar claros",
+        "O ponto central é entender a função do componente dentro do sistema. Em iot e conectividade, pequenos detalhes como faixa de operação, isolamento, dissipação, conector, tolerância, firmware, margem de segurança e condição de instalação mudam o resultado. Use o título do anúncio como ponto de partida, mas confirme dados técnicos no datasheet, no manual, nas imagens e na descrição oficial. Se houver divergência entre nome comercial e especificação, trate a especificação como prioridade."
+      ],
+      [
+        "Critérios de escolha",
+        "Compare primeiro os requisitos elétricos e mecânicos. Depois observe compatibilidade com o restante do circuito, disponibilidade de acessórios, facilidade de montagem, possibilidade de teste e margem para variação de carga. Quando houver modelos semelhantes, priorize o que tiver especificação mais clara e margem adequada para a aplicação real, não apenas o menor preço. Em kits, confirme quantidade, condição e itens inclusos."
+      ],
+      [
+        "Aplicações típicas",
+        "Produtos ligados a GPS, NEO-6M, telemetria aparecem em protótipos, manutenção, automação, telemetria, bancada e pequenas instalações técnicas. Em cada caso, a escolha muda: bancada pede ergonomia e ajuste; campo pede robustez; protótipo pede facilidade de ligação; produto final exige repetibilidade, fixação e segurança. O mesmo componente pode funcionar bem em uma bancada e ser inadequado para uma caixa fechada, quente ou sujeita a vibração."
+      ],
+      [
+        "Limitações e cuidados",
+        "Nenhum módulo resolve sozinho problemas de projeto. Fontes precisam de proteção e ventilação, sensores precisam de condicionamento, conectores precisam de dimensionamento, resistores dissipam calor e módulos de comunicação precisam de alimentação estável. Em circuitos ligados à rede elétrica ou comando de carga, conte com profissional habilitado e siga normas aplicáveis. Não use imagem, cor ou formato como prova de compatibilidade."
+      ],
+      [
+        "Erros comuns",
+        "Os erros mais frequentes são usar fonte no limite, ignorar picos de corrente, misturar AC/DC na leitura do anúncio, escolher cabo ou conector subdimensionado, confiar em imagem sem conferir o modelo e deixar de testar o conjunto com carga real. Também é comum comprar por uma sigla conhecida e esquecer tensão, pinagem, acessórios, tamanho físico, temperatura ou isolamento. Em projetos repetitivos, um erro pequeno se multiplica rapidamente."
+      ],
+      [
+        "Como validar antes da compra",
+        "Abra o anúncio oficial, confira o MLB, veja as imagens, compare modelo e especificações, confirme preço, estoque e frete. Se o projeto tiver restrição crítica, liste os requisitos e faça a pergunta antes de comprar. Essa etapa é simples, mas reduz bastante a chance de incompatibilidade. Para componentes de alimentação, meça tensão com carga e observe aquecimento durante o teste."
+      ],
+      [
+        "Segurança e documentação",
+        "Guarde datasheets, manuais e notas de aplicação usados na decisão. Documente tensão, corrente, potência, ligação, proteção, firmware, conexões e testes realizados. Esse registro ajuda na manutenção e evita que uma montagem aparentemente funcional seja repetida de forma insegura. Sempre que houver dúvida, valide com medição e com a documentação do fabricante."
+      ]
+    ],
+    "cover": "blog/covers/gps-neo-6m-alimentacao-antena-posicionamento",
+    "coverAlt": "Capa técnica do artigo GPS NEO-6M: alimentação, antena e posicionamento"
+  },
+  {
+    "slug": "ttgo-t-call-esp32-sim800l-conectividade-gsm",
+    "title": "TTGO T-Call: ESP32, SIM800L e conectividade GSM",
+    "summary": "Critérios para avaliar módulos com ESP32, modem SIM800L, antena e alimentação em telemetria.",
+    "category": "IoT e conectividade",
+    "tags": [
+      "TTGO T-Call",
+      "ESP32",
+      "SIM800L",
+      "2G"
+    ],
+    "relatedCategories": [
+      "iot-gsm-e-comunicacao"
+    ],
+    "relatedFamilies": [
+      "ttgo-t-call"
+    ],
+    "readingTime": "8 min",
+    "publishedAt": "2025-04-22",
+    "updatedAt": "2025-07-08",
+    "references": [
+      "Documentação Espressif ESP32.",
+      "Documentação SIMCom SIM800L."
+    ],
+    "sections": [
+      [
+        "Quando este tema aparece no projeto",
+        "TTGO T-Call: ESP32, SIM800L e conectividade GSM entra na decisão quando o projeto precisa sair da ideia e chegar a uma montagem confiável. Antes de escolher o item, registre carga, tensão, corrente, ambiente de instalação, espaço físico, limitações de manutenção e forma de teste. Esse levantamento evita compras por aparência, reduz retrabalho e ajuda a separar o componente realmente necessário de alternativas parecidas. Quando o projeto envolve rede elétrica, comando ou comunicação em campo, essa etapa também protege a instalação e a pessoa que fará a montagem."
+      ],
+      [
+        "Conceitos que precisam estar claros",
+        "O ponto central é entender a função do componente dentro do sistema. Em iot e conectividade, pequenos detalhes como faixa de operação, isolamento, dissipação, conector, tolerância, firmware, margem de segurança e condição de instalação mudam o resultado. Use o título do anúncio como ponto de partida, mas confirme dados técnicos no datasheet, no manual, nas imagens e na descrição oficial. Se houver divergência entre nome comercial e especificação, trate a especificação como prioridade."
+      ],
+      [
+        "Critérios de escolha",
+        "Compare primeiro os requisitos elétricos e mecânicos. Depois observe compatibilidade com o restante do circuito, disponibilidade de acessórios, facilidade de montagem, possibilidade de teste e margem para variação de carga. Quando houver modelos semelhantes, priorize o que tiver especificação mais clara e margem adequada para a aplicação real, não apenas o menor preço. Em kits, confirme quantidade, condição e itens inclusos."
+      ],
+      [
+        "Aplicações típicas",
+        "Produtos ligados a TTGO T-Call, ESP32, SIM800L, 2G aparecem em protótipos, manutenção, automação, telemetria, bancada e pequenas instalações técnicas. Em cada caso, a escolha muda: bancada pede ergonomia e ajuste; campo pede robustez; protótipo pede facilidade de ligação; produto final exige repetibilidade, fixação e segurança. O mesmo componente pode funcionar bem em uma bancada e ser inadequado para uma caixa fechada, quente ou sujeita a vibração."
+      ],
+      [
+        "Limitações e cuidados",
+        "Nenhum módulo resolve sozinho problemas de projeto. Fontes precisam de proteção e ventilação, sensores precisam de condicionamento, conectores precisam de dimensionamento, resistores dissipam calor e módulos de comunicação precisam de alimentação estável. Em circuitos ligados à rede elétrica ou comando de carga, conte com profissional habilitado e siga normas aplicáveis. Não use imagem, cor ou formato como prova de compatibilidade."
+      ],
+      [
+        "Erros comuns",
+        "Os erros mais frequentes são usar fonte no limite, ignorar picos de corrente, misturar AC/DC na leitura do anúncio, escolher cabo ou conector subdimensionado, confiar em imagem sem conferir o modelo e deixar de testar o conjunto com carga real. Também é comum comprar por uma sigla conhecida e esquecer tensão, pinagem, acessórios, tamanho físico, temperatura ou isolamento. Em projetos repetitivos, um erro pequeno se multiplica rapidamente."
+      ],
+      [
+        "Como validar antes da compra",
+        "Abra o anúncio oficial, confira o MLB, veja as imagens, compare modelo e especificações, confirme preço, estoque e frete. Se o projeto tiver restrição crítica, liste os requisitos e faça a pergunta antes de comprar. Essa etapa é simples, mas reduz bastante a chance de incompatibilidade. Para componentes de alimentação, meça tensão com carga e observe aquecimento durante o teste."
+      ],
+      [
+        "Segurança e documentação",
+        "Guarde datasheets, manuais e notas de aplicação usados na decisão. Documente tensão, corrente, potência, ligação, proteção, firmware, conexões e testes realizados. Esse registro ajuda na manutenção e evita que uma montagem aparentemente funcional seja repetida de forma insegura. Sempre que houver dúvida, valide com medição e com a documentação do fabricante."
+      ]
+    ],
+    "cover": "blog/covers/ttgo-t-call-esp32-sim800l-conectividade-gsm",
+    "coverAlt": "Capa técnica do artigo TTGO T-Call: ESP32, SIM800L e conectividade GSM"
+  },
+  {
+    "slug": "cuidados-fontes-ac-dc-compactas",
+    "title": "Cuidados no uso de fontes AC/DC compactas",
+    "summary": "Como avaliar margem de potência, isolamento, temperatura e proteção em fontes compactas.",
+    "category": "Fontes e alimentação",
+    "tags": [
+      "fontes",
+      "AC/DC",
+      "segurança"
+    ],
+    "relatedCategories": [
+      "fontes-e-alimentacao"
+    ],
+    "relatedFamilies": [
+      "hi-link-hlk-pm01",
+      "instrumentos-e-fontes"
+    ],
+    "readingTime": "6 min",
+    "publishedAt": "2025-03-28",
+    "updatedAt": "2025-06-02",
+    "references": [
+      "Datasheets dos módulos de fonte.",
+      "Recomendações de segurança para circuitos ligados à rede elétrica."
+    ],
+    "sections": [
+      [
+        "Quando este tema aparece no projeto",
+        "Cuidados no uso de fontes AC/DC compactas entra na decisão quando o projeto precisa sair da ideia e chegar a uma montagem confiável. Antes de escolher o item, registre carga, tensão, corrente, ambiente de instalação, espaço físico, limitações de manutenção e forma de teste. Esse levantamento evita compras por aparência, reduz retrabalho e ajuda a separar o componente realmente necessário de alternativas parecidas. Quando o projeto envolve rede elétrica, comando ou comunicação em campo, essa etapa também protege a instalação e a pessoa que fará a montagem."
+      ],
+      [
+        "Conceitos que precisam estar claros",
+        "O ponto central é entender a função do componente dentro do sistema. Em fontes e alimentação, pequenos detalhes como faixa de operação, isolamento, dissipação, conector, tolerância, firmware, margem de segurança e condição de instalação mudam o resultado. Use o título do anúncio como ponto de partida, mas confirme dados técnicos no datasheet, no manual, nas imagens e na descrição oficial. Se houver divergência entre nome comercial e especificação, trate a especificação como prioridade."
+      ],
+      [
+        "Critérios de escolha",
+        "Compare primeiro os requisitos elétricos e mecânicos. Depois observe compatibilidade com o restante do circuito, disponibilidade de acessórios, facilidade de montagem, possibilidade de teste e margem para variação de carga. Quando houver modelos semelhantes, priorize o que tiver especificação mais clara e margem adequada para a aplicação real, não apenas o menor preço. Em kits, confirme quantidade, condição e itens inclusos."
+      ],
+      [
+        "Aplicações típicas",
+        "Produtos ligados a fontes, AC/DC, segurança aparecem em protótipos, manutenção, automação, telemetria, bancada e pequenas instalações técnicas. Em cada caso, a escolha muda: bancada pede ergonomia e ajuste; campo pede robustez; protótipo pede facilidade de ligação; produto final exige repetibilidade, fixação e segurança. O mesmo componente pode funcionar bem em uma bancada e ser inadequado para uma caixa fechada, quente ou sujeita a vibração."
+      ],
+      [
+        "Limitações e cuidados",
+        "Nenhum módulo resolve sozinho problemas de projeto. Fontes precisam de proteção e ventilação, sensores precisam de condicionamento, conectores precisam de dimensionamento, resistores dissipam calor e módulos de comunicação precisam de alimentação estável. Em circuitos ligados à rede elétrica ou comando de carga, conte com profissional habilitado e siga normas aplicáveis. Não use imagem, cor ou formato como prova de compatibilidade."
+      ],
+      [
+        "Erros comuns",
+        "Os erros mais frequentes são usar fonte no limite, ignorar picos de corrente, misturar AC/DC na leitura do anúncio, escolher cabo ou conector subdimensionado, confiar em imagem sem conferir o modelo e deixar de testar o conjunto com carga real. Também é comum comprar por uma sigla conhecida e esquecer tensão, pinagem, acessórios, tamanho físico, temperatura ou isolamento. Em projetos repetitivos, um erro pequeno se multiplica rapidamente."
+      ],
+      [
+        "Como validar antes da compra",
+        "Abra o anúncio oficial, confira o MLB, veja as imagens, compare modelo e especificações, confirme preço, estoque e frete. Se o projeto tiver restrição crítica, liste os requisitos e faça a pergunta antes de comprar. Essa etapa é simples, mas reduz bastante a chance de incompatibilidade. Para componentes de alimentação, meça tensão com carga e observe aquecimento durante o teste."
+      ],
+      [
+        "Segurança e documentação",
+        "Guarde datasheets, manuais e notas de aplicação usados na decisão. Documente tensão, corrente, potência, ligação, proteção, firmware, conexões e testes realizados. Esse registro ajuda na manutenção e evita que uma montagem aparentemente funcional seja repetida de forma insegura. Sempre que houver dúvida, valide com medição e com a documentação do fabricante."
+      ]
+    ],
+    "cover": "blog/covers/cuidados-fontes-ac-dc-compactas",
+    "coverAlt": "Capa técnica do artigo Cuidados no uso de fontes AC/DC compactas"
+  },
+  {
+    "slug": "como-utilizar-fonte-hi-link-hlk-pm01",
+    "title": "Como utilizar a fonte Hi-Link HLK-PM01 em projetos eletrônicos",
+    "summary": "Pontos essenciais para avaliar a HLK-PM01 em alimentação compacta AC/DC.",
+    "category": "Fontes e alimentação",
+    "tags": [
+      "HLK-PM01",
+      "AC/DC",
+      "5 V",
+      "3 W"
+    ],
+    "relatedCategories": [
+      "fontes-e-alimentacao"
+    ],
+    "relatedFamilies": [
+      "hi-link-hlk-pm01"
+    ],
+    "readingTime": "7 min",
+    "publishedAt": "2025-03-04",
+    "updatedAt": "2025-05-14",
+    "references": [
+      "Datasheet oficial Hi-Link HLK-PM01.",
+      "Boas práticas de projeto para fontes AC/DC isoladas."
+    ],
+    "sections": [
+      [
+        "Quando este tema aparece no projeto",
+        "Como utilizar a fonte Hi-Link HLK-PM01 em projetos eletrônicos entra na decisão quando o projeto precisa sair da ideia e chegar a uma montagem confiável. Antes de escolher o item, registre carga, tensão, corrente, ambiente de instalação, espaço físico, limitações de manutenção e forma de teste. Esse levantamento evita compras por aparência, reduz retrabalho e ajuda a separar o componente realmente necessário de alternativas parecidas. Quando o projeto envolve rede elétrica, comando ou comunicação em campo, essa etapa também protege a instalação e a pessoa que fará a montagem."
+      ],
+      [
+        "Conceitos que precisam estar claros",
+        "O ponto central é entender a função do componente dentro do sistema. Em fontes e alimentação, pequenos detalhes como faixa de operação, isolamento, dissipação, conector, tolerância, firmware, margem de segurança e condição de instalação mudam o resultado. Use o título do anúncio como ponto de partida, mas confirme dados técnicos no datasheet, no manual, nas imagens e na descrição oficial. Se houver divergência entre nome comercial e especificação, trate a especificação como prioridade."
+      ],
+      [
+        "Critérios de escolha",
+        "Compare primeiro os requisitos elétricos e mecânicos. Depois observe compatibilidade com o restante do circuito, disponibilidade de acessórios, facilidade de montagem, possibilidade de teste e margem para variação de carga. Quando houver modelos semelhantes, priorize o que tiver especificação mais clara e margem adequada para a aplicação real, não apenas o menor preço. Em kits, confirme quantidade, condição e itens inclusos."
+      ],
+      [
+        "Aplicações típicas",
+        "Produtos ligados a HLK-PM01, AC/DC, 5 V, 3 W aparecem em protótipos, manutenção, automação, telemetria, bancada e pequenas instalações técnicas. Em cada caso, a escolha muda: bancada pede ergonomia e ajuste; campo pede robustez; protótipo pede facilidade de ligação; produto final exige repetibilidade, fixação e segurança. O mesmo componente pode funcionar bem em uma bancada e ser inadequado para uma caixa fechada, quente ou sujeita a vibração."
+      ],
+      [
+        "Limitações e cuidados",
+        "Nenhum módulo resolve sozinho problemas de projeto. Fontes precisam de proteção e ventilação, sensores precisam de condicionamento, conectores precisam de dimensionamento, resistores dissipam calor e módulos de comunicação precisam de alimentação estável. Em circuitos ligados à rede elétrica ou comando de carga, conte com profissional habilitado e siga normas aplicáveis. Não use imagem, cor ou formato como prova de compatibilidade."
+      ],
+      [
+        "Erros comuns",
+        "Os erros mais frequentes são usar fonte no limite, ignorar picos de corrente, misturar AC/DC na leitura do anúncio, escolher cabo ou conector subdimensionado, confiar em imagem sem conferir o modelo e deixar de testar o conjunto com carga real. Também é comum comprar por uma sigla conhecida e esquecer tensão, pinagem, acessórios, tamanho físico, temperatura ou isolamento. Em projetos repetitivos, um erro pequeno se multiplica rapidamente."
+      ],
+      [
+        "Como validar antes da compra",
+        "Abra o anúncio oficial, confira o MLB, veja as imagens, compare modelo e especificações, confirme preço, estoque e frete. Se o projeto tiver restrição crítica, liste os requisitos e faça a pergunta antes de comprar. Essa etapa é simples, mas reduz bastante a chance de incompatibilidade. Para componentes de alimentação, meça tensão com carga e observe aquecimento durante o teste."
+      ],
+      [
+        "Segurança e documentação",
+        "Guarde datasheets, manuais e notas de aplicação usados na decisão. Documente tensão, corrente, potência, ligação, proteção, firmware, conexões e testes realizados. Esse registro ajuda na manutenção e evita que uma montagem aparentemente funcional seja repetida de forma insegura. Sempre que houver dúvida, valide com medição e com a documentação do fabricante."
+      ]
+    ],
+    "cover": "blog/covers/como-utilizar-fonte-hi-link-hlk-pm01",
+    "coverAlt": "Capa técnica do artigo Como utilizar a fonte Hi-Link HLK-PM01 em projetos eletrônicos"
+  },
+  {
+    "slug": "sct-013-zmct123a-diferencas-aplicacoes",
+    "title": "SCT-013 e ZMCT123A: diferenças e aplicações",
+    "summary": "Veja como comparar sensores de corrente por formato, faixa de uso, instalação e circuito de leitura.",
+    "category": "Sensores e medição",
+    "tags": [
+      "SCT-013",
+      "ZMCT123A",
+      "corrente AC"
+    ],
+    "relatedCategories": [
+      "sensores-e-medicao"
+    ],
+    "relatedFamilies": [
+      "sensores-de-corrente"
+    ],
+    "readingTime": "6 min",
+    "publishedAt": "2025-02-03",
+    "updatedAt": "2025-04-10",
+    "references": [
+      "Datasheets dos sensores informados pelo fabricante.",
+      "Notas de aplicação sobre transformadores de corrente."
+    ],
+    "sections": [
+      [
+        "Quando este tema aparece no projeto",
+        "SCT-013 e ZMCT123A: diferenças e aplicações entra na decisão quando o projeto precisa sair da ideia e chegar a uma montagem confiável. Antes de escolher o item, registre carga, tensão, corrente, ambiente de instalação, espaço físico, limitações de manutenção e forma de teste. Esse levantamento evita compras por aparência, reduz retrabalho e ajuda a separar o componente realmente necessário de alternativas parecidas. Quando o projeto envolve rede elétrica, comando ou comunicação em campo, essa etapa também protege a instalação e a pessoa que fará a montagem."
+      ],
+      [
+        "Conceitos que precisam estar claros",
+        "O ponto central é entender a função do componente dentro do sistema. Em sensores e medição, pequenos detalhes como faixa de operação, isolamento, dissipação, conector, tolerância, firmware, margem de segurança e condição de instalação mudam o resultado. Use o título do anúncio como ponto de partida, mas confirme dados técnicos no datasheet, no manual, nas imagens e na descrição oficial. Se houver divergência entre nome comercial e especificação, trate a especificação como prioridade."
+      ],
+      [
+        "Critérios de escolha",
+        "Compare primeiro os requisitos elétricos e mecânicos. Depois observe compatibilidade com o restante do circuito, disponibilidade de acessórios, facilidade de montagem, possibilidade de teste e margem para variação de carga. Quando houver modelos semelhantes, priorize o que tiver especificação mais clara e margem adequada para a aplicação real, não apenas o menor preço. Em kits, confirme quantidade, condição e itens inclusos."
+      ],
+      [
+        "Aplicações típicas",
+        "Produtos ligados a SCT-013, ZMCT123A, corrente AC aparecem em protótipos, manutenção, automação, telemetria, bancada e pequenas instalações técnicas. Em cada caso, a escolha muda: bancada pede ergonomia e ajuste; campo pede robustez; protótipo pede facilidade de ligação; produto final exige repetibilidade, fixação e segurança. O mesmo componente pode funcionar bem em uma bancada e ser inadequado para uma caixa fechada, quente ou sujeita a vibração."
+      ],
+      [
+        "Limitações e cuidados",
+        "Nenhum módulo resolve sozinho problemas de projeto. Fontes precisam de proteção e ventilação, sensores precisam de condicionamento, conectores precisam de dimensionamento, resistores dissipam calor e módulos de comunicação precisam de alimentação estável. Em circuitos ligados à rede elétrica ou comando de carga, conte com profissional habilitado e siga normas aplicáveis. Não use imagem, cor ou formato como prova de compatibilidade."
+      ],
+      [
+        "Erros comuns",
+        "Os erros mais frequentes são usar fonte no limite, ignorar picos de corrente, misturar AC/DC na leitura do anúncio, escolher cabo ou conector subdimensionado, confiar em imagem sem conferir o modelo e deixar de testar o conjunto com carga real. Também é comum comprar por uma sigla conhecida e esquecer tensão, pinagem, acessórios, tamanho físico, temperatura ou isolamento. Em projetos repetitivos, um erro pequeno se multiplica rapidamente."
+      ],
+      [
+        "Como validar antes da compra",
+        "Abra o anúncio oficial, confira o MLB, veja as imagens, compare modelo e especificações, confirme preço, estoque e frete. Se o projeto tiver restrição crítica, liste os requisitos e faça a pergunta antes de comprar. Essa etapa é simples, mas reduz bastante a chance de incompatibilidade. Para componentes de alimentação, meça tensão com carga e observe aquecimento durante o teste."
+      ],
+      [
+        "Segurança e documentação",
+        "Guarde datasheets, manuais e notas de aplicação usados na decisão. Documente tensão, corrente, potência, ligação, proteção, firmware, conexões e testes realizados. Esse registro ajuda na manutenção e evita que uma montagem aparentemente funcional seja repetida de forma insegura. Sempre que houver dúvida, valide com medição e com a documentação do fabricante."
+      ]
+    ],
+    "cover": "blog/covers/sct-013-zmct123a-diferencas-aplicacoes",
+    "coverAlt": "Capa técnica do artigo SCT-013 e ZMCT123A: diferenças e aplicações"
+  },
+  {
+    "slug": "como-escolher-sensor-corrente-monitoramento-energia",
+    "title": "Como escolher um sensor de corrente para monitoramento de energia",
+    "summary": "Entenda quando usar sensores não invasivos, transformadores de corrente e módulos de medição em projetos de energia.",
+    "category": "Sensores e medição",
+    "tags": [
+      "sensores",
+      "energia",
+      "SCT-013",
+      "ZMCT123A"
+    ],
+    "relatedCategories": [
+      "sensores-e-medicao"
+    ],
+    "relatedFamilies": [
+      "sensores-de-corrente"
+    ],
+    "readingTime": "7 min",
+    "publishedAt": "2025-01-08",
+    "updatedAt": "2025-03-18",
+    "references": [
+      "Datasheets dos módulos SCT-013 e ZMCT123A.",
+      "Documentação técnica do fabricante do circuito de aquisição utilizado no projeto."
+    ],
+    "sections": [
+      [
+        "Quando este tema aparece no projeto",
+        "Como escolher um sensor de corrente para monitoramento de energia entra na decisão quando o projeto precisa sair da ideia e chegar a uma montagem confiável. Antes de escolher o item, registre carga, tensão, corrente, ambiente de instalação, espaço físico, limitações de manutenção e forma de teste. Esse levantamento evita compras por aparência, reduz retrabalho e ajuda a separar o componente realmente necessário de alternativas parecidas. Quando o projeto envolve rede elétrica, comando ou comunicação em campo, essa etapa também protege a instalação e a pessoa que fará a montagem."
+      ],
+      [
+        "Conceitos que precisam estar claros",
+        "O ponto central é entender a função do componente dentro do sistema. Em sensores e medição, pequenos detalhes como faixa de operação, isolamento, dissipação, conector, tolerância, firmware, margem de segurança e condição de instalação mudam o resultado. Use o título do anúncio como ponto de partida, mas confirme dados técnicos no datasheet, no manual, nas imagens e na descrição oficial. Se houver divergência entre nome comercial e especificação, trate a especificação como prioridade."
+      ],
+      [
+        "Critérios de escolha",
+        "Compare primeiro os requisitos elétricos e mecânicos. Depois observe compatibilidade com o restante do circuito, disponibilidade de acessórios, facilidade de montagem, possibilidade de teste e margem para variação de carga. Quando houver modelos semelhantes, priorize o que tiver especificação mais clara e margem adequada para a aplicação real, não apenas o menor preço. Em kits, confirme quantidade, condição e itens inclusos."
+      ],
+      [
+        "Aplicações típicas",
+        "Produtos ligados a sensores, energia, SCT-013, ZMCT123A aparecem em protótipos, manutenção, automação, telemetria, bancada e pequenas instalações técnicas. Em cada caso, a escolha muda: bancada pede ergonomia e ajuste; campo pede robustez; protótipo pede facilidade de ligação; produto final exige repetibilidade, fixação e segurança. O mesmo componente pode funcionar bem em uma bancada e ser inadequado para uma caixa fechada, quente ou sujeita a vibração."
+      ],
+      [
+        "Limitações e cuidados",
+        "Nenhum módulo resolve sozinho problemas de projeto. Fontes precisam de proteção e ventilação, sensores precisam de condicionamento, conectores precisam de dimensionamento, resistores dissipam calor e módulos de comunicação precisam de alimentação estável. Em circuitos ligados à rede elétrica ou comando de carga, conte com profissional habilitado e siga normas aplicáveis. Não use imagem, cor ou formato como prova de compatibilidade."
+      ],
+      [
+        "Erros comuns",
+        "Os erros mais frequentes são usar fonte no limite, ignorar picos de corrente, misturar AC/DC na leitura do anúncio, escolher cabo ou conector subdimensionado, confiar em imagem sem conferir o modelo e deixar de testar o conjunto com carga real. Também é comum comprar por uma sigla conhecida e esquecer tensão, pinagem, acessórios, tamanho físico, temperatura ou isolamento. Em projetos repetitivos, um erro pequeno se multiplica rapidamente."
+      ],
+      [
+        "Como validar antes da compra",
+        "Abra o anúncio oficial, confira o MLB, veja as imagens, compare modelo e especificações, confirme preço, estoque e frete. Se o projeto tiver restrição crítica, liste os requisitos e faça a pergunta antes de comprar. Essa etapa é simples, mas reduz bastante a chance de incompatibilidade. Para componentes de alimentação, meça tensão com carga e observe aquecimento durante o teste."
+      ],
+      [
+        "Segurança e documentação",
+        "Guarde datasheets, manuais e notas de aplicação usados na decisão. Documente tensão, corrente, potência, ligação, proteção, firmware, conexões e testes realizados. Esse registro ajuda na manutenção e evita que uma montagem aparentemente funcional seja repetida de forma insegura. Sempre que houver dúvida, valide com medição e com a documentação do fabricante."
+      ]
+    ],
+    "cover": "blog/covers/como-escolher-sensor-corrente-monitoramento-energia",
+    "coverAlt": "Capa técnica do artigo Como escolher um sensor de corrente para monitoramento de energia"
   }
 ]

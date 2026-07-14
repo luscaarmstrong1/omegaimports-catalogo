@@ -46,7 +46,8 @@ function copyAssets() {
   rmSync(dist, { recursive: true, force: true });
   mkdirSync(dist, { recursive: true });
   cpSync(new URL("../public/brand/", import.meta.url), new URL("brand/", dist), { recursive: true });
-  cpSync(new URL("../public/blog/", import.meta.url), new URL("blog/", dist), { recursive: true });
+  mkdirSync(new URL("blog/", dist), { recursive: true });
+  cpSync(new URL("../public/blog/covers/", import.meta.url), new URL("blog/covers/", dist), { recursive: true });
   cpSync(new URL("../public/assets/", import.meta.url), new URL("assets/", dist), { recursive: true });
   cpSync(new URL("../public/products/", import.meta.url), new URL("products/", dist), { recursive: true });
   cpSync(new URL("../public/manifest.webmanifest", import.meta.url), new URL("manifest.webmanifest", dist));
@@ -152,7 +153,7 @@ function categoryCard(category, index) {
 }
 
 function blogCard(post, index = 0) {
-  return `<article class="article-card">
+  return `<article class="article-card" data-blog-category="${escapeHtml(normalizeText(post.category))}" data-blog-title="${escapeHtml(normalizeText(post.title))}">
     <a class="article-cover" href="${pageUrl(`blog/${post.slug}/`)}">${blogCoverPicture(post, { loading: index < 3 ? "eager" : "lazy", fetchpriority: index === 0 ? "high" : "auto" })}</a>
     <div class="article-card-content">
       <p class="eyebrow">${escapeHtml(post.category)} · ${formatDate(post.publishedAt)} · ${escapeHtml(post.readingTime)}</p>
@@ -306,7 +307,7 @@ function blogPages() {
     title: "Blog técnico",
     description: "Guias práticos sobre eletrônica, IoT, sensores, fontes, automação e prototipagem.",
     path: "blog/",
-    body: `<section class="page-hero blog-hero"><p class="eyebrow">Blog técnico</p><h1>Guias para escolher componentes com mais segurança.</h1><p>Conteúdo editorial conectado aos produtos reais do catálogo OMEGAIMPORTS.</p><form class="blog-search" action="${pageUrl("blog/")}" role="search">${icon("search", "search-icon")}<label class="sr-only" for="blog-search">Buscar no Blog</label><input id="blog-search" type="search" placeholder="Buscar sensores, fontes, GPS, automação..."></form><div class="chips">${categoriesEditorial.map((category) => `<a href="${pageUrl(`blog/?categoria=${encodeURIComponent(category)}`)}">${escapeHtml(category)}</a>`).join("")}</div></section><div class="article-grid page-grid">${blogPosts.map(blogCard).join("")}</div>`,
+    body: `<section class="page-hero blog-hero"><p class="eyebrow">Blog técnico</p><h1>Guias para escolher componentes com mais segurança.</h1><p>Conteúdo editorial conectado aos produtos reais do catálogo OMEGAIMPORTS.</p><form class="blog-search" action="${pageUrl("blog/")}" role="search">${icon("search", "search-icon")}<label class="sr-only" for="blog-search">Buscar no Blog</label><input id="blog-search" name="q" type="search" placeholder="Buscar sensores, fontes, GPS, automação..."></form><div class="chips blog-category-chips"><a data-blog-category="" href="${pageUrl("blog/")}">Todos</a>${categoriesEditorial.map((category) => `<a data-blog-category="${escapeHtml(normalizeText(category))}" href="${pageUrl(`blog/?categoria=${encodeURIComponent(category)}`)}">${escapeHtml(category)}</a>`).join("")}</div></section><p class="result-count blog-result-count" aria-live="polite"><strong id="blog-result-count">${blogPosts.length}</strong> artigos encontrados</p><div class="article-grid page-grid" id="blog-list">${blogPosts.map(blogCard).join("")}</div><div class="empty-state blog-empty-state" id="blog-empty-state" hidden><h2>Nenhum artigo encontrado.</h2><p>Revise a busca ou escolha outra categoria.</p></div>`,
     extraHead: `<script type="application/ld+json">${JSON.stringify(blogSchema)}</script>`,
   }));
   for (const post of blogPosts) {
@@ -315,7 +316,7 @@ function blogPages() {
     const body = `<nav class="breadcrumb"><a href="${pageUrl()}">Início</a><a href="${pageUrl("blog/")}">Blog</a><span>${escapeHtml(post.title)}</span></nav>
       <article class="article article-detail">
         <header class="article-header"><p class="eyebrow">${escapeHtml(post.category)} · ${escapeHtml(post.readingTime)}</p><h1>${escapeHtml(post.title)}</h1><p>${escapeHtml(post.summary)}</p><div class="article-meta"><span>Equipe OMEGAIMPORTS</span><span>Publicado em ${formatDate(post.publishedAt)}</span><span>Revisado em ${formatDate(post.updatedAt)}</span></div></header>
-        ${blogCoverPicture(post, { className: "article-hero-cover", width: 1200, height: 675, loading: "eager", fetchpriority: "high", sizes: "(min-width: 900px) 900px, 100vw" })}
+        ${blogCoverPicture(post, { className: "article-hero-cover", width: 1400, height: 788, loading: "eager", fetchpriority: "high", sizes: "(min-width: 1180px) 1080px, 100vw" })}
         <aside class="toc" aria-label="Sumário"><strong>Sumário</strong>${post.sections.map(([title], index) => `<a href="#secao-${index + 1}">${escapeHtml(title)}</a>`).join("")}</aside>
         ${post.sections.map(([title, text], index) => `<section id="secao-${index + 1}"><h2>${escapeHtml(title)}</h2><p>${escapeHtml(text)}</p></section>`).join("")}
         <section><h2>Conclusão</h2><p>Use o artigo como ponto de partida e confirme modelo, tensão, corrente, acessórios e disponibilidade no anúncio oficial antes da compra.</p></section>
