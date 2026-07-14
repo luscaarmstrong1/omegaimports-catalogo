@@ -58,6 +58,12 @@ export function pageUrl(path = "") {
   return `${site.base}/${clean}`.replace(/\/{2,}/g, "/");
 }
 
+function navUrl(path = "") {
+  const url = pageUrl(path);
+  const separator = url.includes("?") ? "&" : "?";
+  return `${url}${separator}v=20260714`;
+}
+
 export function assetUrl(path = "") {
   return pageUrl(path);
 }
@@ -244,18 +250,18 @@ export function pageShell({ title, description, path = "", body, extraHead = "",
     ${headerSearch}
     <nav class="main-nav" aria-label="Principal">
       <a href="${pageUrl("produtos/")}">Produtos</a>
-      <a href="${pageUrl("categorias/")}">Categorias</a>
-      <a href="${pageUrl("blog/")}">Blog</a>
-      <a href="${pageUrl("sobre/")}">Sobre</a>
+      <a href="${navUrl("categorias/")}">Categorias</a>
+      <a href="${navUrl("blog/")}">Blog</a>
+      <a href="${navUrl("sobre/")}">Sobre</a>
     </nav>
     <a class="header-cta marketplace-link" href="${site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored">Loja no Mercado Livre ${icon("external", "btn-icon")}</a>
     <button class="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menu">${icon("menu", "btn-icon")}</button>
   </header>
   <div class="mobile-menu" id="mobile-menu" hidden>
     <a href="${pageUrl("produtos/")}">Produtos</a>
-    <a href="${pageUrl("categorias/")}">Categorias</a>
-    <a href="${pageUrl("blog/")}">Blog</a>
-    <a href="${pageUrl("sobre/")}">Sobre</a>
+    <a href="${navUrl("categorias/")}">Categorias</a>
+    <a href="${navUrl("blog/")}">Blog</a>
+    <a href="${navUrl("sobre/")}">Sobre</a>
     <a class="whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">WhatsApp ${icon("message", "btn-icon")}</a>
     <a class="marketplace-link" href="${site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored">Loja no Mercado Livre ${icon("external", "btn-icon")}</a>
   </div>
@@ -268,9 +274,9 @@ export function pageShell({ title, description, path = "", body, extraHead = "",
     <nav aria-label="Produtos">
       <strong>Produtos</strong>
       <a href="${pageUrl("produtos/")}">Produtos</a>
-      <a href="${pageUrl("categorias/")}">Categorias</a>
-      <a href="${pageUrl("blog/")}">Blog</a>
-      <a href="${pageUrl("sobre/")}">Sobre</a>
+      <a href="${navUrl("categorias/")}">Categorias</a>
+      <a href="${navUrl("blog/")}">Blog</a>
+      <a href="${navUrl("sobre/")}">Sobre</a>
     </nav>
     <nav aria-label="Atendimento e políticas">
       <strong>Atendimento</strong>
