@@ -182,13 +182,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Fonte de Alimentação DC Hikari Hf-3205s 32 V/5 A P/bancadas",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5268487034",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -196,7 +196,7 @@
           "value": "published",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5268487034",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -204,7 +204,7 @@
           "value": "usado",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5268487034",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -212,7 +212,7 @@
           "value": 1,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5268487034",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -220,7 +220,7 @@
           "value": 732,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5268487034",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -228,7 +228,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-5268487034-fonte-de-alimentaco-dc-hikari-hf-3205s-32v5a-pbancadas-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5268487034",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -236,14 +236,14 @@
           "value": "/products/MLB5268487034/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5268487034",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "approved",
     "blockingIssues": [],
     "searchTerms": [
@@ -349,13 +349,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Kit com 50 Abraçadeiras Plásticas Fixadoras de Fios 11 A 15m",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963856949",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -363,7 +363,7 @@
           "value": "pending-review",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963856949",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -371,7 +371,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963856949",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -379,7 +379,7 @@
           "value": 50,
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963856949",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -387,7 +387,7 @@
           "value": 69.9,
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963856949",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -395,7 +395,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-3963856949-kit-com-50-abracadeiras-plasticas-fixadoras-de-fios-11-a-15m-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963856949",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -403,14 +403,14 @@
           "value": null,
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963856949",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "low",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "blocked",
     "blockingIssues": [
       "imagem real do anúncio exato não verificada"
@@ -534,13 +534,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Mini fonte 5 V 3 W Conversor AC/dc 310 V Compacta e Eficiente Preto",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963907335",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -548,7 +548,7 @@
           "value": "pending-review",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963907335",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -556,7 +556,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963907335",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -564,7 +564,7 @@
           "value": 1,
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963907335",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -572,7 +572,7 @@
           "value": 22.75,
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963907335",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -580,7 +580,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-3963907335-mini-fonte-5v-3w-conversor-acdc-310v-compacta-e-eficiente-preto-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963907335",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -588,14 +588,14 @@
           "value": "/products/MLB3963907335/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963907335",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "blocked",
     "blockingIssues": [
       "especificações suspeitas exigem revisão"
@@ -731,13 +731,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Kit 30 Placas de Fenolite Ilhada 5x7 Cm Pcb Perfurada",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272637504",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -745,7 +745,7 @@
           "value": "published",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272637504",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -753,7 +753,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272637504",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -761,7 +761,7 @@
           "value": 30,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272637504",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -769,7 +769,7 @@
           "value": 69.9,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272637504",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -777,7 +777,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-5272637504-kit-30-placas-de-fenolite-ilhada-5x7-cm-pcb-perfurada-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272637504",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -785,14 +785,14 @@
           "value": "/products/MLB5272637504/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272637504",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "approved",
     "blockingIssues": [],
     "searchTerms": [
@@ -946,13 +946,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Gerador de Função Minipa 2mhz Mfg-4202 A Portátil Manual 2kg",
           "source": "mercadolivre-api",
           "sourceRef": "MLB6747664468",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -960,7 +960,7 @@
           "value": "pending-review",
           "source": "mercadolivre-api",
           "sourceRef": "MLB6747664468",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -968,7 +968,7 @@
           "value": "usado",
           "source": "mercadolivre-api",
           "sourceRef": "MLB6747664468",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -976,7 +976,7 @@
           "value": 1,
           "source": "mercadolivre-api",
           "sourceRef": "MLB6747664468",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -984,7 +984,7 @@
           "value": 819,
           "source": "mercadolivre-api",
           "sourceRef": "MLB6747664468",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -992,7 +992,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-6747664468-gerador-de-funco-minipa-2mhz-mfg-4202a-portatil-manual-2kg-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB6747664468",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -1000,14 +1000,14 @@
           "value": null,
           "source": "mercadolivre-api",
           "sourceRef": "MLB6747664468",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "low",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "blocked",
     "blockingIssues": [
       "imagem real do anúncio exato não verificada",
@@ -1224,13 +1224,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "2 Módulos Relé 1 Canal 5 V/10 A para Projetos Arduino e Iot",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963883507",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -1238,7 +1238,7 @@
           "value": "pending-review",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963883507",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -1246,7 +1246,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963883507",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -1254,7 +1254,7 @@
           "value": 1,
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963883507",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -1262,7 +1262,7 @@
           "value": 25.78,
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963883507",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -1270,7 +1270,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-3963883507-2-modulos-rele-1-canal-5v10a-para-projetos-arduino-e-iot-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963883507",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -1278,14 +1278,14 @@
           "value": "/products/MLB3963883507/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963883507",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "blocked",
     "blockingIssues": [
       "quantidade divergente: cadastro=1, texto=2"
@@ -1428,13 +1428,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Mini fonte 110-220 V AC 5 V DC 700 mA 3.5 W Arduino Esp8266",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963881443",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -1442,7 +1442,7 @@
           "value": "pending-review",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963881443",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -1450,7 +1450,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963881443",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -1458,7 +1458,7 @@
           "value": 1,
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963881443",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -1466,7 +1466,7 @@
           "value": 21.9,
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963881443",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -1474,7 +1474,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-3963881443-mini-fonte-110-220v-ac-5v-dc-700ma-35w-arduino-esp8266-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963881443",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -1482,14 +1482,14 @@
           "value": "/products/MLB3963881443/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963881443",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "blocked",
     "blockingIssues": [
       "anúncio de catálogo excluído"
@@ -1648,13 +1648,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Carcaça Acer Aspire 5 A515-54 Prateado",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4508250345",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -1662,7 +1662,7 @@
           "value": "pending-review",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4508250345",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -1670,7 +1670,7 @@
           "value": "usado",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4508250345",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -1678,7 +1678,7 @@
           "value": 1,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4508250345",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -1686,7 +1686,7 @@
           "value": 200,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4508250345",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -1694,7 +1694,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-4508250345-carcaca-acer-aspire-5-a515-54-prateado-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4508250345",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -1702,14 +1702,14 @@
           "value": "/products/MLB4508250345/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4508250345",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "blocked",
     "blockingIssues": [
       "especificações suspeitas exigem revisão"
@@ -1874,13 +1874,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Fonte de Alimentação DC Variável Bancada Hikari 3 A Hf-3203s",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669500229",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -1888,7 +1888,7 @@
           "value": "pending-review",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669500229",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -1896,7 +1896,7 @@
           "value": "usado",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669500229",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -1904,7 +1904,7 @@
           "value": 1,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669500229",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -1912,7 +1912,7 @@
           "value": 645.3,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669500229",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -1920,7 +1920,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-4669500229-fonte-de-alimentaco-dc-variavel-bancada-hikari-3a-hf-3203s-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669500229",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -1928,14 +1928,14 @@
           "value": "/products/MLB4669500229/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669500229",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "blocked",
     "blockingIssues": [
       "especificações suspeitas exigem revisão"
@@ -2058,13 +2058,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Kit com 3 Transformador de Corrente AC Não Invasivo ZMCT123A",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5288865822",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -2072,7 +2072,7 @@
           "value": "published",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5288865822",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -2080,7 +2080,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5288865822",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -2088,7 +2088,7 @@
           "value": 3,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5288865822",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -2096,7 +2096,7 @@
           "value": 49.18,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5288865822",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -2104,7 +2104,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-5288865822-kit-com3x-transformador-de-corrente-ac-no-invasivo-zmct123a-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5288865822",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -2112,14 +2112,14 @@
           "value": "/products/MLB5288865822/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5288865822",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "approved",
     "blockingIssues": [],
     "searchTerms": [
@@ -2338,13 +2338,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Modulo Rele 1 Canal Led Indicador para Arduino Pi Pic 5 V/10 A",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963871285",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -2352,7 +2352,7 @@
           "value": "pending-review",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963871285",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -2360,7 +2360,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963871285",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -2368,7 +2368,7 @@
           "value": 1,
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963871285",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -2376,7 +2376,7 @@
           "value": 25.78,
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963871285",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -2384,7 +2384,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-3963871285-modulo-rele-1-canal-led-indicador-para-arduino-pi-pic-5v10a-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963871285",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -2392,14 +2392,14 @@
           "value": "/products/MLB3963871285/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963871285",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "blocked",
     "blockingIssues": [
       "anúncio de catálogo excluído",
@@ -2547,13 +2547,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Kit 10 Mini fonte Chaveada Hi-link HLK-PM01 - 5 V 3 W",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3948192369",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -2561,7 +2561,7 @@
           "value": "published",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3948192369",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -2569,7 +2569,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3948192369",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -2577,7 +2577,7 @@
           "value": 10,
           "source": "mercadolivre-api",
           "sourceRef": "MLB3948192369",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -2585,7 +2585,7 @@
           "value": 239.9,
           "source": "mercadolivre-api",
           "sourceRef": "MLB3948192369",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -2593,7 +2593,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-3948192369-kit-10-mini-fonte-chaveada-hi-link-hlk-pm01-5v-3w-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3948192369",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -2601,14 +2601,14 @@
           "value": "/products/MLB3948192369/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3948192369",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "approved",
     "blockingIssues": [],
     "searchTerms": [
@@ -2804,13 +2804,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Kit com 6 Pigtail U.fi Ipx para Rp-sma Femêa com 10 Cm",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272831698",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -2818,7 +2818,7 @@
           "value": "pending-review",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272831698",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -2826,7 +2826,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272831698",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -2834,7 +2834,7 @@
           "value": 6,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272831698",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -2842,7 +2842,7 @@
           "value": 59.9,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272831698",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -2850,7 +2850,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-5272831698-kit-com-6-pigtail-ufi-ipx-para-rp-sma-fema-com-10-cm-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272831698",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -2858,14 +2858,14 @@
           "value": null,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272831698",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "low",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "blocked",
     "blockingIssues": [
       "imagem real do anúncio exato não verificada"
@@ -2998,13 +2998,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Retificador 220 V Saída 5 V DC 700 mA AC DC Step Down Fonte 5 V",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272769886",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -3012,7 +3012,7 @@
           "value": "published",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272769886",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -3020,7 +3020,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272769886",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -3028,7 +3028,7 @@
           "value": 1,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272769886",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -3036,7 +3036,7 @@
           "value": 33,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272769886",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -3044,7 +3044,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-5272769886-retificador-220v-saida-5v-dc-700ma-ac-dc-step-down-fonte-5v-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272769886",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -3052,14 +3052,14 @@
           "value": "/products/MLB5272769886/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272769886",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "approved",
     "blockingIssues": [],
     "searchTerms": [
@@ -3261,13 +3261,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Fonte de Alimentação HLK-PM01 5 V/3 W Hi-link Módulo AC/dc",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5268554980",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -3275,7 +3275,7 @@
           "value": "published",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5268554980",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -3283,7 +3283,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5268554980",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -3291,7 +3291,7 @@
           "value": 1,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5268554980",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -3299,7 +3299,7 @@
           "value": 33,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5268554980",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -3307,7 +3307,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-5268554980-fonte-de-alimentaco-hlk-pm01-5v3w-hi-link-modulo-acdc-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5268554980",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -3315,14 +3315,14 @@
           "value": "/products/MLB5268554980/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5268554980",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "approved",
     "blockingIssues": [],
     "searchTerms": [
@@ -3452,13 +3452,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "50 Lacres de Segurança Amarelos com Arame Aço 30cm Numerados Amarelo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272672830",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -3466,7 +3466,7 @@
           "value": "pending-review",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272672830",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -3474,7 +3474,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272672830",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -3482,7 +3482,7 @@
           "value": 1,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272672830",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -3490,7 +3490,7 @@
           "value": 49.02,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272672830",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -3498,7 +3498,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-5272672830-50-lacres-de-seguranca-amarelos-com-arame-aco-30cm-numerados-amarelo-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272672830",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -3506,14 +3506,14 @@
           "value": "/products/MLB5272672830/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272672830",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "blocked",
     "blockingIssues": [
       "quantidade divergente: cadastro=1, texto=50",
@@ -3642,13 +3642,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Kit com 400 Resistores 10 Kω 5% Tolerância",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963996985",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -3656,7 +3656,7 @@
           "value": "published",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963996985",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -3664,7 +3664,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963996985",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -3672,7 +3672,7 @@
           "value": 400,
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963996985",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -3680,7 +3680,7 @@
           "value": 51.7,
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963996985",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -3688,7 +3688,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-3963996985-kit-com-400-resistores-10k-ohms-5-tolerncia-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963996985",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -3696,14 +3696,14 @@
           "value": "/products/MLB3963996985/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963996985",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "approved",
     "blockingIssues": [],
     "searchTerms": [
@@ -3913,13 +3913,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Kit 500 Reguladores de Tensão Ams1117 Smd 3,3 V",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5249469476",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -3927,7 +3927,7 @@
           "value": "published",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5249469476",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -3935,7 +3935,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5249469476",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -3943,7 +3943,7 @@
           "value": 500,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5249469476",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -3951,7 +3951,7 @@
           "value": 199.9,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5249469476",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -3959,7 +3959,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-5249469476-kit-500-reguladores-de-tenso-ams1117-smd-33v-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5249469476",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -3967,14 +3967,14 @@
           "value": "/products/MLB5249469476/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5249469476",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "approved",
     "blockingIssues": [],
     "searchTerms": [
@@ -4192,13 +4192,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Mini fonte Chaveada Hi-link HLK-PM01 5 V / 3 W",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5268530154",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -4206,7 +4206,7 @@
           "value": "pending-review",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5268530154",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -4214,7 +4214,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5268530154",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -4222,7 +4222,7 @@
           "value": 1,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5268530154",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -4230,7 +4230,7 @@
           "value": 33,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5268530154",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -4238,7 +4238,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-5268530154-mini-fonte-chaveada-hi-link-hlk-pm01-5v-3w-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5268530154",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -4246,14 +4246,14 @@
           "value": "/products/MLB5268530154/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5268530154",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "blocked",
     "blockingIssues": [
       "anúncio de catálogo excluído"
@@ -4388,13 +4388,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Kit com 400 Resistores 100 Kω 5% Filme de Carbono",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3964028995",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -4402,7 +4402,7 @@
           "value": "published",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3964028995",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -4410,7 +4410,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3964028995",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -4418,7 +4418,7 @@
           "value": 400,
           "source": "mercadolivre-api",
           "sourceRef": "MLB3964028995",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -4426,7 +4426,7 @@
           "value": 51.8,
           "source": "mercadolivre-api",
           "sourceRef": "MLB3964028995",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -4434,7 +4434,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-3964028995-kit-com-400-resistores-100k-ohms-5-filme-de-carbono-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3964028995",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -4442,14 +4442,14 @@
           "value": "/products/MLB3964028995/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3964028995",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "approved",
     "blockingIssues": [],
     "searchTerms": [
@@ -4576,13 +4576,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Kit 10x Antena GPS 1575.42 MHz com Suporte A 3 V-5 V",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272537202",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -4590,7 +4590,7 @@
           "value": "published",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272537202",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -4598,7 +4598,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272537202",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -4606,7 +4606,7 @@
           "value": 10,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272537202",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -4614,7 +4614,7 @@
           "value": 299.8,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272537202",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -4622,7 +4622,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-5272537202-kit-10x-antena-gps-157542-mhz-com-suporte-a-3v-5v-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272537202",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -4630,14 +4630,14 @@
           "value": "/products/MLB5272537202/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272537202",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "approved",
     "blockingIssues": [],
     "searchTerms": [
@@ -4781,13 +4781,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Kit com 9 Sensores de Corrente AC ZMCT123A Não Invasivos",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3964934307",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -4795,7 +4795,7 @@
           "value": "published",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3964934307",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -4803,7 +4803,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3964934307",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -4811,7 +4811,7 @@
           "value": 9,
           "source": "mercadolivre-api",
           "sourceRef": "MLB3964934307",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -4819,7 +4819,7 @@
           "value": 129.9,
           "source": "mercadolivre-api",
           "sourceRef": "MLB3964934307",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -4827,7 +4827,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-3964934307-kit-com-9-sensores-de-corrente-ac-zmct123a-no-invasivos-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3964934307",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -4835,14 +4835,14 @@
           "value": "/products/MLB3964934307/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3964934307",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "approved",
     "blockingIssues": [],
     "searchTerms": [
@@ -5044,13 +5044,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Kit 10x Módulos ESP32 Ttgo T-call SIM800L + Antena (novo)",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4051985849",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -5058,7 +5058,7 @@
           "value": "pending-review",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4051985849",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -5066,7 +5066,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4051985849",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -5074,7 +5074,7 @@
           "value": 10,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4051985849",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -5082,7 +5082,7 @@
           "value": 1259,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4051985849",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -5090,7 +5090,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-4051985849-kit-10x-modulos-esp32-ttgo-t-call-sim800l-antena-novo-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4051985849",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -5098,14 +5098,14 @@
           "value": "/products/MLB4051985849/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4051985849",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "blocked",
     "blockingIssues": [
       "especificações suspeitas exigem revisão"
@@ -5281,13 +5281,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Kit 100 Barra de Pinos - Fêmea - 1x15 - 2,54 mm - Pic/arduino Preto",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669479535",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -5295,7 +5295,7 @@
           "value": "published",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669479535",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -5303,7 +5303,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669479535",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -5311,7 +5311,7 @@
           "value": 100,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669479535",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -5319,7 +5319,7 @@
           "value": 118,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669479535",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -5327,7 +5327,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-4669479535-kit-100-barra-de-pinos-fmea-1x15-254mm-picarduino-preto-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669479535",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -5335,14 +5335,14 @@
           "value": "/products/MLB4669479535/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669479535",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "approved",
     "blockingIssues": [],
     "searchTerms": [
@@ -5632,13 +5632,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "3x Kit ESP32 SIM800L Módulo Sem Fio Gprs T-call + Antena",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5288925380",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -5646,7 +5646,7 @@
           "value": "published",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5288925380",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -5654,7 +5654,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5288925380",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -5662,7 +5662,7 @@
           "value": 3,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5288925380",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -5670,7 +5670,7 @@
           "value": 382,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5288925380",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -5678,7 +5678,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-5288925380-3x-kit-esp32-sim800l-modulo-sem-fio-gprs-t-call-antena-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5288925380",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -5686,14 +5686,14 @@
           "value": "/products/MLB5288925380/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5288925380",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "approved",
     "blockingIssues": [],
     "searchTerms": [
@@ -5848,13 +5848,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Gerador de Função Minipa 2mhz Mfg-4202 A Portátil Manual 2kg",
           "source": "mercadolivre-api",
           "sourceRef": "MLB6747664364",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -5862,7 +5862,7 @@
           "value": "pending-review",
           "source": "mercadolivre-api",
           "sourceRef": "MLB6747664364",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -5870,7 +5870,7 @@
           "value": "usado",
           "source": "mercadolivre-api",
           "sourceRef": "MLB6747664364",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -5878,7 +5878,7 @@
           "value": 1,
           "source": "mercadolivre-api",
           "sourceRef": "MLB6747664364",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -5886,7 +5886,7 @@
           "value": 852.3,
           "source": "mercadolivre-api",
           "sourceRef": "MLB6747664364",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -5894,7 +5894,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-6747664364-gerador-de-funco-minipa-2mhz-mfg-4202a-portatil-manual-2kg-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB6747664364",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -5902,14 +5902,14 @@
           "value": null,
           "source": "mercadolivre-api",
           "sourceRef": "MLB6747664364",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "low",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "blocked",
     "blockingIssues": [
       "imagem real do anúncio exato não verificada",
@@ -6073,13 +6073,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Kit 5x Módulos ESP32 Ttgo T-call SIM800L + Antena (novo)",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5375724278",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -6087,7 +6087,7 @@
           "value": "pending-review",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5375724278",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -6095,7 +6095,7 @@
           "value": "usado",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5375724278",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -6103,7 +6103,7 @@
           "value": 5,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5375724278",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -6111,7 +6111,7 @@
           "value": 592,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5375724278",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -6119,7 +6119,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-5375724278-kit-5x-modulos-esp32-ttgo-t-call-sim800l-antena-novo-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5375724278",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -6127,14 +6127,14 @@
           "value": "/products/MLB5375724278/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5375724278",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "blocked",
     "blockingIssues": [
       "condição divergente entre cadastro, título ou descrição",
@@ -6255,13 +6255,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "50x Varistor 14k 250vac (s14d391 / 14d391k250vac) Uso Geral",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669505143",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -6269,7 +6269,7 @@
           "value": "pending-review",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669505143",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -6277,7 +6277,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669505143",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -6285,7 +6285,7 @@
           "value": 50,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669505143",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -6293,7 +6293,7 @@
           "value": 110,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669505143",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -6301,7 +6301,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-4669505143-50x-varistor-14k-250vac-s14d391-14d391k250vac-uso-geral-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669505143",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -6309,14 +6309,14 @@
           "value": null,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669505143",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "low",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "blocked",
     "blockingIssues": [
       "imagem real do anúncio exato não verificada"
@@ -6483,13 +6483,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Sensor de Corrente AC Não Invasivo AC SCT-013 100 A 50 mA",
           "source": "mercadolivre-api",
           "sourceRef": "MLB6747664922",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -6497,7 +6497,7 @@
           "value": "pending-review",
           "source": "mercadolivre-api",
           "sourceRef": "MLB6747664922",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -6505,7 +6505,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB6747664922",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -6513,7 +6513,7 @@
           "value": 1,
           "source": "mercadolivre-api",
           "sourceRef": "MLB6747664922",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -6521,7 +6521,7 @@
           "value": 63,
           "source": "mercadolivre-api",
           "sourceRef": "MLB6747664922",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -6529,7 +6529,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-6747664922-sensor-de-corrente-ac-no-invasivo-ac-sct-013-100a-50ma-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB6747664922",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -6537,14 +6537,14 @@
           "value": "/products/MLB6747664922/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB6747664922",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "blocked",
     "blockingIssues": [
       "anúncio de catálogo excluído"
@@ -6726,13 +6726,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Filtro Supressor de Ruídos Eicos K-8 para Contatores 220 V",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669505471",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -6740,7 +6740,7 @@
           "value": "pending-review",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669505471",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -6748,7 +6748,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669505471",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -6756,7 +6756,7 @@
           "value": 1,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669505471",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -6764,7 +6764,7 @@
           "value": 98,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669505471",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -6772,7 +6772,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-4669505471-filtro-supressor-de-ruidos-eicos-k-8-para-contatores-220v-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669505471",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -6780,14 +6780,14 @@
           "value": "/products/MLB4669505471/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669505471",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "blocked",
     "blockingIssues": [
       "anúncio de catálogo excluído"
@@ -7019,13 +7019,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Módulo de Comunicação Ttgo T-call, SIM800L Lilygo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3939451361",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -7033,7 +7033,7 @@
           "value": "published",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3939451361",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -7041,7 +7041,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3939451361",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -7049,7 +7049,7 @@
           "value": 1,
           "source": "mercadolivre-api",
           "sourceRef": "MLB3939451361",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -7057,7 +7057,7 @@
           "value": 141.9,
           "source": "mercadolivre-api",
           "sourceRef": "MLB3939451361",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -7065,7 +7065,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-3939451361-modulo-de-comunicaco-ttgo-t-call-sim800l-lilygo-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3939451361",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -7073,14 +7073,14 @@
           "value": "/products/MLB3939451361/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3939451361",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "approved",
     "blockingIssues": [],
     "searchTerms": [
@@ -7242,13 +7242,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Kit 2x Módulos ESP32 Ttgo T-call SIM800L + Antena (novo)",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4417997973",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -7256,7 +7256,7 @@
           "value": "pending-review",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4417997973",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -7264,7 +7264,7 @@
           "value": "usado",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4417997973",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -7272,7 +7272,7 @@
           "value": 2,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4417997973",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -7280,7 +7280,7 @@
           "value": 245,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4417997973",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -7288,7 +7288,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-4417997973-kit-2x-modulos-esp32-ttgo-t-call-sim800l-antena-novo-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4417997973",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -7296,14 +7296,14 @@
           "value": "/products/MLB4417997973/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4417997973",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "blocked",
     "blockingIssues": [
       "quantidade divergente: cadastro=2, texto=5",
@@ -7446,13 +7446,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Kit15 Conector Parafuso Fendido Emenda Cabos Split Bolt 16mm",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5268502882",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -7460,7 +7460,7 @@
           "value": "pending-review",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5268502882",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -7468,7 +7468,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5268502882",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -7476,7 +7476,7 @@
           "value": 15,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5268502882",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -7484,7 +7484,7 @@
           "value": 75.9,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5268502882",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -7492,7 +7492,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-5268502882-kit15-conector-parafuso-fendido-emenda-cabos-split-bolt-16mm-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5268502882",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -7500,14 +7500,14 @@
           "value": "/products/MLB5268502882/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5268502882",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "blocked",
     "blockingIssues": [
       "anúncio de catálogo excluído"
@@ -7705,13 +7705,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Kit 10x Módulos ESP32 Ttgo T-call SIM800L + Antena (novo)",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5375698778",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -7719,7 +7719,7 @@
           "value": "pending-review",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5375698778",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -7727,7 +7727,7 @@
           "value": "usado",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5375698778",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -7735,7 +7735,7 @@
           "value": 10,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5375698778",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -7743,7 +7743,7 @@
           "value": 1259,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5375698778",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -7751,7 +7751,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-5375698778-kit-10x-modulos-esp32-ttgo-t-call-sim800l-antena-novo-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5375698778",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -7759,14 +7759,14 @@
           "value": "/products/MLB5375698778/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5375698778",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "blocked",
     "blockingIssues": [
       "condição divergente entre cadastro, título ou descrição",
@@ -7915,13 +7915,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Kit 15 Conectores Split Bolt 16mm Fendido P/emenda de Cabos",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5268502876",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -7929,7 +7929,7 @@
           "value": "published",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5268502876",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -7937,7 +7937,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5268502876",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -7945,7 +7945,7 @@
           "value": 15,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5268502876",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -7953,7 +7953,7 @@
           "value": 75.9,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5268502876",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -7961,7 +7961,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-5268502876-kit-15-conectores-split-bolt-16mm-fendido-pemenda-de-cabos-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5268502876",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -7969,14 +7969,14 @@
           "value": "/products/MLB5268502876/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5268502876",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "approved",
     "blockingIssues": [],
     "searchTerms": [
@@ -8203,13 +8203,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Kit 20x Módulos ESP32 Ttgo T-call SIM800L + Antena (novo)",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5375622238",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -8217,7 +8217,7 @@
           "value": "pending-review",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5375622238",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -8225,7 +8225,7 @@
           "value": "usado",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5375622238",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -8233,7 +8233,7 @@
           "value": 20,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5375622238",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -8241,7 +8241,7 @@
           "value": 2698,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5375622238",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -8249,7 +8249,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-5375622238-kit-20x-modulos-esp32-ttgo-t-call-sim800l-antena-novo-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5375622238",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -8257,14 +8257,14 @@
           "value": "/products/MLB5375622238/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5375622238",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "blocked",
     "blockingIssues": [
       "condição divergente entre cadastro, título ou descrição",
@@ -8431,13 +8431,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Sensor de Corrente AC Não Invasivo SCT-013 100 A 50 mA",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669503045",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -8445,7 +8445,7 @@
           "value": "published",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669503045",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -8453,7 +8453,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669503045",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -8461,7 +8461,7 @@
           "value": 1,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669503045",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -8469,7 +8469,7 @@
           "value": 63,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669503045",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -8477,7 +8477,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-4669503045-sensor-de-corrente-ac-no-invasivo-sct-013-100a-50ma-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669503045",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -8485,14 +8485,14 @@
           "value": "/products/MLB4669503045/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669503045",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "approved",
     "blockingIssues": [],
     "searchTerms": [
@@ -8611,13 +8611,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "10x Varistor 14k 250vac (s14d391 / 14d391k250vac) Uso Geral",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669565005",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -8625,7 +8625,7 @@
           "value": "pending-review",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669565005",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -8633,7 +8633,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669565005",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -8641,7 +8641,7 @@
           "value": 10,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669565005",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -8649,7 +8649,7 @@
           "value": 110,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669565005",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -8657,7 +8657,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-4669565005-10x-varistor-14k-250vac-s14d391-14d391k250vac-uso-geral-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669565005",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -8665,14 +8665,14 @@
           "value": null,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669565005",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "low",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "blocked",
     "blockingIssues": [
       "anúncio de catálogo excluído",
@@ -8858,13 +8858,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "3x Filtro Supressor de Ruídos Eicos K-8 para Contatores 220 V",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669565379",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -8872,7 +8872,7 @@
           "value": "published",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669565379",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -8880,7 +8880,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669565379",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -8888,7 +8888,7 @@
           "value": 3,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669565379",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -8896,7 +8896,7 @@
           "value": 98,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669565379",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -8904,7 +8904,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-4669565379-3x-filtro-supressor-de-ruidos-eicos-k-8-para-contatores-220v-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669565379",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -8912,14 +8912,14 @@
           "value": "/products/MLB4669565379/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669565379",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "approved",
     "blockingIssues": [],
     "searchTerms": [
@@ -9084,13 +9084,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Fonte de Alimentação DC Variável Bancada Hikari 3 A Hf-3203s",
           "source": "mercadolivre-api",
           "sourceRef": "MLB6747662378",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -9098,7 +9098,7 @@
           "value": "pending-review",
           "source": "mercadolivre-api",
           "sourceRef": "MLB6747662378",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -9106,7 +9106,7 @@
           "value": "usado",
           "source": "mercadolivre-api",
           "sourceRef": "MLB6747662378",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -9114,7 +9114,7 @@
           "value": 1,
           "source": "mercadolivre-api",
           "sourceRef": "MLB6747662378",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -9122,7 +9122,7 @@
           "value": 755.3,
           "source": "mercadolivre-api",
           "sourceRef": "MLB6747662378",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -9130,7 +9130,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-6747662378-fonte-de-alimentaco-dc-variavel-bancada-hikari-3a-hf-3203s-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB6747662378",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -9138,14 +9138,14 @@
           "value": "/products/MLB6747662378/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB6747662378",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "blocked",
     "blockingIssues": [
       "especificações suspeitas exigem revisão"
@@ -9318,13 +9318,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "10x Módulo GPS Ublox Gy-gps6mv2 para Arduino, Drone e Esp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963960643",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -9332,7 +9332,7 @@
           "value": "published",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963960643",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -9340,7 +9340,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963960643",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -9348,7 +9348,7 @@
           "value": 10,
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963960643",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -9356,7 +9356,7 @@
           "value": 360.9,
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963960643",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -9364,7 +9364,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-3963960643-10x-modulo-gps-ublox-gy-gps6mv2-para-arduino-drone-e-esp-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963960643",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -9372,14 +9372,14 @@
           "value": "/products/MLB3963960643/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3963960643",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "approved",
     "blockingIssues": [],
     "searchTerms": [
@@ -9577,13 +9577,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "40x Chave Micro Switch Kw1-103 15 A 125vac / 16 A 250vac Preto",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669478861",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -9591,7 +9591,7 @@
           "value": "published",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669478861",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -9599,7 +9599,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669478861",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -9607,7 +9607,7 @@
           "value": 40,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669478861",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -9615,7 +9615,7 @@
           "value": 214,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669478861",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -9623,7 +9623,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-4669478861-40x-chave-micro-switch-kw1-103-15a-125vac-16a-250vac-preto-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669478861",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -9631,14 +9631,14 @@
           "value": "/products/MLB4669478861/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669478861",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "approved",
     "blockingIssues": [],
     "searchTerms": [
@@ -9849,13 +9849,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Mini fonte Chaveada Hi-link HLK-PM01 5 V / 3 W",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669476077",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -9863,7 +9863,7 @@
           "value": "pending-review",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669476077",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -9871,7 +9871,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669476077",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -9879,7 +9879,7 @@
           "value": 1,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669476077",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -9887,7 +9887,7 @@
           "value": 298,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669476077",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -9895,7 +9895,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-4669476077-mini-fonte-chaveada-hi-link-hlk-pm01-5v-3w-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669476077",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -9903,14 +9903,14 @@
           "value": "/products/MLB4669476077/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669476077",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "blocked",
     "blockingIssues": [
       "anúncio de catálogo excluído"
@@ -10102,13 +10102,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Kit 20x Módulos ESP32 Ttgo T-call SIM800L + Antena",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4051929221",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -10116,7 +10116,7 @@
           "value": "pending-review",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4051929221",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -10124,7 +10124,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4051929221",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -10132,7 +10132,7 @@
           "value": 20,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4051929221",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -10140,7 +10140,7 @@
           "value": 1980,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4051929221",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -10148,7 +10148,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-4051929221-kit-20x-modulos-esp32-ttgo-t-call-sim800l-antena-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4051929221",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -10156,14 +10156,14 @@
           "value": "/products/MLB4051929221/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4051929221",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "blocked",
     "blockingIssues": [
       "especificações suspeitas exigem revisão"
@@ -10310,13 +10310,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Kit 50 Conectores Fendido 16mm Split Bolt Cobre",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3948176139",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -10324,7 +10324,7 @@
           "value": "published",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3948176139",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -10332,7 +10332,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3948176139",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -10340,7 +10340,7 @@
           "value": 50,
           "source": "mercadolivre-api",
           "sourceRef": "MLB3948176139",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -10348,7 +10348,7 @@
           "value": 199.8,
           "source": "mercadolivre-api",
           "sourceRef": "MLB3948176139",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -10356,7 +10356,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-3948176139-kit-50-conectores-fendido-16mm-split-bolt-cobre-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3948176139",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -10364,14 +10364,14 @@
           "value": "/products/MLB3948176139/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3948176139",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "approved",
     "blockingIssues": [],
     "searchTerms": [
@@ -10580,13 +10580,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Kit 5 Mini fonte Chaveada Hi-link HLK-PM01 5 V / 3 W",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4832394051",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -10594,7 +10594,7 @@
           "value": "published",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4832394051",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -10602,7 +10602,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4832394051",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -10610,7 +10610,7 @@
           "value": 5,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4832394051",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -10618,7 +10618,7 @@
           "value": 98,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4832394051",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -10626,7 +10626,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-4832394051-kit-5-mini-fonte-chaveada-hi-link-hlk-pm01-5v-3w-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4832394051",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -10634,14 +10634,14 @@
           "value": "/products/MLB4832394051/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4832394051",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "approved",
     "blockingIssues": [],
     "searchTerms": [
@@ -10808,13 +10808,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Módulo GPS Ublox Casa da Robótica Gy-gps6mv2 Antena Cerâmica Arduino",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272829812",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -10822,7 +10822,7 @@
           "value": "pending-review",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272829812",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -10830,7 +10830,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272829812",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -10838,7 +10838,7 @@
           "value": 1,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272829812",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -10846,7 +10846,7 @@
           "value": 360.9,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272829812",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -10854,7 +10854,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-5272829812-modulo-gps-ublox-casa-da-robotica-gy-gps6mv2-antena-cermica-arduino-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272829812",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -10862,14 +10862,14 @@
           "value": "/products/MLB5272829812/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272829812",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "blocked",
     "blockingIssues": [
       "anúncio de catálogo excluído"
@@ -11091,13 +11091,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Módulo de Comunicação Ttgo T-call, SIM800L Lilygo (aberto)",
           "source": "mercadolivre-api",
           "sourceRef": "MLB7070502622",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -11105,7 +11105,7 @@
           "value": "pending-review",
           "source": "mercadolivre-api",
           "sourceRef": "MLB7070502622",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -11113,7 +11113,7 @@
           "value": "usado",
           "source": "mercadolivre-api",
           "sourceRef": "MLB7070502622",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -11121,7 +11121,7 @@
           "value": 1,
           "source": "mercadolivre-api",
           "sourceRef": "MLB7070502622",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -11129,7 +11129,7 @@
           "value": 98.2,
           "source": "mercadolivre-api",
           "sourceRef": "MLB7070502622",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -11137,7 +11137,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-7070502622-modulo-de-comunicaco-ttgo-t-call-sim800l-lilygo-aberto-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB7070502622",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -11145,14 +11145,14 @@
           "value": "/products/MLB7070502622/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB7070502622",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "blocked",
     "blockingIssues": [
       "especificações suspeitas exigem revisão"
@@ -11324,13 +11324,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Kit C/3 Sensor de Corrente AC Não Invasivosct-013 100 A 50 mA",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669465391",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -11338,7 +11338,7 @@
           "value": "published",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669465391",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -11346,7 +11346,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669465391",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -11354,7 +11354,7 @@
           "value": 1,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669465391",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -11362,7 +11362,7 @@
           "value": 138.3,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669465391",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -11370,7 +11370,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-4669465391-kit-c3-sensor-de-corrente-ac-no-invasivosct-013-100a-50ma-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669465391",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -11378,14 +11378,14 @@
           "value": "/products/MLB4669465391/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669465391",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "approved",
     "blockingIssues": [],
     "searchTerms": [
@@ -11595,13 +11595,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "10x Mini fonte Chaveada Hi-link HLK-PM01 5 V / 3 W",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669463663",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -11609,7 +11609,7 @@
           "value": "published",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669463663",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -11617,7 +11617,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669463663",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -11625,7 +11625,7 @@
           "value": 10,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669463663",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -11633,7 +11633,7 @@
           "value": 298,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669463663",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -11641,7 +11641,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-4669463663-10x-mini-fonte-chaveada-hi-link-hlk-pm01-5v-3w-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669463663",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -11649,14 +11649,14 @@
           "value": "/products/MLB4669463663/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669463663",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "approved",
     "blockingIssues": [],
     "searchTerms": [
@@ -11856,13 +11856,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Contator Hs Automação Trifásico 4011 40 A 3p +1na+1nf 220 V",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272662416",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -11870,7 +11870,7 @@
           "value": "pending-review",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272662416",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -11878,7 +11878,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272662416",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -11886,7 +11886,7 @@
           "value": 1,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272662416",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -11894,7 +11894,7 @@
           "value": 75.9,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272662416",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -11902,7 +11902,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-5272662416-contator-hs-automaco-trifasico-4011-40a-3p-1na1nf-220v-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272662416",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -11910,14 +11910,14 @@
           "value": "/products/MLB5272662416/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272662416",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "blocked",
     "blockingIssues": [
       "anúncio de catálogo excluído"
@@ -12129,13 +12129,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Kit 10un Mini fonte Hi-link HLK-PM01 110-220vac - 5vdc",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669463945",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -12143,7 +12143,7 @@
           "value": "published",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669463945",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -12151,7 +12151,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669463945",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -12159,7 +12159,7 @@
           "value": 10,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669463945",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -12167,7 +12167,7 @@
           "value": 255,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669463945",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -12175,7 +12175,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-4669463945-kit-10un-mini-fonte-hi-link-hlk-pm01-110-220vac-5vdc-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669463945",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -12183,14 +12183,14 @@
           "value": "/products/MLB4669463945/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669463945",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "approved",
     "blockingIssues": [],
     "searchTerms": [
@@ -12402,13 +12402,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Mini fonte Chaveada Hi-link HLK-PM01 5 V / 3 W",
           "source": "mercadolivre-api",
           "sourceRef": "MLB6747663478",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -12416,7 +12416,7 @@
           "value": "pending-review",
           "source": "mercadolivre-api",
           "sourceRef": "MLB6747663478",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -12424,7 +12424,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB6747663478",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -12432,7 +12432,7 @@
           "value": 1,
           "source": "mercadolivre-api",
           "sourceRef": "MLB6747663478",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -12440,7 +12440,7 @@
           "value": 255,
           "source": "mercadolivre-api",
           "sourceRef": "MLB6747663478",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -12448,7 +12448,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-6747663478-mini-fonte-chaveada-hi-link-hlk-pm01-5v-3w-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB6747663478",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -12456,14 +12456,14 @@
           "value": "/products/MLB6747663478/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB6747663478",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "blocked",
     "blockingIssues": [
       "anúncio de catálogo excluído"
@@ -12691,13 +12691,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Placa de Comunicação Lilygo com ESP32 Ttgo T-call SIM800L",
           "source": "mercadolivre-api",
           "sourceRef": "MLB7070500932",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -12705,7 +12705,7 @@
           "value": "pending-review",
           "source": "mercadolivre-api",
           "sourceRef": "MLB7070500932",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -12713,7 +12713,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB7070500932",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -12721,7 +12721,7 @@
           "value": 1,
           "source": "mercadolivre-api",
           "sourceRef": "MLB7070500932",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -12729,7 +12729,7 @@
           "value": 151.9,
           "source": "mercadolivre-api",
           "sourceRef": "MLB7070500932",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -12737,7 +12737,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-7070500932-placa-de-comunicaco-lilygo-com-esp32-ttgo-t-call-sim800l-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB7070500932",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -12745,14 +12745,14 @@
           "value": "/products/MLB7070500932/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB7070500932",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "blocked",
     "blockingIssues": [
       "especificações suspeitas exigem revisão"
@@ -12960,13 +12960,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Contator Tripolar 4011 40 A 220 V 3p com Contatos Auxiliares",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272698878",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -12974,7 +12974,7 @@
           "value": "published",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272698878",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -12982,7 +12982,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272698878",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -12990,7 +12990,7 @@
           "value": 1,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272698878",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -12998,7 +12998,7 @@
           "value": 75.9,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272698878",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -13006,7 +13006,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-5272698878-contator-tripolar-4011-40a-220v-3p-com-contatos-auxiliares-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272698878",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -13014,14 +13014,14 @@
           "value": "/products/MLB5272698878/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272698878",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "approved",
     "blockingIssues": [],
     "searchTerms": [
@@ -13187,13 +13187,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Sensor de Corrente AC Não Invasivo AC SCT-013 100 A 50 mA",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669465397",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -13201,7 +13201,7 @@
           "value": "pending-review",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669465397",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -13209,7 +13209,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669465397",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -13217,7 +13217,7 @@
           "value": 1,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669465397",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -13225,7 +13225,7 @@
           "value": 138.3,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669465397",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -13233,7 +13233,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-4669465397-sensor-de-corrente-ac-no-invasivo-ac-sct-013-100a-50ma-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669465397",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -13241,14 +13241,14 @@
           "value": "/products/MLB4669465397/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4669465397",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "blocked",
     "blockingIssues": [
       "anúncio de catálogo excluído"
@@ -13453,13 +13453,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Contator Trifásico Elitek 32 A 220 V 3 Polos Modelo Ecp32a10m",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3939446645",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -13467,7 +13467,7 @@
           "value": "pending-review",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3939446645",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -13475,7 +13475,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3939446645",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -13483,7 +13483,7 @@
           "value": 1,
           "source": "mercadolivre-api",
           "sourceRef": "MLB3939446645",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -13491,7 +13491,7 @@
           "value": 83.9,
           "source": "mercadolivre-api",
           "sourceRef": "MLB3939446645",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -13499,7 +13499,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-3939446645-contator-trifasico-elitek-32a-220v-3-polos-modelo-ecp32a10m-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3939446645",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -13507,14 +13507,14 @@
           "value": "/products/MLB3939446645/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3939446645",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "blocked",
     "blockingIssues": [
       "anúncio de catálogo excluído"
@@ -13728,13 +13728,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Mini fonte Chaveada Hi-link HLK-PM01 5 V / 3 W",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4832454317",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -13742,7 +13742,7 @@
           "value": "pending-review",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4832454317",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -13750,7 +13750,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4832454317",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -13758,7 +13758,7 @@
           "value": 1,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4832454317",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -13766,7 +13766,7 @@
           "value": 98,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4832454317",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -13774,7 +13774,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-4832454317-mini-fonte-chaveada-hi-link-hlk-pm01-5v-3w-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4832454317",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -13782,14 +13782,14 @@
           "value": "/products/MLB4832454317/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4832454317",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "blocked",
     "blockingIssues": [
       "anúncio de catálogo excluído"
@@ -13937,13 +13937,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Kit com 100 Prensa Cabos Pg9 Cinza - Vedação Ip68",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3957971855",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -13951,7 +13951,7 @@
           "value": "published",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3957971855",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -13959,7 +13959,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3957971855",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -13967,7 +13967,7 @@
           "value": 100,
           "source": "mercadolivre-api",
           "sourceRef": "MLB3957971855",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -13975,7 +13975,7 @@
           "value": 78.9,
           "source": "mercadolivre-api",
           "sourceRef": "MLB3957971855",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -13983,7 +13983,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-3957971855-kit-com-100-prensa-cabos-pg9-cinza-vedaco-ip68-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3957971855",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -13991,14 +13991,14 @@
           "value": "/products/MLB3957971855/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB3957971855",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "approved",
     "blockingIssues": [],
     "searchTerms": [
@@ -14130,13 +14130,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Conector Split Bolt 16mm² Intelli Cobre Eletrolítico Alta Condutibilidade",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5265377782",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -14144,7 +14144,7 @@
           "value": "pending-review",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5265377782",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -14152,7 +14152,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5265377782",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -14160,7 +14160,7 @@
           "value": 1,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5265377782",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -14168,7 +14168,7 @@
           "value": 199.8,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5265377782",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -14176,7 +14176,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-5265377782-conector-split-bolt-16mm-intelli-cobre-eletrolitico-alta-condutibilidade-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5265377782",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -14184,14 +14184,14 @@
           "value": "/products/MLB5265377782/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5265377782",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "blocked",
     "blockingIssues": [
       "anúncio de catálogo excluído"
@@ -14344,13 +14344,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Kit 200 Barra de Pinos - Fêmea - 1x15 - 2,54 mm - Pic/arduino Preto",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272894966",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -14358,7 +14358,7 @@
           "value": "published",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272894966",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -14366,7 +14366,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272894966",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -14374,7 +14374,7 @@
           "value": 200,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272894966",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -14382,7 +14382,7 @@
           "value": 209,
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272894966",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -14390,7 +14390,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-5272894966-kit-200-barra-de-pinos-fmea-1x15-254mm-picarduino-preto-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272894966",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -14398,14 +14398,14 @@
           "value": "/products/MLB5272894966/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB5272894966",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "approved",
     "blockingIssues": [],
     "searchTerms": [
@@ -14589,13 +14589,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Bateria para Notebook Acer Aspire Ap18c8k 4471 Mah Original Preto",
           "source": "mercadolivre-api",
           "sourceRef": "MLB7141642274",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -14603,7 +14603,7 @@
           "value": "pending-review",
           "source": "mercadolivre-api",
           "sourceRef": "MLB7141642274",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -14611,7 +14611,7 @@
           "value": "usado",
           "source": "mercadolivre-api",
           "sourceRef": "MLB7141642274",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -14619,7 +14619,7 @@
           "value": 1,
           "source": "mercadolivre-api",
           "sourceRef": "MLB7141642274",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -14627,7 +14627,7 @@
           "value": 192,
           "source": "mercadolivre-api",
           "sourceRef": "MLB7141642274",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -14635,7 +14635,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-7141642274-bateria-para-notebook-acer-aspire-ap18c8k-4471-mah-original-preto-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB7141642274",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -14643,14 +14643,14 @@
           "value": null,
           "source": "mercadolivre-api",
           "sourceRef": "MLB7141642274",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "low",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "blocked",
     "blockingIssues": [
       "imagem real do anúncio exato não verificada",
@@ -14805,13 +14805,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Kit 3x Módulo GPS NEO-6M V2 com Antena Arduino ESP32 Esp8266",
           "source": "mercadolivre-api",
           "sourceRef": "MLB7143332292",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -14819,7 +14819,7 @@
           "value": "published",
           "source": "mercadolivre-api",
           "sourceRef": "MLB7143332292",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -14827,7 +14827,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB7143332292",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -14835,7 +14835,7 @@
           "value": 3,
           "source": "mercadolivre-api",
           "sourceRef": "MLB7143332292",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -14843,7 +14843,7 @@
           "value": 98.2,
           "source": "mercadolivre-api",
           "sourceRef": "MLB7143332292",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -14851,7 +14851,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-7143332292-kit-3x-modulo-gps-neo-6m-v2-com-antena-arduino-esp32-esp8266-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB7143332292",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -14859,14 +14859,14 @@
           "value": "/products/MLB7143332292/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB7143332292",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "approved",
     "blockingIssues": [],
     "searchTerms": [
@@ -15015,13 +15015,13 @@
     "source": {
       "mode": "api",
       "primary": "mercadolivre-api",
-      "fetchedAt": "2026-07-14T12:31:00.539Z",
+      "fetchedAt": "2026-07-14T12:54:25.019Z",
       "fields": {
         "title": {
           "value": "Módulo GPS NEO-6M V2 com Antena Compatível Arduino ESP32 Esp8266 Raspberry Pi Rastreamento Navegação Telemetria Drone Robótica Geolocalização Projetos Blutu",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4875918503",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -15029,7 +15029,7 @@
           "value": "pending-review",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4875918503",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -15037,7 +15037,7 @@
           "value": "novo",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4875918503",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -15045,7 +15045,7 @@
           "value": 1,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4875918503",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -15053,7 +15053,7 @@
           "value": 98.2,
           "source": "mercadolivre-api",
           "sourceRef": "MLB4875918503",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -15061,7 +15061,7 @@
           "value": "https://produto.mercadolivre.com.br/MLB-4875918503-modulo-gps-neo-6m-v2-com-antena-compativel-arduino-esp32-esp8266-raspberry-pi-rastreamento-navegaco-telemetria-drone-robotica-geolocalizaco-projetos-blutu-_JM",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4875918503",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "medium",
           "reviewStatus": "pending-review"
         },
@@ -15069,14 +15069,14 @@
           "value": "/products/MLB4875918503/optimized/main.webp",
           "source": "mercadolivre-api",
           "sourceRef": "MLB4875918503",
-          "fetchedAt": "2026-07-14T12:31:00.539Z",
+          "fetchedAt": "2026-07-14T12:54:25.019Z",
           "confidence": "high",
           "reviewStatus": "pending-review"
         }
       }
     },
     "fetchedAt": "2026-07-14T00:00:00.000Z",
-    "lastReviewedAt": "2026-07-14T12:31:00.539Z",
+    "lastReviewedAt": "2026-07-14T12:54:25.019Z",
     "reviewStatus": "blocked",
     "blockingIssues": [
       "anúncio de catálogo excluído"
