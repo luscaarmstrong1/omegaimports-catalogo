@@ -212,9 +212,8 @@ function applyFilters() {
   const activeFilters = [search, category, family, condition, packageFilter, priceFilter].filter((input) => input?.value).length;
   if (filterToggle) {
     filterToggle.setAttribute("aria-label", activeFilters ? `Filtrar e ordenar, ${activeFilters} filtros ativos` : "Filtrar e ordenar");
-    const label = activeFilters ? `Filtrar (${activeFilters})` : "Filtrar e ordenar";
-    const icon = filterToggle.querySelector("svg")?.outerHTML || "";
-    filterToggle.innerHTML = `${icon} ${label}`;
+    const label = filterToggle.querySelector(".filter-toggle-label");
+    if (label) label.textContent = activeFilters ? `Filtrar (${activeFilters})` : "Filtrar e ordenar";
   }
 
   const params = new URLSearchParams(location.search);

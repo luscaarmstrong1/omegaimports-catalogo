@@ -235,7 +235,7 @@ function catalog() {
   };
   const body = `<section class="page-hero"><p class="eyebrow">Catálogo</p><h1>Produtos OMEGAIMPORTS</h1><p>Filtros comerciais para encontrar componentes por categoria, família, condição, formato e preço.</p></section>
     <div class="catalog-mobile-bar">
-      <button class="filter-toggle" type="button" aria-controls="catalog-filters" aria-expanded="false">${icon("sliders", "btn-icon")} Filtrar e ordenar</button>
+      <button class="filter-toggle" type="button" aria-controls="catalog-filters" aria-expanded="false">${icon("sliders", "btn-icon")} <span class="filter-toggle-label">Filtrar e ordenar</span></button>
       <span><strong>${published.length}</strong> produtos</span>
     </div>
     <div class="filter-scrim" id="filter-scrim" hidden></div>
