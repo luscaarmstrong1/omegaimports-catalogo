@@ -306,7 +306,7 @@ function home() {
   out("index.html", pageShell({
     title: "Componentes eletrônicos, IoT e automação",
     description: "Componentes eletrônicos, sensores, fontes, módulos IoT e itens de automação da OMEGAIMPORTS, com compra pelo Mercado Livre e atendimento pelo WhatsApp.",
-    body: enhanceHomeBody(body, heroProducts),
+    body: `${body}${commercialProof()}${buyingIntelligenceSection(heroProducts)}${technicalFlowSection()}${opportunityCta()}`,
   }));
 }
 
@@ -449,7 +449,10 @@ function simplePages() {
     ["contato", "Contato", "Atendimento pelo WhatsApp oficial da OMEGAIMPORTS e compra finalizada pelo Mercado Livre.", `<section class="page-hero"><h1>Contato</h1><p>Para dúvidas sobre produto, compatibilidade, quantidade, frete ou prazo, fale pelo WhatsApp oficial da OMEGAIMPORTS.</p><a class="whatsapp-action whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp ${icon("message", "btn-icon")}</a></section>`],
     ["duvidas-frequentes", "Dúvidas frequentes", "O site não tem checkout próprio. Preço, frete, estoque e prazo são confirmados no Mercado Livre.", `<section class="page-hero"><h1>Dúvidas frequentes</h1><p>O site não tem checkout próprio. Preço, frete, estoque e prazo são confirmados no Mercado Livre.</p></section>`],
   ];
-  for (const [slug, title, description, body] of pages) out(`${slug}/index.html`, pageShell({ title, description, path: `${slug}/`, body: slug === "sobre" ? enhanceAboutBody(body) : body }));
+  for (const [slug, title, description, body] of pages) {
+    const enhancedBody = slug === "sobre" ? `${body}${commercialProof()}${buyingIntelligenceSection(selectByPriority().slice(0, 3))}${technicalFlowSection()}${opportunityCta()}` : body;
+    out(`${slug}/index.html`, pageShell({ title, description, path: `${slug}/`, body: enhancedBody }));
+  }
 }
 
 function legacyPages() {
