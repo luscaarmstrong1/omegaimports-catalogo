@@ -48,6 +48,7 @@ function copyAssets() {
   cpSync(new URL("../public/brand/", import.meta.url), new URL("brand/", dist), { recursive: true });
   mkdirSync(new URL("blog/", dist), { recursive: true });
   cpSync(new URL("../public/blog/covers/", import.meta.url), new URL("blog/covers/", dist), { recursive: true });
+  cpSync(new URL("../public/blog/stock/", import.meta.url), new URL("blog/stock/", dist), { recursive: true });
   cpSync(new URL("../public/assets/", import.meta.url), new URL("assets/", dist), { recursive: true });
   cpSync(new URL("../public/products/", import.meta.url), new URL("products/", dist), { recursive: true });
   cpSync(new URL("../public/manifest.webmanifest", import.meta.url), new URL("manifest.webmanifest", dist));
@@ -142,6 +143,88 @@ function heroProduct(product, index) {
   </a>`;
 }
 
+function commercialProof() {
+  const proof = [
+    [`${published.length}`, "produtos públicos", "Itens ativos, com imagem validada e rota própria."],
+    [`${visibleCategories.length}`, "categorias técnicas", "Busca por aplicação, família e tipo de componente."],
+    [`${blogPosts.length}`, "guias editoriais", "Conteúdo conectado ao catálogo real, não a texto genérico."],
+    ["ML", "checkout protegido", "Pagamento, frete e entrega confirmados no Mercado Livre."],
+  ];
+  return `<section class="commercial-proof" aria-label="Resumo comercial OMEGAIMPORTS">
+    ${proof.map(([value, label, text]) => `<article><strong>${escapeHtml(value)}</strong><span>${escapeHtml(label)}</span><p>${escapeHtml(text)}</p></article>`).join("")}
+  </section>`;
+}
+
+function buyingIntelligenceSection(heroProducts) {
+  const featured = heroProducts[0] || published[0];
+  return `<section class="commerce-lab section section--white">
+    <div class="commerce-lab-copy">
+      <p class="eyebrow">Compra técnica orientada</p>
+      <h2>Menos ruído entre a busca, a escolha e a compra.</h2>
+      <p>Inspirado nos melhores fluxos de geração e qualificação de oportunidades B2B, o catálogo agora deixa claro onde encontrar, comparar e confirmar cada componente antes de avançar para a oferta oficial.</p>
+      <div class="signal-grid">
+        <article class="signal-card">${icon("search", "signal-icon")}<strong>Busca segmentada</strong><p>Filtros por categoria, família, condição, formato e faixa de preço.</p></article>
+        <article class="signal-card">${icon("book", "signal-icon")}<strong>Decisão com contexto</strong><p>Guias técnicos e produtos relacionados reduzem dúvidas na escolha.</p></article>
+        <article class="signal-card">${icon("message", "signal-icon")}<strong>Atendimento qualificado</strong><p>WhatsApp preparado para dúvidas de aplicação, compatibilidade e quantidade.</p></article>
+        <article class="signal-card">${icon("shield", "signal-icon")}<strong>Finalização segura</strong><p>Checkout, frete e pagamento ficam dentro do Mercado Livre.</p></article>
+      </div>
+    </div>
+    <div class="commerce-lab-media" aria-label="Bancada e componentes eletrônicos">
+      <img class="commerce-photo commerce-photo--wide" src="${assetUrl("blog/stock/electronics-assembly.jpg")}" width="760" height="506" loading="lazy" decoding="async" alt="Bancada com montagem de componentes eletrônicos">
+      <img class="commerce-photo commerce-photo--small" src="${assetUrl("blog/stock/components-flatlay.jpg")}" width="520" height="347" loading="lazy" decoding="async" alt="Componentes eletrônicos organizados para seleção técnica">
+      ${featured ? `<a class="commerce-product-shot" href="${pageUrl(`produtos/${featured.slug}/`)}">${productPicture(featured, { className: "commerce-product-picture", width: 360, height: 360, loading: "lazy", sizes: "(min-width: 900px) 240px, 48vw" })}<span>Produto em destaque</span></a>` : ""}
+    </div>
+  </section>`;
+}
+
+function technicalFlowSection() {
+  const steps = [
+    ["1", "Encontre o perfil certo", "Use busca, chips e categorias para chegar ao componente por aplicação real."],
+    ["2", "Compare com segurança", "Veja imagem, preço verificado, condição, família técnica e conteúdo relacionado."],
+    ["3", "Confirme a aplicação", "Tire dúvidas de tensão, corrente, pinagem, acessórios e quantidade pelo WhatsApp."],
+    ["4", "Finalize protegido", "Abra o anúncio oficial e conclua frete, pagamento e entrega no Mercado Livre."],
+  ];
+  return `<section class="technical-flow">
+    <div class="section-heading">
+      <div class="section-heading-copy">
+        <p class="eyebrow">Fluxo de compra</p>
+        <h2>Uma jornada mais parecida com venda consultiva.</h2>
+        <p>O site continua simples para comprar, mas passa a comunicar melhor a curadoria, a qualificação da escolha e o próximo passo comercial.</p>
+      </div>
+      <a class="text-link" href="${pageUrl("como-comprar/")}">Como comprar ${icon("arrow-right", "text-link-icon")}</a>
+    </div>
+    <div class="flow-steps">${steps.map(([number, title, text]) => `<article class="flow-step"><span>${number}</span><h3>${escapeHtml(title)}</h3><p>${escapeHtml(text)}</p></article>`).join("")}</div>
+  </section>`;
+}
+
+function opportunityCta() {
+  return `<section class="opportunity-cta">
+    <div>
+      <p class="eyebrow">Pedidos, kits e reposição</p>
+      <h2>Comprando para bancada, manutenção ou integração?</h2>
+      <p>Envie a aplicação, quantidade desejada e prazo. A OMEGAIMPORTS ajuda a localizar o item correto no catálogo e direciona para a oferta oficial.</p>
+    </div>
+    <div class="opportunity-actions">
+      <a class="whatsapp-action whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">Falar com atendimento ${icon("message", "btn-icon")}</a>
+      <a class="secondary-action" href="${pageUrl("produtos/")}">Ver catálogo ${icon("arrow-right", "btn-icon")}</a>
+    </div>
+  </section>`;
+}
+
+function enhanceHomeBody(body, heroProducts) {
+  return body
+    .replace("\n    <section class=\"section section--white\">", `\n    ${commercialProof()}\n    ${buyingIntelligenceSection(heroProducts)}\n    <section class="section section--white">`)
+    .replace("\n    <section class=\"section\">\n    <div class=\"section-heading\">", `\n    ${technicalFlowSection()}\n    <section class="section">\n    <div class="section-heading">`)
+    .replace("\n    <section class=\"whatsapp-band\">", `\n    ${opportunityCta()}\n    <section class="whatsapp-band">`);
+}
+
+function enhanceAboutBody(body) {
+  const visual = `<img src="${assetUrl("blog/stock/factory-pcb-test.jpg")}" width="760" height="506" loading="eager" decoding="async" alt="Inspeção de placas eletrônicas em bancada técnica">`;
+  return body
+    .replace("<section class=\"page-hero\">", "<section class=\"page-hero about-hero\">")
+    .replace("</p></section><section class=\"detail-grid\">", `</p>${visual}</section>${commercialProof()}<section class="detail-grid">`) + technicalFlowSection() + opportunityCta();
+}
+
 function categoryCard(category, index) {
   return `<a class="category-card" href="${pageUrl(`categorias/${category.slug}/`)}" data-event="category_click" data-category="${category.slug}" data-position="${index + 1}">
     ${icon(category.icon, "category-icon")}
@@ -223,7 +306,7 @@ function home() {
   out("index.html", pageShell({
     title: "Componentes eletrônicos, IoT e automação",
     description: "Componentes eletrônicos, sensores, fontes, módulos IoT e itens de automação da OMEGAIMPORTS, com compra pelo Mercado Livre e atendimento pelo WhatsApp.",
-    body,
+    body: enhanceHomeBody(body, heroProducts),
   }));
 }
 
@@ -366,7 +449,7 @@ function simplePages() {
     ["contato", "Contato", "Atendimento pelo WhatsApp oficial da OMEGAIMPORTS e compra finalizada pelo Mercado Livre.", `<section class="page-hero"><h1>Contato</h1><p>Para dúvidas sobre produto, compatibilidade, quantidade, frete ou prazo, fale pelo WhatsApp oficial da OMEGAIMPORTS.</p><a class="whatsapp-action whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp ${icon("message", "btn-icon")}</a></section>`],
     ["duvidas-frequentes", "Dúvidas frequentes", "O site não tem checkout próprio. Preço, frete, estoque e prazo são confirmados no Mercado Livre.", `<section class="page-hero"><h1>Dúvidas frequentes</h1><p>O site não tem checkout próprio. Preço, frete, estoque e prazo são confirmados no Mercado Livre.</p></section>`],
   ];
-  for (const [slug, title, description, body] of pages) out(`${slug}/index.html`, pageShell({ title, description, path: `${slug}/`, body }));
+  for (const [slug, title, description, body] of pages) out(`${slug}/index.html`, pageShell({ title, description, path: `${slug}/`, body: slug === "sobre" ? enhanceAboutBody(body) : body }));
 }
 
 function legacyPages() {
