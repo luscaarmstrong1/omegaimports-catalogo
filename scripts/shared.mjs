@@ -173,7 +173,7 @@ export function icon(name, className = "icon") {
 
 export function productCard(product, index = 0, { featured = false } = {}) {
   const cardClass = featured ? "product-card product-card--lead" : "product-card";
-  return `<article class="${cardClass}" data-title="${escapeHtml(normalizeText(product.title))}" data-family="${escapeHtml(normalizeText(product.familyId || ""))}" data-category="${product.internalCategorySlug}" data-condition="${product.condition}" data-package="${product.packageType}" data-quantity="${product.quantity}" data-price="${product.price || ""}" data-mlb="${product.mlbId}">
+  return `<article class="${cardClass}" data-title="${escapeHtml(normalizeText(product.title))}" data-family="${escapeHtml(normalizeText(product.familyId || ""))}" data-category="${product.internalCategorySlug}" data-condition="${product.condition}" data-package="${product.packageType}" data-quantity="${product.quantity}" data-price="${product.price || ""}" data-mlb="${product.mlbId}" data-reveal>
     <a class="product-media" href="${pageUrl(`produtos/${product.slug}/`)}" aria-label="Ver detalhes de ${escapeHtml(product.shortTitle || product.title)}">
       <span class="product-chip">${escapeHtml(product.internalCategory)}</span>
       ${productPicture(product, { loading: index < 4 ? "eager" : "lazy", fetchpriority: index === 0 ? "high" : "auto" })}
@@ -195,10 +195,7 @@ export function pageShell({ title, description, path = "", body, extraHead = "",
   const isHome = !path;
   const metaTitle = fitText(title, 72);
   const metaDescription = fitDescription(description);
-  const headerSearch = isHome ? "" : `<form class="header-search" action="${pageUrl("produtos/")}" role="search">
-      <label class="sr-only" for="site-search">Buscar no catálogo</label>
-      <input id="site-search" name="q" type="search" placeholder="Buscar componente..." autocomplete="off">
-    </form>`;
+  const headerSearch = "";
   const mobileSearch = `<div class="mobile-search-panel" id="mobile-search-panel" hidden>
     <form action="${pageUrl("produtos/")}" role="search">
       ${icon("search", "search-icon")}
@@ -253,9 +250,8 @@ export function pageShell({ title, description, path = "", body, extraHead = "",
 </head>
 <body class="${isHome ? "home-shell" : "inner-shell"}">
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-  <div class="topbar">Compra protegida e finalização pelo Mercado Livre</div>
-  <header class="site-header">
-    <a class="brand brand--header" href="${pageUrl()}"><img src="${assetUrl("brand/logo-horizontal.webp")}" width="220" height="61" alt="OMEGAIMPORTS"></a>
+  <header class="site-header" data-site-header>
+    <a class="brand brand--header" href="${pageUrl()}"><img src="${assetUrl("brand/logo-horizontal-light.svg")}" width="250" height="69" alt="OMEGAIMPORTS"></a>
     ${headerSearch}
     <nav class="main-nav" aria-label="Principal">
       <a href="${pageUrl("produtos/")}">Produtos</a>
@@ -287,27 +283,26 @@ export function pageShell({ title, description, path = "", body, extraHead = "",
   <a class="whatsapp-float whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer" aria-label="Chamar OMEGAIMPORTS no WhatsApp">${icon("message", "btn-icon")}</a>
   <footer class="footer">
     <div>
-      <span class="footer-brand"><img src="${assetUrl("brand/logo-horizontal.webp")}" width="210" height="58" alt="OMEGAIMPORTS"></span>
+      <span class="footer-brand"><img src="${assetUrl("brand/logo-horizontal-light.svg")}" width="210" height="58" alt="OMEGAIMPORTS"></span>
       <p>Componentes eletrônicos, IoT, automação e bancada organizados para compra técnica.</p>
     </div>
     <details class="footer-group" open>
-      <summary>Produtos</summary>
+      <summary>Catálogo</summary>
       <a href="${pageUrl("produtos/")}">Produtos</a>
       <a href="${navUrl("categorias/")}">Categorias</a>
+    </details>
+    <details class="footer-group" open>
+      <summary>Conteúdo</summary>
       <a href="${navUrl("blog/")}">Blog</a>
       <a href="${navUrl("sobre/")}">Sobre</a>
+      <a href="${pageUrl("como-comprar/")}">Como comprar</a>
     </details>
     <details class="footer-group" open>
       <summary>Atendimento</summary>
-      <a href="${pageUrl("como-comprar/")}">Como comprar</a>
+      <a class="whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">WhatsApp ${site.whatsappNumber}</a>
+      <a href="${site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored">Mercado Livre</a>
       <a href="${pageUrl("politica-de-privacidade/")}">Política de privacidade</a>
       <a href="${pageUrl("termos-de-uso/")}">Termos de uso</a>
-      <a href="${site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored">Mercado Livre</a>
-    </details>
-    <details class="footer-group" open>
-      <summary>WhatsApp</summary>
-      <a class="whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">${site.whatsappNumber}</a>
-      <span>Ajuda para identificar o componente adequado.</span>
     </details>
     <p class="fine-print">Preços, estoque, frete e condições são confirmados no anúncio oficial do Mercado Livre.</p>
     <p class="copyright">© 2026 OMEGAIMPORTS. Todos os direitos reservados.</p>
