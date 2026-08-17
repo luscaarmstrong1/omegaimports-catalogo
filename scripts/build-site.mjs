@@ -133,6 +133,200 @@ function selectHomeProducts() {
   return selected;
 }
 
+function productSearchText(product) {
+  return normalizeText([
+    product.title,
+    product.shortTitle,
+    product.shortDescription,
+    product.technicalSummary,
+    product.internalCategory,
+    product.internalCategorySlug,
+    product.familyId,
+    product.brand,
+    product.model,
+    ...(product.specifications || []).flatMap((spec) => [spec.label, spec.value]),
+  ].filter(Boolean).join(" "));
+}
+
+function tagMatchesProduct(product, tag) {
+  const haystack = productSearchText(product);
+  const compactHaystack = haystack.replace(/[^a-z0-9]/g, "");
+  const needle = normalizeText(tag);
+  const compactNeedle = needle.replace(/[^a-z0-9]/g, "");
+  if (!needle || haystack.includes(needle) || compactHaystack.includes(compactNeedle)) return true;
+  return needle.split(/[^a-z0-9]+/).filter(Boolean).every((part) => haystack.includes(part));
+}
+
+function verifiedTags(product, preferred = [], fallback = []) {
+  const tags = [];
+  const add = (tag, verified = false) => {
+    if (!tag || tags.length >= 3) return;
+    const clean = String(tag).replace(/\s+/g, " ").trim();
+    if (!clean || tags.some((item) => normalizeText(item) === normalizeText(clean))) return;
+    if (!verified && !tagMatchesProduct(product, clean)) return;
+    tags.push(clean);
+  };
+  preferred.forEach((tag) => add(tag));
+  fallback.forEach((tag) => add(tag, true));
+  [product.model, product.brand, product.internalCategory, productFormat(product), conditionLabel(product)].forEach((tag) => add(tag, true));
+  return tags.slice(0, 3);
+}
+
+function findShowcaseProduct(tests, selected) {
+  for (const test of tests) {
+    const product = published.find((item) => !selected.has(item.mlbId) && test(item));
+    if (product) return product;
+  }
+  return published.find((item) => !selected.has(item.mlbId));
+}
+
+function selectShowcaseProducts() {
+  const selected = new Set();
+  const briefs = [
+    {
+      categorySlug: "iot-gsm-e-comunicacao",
+      label: "IoT e Comunicação",
+      headline: "Conecte projetos ao mundo real.",
+      preferredTags: ["ESP32", "GPRS", "IoT"],
+      size: "large",
+      tests: [
+        (p) => p.familyId === "ttgo-t-call" && /ttgo|t-call|sim800/i.test(p.title),
+        (p) => p.internalCategorySlug === "iot-gsm-e-comunicacao",
+      ],
+    },
+    {
+      categorySlug: "sensores-e-medicao",
+      label: "Sensores e Medição",
+      headline: "Precisão para medir o que importa.",
+      preferredTags: ["100 A", "AC", "Sensor"],
+      size: "tall",
+      tests: [
+        (p) => p.familyId === "sensores-de-corrente" && /sct-?013/i.test(p.title),
+        (p) => p.internalCategorySlug === "sensores-e-medicao",
+      ],
+    },
+    {
+      categorySlug: "fontes-e-alimentacao",
+      label: "Fontes e Alimentação",
+      headline: "Potência compacta. Integração simples.",
+      preferredTags: ["5 V", "3 W", "AC/DC"],
+      size: "tall",
+      tests: [
+        (p) => p.familyId === "hi-link-hlk-pm01" && /hlk-pm01|hi-link/i.test(p.title),
+        (p) => p.internalCategorySlug === "fontes-e-alimentacao",
+      ],
+    },
+    {
+      categorySlug: "gps-e-localizacao",
+      label: "GPS e Localização",
+      headline: "Saiba onde seus projetos estão.",
+      preferredTags: ["GPS", "NEO-6M", "Módulo"],
+      size: "compact",
+      tests: [
+        (p) => p.familyId === "gps-neo-6m" && /neo-?6m|gps/i.test(p.title),
+        (p) => p.internalCategorySlug === "gps-e-localizacao",
+      ],
+    },
+    {
+      categorySlug: "automacao-e-comando",
+      label: "Automação e Comando",
+      headline: "Controle para aplicações reais.",
+      preferredTags: ["Contator", "220 V", "AC"],
+      size: "wide",
+      tests: [
+        (p) => p.internalCategorySlug === "automacao-e-comando" && /contator|rel[eé]|comando|supressor/i.test(p.title),
+        (p) => p.internalCategorySlug === "automacao-e-comando",
+      ],
+    },
+    {
+      categorySlug: "instrumentos-de-bancada",
+      label: "Instrumentos de Bancada",
+      headline: "Meça, teste e desenvolva com precisão.",
+      preferredTags: ["32 V", "5 A", "Bancada"],
+      size: "compact",
+      tests: [
+        (p) => p.internalCategorySlug === "instrumentos-de-bancada" && /hikari|bancada|fonte/i.test(p.title),
+        (p) => p.internalCategorySlug === "instrumentos-de-bancada",
+      ],
+    },
+  ];
+
+  return briefs.map((brief) => {
+    const product = findShowcaseProduct(brief.tests, selected);
+    if (product) selected.add(product.mlbId);
+    const category = categories.find((item) => item.slug === (product?.internalCategorySlug || brief.categorySlug));
+    return {
+      product,
+      category: category?.label || brief.label,
+      label: brief.label,
+      headline: brief.headline,
+      tags: product ? verifiedTags(product, brief.preferredTags, [category?.label || brief.label]) : [],
+      size: brief.size,
+    };
+  }).filter((item) => item.product);
+}
+
+function homeCategoryChips() {
+  const chips = [
+    ["", "Todos"],
+    ["iot-gsm-e-comunicacao", "IoT"],
+    ["sensores-e-medicao", "Sensores"],
+    ["fontes-e-alimentacao", "Fontes"],
+    ["automacao-e-comando", "Automação"],
+    ["componentes-eletronicos", "Componentes"],
+    ["instrumentos-de-bancada", "Instrumentos"],
+  ];
+  return `<nav class="home-showcase-chips" aria-label="Categorias rápidas" data-horizontal-scroll>
+    ${chips.map(([slug, label], index) => `<a class="${index === 0 ? "is-active" : ""}" href="${pageUrl(slug ? `produtos/?categoria=${slug}` : "produtos/")}" data-showcase-category data-category="${escapeHtml(slug || "todos")}" data-position="${index + 1}">${escapeHtml(label)}</a>`).join("")}
+  </nav>`;
+}
+
+function homeQuickSearch() {
+  return `<form class="home-showcase-search" action="${pageUrl("produtos/")}" method="get" role="search" data-home-showcase-search>
+    ${icon("search", "search-icon")}
+    <label class="sr-only" for="home-showcase-search-input">Buscar no catálogo</label>
+    <input id="home-showcase-search-input" name="q" type="search" placeholder="Buscar SCT-013, ESP32, Hi-Link, GPS..." autocomplete="off">
+    <button type="submit" aria-label="Buscar no catálogo">${icon("arrow-right", "btn-icon")}</button>
+  </form>`;
+}
+
+function homeShowcaseHero() {
+  return `<section class="home-showcase-hero" data-hero>
+    <div class="home-showcase-hero-inner">
+      <p class="home-showcase-eyebrow" data-reveal>COMPONENTES · IOT · AUTOMAÇÃO</p>
+      <h1 data-reveal>Componentes para projetos que precisam avançar.</h1>
+      <p class="home-showcase-copy" data-reveal>Sensores, fontes, módulos e componentes selecionados para automação, eletrônica e desenvolvimento técnico.</p>
+      <div data-reveal>${homeQuickSearch()}</div>
+      <div data-reveal>${homeCategoryChips()}</div>
+    </div>
+  </section>`;
+}
+
+function showcaseCard(item, index) {
+  const { product } = item;
+  const loading = index < 2 ? "eager" : "lazy";
+  const fetchpriority = index === 0 ? "high" : "auto";
+  return `<a class="showcase-card showcase-card--${escapeHtml(item.size)}" href="${pageUrl(`produtos/${product.slug}/`)}" data-showcase-card data-mlb-id="${escapeHtml(product.mlbId)}" data-product-title="${escapeHtml(product.title)}" data-category="${escapeHtml(item.category)}" data-position="${index + 1}" data-reveal style="--reveal-delay:${Math.min(index * 70, 300)}ms" aria-label="Ver ${escapeHtml(product.shortTitle || product.title)}">
+    <div class="showcase-card-visual">
+      ${productPicture(product, { className: "showcase-picture", width: index === 0 ? 760 : 560, height: index === 0 ? 760 : 560, loading, fetchpriority, sizes: "(min-width: 1180px) 34vw, (min-width: 768px) 48vw, 86vw" })}
+    </div>
+    <div class="showcase-card-meta">
+      <p class="showcase-category">${escapeHtml(item.category)}</p>
+      <h3>${escapeHtml(item.headline)}</h3>
+      <div class="showcase-tags">${item.tags.map((tag) => `<span class="showcase-tag">${escapeHtml(tag)}</span>`).join("")}</div>
+    </div>
+    <span class="showcase-arrow" aria-hidden="true">&#8599;</span>
+  </a>`;
+}
+
+function homeCuratedShowcase(items = selectShowcaseProducts()) {
+  return `<section class="home-curated-showcase" aria-label="Galeria curada de produtos OMEGAIMPORTS">
+    <div class="showcase-grid" data-horizontal-scroll>
+      ${items.map(showcaseCard).join("")}
+    </div>
+  </section>`;
+}
+
 function selectHeroProduct() {
   return selectByPriority()[0] || published[0];
 }
@@ -355,13 +549,13 @@ function relatedPostsForProduct(product, limit = 3) {
 
 function home() {
   const homeProducts = selectHomeProducts();
-  const heroLead = selectHeroProduct();
-  const featureLead = selectByPriority().find((product) => product.mlbId !== heroLead.mlbId) || homeProducts.find((product) => product.mlbId !== heroLead.mlbId) || heroLead;
+  const showcaseProducts = selectShowcaseProducts();
+  const featureLead = selectByPriority().find((product) => !showcaseProducts.some((item) => item.product.mlbId === product.mlbId)) || homeProducts[0];
   const recentPosts = [...blogPosts].sort((a, b) => String(b.publishedAt).localeCompare(String(a.publishedAt))).slice(0, 3);
   const body = `
-    ${hero(heroLead)}
+    ${homeShowcaseHero()}
+    ${homeCuratedShowcase(showcaseProducts)}
     ${trustStrip()}
-    ${section({ eyebrow: "Categorias", title: "Principais departamentos técnicos", description: "Acesso rápido aos grupos mais usados em eletrônica, IoT, medição, energia e bancada.", className: "section section--white", content: `${categoryGrid(homeCategories, { home: true })}<a class="text-link section-after-link" href="${pageUrl("categorias/")}">Ver todas as categorias ${icon("arrow-right", "text-link-icon")}</a>` })}
     ${productShowcase(homeProducts)}
     ${featureStage(featureLead)}
     ${articleShowcase(recentPosts)}

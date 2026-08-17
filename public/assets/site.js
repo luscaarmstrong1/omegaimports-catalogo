@@ -33,7 +33,7 @@ function focusFirst(container) {
 function setupHeaderScroll() {
   const header = document.querySelector("[data-site-header]");
   if (!header) return;
-  const update = () => header.classList.toggle("is-scrolled", window.scrollY > 12);
+  const update = () => header.classList.toggle("is-scrolled", window.scrollY > 24);
   update();
   window.addEventListener("scroll", update, { passive: true });
 }
@@ -51,17 +51,61 @@ function setupRevealObserver() {
       if (!entry.isIntersecting) continue;
       const group = [...entry.target.parentElement?.querySelectorAll("[data-reveal]") || []];
       const index = Math.max(0, group.indexOf(entry.target));
-      entry.target.style.transitionDelay = `${Math.min(index * 70, 280)}ms`;
+      const customDelay = entry.target.style.getPropertyValue("--reveal-delay");
+      entry.target.style.transitionDelay = customDelay || `${Math.min(index * 70, 300)}ms`;
       entry.target.classList.add("is-visible");
       observer.unobserve(entry.target);
     }
-  }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+  }, { threshold: 0.12, rootMargin: "0px 0px -7% 0px" });
   elements.forEach((element) => {
     if (element.getBoundingClientRect().top < window.innerHeight * 0.92) {
       element.classList.add("is-visible");
       return;
     }
     observer.observe(element);
+  });
+}
+
+function setupShowcaseSpotlight() {
+  const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!finePointer || reducedMotion) return;
+  document.querySelectorAll("[data-showcase-card]").forEach((card) => {
+    card.addEventListener("pointermove", (event) => {
+      const rect = card.getBoundingClientRect();
+      const x = ((event.clientX - rect.left) / rect.width) * 100;
+      const y = ((event.clientY - rect.top) / rect.height) * 100;
+      card.style.setProperty("--mouse-x", `${x.toFixed(2)}%`);
+      card.style.setProperty("--mouse-y", `${y.toFixed(2)}%`);
+    });
+    card.addEventListener("pointerleave", () => {
+      card.style.setProperty("--mouse-x", "50%");
+      card.style.setProperty("--mouse-y", "38%");
+    });
+  });
+}
+
+function setupShowcaseTracking() {
+  document.querySelectorAll("[data-showcase-card]").forEach((card) => {
+    card.addEventListener("click", () => {
+      track("showcase_product_click", {
+        mlbId: card.dataset.mlbId,
+        productTitle: card.dataset.productTitle,
+        category: card.dataset.category,
+        position: card.dataset.position,
+        sourcePage: location.pathname,
+      });
+    });
+  });
+
+  document.querySelectorAll("[data-showcase-category]").forEach((chip) => {
+    chip.addEventListener("click", () => {
+      track("showcase_category_click", {
+        category: chip.dataset.category,
+        position: chip.dataset.position,
+        sourcePage: location.pathname,
+      });
+    });
   });
 }
 
@@ -99,6 +143,8 @@ setupHeaderScroll();
 setupRevealObserver();
 setupHeroParallax();
 setupHorizontalScroller();
+setupShowcaseSpotlight();
+setupShowcaseTracking();
 
 if (searchButton && mobileSearchPanel) {
   const closeSearch = ({ restoreFocus = true } = {}) => {
