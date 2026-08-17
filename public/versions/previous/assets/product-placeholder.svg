@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-label="Imagem em validação">
+  <rect width="800" height="800" fill="#0C1320"/>
+  <rect x="72" y="72" width="656" height="656" rx="42" fill="#111A29" stroke="#26415f" stroke-width="2"/>
+  <path d="M238 436h324M238 366h210M290 250h220v100H290z" stroke="#00D4FF" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity=".85"/>
+  <text x="400" y="535" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="800" fill="#F7FAFF">Imagem em validação</text>
+  <text x="400" y="588" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="24" fill="#9AA8BC">OMEGAIMPORTS</text>
+</svg>

@@ -258,6 +258,7 @@ export function pageShell({ title, description, path = "", body, extraHead = "",
       <a href="${navUrl("categorias/")}">Categorias</a>
       <a href="${navUrl("blog/")}">Blog</a>
       <a href="${navUrl("sobre/")}">Sobre</a>
+      <a href="${pageUrl("versao-anterior/")}">Versao anterior</a>
     </nav>
     <a class="header-cta marketplace-link" href="${site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored">Loja no Mercado Livre ${icon("external", "btn-icon")}</a>
     <button class="search-toggle" type="button" aria-controls="mobile-search-panel" aria-expanded="false" aria-label="Abrir busca">${icon("search", "btn-icon")}</button>
@@ -275,6 +276,7 @@ export function pageShell({ title, description, path = "", body, extraHead = "",
       <a href="${navUrl("categorias/")}">Categorias</a>
       <a href="${navUrl("blog/")}">Blog</a>
       <a href="${navUrl("sobre/")}">Sobre</a>
+      <a href="${pageUrl("versao-anterior/")}">Versao anterior</a>
       <a class="whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">WhatsApp ${icon("message", "btn-icon")}</a>
       <a class="marketplace-link" href="${site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored">Loja no Mercado Livre ${icon("external", "btn-icon")}</a>
     </nav>
@@ -296,6 +298,7 @@ export function pageShell({ title, description, path = "", body, extraHead = "",
       <a href="${navUrl("blog/")}">Blog</a>
       <a href="${navUrl("sobre/")}">Sobre</a>
       <a href="${pageUrl("como-comprar/")}">Como comprar</a>
+      <a href="${pageUrl("versao-anterior/")}">Versao anterior</a>
     </details>
     <details class="footer-group" open>
       <summary>Atendimento</summary>

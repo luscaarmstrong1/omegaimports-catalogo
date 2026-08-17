@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Como escolher uma fonte para ESP32 e módulos GSM | OMEGAIMPORTS</title>
+  <meta name="description" content="Entenda picos de corrente, queda de tensão e ruído ao alimentar ESP32, SIM800L e módulos de comunicação.">
+  <link rel="canonical" href="https://luscaarmstrong1.github.io/omegaimports-catalogo/versao-anterior/blog/como-escolher-fonte-esp32-modulos-gsm/">
+  <meta property="og:title" content="Como escolher uma fonte para ESP32 e módulos GSM | OMEGAIMPORTS">
+  <meta property="og:description" content="Entenda picos de corrente, queda de tensão e ruído ao alimentar ESP32, SIM800L e módulos de comunicação.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://luscaarmstrong1.github.io/omegaimports-catalogo/versao-anterior/blog/como-escolher-fonte-esp32-modulos-gsm/">
+  <meta property="og:image" content="https://luscaarmstrong1.github.io/omegaimports-catalogo/versao-anterior/blog/covers/como-escolher-fonte-esp32-modulos-gsm-og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#071426">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/omegaimports-catalogo/versao-anterior/brand/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/omegaimports-catalogo/versao-anterior/brand/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/omegaimports-catalogo/versao-anterior/brand/apple-touch-icon.png">
+  <link rel="manifest" href="/omegaimports-catalogo/versao-anterior/manifest.webmanifest">
+  <link rel="stylesheet" href="/omegaimports-catalogo/versao-anterior/assets/site.css">
+  <script defer src="/omegaimports-catalogo/versao-anterior/assets/site.js"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"OMEGAIMPORTS","url":"https://luscaarmstrong1.github.io/omegaimports-catalogo/versao-anterior/","sameAs":["https://www.mercadolivre.com.br/pagina/omegaimports"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"OMEGAIMPORTS","url":"https://luscaarmstrong1.github.io/omegaimports-catalogo/versao-anterior/","potentialAction":{"@type":"SearchAction","target":"https://luscaarmstrong1.github.io/omegaimports-catalogo/versao-anterior/produtos/?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Como escolher uma fonte para ESP32 e módulos GSM","description":"Entenda picos de corrente, queda de tensão e ruído ao alimentar ESP32, SIM800L e módulos de comunicação.","image":"https://luscaarmstrong1.github.io/omegaimports-catalogo/versao-anterior/blog/covers/como-escolher-fonte-esp32-modulos-gsm-og.jpg","author":{"@type":"Organization","name":"OMEGAIMPORTS"},"publisher":{"@type":"Organization","name":"OMEGAIMPORTS"},"datePublished":"2026-01-12","dateModified":"2026-04-21","mainEntityOfPage":"https://luscaarmstrong1.github.io/omegaimports-catalogo/versao-anterior/blog/como-escolher-fonte-esp32-modulos-gsm/"}</script>
+</head>
+<body class="inner-shell">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="topbar">Compra protegida e finalização pelo Mercado Livre</div>
+  <header class="site-header">
+    <a class="brand brand--header" href="/omegaimports-catalogo/versao-anterior/"><img src="/omegaimports-catalogo/versao-anterior/brand/logo-horizontal.webp" width="220" height="61" alt="OMEGAIMPORTS"></a>
+    <form class="header-search" action="/omegaimports-catalogo/versao-anterior/produtos/" role="search">
+      <label class="sr-only" for="site-search">Buscar no catálogo</label>
+      <input id="site-search" name="q" type="search" placeholder="Buscar componente..." autocomplete="off">
+    </form>
+    <nav class="main-nav" aria-label="Principal">
+      <a href="/omegaimports-catalogo/versao-anterior/produtos/">Produtos</a>
+      <a href="/omegaimports-catalogo/versao-anterior/categorias/?v=20260714">Categorias</a>
+      <a href="/omegaimports-catalogo/versao-anterior/blog/?v=20260714">Blog</a>
+      <a href="/omegaimports-catalogo/versao-anterior/sobre/?v=20260714">Sobre</a>
+    </nav>
+    <a class="header-cta marketplace-link" href="https://www.mercadolivre.com.br/pagina/omegaimports" target="_blank" rel="noopener noreferrer sponsored">Loja no Mercado Livre <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+    <button class="search-toggle" type="button" aria-controls="mobile-search-panel" aria-expanded="false" aria-label="Abrir busca"><svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+    <button class="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menu"><svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+  </header>
+  <div class="mobile-search-panel" id="mobile-search-panel" hidden>
+    <form action="/omegaimports-catalogo/versao-anterior/produtos/" role="search">
+      <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <label class="sr-only" for="mobile-site-search">Buscar no catálogo</label>
+      <input id="mobile-site-search" name="q" type="search" placeholder="Buscar componente..." autocomplete="off">
+      <button class="mobile-search-close" type="button" aria-label="Fechar busca"><svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    </form>
+  </div>
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay" hidden></div>
+  <aside class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu principal" hidden>
+    <div class="mobile-menu-head">
+      <span class="mobile-menu-title">OMEGAIMPORTS</span>
+      <button class="mobile-menu-close" type="button" aria-label="Fechar menu"><svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    </div>
+    <nav aria-label="Menu móvel">
+      <a href="/omegaimports-catalogo/versao-anterior/produtos/">Produtos</a>
+      <a href="/omegaimports-catalogo/versao-anterior/categorias/?v=20260714">Categorias</a>
+      <a href="/omegaimports-catalogo/versao-anterior/blog/?v=20260714">Blog</a>
+      <a href="/omegaimports-catalogo/versao-anterior/sobre/?v=20260714">Sobre</a>
+      <a class="whatsapp-link" href="https://wa.me/5535999528858?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20OMEGAIMPORTS%20e%20gostaria%20de%20ajuda%20para%20escolher%20um%20produto." target="_blank" rel="noopener noreferrer">WhatsApp <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"/><path d="M8 9h8M8 13h5"/></svg></a>
+      <a class="marketplace-link" href="https://www.mercadolivre.com.br/pagina/omegaimports" target="_blank" rel="noopener noreferrer sponsored">Loja no Mercado Livre <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+    </nav>
+  </aside>
+  <main id="conteudo"><nav class="breadcrumb"><a href="/omegaimports-catalogo/versao-anterior/">Início</a><a href="/omegaimports-catalogo/versao-anterior/blog/">Blog</a><span>Como escolher uma fonte para ESP32 e módulos GSM</span></nav>
+      <article class="article article-detail">
+        <header class="article-header"><p class="eyebrow">IoT e conectividade · 10 min</p><h1>Como escolher uma fonte para ESP32 e módulos GSM</h1><p>Entenda picos de corrente, queda de tensão e ruído ao alimentar ESP32, SIM800L e módulos de comunicação.</p><div class="article-meta"><span>Equipe OMEGAIMPORTS</span><span>Publicado em 12/01/2026</span><span>Revisado em 21/04/2026</span></div></header>
+        <picture class="article-hero-cover">
+    <source srcset="/omegaimports-catalogo/versao-anterior/blog/covers/como-escolher-fonte-esp32-modulos-gsm.avif" type="image/avif" sizes="(min-width: 1180px) 1080px, 100vw">
+    <source srcset="/omegaimports-catalogo/versao-anterior/blog/covers/como-escolher-fonte-esp32-modulos-gsm.webp" type="image/webp" sizes="(min-width: 1180px) 1080px, 100vw">
+    <img src="/omegaimports-catalogo/versao-anterior/blog/covers/como-escolher-fonte-esp32-modulos-gsm.jpg" alt="Capa técnica do artigo Como escolher uma fonte para ESP32 e módulos GSM" width="1400" height="788" loading="eager" decoding="async" fetchpriority="high">
+  </picture>
+        <aside class="toc" aria-label="Sumário"><strong>Sumário</strong><a href="#secao-1">Quando este tema aparece no projeto</a><a href="#secao-2">Conceitos que precisam estar claros</a><a href="#secao-3">Critérios de escolha</a><a href="#secao-4">Aplicações típicas</a><a href="#secao-5">Limitações e cuidados</a><a href="#secao-6">Erros comuns</a><a href="#secao-7">Como validar antes da compra</a><a href="#secao-8">Segurança e documentação</a></aside>
+        <div class="article-section-grid">
+          <section class="article-section" id="secao-1"><h2>Quando este tema aparece no projeto</h2><p>Como escolher uma fonte para ESP32 e módulos GSM entra na decisão quando o projeto precisa sair da ideia e chegar a uma montagem confiável. Antes de escolher o item, registre carga, tensão, corrente, ambiente de instalação, espaço físico, limitações de manutenção e forma de teste. Esse levantamento evita compras por aparência, reduz retrabalho e ajuda a separar o componente realmente necessário de alternativas parecidas. Quando o projeto envolve rede elétrica, comando ou comunicação em campo, essa etapa também protege a instalação e a pessoa que fará a montagem.</p></section><section class="article-section" id="secao-2"><h2>Conceitos que precisam estar claros</h2><p>O ponto central é entender a função do componente dentro do sistema. Em iot e conectividade, pequenos detalhes como faixa de operação, isolamento, dissipação, conector, tolerância, firmware, margem de segurança e condição de instalação mudam o resultado. Use o título do anúncio como ponto de partida, mas confirme dados técnicos no datasheet, no manual, nas imagens e na descrição oficial. Se houver divergência entre nome comercial e especificação, trate a especificação como prioridade.</p></section><section class="article-section" id="secao-3"><h2>Critérios de escolha</h2><p>Compare primeiro os requisitos elétricos e mecânicos. Depois observe compatibilidade com o restante do circuito, disponibilidade de acessórios, facilidade de montagem, possibilidade de teste e margem para variação de carga. Quando houver modelos semelhantes, priorize o que tiver especificação mais clara e margem adequada para a aplicação real, não apenas o menor preço. Em kits, confirme quantidade, condição e itens inclusos.</p></section><section class="article-section" id="secao-4"><h2>Aplicações típicas</h2><p>Produtos ligados a ESP32, SIM800L, fonte, GSM aparecem em protótipos, manutenção, automação, telemetria, bancada e pequenas instalações técnicas. Em cada caso, a escolha muda: bancada pede ergonomia e ajuste; campo pede robustez; protótipo pede facilidade de ligação; produto final exige repetibilidade, fixação e segurança. O mesmo componente pode funcionar bem em uma bancada e ser inadequado para uma caixa fechada, quente ou sujeita a vibração.</p></section><section class="article-section" id="secao-5"><h2>Limitações e cuidados</h2><p>Nenhum módulo resolve sozinho problemas de projeto. Fontes precisam de proteção e ventilação, sensores precisam de condicionamento, conectores precisam de dimensionamento, resistores dissipam calor e módulos de comunicação precisam de alimentação estável. Em circuitos ligados à rede elétrica ou comando de carga, conte com profissional habilitado e siga normas aplicáveis. Não use imagem, cor ou formato como prova de compatibilidade.</p></section><section class="article-section" id="secao-6"><h2>Erros comuns</h2><p>Os erros mais frequentes são usar fonte no limite, ignorar picos de corrente, misturar AC/DC na leitura do anúncio, escolher cabo ou conector subdimensionado, confiar em imagem sem conferir o modelo e deixar de testar o conjunto com carga real. Também é comum comprar por uma sigla conhecida e esquecer tensão, pinagem, acessórios, tamanho físico, temperatura ou isolamento. Em projetos repetitivos, um erro pequeno se multiplica rapidamente.</p></section><section class="article-section" id="secao-7"><h2>Como validar antes da compra</h2><p>Abra o anúncio oficial, confira o MLB, veja as imagens, compare modelo e especificações, confirme preço, estoque e frete. Se o projeto tiver restrição crítica, liste os requisitos e faça a pergunta antes de comprar. Essa etapa é simples, mas reduz bastante a chance de incompatibilidade. Para componentes de alimentação, meça tensão com carga e observe aquecimento durante o teste.</p></section><section class="article-section" id="secao-8"><h2>Segurança e documentação</h2><p>Guarde datasheets, manuais e notas de aplicação usados na decisão. Documente tensão, corrente, potência, ligação, proteção, firmware, conexões e testes realizados. Esse registro ajuda na manutenção e evita que uma montagem aparentemente funcional seja repetida de forma insegura. Sempre que houver dúvida, valide com medição e com a documentação do fabricante.</p></section>
+          <section class="article-section article-section--wide"><h2>Conclusão</h2><p>Use o artigo como ponto de partida e confirme modelo, tensão, corrente, acessórios e disponibilidade no anúncio oficial antes da compra.</p></section>
+          <section class="article-section article-section--wide"><h2>Referências técnicas</h2><ul><li>Documentação Espressif ESP32.</li><li>Documentação SIMCom SIM800L.</li><li>Notas de aplicação sobre alimentação de modems celulares.</li></ul></section>
+        </div>
+        <section class="article-whatsapp"><h2>Precisa de ajuda para escolher?</h2><p>Envie sua dúvida pelo WhatsApp oficial da OMEGAIMPORTS e informe o tipo de projeto, tensão, corrente e aplicação desejada.</p><a class="whatsapp-action whatsapp-link" href="https://wa.me/5535999528858?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20OMEGAIMPORTS%20e%20gostaria%20de%20ajuda%20para%20escolher%20um%20produto." target="_blank" rel="noopener noreferrer">Chamar no WhatsApp <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"/><path d="M8 9h8M8 13h5"/></svg></a></section>
+      </article>
+      <section class="section section--white">
+    <div class="section-heading">
+      <div class="section-heading-copy">
+        <p class="eyebrow">Produtos relacionados</p>
+        <h2>Itens do catálogo ligados a este tema</h2>
+        
+      </div>
+      
+    </div>
+    <div class="product-grid"><article class="product-card" data-title="kit 10 mini fonte chaveada hi-link hlk-pm01 - 5 v 3 w" data-family="hi-link-hlk-pm01" data-category="fontes-e-alimentacao" data-condition="novo" data-package="kit" data-quantity="10" data-price="239.9" data-mlb="MLB3948192369">
+    <a class="product-media" href="/omegaimports-catalogo/versao-anterior/produtos/kit-10-mini-fonte-chaveada-hi-link-hlk-pm01-5-v-3-w-mlb3948192369/" aria-label="Ver detalhes de Kit 10 Mini fonte Chaveada Hi-link HLK-PM01 - 5 V 3 W">
+      <span class="product-chip">Fontes e Alimentação</span>
+      <picture class="product-picture">
+    <source srcset="/omegaimports-catalogo/versao-anterior/products/MLB3948192369/optimized/main.avif" type="image/avif" sizes="(min-width: 1180px) 25vw, (min-width: 760px) 33vw, 100vw">
+    <source srcset="/omegaimports-catalogo/versao-anterior/products/MLB3948192369/optimized/main.webp" type="image/webp" sizes="(min-width: 1180px) 25vw, (min-width: 760px) 33vw, 100vw">
+    <img src="/omegaimports-catalogo/versao-anterior/products/MLB3948192369/optimized/main.jpg" alt="Kit com 10 unidades - Kit 10 Mini fonte Chaveada Hi-link HLK-PM01 - 5 V 3 W" width="480" height="480" loading="eager" decoding="async" fetchpriority="high">
+  </picture>
+    </a>
+    <div class="product-content">
+      <p class="product-category">Fontes e Alimentação</p>
+      <h3><a href="/omegaimports-catalogo/versao-anterior/produtos/kit-10-mini-fonte-chaveada-hi-link-hlk-pm01-5-v-3-w-mlb3948192369/">Kit 10 Mini fonte Chaveada Hi-link HLK-PM01 - 5 V 3 W</a></h3>
+      <p class="product-price">R$ 239,90</p>
+      <div class="card-actions">
+        <a class="primary-action marketplace-link" href="https://produto.mercadolivre.com.br/MLB-3948192369-kit-10-mini-fonte-chaveada-hi-link-hlk-pm01-5v-3w-_JM" target="_blank" rel="noopener noreferrer sponsored" data-event="marketplace_click" data-mlb="MLB3948192369" data-title="Kit 10 Mini fonte Chaveada Hi-link HLK-PM01 - 5 V 3 W" data-category="Fontes e Alimentação" data-position="1">Ver oferta <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+        <a class="text-link" href="/omegaimports-catalogo/versao-anterior/produtos/kit-10-mini-fonte-chaveada-hi-link-hlk-pm01-5-v-3-w-mlb3948192369/">Detalhes <svg class="text-link-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </article><article class="product-card" data-title="fonte de alimentacao hlk-pm01 5 v/3 w hi-link modulo ac/dc" data-family="hi-link-hlk-pm01" data-category="fontes-e-alimentacao" data-condition="novo" data-package="unit" data-quantity="1" data-price="33" data-mlb="MLB5268554980">
+    <a class="product-media" href="/omegaimports-catalogo/versao-anterior/produtos/fonte-de-alimentacao-hlk-pm01-5-v-3-w-hi-link-modulo-ac-dc-mlb5268554980/" aria-label="Ver detalhes de Fonte de Alimentação HLK-PM01 5 V/3 W Hi-link Módulo AC/dc">
+      <span class="product-chip">Fontes e Alimentação</span>
+      <picture class="product-picture">
+    <source srcset="/omegaimports-catalogo/versao-anterior/products/MLB5268554980/optimized/main.avif" type="image/avif" sizes="(min-width: 1180px) 25vw, (min-width: 760px) 33vw, 100vw">
+    <source srcset="/omegaimports-catalogo/versao-anterior/products/MLB5268554980/optimized/main.webp" type="image/webp" sizes="(min-width: 1180px) 25vw, (min-width: 760px) 33vw, 100vw">
+    <img src="/omegaimports-catalogo/versao-anterior/products/MLB5268554980/optimized/main.jpg" alt="Unidade - Fonte de Alimentação HLK-PM01 5 V/3 W Hi-link Módulo AC/dc" width="480" height="480" loading="eager" decoding="async">
+  </picture>
+    </a>
+    <div class="product-content">
+      <p class="product-category">Fontes e Alimentação</p>
+      <h3><a href="/omegaimports-catalogo/versao-anterior/produtos/fonte-de-alimentacao-hlk-pm01-5-v-3-w-hi-link-modulo-ac-dc-mlb5268554980/">Fonte de Alimentação HLK-PM01 5 V/3 W Hi-link Módulo AC/dc</a></h3>
+      <p class="product-price">R$ 33,00</p>
+      <div class="card-actions">
+        <a class="primary-action marketplace-link" href="https://produto.mercadolivre.com.br/MLB-5268554980-fonte-de-alimentaco-hlk-pm01-5v3w-hi-link-modulo-acdc-_JM" target="_blank" rel="noopener noreferrer sponsored" data-event="marketplace_click" data-mlb="MLB5268554980" data-title="Fonte de Alimentação HLK-PM01 5 V/3 W Hi-link Módulo AC/dc" data-category="Fontes e Alimentação" data-position="2">Ver oferta <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+        <a class="text-link" href="/omegaimports-catalogo/versao-anterior/produtos/fonte-de-alimentacao-hlk-pm01-5-v-3-w-hi-link-modulo-ac-dc-mlb5268554980/">Detalhes <svg class="text-link-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </article><article class="product-card" data-title="3x kit esp32 sim800l modulo sem fio gprs t-call + antena" data-family="ttgo-t-call" data-category="iot-gsm-e-comunicacao" data-condition="novo" data-package="kit" data-quantity="3" data-price="382" data-mlb="MLB5288925380">
+    <a class="product-media" href="/omegaimports-catalogo/versao-anterior/produtos/3x-kit-esp32-sim800l-modulo-sem-fio-gprs-t-call-antena-mlb5288925380/" aria-label="Ver detalhes de 3x Kit ESP32 SIM800L Módulo Sem Fio Gprs T-call + Antena">
+      <span class="product-chip">IoT, GSM e Comunicação</span>
+      <picture class="product-picture">
+    <source srcset="/omegaimports-catalogo/versao-anterior/products/MLB5288925380/optimized/main.avif" type="image/avif" sizes="(min-width: 1180px) 25vw, (min-width: 760px) 33vw, 100vw">
+    <source srcset="/omegaimports-catalogo/versao-anterior/products/MLB5288925380/optimized/main.webp" type="image/webp" sizes="(min-width: 1180px) 25vw, (min-width: 760px) 33vw, 100vw">
+    <img src="/omegaimports-catalogo/versao-anterior/products/MLB5288925380/optimized/main.jpg" alt="Kit com 3 unidades - 3x Kit ESP32 SIM800L Módulo Sem Fio Gprs T-call + Antena" width="480" height="480" loading="eager" decoding="async">
+  </picture>
+    </a>
+    <div class="product-content">
+      <p class="product-category">IoT, GSM e Comunicação</p>
+      <h3><a href="/omegaimports-catalogo/versao-anterior/produtos/3x-kit-esp32-sim800l-modulo-sem-fio-gprs-t-call-antena-mlb5288925380/">3x Kit ESP32 SIM800L Módulo Sem Fio Gprs T-call + Antena</a></h3>
+      <p class="product-price">R$ 382,00</p>
+      <div class="card-actions">
+        <a class="primary-action marketplace-link" href="https://produto.mercadolivre.com.br/MLB-5288925380-3x-kit-esp32-sim800l-modulo-sem-fio-gprs-t-call-antena-_JM" target="_blank" rel="noopener noreferrer sponsored" data-event="marketplace_click" data-mlb="MLB5288925380" data-title="3x Kit ESP32 SIM800L Módulo Sem Fio Gprs T-call + Antena" data-category="IoT, GSM e Comunicação" data-position="3">Ver oferta <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+        <a class="text-link" href="/omegaimports-catalogo/versao-anterior/produtos/3x-kit-esp32-sim800l-modulo-sem-fio-gprs-t-call-antena-mlb5288925380/">Detalhes <svg class="text-link-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </article><article class="product-card" data-title="modulo de comunicacao ttgo t-call, sim800l lilygo" data-family="ttgo-t-call" data-category="iot-gsm-e-comunicacao" data-condition="novo" data-package="unit" data-quantity="1" data-price="141.9" data-mlb="MLB3939451361">
+    <a class="product-media" href="/omegaimports-catalogo/versao-anterior/produtos/modulo-de-comunicacao-ttgo-t-call-sim800l-lilygo-mlb3939451361/" aria-label="Ver detalhes de Módulo de Comunicação Ttgo T-call, SIM800L Lilygo">
+      <span class="product-chip">IoT, GSM e Comunicação</span>
+      <picture class="product-picture">
+    <source srcset="/omegaimports-catalogo/versao-anterior/products/MLB3939451361/optimized/main.avif" type="image/avif" sizes="(min-width: 1180px) 25vw, (min-width: 760px) 33vw, 100vw">
+    <source srcset="/omegaimports-catalogo/versao-anterior/products/MLB3939451361/optimized/main.webp" type="image/webp" sizes="(min-width: 1180px) 25vw, (min-width: 760px) 33vw, 100vw">
+    <img src="/omegaimports-catalogo/versao-anterior/products/MLB3939451361/optimized/main.jpg" alt="Unidade - Módulo de Comunicação Ttgo T-call, SIM800L Lilygo" width="480" height="480" loading="eager" decoding="async">
+  </picture>
+    </a>
+    <div class="product-content">
+      <p class="product-category">IoT, GSM e Comunicação</p>
+      <h3><a href="/omegaimports-catalogo/versao-anterior/produtos/modulo-de-comunicacao-ttgo-t-call-sim800l-lilygo-mlb3939451361/">Módulo de Comunicação Ttgo T-call, SIM800L Lilygo</a></h3>
+      <p class="product-price">R$ 141,90</p>
+      <div class="card-actions">
+        <a class="primary-action marketplace-link" href="https://produto.mercadolivre.com.br/MLB-3939451361-modulo-de-comunicaco-ttgo-t-call-sim800l-lilygo-_JM" target="_blank" rel="noopener noreferrer sponsored" data-event="marketplace_click" data-mlb="MLB3939451361" data-title="Módulo de Comunicação Ttgo T-call, SIM800L Lilygo" data-category="IoT, GSM e Comunicação" data-position="4">Ver oferta <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+        <a class="text-link" href="/omegaimports-catalogo/versao-anterior/produtos/modulo-de-comunicacao-ttgo-t-call-sim800l-lilygo-mlb3939451361/">Detalhes <svg class="text-link-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </article></div>
+  </section>
+      <section class="section">
+    <div class="section-heading">
+      <div class="section-heading-copy">
+        <p class="eyebrow">Continue lendo</p>
+        <h2>Artigos relacionados</h2>
+        
+      </div>
+      
+    </div>
+    <div class="article-grid article-grid--compact"><article class="article-card" data-blog-category="iot e conectividade" data-blog-title="gps neo-6m: alimentacao, antena e posicionamento">
+    <a class="article-cover" href="/omegaimports-catalogo/versao-anterior/blog/gps-neo-6m-alimentacao-antena-posicionamento/"><picture class="article-cover-picture">
+    <source srcset="/omegaimports-catalogo/versao-anterior/blog/covers/gps-neo-6m-alimentacao-antena-posicionamento.avif" type="image/avif" sizes="(min-width: 900px) 33vw, 100vw">
+    <source srcset="/omegaimports-catalogo/versao-anterior/blog/covers/gps-neo-6m-alimentacao-antena-posicionamento.webp" type="image/webp" sizes="(min-width: 900px) 33vw, 100vw">
+    <img src="/omegaimports-catalogo/versao-anterior/blog/covers/gps-neo-6m-alimentacao-antena-posicionamento.jpg" alt="Capa técnica do artigo GPS NEO-6M: alimentação, antena e posicionamento" width="800" height="450" loading="eager" decoding="async" fetchpriority="high">
+  </picture></a>
+    <div class="article-card-content">
+      <p class="eyebrow">IoT e conectividade · 19/05/2025 · 6 min</p>
+      <h3><a href="/omegaimports-catalogo/versao-anterior/blog/gps-neo-6m-alimentacao-antena-posicionamento/">GPS NEO-6M: alimentação, antena e posicionamento</a></h3>
+      <p>Boas práticas para usar módulos GPS NEO-6M em rastreamento, telemetria e protótipos.</p>
+      <a class="text-link" href="/omegaimports-catalogo/versao-anterior/blog/gps-neo-6m-alimentacao-antena-posicionamento/">Ler artigo <svg class="text-link-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg></a>
+    </div>
+  </article><article class="article-card" data-blog-category="iot e conectividade" data-blog-title="ttgo t-call: esp32, sim800l e conectividade gsm">
+    <a class="article-cover" href="/omegaimports-catalogo/versao-anterior/blog/ttgo-t-call-esp32-sim800l-conectividade-gsm/"><picture class="article-cover-picture">
+    <source srcset="/omegaimports-catalogo/versao-anterior/blog/covers/ttgo-t-call-esp32-sim800l-conectividade-gsm.avif" type="image/avif" sizes="(min-width: 900px) 33vw, 100vw">
+    <source srcset="/omegaimports-catalogo/versao-anterior/blog/covers/ttgo-t-call-esp32-sim800l-conectividade-gsm.webp" type="image/webp" sizes="(min-width: 900px) 33vw, 100vw">
+    <img src="/omegaimports-catalogo/versao-anterior/blog/covers/ttgo-t-call-esp32-sim800l-conectividade-gsm.jpg" alt="Capa técnica do artigo TTGO T-Call: ESP32, SIM800L e conectividade GSM" width="800" height="450" loading="eager" decoding="async">
+  </picture></a>
+    <div class="article-card-content">
+      <p class="eyebrow">IoT e conectividade · 22/04/2025 · 8 min</p>
+      <h3><a href="/omegaimports-catalogo/versao-anterior/blog/ttgo-t-call-esp32-sim800l-conectividade-gsm/">TTGO T-Call: ESP32, SIM800L e conectividade GSM</a></h3>
+      <p>Critérios para avaliar módulos com ESP32, modem SIM800L, antena e alimentação em telemetria.</p>
+      <a class="text-link" href="/omegaimports-catalogo/versao-anterior/blog/ttgo-t-call-esp32-sim800l-conectividade-gsm/">Ler artigo <svg class="text-link-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg></a>
+    </div>
+  </article></div>
+  </section></main>
+  <a class="whatsapp-float whatsapp-link" href="https://wa.me/5535999528858?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20OMEGAIMPORTS%20e%20gostaria%20de%20ajuda%20para%20escolher%20um%20produto." target="_blank" rel="noopener noreferrer" aria-label="Chamar OMEGAIMPORTS no WhatsApp"><svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"/><path d="M8 9h8M8 13h5"/></svg></a>
+  <footer class="footer">
+    <div>
+      <span class="footer-brand"><img src="/omegaimports-catalogo/versao-anterior/brand/logo-horizontal.webp" width="210" height="58" alt="OMEGAIMPORTS"></span>
+      <p>Componentes eletrônicos, IoT, automação e bancada organizados para compra técnica.</p>
+    </div>
+    <details class="footer-group" open>
+      <summary>Produtos</summary>
+      <a href="/omegaimports-catalogo/versao-anterior/produtos/">Produtos</a>
+      <a href="/omegaimports-catalogo/versao-anterior/categorias/?v=20260714">Categorias</a>
+      <a href="/omegaimports-catalogo/versao-anterior/blog/?v=20260714">Blog</a>
+      <a href="/omegaimports-catalogo/versao-anterior/sobre/?v=20260714">Sobre</a>
+    </details>
+    <details class="footer-group" open>
+      <summary>Atendimento</summary>
+      <a href="/omegaimports-catalogo/versao-anterior/como-comprar/">Como comprar</a>
+      <a href="/omegaimports-catalogo/versao-anterior/politica-de-privacidade/">Política de privacidade</a>
+      <a href="/omegaimports-catalogo/versao-anterior/termos-de-uso/">Termos de uso</a>
+      <a href="https://www.mercadolivre.com.br/pagina/omegaimports" target="_blank" rel="noopener noreferrer sponsored">Mercado Livre</a>
+    </details>
+    <details class="footer-group" open>
+      <summary>WhatsApp</summary>
+      <a class="whatsapp-link" href="https://wa.me/5535999528858?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20OMEGAIMPORTS%20e%20gostaria%20de%20ajuda%20para%20escolher%20um%20produto." target="_blank" rel="noopener noreferrer">+55 35 99952-8858</a>
+      <span>Ajuda para identificar o componente adequado.</span>
+    </details>
+    <p class="fine-print">Preços, estoque, frete e condições são confirmados no anúncio oficial do Mercado Livre.</p>
+    <p class="copyright">© 2026 OMEGAIMPORTS. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
