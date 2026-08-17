@@ -19,16 +19,21 @@ for (const file of required) {
 
 const home = readFileSync("dist/index.html", "utf8");
 if (!home.includes("/omegaimports-catalogo/assets/site.css")) throw new Error("base path do CSS ausente");
-if (!home.includes("logo-horizontal.webp")) throw new Error("logo oficial ausente na Home");
-if (!home.includes("A peça certa para o seu projeto avançar.")) throw new Error("Hero v6 ausente");
-if ((home.match(/class="orbit-product(?:\s|")/g)?.length || 0) !== 3) throw new Error("Hero precisa usar um produto principal e dois secundários");
-if ((home.match(/class="category-card/g)?.length || 0) !== 6) throw new Error("Home precisa exibir exatamente 6 categorias");
+if (!home.includes("logo-horizontal-light.svg")) throw new Error("logo oficial claro ausente na Home");
+if (!home.includes("home-showcase-hero")) throw new Error("Hero showcase v9 ausente");
+if (!home.includes("home-showcase-search")) throw new Error("Busca funcional da showcase ausente");
+if (!home.includes("home-showcase-chips")) throw new Error("Chips de categorias da showcase ausentes");
+if ((home.match(/data-showcase-card/g)?.length || 0) !== 6) throw new Error("Home precisa exibir exatamente 6 produtos curados na showcase");
+if ((home.match(/data-showcase-category/g)?.length || 0) !== 7) throw new Error("Home precisa exibir 7 chips rápidos da showcase");
+if ((home.match(/class="hero-product(?:\s|")/g)?.length || 0) !== 0) throw new Error("Home v9 não deve usar o hero de produto v8");
+if ((home.match(/class="orbit-product(?:\s|")/g)?.length || 0) !== 0) throw new Error("Hero não deve usar produtos orbitais");
+if ((home.match(/class="category-card/g)?.length || 0) !== 0) throw new Error("Home v9 não deve reintroduzir grade antiga de categorias na primeira dobra");
 if ((home.match(/class="product-card/g)?.length || 0) !== 8) throw new Error("Home precisa exibir exatamente 8 produtos");
 if ((home.match(/class="article-card(?:\s|")/g)?.length || 0) !== 3) throw new Error("Home precisa exibir exatamente 3 artigos");
 if (!home.includes("/omegaimports-catalogo/blog/")) throw new Error("Blog não aparece na Home");
 if (!home.includes("wa.me/5535999528858")) throw new Error("WhatsApp oficial não aparece na Home");
 
-const header = home.match(/<header class="site-header">([\s\S]*?)<\/header>/)?.[1] || "";
+const header = home.match(/<header[^>]*class="site-header"[^>]*>([\s\S]*?)<\/header>/)?.[1] || "";
 for (const item of ["Produtos", "Categorias", "Blog", "Sobre"]) {
   if (!header.includes(`>${item}</a>`)) throw new Error(`Header sem aba principal: ${item}`);
 }
@@ -93,7 +98,7 @@ for (const file of htmlFiles("dist")) {
 }
 if (brokenLinks.length) throw new Error(`links internos quebrados:\n${brokenLinks.join("\n")}`);
 
-console.log("Teste E2E estático v6 concluído.");
+console.log("Teste E2E estático v9 concluído.");
 
 function htmlFiles(dir) {
   const files = [];

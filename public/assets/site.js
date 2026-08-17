@@ -8,6 +8,8 @@ const mobileSearchClose = document.querySelector(".mobile-search-close");
 let lastFocusedBeforeMenu = null;
 let lastFocusedBeforeSearch = null;
 
+document.documentElement.classList.add("enhanced");
+
 function track(name, payload = {}) {
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({ event: name, ...payload });
@@ -27,6 +29,122 @@ function isHidden(element) {
 function focusFirst(container) {
   container?.querySelector("button, a, input, select, textarea, [tabindex]:not([tabindex='-1'])")?.focus();
 }
+
+function setupHeaderScroll() {
+  const header = document.querySelector("[data-site-header]");
+  if (!header) return;
+  const update = () => header.classList.toggle("is-scrolled", window.scrollY > 24);
+  update();
+  window.addEventListener("scroll", update, { passive: true });
+}
+
+function setupRevealObserver() {
+  const elements = [...document.querySelectorAll("[data-reveal]")];
+  if (!elements.length) return;
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reducedMotion || !("IntersectionObserver" in window)) {
+    elements.forEach((element) => element.classList.add("is-visible"));
+    return;
+  }
+  const observer = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      const group = [...entry.target.parentElement?.querySelectorAll("[data-reveal]") || []];
+      const index = Math.max(0, group.indexOf(entry.target));
+      const customDelay = entry.target.style.getPropertyValue("--reveal-delay");
+      entry.target.style.transitionDelay = customDelay || `${Math.min(index * 70, 300)}ms`;
+      entry.target.classList.add("is-visible");
+      observer.unobserve(entry.target);
+    }
+  }, { threshold: 0.12, rootMargin: "0px 0px -7% 0px" });
+  elements.forEach((element) => {
+    if (element.getBoundingClientRect().top < window.innerHeight * 0.92) {
+      element.classList.add("is-visible");
+      return;
+    }
+    observer.observe(element);
+  });
+}
+
+function setupShowcaseSpotlight() {
+  const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!finePointer || reducedMotion) return;
+  document.querySelectorAll("[data-showcase-card]").forEach((card) => {
+    card.addEventListener("pointermove", (event) => {
+      const rect = card.getBoundingClientRect();
+      const x = ((event.clientX - rect.left) / rect.width) * 100;
+      const y = ((event.clientY - rect.top) / rect.height) * 100;
+      card.style.setProperty("--mouse-x", `${x.toFixed(2)}%`);
+      card.style.setProperty("--mouse-y", `${y.toFixed(2)}%`);
+    });
+    card.addEventListener("pointerleave", () => {
+      card.style.setProperty("--mouse-x", "50%");
+      card.style.setProperty("--mouse-y", "38%");
+    });
+  });
+}
+
+function setupShowcaseTracking() {
+  document.querySelectorAll("[data-showcase-card]").forEach((card) => {
+    card.addEventListener("click", () => {
+      track("showcase_product_click", {
+        mlbId: card.dataset.mlbId,
+        productTitle: card.dataset.productTitle,
+        category: card.dataset.category,
+        position: card.dataset.position,
+        sourcePage: location.pathname,
+      });
+    });
+  });
+
+  document.querySelectorAll("[data-showcase-category]").forEach((chip) => {
+    chip.addEventListener("click", () => {
+      track("showcase_category_click", {
+        category: chip.dataset.category,
+        position: chip.dataset.position,
+        sourcePage: location.pathname,
+      });
+    });
+  });
+}
+
+function setupHeroParallax() {
+  const stage = document.querySelector("[data-hero-stage]");
+  if (!stage) return;
+  const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!finePointer || reducedMotion) return;
+  stage.addEventListener("mousemove", (event) => {
+    const rect = stage.getBoundingClientRect();
+    const x = ((event.clientX - rect.left) / rect.width - 0.5) * 20;
+    const y = ((event.clientY - rect.top) / rect.height - 0.5) * 16;
+    stage.style.setProperty("--hero-parallax-x", `${x.toFixed(2)}px`);
+    stage.style.setProperty("--hero-parallax-y", `${y.toFixed(2)}px`);
+  });
+  stage.addEventListener("mouseleave", () => {
+    stage.style.setProperty("--hero-parallax-x", "0px");
+    stage.style.setProperty("--hero-parallax-y", "0px");
+  });
+}
+
+function setupHorizontalScroller() {
+  document.querySelectorAll("[data-horizontal-scroll]").forEach((scroller) => {
+    scroller.setAttribute("tabindex", "0");
+    scroller.addEventListener("keydown", (event) => {
+      if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;
+      event.preventDefault();
+      scroller.scrollBy({ left: event.key === "ArrowRight" ? 160 : -160, behavior: "smooth" });
+    });
+  });
+}
+
+setupHeaderScroll();
+setupRevealObserver();
+setupHeroParallax();
+setupHorizontalScroller();
+setupShowcaseSpotlight();
+setupShowcaseTracking();
 
 if (searchButton && mobileSearchPanel) {
   const closeSearch = ({ restoreFocus = true } = {}) => {
@@ -172,6 +290,16 @@ function setParam(params, key, value) {
   else params.delete(key);
 }
 
+function updateCatalogChips() {
+  const activeCategory = category?.value || "";
+  document.querySelectorAll("[data-catalog-chip]").forEach((chip) => {
+    const active = chip.getAttribute("data-catalog-chip") === activeCategory;
+    chip.classList.toggle("is-active", active);
+    if (active) chip.setAttribute("aria-current", "true");
+    else chip.removeAttribute("aria-current");
+  });
+}
+
 function applyFilters() {
   if (!list) return;
   const cards = [...list.querySelectorAll(".product-card")];
@@ -225,6 +353,7 @@ function applyFilters() {
   setParam(params, "preco", priceFilter?.value || "");
   setParam(params, "ordem", sortFilter?.value && sortFilter.value !== "relevance" ? sortFilter.value : "");
   history.replaceState(null, "", `${location.pathname}${params.toString() ? `?${params}` : ""}`);
+  updateCatalogChips();
   track("catalog_filter_used", { query: search?.value || "", results: visible });
 }
 
