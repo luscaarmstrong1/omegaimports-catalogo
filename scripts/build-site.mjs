@@ -1,4 +1,4 @@
-import { cpSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { cpSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from "node:fs";
 import { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import {
@@ -51,6 +51,26 @@ function copyAssets() {
   cpSync(new URL("../public/assets/", import.meta.url), new URL("assets/", dist), { recursive: true });
   cpSync(new URL("../public/products/", import.meta.url), new URL("products/", dist), { recursive: true });
   cpSync(new URL("../public/manifest.webmanifest", import.meta.url), new URL("manifest.webmanifest", dist));
+  const currentVersion = new URL("../public/versions/current/", import.meta.url);
+  const currentOutput = new URL("versao-atual/", dist);
+  cpSync(currentVersion, currentOutput, { recursive: true });
+  rewriteVersionUrls(fileURLToPath(currentOutput));
+}
+
+function rewriteVersionUrls(directory) {
+  for (const entry of readdirSync(directory)) {
+    const target = `${directory}/${entry}`;
+    if (statSync(target).isDirectory()) {
+      rewriteVersionUrls(target);
+      continue;
+    }
+    if (!/\.(?:html|css|js|json|xml|webmanifest)$/i.test(entry)) continue;
+    const content = readFileSync(target, "utf8")
+      .replaceAll("/omegaimports-catalogo/", "/omegaimports-catalogo/versao-atual/")
+      .replaceAll('href="/omegaimports-catalogo/versao-atual/versao-anterior/"', 'href="/omegaimports-catalogo/"')
+      .replaceAll("Versao anterior", "Versão V7");
+    writeFileSync(target, content, "utf8");
+  }
 }
 
 function section({ eyebrow, title, description = "", action = "", content, className = "section" }) {
