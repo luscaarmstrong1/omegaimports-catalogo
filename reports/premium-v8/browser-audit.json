@@ -1,0 +1,3932 @@
+{
+  "generatedAt": "2026-07-22T17:44:35.954Z",
+  "routes": [
+    "home",
+    "catalogo",
+    "categorias",
+    "blog",
+    "sobre",
+    "artigo",
+    "produto",
+    "privacidade",
+    "404"
+  ],
+  "viewports": [
+    "320x760",
+    "360x760",
+    "375x760",
+    "390x760",
+    "412x760",
+    "480x760",
+    "768x1024",
+    "820x1024",
+    "1024x1100",
+    "1280x1100",
+    "1366x1100",
+    "1440x1100",
+    "1920x1100",
+    "2560x1100"
+  ],
+  "failures": [],
+  "smallTargetNotes": [],
+  "interactionFailures": [],
+  "results": [
+    {
+      "viewport": {
+        "width": 320,
+        "height": 760
+      },
+      "route": "home",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 320,
+      "innerWidth": 320,
+      "overflow": false,
+      "overflowNodes": [
+        {
+          "tag": "div",
+          "cls": "hero-stage-grid",
+          "text": "",
+          "left": 27,
+          "right": 349,
+          "width": 322
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "ZMCT123A",
+          "left": 252,
+          "right": 346,
+          "width": 94
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "HLK-PM01",
+          "left": 356,
+          "right": 445,
+          "width": 89
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "fonte de bancada",
+          "left": 455,
+          "right": 589,
+          "width": 134
+        },
+        {
+          "tag": "a",
+          "cls": "category-card",
+          "text": "4\n    Sensores e medição\n    Sensores de corrente, transformadores e leitura de ",
+          "left": 252,
+          "right": 462,
+          "width": 210
+        },
+        {
+          "tag": "h3",
+          "cls": "",
+          "text": "Sensores e medição",
+          "left": 277,
+          "right": 437,
+          "width": 160
+        },
+        {
+          "tag": "p",
+          "cls": "",
+          "text": "Sensores de corrente, transformadores e leitura de energia.",
+          "left": 277,
+          "right": 437,
+          "width": 160
+        },
+        {
+          "tag": "strong",
+          "cls": "",
+          "text": "Ver categoria",
+          "left": 277,
+          "right": 437,
+          "width": 160
+        },
+        {
+          "tag": "svg",
+          "cls": "[object SVGAnimatedString]",
+          "text": "",
+          "left": 390,
+          "right": 408,
+          "width": 18
+        },
+        {
+          "tag": "path",
+          "cls": "[object SVGAnimatedString]",
+          "text": "",
+          "left": 400,
+          "right": 405,
+          "width": 5
+        }
+      ],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 337,
+      "domCompleteMs": 1442
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 760
+      },
+      "route": "catalogo",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/produtos/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 320,
+      "innerWidth": 320,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 177,
+      "domCompleteMs": 44
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 760
+      },
+      "route": "categorias",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/categorias/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 320,
+      "innerWidth": 320,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 14
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 760
+      },
+      "route": "blog",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/blog/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 320,
+      "innerWidth": 320,
+      "overflow": false,
+      "overflowNodes": [
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "IoT e conectividade",
+          "left": 258,
+          "right": 405,
+          "width": 147
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "Fundamentos",
+          "left": 415,
+          "right": 525,
+          "width": 110
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "Prototipagem",
+          "left": 535,
+          "right": 645,
+          "width": 109
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "Conectores",
+          "left": 655,
+          "right": 751,
+          "width": 97
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "Automação",
+          "left": 761,
+          "right": 858,
+          "width": 96
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "Instrumentação",
+          "left": 868,
+          "right": 992,
+          "width": 124
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "Sensores e medição",
+          "left": 1002,
+          "right": 1154,
+          "width": 151
+        }
+      ],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 256,
+      "domCompleteMs": 26
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 760
+      },
+      "route": "sobre",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/sobre/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 320,
+      "innerWidth": 320,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 13
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 760
+      },
+      "route": "artigo",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/blog/como-escolher-fonte-bancada/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 320,
+      "innerWidth": 320,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 255,
+      "domCompleteMs": 30
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 760
+      },
+      "route": "produto",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/produtos/10x-mini-fonte-chaveada-hi-link-hlk-pm01-5-v-3-w-mlb4669463663/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 320,
+      "innerWidth": 320,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 340,
+      "domCompleteMs": 29
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 760
+      },
+      "route": "privacidade",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/politica-de-privacidade/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 320,
+      "innerWidth": 320,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 14
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 760
+      },
+      "route": "404",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/rota-inexistente/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 320,
+      "innerWidth": 320,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 15
+    },
+    {
+      "viewport": {
+        "width": 360,
+        "height": 760
+      },
+      "route": "home",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 360,
+      "innerWidth": 360,
+      "overflow": false,
+      "overflowNodes": [
+        {
+          "tag": "div",
+          "cls": "hero-stage-grid",
+          "text": "",
+          "left": 31,
+          "right": 391,
+          "width": 360
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "HLK-PM01",
+          "left": 356,
+          "right": 445,
+          "width": 89
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "fonte de bancada",
+          "left": 455,
+          "right": 589,
+          "width": 134
+        },
+        {
+          "tag": "a",
+          "cls": "category-card",
+          "text": "4\n    Sensores e medição\n    Sensores de corrente, transformadores e leitura de ",
+          "left": 282,
+          "right": 522,
+          "width": 240
+        },
+        {
+          "tag": "h3",
+          "cls": "",
+          "text": "Sensores e medição",
+          "left": 307,
+          "right": 497,
+          "width": 190
+        },
+        {
+          "tag": "p",
+          "cls": "",
+          "text": "Sensores de corrente, transformadores e leitura de energia.",
+          "left": 307,
+          "right": 497,
+          "width": 190
+        },
+        {
+          "tag": "strong",
+          "cls": "",
+          "text": "Ver categoria",
+          "left": 307,
+          "right": 497,
+          "width": 190
+        },
+        {
+          "tag": "svg",
+          "cls": "[object SVGAnimatedString]",
+          "text": "",
+          "left": 420,
+          "right": 438,
+          "width": 18
+        },
+        {
+          "tag": "path",
+          "cls": "[object SVGAnimatedString]",
+          "text": "",
+          "left": 430,
+          "right": 435,
+          "width": 5
+        },
+        {
+          "tag": "a",
+          "cls": "category-card",
+          "text": "5\n    Fontes e alimentação\n    Fontes AC/DC, reguladores e alimentação compacta ",
+          "left": 546,
+          "right": 785,
+          "width": 240
+        }
+      ],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 337,
+      "domCompleteMs": 1547
+    },
+    {
+      "viewport": {
+        "width": 360,
+        "height": 760
+      },
+      "route": "catalogo",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/produtos/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 360,
+      "innerWidth": 360,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 177,
+      "domCompleteMs": 45
+    },
+    {
+      "viewport": {
+        "width": 360,
+        "height": 760
+      },
+      "route": "categorias",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/categorias/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 360,
+      "innerWidth": 360,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 16
+    },
+    {
+      "viewport": {
+        "width": 360,
+        "height": 760
+      },
+      "route": "blog",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/blog/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 360,
+      "innerWidth": 360,
+      "overflow": false,
+      "overflowNodes": [
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "IoT e conectividade",
+          "left": 258,
+          "right": 405,
+          "width": 147
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "Fundamentos",
+          "left": 415,
+          "right": 525,
+          "width": 110
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "Prototipagem",
+          "left": 535,
+          "right": 645,
+          "width": 109
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "Conectores",
+          "left": 655,
+          "right": 751,
+          "width": 97
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "Automação",
+          "left": 761,
+          "right": 858,
+          "width": 96
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "Instrumentação",
+          "left": 868,
+          "right": 992,
+          "width": 124
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "Sensores e medição",
+          "left": 1002,
+          "right": 1154,
+          "width": 151
+        }
+      ],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 256,
+      "domCompleteMs": 20
+    },
+    {
+      "viewport": {
+        "width": 360,
+        "height": 760
+      },
+      "route": "sobre",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/sobre/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 360,
+      "innerWidth": 360,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 17
+    },
+    {
+      "viewport": {
+        "width": 360,
+        "height": 760
+      },
+      "route": "artigo",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/blog/como-escolher-fonte-bancada/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 360,
+      "innerWidth": 360,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 255,
+      "domCompleteMs": 37
+    },
+    {
+      "viewport": {
+        "width": 360,
+        "height": 760
+      },
+      "route": "produto",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/produtos/10x-mini-fonte-chaveada-hi-link-hlk-pm01-5-v-3-w-mlb4669463663/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 360,
+      "innerWidth": 360,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 340,
+      "domCompleteMs": 21
+    },
+    {
+      "viewport": {
+        "width": 360,
+        "height": 760
+      },
+      "route": "privacidade",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/politica-de-privacidade/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 360,
+      "innerWidth": 360,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 20
+    },
+    {
+      "viewport": {
+        "width": 360,
+        "height": 760
+      },
+      "route": "404",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/rota-inexistente/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 360,
+      "innerWidth": 360,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 14
+    },
+    {
+      "viewport": {
+        "width": 375,
+        "height": 760
+      },
+      "route": "home",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 375,
+      "innerWidth": 375,
+      "overflow": false,
+      "overflowNodes": [
+        {
+          "tag": "div",
+          "cls": "hero-stage-grid",
+          "text": "",
+          "left": 32,
+          "right": 407,
+          "width": 375
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "HLK-PM01",
+          "left": 356,
+          "right": 445,
+          "width": 89
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "fonte de bancada",
+          "left": 455,
+          "right": 589,
+          "width": 134
+        },
+        {
+          "tag": "a",
+          "cls": "category-card",
+          "text": "4\n    Sensores e medição\n    Sensores de corrente, transformadores e leitura de ",
+          "left": 293,
+          "right": 544,
+          "width": 251
+        },
+        {
+          "tag": "h3",
+          "cls": "",
+          "text": "Sensores e medição",
+          "left": 318,
+          "right": 519,
+          "width": 201
+        },
+        {
+          "tag": "p",
+          "cls": "",
+          "text": "Sensores de corrente, transformadores e leitura de energia.",
+          "left": 318,
+          "right": 519,
+          "width": 201
+        },
+        {
+          "tag": "strong",
+          "cls": "",
+          "text": "Ver categoria",
+          "left": 318,
+          "right": 519,
+          "width": 201
+        },
+        {
+          "tag": "svg",
+          "cls": "[object SVGAnimatedString]",
+          "text": "",
+          "left": 431,
+          "right": 449,
+          "width": 18
+        },
+        {
+          "tag": "path",
+          "cls": "[object SVGAnimatedString]",
+          "text": "",
+          "left": 441,
+          "right": 446,
+          "width": 5
+        },
+        {
+          "tag": "a",
+          "cls": "category-card",
+          "text": "5\n    Fontes e alimentação\n    Fontes AC/DC, reguladores e alimentação compacta ",
+          "left": 568,
+          "right": 819,
+          "width": 251
+        }
+      ],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 337,
+      "domCompleteMs": 1597
+    },
+    {
+      "viewport": {
+        "width": 375,
+        "height": 760
+      },
+      "route": "catalogo",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/produtos/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 375,
+      "innerWidth": 375,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 177,
+      "domCompleteMs": 98
+    },
+    {
+      "viewport": {
+        "width": 375,
+        "height": 760
+      },
+      "route": "categorias",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/categorias/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 375,
+      "innerWidth": 375,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 18
+    },
+    {
+      "viewport": {
+        "width": 375,
+        "height": 760
+      },
+      "route": "blog",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/blog/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 375,
+      "innerWidth": 375,
+      "overflow": false,
+      "overflowNodes": [
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "IoT e conectividade",
+          "left": 258,
+          "right": 405,
+          "width": 147
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "Fundamentos",
+          "left": 415,
+          "right": 525,
+          "width": 110
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "Prototipagem",
+          "left": 535,
+          "right": 645,
+          "width": 109
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "Conectores",
+          "left": 655,
+          "right": 751,
+          "width": 97
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "Automação",
+          "left": 761,
+          "right": 858,
+          "width": 96
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "Instrumentação",
+          "left": 868,
+          "right": 992,
+          "width": 124
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "Sensores e medição",
+          "left": 1002,
+          "right": 1154,
+          "width": 151
+        }
+      ],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 256,
+      "domCompleteMs": 32
+    },
+    {
+      "viewport": {
+        "width": 375,
+        "height": 760
+      },
+      "route": "sobre",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/sobre/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 375,
+      "innerWidth": 375,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 13
+    },
+    {
+      "viewport": {
+        "width": 375,
+        "height": 760
+      },
+      "route": "artigo",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/blog/como-escolher-fonte-bancada/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 375,
+      "innerWidth": 375,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 255,
+      "domCompleteMs": 34
+    },
+    {
+      "viewport": {
+        "width": 375,
+        "height": 760
+      },
+      "route": "produto",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/produtos/10x-mini-fonte-chaveada-hi-link-hlk-pm01-5-v-3-w-mlb4669463663/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 375,
+      "innerWidth": 375,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 340,
+      "domCompleteMs": 24
+    },
+    {
+      "viewport": {
+        "width": 375,
+        "height": 760
+      },
+      "route": "privacidade",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/politica-de-privacidade/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 375,
+      "innerWidth": 375,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 14
+    },
+    {
+      "viewport": {
+        "width": 375,
+        "height": 760
+      },
+      "route": "404",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/rota-inexistente/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 375,
+      "innerWidth": 375,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 14
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 760
+      },
+      "route": "home",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "overflow": false,
+      "overflowNodes": [
+        {
+          "tag": "div",
+          "cls": "hero-stage-grid",
+          "text": "",
+          "left": 31,
+          "right": 422,
+          "width": 391
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "HLK-PM01",
+          "left": 356,
+          "right": 445,
+          "width": 89
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "fonte de bancada",
+          "left": 455,
+          "right": 589,
+          "width": 134
+        },
+        {
+          "tag": "a",
+          "cls": "category-card",
+          "text": "4\n    Sensores e medição\n    Sensores de corrente, transformadores e leitura de ",
+          "left": 304,
+          "right": 566,
+          "width": 262
+        },
+        {
+          "tag": "h3",
+          "cls": "",
+          "text": "Sensores e medição",
+          "left": 329,
+          "right": 541,
+          "width": 212
+        },
+        {
+          "tag": "p",
+          "cls": "",
+          "text": "Sensores de corrente, transformadores e leitura de energia.",
+          "left": 329,
+          "right": 541,
+          "width": 212
+        },
+        {
+          "tag": "strong",
+          "cls": "",
+          "text": "Ver categoria",
+          "left": 329,
+          "right": 541,
+          "width": 212
+        },
+        {
+          "tag": "svg",
+          "cls": "[object SVGAnimatedString]",
+          "text": "",
+          "left": 442,
+          "right": 460,
+          "width": 18
+        },
+        {
+          "tag": "path",
+          "cls": "[object SVGAnimatedString]",
+          "text": "",
+          "left": 452,
+          "right": 457,
+          "width": 5
+        },
+        {
+          "tag": "a",
+          "cls": "category-card",
+          "text": "5\n    Fontes e alimentação\n    Fontes AC/DC, reguladores e alimentação compacta ",
+          "left": 590,
+          "right": 852,
+          "width": 262
+        }
+      ],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 337,
+      "domCompleteMs": 1424
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 760
+      },
+      "route": "catalogo",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/produtos/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 177,
+      "domCompleteMs": 105
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 760
+      },
+      "route": "categorias",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/categorias/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 34
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 760
+      },
+      "route": "blog",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/blog/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "overflow": false,
+      "overflowNodes": [
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "IoT e conectividade",
+          "left": 258,
+          "right": 405,
+          "width": 147
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "Fundamentos",
+          "left": 415,
+          "right": 525,
+          "width": 110
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "Prototipagem",
+          "left": 535,
+          "right": 645,
+          "width": 109
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "Conectores",
+          "left": 655,
+          "right": 751,
+          "width": 97
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "Automação",
+          "left": 761,
+          "right": 858,
+          "width": 96
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "Instrumentação",
+          "left": 868,
+          "right": 992,
+          "width": 124
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "Sensores e medição",
+          "left": 1002,
+          "right": 1154,
+          "width": 151
+        }
+      ],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 256,
+      "domCompleteMs": 48
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 760
+      },
+      "route": "sobre",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/sobre/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 31
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 760
+      },
+      "route": "artigo",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/blog/como-escolher-fonte-bancada/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 255,
+      "domCompleteMs": 61
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 760
+      },
+      "route": "produto",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/produtos/10x-mini-fonte-chaveada-hi-link-hlk-pm01-5-v-3-w-mlb4669463663/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 340,
+      "domCompleteMs": 39
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 760
+      },
+      "route": "privacidade",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/politica-de-privacidade/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 23
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 760
+      },
+      "route": "404",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/rota-inexistente/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 27
+    },
+    {
+      "viewport": {
+        "width": 412,
+        "height": 760
+      },
+      "route": "home",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 412,
+      "innerWidth": 412,
+      "overflow": false,
+      "overflowNodes": [
+        {
+          "tag": "div",
+          "cls": "hero-stage-grid",
+          "text": "",
+          "left": 29,
+          "right": 445,
+          "width": 416
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "HLK-PM01",
+          "left": 356,
+          "right": 445,
+          "width": 89
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "fonte de bancada",
+          "left": 455,
+          "right": 589,
+          "width": 134
+        },
+        {
+          "tag": "a",
+          "cls": "category-card",
+          "text": "4\n    Sensores e medição\n    Sensores de corrente, transformadores e leitura de ",
+          "left": 320,
+          "right": 598,
+          "width": 278
+        },
+        {
+          "tag": "h3",
+          "cls": "",
+          "text": "Sensores e medição",
+          "left": 345,
+          "right": 573,
+          "width": 228
+        },
+        {
+          "tag": "p",
+          "cls": "",
+          "text": "Sensores de corrente, transformadores e leitura de energia.",
+          "left": 345,
+          "right": 573,
+          "width": 228
+        },
+        {
+          "tag": "strong",
+          "cls": "",
+          "text": "Ver categoria",
+          "left": 345,
+          "right": 573,
+          "width": 228
+        },
+        {
+          "tag": "svg",
+          "cls": "[object SVGAnimatedString]",
+          "text": "",
+          "left": 458,
+          "right": 476,
+          "width": 18
+        },
+        {
+          "tag": "path",
+          "cls": "[object SVGAnimatedString]",
+          "text": "",
+          "left": 468,
+          "right": 473,
+          "width": 5
+        },
+        {
+          "tag": "a",
+          "cls": "category-card",
+          "text": "5\n    Fontes e alimentação\n    Fontes AC/DC, reguladores e alimentação compacta ",
+          "left": 622,
+          "right": 901,
+          "width": 278
+        }
+      ],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 337,
+      "domCompleteMs": 1694
+    },
+    {
+      "viewport": {
+        "width": 412,
+        "height": 760
+      },
+      "route": "catalogo",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/produtos/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 412,
+      "innerWidth": 412,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 177,
+      "domCompleteMs": 347
+    },
+    {
+      "viewport": {
+        "width": 412,
+        "height": 760
+      },
+      "route": "categorias",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/categorias/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 412,
+      "innerWidth": 412,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 30
+    },
+    {
+      "viewport": {
+        "width": 412,
+        "height": 760
+      },
+      "route": "blog",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/blog/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 412,
+      "innerWidth": 412,
+      "overflow": false,
+      "overflowNodes": [
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "Fundamentos",
+          "left": 415,
+          "right": 525,
+          "width": 110
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "Prototipagem",
+          "left": 535,
+          "right": 645,
+          "width": 109
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "Conectores",
+          "left": 655,
+          "right": 751,
+          "width": 97
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "Automação",
+          "left": 761,
+          "right": 858,
+          "width": 96
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "Instrumentação",
+          "left": 868,
+          "right": 992,
+          "width": 124
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "Sensores e medição",
+          "left": 1002,
+          "right": 1154,
+          "width": 151
+        }
+      ],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 256,
+      "domCompleteMs": 38
+    },
+    {
+      "viewport": {
+        "width": 412,
+        "height": 760
+      },
+      "route": "sobre",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/sobre/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 412,
+      "innerWidth": 412,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 19
+    },
+    {
+      "viewport": {
+        "width": 412,
+        "height": 760
+      },
+      "route": "artigo",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/blog/como-escolher-fonte-bancada/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 412,
+      "innerWidth": 412,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 255,
+      "domCompleteMs": 44
+    },
+    {
+      "viewport": {
+        "width": 412,
+        "height": 760
+      },
+      "route": "produto",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/produtos/10x-mini-fonte-chaveada-hi-link-hlk-pm01-5-v-3-w-mlb4669463663/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 412,
+      "innerWidth": 412,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 340,
+      "domCompleteMs": 35
+    },
+    {
+      "viewport": {
+        "width": 412,
+        "height": 760
+      },
+      "route": "privacidade",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/politica-de-privacidade/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 412,
+      "innerWidth": 412,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 17
+    },
+    {
+      "viewport": {
+        "width": 412,
+        "height": 760
+      },
+      "route": "404",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/rota-inexistente/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 412,
+      "innerWidth": 412,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 15
+    },
+    {
+      "viewport": {
+        "width": 480,
+        "height": 760
+      },
+      "route": "home",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 480,
+      "innerWidth": 480,
+      "overflow": false,
+      "overflowNodes": [
+        {
+          "tag": "div",
+          "cls": "hero-stage-grid",
+          "text": "",
+          "left": 24,
+          "right": 515,
+          "width": 491
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "fonte de bancada",
+          "left": 455,
+          "right": 589,
+          "width": 134
+        },
+        {
+          "tag": "a",
+          "cls": "category-card",
+          "text": "4\n    Sensores e medição\n    Sensores de corrente, transformadores e leitura de ",
+          "left": 371,
+          "right": 699,
+          "width": 329
+        },
+        {
+          "tag": "h3",
+          "cls": "",
+          "text": "Sensores e medição",
+          "left": 396,
+          "right": 674,
+          "width": 279
+        },
+        {
+          "tag": "p",
+          "cls": "",
+          "text": "Sensores de corrente, transformadores e leitura de energia.",
+          "left": 396,
+          "right": 674,
+          "width": 279
+        },
+        {
+          "tag": "strong",
+          "cls": "",
+          "text": "Ver categoria",
+          "left": 396,
+          "right": 674,
+          "width": 279
+        },
+        {
+          "tag": "svg",
+          "cls": "[object SVGAnimatedString]",
+          "text": "",
+          "left": 509,
+          "right": 527,
+          "width": 18
+        },
+        {
+          "tag": "path",
+          "cls": "[object SVGAnimatedString]",
+          "text": "",
+          "left": 518,
+          "right": 524,
+          "width": 5
+        },
+        {
+          "tag": "a",
+          "cls": "category-card",
+          "text": "5\n    Fontes e alimentação\n    Fontes AC/DC, reguladores e alimentação compacta ",
+          "left": 723,
+          "right": 1052,
+          "width": 329
+        },
+        {
+          "tag": "svg",
+          "cls": "[object SVGAnimatedString]",
+          "text": "",
+          "left": 748,
+          "right": 786,
+          "width": 38
+        }
+      ],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 337,
+      "domCompleteMs": 1480
+    },
+    {
+      "viewport": {
+        "width": 480,
+        "height": 760
+      },
+      "route": "catalogo",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/produtos/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 480,
+      "innerWidth": 480,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 177,
+      "domCompleteMs": 54
+    },
+    {
+      "viewport": {
+        "width": 480,
+        "height": 760
+      },
+      "route": "categorias",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/categorias/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 480,
+      "innerWidth": 480,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 22
+    },
+    {
+      "viewport": {
+        "width": 480,
+        "height": 760
+      },
+      "route": "blog",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/blog/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 480,
+      "innerWidth": 480,
+      "overflow": false,
+      "overflowNodes": [
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "Fundamentos",
+          "left": 415,
+          "right": 525,
+          "width": 110
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "Prototipagem",
+          "left": 535,
+          "right": 645,
+          "width": 109
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "Conectores",
+          "left": 655,
+          "right": 751,
+          "width": 97
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "Automação",
+          "left": 761,
+          "right": 858,
+          "width": 96
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "Instrumentação",
+          "left": 868,
+          "right": 992,
+          "width": 124
+        },
+        {
+          "tag": "a",
+          "cls": "",
+          "text": "Sensores e medição",
+          "left": 1002,
+          "right": 1154,
+          "width": 151
+        }
+      ],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 256,
+      "domCompleteMs": 42
+    },
+    {
+      "viewport": {
+        "width": 480,
+        "height": 760
+      },
+      "route": "sobre",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/sobre/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 480,
+      "innerWidth": 480,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 17
+    },
+    {
+      "viewport": {
+        "width": 480,
+        "height": 760
+      },
+      "route": "artigo",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/blog/como-escolher-fonte-bancada/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 480,
+      "innerWidth": 480,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 255,
+      "domCompleteMs": 45
+    },
+    {
+      "viewport": {
+        "width": 480,
+        "height": 760
+      },
+      "route": "produto",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/produtos/10x-mini-fonte-chaveada-hi-link-hlk-pm01-5-v-3-w-mlb4669463663/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 480,
+      "innerWidth": 480,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 340,
+      "domCompleteMs": 34
+    },
+    {
+      "viewport": {
+        "width": 480,
+        "height": 760
+      },
+      "route": "privacidade",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/politica-de-privacidade/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 480,
+      "innerWidth": 480,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 17
+    },
+    {
+      "viewport": {
+        "width": 480,
+        "height": 760
+      },
+      "route": "404",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/rota-inexistente/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 480,
+      "innerWidth": 480,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 24
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "route": "home",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 768,
+      "innerWidth": 768,
+      "overflow": false,
+      "overflowNodes": [
+        {
+          "tag": "div",
+          "cls": "hero-stage-grid",
+          "text": "",
+          "left": -17,
+          "right": 838,
+          "width": 855
+        }
+      ],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 337,
+      "domCompleteMs": 1431
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "route": "catalogo",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/produtos/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 768,
+      "innerWidth": 768,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 214,
+      "domCompleteMs": 53
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "route": "categorias",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/categorias/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 768,
+      "innerWidth": 768,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 15
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "route": "blog",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/blog/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 768,
+      "innerWidth": 768,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 536,
+      "domCompleteMs": 24
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "route": "sobre",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/sobre/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 768,
+      "innerWidth": 768,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 18
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "route": "artigo",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/blog/como-escolher-fonte-bancada/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 768,
+      "innerWidth": 768,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 255,
+      "domCompleteMs": 22
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "route": "produto",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/produtos/10x-mini-fonte-chaveada-hi-link-hlk-pm01-5-v-3-w-mlb4669463663/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 768,
+      "innerWidth": 768,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 340,
+      "domCompleteMs": 25
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "route": "privacidade",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/politica-de-privacidade/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 768,
+      "innerWidth": 768,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 19
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "route": "404",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/rota-inexistente/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 768,
+      "innerWidth": 768,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 11
+    },
+    {
+      "viewport": {
+        "width": 820,
+        "height": 1024
+      },
+      "route": "home",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 820,
+      "innerWidth": 820,
+      "overflow": false,
+      "overflowNodes": [
+        {
+          "tag": "div",
+          "cls": "hero-stage-grid",
+          "text": "",
+          "left": 9,
+          "right": 864,
+          "width": 855
+        }
+      ],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 337,
+      "domCompleteMs": 1463
+    },
+    {
+      "viewport": {
+        "width": 820,
+        "height": 1024
+      },
+      "route": "catalogo",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/produtos/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 820,
+      "innerWidth": 820,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 214,
+      "domCompleteMs": 60
+    },
+    {
+      "viewport": {
+        "width": 820,
+        "height": 1024
+      },
+      "route": "categorias",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/categorias/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 820,
+      "innerWidth": 820,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 19
+    },
+    {
+      "viewport": {
+        "width": 820,
+        "height": 1024
+      },
+      "route": "blog",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/blog/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 820,
+      "innerWidth": 820,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 536,
+      "domCompleteMs": 36
+    },
+    {
+      "viewport": {
+        "width": 820,
+        "height": 1024
+      },
+      "route": "sobre",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/sobre/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 820,
+      "innerWidth": 820,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 24
+    },
+    {
+      "viewport": {
+        "width": 820,
+        "height": 1024
+      },
+      "route": "artigo",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/blog/como-escolher-fonte-bancada/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 820,
+      "innerWidth": 820,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 255,
+      "domCompleteMs": 28
+    },
+    {
+      "viewport": {
+        "width": 820,
+        "height": 1024
+      },
+      "route": "produto",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/produtos/10x-mini-fonte-chaveada-hi-link-hlk-pm01-5-v-3-w-mlb4669463663/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 820,
+      "innerWidth": 820,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 340,
+      "domCompleteMs": 41
+    },
+    {
+      "viewport": {
+        "width": 820,
+        "height": 1024
+      },
+      "route": "privacidade",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/politica-de-privacidade/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 820,
+      "innerWidth": 820,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 19
+    },
+    {
+      "viewport": {
+        "width": 820,
+        "height": 1024
+      },
+      "route": "404",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/rota-inexistente/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 820,
+      "innerWidth": 820,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 14
+    },
+    {
+      "viewport": {
+        "width": 1024,
+        "height": 1100
+      },
+      "route": "home",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1024,
+      "innerWidth": 1024,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 337,
+      "domCompleteMs": 1540
+    },
+    {
+      "viewport": {
+        "width": 1024,
+        "height": 1100
+      },
+      "route": "catalogo",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/produtos/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1024,
+      "innerWidth": 1024,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 214,
+      "domCompleteMs": 275
+    },
+    {
+      "viewport": {
+        "width": 1024,
+        "height": 1100
+      },
+      "route": "categorias",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/categorias/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1024,
+      "innerWidth": 1024,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 23
+    },
+    {
+      "viewport": {
+        "width": 1024,
+        "height": 1100
+      },
+      "route": "blog",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/blog/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1024,
+      "innerWidth": 1024,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 797,
+      "domCompleteMs": 31
+    },
+    {
+      "viewport": {
+        "width": 1024,
+        "height": 1100
+      },
+      "route": "sobre",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/sobre/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1024,
+      "innerWidth": 1024,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 17
+    },
+    {
+      "viewport": {
+        "width": 1024,
+        "height": 1100
+      },
+      "route": "artigo",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/blog/como-escolher-fonte-bancada/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1024,
+      "innerWidth": 1024,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 255,
+      "domCompleteMs": 28
+    },
+    {
+      "viewport": {
+        "width": 1024,
+        "height": 1100
+      },
+      "route": "produto",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/produtos/10x-mini-fonte-chaveada-hi-link-hlk-pm01-5-v-3-w-mlb4669463663/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1024,
+      "innerWidth": 1024,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 340,
+      "domCompleteMs": 33
+    },
+    {
+      "viewport": {
+        "width": 1024,
+        "height": 1100
+      },
+      "route": "privacidade",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/politica-de-privacidade/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1024,
+      "innerWidth": 1024,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 23
+    },
+    {
+      "viewport": {
+        "width": 1024,
+        "height": 1100
+      },
+      "route": "404",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/rota-inexistente/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1024,
+      "innerWidth": 1024,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 15
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 1100
+      },
+      "route": "home",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1280,
+      "innerWidth": 1280,
+      "overflow": false,
+      "overflowNodes": [
+        {
+          "tag": "div",
+          "cls": "hero-stage-grid",
+          "text": "",
+          "left": 687,
+          "right": 1343,
+          "width": 657
+        }
+      ],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 337,
+      "domCompleteMs": 1647
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 1100
+      },
+      "route": "catalogo",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/produtos/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1280,
+      "innerWidth": 1280,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 269,
+      "domCompleteMs": 54
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 1100
+      },
+      "route": "categorias",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/categorias/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1280,
+      "innerWidth": 1280,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 17
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 1100
+      },
+      "route": "blog",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/blog/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1280,
+      "innerWidth": 1280,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 797,
+      "domCompleteMs": 31
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 1100
+      },
+      "route": "sobre",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/sobre/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1280,
+      "innerWidth": 1280,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 15
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 1100
+      },
+      "route": "artigo",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/blog/como-escolher-fonte-bancada/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1280,
+      "innerWidth": 1280,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 255,
+      "domCompleteMs": 29
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 1100
+      },
+      "route": "produto",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/produtos/10x-mini-fonte-chaveada-hi-link-hlk-pm01-5-v-3-w-mlb4669463663/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1280,
+      "innerWidth": 1280,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 340,
+      "domCompleteMs": 29
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 1100
+      },
+      "route": "privacidade",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/politica-de-privacidade/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1280,
+      "innerWidth": 1280,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 13
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 1100
+      },
+      "route": "404",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/rota-inexistente/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1280,
+      "innerWidth": 1280,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 14
+    },
+    {
+      "viewport": {
+        "width": 1366,
+        "height": 1100
+      },
+      "route": "home",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1366,
+      "innerWidth": 1366,
+      "overflow": false,
+      "overflowNodes": [
+        {
+          "tag": "div",
+          "cls": "hero-stage-grid",
+          "text": "",
+          "left": 727,
+          "right": 1411,
+          "width": 684
+        }
+      ],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 337,
+      "domCompleteMs": 1559
+    },
+    {
+      "viewport": {
+        "width": 1366,
+        "height": 1100
+      },
+      "route": "catalogo",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/produtos/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1366,
+      "innerWidth": 1366,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 269,
+      "domCompleteMs": 80
+    },
+    {
+      "viewport": {
+        "width": 1366,
+        "height": 1100
+      },
+      "route": "categorias",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/categorias/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1366,
+      "innerWidth": 1366,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 18
+    },
+    {
+      "viewport": {
+        "width": 1366,
+        "height": 1100
+      },
+      "route": "blog",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/blog/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1366,
+      "innerWidth": 1366,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 797,
+      "domCompleteMs": 33
+    },
+    {
+      "viewport": {
+        "width": 1366,
+        "height": 1100
+      },
+      "route": "sobre",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/sobre/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1366,
+      "innerWidth": 1366,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 14
+    },
+    {
+      "viewport": {
+        "width": 1366,
+        "height": 1100
+      },
+      "route": "artigo",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/blog/como-escolher-fonte-bancada/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1366,
+      "innerWidth": 1366,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 255,
+      "domCompleteMs": 31
+    },
+    {
+      "viewport": {
+        "width": 1366,
+        "height": 1100
+      },
+      "route": "produto",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/produtos/10x-mini-fonte-chaveada-hi-link-hlk-pm01-5-v-3-w-mlb4669463663/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1366,
+      "innerWidth": 1366,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 340,
+      "domCompleteMs": 31
+    },
+    {
+      "viewport": {
+        "width": 1366,
+        "height": 1100
+      },
+      "route": "privacidade",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/politica-de-privacidade/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1366,
+      "innerWidth": 1366,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 16
+    },
+    {
+      "viewport": {
+        "width": 1366,
+        "height": 1100
+      },
+      "route": "404",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/rota-inexistente/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1366,
+      "innerWidth": 1366,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 14
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "route": "home",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "overflow": false,
+      "overflowNodes": [
+        {
+          "tag": "div",
+          "cls": "hero-stage-grid",
+          "text": "",
+          "left": 764,
+          "right": 1448,
+          "width": 684
+        }
+      ],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 337,
+      "domCompleteMs": 1455
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "route": "catalogo",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/produtos/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 269,
+      "domCompleteMs": 64
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "route": "categorias",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/categorias/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 23
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "route": "blog",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/blog/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 797,
+      "domCompleteMs": 28
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "route": "sobre",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/sobre/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 18
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "route": "artigo",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/blog/como-escolher-fonte-bancada/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 255,
+      "domCompleteMs": 35
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "route": "produto",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/produtos/10x-mini-fonte-chaveada-hi-link-hlk-pm01-5-v-3-w-mlb4669463663/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 340,
+      "domCompleteMs": 35
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "route": "privacidade",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/politica-de-privacidade/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 17
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "route": "404",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/rota-inexistente/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1440,
+      "innerWidth": 1440,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 16
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1100
+      },
+      "route": "home",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1920,
+      "innerWidth": 1920,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 337,
+      "domCompleteMs": 1488
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1100
+      },
+      "route": "catalogo",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/produtos/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1920,
+      "innerWidth": 1920,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 269,
+      "domCompleteMs": 72
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1100
+      },
+      "route": "categorias",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/categorias/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1920,
+      "innerWidth": 1920,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 20
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1100
+      },
+      "route": "blog",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/blog/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1920,
+      "innerWidth": 1920,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 797,
+      "domCompleteMs": 28
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1100
+      },
+      "route": "sobre",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/sobre/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1920,
+      "innerWidth": 1920,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 22
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1100
+      },
+      "route": "artigo",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/blog/como-escolher-fonte-bancada/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1920,
+      "innerWidth": 1920,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 255,
+      "domCompleteMs": 42
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1100
+      },
+      "route": "produto",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/produtos/10x-mini-fonte-chaveada-hi-link-hlk-pm01-5-v-3-w-mlb4669463663/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1920,
+      "innerWidth": 1920,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 340,
+      "domCompleteMs": 40
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1100
+      },
+      "route": "privacidade",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/politica-de-privacidade/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1920,
+      "innerWidth": 1920,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 18
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1100
+      },
+      "route": "404",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/rota-inexistente/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 1920,
+      "innerWidth": 1920,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 14
+    },
+    {
+      "viewport": {
+        "width": 2560,
+        "height": 1100
+      },
+      "route": "home",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 2560,
+      "innerWidth": 2560,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 337,
+      "domCompleteMs": 1539
+    },
+    {
+      "viewport": {
+        "width": 2560,
+        "height": 1100
+      },
+      "route": "catalogo",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/produtos/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 2560,
+      "innerWidth": 2560,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 269,
+      "domCompleteMs": 53
+    },
+    {
+      "viewport": {
+        "width": 2560,
+        "height": 1100
+      },
+      "route": "categorias",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/categorias/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 2560,
+      "innerWidth": 2560,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 18
+    },
+    {
+      "viewport": {
+        "width": 2560,
+        "height": 1100
+      },
+      "route": "blog",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/blog/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 2560,
+      "innerWidth": 2560,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 637,
+      "domCompleteMs": 25
+    },
+    {
+      "viewport": {
+        "width": 2560,
+        "height": 1100
+      },
+      "route": "sobre",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/sobre/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 2560,
+      "innerWidth": 2560,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 19
+    },
+    {
+      "viewport": {
+        "width": 2560,
+        "height": 1100
+      },
+      "route": "artigo",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/blog/como-escolher-fonte-bancada/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 2560,
+      "innerWidth": 2560,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 255,
+      "domCompleteMs": 23
+    },
+    {
+      "viewport": {
+        "width": 2560,
+        "height": 1100
+      },
+      "route": "produto",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/produtos/10x-mini-fonte-chaveada-hi-link-hlk-pm01-5-v-3-w-mlb4669463663/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 2560,
+      "innerWidth": 2560,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 340,
+      "domCompleteMs": 32
+    },
+    {
+      "viewport": {
+        "width": 2560,
+        "height": 1100
+      },
+      "route": "privacidade",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/politica-de-privacidade/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 2560,
+      "innerWidth": 2560,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 15
+    },
+    {
+      "viewport": {
+        "width": 2560,
+        "height": 1100
+      },
+      "route": "404",
+      "url": "http://127.0.0.1:4173/omegaimports-catalogo/rota-inexistente/",
+      "status": 200,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "h1Count": 1,
+      "hasMain": true,
+      "duplicateIds": [],
+      "scrollWidth": 2560,
+      "innerWidth": 2560,
+      "overflow": false,
+      "overflowNodes": [],
+      "missingAlt": [],
+      "blankRelIssues": [],
+      "smallTargets": [],
+      "resourceTransferKB": 101,
+      "domCompleteMs": 14
+    }
+  ],
+  "interactionResults": [
+    {
+      "viewport": {
+        "width": 320,
+        "height": 760
+      },
+      "menuOpen": true,
+      "searchOpen": true,
+      "filtersOpen": true,
+      "filterUrlChanged": true
+    },
+    {
+      "viewport": {
+        "width": 360,
+        "height": 760
+      },
+      "menuOpen": true,
+      "searchOpen": true,
+      "filtersOpen": true,
+      "filterUrlChanged": true
+    },
+    {
+      "viewport": {
+        "width": 375,
+        "height": 760
+      },
+      "menuOpen": true,
+      "searchOpen": true,
+      "filtersOpen": true,
+      "filterUrlChanged": true
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 760
+      },
+      "menuOpen": true,
+      "searchOpen": true,
+      "filtersOpen": true,
+      "filterUrlChanged": true
+    },
+    {
+      "viewport": {
+        "width": 412,
+        "height": 760
+      },
+      "menuOpen": true,
+      "searchOpen": true,
+      "filtersOpen": true,
+      "filterUrlChanged": true
+    },
+    {
+      "viewport": {
+        "width": 480,
+        "height": 760
+      },
+      "menuOpen": true,
+      "searchOpen": true,
+      "filtersOpen": true,
+      "filterUrlChanged": true
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "menuOpen": true,
+      "searchOpen": true,
+      "filtersOpen": true,
+      "filterUrlChanged": true
+    },
+    {
+      "viewport": {
+        "width": 820,
+        "height": 1024
+      },
+      "menuOpen": true,
+      "searchOpen": true,
+      "filtersOpen": true,
+      "filterUrlChanged": true
+    },
+    {
+      "viewport": {
+        "width": 1024,
+        "height": 1100
+      },
+      "menuOpen": true,
+      "searchOpen": true,
+      "filtersOpen": true,
+      "filterUrlChanged": true
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 1100
+      },
+      "menuOpen": null,
+      "searchOpen": true,
+      "filtersOpen": true,
+      "filterUrlChanged": true
+    },
+    {
+      "viewport": {
+        "width": 1366,
+        "height": 1100
+      },
+      "menuOpen": null,
+      "searchOpen": true,
+      "filtersOpen": true,
+      "filterUrlChanged": true
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "menuOpen": null,
+      "searchOpen": true,
+      "filtersOpen": true,
+      "filterUrlChanged": true
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1100
+      },
+      "menuOpen": null,
+      "searchOpen": true,
+      "filtersOpen": true,
+      "filterUrlChanged": true
+    },
+    {
+      "viewport": {
+        "width": 2560,
+        "height": 1100
+      },
+      "menuOpen": null,
+      "searchOpen": true,
+      "filtersOpen": true,
+      "filterUrlChanged": true
+    }
+  ]
+}

@@ -39,7 +39,8 @@
     "products:contact-sheet": "node scripts/generate-contact-sheet.mjs"
   },
   "devDependencies": {
-    "sharp": "^0.35.3",
-    "xlsx": "^0.18.5"
+    "fast-xml-parser": "^5.10.1",
+    "fflate": "^0.8.3",
+    "sharp": "^0.35.3"
   }
 }
