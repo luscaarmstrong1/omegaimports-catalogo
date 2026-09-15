@@ -32,6 +32,7 @@ if ((home.match(/class="product-card/g)?.length || 0) !== 8) throw new Error("Ho
 if ((home.match(/class="article-card(?:\s|")/g)?.length || 0) !== 3) throw new Error("Home precisa exibir exatamente 3 artigos");
 if (!home.includes("/omegaimports-catalogo/blog/")) throw new Error("Blog não aparece na Home");
 if (!home.includes("wa.me/5535999528858")) throw new Error("WhatsApp oficial não aparece na Home");
+if (!home.includes("https://www.linkedin.com/company/omegaimports/")) throw new Error("LinkedIn oficial não aparece na Home");
 
 const header = home.match(/<header[^>]*class="site-header"[^>]*>([\s\S]*?)<\/header>/)?.[1] || "";
 for (const item of ["Produtos", "Categorias", "Blog", "Sobre"]) {
@@ -67,23 +68,29 @@ if (!catalog.includes("price-filter")) throw new Error("catálogo sem filtro pú
 if (!catalog.includes('<source srcset="/omegaimports-catalogo/products/')) throw new Error("catálogo sem imagens locais otimizadas");
 
 const blog = readFileSync("dist/blog/index.html", "utf8");
-if ((blog.match(/class="article-card/g)?.length || 0) < 15) throw new Error("Blog precisa listar 15 artigos editoriais");
+if ((blog.match(/class="article-card/g)?.length || 0) < 6) throw new Error("Blog precisa listar os artigos reais importados do LinkedIn");
 if (!blog.includes("article-cover-picture")) throw new Error("Cards do Blog precisam ter capa");
 const articleFile = htmlFiles("dist/blog").find((file) => slash(file) !== "dist/blog/index.html");
 if (!articleFile) throw new Error("Nenhum artigo do Blog foi gerado");
 const article = readFileSync(articleFile, "utf8");
-for (const expected of ["Sumário", "Referências técnicas", "Produtos relacionados"]) {
+for (const expected of ["Sumário", "Referências técnicas"]) {
   if (!article.includes(expected)) throw new Error(`Artigo sem seção obrigatória: ${expected}`);
 }
 if (!article.includes("BlogPosting")) throw new Error("Artigo sem schema BlogPosting");
 if (!article.includes("article-hero-cover")) throw new Error("Artigo sem capa 16:9");
 if (!article.includes("Chamar no WhatsApp")) throw new Error("Artigo sem CTA de WhatsApp");
+if (!article.includes("Publicado originalmente pela OMEGAIMPORTS no LinkedIn")) throw new Error("Artigo sem bloco de origem LinkedIn");
+if (!article.includes("Ver artigo no LinkedIn")) throw new Error("Artigo sem CTA para o original no LinkedIn");
+if (!article.includes("linkedin.com/pulse/")) throw new Error("Artigo sem URL original do LinkedIn");
 
 const productFile = htmlFiles("dist/produtos").find((file) => slash(file) !== "dist/produtos/index.html");
 if (!productFile) throw new Error("Nenhuma página de produto foi gerada");
 const product = readFileSync(productFile, "utf8");
-if (!product.includes("Conteúdo relacionado")) throw new Error("Produto sem artigos relacionados");
 if (/\(\s*MLB\d+\s*\)/.test(product)) throw new Error("Alt text ou conteúdo público expõe MLB de forma excessiva");
+const productWithRelated = htmlFiles("dist/produtos")
+  .filter((file) => slash(file) !== "dist/produtos/index.html")
+  .find((file) => readFileSync(file, "utf8").includes("Conteúdo relacionado"));
+if (!productWithRelated) throw new Error("Nenhuma página de produto com artigos relacionados");
 
 const brokenLinks = [];
 for (const file of htmlFiles("dist")) {

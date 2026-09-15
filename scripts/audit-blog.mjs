@@ -7,6 +7,9 @@ const issues = [];
 for (const post of posts) {
   const words = (post.sections || []).flatMap((section) => String(section[1] || "").split(/\s+/).filter(Boolean)).length;
   if (!post.cover) issues.push([post.slug, "cover", "capa ausente"]);
+  if (post.source !== "linkedin") issues.push([post.slug, "source", "origem LinkedIn ausente"]);
+  if (!post.sourceUrl || !post.sourceUrl.includes("linkedin.com/pulse/")) issues.push([post.slug, "sourceUrl", "URL original do LinkedIn ausente"]);
+  if (!post.author) issues.push([post.slug, "author", "autor ausente"]);
   for (const ext of ["avif", "webp", "jpg"]) {
     if (!existsSync(`public/${post.cover}.${ext}`)) issues.push([post.slug, `cover.${ext}`, "arquivo ausente"]);
   }
@@ -27,7 +30,7 @@ writeFileSync("reports/v6-blog-audit.md", [
   "",
 ].join("\n"), "utf8");
 
-if (posts.length < 15) issues.push(["blog", "count", "menos de 15 artigos"]);
+if (posts.length < 6) issues.push(["blog", "count", "menos de 6 artigos importados do LinkedIn"]);
 
 if (issues.length) {
   console.error(`Audit blog falhou: ${issues.length} problema(s).`);

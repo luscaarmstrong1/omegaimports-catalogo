@@ -10,6 +10,7 @@ export const site = {
   base: "/omegaimports-catalogo",
   productionUrl: "https://luscaarmstrong1.github.io/omegaimports-catalogo/",
   marketplaceUrl: "https://www.mercadolivre.com.br/pagina/omegaimports",
+  linkedinUrl: "https://www.linkedin.com/company/omegaimports/",
   whatsappNumber: "+55 35 99952-8858",
   whatsappUrl: "https://wa.me/5535999528858?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20OMEGAIMPORTS%20e%20gostaria%20de%20ajuda%20para%20escolher%20um%20produto.",
 };
@@ -233,7 +234,7 @@ export function pageShell({ title, description, path = "", body, extraHead = "",
     "@type": "Organization",
     name: site.name,
     url: site.productionUrl,
-    sameAs: [site.marketplaceUrl],
+    sameAs: [site.marketplaceUrl, site.linkedinUrl],
   })}</script>
   <script type="application/ld+json">${JSON.stringify({
     "@context": "https://schema.org",
@@ -279,6 +280,7 @@ export function pageShell({ title, description, path = "", body, extraHead = "",
       <a href="${pageUrl("versao-anterior/")}">Versao anterior</a>
       <a class="whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">WhatsApp ${icon("message", "btn-icon")}</a>
       <a class="marketplace-link" href="${site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored">Loja no Mercado Livre ${icon("external", "btn-icon")}</a>
+      <a href="${site.linkedinUrl}" target="_blank" rel="noopener noreferrer">LinkedIn ${icon("external", "btn-icon")}</a>
     </nav>
   </aside>
   <main id="conteudo">${body}</main>
@@ -297,6 +299,7 @@ export function pageShell({ title, description, path = "", body, extraHead = "",
       <summary>Conteúdo</summary>
       <a href="${navUrl("blog/")}">Blog</a>
       <a href="${navUrl("sobre/")}">Sobre</a>
+      <a href="${site.linkedinUrl}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       <a href="${pageUrl("como-comprar/")}">Como comprar</a>
       <a href="${pageUrl("versao-anterior/")}">Versao anterior</a>
     </details>
@@ -304,6 +307,7 @@ export function pageShell({ title, description, path = "", body, extraHead = "",
       <summary>Atendimento</summary>
       <a class="whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">WhatsApp ${site.whatsappNumber}</a>
       <a href="${site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored">Mercado Livre</a>
+      <a href="${site.linkedinUrl}" target="_blank" rel="noopener noreferrer">LinkedIn oficial</a>
       <a href="${pageUrl("politica-de-privacidade/")}">Política de privacidade</a>
       <a href="${pageUrl("termos-de-uso/")}">Termos de uso</a>
     </details>

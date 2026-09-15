@@ -1,137 +1,56 @@
 [
   {
-    "slug": "erros-comuns-alimentacao-modulos-eletronicos",
+    "slug": "como-criar-sistemas-iot-para-locais-sem-wi-fi",
+    "title": "Como criar sistemas IoT para locais sem Wi-Fi",
     "status": "published",
-    "publishedAt": "2026-02-09",
-    "modifiedAt": "2026-05-26",
-    "scheduledAt": null,
-    "evidence": "Publicado em 2026-02-09 e revisado em 2026-05-26 no calend?rio editorial OMEGAIMPORTS.",
-    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
+    "publishedAt": "2026-09-15",
+    "source": "linkedin",
+    "sourceUrl": "https://www.linkedin.com/pulse/como-criar-sistemas-iot-para-locais-sem-wi-fi-omegaimports-adwif/",
+    "order": 1
   },
   {
-    "slug": "como-escolher-fonte-esp32-modulos-gsm",
+    "slug": "telemetria-industrial-como-sensores-e-conectividade-podem-transformar-manutencao-e-monit",
+    "title": "Telemetria industrial: como sensores e conectividade podem transformar manutenção e monitoramento remoto",
     "status": "published",
-    "publishedAt": "2026-01-12",
-    "modifiedAt": "2026-04-21",
-    "scheduledAt": null,
-    "evidence": "Publicado em 2026-01-12 e revisado em 2026-04-21 no calend?rio editorial OMEGAIMPORTS.",
-    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
+    "publishedAt": "2026-09-11",
+    "source": "linkedin",
+    "sourceUrl": "https://www.linkedin.com/pulse/telemetria-industrial-como-sensores-e-conectividade-podem-i2n0f/",
+    "order": 2
   },
   {
-    "slug": "interpretar-tensao-corrente-potencia-modulos-eletronicos",
+    "slug": "wi-fi-bluetooth-gsm-e-lora-qual-tecnologia-escolher-para-seu-projeto-iot",
+    "title": "Wi-Fi, Bluetooth, GSM e LoRa: qual tecnologia escolher para seu projeto IoT?",
     "status": "published",
-    "publishedAt": "2025-12-01",
-    "modifiedAt": "2026-03-17",
-    "scheduledAt": null,
-    "evidence": "Publicado em 2025-12-01 e revisado em 2026-03-17 no calend?rio editorial OMEGAIMPORTS.",
-    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
+    "publishedAt": "2026-09-10",
+    "source": "linkedin",
+    "sourceUrl": "https://www.linkedin.com/pulse/wi-fi-bluetooth-gsm-e-lora-qual-tecnologia-escolher-para-gnudf/",
+    "order": 3
   },
   {
-    "slug": "placa-fenolite-prototipos-eletronicos",
+    "slug": "ttgo-t-call-esp32-e-comunicacao-movel-em-uma-unica-placa",
+    "title": "TTGO T-Call: ESP32 e comunicação móvel em uma única placa",
     "status": "published",
-    "publishedAt": "2025-11-03",
-    "modifiedAt": "2026-02-24",
-    "scheduledAt": null,
-    "evidence": "Publicado em 2025-11-03 e revisado em 2026-02-24 no calend?rio editorial OMEGAIMPORTS.",
-    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
+    "publishedAt": "2026-09-08",
+    "source": "linkedin",
+    "sourceUrl": "https://www.linkedin.com/pulse/ttgo-t-call-esp32-e-comunica%25C3%25A7%25C3%25A3o-m%25C3%25B3vel-em-uma-%25C3%25BAnica-placa-css6f/",
+    "order": 4
   },
   {
-    "slug": "split-bolt-prensa-cabos-organizacao-instalacoes",
+    "slug": "esp32-sim800l-quando-usar-comunicacao-gsm-gprs-em-vez-de-wi-fi",
+    "title": "ESP32 + SIM800L: quando usar comunicação GSM/GPRS em vez de Wi-Fi",
     "status": "published",
-    "publishedAt": "2025-10-06",
-    "modifiedAt": "2026-01-20",
-    "scheduledAt": null,
-    "evidence": "Publicado em 2025-10-06 e revisado em 2026-01-20 no calend?rio editorial OMEGAIMPORTS.",
-    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
+    "publishedAt": "2026-09-07",
+    "source": "linkedin",
+    "sourceUrl": "https://www.linkedin.com/pulse/esp32-sim800l-quando-usar-comunica%25C3%25A7%25C3%25A3o-gsmgprs-em-vez-de-wi-fi-7qjmf/",
+    "order": 5
   },
   {
-    "slug": "contatores-supressores-protecao-bobinas-comandos",
+    "slug": "esp32-por-que-esse-microcontrolador-se-tornou-tao-importante-para-projetos-iot",
+    "title": "ESP32: por que esse microcontrolador se tornou tão importante para projetos IoT?",
     "status": "published",
-    "publishedAt": "2025-09-08",
-    "modifiedAt": "2025-12-09",
-    "scheduledAt": null,
-    "evidence": "Publicado em 2025-09-08 e revisado em 2025-12-09 no calend?rio editorial OMEGAIMPORTS.",
-    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
-  },
-  {
-    "slug": "varistores-protecao-surtos-circuitos",
-    "status": "published",
-    "publishedAt": "2025-08-11",
-    "modifiedAt": "2025-11-18",
-    "scheduledAt": null,
-    "evidence": "Publicado em 2025-08-11 e revisado em 2025-11-18 no calend?rio editorial OMEGAIMPORTS.",
-    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
-  },
-  {
-    "slug": "resistores-10k-100k-quando-utilizar",
-    "status": "published",
-    "publishedAt": "2025-07-14",
-    "modifiedAt": "2025-10-20",
-    "scheduledAt": null,
-    "evidence": "Publicado em 2025-07-14 e revisado em 2025-10-20 no calend?rio editorial OMEGAIMPORTS.",
-    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
-  },
-  {
-    "slug": "como-escolher-fonte-bancada",
-    "status": "published",
-    "publishedAt": "2025-06-16",
-    "modifiedAt": "2025-09-16",
-    "scheduledAt": null,
-    "evidence": "Publicado em 2025-06-16 e revisado em 2025-09-16 no calend?rio editorial OMEGAIMPORTS.",
-    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
-  },
-  {
-    "slug": "gps-neo-6m-alimentacao-antena-posicionamento",
-    "status": "published",
-    "publishedAt": "2025-05-19",
-    "modifiedAt": "2025-08-12",
-    "scheduledAt": null,
-    "evidence": "Publicado em 2025-05-19 e revisado em 2025-08-12 no calend?rio editorial OMEGAIMPORTS.",
-    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
-  },
-  {
-    "slug": "ttgo-t-call-esp32-sim800l-conectividade-gsm",
-    "status": "published",
-    "publishedAt": "2025-04-22",
-    "modifiedAt": "2025-07-08",
-    "scheduledAt": null,
-    "evidence": "Publicado em 2025-04-22 e revisado em 2025-07-08 no calend?rio editorial OMEGAIMPORTS.",
-    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
-  },
-  {
-    "slug": "cuidados-fontes-ac-dc-compactas",
-    "status": "published",
-    "publishedAt": "2025-03-28",
-    "modifiedAt": "2025-06-02",
-    "scheduledAt": null,
-    "evidence": "Publicado em 2025-03-28 e revisado em 2025-06-02 no calend?rio editorial OMEGAIMPORTS.",
-    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
-  },
-  {
-    "slug": "como-utilizar-fonte-hi-link-hlk-pm01",
-    "status": "published",
-    "publishedAt": "2025-03-04",
-    "modifiedAt": "2025-05-14",
-    "scheduledAt": null,
-    "evidence": "Publicado em 2025-03-04 e revisado em 2025-05-14 no calend?rio editorial OMEGAIMPORTS.",
-    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
-  },
-  {
-    "slug": "sct-013-zmct123a-diferencas-aplicacoes",
-    "status": "published",
-    "publishedAt": "2025-02-03",
-    "modifiedAt": "2025-04-10",
-    "scheduledAt": null,
-    "evidence": "Publicado em 2025-02-03 e revisado em 2025-04-10 no calend?rio editorial OMEGAIMPORTS.",
-    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
-  },
-  {
-    "slug": "como-escolher-sensor-corrente-monitoramento-energia",
-    "status": "published",
-    "publishedAt": "2025-01-08",
-    "modifiedAt": "2025-03-18",
-    "scheduledAt": null,
-    "evidence": "Publicado em 2025-01-08 e revisado em 2025-03-18 no calend?rio editorial OMEGAIMPORTS.",
-    "sourceCommit": "branch feat/storefront-v6-compact-home-admin-blog"
+    "publishedAt": "2026-09-04",
+    "source": "linkedin",
+    "sourceUrl": "https://www.linkedin.com/pulse/esp32-por-que-esse-microcontrolador-se-tornou-t%25C3%25A3o-importante-onvxf/",
+    "order": 6
   }
 ]

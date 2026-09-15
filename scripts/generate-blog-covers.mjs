@@ -95,6 +95,7 @@ function overlaySvg(post, width, height, { title = true } = {}) {
 }
 
 for (const [index, post] of posts.entries()) {
+  if (post.source === "linkedin") continue;
   const base = `public/blog/covers/${post.slug}`;
   const stockName = stockByPost[post.slug] || "components-flatlay";
   const stockPath = `public/blog/stock/${stockName}.jpg`;
@@ -117,4 +118,4 @@ for (const [index, post] of posts.entries()) {
   await sharp(heroBuffer).resize(1200, 630, { fit: "cover" }).jpeg({ quality: 88 }).toFile(`${base}-og.jpg`);
 }
 
-console.log(`Capas com banco de imagens geradas: ${posts.length} artigos.`);
+console.log("Capas com banco de imagens geradas para artigos locais; capas do LinkedIn preservadas.");
