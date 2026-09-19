@@ -1,0 +1,121 @@
+/* Production integration: real catalog content inside the approved V2 layout. */
+.v2-home .is-disabled {
+  cursor: not-allowed;
+  opacity: .62;
+}
+
+.v2-home .skip-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 9999;
+  padding: 10px 14px;
+  background: #ffd400;
+  color: #030914;
+  transform: translateY(-160%);
+}
+
+.v2-home .skip-link:focus { transform: translateY(0); }
+.v2-home .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.v2-home .header-account-btn { text-decoration: none; }
+.v2-home .header-cart-btn { pointer-events: none; }
+.v2-home.drawer-open { overflow: hidden; }
+.v2-home .mobile-drawer[aria-hidden="true"] { visibility: hidden; }
+.v2-home .mobile-drawer.is-open { visibility: visible; }
+
+.v2-home .hero-search-box {
+  display: flex;
+}
+
+.v2-home .hero-search-box .header-search-btn {
+  position: static;
+  width: 54px;
+  flex: 0 0 54px;
+}
+
+.v2-home .hero-feature-icon {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.45rem;
+}
+
+.v2-home .highlight-yellow { color: var(--color-yellow-500); }
+.v2-home .category-card { text-decoration: none; }
+.v2-home .category-card-arrow svg { width: 14px; }
+.v2-home .banner-kits .kit-visual { object-fit: cover; }
+
+.v2-home .products-carousel {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.v2-home .products-carousel::-webkit-scrollbar { display: none; }
+.v2-home .product-card { flex: 0 0 min(270px, 78vw); }
+.v2-home .product-card-top a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.v2-home .v2-product-picture,
+.v2-home .v2-product-picture img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.v2-home .product-card-title a { color: inherit; text-decoration: none; }
+.v2-home .product-card-actions .btn { text-decoration: none; }
+.v2-home .product-card-fav { display: flex; align-items: center; justify-content: center; }
+.v2-home .carousel-dot { display: inline-block; }
+
+.v2-home .article-card { text-decoration: none; }
+.v2-home .article-card-cover picture,
+.v2-home .article-card-cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.v2-home .newsletter-box .btn { margin-top: auto; }
+.v2-home .footer-brand-col .handwriting { font-size: 1.4rem; }
+.v2-home .footer-main-grid > div:last-child p { color: #94a3b8; font-size: .84rem; line-height: 1.5; margin-bottom: 18px; }
+.v2-home .marketplace-card { display: flex; align-items: center; justify-content: center; }
+.v2-home .security-badge-card { min-width: 250px; }
+.v2-home .v2-whatsapp-float {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, .3);
+}
+
+@media (max-width: 767px) {
+  .v2-home .product-card { flex-basis: 82vw; }
+  .v2-home .categories-banners { grid-template-columns: 1fr; }
+  .v2-home .banner-card { min-height: 210px; height: auto; }
+  .v2-home .footer-main-grid > div:not(.footer-brand-col) { min-width: 0; }
+}

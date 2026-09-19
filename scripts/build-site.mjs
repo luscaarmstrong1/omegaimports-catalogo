@@ -23,6 +23,7 @@ import {
   productPicture,
   site,
 } from "./shared.mjs";
+import { renderV2Home } from "./v2-home.mjs";
 
 const dist = new URL("../dist/", import.meta.url);
 const allProducts = loadProducts({ all: true });
@@ -50,6 +51,7 @@ function copyAssets() {
   cpSync(new URL("../public/blog/covers/", import.meta.url), new URL("blog/covers/", dist), { recursive: true });
   cpSync(new URL("../public/blog/stock/", import.meta.url), new URL("blog/stock/", dist), { recursive: true });
   cpSync(new URL("../public/assets/", import.meta.url), new URL("assets/", dist), { recursive: true });
+  cpSync(new URL("../public/v2/", import.meta.url), new URL("v2/", dist), { recursive: true });
   cpSync(new URL("../public/products/", import.meta.url), new URL("products/", dist), { recursive: true });
   cpSync(new URL("../public/versions/previous/", import.meta.url), new URL("versao-anterior/", dist), { recursive: true });
   cpSync(new URL("../public/manifest.webmanifest", import.meta.url), new URL("manifest.webmanifest", dist));
@@ -579,21 +581,12 @@ function relatedPostsForProduct(product, limit = 3) {
 
 function home() {
   const homeProducts = selectHomeProducts();
-  const showcaseProducts = selectShowcaseProducts();
-  const featureLead = selectByPriority().find((product) => !showcaseProducts.some((item) => item.product.mlbId === product.mlbId)) || homeProducts[0];
-  const recentPosts = [...blogPosts].sort((a, b) => String(b.publishedAt).localeCompare(String(a.publishedAt))).slice(0, 3);
-  const body = `
-    ${homeShowcaseHero()}
-    ${homeCuratedShowcase(showcaseProducts)}
-    ${trustStrip()}
-    ${productShowcase(homeProducts)}
-    ${featureStage(featureLead)}
-    ${articleShowcase(recentPosts)}
-    ${contactBand()}`;
-  out("index.html", pageShell({
-    title: "Componentes eletrônicos, IoT e automação",
-    description: "Componentes eletrônicos, sensores, fontes, módulos IoT e itens de automação da OMEGAIMPORTS, com compra pelo Mercado Livre e atendimento pelo WhatsApp.",
-    body,
+  const recentPosts = [...blogPosts].sort((a, b) => String(b.publishedAt).localeCompare(String(a.publishedAt)));
+  out("index.html", renderV2Home({
+    products: homeProducts.slice(0, 6),
+    productCount: published.length,
+    posts: recentPosts,
+    categoryCount: visibleCategories.length,
   }));
 }
 

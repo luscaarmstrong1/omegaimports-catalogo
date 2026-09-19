@@ -1,0 +1,93 @@
+/* OMEGAIMPORTS V2 - DESIGN TOKENS */
+:root {
+  /* Paleta Base - Dark Navy Estrutural */
+  --color-navy-950: #030914;
+  --color-navy-900: #061426;
+  --color-navy-850: #071B33;
+  --color-navy-800: #0c2342;
+  --color-navy-700: #123058;
+  --color-navy-surface: #0a1b30;
+  --color-navy-card: #081a31;
+  --color-navy-card-border: rgba(25, 195, 214, 0.22);
+  --color-navy-card-border-hover: rgba(25, 195, 214, 0.6);
+
+  /* Amarelo Comercial - CTA, Preço e Destaques (Amostrado 1:1 do Mockup) */
+  --color-yellow-400: #FFE11A;
+  --color-yellow-500: #FFD400;
+  --color-yellow-600: #E6BF00;
+  --color-yellow-glow: rgba(255, 212, 0, 0.4);
+
+  /* Ciano Tecnológico - Indicadores, Detalhes e Glows (Amostrado 1:1 do Mockup) */
+  --color-cyan-400: #35D8F5;
+  --color-cyan-500: #19C3D6;
+  --color-cyan-600: #0ea5b7;
+  --color-cyan-glow: rgba(25, 195, 214, 0.35);
+
+  /* Azul Suporte e Profissional */
+  --color-blue-500: #0878D1;
+  --color-blue-600: #1677FF;
+
+  /* Neutros e Superfícies Claras */
+  --color-white: #FFFFFF;
+  --color-slate-50: #F8FAFC;
+  --color-slate-100: #F1F5F9;
+  --color-slate-200: #E2E8F0;
+  --color-slate-300: #CBD5E1;
+  --color-slate-400: #94A3B8;
+  --color-slate-500: #64748B;
+  --color-slate-600: #475467;
+  --color-slate-700: #334155;
+  --color-slate-800: #1E293B;
+  --color-slate-900: #101828;
+
+  /* Estados e Badges */
+  --color-success: #00B074;
+  --color-success-bg: rgba(0, 176, 116, 0.12);
+  --color-whatsapp: #25D366;
+  --color-whatsapp-hover: #22bf5b;
+
+  /* Tipografia */
+  --font-heading: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-handwriting: 'Caveat', cursive, sans-serif;
+
+  /* Escala de Espaçamento */
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-5: 1.25rem;  /* 20px */
+  --space-6: 1.5rem;   /* 24px */
+  --space-8: 2rem;     /* 32px */
+  --space-10: 2.5rem;  /* 40px */
+  --space-12: 3rem;    /* 48px */
+  --space-16: 4rem;    /* 64px */
+  --space-20: 5rem;    /* 80px */
+  --space-24: 6rem;    /* 96px */
+
+  /* Layout - Medição Exata da Viewport 1672px (Left Margin 56px, Max-Width 1560px) */
+  --container-max-width: 1560px;
+  --container-padding: 56px;
+
+  /* Borda e Raio */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* Sombras */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --shadow-yellow-btn: 0 4px 14px 0 rgba(255, 212, 0, 0.39);
+  --shadow-cyan-glow: 0 0 20px rgba(25, 195, 214, 0.25);
+
+  /* Transições Refinadas */
+  --transition-fast: 160ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 240ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 350ms cubic-bezier(0.16, 1, 0.3, 1);
+}
