@@ -1,0 +1,13 @@
+OMEGAIMPORTS — PALETA PRINCIPAL
+
+Navy profundo: #061426
+Navy secundário: #071B33
+Amarelo comercial: #FFD400
+Ciano tecnológico: #19C3D6
+Branco: #FFFFFF
+
+Uso sugerido:
+- Navy: estrutura, fundos, header/footer.
+- Amarelo: logo principal do novo layout e CTAs comerciais.
+- Ciano: artigos técnicos, IoT, sensores e conteúdo tecnológico.
+- Branco: contraste e áreas de respiro.

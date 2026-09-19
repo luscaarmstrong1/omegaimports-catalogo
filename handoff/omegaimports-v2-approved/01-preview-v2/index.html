@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OMEGAIMPORTS — Componentes para projetos que fazem o futuro (V2 Experimental)</title>
+  <meta name="description" content="Sensores, módulos IoT, fontes e componentes eletrônicos para automação, prototipagem e desenvolvimento. Da ideia ao protótipo.">
+  
+  <!-- Preload Fonts & Hero Visual -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="./assets/hero/esp32-hero.webp" type="image/webp">
+
+  <!-- Favicon Oficial -->
+  <link rel="icon" type="image/svg+xml" href="./assets/brand/favicon.svg">
+
+  <!-- Stylesheets Isoladas V2 -->
+  <link rel="stylesheet" href="./css/tokens.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/sections.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+  <link rel="stylesheet" href="./css/animations.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       HEADER
+       ======================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="brand-logo-link" aria-label="OMEGAIMPORTS Homepage">
+        <img src="./assets/brand/omegaimports-logo-horizontal.svg" alt="OMEGAIMPORTS - Componentes que fazem mais" class="brand-logo-img" width="180" height="42">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="main-nav" aria-label="Navegação Principal">
+        <a href="#produtos" class="nav-link">
+          <span>Produtos</span>
+          <svg class="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </a>
+        <a href="#categorias" class="nav-link">
+          <span>Categorias</span>
+          <svg class="nav-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </a>
+        <a href="#marcas" class="nav-link">Marcas</a>
+        <a href="#blog" class="nav-link">Blog</a>
+        <a href="#sobre" class="nav-link">Sobre</a>
+        <a href="#como-comprar" class="nav-link">Como comprar</a>
+      </nav>
+
+      <!-- Search Bar -->
+      <form class="header-search" role="search">
+        <input type="search" placeholder="Busque por produtos, categorias ou projetos..." aria-label="Buscar produtos">
+        <button type="submit" class="header-search-btn" aria-label="Executar busca">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+      </form>
+
+      <!-- Account & Cart Actions -->
+      <div class="header-actions">
+        <button type="button" class="header-account-btn" aria-label="Minha conta">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span>Minha conta</span>
+        </button>
+
+        <button type="button" class="header-cart-btn" aria-label="Carrinho de compras">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="badge-counter header-cart-badge">0</span>
+        </button>
+
+        <!-- Mobile Hamburger Button -->
+        <button type="button" class="hamburger-btn" aria-label="Abrir menu de navegação" aria-expanded="false">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-backdrop" aria-hidden="true"></div>
+  <aside class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Menu móvel">
+    <div class="drawer-header">
+      <a href="#" class="brand-logo-link">
+        <img src="./assets/brand/omegaimports-logo-horizontal.svg" alt="OMEGAIMPORTS" class="brand-logo-img" width="160" height="38">
+      </a>
+      <button type="button" class="drawer-close-btn" aria-label="Fechar menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <form class="header-search drawer-search" role="search">
+      <input type="search" placeholder="Buscar componentes..." aria-label="Buscar produtos no menu">
+      <button type="submit" class="header-search-btn" aria-label="Buscar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+    </form>
+
+    <nav class="drawer-nav">
+      <a href="#produtos">Produtos</a>
+      <a href="#categorias">Categorias</a>
+      <a href="#marcas">Marcas</a>
+      <a href="#blog">Blog</a>
+      <a href="#sobre">Sobre Nós</a>
+      <a href="#como-comprar">Como Comprar</a>
+    </nav>
+
+    <div class="drawer-footer-actions">
+      <a href="https://wa.me/5535999528858" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%;">
+        <svg class="icon-whatsapp" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.288.043.088.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.073.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.072.043.419-.101.824z"/></svg>
+        <span>Falar no WhatsApp</span>
+      </a>
+      <button type="button" class="btn btn-yellow header-account-btn" style="width: 100%;">Minha Conta</button>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    
+    <!-- ======================================================================
+         HERO SECTION
+         ====================================================================== -->
+    <section class="hero-section" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        
+        <!-- Left Column: Copy & Search -->
+        <div class="hero-copy reveal">
+          <span class="eyebrow-cyan">ELETRÔNICA • IoT • AUTOMAÇÃO • PROTOTIPAGEM</span>
+          
+          <h1 id="hero-title" class="hero-title">
+            Componentes<br>
+            para projetos<br>
+            <span class="highlight-yellow">que fazem o futuro.</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Sensores, módulos IoT, fontes e componentes eletrônicos para automação, prototipagem e desenvolvimento. Da ideia ao protótipo. Do protótipo ao próximo nível.
+          </p>
+
+          <form class="hero-search-box" role="search">
+            <input type="search" placeholder="Busque por produtos, categorias ou seu projeto..." aria-label="Buscar produtos e projetos">
+            <button type="submit" aria-label="Buscar">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+          </form>
+
+          <div class="hero-ctas">
+            <a href="#produtos" class="btn btn-yellow">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+              <span>Explorar catálogo</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+
+            <a href="https://wa.me/5535999528858" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+              <svg class="icon-whatsapp" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.288.043.088.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.073.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.072.043.419-.101.824z"/>
+              </svg>
+              <span>Falar com especialista</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Center Column: 3D ESP32 Visual & Handwriting -->
+        <div class="hero-visual-center reveal reveal-delay-1">
+          <div class="hero-handwriting-top handwriting handwriting-white">
+            Pequenos componentes.<br>
+            <span class="handwriting-yellow">Grandes conquistas.</span>
+          </div>
+
+          <div class="hero-img-wrapper">
+            <img src="./assets/hero/esp32-hero.png" width="600" height="360" alt="Placa ESP32 em plataforma tecnológica de alta definição" loading="eager">
+          </div>
+        </div>
+
+        <!-- Right Column: Vertical Feature Badges -->
+        <div class="hero-features-right reveal reveal-delay-2">
+          
+          <div class="hero-feature-item">
+            <div class="hero-feature-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            </div>
+            <div class="hero-feature-text">IDEIAS<br>EM MOVIMENTO</div>
+          </div>
+
+          <div class="hero-feature-item">
+            <div class="hero-feature-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="15" x2="23" y2="15"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="15" x2="4" y2="15"></line></svg>
+            </div>
+            <div class="hero-feature-text">TECNOLOGIA<br>AO SEU ALCANCE</div>
+          </div>
+
+          <div class="hero-feature-item">
+            <div class="hero-feature-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+            </div>
+            <div class="hero-feature-text">PROJETOS<br>REAIS</div>
+          </div>
+
+          <div class="hero-feature-item">
+            <div class="hero-feature-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+            </div>
+            <div class="hero-feature-text">UM FUTURO<br>MAIS INTELIGENTE</div>
+          </div>
+
+          <div class="hero-handwriting-bottom handwriting handwriting-yellow">
+            IoT hoje.<br>Amanhã maior.
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         TRUST STRIP 01
+         ====================================================================== -->
+    <section class="trust-strip" aria-label="Benefícios e Garantias">
+      <div class="container">
+        <div class="trust-strip-inner">
+          
+          <div class="trust-item">
+            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+            <div class="trust-text">
+              <strong>Entrega para todo o Brasil</strong>
+              com rastreamento
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+            <div class="trust-text">
+              <strong>Compra segura</strong>
+              e dados protegidos
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+            <div class="trust-text">
+              <strong>Até 12x no cartão</strong>
+              ou PIX com desconto
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
+            <div class="trust-text">
+              <strong>Suporte técnico</strong>
+              com especialistas
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <div class="trust-text">
+              <strong>Mais de 15 mil</strong>
+              clientes e projetos <!-- MOCKUP CLAIM — validar antes de produção -->
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.45 1-1 1H7v4h10v-4h-2c-.55 0-1-.45-1-1v-2.34c3.27-.79 5-3.3 5-6.66V4H6v4c0 3.36 1.73 5.87 5 6.66z"></path></svg>
+            <div class="trust-text">
+              <strong>Qualidade garantida</strong>
+              ou seu dinheiro de volta
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         CATEGORIAS SECTION
+         ====================================================================== -->
+    <section id="categorias" class="section-dark" aria-labelledby="cat-title">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <div class="section-title-group">
+            <span class="eyebrow-cyan">EXPLORE NOSSO UNIVERSO</span>
+            <h2 id="cat-title">Nossas <span class="highlight-yellow" style="color: var(--color-yellow-400);">categorias</span></h2>
+            <p>Tudo o que você precisa para tirar seu projeto do papel. Componentes de qualidade, das ideias mais simples às mais avançadas.</p>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 1.5rem;">
+            <span class="handwriting handwriting-white" style="font-size: 1.55rem;">Mais projetos reais.</span>
+            <a href="#produtos" class="btn btn-outline-yellow">
+              <span>Ver todas as categorias</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4x2 Grid of Category Cards -->
+        <div class="categories-grid">
+          
+          <!-- Card 1: Módulos IoT -->
+          <article class="category-card reveal">
+            <div class="category-card-img">
+              <picture>
+                <source srcset="./assets/categories/modulos-iot.webp" type="image/webp">
+                <img src="./assets/categories/modulos-iot.png" width="96" height="96" alt="Módulos IoT ESP32" loading="lazy">
+              </picture>
+            </div>
+            <div class="category-card-body">
+              <h3 class="category-card-title">Módulos IoT</h3>
+              <p class="category-card-desc">Wi-Fi, Bluetooth, LoRa, Zigbee e outros</p>
+            </div>
+            <div class="category-card-arrow" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+          </article>
+
+          <!-- Card 2: Sensores -->
+          <article class="category-card reveal reveal-delay-1">
+            <div class="category-card-img">
+              <picture>
+                <source srcset="./assets/categories/sensores.webp" type="image/webp">
+                <img src="./assets/categories/sensores.png" width="96" height="96" alt="Sensores eletrônicos" loading="lazy">
+              </picture>
+            </div>
+            <div class="category-card-body">
+              <h3 class="category-card-title">Sensores</h3>
+              <p class="category-card-desc">Movimento, temperatura, proximidade e muito mais</p>
+            </div>
+            <div class="category-card-arrow" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+          </article>
+
+          <!-- Card 3: Fontes e Energia -->
+          <article class="category-card reveal reveal-delay-2">
+            <div class="category-card-img">
+              <picture>
+                <source srcset="./assets/categories/fontes-e-energia.webp" type="image/webp">
+                <img src="./assets/categories/fontes-e-energia.png" width="96" height="96" alt="Fontes de alimentação" loading="lazy">
+              </picture>
+            </div>
+            <div class="category-card-body">
+              <h3 class="category-card-title">Fontes e Energia</h3>
+              <p class="category-card-desc">Fontes, conversores, carregadores e baterias</p>
+            </div>
+            <div class="category-card-arrow" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+          </article>
+
+          <!-- Card 4: Relés e Acionamento -->
+          <article class="category-card reveal reveal-delay-3">
+            <div class="category-card-img">
+              <picture>
+                <source srcset="./assets/categories/reles-e-acionamento.webp" type="image/webp">
+                <img src="./assets/categories/reles-e-acionamento.png" width="96" height="96" alt="Relés e drivers" loading="lazy">
+              </picture>
+            </div>
+            <div class="category-card-body">
+              <h3 class="category-card-title">Relés e Acionamento</h3>
+              <p class="category-card-desc">Módulos de relé, drivers SSR e controle industrial</p>
+            </div>
+            <div class="category-card-arrow" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+          </article>
+
+          <!-- Card 5: GPS e Navegação -->
+          <article class="category-card reveal">
+            <div class="category-card-img">
+              <picture>
+                <source srcset="./assets/categories/gps-e-navegacao.webp" type="image/webp">
+                <img src="./assets/categories/gps-e-navegacao.png" width="96" height="96" alt="Módulos GPS e antenas" loading="lazy">
+              </picture>
+            </div>
+            <div class="category-card-body">
+              <h3 class="category-card-title">GPS e Navegação</h3>
+              <p class="category-card-desc">Módulos GPS, antenas e sistemas de navegação</p>
+            </div>
+            <div class="category-card-arrow" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+          </article>
+
+          <!-- Card 6: Displays e IHM -->
+          <article class="category-card reveal reveal-delay-1">
+            <div class="category-card-img">
+              <picture>
+                <source srcset="./assets/categories/displays-e-ihm.webp" type="image/webp">
+                <img src="./assets/categories/displays-e-ihm.png" width="96" height="96" alt="Displays OLED e TFT" loading="lazy">
+              </picture>
+            </div>
+            <div class="category-card-body">
+              <h3 class="category-card-title">Displays e IHM</h3>
+              <p class="category-card-desc">LCD, OLED, TFT, e-paper e interfaces</p>
+            </div>
+            <div class="category-card-arrow" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+          </article>
+
+          <!-- Card 7: Componentes Eletrônicos -->
+          <article class="category-card reveal reveal-delay-2">
+            <div class="category-card-img">
+              <picture>
+                <source srcset="./assets/categories/componentes-eletronicos.webp" type="image/webp">
+                <img src="./assets/categories/componentes-eletronicos.png" width="96" height="96" alt="Componentes eletrônicos discretos" loading="lazy">
+              </picture>
+            </div>
+            <div class="category-card-body">
+              <h3 class="category-card-title">Componentes Eletrônicos</h3>
+              <p class="category-card-desc">Resistores, capacitores, CIs, conectores e mais</p>
+            </div>
+            <div class="category-card-arrow" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+          </article>
+
+          <!-- Card 8: Cabos e Conectores -->
+          <article class="category-card reveal reveal-delay-3">
+            <div class="category-card-img">
+              <picture>
+                <source srcset="./assets/categories/cabos-e-conectores.webp" type="image/webp">
+                <img src="./assets/categories/cabos-e-conectores.png" width="96" height="96" alt="Cabos e conectores" loading="lazy">
+              </picture>
+            </div>
+            <div class="category-card-body">
+              <h3 class="category-card-title">Cabos e Conectores</h3>
+              <p class="category-card-desc">Jumpers, terminais, conectores e muito mais</p>
+            </div>
+            <div class="category-card-arrow" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Two Promotional Banners -->
+        <div class="categories-banners">
+          
+          <!-- Banner Esquerdo: Kits (Amarelo) -->
+          <div class="banner-card banner-kits reveal">
+            <img src="./assets/banners/kit-hardware.png" class="kit-visual" alt="Kit de prototipagem e componentes" width="300" height="220" loading="lazy">
+            <div class="banner-content">
+              <h3 class="banner-title">Kits para começar<br>seu projeto hoje.</h3>
+              <p class="banner-sub">Tudo em um só lugar, do básico ao avançado.</p>
+              <a href="#produtos" class="btn btn-dark">
+                <span>Ver kits e combos</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+            <div class="banner-handwriting handwriting">
+              Da ideia<br>à realidade!
+            </div>
+          </div>
+
+          <!-- Banner Direito: Prototipagem (Dark Navy) -->
+          <div class="banner-card banner-robot reveal reveal-delay-1">
+            <div class="banner-content">
+              <h3 class="banner-title">Prototipagem sem limites</h3>
+              <p class="banner-sub">Explore nossa linha completa de placas,<br>módulos e acessórios.</p>
+              <a href="#produtos" class="btn btn-outline-cyan">
+                <span>Ver produtos</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+            <div class="banner-right-group">
+              <div class="banner-handwriting handwriting handwriting-white">
+                Construa.<br>Aprenda.<br>Inove.
+              </div>
+              <img src="./assets/banners/robot-hardware.webp" class="banner-hardware-img" alt="Robô eletrônico de prototipagem" width="220" height="155" loading="lazy">
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         PRODUTOS EM DESTAQUE
+         ====================================================================== -->
+    <section id="produtos" class="section-light" aria-labelledby="prod-title">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <div class="section-title-group">
+            <h2 id="prod-title">Produtos em destaque</h2>
+            <p>Seleção especial para os seus projetos.</p>
+          </div>
+          <a href="#" class="section-link-action">
+            <span>Ver todos os produtos</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- Products Carousel -->
+        <div class="products-carousel-wrapper reveal">
+          
+          <button type="button" class="carousel-nav-btn carousel-prev" aria-label="Produto anterior">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+
+          <div class="products-carousel" role="region" aria-label="Carrossel de produtos em destaque">
+            
+            <!-- Card 1: Kit ESP32 SIM800L -->
+            <article class="product-card">
+              <div class="product-card-top">
+                <span class="badge-new product-card-badge">NOVO</span>
+                <button type="button" class="product-card-fav" aria-label="Favoritar Kit ESP32 SIM800L">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                </button>
+                <picture>
+                  <source srcset="./assets/products/esp32-sim800l.webp" type="image/webp">
+                  <img src="./assets/products/esp32-sim800l.png" class="product-card-img" width="220" height="220" alt="Kit ESP32 - SIM800L T-Call (3 unidades)" loading="lazy">
+                </picture>
+              </div>
+              <h3 class="product-card-title">Kit ESP32 - SIM800L T-Call (3 unidades)</h3>
+              <div class="product-card-price">R$ 239,90</div>
+              <div class="product-card-actions">
+                <button type="button" class="btn btn-yellow">Ver oferta</button>
+                <button type="button" class="btn-icon-cart" aria-label="Adicionar Kit ESP32 ao carrinho">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                </button>
+              </div>
+            </article>
+
+            <!-- Card 2: Sensor SCT-013 -->
+            <article class="product-card">
+              <div class="product-card-top">
+                <button type="button" class="product-card-fav" aria-label="Favoritar Sensor SCT-013">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                </button>
+                <picture>
+                  <source srcset="./assets/products/sensor-corrente-sct013.webp" type="image/webp">
+                  <img src="./assets/products/sensor-corrente-sct013.png" class="product-card-img" width="210" height="210" alt="Sensor de Corrente SCT-013 100A / 50mA" loading="lazy">
+                </picture>
+              </div>
+              <h3 class="product-card-title">Sensor de Corrente SCT-013 100A / 50mA</h3>
+              <div class="product-card-price">R$ 49,90</div>
+              <div class="product-card-actions">
+                <button type="button" class="btn btn-yellow">Ver oferta</button>
+                <button type="button" class="btn-icon-cart" aria-label="Adicionar Sensor SCT-013 ao carrinho">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                </button>
+              </div>
+            </article>
+
+            <!-- Card 3: Hi-Link HLK-PM01 -->
+            <article class="product-card">
+              <div class="product-card-top">
+                <button type="button" class="product-card-fav" aria-label="Favoritar Hi-Link HLK-PM01">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                </button>
+                <picture>
+                  <source srcset="./assets/products/hilink-hlk-pm01.webp" type="image/webp">
+                  <img src="./assets/products/hilink-hlk-pm01.png" class="product-card-img" width="210" height="210" alt="Módulo Hi-Link HLK-PM01 5V 3W" loading="lazy">
+                </picture>
+              </div>
+              <h3 class="product-card-title">Módulo Hi-Link HLK-PM01 5V 3W</h3>
+              <div class="product-card-price">R$ 34,90</div>
+              <div class="product-card-actions">
+                <button type="button" class="btn btn-yellow">Ver oferta</button>
+                <button type="button" class="btn-icon-cart" aria-label="Adicionar Hi-Link ao carrinho">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                </button>
+              </div>
+            </article>
+
+            <!-- Card 4: GPS NEO-6M -->
+            <article class="product-card">
+              <div class="product-card-top">
+                <span class="badge-new product-card-badge">NOVO</span>
+                <button type="button" class="product-card-fav" aria-label="Favoritar GPS NEO-6M">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                </button>
+                <picture>
+                  <source srcset="./assets/products/gps-neo-6m.webp" type="image/webp">
+                  <img src="./assets/products/gps-neo-6m.png" class="product-card-img" width="210" height="210" alt="Módulo GPS NEO-6M com antena" loading="lazy">
+                </picture>
+              </div>
+              <h3 class="product-card-title">Módulo GPS NEO-6M com antena</h3>
+              <div class="product-card-price">R$ 59,90</div>
+              <div class="product-card-actions">
+                <button type="button" class="btn btn-yellow">Ver oferta</button>
+                <button type="button" class="btn-icon-cart" aria-label="Adicionar GPS ao carrinho">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                </button>
+              </div>
+            </article>
+
+            <!-- Card 5: Sensor DS18B20 -->
+            <article class="product-card">
+              <div class="product-card-top">
+                <button type="button" class="product-card-fav" aria-label="Favoritar Sensor DS18B20">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                </button>
+                <picture>
+                  <source srcset="./assets/products/sensor-ds18b20.webp" type="image/webp">
+                  <img src="./assets/products/sensor-ds18b20.png" class="product-card-img" width="210" height="210" alt="Sensor de Temperatura DS18B20" loading="lazy">
+                </picture>
+              </div>
+              <h3 class="product-card-title">Sensor de Temperatura DS18B20</h3>
+              <div class="product-card-price">R$ 24,90</div>
+              <div class="product-card-actions">
+                <button type="button" class="btn btn-yellow">Ver oferta</button>
+                <button type="button" class="btn-icon-cart" aria-label="Adicionar DS18B20 ao carrinho">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                </button>
+              </div>
+            </article>
+
+            <!-- Card 6: Relé SSR-25DA -->
+            <article class="product-card">
+              <div class="product-card-top">
+                <button type="button" class="product-card-fav" aria-label="Favoritar Relé SSR-25DA">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                </button>
+                <picture>
+                  <source srcset="./assets/products/rele-ssr-25da.webp" type="image/webp">
+                  <img src="./assets/products/rele-ssr-25da.png" class="product-card-img" width="215" height="215" alt="Relé de Estado Sólido SSR-25DA" loading="lazy">
+                </picture>
+              </div>
+              <h3 class="product-card-title">Relé de Estado Sólido SSR-25DA</h3>
+              <div class="product-card-price">R$ 69,90</div>
+              <div class="product-card-actions">
+                <button type="button" class="btn btn-yellow">Ver oferta</button>
+                <button type="button" class="btn-icon-cart" aria-label="Adicionar Relé ao carrinho">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                </button>
+              </div>
+            </article>
+
+          </div>
+
+          <button type="button" class="carousel-nav-btn carousel-next" aria-label="Próximo produto">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+
+          <!-- Carousel Pagination Indicators -->
+          <div class="carousel-pagination-dots" role="tablist" aria-label="Posição do carrossel">
+            <button type="button" class="carousel-dot active" role="tab" aria-selected="true" aria-label="Slide 1"></button>
+            <button type="button" class="carousel-dot" role="tab" aria-selected="false" aria-label="Slide 2"></button>
+            <button type="button" class="carousel-dot" role="tab" aria-selected="false" aria-label="Slide 3"></button>
+            <button type="button" class="carousel-dot" role="tab" aria-selected="false" aria-label="Slide 4"></button>
+          </div>
+
+        </div>
+
+        <!-- Help & FAQ Blocks Below Products -->
+        <div class="products-support-blocks reveal">
+          
+          <!-- Left Dark Block: Projeto Específico -->
+          <div class="help-block help-block-dark">
+            <div class="help-block-info">
+              <div class="help-block-icon yellow-bg">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="9" y1="18" x2="15" y2="18"></line><line x1="10" y1="22" x2="14" y2="22"></line><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"></path></svg>
+              </div>
+              <div class="help-block-text">
+                <h3>Tem um projeto específico?</h3>
+                <p>Nossa equipe pode te ajudar a encontrar os componentes ideais para a sua necessidade.</p>
+              </div>
+            </div>
+            <a href="https://wa.me/5535999528858" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+              <svg class="icon-whatsapp" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.288.043.088.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.073.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.072.043.419-.101.824z"/></svg>
+              <span>Falar com especialista</span>
+            </a>
+          </div>
+
+          <!-- Right Light Block: Dúvidas Frequentes -->
+          <div class="help-block help-block-light">
+            <div class="help-block-info">
+              <div class="help-block-icon slate-bg">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              </div>
+              <div class="help-block-text">
+                <h3>Dúvidas frequentes</h3>
+                <p>Tire suas dúvidas sobre compra, envio, garantias e compatibilidade de produtos.</p>
+              </div>
+            </div>
+            <a href="#faq" class="btn btn-outline-dark">
+              <span>Acessar FAQ</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         BLOG / CONTEÚDO & NEWSLETTER
+         ====================================================================== -->
+    <section id="blog" class="section-light" aria-labelledby="blog-title" style="padding-top: 0;">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <div class="section-title-group">
+            <h2 id="blog-title">Conteúdo que impulsiona seus projetos</h2>
+            <p>Tutoriais, comparativos e guias práticos para você ir mais longe.</p>
+          </div>
+          <a href="#" class="section-link-action">
+            <span>Ver todos os artigos</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+
+        <div class="blog-newsletter-grid">
+          
+          <!-- Article 1: IoT ESP32 -->
+          <article class="article-card reveal">
+            <div class="article-card-cover">
+              <picture>
+                <source srcset="./assets/blog/artigo-esp32.webp" type="image/webp">
+                <img src="./assets/blog/artigo-esp32.png" width="256" height="190" alt="Guia ESP32 para iniciantes" loading="lazy">
+              </picture>
+            </div>
+            <div class="article-card-body">
+              <span class="article-card-tag">IOT</span>
+              <h3 class="article-card-title">Como usar o ESP32: guia completo para iniciantes</h3>
+              <div class="article-card-meta">
+                <span>15 set 2024</span>
+                <span>•</span>
+                <span>6 min de leitura</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 2: Sensores SCT-013 -->
+          <article class="article-card reveal reveal-delay-1">
+            <div class="article-card-cover">
+              <picture>
+                <source srcset="./assets/blog/artigo-sct013.webp" type="image/webp">
+                <img src="./assets/blog/artigo-sct013.png" width="256" height="190" alt="Tutorial SCT-013 corrente" loading="lazy">
+              </picture>
+            </div>
+            <div class="article-card-body">
+              <span class="article-card-tag">SENSORES</span>
+              <h3 class="article-card-title">SCT-013: como funciona e como conectar</h3>
+              <div class="article-card-meta">
+                <span>12 set 2024</span>
+                <span>•</span>
+                <span>7 min de leitura</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 3: Fontes Hi-Link HLK-PM01 -->
+          <article class="article-card reveal reveal-delay-2">
+            <div class="article-card-cover">
+              <picture>
+                <source srcset="./assets/blog/artigo-hlk-pm01.webp" type="image/webp">
+                <img src="./assets/blog/artigo-hlk-pm01.png" width="252" height="190" alt="Pinagem Hi-Link HLK-PM01" loading="lazy">
+              </picture>
+            </div>
+            <div class="article-card-body">
+              <span class="article-card-tag">FONTES</span>
+              <h3 class="article-card-title">Hi-Link HLK-PM01: pinagem, tensão e aplicações</h3>
+              <div class="article-card-meta">
+                <span>05 set 2024</span>
+                <span>•</span>
+                <span>7 min de leitura</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 4: GPS NEO-6M -->
+          <article class="article-card reveal reveal-delay-3">
+            <div class="article-card-cover">
+              <picture>
+                <source srcset="./assets/blog/artigo-gps-neo6m.webp" type="image/webp">
+                <img src="./assets/blog/artigo-gps-neo6m.png" width="242" height="190" alt="Guia Módulo GPS NEO-6M" loading="lazy">
+              </picture>
+            </div>
+            <div class="article-card-body">
+              <span class="article-card-tag">GPS</span>
+              <h3 class="article-card-title">Módulo GPS NEO-6M: guia completo de uso</h3>
+              <div class="article-card-meta">
+                <span>28 ago 2024</span>
+                <span>•</span>
+                <span>8 min de leitura</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Newsletter Box -->
+          <div class="newsletter-box reveal">
+            <svg class="newsletter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <h3 class="newsletter-title">Receba novidades e ofertas em primeira mão</h3>
+            <p class="newsletter-desc">Cadastre seu e-mail e fique por dentro dos lançamentos e conteúdos exclusivos.</p>
+
+            <form class="newsletter-form">
+              <div class="newsletter-input-group">
+                <input type="email" placeholder="Seu melhor e-mail..." required aria-label="Endereço de e-mail para newsletter">
+                <button type="submit">Quero receber</button>
+              </div>
+              <label class="newsletter-consent">
+                <input type="checkbox" required>
+                <span>Eu concordo em receber comunicações da OMEGAIMPORTS.</span>
+              </label>
+            </form>
+          </div>
+
+        </div>
+
+        <!-- ====================================================================
+             MARCAS
+             ==================================================================== -->
+        <div id="marcas" class="section-header reveal" style="margin-bottom: 1.5rem;">
+          <div class="section-title-group">
+            <h2 style="font-size: 1.85rem;">Marcas que você encontra aqui</h2>
+          </div>
+          <a href="#" class="section-link-action">
+            <span>Ver todas as marcas</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+
+        <div class="brands-row reveal">
+          <div class="brand-card"><img src="./assets/brands/espressif.png" alt="Espressif" loading="lazy" width="110" height="28"></div>
+          <div class="brand-card"><img src="./assets/brands/hi-link.png" alt="Hi-Link" loading="lazy" width="110" height="28"></div>
+          <div class="brand-card"><img src="./assets/brands/arduino.png" alt="Arduino" loading="lazy" width="110" height="28"></div>
+          <div class="brand-card"><img src="./assets/brands/st.png" alt="STMicroelectronics" loading="lazy" width="110" height="28"></div>
+          <div class="brand-card"><img src="./assets/brands/texas-instruments.png" alt="Texas Instruments" loading="lazy" width="110" height="28"></div>
+          <div class="brand-card"><img src="./assets/brands/nexperia.png" alt="Nexperia" loading="lazy" width="110" height="28"></div>
+          <div class="brand-card"><img src="./assets/brands/seeed-studio.png" alt="Seeed Studio" loading="lazy" width="110" height="28"></div>
+          <div class="brand-card"><img src="./assets/brands/waveshare.png" alt="Waveshare" loading="lazy" width="110" height="28"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         CTA SUPORTE TÉCNICO
+         ====================================================================== -->
+    <section class="support-section" aria-labelledby="support-title">
+      <div class="container support-grid">
+        
+        <!-- Left: Copy & Actions -->
+        <div class="support-copy reveal">
+          <h2 id="support-title" class="support-title">
+            Precisa de ajuda para<br>
+            escolher o <span class="highlight-yellow">componente certo?</span>
+          </h2>
+          <p class="support-desc">
+            Nossa equipe técnica está pronta para te orientar e encontrar a melhor solução para o seu projeto.
+          </p>
+
+          <div class="support-actions">
+            <a href="https://wa.me/5535999528858" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+              <svg class="icon-whatsapp" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.288.043.088.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.073.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.072.043.419-.101.824z"/></svg>
+              <span>Falar no WhatsApp</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+
+            <a href="#produtos" class="btn btn-yellow">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+              <span>Explorar catálogo</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Center: Checklist -->
+        <div class="support-checklist reveal reveal-delay-1">
+          <div class="support-check-item">
+            <div class="support-check-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            </div>
+            <div class="support-check-text">Atendimento especializado</div>
+          </div>
+
+          <div class="support-check-item">
+            <div class="support-check-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+            </div>
+            <div class="support-check-text">Respostas rápidas</div>
+          </div>
+
+          <div class="support-check-item">
+            <div class="support-check-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+            </div>
+            <div class="support-check-text">Suporte técnico de verdade</div>
+          </div>
+
+          <div class="support-check-item">
+            <div class="support-check-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <div class="support-check-text">Do protótipo à produção</div>
+          </div>
+        </div>
+
+        <!-- Right: Technician Photo & Handwriting -->
+        <div class="support-visual-right reveal reveal-delay-2">
+          <div class="support-handwriting-bubble handwriting handwriting-white">
+            Projetos reais<br>
+            contam com<br>
+            <span class="handwriting-yellow">pessoas reais.</span>
+          </div>
+
+          <div class="support-img-wrapper">
+            <img src="./assets/support/technician-portrait.png" width="500" height="420" alt="Especialista técnico da OMEGAIMPORTS com headset prestando atendimento" loading="lazy">
+          </div>
+
+          <div class="support-badge-vertical">
+            CONHECIMENTO QUE IMPULSIONA SUAS IDEIAS.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         TRUST STRIP 02
+         ====================================================================== -->
+    <section class="trust-strip" aria-label="Garantias de compra">
+      <div class="container">
+        <div class="trust-strip-inner">
+          
+          <div class="trust-item">
+            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+            <div class="trust-text">
+              <strong>Entrega para todo o Brasil</strong>
+              com rastreamento
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+            <div class="trust-text">
+              <strong>Compra segura</strong>
+              e dados protegidos
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+            <div class="trust-text">
+              <strong>Até 12x no cartão</strong>
+              ou PIX com desconto
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
+            <div class="trust-text">
+              <strong>Suporte técnico</strong>
+              com especialistas
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <div class="trust-text">
+              <strong>Mais de 15 mil</strong>
+              clientes e projetos <!-- MOCKUP CLAIM — validar antes de produção -->
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.45 1-1 1H7v4h10v-4h-2c-.55 0-1-.45-1-1v-2.34c3.27-.79 5-3.3 5-6.66V4H6v4c0 3.36 1.73 5.87 5 6.66z"></path></svg>
+            <div class="trust-text">
+              <strong>Qualidade garantida</strong>
+              ou seu dinheiro de volta
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      
+      <!-- 5 Column Grid -->
+      <div class="footer-main-grid">
+        
+        <!-- Column 1: Brand & Social -->
+        <div class="footer-brand-col">
+          <a href="#" class="brand-logo-link">
+            <img src="./assets/brand/omegaimports-logo-horizontal.svg" alt="OMEGAIMPORTS" class="brand-logo-img" width="180" height="42">
+          </a>
+
+          <p>
+            Componentes eletrônicos para transformar ideias em grandes conquistas. Da prototipagem ao desenvolvimento, a OMEGAIMPORTS é o parceiro certo para quem constrói o futuro.
+          </p>
+
+          <div class="footer-social-links">
+            <a href="#" class="social-icon-btn" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+            <a href="#" class="social-icon-btn" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+            <a href="https://www.linkedin.com/company/omegaimports/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+            <a href="#" class="social-icon-btn" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+            <a href="#" class="social-icon-btn" aria-label="TikTok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg></a>
+          </div>
+
+          <div class="handwriting handwriting-white" style="font-size: 1.4rem;">
+            Ideias de hoje.<br>
+            <span class="handwriting-yellow">Soluções de amanhã.</span>
+          </div>
+        </div>
+
+        <!-- Column 2: Institucional -->
+        <div>
+          <h4 class="footer-col-title">INSTITUCIONAL</h4>
+          <ul class="footer-links-list">
+            <li><a href="#sobre">Sobre a OMEGAIMPORTS</a></li>
+            <li><a href="#">Nossa marca</a></li>
+            <li><a href="#">Seja um parceiro</a></li>
+            <li><a href="#">Trabalhe conosco</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#">Política de privacidade</a></li>
+            <li><a href="#">Termos de uso</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Ajuda -->
+        <div>
+          <h4 class="footer-col-title">AJUDA</h4>
+          <ul class="footer-links-list">
+            <li><a href="#como-comprar">Como comprar</a></li>
+            <li><a href="#">Formas de pagamento</a></li>
+            <li><a href="#">Prazos e entrega</a></li>
+            <li><a href="#">Trocas e devoluções</a></li>
+            <li><a href="#">Garantia</a></li>
+            <li><a href="https://wa.me/5535999528858" target="_blank" rel="noopener noreferrer">Fale conosco</a></li>
+            <li><a href="#faq">Perguntas frequentes (FAQ)</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Categorias -->
+        <div>
+          <h4 class="footer-col-title">CATEGORIAS</h4>
+          <ul class="footer-links-list">
+            <li><a href="#categorias">Componentes eletrônicos</a></li>
+            <li><a href="#categorias">Módulos IoT</a></li>
+            <li><a href="#categorias">Sensores</a></li>
+            <li><a href="#categorias">Fontes e alimentação</a></li>
+            <li><a href="#categorias">Automação e controle</a></li>
+            <li><a href="#categorias">Ferramentas</a></li>
+            <li><a href="#categorias">Protótipo e desenvolvimento</a></li>
+            <li><a href="#categorias">Todas as categorias</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 5: Receba Novidades -->
+        <div>
+          <h4 class="footer-col-title">RECEBA NOVIDADES</h4>
+          <p style="font-size: 0.825rem; color: #94A3B8; line-height: 1.45; margin-bottom: 0.85rem;">
+            Cadastre seu e-mail e fique por dentro de lançamentos, ofertas e conteúdos exclusivos.
+          </p>
+          <form class="footer-newsletter-compact">
+            <input type="email" placeholder="Seu melhor e-mail..." required aria-label="E-mail para ofertas no rodapé">
+            <button type="submit" aria-label="Enviar inscrição">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+          </form>
+          <label class="newsletter-consent" style="font-size: 0.7rem; color: #64748B;">
+            <input type="checkbox" required>
+            <span>Eu concordo em receber comunicações da OMEGAIMPORTS.</span>
+          </label>
+        </div>
+
+      </div>
+
+      <!-- Trust Badges Bar: Payments & Marketplaces -->
+      <div class="footer-trust-badges-bar">
+        
+        <div class="badge-block-group">
+          <span class="badge-block-label">FORMAS DE PAGAMENTO</span>
+          <div class="badge-block-content payment-logos">
+            <div class="payment-card"><img src="./assets/payments/visa.png" alt="Visa" width="38" height="24" loading="lazy"></div>
+            <div class="payment-card"><img src="./assets/payments/mastercard.png" alt="Mastercard" width="38" height="24" loading="lazy"></div>
+            <div class="payment-card"><img src="./assets/payments/elo.png" alt="Elo" width="38" height="24" loading="lazy"></div>
+            <div class="payment-card"><img src="./assets/payments/american-express.png" alt="American Express" width="38" height="24" loading="lazy"></div>
+            <div class="payment-card"><img src="./assets/payments/hipercard.png" alt="Hipercard" width="38" height="24" loading="lazy"></div>
+            <div class="payment-card"><img src="./assets/payments/pix.png" alt="Pix" width="38" height="24" loading="lazy"></div>
+            <div class="payment-card"><img src="./assets/payments/boleto.png" alt="Boleto" width="38" height="24" loading="lazy"></div>
+          </div>
+        </div>
+
+        <div class="badge-block-group">
+          <span class="badge-block-label">TAMBÉM ESTAMOS NOS MARKETPLACES</span>
+          <div class="badge-block-content marketplace-logos">
+            <div class="marketplace-card"><img src="./assets/marketplaces/mercado-livre.png" alt="Mercado Livre" width="75" height="24" loading="lazy"></div>
+            <div class="marketplace-card"><img src="./assets/marketplaces/shopee.png" alt="Shopee" width="70" height="24" loading="lazy"></div>
+          </div>
+        </div>
+
+        <div class="security-badge-card">
+          <svg class="security-badge-icon" width="38" height="42" viewBox="0 0 24 28" fill="none">
+            <path d="M12 1L2 5.5V13C2 19.5 6.2 25.4 12 27C17.8 25.4 22 19.5 22 13V5.5L12 1Z" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 13.5L10.8 16.3L16.5 10.5" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="security-badge-text">
+            <strong>COMPRA 100% SEGURA</strong>
+            <span>Seus dados protegidos do início ao fim.</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="footer-copyright-bar">
+        <p>© <span id="copyright-year">2026</span> OMEGAIMPORTS. Todos os direitos reservados.</p>
+        <div class="footer-legal-links">
+          <a href="#">Privacidade</a>
+          <a href="#">Termos de uso</a>
+          <a href="#">Mapa do site</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts V2 -->
+  <script type="module" src="./js/app.js"></script>
+
+</body>
+</html>

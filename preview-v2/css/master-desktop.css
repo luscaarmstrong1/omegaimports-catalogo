@@ -1,0 +1,127 @@
+/* OMEGAIMPORTS V3 MASTER — DESKTOP MASTER VISUAL LAYER */
+
+/* Desktop Master Layout (Ativo em telas >= 1200px) */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+.desktop-master-layout {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #030914;
+  overflow-x: hidden;
+}
+
+.semantic-layout {
+  display: none;
+}
+
+/* Master Section Containers */
+.visual-master-section {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  display: block;
+  font-size: 0;
+}
+
+/* Imagens Master 1:1 sem deformação */
+.visual-master-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border: none;
+  object-fit: fill;
+  image-rendering: auto;
+}
+
+/* Camada Interativa e Hotspots */
+.interaction-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  line-height: normal;
+  font-size: 1rem;
+}
+
+.master-hotspot {
+  position: absolute;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  pointer-events: auto;
+  border-radius: 4px;
+  transition: background-color 0.18s ease, outline 0.18s ease;
+  display: block;
+  text-decoration: none;
+  z-index: 10;
+}
+
+.master-hotspot:hover {
+  background-color: rgba(255, 212, 0, 0.08);
+}
+
+.master-hotspot:focus-visible {
+  outline: 2px solid #FFD400;
+  outline-offset: 2px;
+  background-color: rgba(255, 212, 0, 0.15);
+}
+
+/* Hotspot Search Input Mock */
+.master-search-input {
+  position: absolute;
+  background: transparent;
+  border: none;
+  color: transparent;
+  pointer-events: auto;
+  cursor: text;
+  padding: 0 12px;
+  font-size: 0.95rem;
+  z-index: 11;
+}
+
+.master-search-input:focus {
+  background: rgba(255, 255, 255, 0.95);
+  color: #030914;
+  outline: 2px solid #FFD400;
+  border-radius: 4px;
+}
+
+/* Acessibilidade - Texto Invisível para Leitores de Tela / SEO */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Responsividade: Telas menores que 1200px usam o layout semântico construído */
+@media (max-width: 1199px) {
+  .desktop-master-layout {
+    display: none !important;
+  }
+  
+  .semantic-layout {
+    display: block !important;
+  }
+}

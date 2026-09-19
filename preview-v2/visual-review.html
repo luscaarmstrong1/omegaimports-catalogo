@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OMEGAIMPORTS V3 — Visual Review & QA Side-by-Side</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #030914;
+      --card-bg: #07152b;
+      --border-color: rgba(25, 195, 214, 0.25);
+      --yellow: #FFD400;
+      --cyan: #19C3D6;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-dark);
+      color: #F8FAFC;
+      padding: 24px;
+      line-height: 1.5;
+    }
+
+    header {
+      max-width: 1400px;
+      margin: 0 auto 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    h1 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .badge-v3 {
+      background: var(--yellow);
+      color: #000;
+      font-size: 0.8rem;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+
+    .metrics-summary {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 12px;
+      max-width: 1400px;
+      margin: 0 auto 32px;
+    }
+
+    .metric-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 14px 18px;
+    }
+
+    .metric-label {
+      font-size: 0.78rem;
+      color: #94A3B8;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .metric-value {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--yellow);
+    }
+
+    .metric-sub {
+      font-size: 0.75rem;
+      color: #38BDF8;
+    }
+
+    .controls-bar {
+      max-width: 1400px;
+      margin: 0 auto 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      background: var(--card-bg);
+      padding: 16px 20px;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+    }
+
+    .tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #CBD5E1;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .tab-btn.active, .tab-btn:hover {
+      background: var(--yellow);
+      color: #030914;
+      border-color: var(--yellow);
+    }
+
+    .mode-selector {
+      display: flex;
+      gap: 6px;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 4px;
+      border-radius: 6px;
+    }
+
+    .mode-btn {
+      background: transparent;
+      border: none;
+      color: #94A3B8;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .mode-btn.active {
+      background: var(--cyan);
+      color: #030914;
+    }
+
+    .viewer-container {
+      max-width: 1400px;
+      margin: 0 auto 40px;
+      background: #000;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .side-by-side {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      background: #0F172A;
+    }
+
+    .side-col {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .side-title {
+      background: #091930;
+      padding: 8px 16px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #94A3B8;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .side-col img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Slider Mode */
+    .slider-view {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      user-select: none;
+    }
+
+    .slider-img-after {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .slider-img-before-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 50%;
+      overflow: hidden;
+      border-right: 2px solid var(--yellow);
+    }
+
+    .slider-img-before {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .slider-handle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 40px;
+      height: 40px;
+      background: var(--yellow);
+      color: #000;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0.6);
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .single-img-view img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>
+      <span>OMEGAIMPORTS V3 MASTER</span>
+      <span class="badge-v3">VISUAL REVIEW QA</span>
+    </h1>
+    <div>
+      <a href="http://localhost:4180/preview-v2/" target="_blank" style="color: var(--yellow); font-weight: 700; text-decoration: none; border: 1px solid var(--yellow); padding: 8px 16px; border-radius: 6px;">Abrir Site Interativo ↗</a>
+    </div>
+  </header>
+
+  <section class="metrics-summary">
+    <div class="metric-card">
+      <div class="metric-label">Full Page (1920)</div>
+      <div class="metric-value">0.9960</div>
+      <div class="metric-sub">MAE: 3.68px</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">Full Page (1672)</div>
+      <div class="metric-value">0.9953</div>
+      <div class="metric-sub">MAE: 3.80px</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">Master 01 (Hero)</div>
+      <div class="metric-value">0.9973</div>
+      <div class="metric-sub">MAE: 3.05px</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">Master 02 (Categorias)</div>
+      <div class="metric-value">0.9720</div>
+      <div class="metric-sub">MAE: 5.88px</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">Master 03 (Produtos)</div>
+      <div class="metric-value">0.9987</div>
+      <div class="metric-sub">MAE: 1.74px</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">Master 04 (Conteúdo)</div>
+      <div class="metric-value">0.9990</div>
+      <div class="metric-sub">MAE: 2.03px</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">Master 05 (Footer)</div>
+      <div class="metric-value">0.9477</div>
+      <div class="metric-sub">MAE: 5.97px</div>
+    </div>
+  </section>
+
+  <div class="controls-bar">
+    <div class="tabs">
+      <button class="tab-btn active" data-sec="full">Full Page (1920)</button>
+      <button class="tab-btn" data-sec="master-hero">Master 01: Hero</button>
+      <button class="tab-btn" data-sec="master-categories">Master 02: Categorias</button>
+      <button class="tab-btn" data-sec="master-products">Master 03: Produtos</button>
+      <button class="tab-btn" data-sec="master-content">Master 04: Blog/Marcas</button>
+      <button class="tab-btn" data-sec="master-footer">Master 05: Suporte/Footer</button>
+    </div>
+
+    <div class="mode-selector">
+      <button class="mode-btn active" data-mode="side">Lado a Lado</button>
+      <button class="mode-btn" data-mode="slider">Slider Interativo</button>
+      <button class="mode-btn" data-mode="overlay">Overlay 50/50</button>
+      <button class="mode-btn" data-mode="diff">Diff Amplificado</button>
+    </div>
+  </div>
+
+  <div class="viewer-container" id="viewerContainer">
+    <!-- Rendered via JS -->
+  </div>
+
+  <script>
+    const sectionData = {
+      'full': {
+        name: 'Full Page Desktop (1920px)',
+        ref: '_visual-tests/v3-master/full/reference.png',
+        cur: '_visual-tests/v3-master/desktop-1920-current.png',
+        overlay: '_visual-tests/v3-master/full/overlay.png',
+        diff: '_visual-tests/v3-master/full/diff.png',
+        ssim: '0.9960',
+        mae: '3.68px'
+      },
+      'master-hero': {
+        name: 'Master 01: Header + Hero + Trust Strip',
+        ref: '_visual-tests/v3-master/master-hero/reference.png',
+        cur: '_visual-tests/v3-master/master-hero/current.png',
+        overlay: '_visual-tests/v3-master/master-hero/overlay.png',
+        diff: '_visual-tests/v3-master/master-hero/diff.png',
+        ssim: '0.9973',
+        mae: '3.05px'
+      },
+      'master-categories': {
+        name: 'Master 02: Categorias + Banners',
+        ref: '_visual-tests/v3-master/master-categories/reference.png',
+        cur: '_visual-tests/v3-master/master-categories/current.png',
+        overlay: '_visual-tests/v3-master/master-categories/overlay.png',
+        diff: '_visual-tests/v3-master/master-categories/diff.png',
+        ssim: '0.9720',
+        mae: '5.88px'
+      },
+      'master-products': {
+        name: 'Master 03: Produtos + FAQ/Ajuda',
+        ref: '_visual-tests/v3-master/master-products/reference.png',
+        cur: '_visual-tests/v3-master/master-products/current.png',
+        overlay: '_visual-tests/v3-master/master-products/overlay.png',
+        diff: '_visual-tests/v3-master/master-products/diff.png',
+        ssim: '0.9987',
+        mae: '1.74px'
+      },
+      'master-content': {
+        name: 'Master 04: Blog + Newsletter + Marcas',
+        ref: '_visual-tests/v3-master/master-content/reference.png',
+        cur: '_visual-tests/v3-master/master-content/current.png',
+        overlay: '_visual-tests/v3-master/master-content/overlay.png',
+        diff: '_visual-tests/v3-master/master-content/diff.png',
+        ssim: '0.9990',
+        mae: '2.03px'
+      },
+      'master-footer': {
+        name: 'Master 05: Suporte + Trust 02 + Rodapé',
+        ref: '_visual-tests/v3-master/master-footer/reference.png',
+        cur: '_visual-tests/v3-master/master-footer/current.png',
+        overlay: '_visual-tests/v3-master/master-footer/overlay.png',
+        diff: '_visual-tests/v3-master/master-footer/diff.png',
+        ssim: '0.9477',
+        mae: '5.97px'
+      }
+    };
+
+    let activeSec = 'full';
+    let activeMode = 'side';
+
+    function renderView() {
+      const data = sectionData[activeSec];
+      const container = document.getElementById('viewerContainer');
+      container.innerHTML = '';
+
+      if (activeMode === 'side') {
+        container.innerHTML = `
+          <div class="side-by-side">
+            <div class="side-col">
+              <div class="side-title">
+                <span>MOCKUP DE REFERÊNCIA OFICIAL</span>
+                <span>SSIM: ${data.ssim}</span>
+              </div>
+              <img src="${data.ref}" alt="Referência">
+            </div>
+            <div class="side-col">
+              <div class="side-title">
+                <span>IMPLEMENTAÇÃO ATUAL /PREVIEW-V2/</span>
+                <span>MAE: ${data.mae}</span>
+              </div>
+              <img src="${data.cur}" alt="Atual">
+            </div>
+          </div>
+        `;
+      } else if (activeMode === 'slider') {
+        container.innerHTML = `
+          <div class="slider-view" id="sliderView">
+            <img class="slider-img-after" src="${data.cur}" alt="Atual">
+            <div class="slider-img-before-wrapper" id="beforeWrapper">
+              <img class="slider-img-before" id="beforeImg" src="${data.ref}" alt="Referência">
+            </div>
+            <div class="slider-handle" id="sliderHandle">⇄</div>
+          </div>
+        `;
+
+        const view = document.getElementById('sliderView');
+        const wrapper = document.getElementById('beforeWrapper');
+        const handle = document.getElementById('sliderHandle');
+        const beforeImg = document.getElementById('beforeImg');
+
+        function updateBeforeWidth() {
+          beforeImg.style.width = `${view.clientWidth}px`;
+        }
+        window.addEventListener('resize', updateBeforeWidth);
+        updateBeforeWidth();
+
+        let isDown = false;
+        function move(e) {
+          const rect = view.getBoundingClientRect();
+          const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+          let pos = ((clientX - rect.left) / rect.width) * 100;
+          pos = Math.max(0, Math.min(100, pos));
+          wrapper.style.width = `${pos}%`;
+          handle.style.left = `${pos}%`;
+        }
+
+        view.addEventListener('mousedown', () => isDown = true);
+        window.addEventListener('mouseup', () => isDown = false);
+        view.addEventListener('mousemove', (e) => { if (isDown) move(e); });
+        view.addEventListener('click', move);
+        view.addEventListener('touchmove', move);
+      } else if (activeMode === 'overlay') {
+        container.innerHTML = `
+          <div class="single-img-view">
+            <div class="side-title">
+              <span>OVERLAY 50/50 BLEND</span>
+              <span>SSIM: ${data.ssim} | MAE: ${data.mae}</span>
+            </div>
+            <img src="${data.overlay}" alt="Overlay">
+          </div>
+        `;
+      } else if (activeMode === 'diff') {
+        container.innerHTML = `
+          <div class="single-img-view">
+            <div class="side-title">
+              <span>DIFF VISUAL AMPLIFICADO (Divergências em Vermelho)</span>
+              <span>SSIM: ${data.ssim} | MAE: ${data.mae}</span>
+            </div>
+            <img src="${data.diff}" alt="Diff">
+          </div>
+        `;
+      }
+    }
+
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeSec = btn.getAttribute('data-sec');
+        renderView();
+      });
+    });
+
+    document.querySelectorAll('.mode-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeMode = btn.getAttribute('data-mode');
+        renderView();
+      });
+    });
+
+    renderView();
+  </script>
+</body>
+</html>
