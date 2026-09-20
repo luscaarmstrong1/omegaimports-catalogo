@@ -2,7 +2,7 @@
 
 ## Status
 
-**Código pronto para validação no CI. Publicação e merge bloqueados até a matriz visual automatizada ficar verde.**
+**Código e matriz visual aprovados. Pull request pronto para revisão, sem merge automático.**
 
 ## Fonte de verdade
 
@@ -37,7 +37,7 @@
 - E2E estático, lint, typecheck, links, encoding, SEO, blog, copy, imagens e marketplace.
 - `git diff --check`.
 
-## Gate visual obrigatório
+## Gate visual aprovado
 
 O workflow `V2 visual parity` instala o Playwright e o Chromium no Ubuntu, recompila o site e compara referência e produção nas larguras 1920, 1672, 1440, 1024, 768, 430, 390 e 375 px. Para cada viewport, exige:
 
@@ -46,8 +46,19 @@ O workflow `V2 visual parity` instala o Playwright e o Chromium no Ubuntu, recom
 - Máscara limitada aos cards dinâmicos de produtos e artigos.
 - Capturas frozen/produção, overlay, diff e `results.json` publicados como artefato mesmo em falha.
 
-O ambiente local bloqueou a instalação do Chromium com `spawn EPERM`. Por isso, a medição visual definitiva será feita pelo CI e nenhum número de SSIM local foi fabricado.
+| Largura | Altura frozen | Altura produção | SSIM | Resultado |
+| ---: | ---: | ---: | ---: | :--- |
+| 1920 | 4076 | 4076 | 0,997086 | Aprovado |
+| 1672 | 4076 | 4076 | 0,996639 | Aprovado |
+| 1440 | 4076 | 4076 | 0,996405 | Aprovado |
+| 1024 | 5891 | 5891 | 0,995596 | Aprovado |
+| 768 | 8488 | 8488 | 0,997853 | Aprovado |
+| 430 | 8938 | 8938 | 0,998433 | Aprovado |
+| 390 | 8991 | 8991 | 0,998500 | Aprovado |
+| 375 | 9063 | 9063 | 0,998511 | Aprovado |
+
+Medição definitiva executada no GitHub Actions em Ubuntu pelo run `35492207178`. O ambiente local bloqueou a instalação do Chromium com `spawn EPERM`, sem afetar o gate reproduzível do CI.
 
 ## Decisão de publicação
 
-O pull request deve permanecer como draft até todos os oito viewports passarem. Depois disso, pode ser marcado como pronto para revisão, sem merge automático.
+Todos os oito viewports passaram. O pull request pode ser marcado como pronto para revisão, sem merge automático.
