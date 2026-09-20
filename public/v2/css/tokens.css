@@ -67,7 +67,7 @@
 
   /* Layout - Medição Exata da Viewport 1672px (Left Margin 56px, Max-Width 1560px) */
   --container-max-width: 1560px;
-  --container-padding: 56px;
+  --container-padding: 0 56px;
 
   /* Borda e Raio */
   --radius-xs: 4px;

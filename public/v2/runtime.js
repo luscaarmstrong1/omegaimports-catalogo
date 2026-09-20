@@ -65,4 +65,42 @@
     }), { rootMargin: "0px 0px -8%", threshold: .08 })
     : null;
   document.querySelectorAll(".reveal").forEach((element) => revealObserver ? revealObserver.observe(element) : element.classList.add("visible"));
+
+  document.querySelectorAll(".category-card[data-href]").forEach((card) => {
+    card.tabIndex = 0;
+    card.setAttribute("role", "link");
+    const navigate = () => {
+      window.location.href = card.dataset.href;
+    };
+    card.addEventListener("click", navigate);
+    card.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        navigate();
+      }
+    });
+  });
+
+  const notify = (message) => {
+    let container = document.querySelector(".toast-container");
+    if (!container) {
+      container = document.createElement("div");
+      container.className = "toast-container";
+      container.setAttribute("role", "status");
+      container.setAttribute("aria-live", "polite");
+      document.body.appendChild(container);
+    }
+    const toast = document.createElement("div");
+    toast.className = "toast";
+    toast.textContent = message;
+    container.appendChild(toast);
+    setTimeout(() => toast.remove(), 3200);
+  };
+
+  document.querySelector(".header-account-btn")?.addEventListener("click", () => notify("Atendimento e compras disponíveis pelos canais oficiais."));
+  document.querySelector(".header-cart-btn")?.addEventListener("click", () => notify("A compra é finalizada com segurança no anúncio do Mercado Livre."));
+  document.querySelectorAll(".product-card-fav").forEach((button) => button.addEventListener("click", () => {
+    button.classList.toggle("is-favorite");
+    notify(button.classList.contains("is-favorite") ? "Produto salvo nos favoritos." : "Produto removido dos favoritos.");
+  }));
 })();

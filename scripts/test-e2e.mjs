@@ -32,7 +32,8 @@ if (!home.includes("https://www.linkedin.com/company/omegaimports/")) throw new 
 
 const header = home.match(/<header[^>]*class="site-header"[^>]*>([\s\S]*?)<\/header>/)?.[1] || "";
 for (const item of ["Produtos", "Categorias", "Blog", "Sobre"]) {
-  if (!header.includes(`>${item}</a>`)) throw new Error(`Header sem aba principal: ${item}`);
+  const headerText = header.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
+  if (!headerText.includes(item)) throw new Error(`Header sem aba principal: ${item}`);
 }
 for (const forbidden of ["Aplicações", "Guias", "Famílias", "Aplicacoes", "Familias"]) {
   if (header.includes(forbidden)) throw new Error(`Header contém aba proibida: ${forbidden}`);

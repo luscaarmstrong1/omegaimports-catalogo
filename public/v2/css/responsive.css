@@ -208,10 +208,6 @@
     grid-template-columns: 1fr;
   }
 
-  .support-visual-right {
-    grid-column: auto;
-  }
-
   .support-checklist {
     margin: 1.5rem 0;
   }
@@ -251,27 +247,6 @@
   .hero-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
-  }
-
-  .hero-grid > * {
-    min-width: 0;
-  }
-
-  .hero-search-box {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .hero-search-box input {
-    min-width: 0;
-  }
-
-  .carousel-prev {
-    left: 0;
-  }
-
-  .carousel-next {
-    right: 0;
   }
 
   .hero-features-right {
@@ -413,15 +388,6 @@
 @media (max-width: 480px) {
   :root {
     --container-padding: 1rem;
-  }
-
-  .header-account-btn,
-  .header-cart-btn {
-    display: none;
-  }
-
-  .header-actions {
-    gap: 0;
   }
 
   .hero-title {
