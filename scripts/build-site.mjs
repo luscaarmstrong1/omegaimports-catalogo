@@ -637,11 +637,116 @@ function catalog() {
   out("produtos/index.html", pageShell({ title: "Produtos", description: "Catálogo com busca e filtros de ofertas públicas da OMEGAIMPORTS.", path: "produtos/", body, extraHead: `<script type="application/ld+json">${JSON.stringify(itemList)}</script>` }));
 }
 
+function internalSupportBanner() {
+  return `<section class="internal-support-banner" data-reveal>
+    <div class="internal-support-content">
+      <p class="eyebrow" style="color: var(--cyan-400);">Precisa de Mais Ajuda?</p>
+      <h2>Fale com a nossa <span>equipe técnica</span></h2>
+      <p>Tire dúvidas sobre aplicações, modelos, pinagem e estoque diretamente com nossos especialistas via WhatsApp ou confira os anúncios na loja oficial do Mercado Livre.</p>
+      <div class="internal-support-actions">
+        <a class="whatsapp-action whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">Falar no WhatsApp ${icon("message", "btn-icon")}</a>
+        <a class="secondary-action marketplace-link" href="${site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored">Ver loja no Mercado Livre ${icon("external", "btn-icon")}</a>
+      </div>
+    </div>
+    <div class="internal-support-media">
+      <img src="${assetUrl("brand/visuals/support-specialist.png")}" width="540" height="340" loading="lazy" decoding="async" alt="Especialista técnico OMEGAIMPORTS em atendimento">
+    </div>
+  </section>`;
+}
+
 function collectionPages() {
-  out("categorias/index.html", pageShell({ title: "Categorias", description: "Categorias técnicas do catálogo OMEGAIMPORTS.", path: "categorias/", body: `<section class="page-hero"><p class="eyebrow">Categorias</p><h1>Organização técnica do catálogo</h1><p>Escolha por tipo de componente e avance para produtos reais, com fotos e ofertas oficiais.</p></section><div class="category-grid page-grid">${visibleCategories.map(categoryCard).join("")}</div>` }));
+  const categoriesBody = `<div class="internal-page">
+    <section class="internal-hero">
+      <div class="internal-hero-container">
+        <div class="internal-hero-content">
+          <nav class="internal-breadcrumb" aria-label="Navegação estrutural">
+            <a href="${pageUrl()}">Início</a>
+            <span>/</span>
+            <span>Categorias</span>
+          </nav>
+          <p class="internal-hero-eyebrow">Catálogo Técnico Especializado</p>
+          <h1 class="internal-hero-title">Categorias de <span>Componentes</span></h1>
+          <p class="internal-hero-desc">Explore nossa organização técnica por aplicação, família e tecnologia. Produtos com pronta entrega no Brasil, garantia e compra 100% segura pelo Mercado Livre.</p>
+          <div class="internal-hero-trust-row">
+            <span class="internal-hero-trust-item">${icon("shield")} Produtos Originais e Testados</span>
+            <span class="internal-hero-trust-item">${icon("package")} Pronta Entrega no Brasil</span>
+            <span class="internal-hero-trust-item">${icon("zap")} Envio Imediato via Mercado Livre</span>
+          </div>
+        </div>
+        <div class="internal-hero-media">
+          <img src="${assetUrl("brand/visuals/hero-esp32-circuit.png")}" width="680" height="380" loading="eager" fetchpriority="high" decoding="async" alt="Módulo eletrônico ESP32 em bancada técnica OMEGAIMPORTS">
+        </div>
+      </div>
+    </section>
+    <div class="internal-content-wrap">
+      <div class="internal-section-header">
+        <p class="eyebrow">Organização Técnica</p>
+        <h2>Navegue pelas <span>linhas de produtos</span></h2>
+        <p>Escolha o segmento técnico do seu projeto e encontre módulos, sensores e ferramentas com documentação e especificações claras.</p>
+      </div>
+      <div class="category-grid page-grid">
+        ${visibleCategories.map(categoryCard).join("")}
+      </div>
+      <div style="margin-top: 64px;">
+        ${internalSupportBanner()}
+      </div>
+    </div>
+  </div>`;
+
+  out("categorias/index.html", pageShell({
+    title: "Categorias de componentes eletrônicos",
+    description: "Categorias técnicas do catálogo OMEGAIMPORTS com sensores, IoT, fontes, relés, instrumentação e componentes com compra segura no Mercado Livre.",
+    path: "categorias/",
+    body: categoriesBody,
+  }));
+
   for (const category of visibleCategories) {
     const items = collectionItems(category, "categorias");
-    out(`categorias/${category.slug}/index.html`, pageShell({ title: category.label, description: category.description, path: `categorias/${category.slug}/`, body: `<section class="page-hero"><p class="eyebrow">Categoria</p><h1>${escapeHtml(category.label)}</h1><p>${escapeHtml(category.description)}</p></section><div class="product-grid">${items.map(productCard).join("")}</div>` }));
+    const singleCatBody = `<div class="internal-page">
+      <section class="internal-hero">
+        <div class="internal-hero-container">
+          <div class="internal-hero-content">
+            <nav class="internal-breadcrumb" aria-label="Navegação estrutural">
+              <a href="${pageUrl()}">Início</a>
+              <span>/</span>
+              <a href="${pageUrl("categorias/")}">Categorias</a>
+              <span>/</span>
+              <span>${escapeHtml(category.label)}</span>
+            </nav>
+            <p class="internal-hero-eyebrow">Categoria Técnica</p>
+            <h1 class="internal-hero-title">${escapeHtml(category.label)}</h1>
+            <p class="internal-hero-desc">${escapeHtml(category.description)}</p>
+            <div class="internal-hero-trust-row">
+              <span class="internal-hero-trust-item">${icon("shield")} Garantia Mercado Livre</span>
+              <span class="internal-hero-trust-item">${icon("package")} ${items.length} produtos disponíveis</span>
+            </div>
+          </div>
+          <div class="internal-hero-media">
+            <img src="${assetUrl("brand/visuals/hero-esp32-circuit.png")}" width="680" height="380" loading="eager" fetchpriority="high" decoding="async" alt="${escapeHtml(category.label)} OMEGAIMPORTS">
+          </div>
+        </div>
+      </section>
+      <div class="internal-content-wrap">
+        <div class="internal-section-header">
+          <p class="eyebrow">Produtos na Categoria</p>
+          <h2>Ofertas ativas em <span>${escapeHtml(category.label)}</span></h2>
+          <p>Itens originais com pronta entrega e suporte técnico especializado da equipe OMEGAIMPORTS.</p>
+        </div>
+        <div class="product-grid">
+          ${items.map(productCard).join("")}
+        </div>
+        <div style="margin-top: 64px;">
+          ${internalSupportBanner()}
+        </div>
+      </div>
+    </div>`;
+
+    out(`categorias/${category.slug}/index.html`, pageShell({
+      title: category.label,
+      description: category.description,
+      path: `categorias/${category.slug}/`,
+      body: singleCatBody,
+    }));
   }
 }
 
@@ -699,13 +804,62 @@ function blogPages() {
   const sortedPosts = [...blogPosts].sort((a, b) => String(b.publishedAt).localeCompare(String(a.publishedAt)));
   const featuredPost = sortedPosts[0];
   const remainingPosts = sortedPosts.slice(1);
+
+  const blogHomeBody = `<div class="internal-page">
+    <section class="internal-hero">
+      <div class="internal-hero-container">
+        <div class="internal-hero-content">
+          <nav class="internal-breadcrumb" aria-label="Navegação estrutural">
+            <a href="${pageUrl()}">Início</a>
+            <span>/</span>
+            <span>Blog</span>
+          </nav>
+          <p class="internal-hero-eyebrow">Conteúdo Técnico & Aplicações</p>
+          <h1 class="internal-hero-title">Blog <span>OMEGAIMPORTS</span></h1>
+          <p class="internal-hero-desc">Artigos práticos, guias de seleção e projetos detalhados sobre IoT, automação, sensores e telemetria industrial, conectados aos produtos reais do nosso catálogo.</p>
+          <form class="internal-hero-search" action="${pageUrl("blog/")}" role="search">
+            <label class="sr-only" for="blog-search">Buscar artigos</label>
+            <input id="blog-search" name="q" type="search" placeholder="Buscar telemetria, sensores, ESP32, fontes..." autocomplete="off">
+            <button type="submit">Buscar</button>
+          </form>
+        </div>
+        <div class="internal-hero-media">
+          <img src="${assetUrl("brand/visuals/hero-telemetry-outdoor.png")}" width="680" height="380" loading="eager" fetchpriority="high" decoding="async" alt="Estação de telemetria IoT outdoor OMEGAIMPORTS">
+        </div>
+      </div>
+    </section>
+    <div class="internal-content-wrap">
+      <div class="chips blog-category-chips" style="margin-bottom: 36px;">
+        <a data-blog-category="" href="${pageUrl("blog/")}">Todos</a>
+        ${categoriesEditorial.map((category) => `<a data-blog-category="${escapeHtml(normalizeText(category))}" href="${pageUrl(`blog/?categoria=${encodeURIComponent(category)}`)}">${escapeHtml(category)}</a>`).join("")}
+      </div>
+      <p class="result-count blog-result-count" aria-live="polite"><strong id="blog-result-count">${blogPosts.length}</strong> artigos técnicos publicados</p>
+      <div id="blog-list">
+        <div class="blog-featured" style="margin-bottom: 40px;">
+          ${featuredPost ? blogCard(featuredPost, 0) : ""}
+        </div>
+        <div class="article-grid page-grid">
+          ${remainingPosts.map((post, index) => blogCard(post, index + 1)).join("")}
+        </div>
+      </div>
+      <div class="empty-state blog-empty-state" id="blog-empty-state" hidden>
+        <h2>Nenhum artigo encontrado.</h2>
+        <p>Revise o termo digitado ou selecione outra categoria.</p>
+      </div>
+      <div style="margin-top: 64px;">
+        ${internalSupportBanner()}
+      </div>
+    </div>
+  </div>`;
+
   out("blog/index.html", pageShell({
     title: "Blog técnico",
     description: "Guias práticos sobre eletrônica, IoT, sensores, fontes, automação e prototipagem.",
     path: "blog/",
-    body: `<section class="page-hero blog-hero"><p class="eyebrow">Blog técnico</p><h1>Guias para escolher componentes com mais segurança.</h1><p>Conteúdo editorial conectado aos produtos reais do catálogo OMEGAIMPORTS.</p><form class="blog-search" action="${pageUrl("blog/")}" role="search">${icon("search", "search-icon")}<label class="sr-only" for="blog-search">Buscar no Blog</label><input id="blog-search" name="q" type="search" placeholder="Buscar sensores, fontes, GPS, automação..."></form><div class="chips blog-category-chips"><a data-blog-category="" href="${pageUrl("blog/")}">Todos</a>${categoriesEditorial.map((category) => `<a data-blog-category="${escapeHtml(normalizeText(category))}" href="${pageUrl(`blog/?categoria=${encodeURIComponent(category)}`)}">${escapeHtml(category)}</a>`).join("")}</div></section><p class="result-count blog-result-count" aria-live="polite"><strong id="blog-result-count">${blogPosts.length}</strong> artigos encontrados</p><div id="blog-list"><div class="blog-featured">${featuredPost ? blogCard(featuredPost, 0) : ""}</div><div class="article-grid page-grid">${remainingPosts.map((post, index) => blogCard(post, index + 1)).join("")}</div></div><div class="empty-state blog-empty-state" id="blog-empty-state" hidden><h2>Nenhum artigo encontrado.</h2><p>Revise a busca ou escolha outra categoria.</p></div>`,
+    body: blogHomeBody,
     extraHead: `<script type="application/ld+json">${JSON.stringify(blogSchema)}</script>`,
   }));
+
   for (const post of blogPosts) {
     const relatedProducts = relatedProductsForPost(post);
     const relatedPosts = blogPosts.filter((item) => item.slug !== post.slug && (item.category === post.category || item.tags.some((tag) => post.tags.includes(tag)))).slice(0, 3);
@@ -725,7 +879,10 @@ function blogPages() {
         <section class="article-whatsapp"><h2>Precisa de ajuda para escolher?</h2><p>Envie sua dúvida pelo WhatsApp oficial da OMEGAIMPORTS e informe o tipo de projeto, tensão, corrente e aplicação desejada.</p><a class="whatsapp-action whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp ${icon("message", "btn-icon")}</a></section>
       </article>
       ${relatedProducts.length ? section({ eyebrow: "Produtos relacionados", title: "Itens do catálogo ligados a este tema", className: "section section--white", content: `<div class="product-grid">${relatedProducts.map(productCard).join("")}</div>` }) : ""}
-      ${relatedPosts.length ? section({ eyebrow: "Continue lendo", title: "Artigos relacionados", content: `<div class="article-grid article-grid--compact">${relatedPosts.map(blogCard).join("")}</div>` }) : ""}`;
+      ${relatedPosts.length ? section({ eyebrow: "Continue lendo", title: "Artigos relacionados", content: `<div class="article-grid article-grid--compact">${relatedPosts.map(blogCard).join("")}</div>` }) : ""}
+      <div style="padding: 0 max(24px, calc((100vw - var(--max)) / 2)) 56px;">
+        ${internalSupportBanner()}
+      </div>`;
     const schema = {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
@@ -744,17 +901,602 @@ function blogPages() {
 }
 
 function simplePages() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Como faço para comprar na OMEGAIMPORTS?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Navegue pelo nosso catálogo de componentes técnicos, selecione o item desejado e clique no botão 'Ver oferta' ou 'Comprar no Mercado Livre'. Você será direcionado para o anúncio oficial da OMEGAIMPORTS no Mercado Livre, onde conclui o pagamento com toda a segurança e proteção do programa Compra Garantida.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Quais são as formas de pagamento?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Como as compras são finalizadas no Mercado Livre, você conta com todos os meios disponíveis pela plataforma: Pix com aprovação imediata, cartão de crédito com parcelamento facilitado, boleto bancário e saldo em conta Mercado Pago.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Qual o prazo de entrega?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Nossos produtos contam com pronta entrega e envio rápido para todo o Brasil. O prazo exato e o valor do frete são calculados diretamente na página do anúncio no Mercado Livre, variando de acordo com o seu CEP e a modalidade de envio escolhida.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Posso trocar ou devolver um produto?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Sim. Todas as compras possuem cobertura total do programa de Devolução Grátis do Mercado Livre. Você tem até 30 dias a partir do recebimento para solicitar a devolução sem custos adicionais caso o produto não atenda às suas expectativas.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Os produtos são originais e têm garantia?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Sim, trabalhamos exclusivamente com componentes novos, originais e inspecionados em bancada técnica. Todos os itens contam com garantia legal contra defeitos de fabricação assegurada pela OMEGAIMPORTS e respaldada pelo Mercado Livre.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Como faço para entrar em contato com o suporte?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Nossa equipe técnica especializada atende diretamente pelo WhatsApp oficial (+55 35 99952-8858) e também pelo campo de mensagens do Mercado Livre para esclarecer dúvidas de pinagem, compatibilidade e aplicação.",
+        },
+      },
+    ],
+  };
+
+  const duvidasFrequentesBody = `<div class="internal-page">
+    <section class="internal-hero">
+      <div class="internal-hero-container">
+        <div class="internal-hero-content">
+          <nav class="internal-breadcrumb" aria-label="Navegação estrutural">
+            <a href="${pageUrl()}">Início</a>
+            <span>/</span>
+            <span>Dúvidas frequentes</span>
+          </nav>
+          <p class="internal-hero-eyebrow">Suporte sem complicação</p>
+          <h1 class="internal-hero-title">Dúvidas <span>frequentes</span></h1>
+          <p class="internal-hero-desc">Encontre respostas rápidas para as principais perguntas sobre compra, envio, pagamento e muito mais.</p>
+          <div class="internal-hero-search">
+            <input type="search" placeholder="Digite sua dúvida aqui..." aria-label="Pesquisar nas dúvidas frequentes">
+            <button type="button">Buscar</button>
+          </div>
+        </div>
+        <div class="internal-hero-media">
+          <img src="${assetUrl("brand/visuals/hero-esp32-vertical.png")}" width="540" height="380" loading="eager" fetchpriority="high" decoding="async" alt="Microcontrolador ESP32 iluminado na bancada técnica">
+        </div>
+      </div>
+    </section>
+
+    <div class="internal-content-wrap">
+      <div class="internal-section-header text-center">
+        <p class="eyebrow" style="color: var(--blue-600);">Perguntas Mais Comuns</p>
+        <h2>Tudo o que você <span>precisa saber</span></h2>
+        <p>Encontre abaixo as respostas para as dúvidas mais frequentes dos nossos clientes.</p>
+      </div>
+
+      <div class="faq-accordion-list">
+        <details class="faq-item" open>
+          <summary class="faq-trigger">
+            <div class="faq-trigger-content">
+              <div class="faq-icon-box">${icon("package")}</div>
+              <h3>Como faço para comprar na OMEGAIMPORTS?</h3>
+            </div>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-answer">
+            Navegue pelo nosso catálogo de componentes técnicos, selecione o item desejado e clique no botão <strong>"Ver oferta"</strong> ou <strong>"Comprar no Mercado Livre"</strong>. Você será direcionado para o anúncio oficial da OMEGAIMPORTS no Mercado Livre, onde conclui o pagamento com toda a segurança e proteção do programa Compra Garantida.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-trigger">
+            <div class="faq-trigger-content">
+              <div class="faq-icon-box">${icon("shield")}</div>
+              <h3>Quais são as formas de pagamento?</h3>
+            </div>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-answer">
+            Como as compras são finalizadas no Mercado Livre, você conta com todos os meios disponíveis pela plataforma: <strong>Pix com aprovação imediata</strong>, cartão de crédito com parcelamento facilitado, boleto bancário e saldo em conta Mercado Pago.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-trigger">
+            <div class="faq-trigger-content">
+              <div class="faq-icon-box">${icon("zap")}</div>
+              <h3>Qual o prazo de entrega?</h3>
+            </div>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-answer">
+            Nossos produtos contam com <strong>pronta entrega e envio rápido</strong> para todo o Brasil. O prazo exato e o valor do frete são calculados diretamente na página do anúncio no Mercado Livre, variando de acordo com o seu CEP e a modalidade de envio escolhida.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-trigger">
+            <div class="faq-trigger-content">
+              <div class="faq-icon-box">${icon("sliders")}</div>
+              <h3>Posso trocar ou devolver um produto?</h3>
+            </div>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-answer">
+            Sim. Todas as compras possuem cobertura total do programa de <strong>Devolução Grátis do Mercado Livre</strong>. Você tem até 30 dias a partir do recebimento para solicitar a devolução sem custos adicionais caso o produto não atenda às suas necessidades.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-trigger">
+            <div class="faq-trigger-content">
+              <div class="faq-icon-box">${icon("shield")}</div>
+              <h3>Os produtos são originais e têm garantia?</h3>
+            </div>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-answer">
+            Sim, trabalhamos exclusivamente com componentes novos, originais e inspecionados em bancada técnica. Todos os itens contam com garantia legal contra defeitos de fabricação assegurada pela OMEGAIMPORTS e respaldada pelo Mercado Livre.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-trigger">
+            <div class="faq-trigger-content">
+              <div class="faq-icon-box">${icon("message")}</div>
+              <h3>Como faço para entrar em contato com o suporte?</h3>
+            </div>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="faq-answer">
+            Nossa equipe técnica especializada atende diretamente pelo <strong>WhatsApp oficial (+55 35 99952-8858)</strong> e também pelo campo de mensagens do Mercado Livre para esclarecer dúvidas de pinagem, compatibilidade e aplicação.
+          </div>
+        </details>
+      </div>
+
+      <div style="margin-top: clamp(48px, 6vw, 80px);">
+        ${internalSupportBanner()}
+      </div>
+    </div>
+  </div>`;
+
+  const politicaPrivacidadeBody = `<div class="internal-page">
+    <section class="internal-hero">
+      <div class="internal-hero-container">
+        <div class="internal-hero-content">
+          <nav class="internal-breadcrumb" aria-label="Navegação estrutural">
+            <a href="${pageUrl()}">Início</a>
+            <span>/</span>
+            <span>Política de privacidade</span>
+          </nav>
+          <p class="internal-hero-eyebrow">Transparência e Confiança</p>
+          <h1 class="internal-hero-title">Política de <span>privacidade</span></h1>
+          <p class="internal-hero-desc">Sua privacidade é importante para nós. Veja como coletamos, usamos e protegemos seus dados na OMEGAIMPORTS.</p>
+          <div class="internal-hero-trust-row">
+            <span class="internal-hero-trust-item">${icon("shield")} Privacidade Garantida</span>
+            <span class="internal-hero-trust-item">${icon("shield")} Segurança Ativa</span>
+            <span class="internal-hero-trust-item">${icon("shield")} Confiança e Ética</span>
+            <span class="internal-hero-trust-item">${icon("shield")} Transparência Total</span>
+          </div>
+        </div>
+        <div class="internal-hero-media">
+          <img src="${assetUrl("brand/visuals/hero-privacy-shield.png")}" width="540" height="380" loading="eager" fetchpriority="high" decoding="async" alt="Escudo de segurança e privacidade digital em hardware">
+        </div>
+      </div>
+    </section>
+
+    <div class="internal-content-wrap">
+      <div class="internal-section-header text-center">
+        <p class="eyebrow" style="color: var(--blue-600);">Transparência Sem Complicação</p>
+        <h2>Como tratamos <span>seus dados</span></h2>
+        <p>Coletamos apenas o necessário, usamos seus dados com responsabilidade e seguimos as melhores práticas de segurança da informação.</p>
+      </div>
+
+      <div class="info-card-grid">
+        <article class="info-card">
+          <div class="info-card-header">
+            <div class="info-card-icon">${icon("book")}</div>
+            <span class="info-card-badge">Dados</span>
+          </div>
+          <h3>Dados coletados</h3>
+          <p>Este site opera como uma vitrine estática informativa. Não realizamos cadastros, não criamos contas e não armazenamos senhas ou números de cartões. Dados de compra são processados exclusivamente pelo Mercado Livre.</p>
+        </article>
+
+        <article class="info-card">
+          <div class="info-card-header">
+            <div class="info-card-icon">${icon("sliders")}</div>
+            <span class="info-card-badge">Navegação</span>
+          </div>
+          <h3>Cookies</h3>
+          <p>Utilizamos cookies estritamente técnicos e recursos locais do navegador para salvar preferências de busca e filtros do catálogo. Você pode limpar ou bloquear cookies diretamente nas configurações do seu navegador.</p>
+        </article>
+
+        <article class="info-card">
+          <div class="info-card-header">
+            <div class="info-card-icon">${icon("external")}</div>
+            <span class="info-card-badge">Integração</span>
+          </div>
+          <h3>Links externos</h3>
+          <p>Nosso catálogo contém links diretos para os anúncios oficiais no Mercado Livre e canais no WhatsApp e LinkedIn. Cada plataforma possui sua própria política de privacidade e termos de serviço independentes.</p>
+        </article>
+
+        <article class="info-card">
+          <div class="info-card-header">
+            <div class="info-card-icon">${icon("shield")}</div>
+            <span class="info-card-badge">Proteção</span>
+          </div>
+          <h3>Segurança</h3>
+          <p>Adotamos criptografia HTTPS/TLS em todas as conexões, garantindo tráfego seguro contra interceptações. Seus contatos com nosso suporte via WhatsApp permanecem sob sigilo técnico e respeito comercial.</p>
+        </article>
+
+        <article class="info-card">
+          <div class="info-card-header">
+            <div class="info-card-icon">${icon("message")}</div>
+            <span class="info-card-badge">LGPD</span>
+          </div>
+          <h3>Seus direitos</h3>
+          <p>Você pode solicitar a visualização, correção ou exclusão de qualquer dado pessoal de contato mantido conosco a qualquer momento, conforme assegurado pela Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018).</p>
+        </article>
+      </div>
+
+      <div style="margin-top: clamp(48px, 6vw, 80px);">
+        ${internalSupportBanner()}
+      </div>
+    </div>
+  </div>`;
+
+  const termosUsoBody = `<div class="internal-page">
+    <section class="internal-hero">
+      <div class="internal-hero-container">
+        <div class="internal-hero-content">
+          <nav class="internal-breadcrumb" aria-label="Navegação estrutural">
+            <a href="${pageUrl()}">Início</a>
+            <span>/</span>
+            <span>Termos de uso</span>
+          </nav>
+          <p class="internal-hero-eyebrow">Confiança em cada conexão</p>
+          <h1 class="internal-hero-title">Termos de <span>uso</span></h1>
+          <p class="internal-hero-desc">Regras simples e transparentes para você comprar com segurança na OMEGAIMPORTS através do Mercado Livre.</p>
+          <div class="internal-hero-trust-row">
+            <span class="internal-hero-trust-item">${icon("cpu")} Tecnologia que conecta ideias</span>
+            <span class="internal-hero-trust-item">${icon("shield")} Garantia Assegurada</span>
+          </div>
+        </div>
+        <div class="internal-hero-media">
+          <img src="${assetUrl("brand/visuals/hero-chip-gold.png")}" width="540" height="380" loading="eager" fetchpriority="high" decoding="async" alt="Microchip dourado representando precisão técnica e segurança">
+        </div>
+      </div>
+    </section>
+
+    <div class="internal-content-wrap">
+      <div class="internal-section-header text-center">
+        <p class="eyebrow" style="color: var(--blue-600);">Nossos Termos em Resumo</p>
+        <h2>Tudo o que você <span>precisa saber</span></h2>
+        <p>Aqui você encontra os principais pontos dos nossos Termos de Uso. Para mais detalhes, entre em contato com nossa equipe.</p>
+      </div>
+
+      <div class="info-card-grid">
+        <article class="info-card">
+          <div class="info-card-header">
+            <div class="info-card-icon">${icon("book")}</div>
+            <span class="info-card-badge">01</span>
+          </div>
+          <h3>Propósito do site</h3>
+          <p>A OMEGAIMPORTS disponibiliza uma vitrine técnica que organiza produtos e conteúdos sobre componentes eletrônicos, IoT e automação, com foco em clareza informativa e suporte pré-venda.</p>
+        </article>
+
+        <article class="info-card">
+          <div class="info-card-header">
+            <div class="info-card-icon">${icon("package")}</div>
+            <span class="info-card-badge">02</span>
+          </div>
+          <h3>Informações do catálogo</h3>
+          <p>Imagens, códigos, modelos e especificações técnicas baseiam-se em dados de bancada e fabricantes. Preços e disponibilidade de estoque em tempo real devem ser sempre confirmados no Mercado Livre.</p>
+        </article>
+
+        <article class="info-card">
+          <div class="info-card-header">
+            <div class="info-card-icon">${icon("external")}</div>
+            <span class="info-card-badge">03</span>
+          </div>
+          <h3>Compras no Mercado Livre</h3>
+          <p>As compras são concretizadas exclusivamente no Mercado Livre, responsável pela emissão de notas fiscais, cobrança segura, gestão logística e rastreamento oficial do pedido.</p>
+        </article>
+
+        <article class="info-card">
+          <div class="info-card-header">
+            <div class="info-card-icon">${icon("shield")}</div>
+            <span class="info-card-badge">04</span>
+          </div>
+          <h3>Garantia e pós-venda</h3>
+          <p>Todos os produtos possuem garantia e direito de devolução conforme o Código de Defesa do Consumidor e as diretrizes do Mercado Livre. Nossa equipe está sempre à disposição para orientar.</p>
+        </article>
+
+        <article class="info-card">
+          <div class="info-card-header">
+            <div class="info-card-icon">${icon("cpu")}</div>
+            <span class="info-card-badge">05</span>
+          </div>
+          <h3>Conteúdo informacional</h3>
+          <p>Os guias do blog e esquemas elétricos fornecidos possuem caráter educativo e de auxílio técnico. Projetos de engenharia devem sempre validar limites operacionais em datasheets oficiais.</p>
+        </article>
+
+        <article class="info-card">
+          <div class="info-card-header">
+            <div class="info-card-icon">${icon("message")}</div>
+            <span class="info-card-badge">06</span>
+          </div>
+          <h3>Contato e suporte</h3>
+          <p>Para suporte técnico, esclarecimento sobre compras ou orçamentos para lotes, utilize nosso WhatsApp oficial ou o canal de perguntas dos anúncios no Mercado Livre.</p>
+        </article>
+      </div>
+
+      <div style="margin-top: clamp(48px, 6vw, 80px);">
+        ${internalSupportBanner()}
+      </div>
+    </div>
+  </div>`;
+
+  const comoComprarBody = `<div class="internal-page">
+    <section class="internal-hero">
+      <div class="internal-hero-container">
+        <div class="internal-hero-content">
+          <nav class="internal-breadcrumb" aria-label="Navegação estrutural">
+            <a href="${pageUrl()}">Início</a>
+            <span>/</span>
+            <span>Como comprar</span>
+          </nav>
+          <p class="internal-hero-eyebrow">Compra Segura e Sem Complicação</p>
+          <h1 class="internal-hero-title">Como <span>comprar</span></h1>
+          <p class="internal-hero-desc">Veja como é fácil comprar componentes eletrônicos da OMEGAIMPORTS no Mercado Livre e receber seus produtos com agilidade e total segurança.</p>
+          <div class="internal-hero-trust-row">
+            <span class="internal-hero-trust-item">${icon("zap")} Pronta Entrega no Brasil</span>
+            <span class="internal-hero-trust-item">${icon("shield")} Compra Garantida</span>
+            <span class="internal-hero-trust-item">${icon("package")} Rastreio em Tempo Real</span>
+          </div>
+        </div>
+        <div class="internal-hero-media">
+          <img src="${assetUrl("brand/visuals/banner-laptop-mercadolivre.png")}" width="680" height="380" loading="eager" fetchpriority="high" decoding="async" alt="Loja oficial da OMEGAIMPORTS no Mercado Livre exibida no laptop">
+        </div>
+      </div>
+    </section>
+
+    <div class="internal-content-wrap">
+      <div class="internal-section-header text-center">
+        <p class="eyebrow" style="color: var(--blue-600);">Passo a Passo</p>
+        <h2>É simples comprar na <span>OMEGAIMPORTS</span></h2>
+        <p>Siga os 4 passos e receba seus componentes no conforto da sua casa ou laboratório.</p>
+      </div>
+
+      <div class="steps-row">
+        <article class="step-card">
+          <span class="step-badge">1</span>
+          <div class="step-icon-box">${icon("search")}</div>
+          <h3>Encontre o produto</h3>
+          <p>Navegue pelo nosso catálogo, explore as categorias técnicas e localize o componente ideal para seu projeto.</p>
+        </article>
+
+        <article class="step-card">
+          <span class="step-badge">2</span>
+          <div class="step-icon-box">${icon("package")}</div>
+          <h3>Faça a compra</h3>
+          <p>Abra o anúncio oficial no Mercado Livre, confira especificações, adicione ao carrinho e conclua com pagamento protegido.</p>
+        </article>
+
+        <article class="step-card">
+          <span class="step-badge">3</span>
+          <div class="step-icon-box">${icon("zap")}</div>
+          <h3>Acompanhe o envio</h3>
+          <p>Receba o código de rastreamento oficial e acompanhe cada etapa do transporte até o destino.</p>
+        </article>
+
+        <article class="step-card">
+          <span class="step-badge">4</span>
+          <div class="step-icon-box">${icon("shield")}</div>
+          <h3>Receba em mãos</h3>
+          <p>Seus componentes chegam com nota fiscal, devidamente embalados e com suporte técnico pronto para tirar dúvidas.</p>
+        </article>
+      </div>
+
+      <div class="internal-section-header text-center" style="margin-top: clamp(48px, 6vw, 72px);">
+        <p class="eyebrow" style="color: var(--blue-600);">Suas Compras com Mais Tranquilidade</p>
+        <h2>Por que comprar <span>com a gente?</span></h2>
+        <p>Garantimos a melhor experiência de compra técnica desde a seleção até a entrega final.</p>
+      </div>
+
+      <div class="trust-cards-row">
+        <article class="trust-card">
+          <div class="trust-card-icon">${icon("shield")}</div>
+          <h4>Pagamento seguro</h4>
+          <p>Toda a transação é processada com proteção total através do Mercado Pago no Mercado Livre.</p>
+        </article>
+
+        <article class="trust-card">
+          <div class="trust-card-icon">${icon("package")}</div>
+          <h4>Frete para todo o Brasil</h4>
+          <p>Logística ágil com entregas via Mercado Envios e opção de frete rápido para a maioria das regiões.</p>
+        </article>
+
+        <article class="trust-card">
+          <div class="trust-card-icon">${icon("shield")}</div>
+          <h4>Garantia e proteção</h4>
+          <p>Sua compra protegida pelo programa Compra Garantida com até 30 dias para devolução gratuita.</p>
+        </article>
+
+        <article class="trust-card">
+          <div class="trust-card-icon">${icon("message")}</div>
+          <h4>Suporte especializado</h4>
+          <p>Nossa equipe técnica está pronta para ajudar você a escolher o componente certo via WhatsApp.</p>
+        </article>
+      </div>
+
+      <div style="margin-top: clamp(48px, 6vw, 80px);">
+        ${internalSupportBanner()}
+      </div>
+    </div>
+  </div>`;
+
+  const sobreBody = `<div class="internal-page">
+    <section class="internal-hero">
+      <div class="internal-hero-container">
+        <div class="internal-hero-content">
+          <nav class="internal-breadcrumb" aria-label="Navegação estrutural">
+            <a href="${pageUrl()}">Início</a>
+            <span>/</span>
+            <span>Sobre nós</span>
+          </nav>
+          <p class="internal-hero-eyebrow">Quem Somos e O Que Fazemos</p>
+          <h1 class="internal-hero-title">Sobre a <span>OMEGAIMPORTS</span></h1>
+          <p class="internal-hero-desc">Uma vitrine técnica criada para conectar engenheiros, makers, técnicos e integradores aos componentes certos com clareza e transparência.</p>
+          <div class="internal-hero-trust-row">
+            <span class="internal-hero-trust-item">${icon("cpu")} Curadoria Técnica em Bancada</span>
+            <span class="internal-hero-trust-item">${icon("shield")} Anúncios Oficiais Verificados</span>
+            <span class="internal-hero-trust-item">${icon("message")} Atendimento Especializado</span>
+          </div>
+        </div>
+        <div class="internal-hero-media">
+          <img src="${assetUrl("brand/visuals/support-specialist.png")}" width="680" height="380" loading="eager" fetchpriority="high" decoding="async" alt="Especialista em componentes eletrônicos no laboratório OMEGAIMPORTS">
+        </div>
+      </div>
+    </section>
+
+    <div class="internal-content-wrap">
+      <div class="internal-section-header text-center">
+        <p class="eyebrow" style="color: var(--blue-600);">Nossa Proposta</p>
+        <h2>Uma vitrine técnica para comprar com <span>clareza</span></h2>
+        <p>A OMEGAIMPORTS iniciou suas operações em dezembro de 2024 para transformar a compra de componentes eletrônicos em uma experiência direta, segura e fundamentada.</p>
+      </div>
+
+      <div class="info-card-grid">
+        <article class="info-card">
+          <div class="info-card-header">
+            <div class="info-card-icon">${icon("cpu")}</div>
+            <span class="info-card-badge">Missão</span>
+          </div>
+          <h3>Curadoria Especializada</h3>
+          <p>Organizar produtos reais por categoria, aplicação e família técnica, eliminando dúvidas de pinagem, compatibilidade e tensão antes da compra.</p>
+        </article>
+
+        <article class="info-card">
+          <div class="info-card-header">
+            <div class="info-card-icon">${icon("package")}</div>
+            <span class="info-card-badge">Segurança</span>
+          </div>
+          <h3>Mercado Livre Oficial</h3>
+          <p>A finalização da compra acontece no anúncio oficial, onde preço, estoque, frete rápido e pagamento seguro são confirmados pela plataforma.</p>
+        </article>
+
+        <article class="info-card">
+          <div class="info-card-header">
+            <div class="info-card-icon">${icon("book")}</div>
+            <span class="info-card-badge">Conteúdo</span>
+          </div>
+          <h3>Clareza Técnica</h3>
+          <p>Nossos guias técnicos conectam teoria e prática com exemplos reais de esquemas, códigos e aplicações de IoT, telemetria e sensoriamento.</p>
+        </article>
+      </div>
+
+      ${commercialProof()}
+      ${buyingIntelligenceSection(selectByPriority().slice(0, 3))}
+      ${technicalFlowSection()}
+
+      <div style="margin-top: clamp(48px, 6vw, 80px);">
+        ${internalSupportBanner()}
+      </div>
+    </div>
+  </div>`;
+
+  const contatoBody = `<div class="internal-page">
+    <section class="internal-hero">
+      <div class="internal-hero-container">
+        <div class="internal-hero-content">
+          <nav class="internal-breadcrumb" aria-label="Navegação estrutural">
+            <a href="${pageUrl()}">Início</a>
+            <span>/</span>
+            <span>Contato</span>
+          </nav>
+          <p class="internal-hero-eyebrow">Canais Oficiais de Atendimento</p>
+          <h1 class="internal-hero-title">Fale com a <span>OMEGAIMPORTS</span></h1>
+          <p class="internal-hero-desc">Para dúvidas sobre escolha de componentes, compatibilidade técnica, pedidos ou compras em lote, estamos prontos para atender você.</p>
+          <div class="internal-hero-trust-row">
+            <span class="internal-hero-trust-item">${icon("message")} Resposta rápida e sem burocracia</span>
+            <span class="internal-hero-trust-item">${icon("shield")} Suporte técnico dedicado</span>
+          </div>
+        </div>
+        <div class="internal-hero-media">
+          <img src="${assetUrl("brand/visuals/support-specialist.png")}" width="540" height="380" loading="eager" fetchpriority="high" decoding="async" alt="Equipe de atendimento técnico OMEGAIMPORTS">
+        </div>
+      </div>
+    </section>
+
+    <div class="internal-content-wrap">
+      <div class="internal-section-header text-center">
+        <p class="eyebrow" style="color: var(--blue-600);">Atendimento Especializado</p>
+        <h2>Como você prefere <span>conversar?</span></h2>
+        <p>Escolha o canal mais conveniente para tirar suas dúvidas com nossos especialistas.</p>
+      </div>
+
+      <div class="info-card-grid">
+        <article class="info-card">
+          <div class="info-card-header">
+            <div class="info-card-icon">${icon("message")}</div>
+            <span class="info-card-badge">Principal</span>
+          </div>
+          <h3>WhatsApp Oficial</h3>
+          <p>Canal direto para dúvidas de aplicação, especificações técnicas, compatibilidade de módulos e disponibilidade de estoque.</p>
+          <a class="whatsapp-action whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer" style="margin-top: 14px;">Chamar no WhatsApp ${icon("message", "btn-icon")}</a>
+        </article>
+
+        <article class="info-card">
+          <div class="info-card-header">
+            <div class="info-card-icon">${icon("external")}</div>
+            <span class="info-card-badge">Mercado Livre</span>
+          </div>
+          <h3>Perguntas no Anúncio</h3>
+          <p>Faça perguntas diretamente na página do produto no Mercado Livre para conferir prazos de entrega e frete para seu CEP.</p>
+          <a class="secondary-action marketplace-link" href="${site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored" style="margin-top: 14px;">Ver anúncios ${icon("external", "btn-icon")}</a>
+        </article>
+
+        <article class="info-card">
+          <div class="info-card-header">
+            <div class="info-card-icon">${icon("book")}</div>
+            <span class="info-card-badge">Institucional</span>
+          </div>
+          <h3>LinkedIn Corporativo</h3>
+          <p>Acompanhe artigos técnicos, atualizações de novos componentes e novidades da OMEGAIMPORTS na rede profissional.</p>
+          <a class="secondary-action" href="${site.linkedinUrl}" target="_blank" rel="noopener noreferrer" style="margin-top: 14px;">Ver LinkedIn ${icon("external", "btn-icon")}</a>
+        </article>
+      </div>
+
+      <div style="margin-top: clamp(48px, 6vw, 80px);">
+        ${internalSupportBanner()}
+      </div>
+    </div>
+  </div>`;
+
   const pages = [
-    ["sobre", "Sobre a OMEGAIMPORTS", "A OMEGAIMPORTS organiza componentes eletrônicos, IoT, telemetria, energia, prototipagem e automação em uma vitrine técnica ligada aos anúncios oficiais no Mercado Livre.", `<section class="page-hero"><p class="eyebrow">Sobre</p><h1>Uma vitrine técnica para comprar componentes com mais clareza.</h1><p>A OMEGAIMPORTS iniciou suas operações em dezembro de 2024 e atua com componentes eletrônicos, IoT, sensores, fontes, conectores, instrumentos de bancada e itens de prototipagem.</p></section><section class="detail-grid"><div class="detail-block"><h2>Proposta</h2><p>Organizar produtos reais por categoria, aplicação e família técnica, sem transformar a compra em um relatório interno.</p></div><div class="detail-block"><h2>Mercado Livre</h2><p>A finalização da compra acontece no anúncio oficial, onde preço, estoque, frete e pagamento são confirmados.</p></div><div class="detail-block"><h2>Clareza técnica</h2><p>Os textos priorizam informação objetiva, cuidados de uso e relação entre produto, aplicação e conteúdo editorial.</p></div><div class="detail-block"><h2>WhatsApp</h2><p>Para dúvidas sobre escolha de componente, compatibilidade ou aplicação, fale com a OMEGAIMPORTS pelo WhatsApp oficial.</p><a class="whatsapp-action whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp ${icon("message", "btn-icon")}</a></div></section>`],
-    ["como-comprar", "Como comprar", "Encontre o produto, confira modelo e condição, abra o anúncio oficial e finalize a compra pelo Mercado Livre.", `<section class="page-hero"><h1>Como comprar</h1><p>Use o catálogo para comparar componentes e finalize sempre no anúncio oficial da OMEGAIMPORTS no Mercado Livre.</p></section>`],
-    ["politica-de-privacidade", "Política de privacidade", "Este site é uma vitrine estática. Não cria contas, não processa pagamentos e não armazena dados de checkout.", `<section class="page-hero"><h1>Política de privacidade</h1><p>Este site é uma vitrine estática. Não cria contas, não processa pagamentos e não armazena dados de checkout.</p></section>`],
-    ["termos-de-uso", "Termos de uso", "As informações ajudam a organizar e comparar produtos. Condições finais devem ser confirmadas no Mercado Livre.", `<section class="page-hero"><h1>Termos de uso</h1><p>Preços, disponibilidade, frete, pagamento e condições finais devem ser confirmados no anúncio oficial do Mercado Livre.</p></section>`],
-    ["contato", "Contato", "Atendimento pelo WhatsApp oficial da OMEGAIMPORTS e compra finalizada pelo Mercado Livre.", `<section class="page-hero"><h1>Contato</h1><p>Para dúvidas sobre produto, compatibilidade, quantidade, frete ou prazo, fale pelo WhatsApp oficial da OMEGAIMPORTS.</p><a class="whatsapp-action whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp ${icon("message", "btn-icon")}</a></section>`],
-    ["duvidas-frequentes", "Dúvidas frequentes", "O site não tem checkout próprio. Preço, frete, estoque e prazo são confirmados no Mercado Livre.", `<section class="page-hero"><h1>Dúvidas frequentes</h1><p>O site não tem checkout próprio. Preço, frete, estoque e prazo são confirmados no Mercado Livre.</p></section>`],
+    ["sobre", "Sobre a OMEGAIMPORTS", "A OMEGAIMPORTS organiza componentes eletrônicos, IoT, sensores e fontes em uma vitrine técnica conectada aos anúncios oficiais no Mercado Livre.", sobreBody],
+    ["como-comprar", "Como comprar", "Aprenda a comprar componentes eletrônicos com segurança na OMEGAIMPORTS via Mercado Livre em 4 passos simples.", comoComprarBody],
+    ["politica-de-privacidade", "Política de privacidade", "Conheça as práticas de privacidade, proteção de dados e transparência adotadas pela OMEGAIMPORTS de acordo com a LGPD.", politicaPrivacidadeBody],
+    ["termos-de-uso", "Termos de uso", "Regras claras e termos transparentes para consulta de catálogo e compra de componentes técnicos pela OMEGAIMPORTS.", termosUsoBody],
+    ["contato", "Contato", "Atendimento técnico e comercial da OMEGAIMPORTS via WhatsApp oficial e mensagens no Mercado Livre.", contatoBody],
+    ["duvidas-frequentes", "Dúvidas frequentes", "Respostas para dúvidas comuns sobre compra, frete, formas de pagamento, garantia e suporte na OMEGAIMPORTS.", duvidasFrequentesBody, `<script type="application/ld+json">${JSON.stringify(faqSchema)}</script>`],
   ];
-  for (const [slug, title, description, body] of pages) {
-    const enhancedBody = slug === "sobre" ? `${body}${commercialProof()}${buyingIntelligenceSection(selectByPriority().slice(0, 3))}${technicalFlowSection()}${opportunityCta()}` : body;
-    out(`${slug}/index.html`, pageShell({ title, description, path: `${slug}/`, body: enhancedBody }));
+
+  for (const [slug, title, description, body, extraHead = ""] of pages) {
+    out(`${slug}/index.html`, pageShell({ title, description, path: `${slug}/`, body, extraHead }));
   }
 }
 
