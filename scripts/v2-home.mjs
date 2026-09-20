@@ -97,11 +97,21 @@ function wireProductionLinks(html) {
     ["Sobre a OMEGAIMPORTS", pageUrl("sobre/")], ["Política de privacidade", pageUrl("politica-de-privacidade/")],
     ["Termos de uso", pageUrl("termos-de-uso/")], ["Perguntas frequentes (FAQ)", pageUrl("duvidas-frequentes/")],
     ["Mapa do site", pageUrl("sitemap.xml")], ["Todas as categorias", pageUrl("categorias/")],
+    ["Componentes eletrônicos", pageUrl("categorias/componentes-eletronicos/")],
+    ["Módulos IoT", pageUrl("categorias/iot-gsm-e-comunicacao/")],
+    ["Sensores", pageUrl("categorias/sensores-e-medicao/")],
+    ["Fontes e alimentação", pageUrl("categorias/fontes-e-alimentacao/")],
+    ["Automação e controle", pageUrl("categorias/automacao-e-comando/")],
+    ["Ferramentas", pageUrl("produtos/?q=ferramentas")],
+    ["Protótipo e desenvolvimento", pageUrl("produtos/?q=prototipagem")],
   ]);
   html = html.replace(/<a href="([^"]*)"([^>]*)>([\s\S]*?)<\/a>/g, (anchor, oldHref, attributes, inner) => {
     const label = inner.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
     const href = direct.get(label);
-    return href ? `<a href="${href}"${attributes}>${inner}</a>` : anchor;
+    if (href) return `<a href="${href}"${attributes}>${inner}</a>`;
+    if (oldHref === "#" && /\bbrand-logo-link\b/.test(attributes)) return `<a href="${pageUrl()}"${attributes}>${inner}</a>`;
+    if (oldHref === "#") return `<a${attributes} aria-disabled="true" tabindex="-1">${inner}</a>`;
+    return anchor;
   });
   html = html.replaceAll('href="https://wa.me/5535999528858"', `href="${site.whatsappUrl}"`);
   html = html.replaceAll('href="https://www.linkedin.com/company/omegaimports/"', `href="${site.linkedinUrl}"`);
@@ -110,7 +120,21 @@ function wireProductionLinks(html) {
   html = html.replaceAll('href="#sobre"', `href="${pageUrl("sobre/")}"`);
   html = html.replaceAll('href="#como-comprar"', `href="${pageUrl("como-comprar/")}"`);
   html = html.replaceAll('href="#faq"', `href="${pageUrl("duvidas-frequentes/")}"`);
-  return html.replaceAll('href="#"', `href="${pageUrl()}"`);
+  return html;
+}
+
+function applyVerifiedClaims(html) {
+  return html
+    .replaceAll("Entrega para todo o Brasil", "Envio pelo Mercado Livre")
+    .replaceAll("com rastreamento", "rastreado no anúncio")
+    .replaceAll("Compra segura", "Compra no Mercado Livre")
+    .replaceAll("e dados protegidos", "pelo checkout oficial")
+    .replaceAll("Até 12x no cartão", "Condições no anúncio")
+    .replaceAll("ou PIX com desconto", "parcelamento e PIX")
+    .replaceAll("Mais de 15 mil", "Catálogo especializado")
+    .replaceAll("clientes e projetos <!-- MOCKUP CLAIM — validar antes de produção -->", "para projetos reais")
+    .replaceAll("Qualidade garantida", "Informações verificadas")
+    .replaceAll("ou seu dinheiro de volta", "em cada anúncio");
 }
 
 function wireCategoryCards(html) {
@@ -151,5 +175,5 @@ export function renderV2Home({ products, posts }) {
   html = html.replaceAll('<form class="hero-search-box" role="search">', `<form class="hero-search-box" action="${pageUrl("produtos/")}" method="get" role="search">`);
   html = html.replace(/(<form class="(?:header-search|hero-search-box)[^>]*>[\s\S]*?<input)(?![^>]*\bname=)/g, '$1 name="q"');
   html = html.replaceAll('<span id="copyright-year">2026</span>', `<span id="copyright-year">${new Date().getFullYear()}</span>`);
-  return wireCategoryCards(wireProductionLinks(html));
+  return wireCategoryCards(wireProductionLinks(applyVerifiedClaims(html)));
 }

@@ -1,12 +1,10 @@
 import { createServer } from "node:http";
 import { existsSync, mkdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { extname, join, resolve } from "node:path";
-import { createRequire } from "node:module";
+import { chromium } from "playwright";
 import sharp from "sharp";
 
-const require = createRequire(import.meta.url);
-const { chromium } = require("playwright");
-const frozenRoot = process.env.V2_FROZEN_ROOT || "C:/Users/lucas/.gemini/antigravity/scratch/omegaimports-catalogo/handoff/omegaimports-v2-approved/01-preview-v2";
+const frozenRoot = resolve("tests/fixtures/v2-frozen");
 const output = resolve("reports/v2-parity");
 const widths = [1920, 1672, 1440, 1024, 768, 430, 390, 375];
 const types = { ".html": "text/html; charset=utf-8", ".css": "text/css", ".js": "text/javascript", ".svg": "image/svg+xml", ".png": "image/png", ".jpg": "image/jpeg", ".webp": "image/webp", ".avif": "image/avif" };
@@ -48,11 +46,12 @@ function ssim(a, b) {
 mkdirSync(output, { recursive: true });
 const frozenServer = await server(frozenRoot, 4311);
 const productionServer = await server("dist", 4312, true);
-const browser = await chromium.launch({ headless: true });
+let browser;
 const results = [];
-const maskCss = `.products-carousel > *, .blog-newsletter-grid > article { visibility: hidden !important; } * { animation: none !important; transition: none !important; caret-color: transparent !important; }`;
+const maskCss = `.products-carousel > *, .blog-newsletter-grid > article { visibility: hidden !important; } .reveal { opacity: 1 !important; transform: none !important; } * { animation: none !important; transition: none !important; caret-color: transparent !important; }`;
 
 try {
+  browser = await chromium.launch({ headless: true });
   for (const width of widths) {
     const shots = {};
     for (const [kind, url] of [["frozen", "http://127.0.0.1:4311/"], ["production", "http://127.0.0.1:4312/omegaimports-catalogo/"]]) {
@@ -75,9 +74,13 @@ try {
     await sharp(shots.frozen).extract({ left: 0, top: 0, width, height }).composite([{ input: overlay, raw: { width, height, channels: 4 }, blend: "over" }]).png().toFile(join(output, `${width}-overlay.png`));
     await sharp({ create: { width, height, channels: 4, background: "black" } }).composite([{ input: await sharp(left, { raw: { width, height, channels: 4 } }).composite([{ input: right, raw: { width, height, channels: 4 } }, { blend: "difference" }]).png().toBuffer() }]).png().toFile(join(output, `${width}-diff.png`));
     results.push({ width, frozenHeight: fMeta.height, productionHeight: pMeta.height, ssim: Number(score.toFixed(6)), passed: score >= .99 && fMeta.height === pMeta.height });
+    writeFileSync(join(output, "results.json"), JSON.stringify(results, null, 2), "utf8");
   }
+} catch (error) {
+  writeFileSync(join(output, "error.txt"), `${error.stack || error}\n`, "utf8");
+  throw error;
 } finally {
-  await browser.close();
+  await browser?.close();
   frozenServer.close();
   productionServer.close();
 }

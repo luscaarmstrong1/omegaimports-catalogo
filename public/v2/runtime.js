@@ -99,8 +99,12 @@
 
   document.querySelector(".header-account-btn")?.addEventListener("click", () => notify("Atendimento e compras disponíveis pelos canais oficiais."));
   document.querySelector(".header-cart-btn")?.addEventListener("click", () => notify("A compra é finalizada com segurança no anúncio do Mercado Livre."));
+  document.querySelectorAll(".newsletter-form, .footer-newsletter-compact").forEach((form) => form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    notify("Cadastro de newsletter em breve.");
+  }));
   document.querySelectorAll(".product-card-fav").forEach((button) => button.addEventListener("click", () => {
     button.classList.toggle("is-favorite");
-    notify(button.classList.contains("is-favorite") ? "Produto salvo nos favoritos." : "Produto removido dos favoritos.");
+    notify(button.classList.contains("is-favorite") ? "Produto marcado nesta sessão." : "Marcação removida nesta sessão.");
   }));
 })();

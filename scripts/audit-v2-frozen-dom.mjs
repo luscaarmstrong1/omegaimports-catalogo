@@ -1,6 +1,6 @@
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 
-const frozen = readFileSync("templates/v2-home-frozen.html", "utf8");
+const frozen = readFileSync("tests/fixtures/v2-frozen/index.html", "utf8");
 const production = readFileSync("dist/index.html", "utf8");
 
 function staticTagSequence(html) {
@@ -12,7 +12,7 @@ function staticTagSequence(html) {
     .replace(/<script[\s\S]*?<\/script>/g, "")
     .match(/<\/?(?:header|main|footer|section|aside|nav|form|div|article|picture|h1|h2|h3|h4|p|ul|li|a|button|input|label|span)\b[^>]*>/gi)
     ?.map((tag) => tag
-      .replace(/\s(?:href|src|srcset|action|method|name|id|aria-[\w-]+|data-[\w-]+|target|rel|loading|decoding|fetchpriority|alt|title|placeholder|value|required|role|width|height|type|style)=("[^"]*"|'[^']*'|[^\s>]+)/gi, "")
+      .replace(/\s(?:href|src|srcset|action|method|name|id|aria-[\w-]+|data-[\w-]+|target|rel|loading|decoding|fetchpriority|alt|title|placeholder|value|required|role|tabindex|width|height|type|style)=("[^"]*"|'[^']*'|[^\s>]+)/gi, "")
       .replace(/\s+/g, " ")
       .replace(/ >$/, ">"))
     .join("\n") || "";

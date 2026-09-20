@@ -7,7 +7,7 @@ function walk(dir) {
   for (const entry of readdirSync(dir)) {
     const path = join(dir, entry);
     const st = statSync(path);
-    if (st.isDirectory()) walk(path);
+    if (st.isDirectory() && path !== join("tests", "fixtures")) walk(path);
     else if (/\.(mjs|js|ts)$/.test(path)) {
       const text = readFileSync(path, "utf8");
       if (text.includes("console.log(") && !path.includes("scripts")) failures.push(`${path}: console.log fora de script`);
