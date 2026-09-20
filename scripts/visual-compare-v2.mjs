@@ -72,7 +72,7 @@ try {
     const overlay = Buffer.from(right);
     for (let i = 3; i < overlay.length; i += 4) overlay[i] = 128;
     await sharp(shots.frozen).extract({ left: 0, top: 0, width, height }).composite([{ input: overlay, raw: { width, height, channels: 4 }, blend: "over" }]).png().toFile(join(output, `${width}-overlay.png`));
-    await sharp({ create: { width, height, channels: 4, background: "black" } }).composite([{ input: await sharp(left, { raw: { width, height, channels: 4 } }).composite([{ input: right, raw: { width, height, channels: 4 } }, { blend: "difference" }]).png().toBuffer() }]).png().toFile(join(output, `${width}-diff.png`));
+    await sharp({ create: { width, height, channels: 4, background: "black" } }).composite([{ input: await sharp(left, { raw: { width, height, channels: 4 } }).composite([{ input: right, raw: { width, height, channels: 4 }, blend: "difference" }]).png().toBuffer() }]).png().toFile(join(output, `${width}-diff.png`));
     results.push({ width, frozenHeight: fMeta.height, productionHeight: pMeta.height, ssim: Number(score.toFixed(6)), passed: score >= .99 && fMeta.height === pMeta.height });
     writeFileSync(join(output, "results.json"), JSON.stringify(results, null, 2), "utf8");
   }
