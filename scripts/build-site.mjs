@@ -1408,10 +1408,6 @@ function simplePages() {
         </article>
       </div>
 
-      ${commercialProof()}
-      ${buyingIntelligenceSection(selectByPriority().slice(0, 3))}
-      ${technicalFlowSection()}
-
       <div style="margin-top: clamp(48px, 6vw, 80px);">
         ${internalSupportBanner()}
       </div>
