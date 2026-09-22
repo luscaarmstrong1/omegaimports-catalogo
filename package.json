@@ -41,6 +41,7 @@
   "devDependencies": {
     "fast-xml-parser": "^5.10.1",
     "fflate": "^0.8.3",
+    "puppeteer": "^25.11.0",
     "sharp": "^0.35.3"
   }
 }

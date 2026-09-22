@@ -22,6 +22,7 @@ import {
   productFormat,
   productPicture,
   site,
+  v2PageShell,
 } from "./shared.mjs";
 
 const dist = new URL("../dist/", import.meta.url);
@@ -51,6 +52,7 @@ function copyAssets() {
   cpSync(new URL("../public/blog/stock/", import.meta.url), new URL("blog/stock/", dist), { recursive: true });
   cpSync(new URL("../public/assets/", import.meta.url), new URL("assets/", dist), { recursive: true });
   cpSync(new URL("../public/products/", import.meta.url), new URL("products/", dist), { recursive: true });
+  cpSync(new URL("../preview-v2/", import.meta.url), new URL("v2/", dist), { recursive: true });
   cpSync(new URL("../public/versions/previous/", import.meta.url), new URL("versao-anterior/", dist), { recursive: true });
   cpSync(new URL("../public/manifest.webmanifest", import.meta.url), new URL("manifest.webmanifest", dist));
   const currentVersion = new URL("../public/versions/current/", import.meta.url);
@@ -1587,7 +1589,9 @@ function simplePages() {
   ];
 
   for (const [slug, title, description, body, extraHead = ""] of pages) {
-    out(`${slug}/index.html`, pageShell({ title, description, path: `${slug}/`, body, extraHead }));
+    const isV2 = ["como-comprar", "politica-de-privacidade", "termos-de-uso", "duvidas-frequentes"].includes(slug);
+    const shellFn = isV2 ? v2PageShell : pageShell;
+    out(`${slug}/index.html`, shellFn({ title, description, path: `${slug}/`, body, extraHead }));
   }
 }
 

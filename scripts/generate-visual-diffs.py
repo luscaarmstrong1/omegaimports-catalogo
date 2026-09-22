@@ -2,15 +2,15 @@ import os
 import glob
 from PIL import Image, ImageChops
 
-base_dir = "reports/visual-parity"
+base_dir = "reports/final-parity"
 mockups_dir = "reference-mockups"
 
 # Mapeamento oficial definido em reports/mockup-reference-final.md
 mapping = {
-    "faq": "ChatGPT Image 19_09_2026, 20_48_50 (2).png",
-    "privacy": "ChatGPT Image 19_09_2026, 20_48_50 (4).png",
-    "terms": "ChatGPT Image 19_09_2026, 20_48_51 (6).png",
-    "how-to-buy": "ChatGPT Image 19_09_2026, 20_48_51 (8).png",
+    "duvidas-frequentes": "ChatGPT Image 19_09_2026, 20_48_50 (2).png",
+    "politica-de-privacidade": "ChatGPT Image 19_09_2026, 20_48_50 (4).png",
+    "termos-de-uso": "ChatGPT Image 19_09_2026, 20_48_51 (6).png",
+    "como-comprar": "ChatGPT Image 19_09_2026, 20_48_51 (8).png",
     "categories": "ChatGPT Image 19_09_2026, 20_56_35 (1).png",
     "blog": "ChatGPT Image 19_09_2026, 20_56_36 (6).png",
     "about": "ChatGPT Image 19_09_2026, 20_56_36 (5).png",
