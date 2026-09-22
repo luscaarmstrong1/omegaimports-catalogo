@@ -52,7 +52,15 @@ function copyAssets() {
   cpSync(new URL("../public/blog/stock/", import.meta.url), new URL("blog/stock/", dist), { recursive: true });
   cpSync(new URL("../public/assets/", import.meta.url), new URL("assets/", dist), { recursive: true });
   cpSync(new URL("../public/products/", import.meta.url), new URL("products/", dist), { recursive: true });
-  cpSync(new URL("../preview-v2/", import.meta.url), new URL("v2/", dist), { recursive: true });
+  console.log("Copiando assets do preview-v2 para dist/v2...");
+  mkdirSync(new URL("v2/", dist), { recursive: true });
+  const v2Src = new URL("../preview-v2/", import.meta.url);
+  const v2Dest = new URL("v2/", dist);
+  for (const item of ["assets", "css", "js", "runtime.js"]) {
+    try {
+      cpSync(new URL(item, v2Src), new URL(item, v2Dest), { recursive: true });
+    } catch {}
+  }
   cpSync(new URL("../public/versions/previous/", import.meta.url), new URL("versao-anterior/", dist), { recursive: true });
   cpSync(new URL("../public/manifest.webmanifest", import.meta.url), new URL("manifest.webmanifest", dist));
   const currentVersion = new URL("../public/versions/current/", import.meta.url);
@@ -1580,18 +1588,24 @@ function simplePages() {
   </div>`;
 
   const pages = [
-    ["sobre", "Sobre a OMEGAIMPORTS", "A OMEGAIMPORTS organiza componentes eletrônicos, IoT, sensores e fontes em uma vitrine técnica conectada aos anúncios oficiais no Mercado Livre.", sobreBody],
+    ["sobre", "Sobre a OMEGAIMPORTS", "A OMEGAIMPORTS organiza componentes eletrônicos, IoT, telemetria, energia, prototipagem e automação em uma vitrine técnica ligada aos anúncios oficiais no Mercado Livre.", `<section class="page-hero"><p class="eyebrow">Sobre</p><h1>Uma vitrine técnica para comprar componentes com mais clareza.</h1><p>A OMEGAIMPORTS iniciou suas operações em dezembro de 2024 e atua com componentes eletrônicos, IoT, sensores, fontes, conectores, instrumentos de bancada e itens de prototipagem.</p></section><section class="detail-grid"><div class="detail-block"><h2>Proposta</h2><p>Organizar produtos reais por categoria, aplicação e família técnica, sem transformar a compra em um relatório interno.</p></div><div class="detail-block"><h2>Mercado Livre</h2><p>A finalização da compra acontece no anúncio oficial, onde preço, estoque, frete e pagamento são confirmados.</p></div><div class="detail-block"><h2>Clareza técnica</h2><p>Os textos priorizam informação objetiva, cuidados de uso e relação entre produto, aplicação e conteúdo editorial.</p></div><div class="detail-block"><h2>WhatsApp</h2><p>Para dúvidas sobre escolha de componente, compatibilidade ou aplicação, fale com a OMEGAIMPORTS pelo WhatsApp oficial.</p><a class="whatsapp-action whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp ${icon("message", "btn-icon")}</a></div></section>`],
     ["como-comprar", "Como comprar", "Aprenda a comprar componentes eletrônicos com segurança na OMEGAIMPORTS via Mercado Livre em 4 passos simples.", comoComprarBody],
     ["politica-de-privacidade", "Política de privacidade", "Conheça as práticas de privacidade, proteção de dados e transparência adotadas pela OMEGAIMPORTS de acordo com a LGPD.", politicaPrivacidadeBody],
     ["termos-de-uso", "Termos de uso", "Regras claras e termos transparentes para consulta de catálogo e compra de componentes técnicos pela OMEGAIMPORTS.", termosUsoBody],
-    ["contato", "Contato", "Atendimento técnico e comercial da OMEGAIMPORTS via WhatsApp oficial e mensagens no Mercado Livre.", contatoBody],
+    ["contato", "Contato", "Atendimento pelo WhatsApp oficial da OMEGAIMPORTS e compra finalizada pelo Mercado Livre.", `<section class="page-hero"><h1>Contato</h1><p>Para dúvidas sobre produto, compatibilidade, quantidade, frete ou prazo, fale pelo WhatsApp oficial da OMEGAIMPORTS.</p><a class="whatsapp-action whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp ${icon("message", "btn-icon")}</a></section>`],
     ["duvidas-frequentes", "Dúvidas frequentes", "Respostas para dúvidas comuns sobre compra, frete, formas de pagamento, garantia e suporte na OMEGAIMPORTS.", duvidasFrequentesBody, `<script type="application/ld+json">${JSON.stringify(faqSchema)}</script>`],
   ];
 
   for (const [slug, title, description, body, extraHead = ""] of pages) {
     const isV2 = ["como-comprar", "politica-de-privacidade", "termos-de-uso", "duvidas-frequentes"].includes(slug);
     const shellFn = isV2 ? v2PageShell : pageShell;
-    out(`${slug}/index.html`, shellFn({ title, description, path: `${slug}/`, body, extraHead }));
+    
+    let finalBody = body;
+    if (slug === "sobre") {
+      finalBody = `${body}${commercialProof()}${buyingIntelligenceSection(selectByPriority().slice(0, 3))}${technicalFlowSection()}${opportunityCta()}`;
+    }
+    
+    out(`${slug}/index.html`, shellFn({ title, description, path: `${slug}/`, body: finalBody, extraHead }));
   }
 }
 

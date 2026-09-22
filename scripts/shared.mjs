@@ -353,10 +353,74 @@ function fitDescription(value = "") {
 
 
 
+
+import { join } from 'node:path';
+
+function getCanonicalV2Parts() {
+  const htmlPath = join(process.cwd(), 'preview-v2/index.html');
+  const html = readFileSync(htmlPath, 'utf8');
+
+  // Extract raw sections
+  const headerMatch = html.match(/<header[^>]*>[\s\S]*?<\/header>/);
+  const drawerMatch = html.match(/<div class="mobile-drawer-backdrop"[^>]*><\/div><aside class="mobile-drawer"[^>]*>[\s\S]*?<\/aside>/);
+  const footerMatch = html.match(/<footer[^>]*>[\s\S]*?<\/footer>/);
+
+  let header = headerMatch ? headerMatch[0] : '';
+  let drawer = drawerMatch ? drawerMatch[0] : '';
+  let footer = footerMatch ? footerMatch[0] : '';
+
+  // Replace relative paths with dynamic assetUrl/pageUrl
+  const replaceUrls = (str) => {
+    return str
+      .replace(/\.\/css\//g, '${assetUrl("v2/css/")}')
+      .replace(/\.\/assets\//g, '${assetUrl("v2/assets/")}')
+      .replace(/\.\/js\//g, '${assetUrl("v2/js/")}')
+      .replace(/href="#"/g, 'href="${pageUrl()}"')
+      .replace(/href="#produtos"/g, 'href="${pageUrl("produtos/")}"')
+      .replace(/href="#categorias"/g, 'href="${navUrl("categorias/")}"')
+      .replace(/href="#blog"/g, 'href="${navUrl("blog/")}"')
+      .replace(/href="#sobre"/g, 'href="${navUrl("sobre/")}"')
+      .replace(/href="#como-comprar"/g, 'href="${pageUrl("como-comprar/")}"');
+  };
+
+  return {
+    header: replaceUrls(header),
+    drawer: replaceUrls(drawer),
+    footer: replaceUrls(footer),
+  };
+}
+
 export function v2PageShell({ title, description, path = "", body, extraHead = "", ogImage = "brand/visuals/og-home.jpg", type = "website" }) {
   const canonical = absolute(path);
   const metaTitle = fitText(title, 72);
   const metaDescription = fitDescription(description);
+
+  const parts = getCanonicalV2Parts();
+
+  // Evaluate the extracted strings as template literals to resolve ${assetUrl(...)} inside them
+  // We provide the functions they need via local variables so eval can find them
+  const assetUrlLocal = assetUrl;
+  const pageUrlLocal = pageUrl;
+  const navUrlLocal = navUrl;
+  
+  // A safe way to replace the ${var} without eval is using a reviver, but since it's just 3 functions:
+  const interpolate = (template) => {
+    return template.replace(/\$\{([a-zA-Z]+)\("([^"]+)"\)\}/g, (match, fn, arg) => {
+      if (fn === 'assetUrl') return assetUrl(arg);
+      if (fn === 'pageUrl') return pageUrl(arg);
+      if (fn === 'navUrl') return navUrl(arg);
+      return match;
+    }).replace(/\$\{([a-zA-Z]+)\(\)\}/g, (match, fn) => {
+      if (fn === 'assetUrl') return assetUrl();
+      if (fn === 'pageUrl') return pageUrl();
+      if (fn === 'navUrl') return navUrl();
+      return match;
+    });
+  };
+
+  const headerStr = interpolate(parts.header);
+  const drawerStr = interpolate(parts.drawer);
+  const footerStr = interpolate(parts.footer);
 
   return `<!doctype html>
 <html lang="pt-BR">
@@ -384,7 +448,6 @@ export function v2PageShell({ title, description, path = "", body, extraHead = "
   <link rel="stylesheet" href="${assetUrl("v2/css/sections.css")}">
   <link rel="stylesheet" href="${assetUrl("v2/css/responsive.css")}">
   <link rel="stylesheet" href="${assetUrl("v2/css/animations.css")}">
-  <link rel="stylesheet" href="${assetUrl("v2/css/production.css")}">
   <script type="application/ld+json">${JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -409,25 +472,12 @@ export function v2PageShell({ title, description, path = "", body, extraHead = "
 </head>
 <body class="v2-home">
   <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
-  <header class="site-header" role="banner"><div class="container header-inner">
-    <a href="${pageUrl()}" class="brand-logo-link" aria-label="OMEGAIMPORTS - início"><img src="${assetUrl("v2/assets/")}brand/omegaimports-logo-horizontal.svg" alt="OMEGAIMPORTS - Componentes que fazem mais" class="brand-logo-img" width="180" height="42"></a>
-    <nav class="main-nav" aria-label="Navegação principal"><a href="${pageUrl("produtos/")}" class="nav-link">Produtos</a><a href="${navUrl("categorias/")}" class="nav-link">Categorias</a><a href="#marcas" class="nav-link">Marcas</a><a href="${navUrl("blog/")}" class="nav-link">Blog</a><a href="${navUrl("sobre/")}" class="nav-link">Sobre</a><a href="${pageUrl("como-comprar/")}" class="nav-link">Como comprar</a></nav>
-    <form class="header-search" action="${pageUrl("produtos/")}" method="get" role="search">
-    <label class="sr-only" for="header-site-search">Buscar no catálogo</label>
-    <input id="header-site-search" name="q" type="search" placeholder="Busque produtos ou projetos..." autocomplete="off">
-    <button type="submit" class="header-search-btn" aria-label="Executar busca"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
-  </form>
-    <div class="header-actions"><a class="header-account-btn" href="https://www.mercadolivre.com.br/pagina/omegaimports" target="_blank" rel="noopener noreferrer sponsored" aria-label="Abrir loja oficial no Mercado Livre"><span>Loja oficial</span></a><span class="header-cart-btn is-disabled" title="A compra é finalizada no Mercado Livre" aria-label="Carrinho disponível no Mercado Livre"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg></span><button type="button" class="hamburger-btn" aria-label="Abrir menu" aria-expanded="false"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button></div>
-  </div></header>
-  <div class="mobile-drawer-backdrop" aria-hidden="true"></div><aside class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Menu móvel" aria-hidden="true"><div class="drawer-header"><a href="${pageUrl()}" class="brand-logo-link"><img src="${assetUrl("v2/assets/")}brand/omegaimports-logo-horizontal.svg" alt="OMEGAIMPORTS" class="brand-logo-img" width="160" height="38"></a><button type="button" class="drawer-close-btn" aria-label="Fechar menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button></div><form class="header-search drawer-search" action="${pageUrl("produtos/")}" method="get" role="search">
-    <label class="sr-only" for="drawer-site-search">Buscar no catálogo</label>
-    <input id="drawer-site-search" name="q" type="search" placeholder="Buscar componentes..." autocomplete="off">
-    <button type="submit" class="header-search-btn" aria-label="Executar busca"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
-  </form><nav class="drawer-nav"><a href="${pageUrl("produtos/")}" class="nav-link">Produtos</a><a href="${navUrl("categorias/")}" class="nav-link">Categorias</a><a href="#marcas" class="nav-link">Marcas</a><a href="${navUrl("blog/")}" class="nav-link">Blog</a><a href="${navUrl("sobre/")}" class="nav-link">Sobre</a><a href="${pageUrl("como-comprar/")}" class="nav-link">Como comprar</a></nav><div class="drawer-footer-actions"><a href="https://wa.me/5535999528858?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20OMEGAIMPORTS%20e%20gostaria%20de%20ajuda%20para%20escolher%20um%20produto." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp"><svg class="icon-whatsapp" width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.03 6.17a5.77 5.77 0 0 0-4.75 9.05l-.58 2.13 2.18-.57a5.77 5.77 0 1 0 3.15-10.61Zm3.39 8.24c-.14.41-.84.78-1.17.83-.3.04-.68.06-1.09-.07-2.08-.66-3.87-2.96-3.96-3.08-.09-.11-.7-.94-.7-1.79 0-.86.45-1.28.61-1.45.16-.17.35-.22.46-.22.26 0 .41 0 .53.31l.54 1.29c.04.08.07.19.01.3-.05.12-.08.19-.17.29l-.26.3c-.09.09-.18.18-.08.36.49.84 1.2 1.52 2.36 2 .17.09.27.07.37-.05.1-.11.44-.5.55-.68.12-.17.23-.14.39-.08l1.19.56c.17.09.29.13.33.21.05.07.05.41-.1.82Z"></path></svg><span>Falar no WhatsApp</span></a><a href="https://www.mercadolivre.com.br/pagina/omegaimports" target="_blank" rel="noopener noreferrer sponsored" class="btn btn-yellow">Loja no Mercado Livre</a></div></aside>
+  ${headerStr}
+  ${drawerStr}
   <main id="main-content">
     ${body}
   </main>
-  <footer class="site-footer" role="contentinfo"><div class="container"><div class="footer-main-grid"><div class="footer-brand-col"><a href="${pageUrl()}" class="brand-logo-link"><img src="${assetUrl("v2/assets/")}brand/omegaimports-logo-horizontal.svg" alt="OMEGAIMPORTS" class="brand-logo-img" width="180" height="42"></a><p>Componentes eletrônicos para transformar ideias em projetos reais, com catálogo técnico e compra no anúncio oficial.</p><div class="footer-social-links"><a href="https://www.linkedin.com/company/omegaimports/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn">in</a></div><div class="handwriting handwriting-white">Ideias de hoje.<br><span class="handwriting-yellow">Soluções de amanhã.</span></div></div><div><h4 class="footer-col-title">INSTITUCIONAL</h4><ul class="footer-links-list"><li><a href="${navUrl("sobre/")}">Sobre a OMEGAIMPORTS</a></li><li><a href="${navUrl("blog/")}">Blog</a></li><li><a href="/omegaimports-catalogo/politica-de-privacidade/">Política de privacidade</a></li><li><a href="/omegaimports-catalogo/termos-de-uso/">Termos de uso</a></li></ul></div><div><h4 class="footer-col-title">AJUDA</h4><ul class="footer-links-list"><li><a href="${pageUrl("como-comprar/")}">Como comprar</a></li><li><a href="/omegaimports-catalogo/duvidas-frequentes/">Perguntas frequentes</a></li><li><a href="https://wa.me/5535999528858?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20OMEGAIMPORTS%20e%20gostaria%20de%20ajuda%20para%20escolher%20um%20produto." target="_blank" rel="noopener noreferrer">Fale conosco</a></li><li><a href="https://www.mercadolivre.com.br/pagina/omegaimports" target="_blank" rel="noopener noreferrer sponsored">Loja no Mercado Livre</a></li></ul></div><div><h4 class="footer-col-title">CATEGORIAS</h4><ul class="footer-links-list"><li><a href="/omegaimports-catalogo/categorias/iot-gsm-e-comunicacao/">Módulos IoT</a></li><li><a href="/omegaimports-catalogo/categorias/sensores-e-medicao/">Sensores</a></li><li><a href="/omegaimports-catalogo/categorias/fontes-e-alimentacao/">Fontes e Energia</a></li><li><a href="/omegaimports-catalogo/categorias/automacao-e-comando/">Relés e Acionamento</a></li><li><a href="/omegaimports-catalogo/categorias/gps-e-localizacao/">GPS e Navegação</a></li><li><a href="/omegaimports-catalogo/produtos/?q=display">Displays e IHM</a></li><li><a href="${navUrl("categorias/")}">Todas as categorias</a></li></ul></div><div><h4 class="footer-col-title">ACOMPANHE</h4><p>Novos guias e conteúdos técnicos são publicados no blog e no LinkedIn oficial.</p><a class="btn btn-outline-yellow" href="https://www.linkedin.com/company/omegaimports/" target="_blank" rel="noopener noreferrer">Ver LinkedIn</a></div></div><div class="footer-trust-badges-bar"><div class="badge-block-group"><span class="badge-block-label">FORMAS EXIBIDAS NO CHECKOUT</span><div class="badge-block-content payment-logos"><div class="payment-card"><img src="${assetUrl("v2/assets/")}payments/visa.png" alt="visa" width="38" height="24" loading="lazy"></div><div class="payment-card"><img src="${assetUrl("v2/assets/")}payments/mastercard.png" alt="mastercard" width="38" height="24" loading="lazy"></div><div class="payment-card"><img src="${assetUrl("v2/assets/")}payments/elo.png" alt="elo" width="38" height="24" loading="lazy"></div><div class="payment-card"><img src="${assetUrl("v2/assets/")}payments/american-express.png" alt="american-express" width="38" height="24" loading="lazy"></div><div class="payment-card"><img src="${assetUrl("v2/assets/")}payments/hipercard.png" alt="hipercard" width="38" height="24" loading="lazy"></div><div class="payment-card"><img src="${assetUrl("v2/assets/")}payments/pix.png" alt="pix" width="38" height="24" loading="lazy"></div><div class="payment-card"><img src="${assetUrl("v2/assets/")}payments/boleto.png" alt="boleto" width="38" height="24" loading="lazy"></div></div></div><div class="badge-block-group"><span class="badge-block-label">MARKETPLACES</span><div class="badge-block-content"><a class="marketplace-card" href="https://www.mercadolivre.com.br/pagina/omegaimports" target="_blank" rel="noopener noreferrer sponsored"><img src="${assetUrl("v2/assets/")}marketplaces/mercado-livre.png" alt="Mercado Livre" width="75" height="24" loading="lazy"></a><div class="marketplace-card" aria-label="Shopee"><img src="${assetUrl("v2/assets/")}marketplaces/shopee.png" alt="Shopee" width="70" height="24" loading="lazy"></div></div></div><div class="security-badge-card"><div class="security-badge-text"><strong>COMPRA NO MARKETPLACE</strong><span>Pagamento, frete e dados processados no canal escolhido.</span></div></div></div><div class="footer-copyright-bar"><p>© 2026 OMEGAIMPORTS. Todos os direitos reservados.</p><div class="footer-legal-links"><a href="/omegaimports-catalogo/politica-de-privacidade/">Privacidade</a><a href="/omegaimports-catalogo/termos-de-uso/">Termos de uso</a><a href="/omegaimports-catalogo/sitemap.xml">Mapa do site</a></div></div></div></footer>
+  ${footerStr}
 </body>
 </html>`;
 }
