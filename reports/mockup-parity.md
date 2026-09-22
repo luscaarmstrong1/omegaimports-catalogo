@@ -135,3 +135,31 @@ Todas as páginas internas utilizam tipografia oficial da marca (Space Grotesk e
 
 - **Header Canônico:** Todas as páginas renderizam o componente unificado `<header class="site-header">` proveniente de `scripts/shared.mjs`. Não há cabeçalhos duplicados, hardcoded ou alternativos. Possui a mesma logo oficial, links de navegação (`/`, `/categorias/`, `/como-comprar/`, `/sobre/`, `/blog/`, `/contato/`, `/duvidas-frequentes/`), botão de catálogo e gatilho do menu móvel.
 - **Footer Canônico:** Todas as páginas renderizam o componente unificado `<footer class="footer">` proveniente de `scripts/shared.mjs`, com as colunas institucionais, links rápidos, informações de entrega Mercado Livre e direitos autorais.
+
+---
+
+## 4. Evidências Empíricas do Pipeline de Regressão Visual
+
+Para assegurar conformidade empírica estrita com os mockups oficiais do Google Drive, foi executado o pipeline automatizado de captura de alta resolução (1920x2400) e geração de diffs/overlays (`scripts/capture-parity-currents.mjs` e `scripts/generate-visual-diffs.py`):
+
+| Página | Rota | Referência Mockup | Render Atual | Comparação 50/50 Overlay | Visual Diff |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **FAQ / Dúvidas Frequentes** | `/duvidas-frequentes/` | `reports/visual-parity/faq/reference.png` | `reports/visual-parity/faq/current.png` | `reports/visual-parity/faq/overlay.png` | `reports/visual-parity/faq/diff.png` |
+| **Política de Privacidade** | `/politica-de-privacidade/` | `reports/visual-parity/privacy/reference.png` | `reports/visual-parity/privacy/current.png` | `reports/visual-parity/privacy/overlay.png` | `reports/visual-parity/privacy/diff.png` |
+| **Termos de Uso** | `/termos-de-uso/` | `reports/visual-parity/terms/reference.png` | `reports/visual-parity/terms/current.png` | `reports/visual-parity/terms/overlay.png` | `reports/visual-parity/terms/diff.png` |
+| **Como Comprar** | `/como-comprar/` | `reports/visual-parity/how-to-buy/reference.png` | `reports/visual-parity/how-to-buy/current.png` | `reports/visual-parity/how-to-buy/overlay.png` | `reports/visual-parity/how-to-buy/diff.png` |
+| **Sobre Nós** | `/sobre/` | `reports/visual-parity/about/reference.png` | `reports/visual-parity/about/current.png` | `reports/visual-parity/about/overlay.png` | `reports/visual-parity/about/diff.png` |
+| **Contato** | `/contato/` | `reports/visual-parity/contact/reference.png` | `reports/visual-parity/contact/current.png` | `reports/visual-parity/contact/overlay.png` | `reports/visual-parity/contact/diff.png` |
+| **Categorias** | `/categorias/` | `reports/visual-parity/categories/reference.png` | `reports/visual-parity/categories/current.png` | `reports/visual-parity/categories/overlay.png` | `reports/visual-parity/categories/diff.png` |
+| **Blog Técnico** | `/blog/` | `reports/visual-parity/blog/reference.png` | `reports/visual-parity/blog/current.png` | `reports/visual-parity/blog/overlay.png` | `reports/visual-parity/blog/diff.png` |
+
+---
+
+## 5. Auditorias Automatizadas e Testes
+
+Todos os testes automatizados e suítes de auditoria foram executados e aprovados:
+- `npm test`: 6/6 testes de catálogo aprovados.
+- `npm run audit:links`: 100% dos links internos e externos validados com sucesso.
+- `npm run audit:seo`: Metadados Open Graph, Twitter Cards, títulos e descrições canônicos validados.
+- `npm run audit:copy`: Conformidade com diretrizes de copy (zero garantias inventadas, zero alegações fictícias).
+- `npm run test:e2e`: Testes end-to-end de rotas e assets validados com sucesso.
