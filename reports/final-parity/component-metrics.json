@@ -1,10 +1,12 @@
 {
-  "header": {
-    "pixelDifferencePercent": 99.9446,
-    "mae": 53.9102
+  "HEADER": {
+    "pixelDifferencePercent": 9.6518,
+    "MAE": 12.9797,
+    "SSIM": 0.8407
   },
-  "footer": {
-    "pixelDifferencePercent": 99.9987,
-    "mae": 13.3147
+  "FOOTER": {
+    "pixelDifferencePercent": 7.0217,
+    "MAE": 5.8912,
+    "SSIM": 0.8637
   }
 }

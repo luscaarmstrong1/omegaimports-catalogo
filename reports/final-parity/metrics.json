@@ -1,22 +1,22 @@
 {
   "como-comprar": {
-    "pixelDifferencePercent": 99.7883,
-    "mae": 122.8408
+    "pixelDifferencePercent": 46.8892,
+    "MAE": 52.6634,
+    "SSIM": 0.5651
   },
   "termos-de-uso": {
-    "pixelDifferencePercent": 99.9923,
-    "mae": 138.4843
+    "pixelDifferencePercent": 59.643,
+    "MAE": 71.9522,
+    "SSIM": 0.4656
   },
   "politica-de-privacidade": {
-    "pixelDifferencePercent": 99.995,
-    "mae": 118.1072
+    "pixelDifferencePercent": 62.0181,
+    "MAE": 79.9377,
+    "SSIM": 0.4589
   },
   "duvidas-frequentes": {
-    "pixelDifferencePercent": 99.9908,
-    "mae": 114.2424
-  },
-  "home": {
-    "pixelDifferencePercent": 98.8421,
-    "mae": 79.3575
+    "pixelDifferencePercent": 72.0479,
+    "MAE": 77.0356,
+    "SSIM": 0.477
   }
 }
