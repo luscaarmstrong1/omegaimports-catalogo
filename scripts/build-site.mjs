@@ -1066,8 +1066,12 @@ function simplePages() {
         </details>
       </div>
 
-      <!-- BANNER DE SUPORTE 1:1 DO MOCKUP FAQ -->
-      <section class="faq-bottom-banner" data-reveal>
+      </div>
+    </div>
+
+    <!-- BANNER DE SUPORTE 1:1 DO MOCKUP FAQ (FULL WIDTH) -->
+    <section class="faq-bottom-banner" data-reveal>
+      <div class="faq-bottom-container">
         <div class="faq-bottom-left">
           <div class="faq-bottom-bubble-icon">
             ${icon("chat-bubbles")}
@@ -1078,26 +1082,24 @@ function simplePages() {
             <p class="faq-bottom-desc">Estamos prontos para ajudar você pelo WhatsApp ou no Mercado Livre.</p>
           </div>
         </div>
-        <div class="faq-bottom-right">
-          <div class="faq-bottom-buttons">
-            <a class="faq-btn-whatsapp whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">
-              <span class="faq-btn-icon">${icon("whatsapp")}</span>
-              <span>Falar no WhatsApp</span>
-              <span class="faq-btn-arrow">&rarr;</span>
-            </a>
-            <a class="faq-btn-meli marketplace-link" href="${site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored">
-              <span class="faq-btn-icon">${icon("handshake")}</span>
-              <span>Atendimento no Mercado Livre</span>
-              <span class="faq-btn-arrow">&rarr;</span>
-            </a>
-          </div>
-          <div class="mockup-handwriting mockup-handwriting--banner">
-            <span>Resposta rápida e sem burocracia.</span>
-            <svg class="curved-underline" viewBox="0 0 140 16" fill="none"><path d="M4 11 Q 70 16, 136 4" stroke="#ffd100" stroke-width="3.5" stroke-linecap="round"/></svg>
-          </div>
+        <div class="faq-bottom-buttons">
+          <a class="faq-btn-whatsapp whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">
+            <span class="faq-btn-icon">${icon("whatsapp")}</span>
+            <span>Falar no WhatsApp</span>
+            <span class="faq-btn-arrow">&rarr;</span>
+          </a>
+          <a class="faq-btn-meli marketplace-link" href="${site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored">
+            <span class="faq-btn-icon">${icon("handshake")}</span>
+            <span>Atendimento no Mercado Livre</span>
+            <span class="faq-btn-arrow">&rarr;</span>
+          </a>
         </div>
-      </section>
-    </div>
+        <div class="mockup-handwriting mockup-handwriting--banner">
+          <span>Resposta rápida<br>e sem burocracia.</span>
+          <svg class="curved-underline" viewBox="0 0 140 16" fill="none"><path d="M4 11 Q 70 16, 136 4" stroke="#ffd100" stroke-width="3.5" stroke-linecap="round"/></svg>
+        </div>
+      </div>
+    </section>
   </div>`;
 
   const politicaPrivacidadeBody = `<div class="internal-page internal-page--privacy">
@@ -1181,21 +1183,19 @@ function simplePages() {
             <p class="privacy-bottom-desc">Se tiver dúvidas sobre esta política ou sobre o tratamento de seus dados, estamos à disposição para ajudar.</p>
           </div>
         </div>
-        <div class="privacy-bottom-right">
-          <div class="privacy-bottom-buttons">
-            <a class="privacy-btn-whatsapp whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">
-              <span class="privacy-btn-icon">${icon("whatsapp")}</span>
-              <span>Falar no WhatsApp</span>
-            </a>
-            <a class="privacy-btn-email" href="mailto:contato@omegaimports.com.br?subject=D%C3%BAvida%20sobre%20Privacidade">
-              <span class="privacy-btn-icon">${icon("mail")}</span>
-              <span>Enviar um e-mail</span>
-            </a>
-          </div>
-          <div class="mockup-handwriting mockup-handwriting--banner">
-            <span>Estamos aqui para ajudar!</span>
-            <svg class="curved-underline" viewBox="0 0 140 16" fill="none"><path d="M4 11 Q 70 16, 136 4" stroke="#ffd100" stroke-width="3.5" stroke-linecap="round"/></svg>
-          </div>
+        <div class="privacy-bottom-buttons">
+          <a class="privacy-btn-whatsapp whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">
+            <span class="privacy-btn-icon">${icon("whatsapp")}</span>
+            <span>Falar no WhatsApp</span>
+          </a>
+          <a class="privacy-btn-email" href="mailto:contato@omegaimports.com.br?subject=D%C3%BAvida%20sobre%20Privacidade">
+            <span class="privacy-btn-icon">${icon("mail")}</span>
+            <span>Enviar um e-mail</span>
+          </a>
+        </div>
+        <div class="mockup-handwriting mockup-handwriting--banner">
+          <span>Estamos aqui para ajudar!</span>
+          <svg class="curved-underline" viewBox="0 0 140 16" fill="none"><path d="M4 11 Q 70 16, 136 4" stroke="#ffd100" stroke-width="3.5" stroke-linecap="round"/></svg>
         </div>
       </section>
     </div>
@@ -1220,8 +1220,8 @@ function simplePages() {
         </div>
         <div class="internal-hero-media">
           <img src="${assetUrl("brand/visuals/hero-esp32-vertical.png")}" width="540" height="380" loading="eager" fetchpriority="high" decoding="async" alt="Módulo ESP32 montado em bancada OMEGAIMPORTS">
-          <div class="mockup-handwriting mockup-handwriting--hero">
-            <span>Tecnologia hoje. Projetos reais amanhã.</span>
+          <div class="mockup-handwriting mockup-handwriting--hero mockup-handwriting--hero-top">
+            <span>Tecnologia hoje.<br>Projetos reais amanhã.</span>
             <svg class="curved-underline" viewBox="0 0 150 16" fill="none"><path d="M4 11 Q 75 16, 146 4" stroke="#ffd100" stroke-width="3.5" stroke-linecap="round"/></svg>
           </div>
         </div>
@@ -1311,7 +1311,7 @@ function simplePages() {
         </div>
         <div class="internal-hero-media">
           <img src="${assetUrl("brand/visuals/banner-laptop-mercadolivre.png")}" width="680" height="380" loading="eager" fetchpriority="high" decoding="async" alt="Loja oficial da OMEGAIMPORTS no Mercado Livre em laptop">
-          <div class="mockup-handwriting mockup-handwriting--hero">
+          <div class="mockup-handwriting mockup-handwriting--hero mockup-handwriting--hero-top">
             <span>Tecnologia mais perto de você!</span>
             <svg class="curved-underline" viewBox="0 0 140 16" fill="none"><path d="M4 11 Q 70 16, 136 4" stroke="#ffd100" stroke-width="3.5" stroke-linecap="round"/></svg>
           </div>
@@ -1382,7 +1382,7 @@ function simplePages() {
 
     <!-- SEÇÃO DE TRANQUILIDADE (FUNDO SUAVE E 4 CARDS) -->
     <section class="how-tranquilidade-section">
-      <div class="internal-content-wrap">
+      <div class="internal-content-wrap" style="padding-top: 0; padding-bottom: 0;">
         <div class="internal-section-header">
           <p class="eyebrow" style="color: var(--blue-600);">SUAS COMPRAS COM MAIS TRANQUILIDADE</p>
           <h2>Por que comprar com a gente?</h2>
@@ -1416,9 +1416,9 @@ function simplePages() {
       </div>
     </section>
 
-    <!-- BANNER DE SUPORTE 1:1 DO MOCKUP COMO COMPRAR (DARK BANNER COM BOXES E DUAL BUTTONS) -->
-    <div class="internal-content-wrap" style="padding-top: 0;">
-      <section class="how-bottom-banner" data-reveal>
+    <!-- BANNER DE SUPORTE 1:1 DO MOCKUP COMO COMPRAR (FULL WIDTH DARK BANNER) -->
+    <section class="how-bottom-banner" data-reveal>
+      <div class="how-bottom-container">
         <div class="how-bottom-content">
           <p class="how-bottom-eyebrow">PRONTO PARA COMEÇAR?</p>
           <h2 class="how-bottom-title">Explore nosso catálogo<br>no <span>Mercado Livre</span></h2>
@@ -1432,19 +1432,15 @@ function simplePages() {
             <a class="how-btn-meli marketplace-link" href="${site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored">
               <span class="how-btn-icon">${icon("external")}</span>
               <span>Ir para a Loja no Mercado Livre</span>
-              <span class="how-btn-arrow">&rarr;</span>
+              <span class="how-btn-arrow">&nearr;</span>
             </a>
           </div>
         </div>
         <div class="how-bottom-media">
-          <img src="${assetUrl("brand/visuals/banner-boxes-esp32.png")}" width="460" height="260" loading="lazy" decoding="async" alt="Caixas e módulos OMEGAIMPORTS">
-          <div class="mockup-handwriting mockup-handwriting--banner">
-            <span>Grandes projetos começam aqui!</span>
-            <svg class="curved-underline" viewBox="0 0 140 16" fill="none"><path d="M4 11 Q 70 16, 136 4" stroke="#ffd100" stroke-width="3.5" stroke-linecap="round"/></svg>
-          </div>
+          <img src="${assetUrl("brand/visuals/banner-boxes-esp32.png")}" width="460" height="260" loading="lazy" decoding="async" alt="Caixas e módulos OMEGAIMPORTS no Mercado Livre">
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   </div>`;
 
   const sobreBody = `<div class="internal-page internal-page--about">

@@ -633,9 +633,15 @@
   right: 24px;
   z-index: 4;
 }
+.mockup-handwriting--hero-top {
+  top: 24px;
+  bottom: auto;
+  right: 24px;
+}
 .mockup-handwriting--banner {
-  margin-top: 8px;
+  margin-top: 0;
   align-self: center;
+  white-space: nowrap;
 }
 
 /* BREADCRUMB LIMPO DO MOCKUP */
@@ -695,22 +701,26 @@
 
 /* FAQ — BANNER DE SUPORTE 1:1 */
 .faq-bottom-banner {
-  background: radial-gradient(circle at 10% 50%, rgba(21, 149, 232, 0.15), transparent 40%), linear-gradient(135deg, #030f24 0%, #06193b 100%);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  padding: 38px 46px;
+  width: 100%;
+  background: radial-gradient(circle at 10% 50%, rgba(21, 149, 232, 0.15), transparent 40%), linear-gradient(135deg, #011832 0%, #032144 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 48px 0;
+  margin-top: 56px;
+}
+.faq-bottom-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 32px;
-  margin-top: 56px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
 }
 .faq-bottom-left {
   display: flex;
   align-items: center;
   gap: 24px;
-  max-width: 540px;
+  max-width: 520px;
 }
 .faq-bottom-bubble-icon {
   color: var(--marketplace-yellow);
@@ -746,17 +756,11 @@
   margin: 0;
   line-height: 1.5;
 }
-.faq-bottom-right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-}
 .faq-bottom-buttons {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  width: 100%;
+  flex-shrink: 0;
 }
 .faq-btn-whatsapp {
   background: #064e3b;
@@ -918,7 +922,7 @@
   display: flex;
   align-items: center;
   gap: 24px;
-  max-width: 540px;
+  max-width: 500px;
 }
 .privacy-bottom-headphone-icon {
   color: var(--marketplace-yellow);
@@ -950,17 +954,11 @@
   margin: 0;
   line-height: 1.5;
 }
-.privacy-bottom-right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-}
 .privacy-bottom-buttons {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  width: 100%;
+  flex-shrink: 0;
 }
 .privacy-btn-whatsapp {
   background: #064e3b;
@@ -1254,17 +1252,20 @@
 
 /* COMO COMPRAR — BANNER WIDE COM BOXES 1:1 */
 .how-bottom-banner {
-  background: radial-gradient(circle at 10% 50%, rgba(21, 149, 232, 0.15), transparent 40%), linear-gradient(135deg, #030f24 0%, #06193b 100%);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  padding: 44px 48px;
+  width: 100%;
+  background: radial-gradient(circle at 75% 50%, rgba(21, 149, 232, 0.15), transparent 45%), linear-gradient(135deg, #011328 0%, #031c3d 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 56px 0;
+  margin-top: 0;
+}
+.how-bottom-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
-  gap: 32px;
+  grid-template-columns: minmax(0, 1.15fr) minmax(340px, 0.85fr);
+  gap: 40px;
   align-items: center;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
-  position: relative;
-  overflow: hidden;
 }
 .how-bottom-eyebrow {
   color: var(--cyan-400);
@@ -1335,23 +1336,17 @@
   transform: translateY(-2px);
 }
 .how-bottom-media {
-  position: relative;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 .how-bottom-media img {
   width: 100%;
-  max-width: 320px;
-  max-height: 240px;
+  max-width: 440px;
+  height: auto;
+  border-radius: 12px;
   object-fit: cover;
-  border-radius: 14px;
-}
-.how-bottom-media .mockup-handwriting--banner {
-  position: absolute;
-  top: -12px;
-  right: -8px;
-  z-index: 2;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
 }
 
 /* RESPONSIVIDADE ADICIONAL PARA ELEMENTOS DE FIDELIDADE 1:1 */
