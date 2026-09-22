@@ -1,0 +1,22 @@
+{
+  "como-comprar": {
+    "pixelDifferencePercent": 99.7883,
+    "mae": 122.8408
+  },
+  "termos-de-uso": {
+    "pixelDifferencePercent": 99.9923,
+    "mae": 138.4843
+  },
+  "politica-de-privacidade": {
+    "pixelDifferencePercent": 99.995,
+    "mae": 118.1072
+  },
+  "duvidas-frequentes": {
+    "pixelDifferencePercent": 99.9908,
+    "mae": 114.2424
+  },
+  "home": {
+    "pixelDifferencePercent": 98.8421,
+    "mae": 79.3575
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "header": {
+    "pixelDifferencePercent": 99.9446,
+    "mae": 53.9102
+  },
+  "footer": {
+    "pixelDifferencePercent": 99.9987,
+    "mae": 13.3147
+  }
+}
