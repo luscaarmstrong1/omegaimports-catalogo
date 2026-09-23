@@ -89,6 +89,21 @@ function productionHead() {
 function internalPageHead({ title, description, path, ogImage }) {
   const canonical = absolute(path);
   const metaTitle = `${title} | OMEGAIMPORTS`;
+  const webPage = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: title,
+    description,
+    url: canonical,
+    isPartOf: { "@type": "WebSite", name: site.name, url: site.productionUrl },
+  };
+  const organization = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: site.name,
+    url: site.productionUrl,
+    sameAs: [site.marketplaceUrl, site.linkedinUrl],
+  };
   return `<title>${escapeHtml(metaTitle)}</title>
   <meta name="description" content="${escapeHtml(description)}">
   <link rel="canonical" href="${canonical}">
@@ -100,7 +115,9 @@ function internalPageHead({ title, description, path, ogImage }) {
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#030914">
   <link rel="icon" href="${assetUrl("v2/assets/brand/favicon.svg")}" type="image/svg+xml">
-  <link rel="manifest" href="${assetUrl("manifest.webmanifest")}">`;
+  <link rel="manifest" href="${assetUrl("manifest.webmanifest")}">
+  <script type="application/ld+json">${JSON.stringify(organization)}</script>
+  <script type="application/ld+json">${JSON.stringify(webPage)}</script>`;
 }
 
 function wireProductionLinks(html) {
