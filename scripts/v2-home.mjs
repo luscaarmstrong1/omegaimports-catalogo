@@ -86,6 +86,23 @@ function productionHead() {
   <script type="application/ld+json">${JSON.stringify(website)}</script>`;
 }
 
+function internalPageHead({ title, description, path, ogImage }) {
+  const canonical = absolute(path);
+  const metaTitle = `${title} | OMEGAIMPORTS`;
+  return `<title>${escapeHtml(metaTitle)}</title>
+  <meta name="description" content="${escapeHtml(description)}">
+  <link rel="canonical" href="${canonical}">
+  <meta property="og:title" content="${escapeHtml(metaTitle)}">
+  <meta property="og:description" content="${escapeHtml(description)}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="${canonical}">
+  <meta property="og:image" content="${absolute(ogImage)}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#030914">
+  <link rel="icon" href="${assetUrl("v2/assets/brand/favicon.svg")}" type="image/svg+xml">
+  <link rel="manifest" href="${assetUrl("manifest.webmanifest")}">`;
+}
+
 function wireProductionLinks(html) {
   const direct = new Map([
     ["Produtos", pageUrl("produtos/")], ["Categorias", pageUrl("categorias/")],
@@ -176,4 +193,20 @@ export function renderV2Home({ products, posts }) {
   html = html.replace(/(<form class="(?:header-search|hero-search-box)[^>]*>[\s\S]*?<input)(?![^>]*\bname=)/g, '$1 name="q"');
   html = html.replaceAll('<span id="copyright-year">2026</span>', `<span id="copyright-year">${new Date().getFullYear()}</span>`);
   return wireCategoryCards(wireProductionLinks(applyVerifiedClaims(html)));
+}
+
+export function renderV2InternalPage({ title, description, path, body, pageClass, ogImage = "brand/visuals/og-home.jpg" }) {
+  let html = frozenTemplate;
+  html = replaceRequired(html, /<title>[\s\S]*?<\/title>/, internalPageHead({ title, description, path, ogImage }), "internal head title");
+  html = html.replaceAll("./css/", assetUrl("v2/css/"));
+  html = html.replaceAll("./assets/", assetUrl("v2/assets/"));
+  html = html.replaceAll('<script type="module" src="./js/app.js"></script>', `<script defer src="${assetUrl("v2/runtime.js")}"></script>`);
+  html = html.replace("</head>", `  <link rel="stylesheet" href="${assetUrl("assets/internal-pages.css")}">\n</head>`);
+  html = html.replace("<body>", `<body class="v2-internal ${escapeHtml(pageClass)}">`);
+  html = replaceRequired(html, /<main id="main-content">[\s\S]*?<\/main>/, `<main id="main-content">${body}</main>`, "internal main");
+  html = html.replaceAll('<form class="header-search" role="search">', `<form class="header-search" action="${pageUrl("produtos/")}" method="get" role="search">`);
+  html = html.replaceAll('<form class="header-search drawer-search" role="search">', `<form class="header-search drawer-search" action="${pageUrl("produtos/")}" method="get" role="search">`);
+  html = html.replace(/(<form class="header-search[^>]*>[\s\S]*?<input)(?![^>]*\bname=)/g, '$1 name="q"');
+  html = html.replaceAll('<span id="copyright-year">2026</span>', `<span id="copyright-year">${new Date().getFullYear()}</span>`);
+  return wireProductionLinks(applyVerifiedClaims(html));
 }
