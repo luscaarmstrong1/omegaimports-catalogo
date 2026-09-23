@@ -749,6 +749,9 @@ function simplePages() {
       headset: '<path d="M4 13v-2a8 8 0 0 1 16 0v2"/><path d="M4 13h3v6H5a2 2 0 0 1-2-2v-2a2 2 0 0 1 1-2ZM20 13h-3v6h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-1-2ZM17 19c0 2-2 3-5 3"/>',
       users: '<circle cx="9" cy="8" r="4"/><path d="M2 21v-2a6 6 0 0 1 12 0v2M16 4a4 4 0 0 1 0 8M17 15a6 6 0 0 1 5 6"/>',
       whatsapp: '<path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/><path d="M8.5 8.5c.5 4 3 6.5 7 7"/>',
+      lock: '<rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"/>',
+      user: '<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>',
+      cookie: '<path d="M21 12a9 9 0 1 1-9-9c0 3 2 5 5 5 0 2 2 4 4 4Z"/><circle cx="8.5" cy="10.5" r=".7" fill="currentColor"/><circle cx="11" cy="16" r=".7" fill="currentColor"/><circle cx="6.5" cy="15" r=".7" fill="currentColor"/>',
     };
     return `<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${paths[name]}</svg>`;
   };
@@ -837,6 +840,54 @@ function simplePages() {
     </section>
   </div>`;
 
+  const privacyBody = `<div class="privacy-page">
+    <section class="privacy-hero" aria-labelledby="privacy-title">
+      <img class="privacy-hero-background" src="${assetUrl("brand/visuals/hero-privacy-shield.png")}" width="2048" height="1152" alt="" fetchpriority="high" decoding="async">
+      <div class="privacy-hero-shade"></div>
+      <div class="privacy-container privacy-hero-inner">
+        <nav class="privacy-breadcrumb" aria-label="Navegação estrutural"><a href="${pageUrl()}">Início</a><span aria-hidden="true">›</span><span>Política de privacidade</span></nav>
+        <div class="privacy-hero-copy">
+          <h1 id="privacy-title">Política de<br><span>privacidade</span></h1>
+          <p>Entenda como este catálogo funciona e como os canais externos tratam as informações que você decide compartilhar.</p>
+          <span class="privacy-accent" aria-hidden="true"></span>
+        </div>
+        <ul class="privacy-proof-list" aria-label="Princípios de privacidade">
+          <li>${icon("shield")}<span>Privacidade</span></li>
+          <li>${howIcon("lock")}<span>Segurança</span></li>
+          <li>${howIcon("users")}<span>Clareza</span></li>
+          <li>${howIcon("file")}<span>Transparência</span></li>
+        </ul>
+        <p class="privacy-handwriting">Seus<br>dados em<br>boas mãos.<span aria-hidden="true"></span></p>
+      </div>
+    </section>
+
+    <section class="privacy-content" aria-labelledby="privacy-cards-title">
+      <div class="privacy-content-container">
+        <header class="privacy-heading">
+          <p>Transparência sem complicação</p>
+          <h2 id="privacy-cards-title">Como tratamos seus dados</h2>
+          <span>Este catálogo não cria contas nem processa pagamentos. Veja o papel do site e dos canais externos.</span>
+        </header>
+        <div class="privacy-card-grid">
+          <article class="privacy-card privacy-card--third"><div>${howIcon("file")}</div><h3>Dados no catálogo</h3><p>A navegação é pública. A busca usa apenas o termo informado na URL e não exige cadastro neste site.</p></article>
+          <article class="privacy-card privacy-card--third"><div>${howIcon("cookie")}</div><h3>Navegação</h3><p>O catálogo não depende de uma conta própria. Seu navegador pode aplicar configurações técnicas e de acessibilidade.</p></article>
+          <article class="privacy-card privacy-card--third"><div>${icon("external")}</div><h3>Links externos</h3><p>Mercado Livre, WhatsApp e LinkedIn possuem políticas próprias para dados enviados em suas plataformas.</p></article>
+          <article class="privacy-card privacy-card--wide-left"><div>${howIcon("lock")}</div><h3>Segurança</h3><p>O site não recebe senhas nem dados de pagamento. A compra e o checkout acontecem no ambiente do Mercado Livre.</p></article>
+          <article class="privacy-card privacy-card--wide-right"><div>${howIcon("user")}</div><h3>Seus direitos</h3><p>Você pode pedir esclarecimentos sobre informações enviadas diretamente à OMEGAIMPORTS pelos canais oficiais.</p><a href="${pageUrl("contato/")}">Ver canais de contato ${icon("arrow-right")}</a></article>
+        </div>
+        <aside class="privacy-help" aria-label="Canais de atendimento">
+          <div class="privacy-help-symbol">${howIcon("headset")}</div>
+          <div class="privacy-help-copy"><p>Precisa de ajuda?</p><h2>Fale com nossa equipe</h2><span>Para dúvidas sobre esta política, use um dos canais oficiais.</span></div>
+          <div class="privacy-help-actions">
+            <a class="privacy-help-whatsapp whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">${howIcon("whatsapp")}<span>Falar no WhatsApp</span></a>
+            <a href="${pageUrl("contato/")}">${icon("message")}<span>Ver canais de contato</span></a>
+          </div>
+          <p class="privacy-help-note">Estamos<br>aqui para<br><strong>ajudar!</strong></p>
+        </aside>
+      </div>
+    </section>
+  </div>`;
+
   const termsBody = `<div class="terms-page">
     <section class="terms-hero" aria-labelledby="terms-title">
       <img class="terms-hero-background" src="${assetUrl("brand/visuals/hero-esp32-vertical.png")}" width="2048" height="1152" alt="" fetchpriority="high" decoding="async">
@@ -883,7 +934,7 @@ function simplePages() {
   const pages = [
     ["sobre", "Sobre a OMEGAIMPORTS", "A OMEGAIMPORTS organiza componentes eletrônicos, IoT, telemetria, energia, prototipagem e automação em uma vitrine técnica ligada aos anúncios oficiais no Mercado Livre.", `<section class="page-hero"><p class="eyebrow">Sobre</p><h1>Uma vitrine técnica para comprar componentes com mais clareza.</h1><p>A OMEGAIMPORTS iniciou suas operações em dezembro de 2024 e atua com componentes eletrônicos, IoT, sensores, fontes, conectores, instrumentos de bancada e itens de prototipagem.</p></section><section class="detail-grid"><div class="detail-block"><h2>Proposta</h2><p>Organizar produtos reais por categoria, aplicação e família técnica, sem transformar a compra em um relatório interno.</p></div><div class="detail-block"><h2>Mercado Livre</h2><p>A finalização da compra acontece no anúncio oficial, onde preço, estoque, frete e pagamento são confirmados.</p></div><div class="detail-block"><h2>Clareza técnica</h2><p>Os textos priorizam informação objetiva, cuidados de uso e relação entre produto, aplicação e conteúdo editorial.</p></div><div class="detail-block"><h2>WhatsApp</h2><p>Para dúvidas sobre escolha de componente, compatibilidade ou aplicação, fale com a OMEGAIMPORTS pelo WhatsApp oficial.</p><a class="whatsapp-action whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp ${icon("message", "btn-icon")}</a></div></section>`],
     ["como-comprar", "Como comprar", "Encontre o produto, confira modelo e condição, abra o anúncio oficial e finalize a compra pelo Mercado Livre.", comoComprarBody],
-    ["politica-de-privacidade", "Política de privacidade", "Este site é uma vitrine estática. Não cria contas, não processa pagamentos e não armazena dados de checkout.", `<section class="page-hero"><h1>Política de privacidade</h1><p>Este site é uma vitrine estática. Não cria contas, não processa pagamentos e não armazena dados de checkout.</p></section>`],
+    ["politica-de-privacidade", "Política de privacidade", "Este site é uma vitrine estática. Não cria contas, não processa pagamentos e não armazena dados de checkout.", privacyBody],
     ["termos-de-uso", "Termos de uso", "As informações ajudam a organizar e comparar produtos. Condições finais devem ser confirmadas no Mercado Livre.", termsBody],
     ["contato", "Contato", "Atendimento pelo WhatsApp oficial da OMEGAIMPORTS e compra finalizada pelo Mercado Livre.", `<section class="page-hero"><h1>Contato</h1><p>Para dúvidas sobre produto, compatibilidade, quantidade, frete ou prazo, fale pelo WhatsApp oficial da OMEGAIMPORTS.</p><a class="whatsapp-action whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp ${icon("message", "btn-icon")}</a></section>`],
     ["duvidas-frequentes", "Dúvidas frequentes", "O site não tem checkout próprio. Preço, frete, estoque e prazo são confirmados no Mercado Livre.", `<section class="page-hero"><h1>Dúvidas frequentes</h1><p>O site não tem checkout próprio. Preço, frete, estoque e prazo são confirmados no Mercado Livre.</p></section>`],
@@ -891,6 +942,7 @@ function simplePages() {
   const v2PageConfig = {
     "como-comprar": { pageClass: "how-to-buy-page", ogImage: "brand/visuals/banner-laptop-mercadolivre-v2.png" },
     "termos-de-uso": { pageClass: "terms-of-use-page", ogImage: "brand/visuals/hero-esp32-vertical.png" },
+    "politica-de-privacidade": { pageClass: "privacy-policy-page", ogImage: "brand/visuals/hero-privacy-shield.png" },
   };
   for (const [slug, title, description, body] of pages) {
     const enhancedBody = slug === "sobre" ? `${body}${commercialProof()}${buyingIntelligenceSection(selectByPriority().slice(0, 3))}${technicalFlowSection()}${opportunityCta()}` : body;
