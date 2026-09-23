@@ -13,11 +13,12 @@ const referenceHeaderHeight = 47;
 const referenceMainHeight = 1398;
 
 async function difference(leftPath, rightPath, overlayPath, diffPath) {
-  const left = await sharp(leftPath).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
-  const right = await sharp(rightPath).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
-  if (left.info.width !== right.info.width || left.info.height !== right.info.height) {
-    throw new Error(`Comparison dimensions differ: ${left.info.width}x${left.info.height} and ${right.info.width}x${right.info.height}`);
-  }
+  const leftMetadata = await sharp(leftPath).metadata();
+  const rightMetadata = await sharp(rightPath).metadata();
+  const width = Math.min(leftMetadata.width, rightMetadata.width);
+  const height = Math.min(leftMetadata.height, rightMetadata.height);
+  const left = await sharp(leftPath).extract({ left: 0, top: 0, width, height }).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+  const right = await sharp(rightPath).extract({ left: 0, top: 0, width, height }).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
   const overlay = Buffer.from(right.data);
   for (let index = 3; index < overlay.length; index += 4) overlay[index] = 128;
   await sharp(left.data, { raw: left.info })
@@ -39,11 +40,17 @@ await sharp(reference)
 
 const windowsChrome = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
 const executablePath = process.env.CHROME_PATH || (existsSync(windowsChrome) ? windowsChrome : undefined);
-const browser = await chromium.launch({ headless: true, ...(executablePath ? { executablePath } : {}) });
+const cdpEndpoint = process.argv.find((argument) => argument.startsWith("http://") || argument.startsWith("ws://"));
+const browser = cdpEndpoint
+  ? await chromium.connectOverCDP(cdpEndpoint)
+  : await chromium.launch({ headless: true, ...(executablePath ? { executablePath } : {}) });
 try {
-  const page = await browser.newPage({ viewport: { width, height: referenceHeight }, deviceScaleFactor: 1 });
+  const page = cdpEndpoint
+    ? browser.contexts()[0].pages()[0]
+    : await browser.newPage({ viewport: { width, height: referenceHeight }, deviceScaleFactor: 1 });
+  await page.setViewportSize({ width, height: referenceHeight });
   await page.goto(pageUrl, { waitUntil: "networkidle" });
-  await page.addStyleTag({ content: "* { animation: none !important; transition: none !important; caret-color: transparent !important; } .reveal { opacity: 1 !important; transform: none !important; }" });
+  await page.addStyleTag({ content: "html { scrollbar-width: none !important; } ::-webkit-scrollbar { display: none !important; } * { animation: none !important; transition: none !important; caret-color: transparent !important; } .reveal { opacity: 1 !important; transform: none !important; }" });
   await page.evaluate(() => document.fonts.ready);
   await page.evaluate(() => window.scrollTo(0, 0));
   const main = page.locator("main");
@@ -55,14 +62,16 @@ try {
   await page.screenshot({ path: `${output}/full-current.png`, fullPage: true });
   await main.screenshot({ path: `${output}/content-current.png` });
   await page.locator("header.site-header").screenshot({ path: `${output}/header-current.png` });
+  await page.addStyleTag({ content: "body > :not(footer.site-footer) { display: none !important; } footer.site-footer { position: relative !important; inset: auto !important; width: 100% !important; }" });
   await page.locator("footer.site-footer").screenshot({ path: `${output}/footer-current.png` });
-  await page.close();
-
-  const home = await browser.newPage({ viewport: { width, height: referenceHeight }, deviceScaleFactor: 1 });
+  const home = cdpEndpoint
+    ? page
+    : await browser.newPage({ viewport: { width, height: referenceHeight }, deviceScaleFactor: 1 });
   await home.goto(homeUrl, { waitUntil: "networkidle" });
-  await home.addStyleTag({ content: "* { animation: none !important; transition: none !important; caret-color: transparent !important; } .reveal { opacity: 1 !important; transform: none !important; }" });
+  await home.addStyleTag({ content: "html { scrollbar-width: none !important; } ::-webkit-scrollbar { display: none !important; } * { animation: none !important; transition: none !important; caret-color: transparent !important; } .reveal { opacity: 1 !important; transform: none !important; }" });
   await home.evaluate(() => document.fonts.ready);
   await home.locator("header.site-header").screenshot({ path: `${output}/header-home.png` });
+  await home.addStyleTag({ content: "body > :not(footer.site-footer) { display: none !important; } footer.site-footer { position: relative !important; inset: auto !important; width: 100% !important; }" });
   await home.locator("footer.site-footer").screenshot({ path: `${output}/footer-home.png` });
   await home.close();
 } finally {

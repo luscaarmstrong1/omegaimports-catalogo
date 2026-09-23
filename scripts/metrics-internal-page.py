@@ -1,12 +1,16 @@
 import json
+import sys
 from pathlib import Path
 
 import numpy as np
 from PIL import Image
-from skimage.metrics import structural_similarity as structural_similarity
+from skimage.metrics import structural_similarity
 
 
-ROOT = Path("reports/final-parity/como-comprar")
+if len(sys.argv) != 2:
+    raise SystemExit("Use: python scripts/metrics-internal-page.py <slug>")
+
+ROOT = Path("reports/final-parity") / sys.argv[1]
 
 
 def metrics(left_name, right_name):

@@ -744,13 +744,18 @@ function simplePages() {
       card: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 15h4"/>',
       truck: '<path d="M3 6h11v10H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/>',
       grid: '<rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>',
+      target: '<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><path d="m14.5 9.5 6-6M16 3h5v5"/>',
+      file: '<path d="M6 2h8l4 4v16H6z"/><path d="M14 2v5h5M9 12h6M9 16h6"/>',
+      headset: '<path d="M4 13v-2a8 8 0 0 1 16 0v2"/><path d="M4 13h3v6H5a2 2 0 0 1-2-2v-2a2 2 0 0 1 1-2ZM20 13h-3v6h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-1-2ZM17 19c0 2-2 3-5 3"/>',
+      users: '<circle cx="9" cy="8" r="4"/><path d="M2 21v-2a6 6 0 0 1 12 0v2M16 4a4 4 0 0 1 0 8M17 15a6 6 0 0 1 5 6"/>',
+      whatsapp: '<path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/><path d="M8.5 8.5c.5 4 3 6.5 7 7"/>',
     };
     return `<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${paths[name]}</svg>`;
   };
 
   const comoComprarBody = `<div class="how-page">
     <section class="how-hero" aria-labelledby="how-title">
-      <img class="how-hero-background" src="${assetUrl("brand/visuals/banner-laptop-mercadolivre.png")}" width="2048" height="768" alt="" fetchpriority="high" decoding="async">
+      <img class="how-hero-background" src="${assetUrl("brand/visuals/banner-laptop-mercadolivre-v2.png")}" width="2048" height="768" alt="" fetchpriority="high" decoding="async">
       <div class="how-hero-shade"></div>
       <div class="how-container how-hero-inner">
         <div class="how-hero-copy">
@@ -832,18 +837,65 @@ function simplePages() {
     </section>
   </div>`;
 
+  const termsBody = `<div class="terms-page">
+    <section class="terms-hero" aria-labelledby="terms-title">
+      <img class="terms-hero-background" src="${assetUrl("brand/visuals/hero-esp32-vertical.png")}" width="2048" height="1152" alt="" fetchpriority="high" decoding="async">
+      <div class="terms-hero-shade"></div>
+      <div class="terms-container terms-hero-inner">
+        <nav class="terms-breadcrumb" aria-label="Navegação estrutural"><a href="${pageUrl()}">Início</a><span aria-hidden="true">›</span><span>Termos de uso</span></nav>
+        <div class="terms-hero-copy">
+          <h1 id="terms-title">Termos de <span>uso</span></h1>
+          <p>Regras simples e transparentes para navegar, consultar o catálogo e acessar nossos canais oficiais.</p>
+        </div>
+        <ul class="terms-proof-list" aria-label="Princípios dos termos de uso">
+          <li>${icon("shield")}<span>Informação<br>transparente</span></li>
+          <li>${howIcon("file")}<span>Condições no<br>Mercado Livre</span></li>
+          <li>${howIcon("users")}<span>Foco na sua<br>experiência</span></li>
+        </ul>
+        <p class="terms-handwriting">Tecnologia<br>hoje.<br>Projetos reais<br>amanhã.<span aria-hidden="true"></span></p>
+      </div>
+    </section>
+
+    <section class="terms-content" aria-labelledby="terms-points-title">
+      <div class="terms-container">
+        <header class="terms-heading">
+          <p>Conheça nossos termos</p>
+          <h2 id="terms-points-title">Pontos principais</h2>
+          <span>Veja os aspectos essenciais que orientam o uso do site e a consulta dos produtos.</span>
+        </header>
+        <div class="terms-card-grid">
+          <article class="terms-card">${howIcon("target")}<h3>1. Propósito do site</h3><p>A OMEGAIMPORTS apresenta uma vitrine informativa de componentes eletrônicos, IoT, automação e produtos relacionados.</p><a href="${pageUrl("sobre/")}" aria-label="Conhecer a OMEGAIMPORTS">${icon("arrow-right")}</a></article>
+          <article class="terms-card">${icon("package")}<h3>2. Catálogo e informações</h3><p>Descrições, imagens e especificações organizam a consulta. Confirme os dados finais no anúncio oficial antes da compra.</p><a href="${pageUrl("produtos/")}" aria-label="Consultar o catálogo">${icon("arrow-right")}</a></article>
+          <article class="terms-card">${howIcon("cart")}<h3>3. Compras no Mercado Livre</h3><p>Preço, estoque, frete, pagamento e entrega são definidos e confirmados na plataforma do Mercado Livre.</p><a class="marketplace-link" href="${site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored" aria-label="Abrir a loja no Mercado Livre">${icon("arrow-right")}</a></article>
+          <article class="terms-card">${icon("shield")}<h3>4. Garantias e pós-venda</h3><p>Garantia, troca e devolução seguem as condições informadas na oferta e as regras aplicáveis do Mercado Livre.</p><a class="marketplace-link" href="${site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored" aria-label="Consultar condições no Mercado Livre">${icon("arrow-right")}</a></article>
+          <article class="terms-card">${howIcon("file")}<h3>5. Conteúdo informativo</h3><p>Artigos, guias e textos apoiam a pesquisa técnica. Verifique requisitos e compatibilidade para cada projeto.</p><a href="${pageUrl("blog/")}" aria-label="Acessar o blog">${icon("arrow-right")}</a></article>
+          <article class="terms-card">${howIcon("headset")}<h3>6. Contato e suporte</h3><p>Para dúvidas sobre produto ou aplicação, utilize os canais oficiais indicados neste site.</p><a href="${pageUrl("contato/")}" aria-label="Acessar os canais de contato">${icon("arrow-right")}</a></article>
+        </div>
+        <aside class="terms-help" aria-label="Atendimento">
+          <div class="terms-help-icon">${howIcon("headset")}</div>
+          <div><h2>Precisa de ajuda?</h2><p>Nossa equipe está disponível para orientar sua consulta.</p></div>
+          <a class="whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">${howIcon("whatsapp")}<span>Falar com um especialista</span>${icon("arrow-right")}</a>
+        </aside>
+      </div>
+    </section>
+  </div>`;
+
   const pages = [
     ["sobre", "Sobre a OMEGAIMPORTS", "A OMEGAIMPORTS organiza componentes eletrônicos, IoT, telemetria, energia, prototipagem e automação em uma vitrine técnica ligada aos anúncios oficiais no Mercado Livre.", `<section class="page-hero"><p class="eyebrow">Sobre</p><h1>Uma vitrine técnica para comprar componentes com mais clareza.</h1><p>A OMEGAIMPORTS iniciou suas operações em dezembro de 2024 e atua com componentes eletrônicos, IoT, sensores, fontes, conectores, instrumentos de bancada e itens de prototipagem.</p></section><section class="detail-grid"><div class="detail-block"><h2>Proposta</h2><p>Organizar produtos reais por categoria, aplicação e família técnica, sem transformar a compra em um relatório interno.</p></div><div class="detail-block"><h2>Mercado Livre</h2><p>A finalização da compra acontece no anúncio oficial, onde preço, estoque, frete e pagamento são confirmados.</p></div><div class="detail-block"><h2>Clareza técnica</h2><p>Os textos priorizam informação objetiva, cuidados de uso e relação entre produto, aplicação e conteúdo editorial.</p></div><div class="detail-block"><h2>WhatsApp</h2><p>Para dúvidas sobre escolha de componente, compatibilidade ou aplicação, fale com a OMEGAIMPORTS pelo WhatsApp oficial.</p><a class="whatsapp-action whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp ${icon("message", "btn-icon")}</a></div></section>`],
     ["como-comprar", "Como comprar", "Encontre o produto, confira modelo e condição, abra o anúncio oficial e finalize a compra pelo Mercado Livre.", comoComprarBody],
     ["politica-de-privacidade", "Política de privacidade", "Este site é uma vitrine estática. Não cria contas, não processa pagamentos e não armazena dados de checkout.", `<section class="page-hero"><h1>Política de privacidade</h1><p>Este site é uma vitrine estática. Não cria contas, não processa pagamentos e não armazena dados de checkout.</p></section>`],
-    ["termos-de-uso", "Termos de uso", "As informações ajudam a organizar e comparar produtos. Condições finais devem ser confirmadas no Mercado Livre.", `<section class="page-hero"><h1>Termos de uso</h1><p>Preços, disponibilidade, frete, pagamento e condições finais devem ser confirmados no anúncio oficial do Mercado Livre.</p></section>`],
+    ["termos-de-uso", "Termos de uso", "As informações ajudam a organizar e comparar produtos. Condições finais devem ser confirmadas no Mercado Livre.", termsBody],
     ["contato", "Contato", "Atendimento pelo WhatsApp oficial da OMEGAIMPORTS e compra finalizada pelo Mercado Livre.", `<section class="page-hero"><h1>Contato</h1><p>Para dúvidas sobre produto, compatibilidade, quantidade, frete ou prazo, fale pelo WhatsApp oficial da OMEGAIMPORTS.</p><a class="whatsapp-action whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp ${icon("message", "btn-icon")}</a></section>`],
     ["duvidas-frequentes", "Dúvidas frequentes", "O site não tem checkout próprio. Preço, frete, estoque e prazo são confirmados no Mercado Livre.", `<section class="page-hero"><h1>Dúvidas frequentes</h1><p>O site não tem checkout próprio. Preço, frete, estoque e prazo são confirmados no Mercado Livre.</p></section>`],
   ];
+  const v2PageConfig = {
+    "como-comprar": { pageClass: "how-to-buy-page", ogImage: "brand/visuals/banner-laptop-mercadolivre-v2.png" },
+    "termos-de-uso": { pageClass: "terms-of-use-page", ogImage: "brand/visuals/hero-esp32-vertical.png" },
+  };
   for (const [slug, title, description, body] of pages) {
     const enhancedBody = slug === "sobre" ? `${body}${commercialProof()}${buyingIntelligenceSection(selectByPriority().slice(0, 3))}${technicalFlowSection()}${opportunityCta()}` : body;
-    if (slug === "como-comprar") {
-      out(`${slug}/index.html`, renderV2InternalPage({ title, description, path: `${slug}/`, body: enhancedBody, pageClass: "how-to-buy-page", ogImage: "brand/visuals/banner-laptop-mercadolivre.png" }));
+    if (v2PageConfig[slug]) {
+      out(`${slug}/index.html`, renderV2InternalPage({ title, description, path: `${slug}/`, body: enhancedBody, ...v2PageConfig[slug] }));
     } else {
       out(`${slug}/index.html`, pageShell({ title, description, path: `${slug}/`, body: enhancedBody }));
     }
