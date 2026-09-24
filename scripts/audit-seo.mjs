@@ -13,6 +13,22 @@ for (const file of htmlFiles("dist")) {
   const canonical = match(html, /<link rel="canonical" href="([^"]+)"/);
   const jsonLdCount = (html.match(/application\/ld\+json/g) || []).length;
   const issues = [];
+  const exactCounts = [
+    ["title", /<title>/g],
+    ["description", /<meta name="description"/g],
+    ["canonical", /<link rel="canonical"/g],
+    ["og:title", /<meta property="og:title"/g],
+    ["og:description", /<meta property="og:description"/g],
+    ["og:url", /<meta property="og:url"/g],
+    ["og:image", /<meta property="og:image"/g],
+    ["twitter:card", /<meta name="twitter:card"/g],
+    ["theme-color", /<meta name="theme-color"/g],
+    ["manifest", /<link rel="manifest"/g],
+  ];
+  for (const [name, pattern] of exactCounts) {
+    if ((html.match(pattern) || []).length !== 1) issues.push(`invalid-${name}-count`);
+  }
+  if ((html.match(/<link rel="icon"/g) || []).length !== 1) issues.push("invalid-favicon-count");
   if (!title || title.length < 18 || title.length > 90) issues.push("invalid-title");
   if (!description || description.length < 50 || description.length > 180) issues.push("invalid-description");
   if (!canonical || !canonical.startsWith(expectedCanonicalBase)) issues.push("invalid-canonical");
