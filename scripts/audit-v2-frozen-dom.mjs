@@ -7,7 +7,7 @@ function staticTagSequence(html) {
   return html
     .replace(/<head>[\s\S]*?<\/head>/i, "")
     .replace(/(<div class="products-carousel"[^>]*>)[\s\S]*?(<\/div>\s*<button type="button" class="carousel-nav-btn carousel-next")/, `$1${"<article class=\"product-card\"></article>".repeat(6)}$2`)
-    .replace(/(<div class="blog-newsletter-grid">)[\s\S]*?(<!-- Newsletter Box -->)/, `$1${"<article class=\"article-card\"></article>".repeat(4)}$2`)
+    .replace(/(<div class="blog-newsletter-grid">)[\s\S]*?(<!-- (?:Newsletter Box|Functional editorial CTA) -->)/, `$1${"<article class=\"article-card\"></article>".repeat(4)}$2`)
     .replace(/<!--[\s\S]*?-->/g, "")
     .replace(/<script[\s\S]*?<\/script>/g, "")
     .match(/<\/?(?:header|main|footer|section|aside|nav|form|div|article|picture|h1|h2|h3|h4|p|ul|li|a|button|input|label|span)\b[^>]*>/gi)

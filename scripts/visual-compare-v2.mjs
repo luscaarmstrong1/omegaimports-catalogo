@@ -51,7 +51,8 @@ const results = [];
 const maskCss = `.products-carousel > *, .blog-newsletter-grid > article { visibility: hidden !important; } .reveal { opacity: 1 !important; transform: none !important; } * { animation: none !important; transition: none !important; caret-color: transparent !important; }`;
 
 try {
-  browser = await chromium.launch({ headless: true });
+  const systemChrome = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
+  browser = await chromium.launch({ headless: true, ...(existsSync(systemChrome) ? { executablePath: systemChrome } : {}) });
   for (const width of widths) {
     const shots = {};
     for (const [kind, url] of [["frozen", "http://127.0.0.1:4311/"], ["production", "http://127.0.0.1:4312/omegaimports-catalogo/"]]) {
