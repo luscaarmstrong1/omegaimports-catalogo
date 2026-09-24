@@ -191,7 +191,8 @@ export function productCard(product, index = 0, { featured = false } = {}) {
   </article>`;
 }
 
-export function pageShell({ title, description, path = "", body, extraHead = "", ogImage = "brand/visuals/og-home.jpg", type = "website" }) {
+// Retido apenas como referência histórica interna; não é exportado nem usado pelo build público.
+function legacyPageShell({ title, description, path = "", body, extraHead = "", ogImage = "brand/visuals/og-home.jpg", type = "website" }) {
   const canonical = absolute(path);
   const isHome = !path;
   const metaTitle = fitText(title, 72);

@@ -2,8 +2,7 @@ import { readFileSync } from "node:fs";
 import { absolute, assetUrl, escapeHtml, formatPrice, pageUrl, productImagePaths, site } from "./shared.mjs";
 
 const frozenTemplate = readFileSync(new URL("../templates/v2-home-frozen.html", import.meta.url), "utf8");
-const heartIcon = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>`;
-const cartIcon = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>`;
+const arrowIcon = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>`;
 
 function replaceRequired(source, pattern, replacement, label) {
   if (!pattern.test(source)) throw new Error(`V2 frozen marker not found: ${label}`);
@@ -18,7 +17,6 @@ function productCard(product, index) {
             <article class="product-card" data-mlb="${escapeHtml(product.mlbId)}">
               <div class="product-card-top">
                 ${badge}
-                <button type="button" class="product-card-fav" aria-label="Favoritar ${title}">${heartIcon}</button>
                 <a href="${pageUrl(`produtos/${product.slug}/`)}" aria-label="Ver detalhes de ${title}">
                   <picture>
                     <source srcset="${paths.avif}" type="image/avif">
@@ -31,7 +29,7 @@ function productCard(product, index) {
               <div class="product-card-price">${escapeHtml(formatPrice(product))}</div>
               <div class="product-card-actions">
                 <a class="btn btn-yellow" href="${escapeHtml(product.permalink)}" target="_blank" rel="noopener noreferrer sponsored" data-event="marketplace_click" data-mlb="${escapeHtml(product.mlbId)}">Ver oferta</a>
-                <a class="btn-icon-cart" href="${pageUrl(`produtos/${product.slug}/`)}" aria-label="Ver detalhes de ${title}">${cartIcon}</a>
+                <a class="product-details-link" href="${pageUrl(`produtos/${product.slug}/`)}" aria-label="Ver detalhes de ${title}"><span>Detalhes</span>${arrowIcon}</a>
               </div>
             </article>`;
 }
@@ -86,9 +84,10 @@ function productionHead() {
   <script type="application/ld+json">${JSON.stringify(website)}</script>`;
 }
 
-function internalPageHead({ title, description, path, ogImage }) {
+function internalPageHead({ title, description, path, ogImage, type = "website", noindex = false, extraHead = "" }) {
   const canonical = absolute(path);
-  const metaTitle = `${title} | OMEGAIMPORTS`;
+  const metaTitle = `${fitMetaText(title, 64)} | OMEGAIMPORTS`;
+  const metaDescription = fitMetaDescription(description);
   const webPage = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -105,24 +104,45 @@ function internalPageHead({ title, description, path, ogImage }) {
     sameAs: [site.marketplaceUrl, site.linkedinUrl],
   };
   return `<title>${escapeHtml(metaTitle)}</title>
-  <meta name="description" content="${escapeHtml(description)}">
+  <meta name="description" content="${escapeHtml(metaDescription)}">
   <link rel="canonical" href="${canonical}">
   <meta property="og:title" content="${escapeHtml(metaTitle)}">
-  <meta property="og:description" content="${escapeHtml(description)}">
-  <meta property="og:type" content="website">
+  <meta property="og:description" content="${escapeHtml(metaDescription)}">
+  <meta property="og:type" content="${escapeHtml(type)}">
   <meta property="og:url" content="${canonical}">
   <meta property="og:image" content="${absolute(ogImage)}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#030914">
   <link rel="icon" href="${assetUrl("v2/assets/brand/favicon.svg")}" type="image/svg+xml">
   <link rel="manifest" href="${assetUrl("manifest.webmanifest")}">
+  ${noindex ? '<meta name="robots" content="noindex,follow">' : ""}
   <script type="application/ld+json">${JSON.stringify(organization)}</script>
-  <script type="application/ld+json">${JSON.stringify(webPage)}</script>`;
+  <script type="application/ld+json">${JSON.stringify(webPage)}</script>
+  ${extraHead}`;
+}
+
+function fitMetaText(value, max) {
+  const text = String(value).replace(/\s+/g, " ").trim();
+  if (text.length <= max) return text;
+  return `${text.slice(0, max - 1).replace(/\s+\S*$/, "")}…`;
+}
+
+function fitMetaDescription(value) {
+  const fallback = "Consulte o catálogo técnico da OMEGAIMPORTS e confirme as condições no anúncio oficial do Mercado Livre.";
+  const text = String(value || fallback).replace(/\s+/g, " ").trim();
+  const complete = text.length < 50 ? `${text} ${fallback}` : text;
+  if (complete.length <= 170) return complete;
+  return `${complete.slice(0, 169).replace(/\s+\S*$/, "")}.`;
+}
+
+function replaceDocumentHead(html, head, label) {
+  html = replaceRequired(html, /<title>[\s\S]*?<\/title>\s*<meta name="description"[^>]*>/, head, label);
+  return html.replace(/\s*<!-- Favicon Oficial -->\s*<link rel="icon"[^>]*>/, "");
 }
 
 function wireProductionLinks(html) {
   const direct = new Map([
-    ["Produtos", pageUrl("produtos/")], ["Categorias", pageUrl("categorias/")],
+    ["Produtos", pageUrl("produtos/")], ["Categorias", pageUrl("categorias/")], ["Marcas", `${pageUrl()}#marcas`],
     ["Blog", pageUrl("blog/")], ["Sobre", pageUrl("sobre/")],
     ["Como comprar", pageUrl("como-comprar/")], ["Ver todos os artigos", pageUrl("blog/")],
     ["Ver todas as categorias", pageUrl("categorias/")], ["Ver todos os produtos", pageUrl("produtos/")],
@@ -130,6 +150,11 @@ function wireProductionLinks(html) {
     ["Ver kits e combos", pageUrl("produtos/?q=kits")], ["Ver todas as marcas", pageUrl("produtos/")],
     ["Sobre a OMEGAIMPORTS", pageUrl("sobre/")], ["Política de privacidade", pageUrl("politica-de-privacidade/")],
     ["Termos de uso", pageUrl("termos-de-uso/")], ["Perguntas frequentes (FAQ)", pageUrl("duvidas-frequentes/")],
+    ["Privacidade", pageUrl("politica-de-privacidade/")],
+    ["Formas de pagamento", pageUrl("duvidas-frequentes/#pagamento")],
+    ["Prazos e entrega", pageUrl("duvidas-frequentes/#entrega")],
+    ["Trocas e devoluções", pageUrl("duvidas-frequentes/#trocas-devolucoes")],
+    ["Garantia", pageUrl("duvidas-frequentes/#garantia")],
     ["Mapa do site", pageUrl("sitemap.xml")], ["Todas as categorias", pageUrl("categorias/")],
     ["Componentes eletrônicos", pageUrl("categorias/componentes-eletronicos/")],
     ["Módulos IoT", pageUrl("categorias/iot-gsm-e-comunicacao/")],
@@ -139,12 +164,16 @@ function wireProductionLinks(html) {
     ["Ferramentas", pageUrl("produtos/?q=ferramentas")],
     ["Protótipo e desenvolvimento", pageUrl("produtos/?q=prototipagem")],
   ]);
-  html = html.replace(/<a href="([^"]*)"([^>]*)>([\s\S]*?)<\/a>/g, (anchor, oldHref, attributes, inner) => {
+  html = html.replace(/<a\b([^>]*)>([\s\S]*?)<\/a>/g, (anchor, attributes, inner) => {
+    const oldHref = attributes.match(/\bhref="([^"]*)"/)?.[1];
+    if (oldHref === undefined) return anchor;
     const label = inner.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
     const href = direct.get(label);
-    if (href) return `<a href="${href}"${attributes}>${inner}</a>`;
-    if (oldHref === "#" && /\bbrand-logo-link\b/.test(attributes)) return `<a href="${pageUrl()}"${attributes}>${inner}</a>`;
-    if (oldHref === "#") return `<a${attributes} aria-disabled="true" tabindex="-1">${inner}</a>`;
+    const withHref = (nextHref) => `<a${attributes.replace(/\bhref="[^"]*"/, `href="${nextHref}"`)}>${inner}</a>`;
+    if (href) return withHref(href);
+    if (oldHref === "#" && /\bbrand-logo-link\b/.test(attributes)) return withHref(pageUrl());
+    if (oldHref === "#" && /\bbrand-card\b/.test(attributes)) return withHref(pageUrl("produtos/?q=Hi-Link"));
+    if (oldHref === "#") throw new Error(`V2 unresolved navigation link: ${label || attributes}`);
     return anchor;
   });
   html = html.replaceAll('href="https://wa.me/5535999528858"', `href="${site.whatsappUrl}"`);
@@ -183,17 +212,17 @@ function wireCategoryCards(html) {
     pageUrl("categorias/conectores-e-instalacao/"),
   ];
   let index = 0;
-  return html.replace(/<article class="category-card([^"]*)">/g, (tag, classes) => {
+  return html.replace(/<article class="category-card([^"]*)">([\s\S]*?)<\/article>/g, (tag, classes, content) => {
     const destination = destinations[index++];
     return destination
-      ? `<article class="category-card${classes}" data-href="${destination}">`
+      ? `<a class="category-card${classes}" href="${destination}">${content}</a>`
       : tag;
   });
 }
 
 export function renderV2Home({ products, posts }) {
   let html = frozenTemplate;
-  html = replaceRequired(html, /<title>[\s\S]*?<\/title>/, productionHead(), "head title");
+  html = replaceDocumentHead(html, productionHead(), "home metadata");
   html = replaceRequired(html, /<body>/, '<body class="home-v2">', "home body class");
   html = html.replaceAll("./css/", assetUrl("v2/css/"));
   html = html.replaceAll("./assets/", assetUrl("v2/assets/"));
@@ -213,18 +242,19 @@ export function renderV2Home({ products, posts }) {
   return wireCategoryCards(wireProductionLinks(applyVerifiedClaims(html)));
 }
 
-export function renderV2InternalPage({ title, description, path, body, pageClass, ogImage = "brand/visuals/og-home.jpg" }) {
+export function renderV2InternalPage({ title, description, path, body, pageClass = "content-page", ogImage = "brand/visuals/og-home.jpg", type = "website", noindex = false, extraHead = "" }) {
   let html = frozenTemplate;
-  html = replaceRequired(html, /<title>[\s\S]*?<\/title>/, internalPageHead({ title, description, path, ogImage }), "internal head title");
+  html = replaceDocumentHead(html, internalPageHead({ title, description, path, ogImage, type, noindex, extraHead }), "internal metadata");
   html = html.replaceAll("./css/", assetUrl("v2/css/"));
   html = html.replaceAll("./assets/", assetUrl("v2/assets/"));
   html = html.replaceAll('<script type="module" src="./js/app.js"></script>', `<script defer src="${assetUrl("v2/runtime.js")}"></script>`);
   html = html.replace("</head>", `  <link rel="stylesheet" href="${assetUrl("assets/internal-pages.css")}">\n</head>`);
+  html = html.replace("</body>", `  <script defer src="${assetUrl("assets/site.js")}"></script>\n</body>`);
   html = html.replace("<body>", `<body class="v2-internal ${escapeHtml(pageClass)}">`);
   html = replaceRequired(html, /<main id="main-content">[\s\S]*?<\/main>/, `<main id="main-content">${body}</main>`, "internal main");
   html = html.replaceAll('<form class="header-search" role="search">', `<form class="header-search" action="${pageUrl("produtos/")}" method="get" role="search">`);
   html = html.replaceAll('<form class="header-search drawer-search" role="search">', `<form class="header-search drawer-search" action="${pageUrl("produtos/")}" method="get" role="search">`);
   html = html.replace(/(<form class="header-search[^>]*>[\s\S]*?<input)(?![^>]*\bname=)/g, '$1 name="q"');
   html = html.replaceAll('<span id="copyright-year">2026</span>', `<span id="copyright-year">${new Date().getFullYear()}</span>`);
-  return wireProductionLinks(applyVerifiedClaims(html));
+  return wireCategoryCards(wireProductionLinks(applyVerifiedClaims(html)));
 }

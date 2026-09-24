@@ -34,13 +34,14 @@ if (home.includes("Mais de 15 mil") || home.includes("MOCKUP CLAIM")) throw new 
 for (const claim of ["Envio pelo Mercado Livre", "Condições no anúncio", "Catálogo especializado", "Informações verificadas"]) {
   if (!home.includes(claim)) throw new Error(`Claim verificável ausente: ${claim}`);
 }
-for (const neutralLabel of ["Instagram", "YouTube", "Facebook", "TikTok"]) {
-  if (!home.includes(`aria-label="${neutralLabel}" aria-disabled="true" tabindex="-1"`)) throw new Error(`Rede sem URL real não foi neutralizada: ${neutralLabel}`);
+for (const unavailableNetwork of ["Instagram", "YouTube", "Facebook", "TikTok"]) {
+  if (home.includes(`aria-label="${unavailableNetwork}"`)) throw new Error(`Rede sem URL real foi publicada: ${unavailableNetwork}`);
 }
 
 const runtime = readFileSync("dist/v2/runtime.js", "utf8");
-if (!runtime.includes("Cadastro de newsletter em breve.")) throw new Error("Newsletter não possui resposta neutra");
-if (!runtime.includes("Produto marcado nesta sessão.")) throw new Error("Favoritos ainda prometem persistência");
+for (const simulatedAction of ["Cadastro de newsletter em breve.", "Produto marcado nesta sessão.", "Área Minha Conta simulada", "Carrinho demonstrativo"]) {
+  if (runtime.includes(simulatedAction)) throw new Error(`Ação simulada reapareceu no runtime: ${simulatedAction}`);
+}
 
 const header = home.match(/<header[^>]*class="site-header"[^>]*>([\s\S]*?)<\/header>/)?.[1] || "";
 for (const item of ["Produtos", "Categorias", "Blog", "Sobre"]) {
@@ -104,6 +105,18 @@ if (!productWithRelated) throw new Error("Nenhuma página de produto com artigos
 const brokenLinks = [];
 for (const file of htmlFiles("dist")) {
   const html = readFileSync(file, "utf8");
+  if (!html.includes('class="v2-internal') && slash(file) !== "dist/index.html") throw new Error(`${file} não utiliza o shell V2 canônico`);
+  for (const forbidden of ["Minha Conta", "Carrinho de compras", "Cadastro de newsletter em breve", "COMPRA 100% SEGURA", "Shopee"]) {
+    if (html.includes(forbidden)) throw new Error(`${file} contém funcionalidade ou claim proibido: ${forbidden}`);
+  }
+  const metadata = [
+    ["title", /<title>/g],
+    ["description", /<meta name="description"/g],
+    ["canonical", /<link rel="canonical"/g],
+  ];
+  for (const [name, pattern] of metadata) {
+    if ((html.match(pattern) || []).length !== 1) throw new Error(`${file} contém quantidade inválida de ${name}`);
+  }
   for (const [, href] of html.matchAll(/href="([^"]+)"/g)) {
     if (!href.startsWith("/omegaimports-catalogo/")) continue;
     if (href.includes("/assets/") || href.includes("/brand/") || href.includes("/products/")) continue;
@@ -113,6 +126,19 @@ for (const file of htmlFiles("dist")) {
   }
 }
 if (brokenLinks.length) throw new Error(`links internos quebrados:\n${brokenLinks.join("\n")}`);
+for (const historical of ["dist/versao-atual", "dist/versao-anterior"]) {
+  if (existsSync(historical)) throw new Error(`versão histórica publicada: ${historical}`);
+}
+const buildSource = readFileSync("scripts/build-site.mjs", "utf8");
+if (/\bpageShell\s*\(/.test(buildSource)) throw new Error("build público ainda utiliza pageShell legacy");
+
+const publicUiSource = [
+  readFileSync("templates/v2-home-frozen.html", "utf8"),
+  readFileSync("public/v2/runtime.js", "utf8"),
+].join("\n");
+for (const forbidden of ["product-card-fav", "btn-icon-cart", "newsletter-form", "account-action", "toast-container"]) {
+  if (publicUiSource.includes(forbidden)) throw new Error(`fonte pública ainda contém funcionalidade simulada: ${forbidden}`);
+}
 
 console.log("Teste E2E estático da V2 aprovada concluído.");
 

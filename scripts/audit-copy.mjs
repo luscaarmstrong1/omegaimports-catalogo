@@ -28,6 +28,11 @@ const forbidden = [
   ["produto incrível", "Copy genérica exposta"],
   ["Atualizar catálogo", "Ação administrativa exposta"],
   ["Lorem ipsum", "Placeholder exposto"],
+  ["Minha Conta", "Conta inexistente exposta"],
+  ["Carrinho de compras", "Carrinho inexistente exposto"],
+  ["Cadastro de newsletter em breve", "Newsletter simulada exposta"],
+  ["COMPRA 100% SEGURA", "Claim absoluto de segurança exposto"],
+  ["Shopee", "Marketplace não confirmado exposto"],
   ["adclean", "Código de extensão detectado"],
   ["ismanga", "Código de extensão detectado"],
 ];
