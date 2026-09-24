@@ -194,6 +194,7 @@ function wireCategoryCards(html) {
 export function renderV2Home({ products, posts }) {
   let html = frozenTemplate;
   html = replaceRequired(html, /<title>[\s\S]*?<\/title>/, productionHead(), "head title");
+  html = replaceRequired(html, /<body>/, '<body class="home-v2">', "home body class");
   html = html.replaceAll("./css/", assetUrl("v2/css/"));
   html = html.replaceAll("./assets/", assetUrl("v2/assets/"));
   html = html.replaceAll('<script type="module" src="./js/app.js"></script>', `<script defer src="${assetUrl("v2/runtime.js")}"></script>`);
