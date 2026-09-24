@@ -23,7 +23,7 @@ import {
   productPicture,
   site,
 } from "./shared.mjs";
-import { renderV2Home } from "./v2-home.mjs";
+import { renderV2Home, renderV2InternalPage } from "./v2-home.mjs";
 
 const dist = new URL("../dist/", import.meta.url);
 const allProducts = loadProducts({ all: true });
@@ -737,17 +737,317 @@ function blogPages() {
 }
 
 function simplePages() {
+  const howIcon = (name) => {
+    const paths = {
+      cart: '<circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M3 4h2l2.2 10.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 2-1.6L20.5 8H6"/>',
+      home: '<path d="m3 11 9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/>',
+      card: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 15h4"/>',
+      truck: '<path d="M3 6h11v10H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/>',
+      grid: '<rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>',
+      target: '<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><path d="m14.5 9.5 6-6M16 3h5v5"/>',
+      file: '<path d="M6 2h8l4 4v16H6z"/><path d="M14 2v5h5M9 12h6M9 16h6"/>',
+      headset: '<path d="M4 13v-2a8 8 0 0 1 16 0v2"/><path d="M4 13h3v6H5a2 2 0 0 1-2-2v-2a2 2 0 0 1 1-2ZM20 13h-3v6h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-1-2ZM17 19c0 2-2 3-5 3"/>',
+      users: '<circle cx="9" cy="8" r="4"/><path d="M2 21v-2a6 6 0 0 1 12 0v2M16 4a4 4 0 0 1 0 8M17 15a6 6 0 0 1 5 6"/>',
+      whatsapp: '<path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/><path d="M8.5 8.5c.5 4 3 6.5 7 7"/>',
+      lock: '<rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"/>',
+      user: '<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>',
+      cookie: '<path d="M21 12a9 9 0 1 1-9-9c0 3 2 5 5 5 0 2 2 4 4 4Z"/><circle cx="8.5" cy="10.5" r=".7" fill="currentColor"/><circle cx="11" cy="16" r=".7" fill="currentColor"/><circle cx="6.5" cy="15" r=".7" fill="currentColor"/>',
+      refresh: '<path d="M20 6v5h-5"/><path d="M4 18v-5h5"/><path d="M18.5 9A7 7 0 0 0 6 6.5L4 9M5.5 15A7 7 0 0 0 18 17.5l2-2.5"/>',
+      chevron: '<path d="m7 10 5 5 5-5"/>',
+    };
+    return `<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${paths[name]}</svg>`;
+  };
+
+  const comoComprarBody = `<div class="how-page">
+    <section class="how-hero" aria-labelledby="how-title">
+      <img class="how-hero-background" src="${assetUrl("brand/visuals/banner-laptop-mercadolivre-v2.png")}" width="2048" height="768" alt="" fetchpriority="high" decoding="async">
+      <div class="how-hero-shade"></div>
+      <div class="how-container how-hero-inner">
+        <div class="how-hero-copy">
+          <p class="how-eyebrow">Compra pelo canal oficial</p>
+          <h1 id="how-title">Como <span>comprar</span></h1>
+          <p>Encontre o componente certo e conclua a compra no Mercado Livre, onde preço, estoque, frete e pagamento são confirmados.</p>
+          <span class="how-accent" aria-hidden="true"></span>
+        </div>
+        <p class="how-handwriting">Tecnologia<br>mais perto<br>de você!<span aria-hidden="true"></span></p>
+      </div>
+    </section>
+
+    <section class="how-steps" aria-labelledby="how-steps-title">
+      <div class="how-container">
+        <header class="how-section-heading">
+          <p class="how-section-eyebrow">Passo a passo</p>
+          <h2 id="how-steps-title">É simples comprar na OMEGAIMPORTS</h2>
+          <p>Siga quatro etapas para escolher o item e finalizar pelo canal oficial.</p>
+        </header>
+        <ol class="how-step-list">
+          <li class="how-step">
+            <div class="how-step-visual"><span>1</span>${icon("search")}</div>
+            <h3>Encontre o produto</h3>
+            <p>Explore o catálogo e confira qual modelo atende ao seu projeto.</p>
+          </li>
+          <li class="how-step-divider" aria-hidden="true">›</li>
+          <li class="how-step">
+            <div class="how-step-visual"><span>2</span>${howIcon("cart")}</div>
+            <h3>Faça a compra</h3>
+            <p>Adicione ao carrinho e conclua o pedido pelo Mercado Livre.</p>
+          </li>
+          <li class="how-step-divider" aria-hidden="true">›</li>
+          <li class="how-step">
+            <div class="how-step-visual"><span>3</span>${icon("package")}</div>
+            <h3>Acompanhe o envio</h3>
+            <p>Receba as atualizações do processo diretamente no Mercado Livre.</p>
+          </li>
+          <li class="how-step-divider" aria-hidden="true">›</li>
+          <li class="how-step">
+            <div class="how-step-visual"><span>4</span>${howIcon("home")}</div>
+            <h3>Receba o pedido</h3>
+            <p>Acompanhe a entrega no endereço informado na plataforma.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="how-benefits" aria-labelledby="how-benefits-title">
+      <div class="how-container">
+        <header class="how-section-heading">
+          <p class="how-section-eyebrow">Informação para decidir melhor</p>
+          <h2 id="how-benefits-title">Por que comprar com a gente?</h2>
+        </header>
+        <div class="how-benefit-grid">
+          <article class="how-benefit-card"><div>${howIcon("card")}</div><h3>Checkout oficial</h3><p>O pagamento é processado pelo Mercado Livre.</p></article>
+          <article class="how-benefit-card"><div>${howIcon("truck")}</div><h3>Frete no anúncio</h3><p>Valor, modalidade e prazo aparecem antes da compra.</p></article>
+          <article class="how-benefit-card"><div>${icon("shield")}</div><h3>Condições claras</h3><p>Estoque e regras aplicáveis ficam disponíveis na oferta.</p></article>
+          <article class="how-benefit-card"><div>${icon("message")}</div><h3>Suporte técnico</h3><p>Conte com ajuda para escolher o componente adequado.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-cta" aria-labelledby="how-cta-title">
+      <div class="how-container how-cta-inner">
+        <div class="how-cta-copy">
+          <p class="how-eyebrow">Pronto para começar?</p>
+          <h2 id="how-cta-title">Explore nosso catálogo<br>no <span>Mercado Livre</span></h2>
+          <p>Componentes, módulos e muito mais para seus projetos.</p>
+          <div class="how-cta-actions">
+            <a class="how-button how-button--primary" href="${pageUrl("produtos/")}">${howIcon("grid")}<span>Explorar catálogo</span>${icon("arrow-right")}</a>
+            <a class="how-button how-button--secondary marketplace-link" href="${site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored">${icon("external")}<span>Ir para a Loja no Mercado Livre</span>${icon("arrow-right")}</a>
+          </div>
+        </div>
+        <div class="how-cta-media">
+          <img src="${assetUrl("brand/visuals/banner-boxes-esp32.png")}" width="407" height="255" alt="Caixas e placa ESP32 em uma bancada tecnológica" loading="lazy" decoding="async">
+          <p>Grandes<br>projetos<br>começam<br><strong>aqui!</strong></p>
+        </div>
+      </div>
+    </section>
+  </div>`;
+
+  const privacyBody = `<div class="privacy-page">
+    <section class="privacy-hero" aria-labelledby="privacy-title">
+      <img class="privacy-hero-background" src="${assetUrl("brand/visuals/hero-privacy-shield.png")}" width="2048" height="1152" alt="" fetchpriority="high" decoding="async">
+      <div class="privacy-hero-shade"></div>
+      <div class="privacy-container privacy-hero-inner">
+        <nav class="privacy-breadcrumb" aria-label="Navegação estrutural"><a href="${pageUrl()}">Início</a><span aria-hidden="true">›</span><span>Política de privacidade</span></nav>
+        <div class="privacy-hero-copy">
+          <h1 id="privacy-title">Política de<br><span>privacidade</span></h1>
+          <p>Entenda como este catálogo funciona e como os canais externos tratam as informações que você decide compartilhar.</p>
+          <span class="privacy-accent" aria-hidden="true"></span>
+        </div>
+        <ul class="privacy-proof-list" aria-label="Princípios de privacidade">
+          <li>${icon("shield")}<span>Privacidade</span></li>
+          <li>${howIcon("lock")}<span>Segurança</span></li>
+          <li>${howIcon("users")}<span>Clareza</span></li>
+          <li>${howIcon("file")}<span>Transparência</span></li>
+        </ul>
+        <p class="privacy-handwriting">Seus<br>dados em<br>boas mãos.<span aria-hidden="true"></span></p>
+      </div>
+    </section>
+
+    <section class="privacy-content" aria-labelledby="privacy-cards-title">
+      <div class="privacy-content-container">
+        <header class="privacy-heading">
+          <p>Transparência sem complicação</p>
+          <h2 id="privacy-cards-title">Como tratamos seus dados</h2>
+          <span>Este catálogo não cria contas nem processa pagamentos. Veja o papel do site e dos canais externos.</span>
+        </header>
+        <div class="privacy-card-grid">
+          <article class="privacy-card privacy-card--third"><div>${howIcon("file")}</div><h3>Dados no catálogo</h3><p>A navegação é pública. A busca usa apenas o termo informado na URL e não exige cadastro neste site.</p></article>
+          <article class="privacy-card privacy-card--third"><div>${howIcon("cookie")}</div><h3>Navegação</h3><p>O catálogo não depende de uma conta própria. Seu navegador pode aplicar configurações técnicas e de acessibilidade.</p></article>
+          <article class="privacy-card privacy-card--third"><div>${icon("external")}</div><h3>Links externos</h3><p>Mercado Livre, WhatsApp e LinkedIn possuem políticas próprias para dados enviados em suas plataformas.</p></article>
+          <article class="privacy-card privacy-card--wide-left"><div>${howIcon("lock")}</div><h3>Segurança</h3><p>O site não recebe senhas nem dados de pagamento. A compra e o checkout acontecem no ambiente do Mercado Livre.</p></article>
+          <article class="privacy-card privacy-card--wide-right"><div>${howIcon("user")}</div><h3>Seus direitos</h3><p>Você pode pedir esclarecimentos sobre informações enviadas diretamente à OMEGAIMPORTS pelos canais oficiais.</p><a href="${pageUrl("contato/")}">Ver canais de contato ${icon("arrow-right")}</a></article>
+        </div>
+        <aside class="privacy-help" aria-label="Canais de atendimento">
+          <div class="privacy-help-symbol">${howIcon("headset")}</div>
+          <div class="privacy-help-copy"><p>Precisa de ajuda?</p><h2>Fale com nossa equipe</h2><span>Para dúvidas sobre esta política, use um dos canais oficiais.</span></div>
+          <div class="privacy-help-actions">
+            <a class="privacy-help-whatsapp whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">${howIcon("whatsapp")}<span>Falar no WhatsApp</span></a>
+            <a href="${pageUrl("contato/")}">${icon("message")}<span>Ver canais de contato</span></a>
+          </div>
+          <p class="privacy-help-note">Estamos<br>aqui para<br><strong>ajudar!</strong></p>
+        </aside>
+      </div>
+    </section>
+  </div>`;
+
+  const faqBody = `<div class="faq-page">
+    <section class="faq-hero" aria-labelledby="faq-title">
+      <img class="faq-hero-background" src="${assetUrl("brand/visuals/hero-esp32-circuit.png")}" width="2048" height="1152" alt="" fetchpriority="high" decoding="async">
+      <div class="faq-hero-shade"></div>
+      <div class="faq-container faq-hero-inner">
+        <div class="faq-hero-copy">
+          <p>Suporte sem complicação</p>
+          <h1 id="faq-title">Dúvidas <span>frequentes</span></h1>
+          <div>Encontre respostas rápidas para as principais perguntas sobre compra, envio, pagamento e muito mais.</div>
+          <form class="faq-search" role="search" action="#faq-list">
+            <label class="sr-only" for="faq-search-input">Buscar uma dúvida</label>
+            ${icon("search")}
+            <input id="faq-search-input" type="search" placeholder="Digite sua dúvida aqui..." autocomplete="off">
+            <button type="submit">Buscar</button>
+          </form>
+        </div>
+        <p class="faq-handwriting">Tecnologia<br>mais perto<br>de você.<span aria-hidden="true"></span></p>
+      </div>
+    </section>
+
+    <section class="faq-content" aria-labelledby="faq-list-title">
+      <div class="faq-container">
+        <header class="faq-heading">
+          <p>Perguntas mais comuns</p>
+          <h2 id="faq-list-title">Tudo o que você precisa saber</h2>
+          <span>Consulte as respostas para as dúvidas mais frequentes sobre o catálogo e a compra no canal oficial.</span>
+        </header>
+        <div class="faq-list" id="faq-list">
+          <details class="faq-item" data-question="como comprar produto omegaimports mercado livre">
+            <summary><span class="faq-item-icon">${icon("package")}</span><strong>Como faço para comprar na OMEGAIMPORTS?</strong><span class="faq-chevron">${howIcon("chevron")}</span></summary>
+            <p>Escolha um produto no catálogo, abra o anúncio oficial e confirme modelo, preço, estoque, frete e pagamento no Mercado Livre antes de finalizar.</p>
+          </details>
+          <details class="faq-item" data-question="formas pagamento cartão pix boleto">
+            <summary><span class="faq-item-icon">${howIcon("card")}</span><strong>Quais são as formas de pagamento?</strong><span class="faq-chevron">${howIcon("chevron")}</span></summary>
+            <p>As opções disponíveis são apresentadas e processadas pelo Mercado Livre durante o checkout. Consulte a oferta para ver as condições aplicáveis ao pedido.</p>
+          </details>
+          <details class="faq-item" data-question="prazo entrega envio frete">
+            <summary><span class="faq-item-icon">${howIcon("truck")}</span><strong>Qual é o prazo de entrega?</strong><span class="faq-chevron">${howIcon("chevron")}</span></summary>
+            <p>O prazo depende do produto, do endereço e da modalidade de envio. A estimativa válida aparece no anúncio e no checkout do Mercado Livre.</p>
+          </details>
+          <details class="faq-item" data-question="troca devolver devolução produto">
+            <summary><span class="faq-item-icon">${howIcon("refresh")}</span><strong>Posso trocar ou devolver um produto?</strong><span class="faq-chevron">${howIcon("chevron")}</span></summary>
+            <p>Solicitações seguem as condições da oferta e as regras aplicáveis do Mercado Livre. Use a área do pedido na plataforma para consultar e iniciar o atendimento.</p>
+          </details>
+          <details class="faq-item" data-question="produto original garantia condição">
+            <summary><span class="faq-item-icon">${icon("shield")}</span><strong>Os produtos são originais e têm garantia?</strong><span class="faq-chevron">${howIcon("chevron")}</span></summary>
+            <p>A condição do item e a garantia aplicável são informadas em cada anúncio. Confirme esses dados na oferta oficial antes de concluir a compra.</p>
+          </details>
+          <details class="faq-item" data-question="contato suporte ajuda whatsapp mercado livre">
+            <summary><span class="faq-item-icon">${howIcon("headset")}</span><strong>Como faço para entrar em contato com o suporte?</strong><span class="faq-chevron">${howIcon("chevron")}</span></summary>
+            <p>Fale pelo WhatsApp oficial para dúvidas técnicas ou use o atendimento do Mercado Livre quando a questão estiver relacionada a um pedido.</p>
+          </details>
+        </div>
+        <p class="faq-empty" role="status" hidden>Nenhuma pergunta encontrada. Tente outro termo.</p>
+      </div>
+    </section>
+
+    <section class="faq-help" aria-labelledby="faq-help-title">
+      <div class="faq-container faq-help-inner">
+        <div class="faq-help-symbol">${icon("message")}</div>
+        <div class="faq-help-copy"><p>Ainda precisa de ajuda?</p><h2 id="faq-help-title">Fale com a <span>nossa equipe</span></h2><div>Escolha o canal adequado para sua dúvida.</div></div>
+        <div class="faq-help-actions">
+          <a class="whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">${howIcon("whatsapp")}<span>Falar no WhatsApp</span>${icon("arrow-right")}</a>
+          <a class="marketplace-link" href="${site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored">${icon("external")}<span>Atendimento no Mercado Livre</span>${icon("arrow-right")}</a>
+        </div>
+        <p class="faq-help-note">Resposta<br>rápida e<br>sem burocracia.<span aria-hidden="true"></span></p>
+      </div>
+    </section>
+
+    <script>
+      (() => {
+        const page = document.querySelector('.faq-page');
+        if (!page) return;
+        const form = page.querySelector('.faq-search');
+        const input = page.querySelector('#faq-search-input');
+        const items = [...page.querySelectorAll('.faq-item')];
+        const empty = page.querySelector('.faq-empty');
+        const normalize = (value) => value.normalize('NFD').replace(/[\\u0300-\\u036f]/g, '').toLowerCase().trim();
+        const filter = () => {
+          const query = normalize(input.value);
+          let visible = 0;
+          for (const item of items) {
+            const matches = !query || normalize(item.dataset.question + ' ' + item.textContent).includes(query);
+            item.hidden = !matches;
+            if (matches) visible += 1;
+          }
+          empty.hidden = visible !== 0;
+        };
+        form.addEventListener('submit', (event) => { event.preventDefault(); filter(); page.querySelector('#faq-list').scrollIntoView({ behavior: 'smooth', block: 'start' }); });
+        input.addEventListener('input', filter);
+      })();
+    </script>
+  </div>`;
+
+  const termsBody = `<div class="terms-page">
+    <section class="terms-hero" aria-labelledby="terms-title">
+      <img class="terms-hero-background" src="${assetUrl("brand/visuals/hero-esp32-vertical.png")}" width="2048" height="1152" alt="" fetchpriority="high" decoding="async">
+      <div class="terms-hero-shade"></div>
+      <div class="terms-container terms-hero-inner">
+        <nav class="terms-breadcrumb" aria-label="Navegação estrutural"><a href="${pageUrl()}">Início</a><span aria-hidden="true">›</span><span>Termos de uso</span></nav>
+        <div class="terms-hero-copy">
+          <h1 id="terms-title">Termos de <span>uso</span></h1>
+          <p>Regras simples e transparentes para navegar, consultar o catálogo e acessar nossos canais oficiais.</p>
+        </div>
+        <ul class="terms-proof-list" aria-label="Princípios dos termos de uso">
+          <li>${icon("shield")}<span>Informação<br>transparente</span></li>
+          <li>${howIcon("file")}<span>Condições no<br>Mercado Livre</span></li>
+          <li>${howIcon("users")}<span>Foco na sua<br>experiência</span></li>
+        </ul>
+        <p class="terms-handwriting">Tecnologia<br>hoje.<br>Projetos reais<br>amanhã.<span aria-hidden="true"></span></p>
+      </div>
+    </section>
+
+    <section class="terms-content" aria-labelledby="terms-points-title">
+      <div class="terms-container">
+        <header class="terms-heading">
+          <p>Conheça nossos termos</p>
+          <h2 id="terms-points-title">Pontos principais</h2>
+          <span>Veja os aspectos essenciais que orientam o uso do site e a consulta dos produtos.</span>
+        </header>
+        <div class="terms-card-grid">
+          <article class="terms-card">${howIcon("target")}<h3>1. Propósito do site</h3><p>A OMEGAIMPORTS apresenta uma vitrine informativa de componentes eletrônicos, IoT, automação e produtos relacionados.</p><a href="${pageUrl("sobre/")}" aria-label="Conhecer a OMEGAIMPORTS">${icon("arrow-right")}</a></article>
+          <article class="terms-card">${icon("package")}<h3>2. Catálogo e informações</h3><p>Descrições, imagens e especificações organizam a consulta. Confirme os dados finais no anúncio oficial antes da compra.</p><a href="${pageUrl("produtos/")}" aria-label="Consultar o catálogo">${icon("arrow-right")}</a></article>
+          <article class="terms-card">${howIcon("cart")}<h3>3. Compras no Mercado Livre</h3><p>Preço, estoque, frete, pagamento e entrega são definidos e confirmados na plataforma do Mercado Livre.</p><a class="marketplace-link" href="${site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored" aria-label="Abrir a loja no Mercado Livre">${icon("arrow-right")}</a></article>
+          <article class="terms-card">${icon("shield")}<h3>4. Garantias e pós-venda</h3><p>Garantia, troca e devolução seguem as condições informadas na oferta e as regras aplicáveis do Mercado Livre.</p><a class="marketplace-link" href="${site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored" aria-label="Consultar condições no Mercado Livre">${icon("arrow-right")}</a></article>
+          <article class="terms-card">${howIcon("file")}<h3>5. Conteúdo informativo</h3><p>Artigos, guias e textos apoiam a pesquisa técnica. Verifique requisitos e compatibilidade para cada projeto.</p><a href="${pageUrl("blog/")}" aria-label="Acessar o blog">${icon("arrow-right")}</a></article>
+          <article class="terms-card">${howIcon("headset")}<h3>6. Contato e suporte</h3><p>Para dúvidas sobre produto ou aplicação, utilize os canais oficiais indicados neste site.</p><a href="${pageUrl("contato/")}" aria-label="Acessar os canais de contato">${icon("arrow-right")}</a></article>
+        </div>
+        <aside class="terms-help" aria-label="Atendimento">
+          <div class="terms-help-icon">${howIcon("headset")}</div>
+          <div><h2>Precisa de ajuda?</h2><p>Nossa equipe está disponível para orientar sua consulta.</p></div>
+          <a class="whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">${howIcon("whatsapp")}<span>Falar com um especialista</span>${icon("arrow-right")}</a>
+        </aside>
+      </div>
+    </section>
+  </div>`;
+
   const pages = [
     ["sobre", "Sobre a OMEGAIMPORTS", "A OMEGAIMPORTS organiza componentes eletrônicos, IoT, telemetria, energia, prototipagem e automação em uma vitrine técnica ligada aos anúncios oficiais no Mercado Livre.", `<section class="page-hero"><p class="eyebrow">Sobre</p><h1>Uma vitrine técnica para comprar componentes com mais clareza.</h1><p>A OMEGAIMPORTS iniciou suas operações em dezembro de 2024 e atua com componentes eletrônicos, IoT, sensores, fontes, conectores, instrumentos de bancada e itens de prototipagem.</p></section><section class="detail-grid"><div class="detail-block"><h2>Proposta</h2><p>Organizar produtos reais por categoria, aplicação e família técnica, sem transformar a compra em um relatório interno.</p></div><div class="detail-block"><h2>Mercado Livre</h2><p>A finalização da compra acontece no anúncio oficial, onde preço, estoque, frete e pagamento são confirmados.</p></div><div class="detail-block"><h2>Clareza técnica</h2><p>Os textos priorizam informação objetiva, cuidados de uso e relação entre produto, aplicação e conteúdo editorial.</p></div><div class="detail-block"><h2>WhatsApp</h2><p>Para dúvidas sobre escolha de componente, compatibilidade ou aplicação, fale com a OMEGAIMPORTS pelo WhatsApp oficial.</p><a class="whatsapp-action whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp ${icon("message", "btn-icon")}</a></div></section>`],
-    ["como-comprar", "Como comprar", "Encontre o produto, confira modelo e condição, abra o anúncio oficial e finalize a compra pelo Mercado Livre.", `<section class="page-hero"><h1>Como comprar</h1><p>Use o catálogo para comparar componentes e finalize sempre no anúncio oficial da OMEGAIMPORTS no Mercado Livre.</p></section>`],
-    ["politica-de-privacidade", "Política de privacidade", "Este site é uma vitrine estática. Não cria contas, não processa pagamentos e não armazena dados de checkout.", `<section class="page-hero"><h1>Política de privacidade</h1><p>Este site é uma vitrine estática. Não cria contas, não processa pagamentos e não armazena dados de checkout.</p></section>`],
-    ["termos-de-uso", "Termos de uso", "As informações ajudam a organizar e comparar produtos. Condições finais devem ser confirmadas no Mercado Livre.", `<section class="page-hero"><h1>Termos de uso</h1><p>Preços, disponibilidade, frete, pagamento e condições finais devem ser confirmados no anúncio oficial do Mercado Livre.</p></section>`],
+    ["como-comprar", "Como comprar", "Encontre o produto, confira modelo e condição, abra o anúncio oficial e finalize a compra pelo Mercado Livre.", comoComprarBody],
+    ["politica-de-privacidade", "Política de privacidade", "Este site é uma vitrine estática. Não cria contas, não processa pagamentos e não armazena dados de checkout.", privacyBody],
+    ["termos-de-uso", "Termos de uso", "As informações ajudam a organizar e comparar produtos. Condições finais devem ser confirmadas no Mercado Livre.", termsBody],
     ["contato", "Contato", "Atendimento pelo WhatsApp oficial da OMEGAIMPORTS e compra finalizada pelo Mercado Livre.", `<section class="page-hero"><h1>Contato</h1><p>Para dúvidas sobre produto, compatibilidade, quantidade, frete ou prazo, fale pelo WhatsApp oficial da OMEGAIMPORTS.</p><a class="whatsapp-action whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp ${icon("message", "btn-icon")}</a></section>`],
-    ["duvidas-frequentes", "Dúvidas frequentes", "O site não tem checkout próprio. Preço, frete, estoque e prazo são confirmados no Mercado Livre.", `<section class="page-hero"><h1>Dúvidas frequentes</h1><p>O site não tem checkout próprio. Preço, frete, estoque e prazo são confirmados no Mercado Livre.</p></section>`],
+    ["duvidas-frequentes", "Dúvidas frequentes", "Encontre respostas sobre compra, pagamento, entrega, pós-venda e atendimento da OMEGAIMPORTS.", faqBody],
   ];
+  const v2PageConfig = {
+    "como-comprar": { pageClass: "how-to-buy-page", ogImage: "brand/visuals/banner-laptop-mercadolivre-v2.png" },
+    "termos-de-uso": { pageClass: "terms-of-use-page", ogImage: "brand/visuals/hero-esp32-vertical.png" },
+    "politica-de-privacidade": { pageClass: "privacy-policy-page", ogImage: "brand/visuals/hero-privacy-shield.png" },
+    "duvidas-frequentes": { pageClass: "faq-page-shell", ogImage: "brand/visuals/hero-esp32-circuit.png" },
+  };
   for (const [slug, title, description, body] of pages) {
     const enhancedBody = slug === "sobre" ? `${body}${commercialProof()}${buyingIntelligenceSection(selectByPriority().slice(0, 3))}${technicalFlowSection()}${opportunityCta()}` : body;
-    out(`${slug}/index.html`, pageShell({ title, description, path: `${slug}/`, body: enhancedBody }));
+    if (v2PageConfig[slug]) {
+      out(`${slug}/index.html`, renderV2InternalPage({ title, description, path: `${slug}/`, body: enhancedBody, ...v2PageConfig[slug] }));
+    } else {
+      out(`${slug}/index.html`, pageShell({ title, description, path: `${slug}/`, body: enhancedBody }));
+    }
   }
 }
 
@@ -763,7 +1063,7 @@ function legacyPages() {
 }
 
 function supportFiles() {
-  const urls = ["", "produtos/", "categorias/", "blog/", "sobre/", "como-comprar/", "politica-de-privacidade/", "termos-de-uso/", ...published.map((p) => `produtos/${p.slug}/`), ...visibleCategories.map((c) => `categorias/${c.slug}/`), ...blogPosts.map((post) => `blog/${post.slug}/`)];
+  const urls = ["", "produtos/", "categorias/", "blog/", "sobre/", "como-comprar/", "politica-de-privacidade/", "termos-de-uso/", "duvidas-frequentes/", ...published.map((p) => `produtos/${p.slug}/`), ...visibleCategories.map((c) => `categorias/${c.slug}/`), ...blogPosts.map((post) => `blog/${post.slug}/`)];
   out("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((url) => `  <url><loc>${absolute(url)}</loc></url>`).join("\n")}\n</urlset>`);
   out("robots.txt", `User-agent: *\nAllow: /\nSitemap: ${absolute("sitemap.xml")}\n`);
   out("404.html", pageShell({ title: "Página não encontrada", description: "Página não encontrada.", path: "404.html", body: `<section class="page-hero"><h1>Página não encontrada</h1><p>O endereço pode ter mudado.</p><a class="secondary-action" href="${pageUrl("produtos/")}">Ver produtos ${icon("arrow-right", "btn-icon")}</a></section>` }));

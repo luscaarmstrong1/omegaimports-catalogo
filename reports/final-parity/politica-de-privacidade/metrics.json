@@ -1,0 +1,53 @@
+{
+  "content": {
+    "width": 935,
+    "height": 1268,
+    "sourceDimensions": {
+      "left": {
+        "width": 935,
+        "height": 1268
+      },
+      "right": {
+        "width": 935,
+        "height": 1268
+      }
+    },
+    "pixelDifferencePercent": 38.2452,
+    "MAE": 21.5773,
+    "SSIM": 0.6638
+  },
+  "header": {
+    "width": 935,
+    "height": 94,
+    "sourceDimensions": {
+      "left": {
+        "width": 935,
+        "height": 94
+      },
+      "right": {
+        "width": 935,
+        "height": 94
+      }
+    },
+    "pixelDifferencePercent": 0.0,
+    "MAE": 0.0,
+    "SSIM": 1.0
+  },
+  "footer": {
+    "width": 935,
+    "height": 1035,
+    "sourceDimensions": {
+      "left": {
+        "width": 935,
+        "height": 1035
+      },
+      "right": {
+        "width": 935,
+        "height": 1035
+      }
+    },
+    "pixelDifferencePercent": 0.0,
+    "MAE": 0.0,
+    "SSIM": 1.0
+  }
+}
