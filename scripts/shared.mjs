@@ -1,4 +1,4 @@
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { resolveDeployment } from "./deployment.mjs";
 
 export const rootUrl = new URL("../", import.meta.url);
@@ -120,6 +120,15 @@ export function productAlt(product) {
 }
 
 export function productImagePaths(product) {
+  const hasCustomImage = product.image && !product.image.includes("product-placeholder") && existsSync(new URL(`../public/products/${product.mlbId}/optimized/main.jpg`, import.meta.url));
+  if (!hasCustomImage) {
+    const placeholder = assetUrl("assets/product-placeholder.svg");
+    return {
+      avif: placeholder,
+      webp: placeholder,
+      jpg: placeholder,
+    };
+  }
   const base = `products/${product.mlbId}/optimized/main`;
   return {
     avif: assetUrl(`${base}.avif`),
@@ -180,17 +189,22 @@ export function icon(name, className = "icon") {
 
 export function productCard(product, index = 0, { featured = false } = {}) {
   const cardClass = featured ? "product-card product-card--lead" : "product-card";
+  const isOutOfStock = product.status !== "published" || !product.active;
+  const statusBadge = isOutOfStock
+    ? `<span class="product-chip product-chip--out-of-stock" style="left:auto;right:14px;background:#fef2f2;color:#b91c1c;border:1px solid #fecaca;">Esgotado</span>`
+    : "";
   return `<article class="${cardClass}" data-title="${escapeHtml(normalizeText(product.title))}" data-family="${escapeHtml(normalizeText(product.familyId || ""))}" data-category="${product.internalCategorySlug}" data-condition="${product.condition}" data-package="${product.packageType}" data-quantity="${product.quantity}" data-price="${product.price || ""}" data-mlb="${product.mlbId}" data-reveal>
     <a class="product-media" href="${pageUrl(`produtos/${product.slug}/`)}" aria-label="Ver detalhes de ${escapeHtml(product.shortTitle || product.title)}">
       <span class="product-chip">${escapeHtml(product.internalCategory)}</span>
+      ${statusBadge}
       ${productPicture(product, { loading: index < 4 ? "eager" : "lazy", fetchpriority: index === 0 ? "high" : "auto" })}
     </a>
     <div class="product-content">
       <p class="product-category">${escapeHtml(product.internalCategory)}</p>
       <h3><a href="${pageUrl(`produtos/${product.slug}/`)}">${escapeHtml(product.title)}</a></h3>
-      <p class="product-price">${formatPrice(product)}</p>
+      <p class="product-price">${isOutOfStock && !product.price ? "Sob consulta" : formatPrice(product)}</p>
       <div class="card-actions">
-        <a class="primary-action marketplace-link" href="${product.permalink}" target="_blank" rel="noopener noreferrer sponsored" data-event="marketplace_click" data-mlb="${product.mlbId}" data-title="${escapeHtml(product.title)}" data-category="${escapeHtml(product.internalCategory)}" data-position="${index + 1}">Ver oferta ${icon("external", "btn-icon")}</a>
+        <a class="primary-action marketplace-link" href="${product.permalink || site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored" data-event="marketplace_click" data-mlb="${product.mlbId}" data-title="${escapeHtml(product.title)}" data-category="${escapeHtml(product.internalCategory)}" data-position="${index + 1}">${isOutOfStock ? "Consultar no ML" : "Ver oferta"} ${icon("external", "btn-icon")}</a>
         <a class="text-link" href="${pageUrl(`produtos/${product.slug}/`)}">Detalhes ${icon("arrow-right", "text-link-icon")}</a>
       </div>
     </div>

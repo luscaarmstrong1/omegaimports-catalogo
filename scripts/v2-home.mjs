@@ -141,6 +141,31 @@ function replaceDocumentHead(html, head, label) {
   return html.replace(/\s*<!-- Favicon Oficial -->\s*<link rel="icon"[^>]*>/, "");
 }
 
+const officialBrands = [
+  { name: "Espressif", file: "espressif.png", query: "Espressif" },
+  { name: "Hi-Link", file: "hi-link.png", query: "Hi-Link" },
+  { name: "Arduino", file: "arduino.png", query: "Arduino" },
+  { name: "STMicroelectronics", file: "st.png", query: "ST" },
+  { name: "Texas Instruments", file: "texas-instruments.png", query: "Texas" },
+  { name: "Nexperia", file: "nexperia.png", query: "Nexperia" },
+  { name: "Seeed Studio", file: "seeed-studio.png", query: "Seeed" },
+  { name: "Waveshare", file: "waveshare.png", query: "Waveshare" },
+];
+
+function wireBrandCards(html) {
+  const brandCardsHtml = officialBrands
+    .map(
+      (b) =>
+        `          <a class="brand-card" href="${pageUrl(`produtos/?q=${encodeURIComponent(b.query)}`)}"><img src="${assetUrl(`v2/assets/brands/${b.file}`)}" alt="Ver produtos ${escapeHtml(b.name)}" loading="lazy" width="110" height="28"></a>`
+    )
+    .join("\n");
+
+  return html.replace(
+    /<div class="brands-row reveal">[\s\S]*?<\/div>/,
+    `<div class="brands-row reveal">\n${brandCardsHtml}\n        </div>`
+  );
+}
+
 function wireProductionLinks(html) {
   const direct = new Map([
     ["Produtos", pageUrl("produtos/")], ["Categorias", pageUrl("categorias/")], ["Marcas", `${pageUrl()}#marcas`],
@@ -240,7 +265,7 @@ export function renderV2Home({ products, posts }) {
   html = html.replaceAll('<form class="hero-search-box" role="search">', `<form class="hero-search-box" action="${pageUrl("produtos/")}" method="get" role="search">`);
   html = html.replace(/(<form class="(?:header-search|hero-search-box)[^>]*>[\s\S]*?<input)(?![^>]*\bname=)/g, '$1 name="q"');
   html = html.replaceAll('<span id="copyright-year">2026</span>', `<span id="copyright-year">${new Date().getFullYear()}</span>`);
-  return wireCategoryCards(wireProductionLinks(applyVerifiedClaims(html)));
+  return wireCategoryCards(wireProductionLinks(wireBrandCards(applyVerifiedClaims(html))));
 }
 
 export function renderV2InternalPage({ title, description, path, body, pageClass = "content-page", ogImage = "brand/visuals/og-home.jpg", type = "website", noindex = false, extraHead = "" }) {

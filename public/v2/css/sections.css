@@ -1513,6 +1513,19 @@
   color: #ffffff;
   box-shadow: 0 14px 30px rgba(3, 20, 40, 0.3), 0 7px 18px rgba(37, 211, 102, 0.34), inset 0 1px 0 rgba(255, 255, 255, 0.32);
   transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+  animation: whatsappPulse 2.2s infinite ease-in-out;
+}
+
+@keyframes whatsappPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.72), 0 14px 30px rgba(3, 20, 40, 0.3);
+  }
+  70% {
+    box-shadow: 0 0 0 18px rgba(37, 211, 102, 0), 0 14px 30px rgba(3, 20, 40, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0), 0 14px 30px rgba(3, 20, 40, 0.3);
+  }
 }
 
 .home-whatsapp-float::before {

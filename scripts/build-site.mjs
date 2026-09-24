@@ -27,14 +27,15 @@ import { renderV2Home, renderV2InternalPage } from "./v2-home.mjs";
 const dist = new URL("../dist/", import.meta.url);
 const allProducts = loadProducts({ all: true });
 const published = loadProducts().filter((product) => product.active && product.imageStatus === "verified" && !product.image?.includes("product-placeholder"));
-const hidden = allProducts.filter((product) => product.status !== "published");
+const hidden = allProducts.filter((product) => product.status !== "published" || !product.active);
+const catalogProducts = [...published, ...allProducts.filter((product) => !published.some((p) => p.mlbId === product.mlbId))];
 const blogPosts = loadBlogPosts();
 const merchandising = JSON.parse(readFileSync(new URL("../src/data/home-merchandising.json", import.meta.url), "utf8"));
-const categoryCounts = Object.fromEntries(categories.map((category) => [category.slug, published.filter((product) => product.internalCategorySlug === category.slug).length]));
+const categoryCounts = Object.fromEntries(categories.map((category) => [category.slug, catalogProducts.filter((product) => product.internalCategorySlug === category.slug).length]));
 const visibleCategories = categories.filter((category) => (categoryCounts[category.slug] || 0) > 0);
 const homeCategorySlugs = ["iot-gsm-e-comunicacao", "sensores-e-medicao", "fontes-e-alimentacao", "automacao-e-comando", "componentes-eletronicos", "instrumentos-de-bancada"];
 const homeCategories = homeCategorySlugs.map((slug) => visibleCategories.find((category) => category.slug === slug)).filter(Boolean);
-const visibleFamilies = familyCards.filter((family) => published.some((product) => product.familyId === family.slug));
+const visibleFamilies = familyCards.filter((family) => catalogProducts.some((product) => product.familyId === family.slug));
 
 function out(path, html) {
   const target = new URL(path, dist);
@@ -77,8 +78,8 @@ function section({ eyebrow, title, description = "", action = "", content, class
 }
 
 function collectionItems(entry, route) {
-  if (route === "categorias") return published.filter((product) => product.internalCategorySlug === entry.slug);
-  if (route === "familias") return published.filter((product) => product.familyId === entry.slug);
+  if (route === "categorias") return catalogProducts.filter((product) => product.internalCategorySlug === entry.slug);
+  if (route === "familias") return catalogProducts.filter((product) => product.familyId === entry.slug);
   const applicationCategories = {
     "telemetria-e-conectividade": ["iot-gsm-e-comunicacao", "gps-e-localizacao"],
     "monitoramento-de-energia": ["sensores-e-medicao", "fontes-e-alimentacao"],
@@ -88,7 +89,7 @@ function collectionItems(entry, route) {
     "instrumentacao-de-bancada": ["instrumentos-de-bancada"],
   };
   const categorySlugs = applicationCategories[entry.slug] || [];
-  return published.filter((product) => categorySlugs.includes(product.internalCategorySlug));
+  return catalogProducts.filter((product) => categorySlugs.includes(product.internalCategorySlug));
 }
 
 function appUrl(app) {
@@ -579,7 +580,7 @@ function catalog() {
   const itemList = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    itemListElement: published.slice(0, 40).map((product, index) => ({ "@type": "ListItem", position: index + 1, url: absolute(`produtos/${product.slug}/`), name: product.title })),
+    itemListElement: catalogProducts.slice(0, 40).map((product, index) => ({ "@type": "ListItem", position: index + 1, url: absolute(`produtos/${product.slug}/`), name: product.title })),
   };
   const catalogChips = [
     ["", "Todos"],
@@ -590,10 +591,10 @@ function catalog() {
     ["componentes-eletronicos", "Componentes"],
     ["instrumentos-de-bancada", "Instrumentos"],
   ];
-  const body = `<section class="page-hero catalog-hero"><p class="eyebrow">Catálogo</p><h1>Produtos OMEGAIMPORTS</h1><p><strong>${published.length}</strong> produtos públicos, ativos e próprios, organizados para encontrar rápido o componente certo.</p><form class="catalog-search-panel" action="${pageUrl("produtos/")}" role="search">${icon("search", "search-icon")}<label class="sr-only" for="catalog-search">Buscar no catálogo</label><input id="catalog-search" name="q" type="search" placeholder="Buscar SCT-013, ESP32, Hi-Link, GPS..." autocomplete="off"><button class="secondary-action" type="submit">Buscar ${icon("arrow-right", "btn-icon")}</button></form><div class="catalog-chips" data-horizontal-scroll>${catalogChips.map(([slug, label]) => `<a href="${pageUrl(slug ? `produtos/?categoria=${slug}` : "produtos/")}" data-catalog-chip="${slug}">${label}</a>`).join("")}</div></section>
+  const body = `<section class="page-hero catalog-hero"><p class="eyebrow">Catálogo</p><h1>Produtos OMEGAIMPORTS</h1><p><strong>${catalogProducts.length}</strong> produtos organizados para encontrar rápido o componente certo.</p><form class="catalog-search-panel" action="${pageUrl("produtos/")}" role="search">${icon("search", "search-icon")}<label class="sr-only" for="catalog-search">Buscar no catálogo</label><input id="catalog-search" name="q" type="search" placeholder="Buscar SCT-013, ESP32, Hi-Link, GPS..." autocomplete="off"><button class="secondary-action" type="submit">Buscar ${icon("arrow-right", "btn-icon")}</button></form><div class="catalog-chips" data-horizontal-scroll>${catalogChips.map(([slug, label]) => `<a href="${pageUrl(slug ? `produtos/?categoria=${slug}` : "produtos/")}" data-catalog-chip="${slug}">${label}</a>`).join("")}</div></section>
     <div class="catalog-mobile-bar">
       <button class="filter-toggle" type="button" aria-controls="catalog-filters" aria-expanded="false">${icon("sliders", "btn-icon")} <span class="filter-toggle-label">Filtrar e ordenar</span></button>
-      <span><strong>${published.length}</strong> produtos</span>
+      <span><strong>${catalogProducts.length}</strong> produtos</span>
     </div>
     <div class="filter-scrim" id="filter-scrim" hidden></div>
     <section class="catalog-layout">
@@ -610,7 +611,7 @@ function catalog() {
           <button class="apply-filters" type="button" id="apply-filters">Aplicar filtros</button>
         </div>
       </aside>
-      <div><p class="result-count" aria-live="polite"><strong id="result-count">${published.length}</strong> produtos encontrados</p><div class="product-grid" id="product-list">${published.map(productCard).join("")}</div><div class="empty-state" id="empty-state" hidden><h2>Nenhum produto encontrado.</h2><p>Revise o termo ou remova alguns filtros.</p></div></div>
+      <div><p class="result-count" aria-live="polite"><strong id="result-count">${catalogProducts.length}</strong> produtos encontrados</p><div class="product-grid" id="product-list">${catalogProducts.map(productCard).join("")}</div><div class="empty-state" id="empty-state" hidden><h2>Nenhum produto encontrado.</h2><p>Revise o termo ou remova alguns filtros.</p></div></div>
     </section>`;
   out("produtos/index.html", renderV2InternalPage({ title: "Produtos", description: "Catálogo com busca e filtros de ofertas públicas da OMEGAIMPORTS.", path: "produtos/", pageClass: "catalog-page", body, extraHead: `<script type="application/ld+json">${JSON.stringify(itemList)}</script>` }));
 }
@@ -624,9 +625,10 @@ function collectionPages() {
 }
 
 function productPages() {
-  for (const product of published) {
+  for (const product of catalogProducts) {
+    const isOutOfStock = product.status !== "published" || !product.active;
     const specs = product.specifications?.length ? `<section class="detail-block"><h2>Especificações</h2><dl class="spec-table">${product.specifications.slice(0, 14).map((s) => `<div><dt>${escapeHtml(s.label)}</dt><dd>${escapeHtml(s.value)}</dd></div>`).join("")}</dl></section>` : "";
-    const related = published.filter((item) => item.mlbId !== product.mlbId && (item.familyId === product.familyId || item.internalCategorySlug === product.internalCategorySlug)).slice(0, 4);
+    const related = catalogProducts.filter((item) => item.mlbId !== product.mlbId && (item.familyId === product.familyId || item.internalCategorySlug === product.internalCategorySlug)).slice(0, 4);
     const articles = relatedPostsForProduct(product);
     const productSchema = product.price ? {
       "@context": "https://schema.org",
@@ -639,23 +641,23 @@ function productPages() {
         "@type": "Offer",
         price: product.price,
         priceCurrency: product.currency || "BRL",
-        availability: "https://schema.org/InStock",
+        availability: isOutOfStock ? "https://schema.org/OutOfStock" : "https://schema.org/InStock",
         itemCondition: product.condition === "usado" ? "https://schema.org/UsedCondition" : "https://schema.org/NewCondition",
-        url: product.permalink,
+        url: product.permalink || site.marketplaceUrl,
       },
     } : null;
-    const body = `<nav class="breadcrumb"><a href="${pageUrl()}">Início</a><a href="${pageUrl("produtos/")}">Produtos</a><span>${escapeHtml(product.shortTitle)}</span></nav>
+    const body = `<nav class="breadcrumb"><a href="${pageUrl()}">Início</a><a href="${pageUrl("produtos/")}">Produtos</a><span>${escapeHtml(product.shortTitle || product.title)}</span></nav>
       <section class="product-detail">
         <div class="product-gallery">
           ${productPicture(product, { className: "product-detail-picture", width: 720, height: 720, loading: "eager", fetchpriority: "high", sizes: "(min-width: 900px) 48vw, 100vw" })}
           <a class="image-open" href="${assetUrl(`products/${product.mlbId}/optimized/main.jpg`)}">Abrir imagem maior</a>
         </div>
-        <div class="product-summary"><p class="eyebrow">${escapeHtml(product.internalCategory)}</p><h1>${escapeHtml(product.title)}</h1><div class="summary-chips"><span>${conditionLabel(product)}</span><span>${productFormat(product)}</span><span>${escapeHtml(product.internalCategory)}</span></div><p class="summary-price">${formatPrice(product)}</p>${product.priceLastVerifiedAt ? `<p class="updated-at">Preço verificado em ${formatDate(product.priceLastVerifiedAt)}</p>` : ""}<div class="summary-actions"><a class="primary-action marketplace-link" href="${product.permalink}" target="_blank" rel="noopener noreferrer sponsored">Ver oferta no Mercado Livre ${icon("external", "btn-icon")}</a><a class="whatsapp-action whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">Tirar dúvida ${icon("message", "btn-icon")}</a></div><p class="external-note">Você será direcionado ao anúncio oficial para confirmar frete, pagamento e disponibilidade.</p></div>
+        <div class="product-summary"><p class="eyebrow">${escapeHtml(product.internalCategory)}</p><h1>${escapeHtml(product.title)}</h1><div class="summary-chips"><span>${conditionLabel(product)}</span><span>${productFormat(product)}</span><span>${escapeHtml(product.internalCategory)}</span>${isOutOfStock ? `<span style="background:#fef2f2;color:#b91c1c;border:1px solid #fecaca;padding:2px 8px;border-radius:6px;font-size:12px;font-weight:700;">Esgotado</span>` : ""}</div><p class="summary-price">${isOutOfStock && !product.price ? "Sob consulta" : formatPrice(product)}</p>${product.priceLastVerifiedAt ? `<p class="updated-at">Preço verificado em ${formatDate(product.priceLastVerifiedAt)}</p>` : ""}<div class="summary-actions"><a class="primary-action marketplace-link" href="${product.permalink || site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored">${isOutOfStock ? "Consultar no Mercado Livre" : "Ver oferta no Mercado Livre"} ${icon("external", "btn-icon")}</a><a class="whatsapp-action whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">Tirar dúvida ${icon("message", "btn-icon")}</a></div><p class="external-note">Você será direcionado ao anúncio oficial para confirmar frete, pagamento e disponibilidade.</p></div>
       </section>
       ${quickSpecStrip(product)}
       <div class="mobile-product-bar">
-        <div><span>Oferta oficial</span><strong>${formatPrice(product)}</strong></div>
-        <a class="primary-action marketplace-link" href="${product.permalink}" target="_blank" rel="noopener noreferrer sponsored">Ver oferta ${icon("external", "btn-icon")}</a>
+        <div><span>${isOutOfStock ? "Status" : "Oferta oficial"}</span><strong>${isOutOfStock && !product.price ? "Esgotado" : formatPrice(product)}</strong></div>
+        <a class="primary-action marketplace-link" href="${product.permalink || site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored">${isOutOfStock ? "Consultar no ML" : "Ver oferta"} ${icon("external", "btn-icon")}</a>
         <a class="whatsapp-action whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer" aria-label="Tirar dúvida no WhatsApp">${icon("message", "btn-icon")}</a>
       </div>
       <section class="detail-grid"><section class="detail-block"><h2>Resumo técnico</h2><p>${escapeHtml(product.technicalSummary || product.shortDescription || product.title)}</p></section>${specs}<section class="detail-block"><h2>Características</h2><ul><li>${productFormat(product)}</li><li>${conditionLabel(product)}</li><li>${escapeHtml(product.internalCategory)}</li></ul></section><section class="detail-block"><h2>Cuidados</h2><p>Confirme tensão, corrente, pinagem, acessórios e compatibilidade diretamente no anúncio antes da compra. Para rede elétrica ou comando, conte com profissional habilitado.</p></section></section>
@@ -1048,7 +1050,7 @@ function legacyPages() {
 }
 
 function supportFiles() {
-  const urls = ["", "produtos/", "categorias/", "blog/", "sobre/", "contato/", "como-comprar/", "politica-de-privacidade/", "termos-de-uso/", "duvidas-frequentes/", ...published.map((p) => `produtos/${p.slug}/`), ...visibleCategories.map((c) => `categorias/${c.slug}/`), ...blogPosts.map((post) => `blog/${post.slug}/`)];
+  const urls = ["", "produtos/", "categorias/", "blog/", "sobre/", "contato/", "como-comprar/", "politica-de-privacidade/", "termos-de-uso/", "duvidas-frequentes/", ...catalogProducts.map((p) => `produtos/${p.slug}/`), ...visibleCategories.map((c) => `categorias/${c.slug}/`), ...blogPosts.map((post) => `blog/${post.slug}/`)];
   out("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((url) => `  <url><loc>${absolute(url)}</loc></url>`).join("\n")}\n</urlset>`);
   out("robots.txt", site.isPreview
     ? "User-agent: *\nDisallow: /\n"
