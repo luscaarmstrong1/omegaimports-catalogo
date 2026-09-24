@@ -1,14 +1,19 @@
 import { readFileSync } from "node:fs";
+import { resolveDeployment } from "./deployment.mjs";
 
 export const rootUrl = new URL("../", import.meta.url);
+
+export const deployment = resolveDeployment();
 
 export const site = {
   name: "OMEGAIMPORTS",
   founded: "23 de dezembro de 2024",
   tagline: "Componentes eletrônicos, IoT e automação com curadoria técnica.",
-  site: "https://luscaarmstrong1.github.io",
-  base: "/omegaimports-catalogo",
-  productionUrl: "https://luscaarmstrong1.github.io/omegaimports-catalogo/",
+  site: deployment.officialOrigin,
+  base: deployment.base,
+  productionUrl: deployment.officialUrl,
+  deploymentUrl: deployment.url,
+  isPreview: deployment.isPreview,
   marketplaceUrl: "https://www.mercadolivre.com.br/pagina/omegaimports",
   linkedinUrl: "https://www.linkedin.com/company/omegaimports/",
   whatsappNumber: "+55 35 99952-8858",
@@ -72,7 +77,8 @@ export function assetUrl(path = "") {
 export const href = pageUrl;
 
 export function absolute(path = "") {
-  return `${site.site}${pageUrl(path)}`;
+  const clean = String(path).replace(/^\/+/, "");
+  return new URL(clean, site.productionUrl).toString();
 }
 
 export function escapeHtml(value = "") {

@@ -52,7 +52,14 @@ function copyAssets() {
   cpSync(new URL("../public/assets/", import.meta.url), new URL("assets/", dist), { recursive: true });
   cpSync(new URL("../public/v2/", import.meta.url), new URL("v2/", dist), { recursive: true });
   cpSync(new URL("../public/products/", import.meta.url), new URL("products/", dist), { recursive: true });
-  cpSync(new URL("../public/manifest.webmanifest", import.meta.url), new URL("manifest.webmanifest", dist));
+  const manifest = JSON.parse(readFileSync(new URL("../public/manifest.webmanifest", import.meta.url), "utf8"));
+  manifest.start_url = pageUrl();
+  manifest.scope = pageUrl();
+  manifest.icons = manifest.icons.map((entry) => ({
+    ...entry,
+    src: assetUrl(entry.src.replace(/^\/omegaimports-catalogo\//, "")),
+  }));
+  out("manifest.webmanifest", `${JSON.stringify(manifest, null, 2)}\n`);
 }
 
 function section({ eyebrow, title, description = "", action = "", content, className = "section" }) {
@@ -1043,7 +1050,9 @@ function legacyPages() {
 function supportFiles() {
   const urls = ["", "produtos/", "categorias/", "blog/", "sobre/", "contato/", "como-comprar/", "politica-de-privacidade/", "termos-de-uso/", "duvidas-frequentes/", ...published.map((p) => `produtos/${p.slug}/`), ...visibleCategories.map((c) => `categorias/${c.slug}/`), ...blogPosts.map((post) => `blog/${post.slug}/`)];
   out("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((url) => `  <url><loc>${absolute(url)}</loc></url>`).join("\n")}\n</urlset>`);
-  out("robots.txt", `User-agent: *\nAllow: /\nSitemap: ${absolute("sitemap.xml")}\n`);
+  out("robots.txt", site.isPreview
+    ? "User-agent: *\nDisallow: /\n"
+    : `User-agent: *\nAllow: /\nSitemap: ${absolute("sitemap.xml")}\n`);
   out("404.html", renderV2InternalPage({ title: "Página não encontrada", description: "Página não encontrada.", path: "404.html", pageClass: "not-found-page", noindex: true, body: `<section class="page-hero"><p class="eyebrow">Erro 404</p><h1>Página não encontrada</h1><p>O endereço pode ter mudado. Continue pelo catálogo público da OMEGAIMPORTS.</p><a class="secondary-action" href="${pageUrl("produtos/")}">Ver produtos ${icon("arrow-right", "btn-icon")}</a></section>` }));
 }
 

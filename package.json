@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "private": false,
   "type": "module",
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "dev": "node scripts/build-site.mjs && node scripts/serve-dist.mjs",
     "build": "node scripts/generate-blog-covers.mjs && node scripts/build-site.mjs",
     "lint": "node scripts/lint.mjs",
     "typecheck": "node scripts/typecheck.mjs",
-    "test": "node --test tests/catalog.test.mjs",
+    "test": "node --test tests/catalog.test.mjs && node --test tests/vercel-preview.test.mjs",
     "test:e2e": "node scripts/test-e2e.mjs",
     "audit:v2-dom": "node scripts/audit-v2-frozen-dom.mjs",
     "audit:v2-checksums": "node scripts/audit-v2-frozen-checksums.mjs",

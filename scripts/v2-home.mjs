@@ -78,6 +78,7 @@ function productionHead() {
   <meta property="og:image" content="${absolute("brand/visuals/og-home.jpg")}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#030914">
+  ${site.isPreview ? '<meta name="robots" content="noindex,nofollow,noarchive">' : ""}
   <link rel="icon" href="${assetUrl("v2/assets/brand/favicon.svg")}" type="image/svg+xml">
   <link rel="manifest" href="${assetUrl("manifest.webmanifest")}">
   <script type="application/ld+json">${JSON.stringify(organization)}</script>
@@ -115,7 +116,7 @@ function internalPageHead({ title, description, path, ogImage, type = "website",
   <meta name="theme-color" content="#030914">
   <link rel="icon" href="${assetUrl("v2/assets/brand/favicon.svg")}" type="image/svg+xml">
   <link rel="manifest" href="${assetUrl("manifest.webmanifest")}">
-  ${noindex ? '<meta name="robots" content="noindex,follow">' : ""}
+  ${site.isPreview ? '<meta name="robots" content="noindex,nofollow,noarchive">' : noindex ? '<meta name="robots" content="noindex,follow">' : ""}
   <script type="application/ld+json">${JSON.stringify(organization)}</script>
   <script type="application/ld+json">${JSON.stringify(webPage)}</script>
   ${extraHead}`;
