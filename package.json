@@ -8,8 +8,11 @@
     "build": "node scripts/generate-blog-covers.mjs && node scripts/build-site.mjs",
     "lint": "node scripts/lint.mjs",
     "typecheck": "node scripts/typecheck.mjs",
-    "test": "node --test tests/catalog.test.mjs",
+    "test": "node --test --test-isolation=none tests/catalog.test.mjs",
     "test:e2e": "node scripts/test-e2e.mjs",
+    "audit:v2-dom": "node scripts/audit-v2-frozen-dom.mjs",
+    "audit:v2-checksums": "node scripts/audit-v2-frozen-checksums.mjs",
+    "audit:v2-visual": "node scripts/visual-compare-v2.mjs",
     "audit:products": "node scripts/audit-products.mjs",
     "audit:owned-items": "node scripts/audit-owned-items.mjs",
     "audit:catalog-listings": "node scripts/audit-catalog-listings.mjs",
@@ -41,6 +44,7 @@
   "devDependencies": {
     "fast-xml-parser": "^5.10.1",
     "fflate": "^0.8.3",
+    "playwright": "1.63.0",
     "sharp": "^0.35.3"
   }
 }

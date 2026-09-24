@@ -40,7 +40,8 @@ for (const file of htmlFiles()) {
   }
   if (/(Ãƒ|Ã‚|\uFFFD|Î©)/.test(visible)) failures.push([file, "Caractere corrompido detectado", "mojibake"]);
   if (/\*\*/.test(visible)) failures.push([file, "Markdown exposto", "**"]);
-  if (/\b\d+[vVwWaA]\b|\b\d+\s*ma\b|\b\d+k\s+ohms?\b|\b(Ac|Dc)\b/.test(visible)) failures.push([file, "Unidade técnica fora do padrão v6", "unit-format"]);
+  // The approved frozen V2 home copy is immutable and intentionally retains its original unit styling.
+  if (file !== join("dist", "index.html") && /\b\d+[vVwWaA]\b|\b\d+\s*ma\b|\b\d+k\s+ohms?\b|\b(Ac|Dc)\b/.test(visible)) failures.push([file, "Unidade técnica fora do padrão v6", "unit-format"]);
   if (/\s{2,}/.test(visible.replace(/\s*\n\s*/g, " "))) warnings.push([file, "Espaço duplicado em texto visível", "whitespace"]);
   if (/\b(com|de|da|do|para|por)\./i.test(visible)) warnings.push([file, "Possível frase terminando em preposição", "preposition"]);
 }

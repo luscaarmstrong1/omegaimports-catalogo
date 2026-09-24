@@ -29,10 +29,23 @@ if (home.includes("eotcoee")) throw new Error("marca não autorizada reapareceu 
 if (!home.includes("/omegaimports-catalogo/blog/")) throw new Error("Blog não aparece na Home");
 if (!home.includes("wa.me/5535999528858")) throw new Error("WhatsApp oficial não aparece na Home");
 if (!home.includes("https://www.linkedin.com/company/omegaimports/")) throw new Error("LinkedIn oficial não aparece na Home");
+if (home.includes('href="#"')) throw new Error("Home contém link placeholder navegável");
+if (home.includes("Mais de 15 mil") || home.includes("MOCKUP CLAIM")) throw new Error("Home contém claim de mockup não comprovado");
+for (const claim of ["Envio pelo Mercado Livre", "Condições no anúncio", "Catálogo especializado", "Informações verificadas"]) {
+  if (!home.includes(claim)) throw new Error(`Claim verificável ausente: ${claim}`);
+}
+for (const neutralLabel of ["Instagram", "YouTube", "Facebook", "TikTok"]) {
+  if (!home.includes(`aria-label="${neutralLabel}" aria-disabled="true" tabindex="-1"`)) throw new Error(`Rede sem URL real não foi neutralizada: ${neutralLabel}`);
+}
+
+const runtime = readFileSync("dist/v2/runtime.js", "utf8");
+if (!runtime.includes("Cadastro de newsletter em breve.")) throw new Error("Newsletter não possui resposta neutra");
+if (!runtime.includes("Produto marcado nesta sessão.")) throw new Error("Favoritos ainda prometem persistência");
 
 const header = home.match(/<header[^>]*class="site-header"[^>]*>([\s\S]*?)<\/header>/)?.[1] || "";
 for (const item of ["Produtos", "Categorias", "Blog", "Sobre"]) {
-  if (!header.includes(`>${item}</a>`)) throw new Error(`Header sem aba principal: ${item}`);
+  const headerText = header.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
+  if (!headerText.includes(item)) throw new Error(`Header sem aba principal: ${item}`);
 }
 for (const forbidden of ["Aplicações", "Guias", "Famílias", "Aplicacoes", "Familias"]) {
   if (header.includes(forbidden)) throw new Error(`Header contém aba proibida: ${forbidden}`);

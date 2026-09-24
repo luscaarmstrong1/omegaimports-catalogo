@@ -1,118 +1,179 @@
-import {
-  absolute,
-  assetUrl,
-  blogCoverPicture,
-  escapeHtml,
-  formatDate,
-  formatPrice,
-  pageUrl,
-  productPicture,
-  site,
-} from "./shared.mjs";
+import { readFileSync } from "node:fs";
+import { absolute, assetUrl, escapeHtml, formatPrice, pageUrl, productImagePaths, site } from "./shared.mjs";
 
-const chevron = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>`;
-const searchIcon = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>`;
-const menuIcon = `<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>`;
-const closeIcon = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>`;
-const cartIcon = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>`;
-const heartIcon = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>`;
-const whatsappIcon = `<svg class="icon-whatsapp" width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.03 6.17a5.77 5.77 0 0 0-4.75 9.05l-.58 2.13 2.18-.57a5.77 5.77 0 1 0 3.15-10.61Zm3.39 8.24c-.14.41-.84.78-1.17.83-.3.04-.68.06-1.09-.07-2.08-.66-3.87-2.96-3.96-3.08-.09-.11-.7-.94-.7-1.79 0-.86.45-1.28.61-1.45.16-.17.35-.22.46-.22.26 0 .41 0 .53.31l.54 1.29c.04.08.07.19.01.3-.05.12-.08.19-.17.29l-.26.3c-.09.09-.18.18-.08.36.49.84 1.2 1.52 2.36 2 .17.09.27.07.37-.05.1-.11.44-.5.55-.68.12-.17.23-.14.39-.08l1.19.56c.17.09.29.13.33.21.05.07.05.41-.1.82Z"></path></svg>`;
-const heroFeatureIcons = [
-  `<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>`,
-  `<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="15" x2="23" y2="15"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="15" x2="4" y2="15"></line></svg>`,
-  `<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>`,
-];
-const mailIcon = `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><polyline points="3 7 12 13 21 7"></polyline></svg>`;
+const frozenTemplate = readFileSync(new URL("../templates/v2-home-frozen.html", import.meta.url), "utf8");
+const heartIcon = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>`;
+const cartIcon = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>`;
 
-const categoryCards = [
-  ["Módulos IoT", "Wi-Fi, Bluetooth, GSM e comunicação", "modulos-iot", "iot-gsm-e-comunicacao"],
-  ["Sensores", "Corrente, temperatura e medição", "sensores", "sensores-e-medicao"],
-  ["Fontes e Energia", "Fontes, conversores e alimentação", "fontes-e-energia", "fontes-e-alimentacao"],
-  ["Relés e Acionamento", "Relés, contatores e comando", "reles-e-acionamento", "automacao-e-comando"],
-  ["GPS e Navegação", "Localização, rastreamento e telemetria", "gps-e-navegacao", "gps-e-localizacao"],
-  ["Displays e IHM", "Interfaces e visualização de projetos", "displays-e-ihm", null, "display"],
-  ["Componentes Eletrônicos", "Peças para montagem e prototipagem", "componentes-eletronicos", "componentes-eletronicos"],
-  ["Cabos e Conectores", "Conexão, instalação e acabamento", "cabos-e-conectores", "conectores-e-instalacao"],
-];
-
-const brandFiles = [
-  ["espressif", "Espressif"], ["hi-link", "Hi-Link"], ["arduino", "Arduino"], ["st", "STMicroelectronics"],
-  ["texas-instruments", "Texas Instruments"], ["nexperia", "Nexperia"], ["seeed-studio", "Seeed Studio"], ["waveshare", "Waveshare"],
-];
-
-function v2(path) {
-  return assetUrl(`v2/${path}`);
-}
-
-function searchForm(className, id, placeholder) {
-  return `<form class="${className}" action="${pageUrl("produtos/")}" method="get" role="search">
-    <label class="sr-only" for="${id}">Buscar no catálogo</label>
-    <input id="${id}" name="q" type="search" placeholder="${escapeHtml(placeholder)}" autocomplete="off">
-    <button type="submit" class="header-search-btn" aria-label="Executar busca">${searchIcon}</button>
-  </form>`;
-}
-
-function header() {
-  const nav = `<a href="${pageUrl("produtos/")}" class="nav-link">Produtos</a><a href="${pageUrl("categorias/")}" class="nav-link">Categorias</a><a href="#marcas" class="nav-link">Marcas</a><a href="${pageUrl("blog/")}" class="nav-link">Blog</a><a href="${pageUrl("sobre/")}" class="nav-link">Sobre</a><a href="${pageUrl("como-comprar/")}" class="nav-link">Como comprar</a>`;
-  return `<header class="site-header" role="banner"><div class="container header-inner">
-    <a href="${pageUrl()}" class="brand-logo-link" aria-label="OMEGAIMPORTS - início"><img src="${v2("assets/brand/omegaimports-logo-horizontal.svg")}" alt="OMEGAIMPORTS - Componentes que fazem mais" class="brand-logo-img" width="180" height="42"></a>
-    <nav class="main-nav" aria-label="Navegação principal">${nav}</nav>
-    ${searchForm("header-search", "header-site-search", "Busque produtos ou projetos...")}
-    <div class="header-actions"><a class="header-account-btn" href="${site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored" aria-label="Abrir loja oficial no Mercado Livre"><span>Loja oficial</span></a><span class="header-cart-btn is-disabled" title="A compra é finalizada no Mercado Livre" aria-label="Carrinho disponível no Mercado Livre">${cartIcon}</span><button type="button" class="hamburger-btn" aria-label="Abrir menu" aria-expanded="false">${menuIcon}</button></div>
-  </div></header>
-  <div class="mobile-drawer-backdrop" aria-hidden="true"></div><aside class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Menu móvel" aria-hidden="true"><div class="drawer-header"><a href="${pageUrl()}" class="brand-logo-link"><img src="${v2("assets/brand/omegaimports-logo-horizontal.svg")}" alt="OMEGAIMPORTS" class="brand-logo-img" width="160" height="38"></a><button type="button" class="drawer-close-btn" aria-label="Fechar menu">${closeIcon}</button></div>${searchForm("header-search drawer-search", "drawer-site-search", "Buscar componentes...")}<nav class="drawer-nav">${nav}</nav><div class="drawer-footer-actions"><a href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">${whatsappIcon}<span>Falar no WhatsApp</span></a><a href="${site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored" class="btn btn-yellow">Loja no Mercado Livre</a></div></aside>`;
-}
-
-function hero() {
-  return `<section class="hero-section" aria-labelledby="hero-title"><div class="container hero-grid"><div class="hero-copy reveal"><span class="eyebrow-cyan">ELETRÔNICA • IoT • AUTOMAÇÃO • PROTOTIPAGEM</span><h1 id="hero-title" class="hero-title">Componentes<br>para projetos<br><span class="highlight-yellow">que fazem o futuro.</span></h1><p class="hero-subtitle">Sensores, módulos IoT, fontes e componentes eletrônicos para automação, prototipagem e desenvolvimento. Da ideia ao protótipo. Do protótipo ao próximo nível.</p>${searchForm("hero-search-box", "hero-site-search", "Busque produtos, categorias ou seu projeto...")}<div class="hero-ctas"><a href="${pageUrl("produtos/")}" class="btn btn-yellow"><span>Explorar catálogo</span>${chevron}</a><a href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">${whatsappIcon}<span>Falar com especialista</span></a></div></div><div class="hero-visual-center reveal reveal-delay-1"><div class="hero-handwriting-top handwriting handwriting-white">Pequenos componentes.<br><span class="handwriting-yellow">Grandes conquistas.</span></div><div class="hero-img-wrapper"><img src="${v2("assets/hero/esp32-hero.png")}" width="600" height="360" alt="Placa ESP32 em plataforma tecnológica" fetchpriority="high"></div></div><div class="hero-features-right reveal reveal-delay-2"><div class="hero-feature-item"><div class="hero-feature-icon">${heroFeatureIcons[0]}</div><div class="hero-feature-text">IDEIAS<br>EM MOVIMENTO</div></div><div class="hero-feature-item"><div class="hero-feature-icon">${heroFeatureIcons[1]}</div><div class="hero-feature-text">TECNOLOGIA<br>AO SEU ALCANCE</div></div><div class="hero-feature-item"><div class="hero-feature-icon">${heroFeatureIcons[2]}</div><div class="hero-feature-text">PROJETOS<br>REAIS</div></div><div class="hero-handwriting-bottom handwriting handwriting-yellow">IoT hoje.<br>Amanhã maior.</div></div></div></section>`;
-}
-
-function trustStrip({ productCount, categoryCount, articleCount }) {
-  const items = [
-    ["Entrega para todo o Brasil", "confirmada no anúncio"], ["Compra pelo Mercado Livre", "checkout oficial"],
-    ["Preços e condições", "verificados no anúncio"], ["Suporte técnico", "pelo WhatsApp"],
-    [`${productCount} produtos ativos`, "com imagens verificadas"], [`${categoryCount} categorias e ${articleCount} guias`, "catálogo organizado"],
-  ];
-  return `<section class="trust-strip" aria-label="Diferenciais OMEGAIMPORTS"><div class="container"><div class="trust-strip-inner">${items.map(([title, text]) => `<div class="trust-item"><svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><polyline points="8 12 11 15 16 9"></polyline></svg><div class="trust-text"><strong>${escapeHtml(title)}</strong>${escapeHtml(text)}</div></div>`).join("")}</div></div></section>`;
-}
-
-function categoriesSection() {
-  return `<section id="categorias" class="section-dark" aria-labelledby="cat-title"><div class="container"><div class="section-header reveal"><div class="section-title-group"><span class="eyebrow-cyan">EXPLORE NOSSO UNIVERSO</span><h2 id="cat-title">Nossas <span class="highlight-yellow">categorias</span></h2><p>Tudo o que você precisa para tirar seu projeto do papel, organizado por aplicação técnica.</p></div><a href="${pageUrl("categorias/")}" class="btn btn-outline-yellow">Ver todas as categorias ${chevron}</a></div><div class="categories-grid">${categoryCards.map(([label, desc, image, slug, query], index) => {
-    const url = slug ? pageUrl(`categorias/${slug}/`) : pageUrl(`produtos/?q=${encodeURIComponent(query)}`);
-    return `<a class="category-card reveal reveal-delay-${index % 4}" href="${url}"><div class="category-card-img"><picture><source srcset="${v2(`assets/categories/${image}.webp`)}" type="image/webp"><img src="${v2(`assets/categories/${image}.png`)}" width="96" height="96" alt="${escapeHtml(label)}" loading="lazy"></picture></div><div class="category-card-body"><h3 class="category-card-title">${escapeHtml(label)}</h3><p class="category-card-desc">${escapeHtml(desc)}</p></div><div class="category-card-arrow" aria-hidden="true">${chevron}</div></a>`;
-  }).join("")}</div><div class="categories-banners reveal"><div class="banner-card banner-kits"><img class="kit-visual" src="${v2("assets/banners/banner-kits-hd.png")}" alt="Kit de componentes eletrônicos" loading="lazy"><div class="banner-content"><h3 class="banner-title">Encontre o kit certo para começar</h3><p class="banner-sub">Compare módulos, sensores e acessórios no catálogo real.</p><a class="btn btn-dark" href="${pageUrl("produtos/")}">Explorar produtos</a></div></div><div class="banner-card banner-robot"><div class="banner-content"><h3 class="banner-title">Automação para projetos reais</h3><p class="banner-sub">Componentes organizados para bancada, campo e prototipagem.</p><a class="btn btn-outline-cyan" href="${pageUrl("categorias/automacao-e-comando/")}">Ver automação</a></div></div></div></div></section>`;
+function replaceRequired(source, pattern, replacement, label) {
+  if (!pattern.test(source)) throw new Error(`V2 frozen marker not found: ${label}`);
+  return source.replace(pattern, replacement);
 }
 
 function productCard(product, index) {
-  const detailUrl = pageUrl(`produtos/${product.slug}/`);
-  return `<article class="product-card"><div class="product-card-top">${index === 0 ? `<span class="badge-new product-card-badge">DESTAQUE</span>` : ""}<span class="product-card-fav is-disabled" title="Favoritos ficam disponíveis no marketplace" aria-label="Favoritos disponíveis no Mercado Livre">${heartIcon}</span><a href="${detailUrl}" aria-label="Ver detalhes de ${escapeHtml(product.title)}">${productPicture(product, { className: "v2-product-picture", width: 220, height: 220, loading: index < 3 ? "eager" : "lazy", fetchpriority: index === 0 ? "high" : "auto" })}</a></div><h3 class="product-card-title"><a href="${detailUrl}">${escapeHtml(product.title)}</a></h3><div class="product-card-price">${escapeHtml(formatPrice(product))}</div><div class="product-card-actions"><a href="${product.permalink}" target="_blank" rel="noopener noreferrer sponsored" class="btn btn-yellow marketplace-link" data-event="marketplace_click" data-mlb="${escapeHtml(product.mlbId)}" data-position="${index + 1}">Ver oferta</a><a class="btn-icon-cart" href="${detailUrl}" aria-label="Ver detalhes do produto">${chevron}</a></div></article>`;
+  const title = escapeHtml(product.shortTitle || product.title);
+  const paths = productImagePaths(product);
+  const badge = index === 0 || index === 3 ? '<span class="badge-new product-card-badge">NOVO</span>' : "";
+  return `            <!-- Dynamic product ${index + 1}: ${escapeHtml(product.mlbId)} -->
+            <article class="product-card" data-mlb="${escapeHtml(product.mlbId)}">
+              <div class="product-card-top">
+                ${badge}
+                <button type="button" class="product-card-fav" aria-label="Favoritar ${title}">${heartIcon}</button>
+                <a href="${pageUrl(`produtos/${product.slug}/`)}" aria-label="Ver detalhes de ${title}">
+                  <picture>
+                    <source srcset="${paths.avif}" type="image/avif">
+                    <source srcset="${paths.webp}" type="image/webp">
+                    <img src="${paths.jpg}" class="product-card-img" width="210" height="210" alt="${title}" loading="${index < 2 ? "eager" : "lazy"}" decoding="async">
+                  </picture>
+                </a>
+              </div>
+              <h3 class="product-card-title"><a href="${pageUrl(`produtos/${product.slug}/`)}">${title}</a></h3>
+              <div class="product-card-price">${escapeHtml(formatPrice(product))}</div>
+              <div class="product-card-actions">
+                <a class="btn btn-yellow" href="${escapeHtml(product.permalink)}" target="_blank" rel="noopener noreferrer sponsored" data-event="marketplace_click" data-mlb="${escapeHtml(product.mlbId)}">Ver oferta</a>
+                <a class="btn-icon-cart" href="${pageUrl(`produtos/${product.slug}/`)}" aria-label="Ver detalhes de ${title}">${cartIcon}</a>
+              </div>
+            </article>`;
 }
 
-function productsSection(products) {
-  return `<section id="produtos" class="section-light" aria-labelledby="prod-title"><div class="container"><div class="section-header reveal"><div class="section-title-group"><h2 id="prod-title">Produtos em destaque</h2><p>Seleção real de itens ativos e com imagem verificada.</p></div><a href="${pageUrl("produtos/")}" class="section-link-action">Ver todos os produtos ${chevron}</a></div><div class="products-carousel-wrapper reveal" data-v2-carousel><button type="button" class="carousel-nav-btn carousel-prev" aria-label="Produto anterior">‹</button><div class="products-carousel" role="region" aria-label="Produtos em destaque">${products.map(productCard).join("")}</div><button type="button" class="carousel-nav-btn carousel-next" aria-label="Próximo produto">›</button><div class="carousel-pagination-dots" aria-hidden="true"><span class="carousel-dot active"></span><span class="carousel-dot"></span><span class="carousel-dot"></span></div></div><div class="products-support-blocks reveal"><div class="help-block help-block-dark"><div class="help-block-info"><div class="help-block-icon yellow-bg">?</div><div class="help-block-text"><h3>Tem um projeto específico?</h3><p>Envie aplicação, tensão e quantidade para receber orientação.</p></div></div><a href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">${whatsappIcon}<span>Falar com especialista</span></a></div><div class="help-block help-block-light"><div class="help-block-info"><div class="help-block-icon slate-bg">i</div><div class="help-block-text"><h3>Dúvidas frequentes</h3><p>Entenda como funcionam compra, envio e confirmação de compatibilidade.</p></div></div><a href="${pageUrl("duvidas-frequentes/")}" class="btn btn-outline-dark">Acessar FAQ ${chevron}</a></div></div></div></section>`;
+function formatArticleDate(value) {
+  if (!value) return "";
+  return new Intl.DateTimeFormat("pt-BR", { day: "2-digit", month: "short", year: "numeric", timeZone: "UTC" })
+    .format(new Date(`${String(value).slice(0, 10)}T12:00:00Z`))
+    .replaceAll(" de ", " ")
+    .replace(".", "");
 }
 
 function articleCard(post, index) {
-  return `<a class="article-card reveal reveal-delay-${index}" href="${pageUrl(`blog/${post.slug}/`)}"><div class="article-card-cover">${blogCoverPicture(post, { className: "v2-blog-picture", width: 420, height: 300, loading: "lazy", sizes: "(min-width: 900px) 260px, 82vw" })}</div><div class="article-card-body"><span class="article-card-tag">${escapeHtml(post.category)}</span><h3 class="article-card-title">${escapeHtml(post.title)}</h3><div class="article-card-meta"><span>${formatDate(post.publishedAt)}</span><span>•</span><span>${escapeHtml(post.readingTime)}</span></div></div></a>`;
+  const delay = index ? ` reveal-delay-${index}` : "";
+  const cover = post.cover || `blog/covers/${post.slug}`;
+  const href = pageUrl(`blog/${post.slug}/`);
+  return `          <!-- Dynamic article ${index + 1}: ${escapeHtml(post.slug)} -->
+          <article class="article-card reveal${delay}">
+            <a class="article-card-cover" href="${href}" aria-label="Ler ${escapeHtml(post.title)}">
+              <picture>
+                <source srcset="${assetUrl(`${cover}.avif`)}" type="image/avif">
+                <source srcset="${assetUrl(`${cover}.webp`)}" type="image/webp">
+                <img src="${assetUrl(`${cover}.jpg`)}" width="256" height="190" alt="${escapeHtml(post.coverAlt || post.title)}" loading="lazy" decoding="async">
+              </picture>
+            </a>
+            <div class="article-card-body">
+              <span class="article-card-tag">${escapeHtml(String(post.category || "Conteúdo").toUpperCase())}</span>
+              <h3 class="article-card-title"><a href="${href}">${escapeHtml(post.title)}</a></h3>
+              <div class="article-card-meta"><span>${formatArticleDate(post.publishedAt)}</span><span>•</span><span>${escapeHtml(post.readingTime || "6 min de leitura")}</span></div>
+            </div>
+          </article>`;
 }
 
-function blogAndBrands(posts) {
-  return `<section id="blog" class="section-light" aria-labelledby="blog-title"><div class="container"><div class="section-header reveal"><div class="section-title-group"><h2 id="blog-title">Conteúdo que impulsiona seus projetos</h2><p>Tutoriais, comparativos e guias práticos conectados ao catálogo.</p></div><a href="${pageUrl("blog/")}" class="section-link-action">Ver todos os artigos ${chevron}</a></div><div class="blog-newsletter-grid">${posts.map(articleCard).join("")}<aside class="newsletter-box reveal"><div class="newsletter-icon">${mailIcon}</div><h3 class="newsletter-title">Novidades em breve</h3><p class="newsletter-desc">A newsletter ainda não está recebendo cadastros. Enquanto isso, acompanhe os artigos e o LinkedIn oficial.</p><a class="btn btn-yellow" href="${site.linkedinUrl}" target="_blank" rel="noopener noreferrer">Acompanhar no LinkedIn</a></aside></div></div></section><section id="marcas" class="section-light" aria-labelledby="brands-title"><div class="container"><div class="section-header reveal"><div class="section-title-group"><h2 id="brands-title">Marcas presentes no universo maker</h2><p>Referências técnicas para pesquisa e comparação.</p></div></div><div class="brands-row reveal">${brandFiles.map(([file, alt]) => `<div class="brand-card"><img src="${v2(`assets/brands/${file}.png`)}" alt="${escapeHtml(alt)}" loading="lazy" width="110" height="28"></div>`).join("")}</div></div></section>`;
-}
-
-function supportSection() {
-  return `<section class="support-section" aria-labelledby="support-title"><div class="container support-grid"><div class="support-copy reveal"><h2 id="support-title" class="support-title">Precisa de ajuda para<br>escolher o <span class="highlight-yellow">componente certo?</span></h2><p class="support-desc">Compartilhe a aplicação, as especificações e a quantidade. O atendimento ajuda você a localizar a oferta adequada.</p><div class="support-actions"><a href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">${whatsappIcon}<span>Falar no WhatsApp</span>${chevron}</a><a href="${pageUrl("produtos/")}" class="btn btn-yellow"><span>Explorar catálogo</span>${chevron}</a></div></div><div class="support-checklist reveal reveal-delay-1"><div class="support-check-item"><div class="support-check-icon">✓</div><div class="support-check-text">Atendimento especializado</div></div><div class="support-check-item"><div class="support-check-icon">✓</div><div class="support-check-text">Produtos ativos e verificados</div></div><div class="support-check-item"><div class="support-check-icon">✓</div><div class="support-check-text">Compra no Mercado Livre</div></div><div class="support-check-item"><div class="support-check-icon">✓</div><div class="support-check-text">Do protótipo à manutenção</div></div></div><div class="support-visual-right reveal reveal-delay-2"><div class="support-handwriting-bubble handwriting handwriting-white">Projetos reais<br>contam com<br><span class="handwriting-yellow">pessoas reais.</span></div><div class="support-badge-vertical">CONHECIMENTO QUE IMPULSIONA SUAS IDEIAS.</div></div></div></section>`;
-}
-
-function footer(year) {
-  const categoryLinks = categoryCards.slice(0, 6).map(([label, , , slug, query]) => `<li><a href="${slug ? pageUrl(`categorias/${slug}/`) : pageUrl(`produtos/?q=${encodeURIComponent(query)}`)}">${escapeHtml(label)}</a></li>`).join("");
-  return `<footer class="site-footer" role="contentinfo"><div class="container"><div class="footer-main-grid"><div class="footer-brand-col"><a href="${pageUrl()}" class="brand-logo-link"><img src="${v2("assets/brand/omegaimports-logo-horizontal.svg")}" alt="OMEGAIMPORTS" class="brand-logo-img" width="180" height="42"></a><p>Componentes eletrônicos para transformar ideias em projetos reais, com catálogo técnico e compra no anúncio oficial.</p><div class="footer-social-links"><a href="${site.linkedinUrl}" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn">in</a></div><div class="handwriting handwriting-white">Ideias de hoje.<br><span class="handwriting-yellow">Soluções de amanhã.</span></div></div><div><h4 class="footer-col-title">INSTITUCIONAL</h4><ul class="footer-links-list"><li><a href="${pageUrl("sobre/")}">Sobre a OMEGAIMPORTS</a></li><li><a href="${pageUrl("blog/")}">Blog</a></li><li><a href="${pageUrl("politica-de-privacidade/")}">Política de privacidade</a></li><li><a href="${pageUrl("termos-de-uso/")}">Termos de uso</a></li></ul></div><div><h4 class="footer-col-title">AJUDA</h4><ul class="footer-links-list"><li><a href="${pageUrl("como-comprar/")}">Como comprar</a></li><li><a href="${pageUrl("duvidas-frequentes/")}">Perguntas frequentes</a></li><li><a href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">Fale conosco</a></li><li><a href="${site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored">Loja no Mercado Livre</a></li></ul></div><div><h4 class="footer-col-title">CATEGORIAS</h4><ul class="footer-links-list">${categoryLinks}<li><a href="${pageUrl("categorias/")}">Todas as categorias</a></li></ul></div><div><h4 class="footer-col-title">ACOMPANHE</h4><p>Novos guias e conteúdos técnicos são publicados no blog e no LinkedIn oficial.</p><a class="btn btn-outline-yellow" href="${site.linkedinUrl}" target="_blank" rel="noopener noreferrer">Ver LinkedIn</a></div></div><div class="footer-trust-badges-bar"><div class="badge-block-group"><span class="badge-block-label">FORMAS EXIBIDAS NO CHECKOUT</span><div class="badge-block-content payment-logos">${["visa", "mastercard", "elo", "american-express", "hipercard", "pix", "boleto"].map((name) => `<div class="payment-card"><img src="${v2(`assets/payments/${name}.png`)}" alt="${name}" width="38" height="24" loading="lazy"></div>`).join("")}</div></div><div class="badge-block-group"><span class="badge-block-label">MARKETPLACES</span><div class="badge-block-content"><a class="marketplace-card" href="${site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored"><img src="${v2("assets/marketplaces/mercado-livre.png")}" alt="Mercado Livre" width="75" height="24" loading="lazy"></a><div class="marketplace-card" aria-label="Shopee"><img src="${v2("assets/marketplaces/shopee.png")}" alt="Shopee" width="70" height="24" loading="lazy"></div></div></div><div class="security-badge-card"><div class="security-badge-text"><strong>COMPRA NO MARKETPLACE</strong><span>Pagamento, frete e dados processados no canal escolhido.</span></div></div></div><div class="footer-copyright-bar"><p>© ${year} OMEGAIMPORTS. Todos os direitos reservados.</p><div class="footer-legal-links"><a href="${pageUrl("politica-de-privacidade/")}">Privacidade</a><a href="${pageUrl("termos-de-uso/")}">Termos de uso</a><a href="${pageUrl("sitemap.xml")}">Mapa do site</a></div></div></div></footer>`;
-}
-
-export function renderV2Home({ products, productCount, posts, categoryCount }) {
+function productionHead() {
   const title = "Componentes eletrônicos, IoT e automação | OMEGAIMPORTS";
   const description = "Componentes eletrônicos, sensores, fontes, módulos IoT e automação da OMEGAIMPORTS, com compra pelo Mercado Livre e atendimento pelo WhatsApp.";
-  const homeSchema = { "@context": "https://schema.org", "@type": "WebSite", name: site.name, url: site.productionUrl, potentialAction: { "@type": "SearchAction", target: `${site.productionUrl}produtos/?q={search_term_string}`, "query-input": "required name=search_term_string" } };
-  const organizationSchema = { "@context": "https://schema.org", "@type": "Organization", name: site.name, url: site.productionUrl, sameAs: [site.marketplaceUrl, site.linkedinUrl] };
-  return `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${title}</title><meta name="description" content="${escapeHtml(description)}"><link rel="canonical" href="${absolute("")}"><meta property="og:title" content="${title}"><meta property="og:description" content="${escapeHtml(description)}"><meta property="og:type" content="website"><meta property="og:url" content="${absolute("")}"><meta property="og:image" content="${absolute("brand/visuals/og-home.jpg")}"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#030914"><link rel="icon" href="${v2("assets/brand/favicon.svg")}" type="image/svg+xml"><link rel="manifest" href="${assetUrl("manifest.webmanifest")}"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="${v2("css/reset.css")}"><link rel="stylesheet" href="${v2("css/tokens.css")}"><link rel="stylesheet" href="${v2("css/components.css")}"><link rel="stylesheet" href="${v2("css/sections.css")}"><link rel="stylesheet" href="${v2("css/responsive.css")}"><link rel="stylesheet" href="${v2("css/animations.css")}"><link rel="stylesheet" href="${v2("css/production.css")}"><script type="application/ld+json">${JSON.stringify(organizationSchema)}</script><script type="application/ld+json">${JSON.stringify(homeSchema)}</script><script defer src="${assetUrl("assets/site.js")}"></script><script defer src="${v2("runtime.js")}"></script></head><body class="v2-home"><a class="skip-link" href="#main-content">Pular para o conteúdo</a>${header()}<main id="main-content">${hero()}${trustStrip({ productCount, categoryCount, articleCount: posts.length })}${categoriesSection()}${productsSection(products)}${blogAndBrands(posts.slice(0, 4))}${supportSection()}${trustStrip({ productCount, categoryCount, articleCount: posts.length })}</main>${footer(new Date().getFullYear())}<a class="v2-whatsapp-float" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer" aria-label="Falar com a OMEGAIMPORTS no WhatsApp">${whatsappIcon}</a></body></html>`;
+  const organization = { "@context": "https://schema.org", "@type": "Organization", name: site.name, url: site.productionUrl, sameAs: [site.marketplaceUrl, site.linkedinUrl] };
+  const website = { "@context": "https://schema.org", "@type": "WebSite", name: site.name, url: site.productionUrl, potentialAction: { "@type": "SearchAction", target: `${site.productionUrl}produtos/?q={search_term_string}`, "query-input": "required name=search_term_string" } };
+  return `<title>${title}</title>
+  <meta name="description" content="${escapeHtml(description)}">
+  <link rel="canonical" href="${absolute("")}">
+  <meta property="og:title" content="${title}">
+  <meta property="og:description" content="${escapeHtml(description)}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="${absolute("")}">
+  <meta property="og:image" content="${absolute("brand/visuals/og-home.jpg")}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#030914">
+  <link rel="icon" href="${assetUrl("v2/assets/brand/favicon.svg")}" type="image/svg+xml">
+  <link rel="manifest" href="${assetUrl("manifest.webmanifest")}">
+  <script type="application/ld+json">${JSON.stringify(organization)}</script>
+  <script type="application/ld+json">${JSON.stringify(website)}</script>`;
+}
+
+function wireProductionLinks(html) {
+  const direct = new Map([
+    ["Produtos", pageUrl("produtos/")], ["Categorias", pageUrl("categorias/")],
+    ["Blog", pageUrl("blog/")], ["Sobre", pageUrl("sobre/")],
+    ["Como comprar", pageUrl("como-comprar/")], ["Ver todos os artigos", pageUrl("blog/")],
+    ["Ver todas as categorias", pageUrl("categorias/")], ["Ver todos os produtos", pageUrl("produtos/")],
+    ["Explorar catálogo", pageUrl("produtos/")], ["Ver produtos", pageUrl("produtos/")],
+    ["Ver kits e combos", pageUrl("produtos/?q=kits")], ["Ver todas as marcas", pageUrl("produtos/")],
+    ["Sobre a OMEGAIMPORTS", pageUrl("sobre/")], ["Política de privacidade", pageUrl("politica-de-privacidade/")],
+    ["Termos de uso", pageUrl("termos-de-uso/")], ["Perguntas frequentes (FAQ)", pageUrl("duvidas-frequentes/")],
+    ["Mapa do site", pageUrl("sitemap.xml")], ["Todas as categorias", pageUrl("categorias/")],
+    ["Componentes eletrônicos", pageUrl("categorias/componentes-eletronicos/")],
+    ["Módulos IoT", pageUrl("categorias/iot-gsm-e-comunicacao/")],
+    ["Sensores", pageUrl("categorias/sensores-e-medicao/")],
+    ["Fontes e alimentação", pageUrl("categorias/fontes-e-alimentacao/")],
+    ["Automação e controle", pageUrl("categorias/automacao-e-comando/")],
+    ["Ferramentas", pageUrl("produtos/?q=ferramentas")],
+    ["Protótipo e desenvolvimento", pageUrl("produtos/?q=prototipagem")],
+  ]);
+  html = html.replace(/<a href="([^"]*)"([^>]*)>([\s\S]*?)<\/a>/g, (anchor, oldHref, attributes, inner) => {
+    const label = inner.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+    const href = direct.get(label);
+    if (href) return `<a href="${href}"${attributes}>${inner}</a>`;
+    if (oldHref === "#" && /\bbrand-logo-link\b/.test(attributes)) return `<a href="${pageUrl()}"${attributes}>${inner}</a>`;
+    if (oldHref === "#") return `<a${attributes} aria-disabled="true" tabindex="-1">${inner}</a>`;
+    return anchor;
+  });
+  html = html.replaceAll('href="https://wa.me/5535999528858"', `href="${site.whatsappUrl}"`);
+  html = html.replaceAll('href="https://www.linkedin.com/company/omegaimports/"', `href="${site.linkedinUrl}"`);
+  html = html.replaceAll('href="#categorias"', `href="${pageUrl("categorias/")}"`);
+  html = html.replaceAll('href="#blog"', `href="${pageUrl("blog/")}"`);
+  html = html.replaceAll('href="#sobre"', `href="${pageUrl("sobre/")}"`);
+  html = html.replaceAll('href="#como-comprar"', `href="${pageUrl("como-comprar/")}"`);
+  html = html.replaceAll('href="#faq"', `href="${pageUrl("duvidas-frequentes/")}"`);
+  return html;
+}
+
+function applyVerifiedClaims(html) {
+  return html
+    .replaceAll("Entrega para todo o Brasil", "Envio pelo Mercado Livre")
+    .replaceAll("com rastreamento", "rastreado no anúncio")
+    .replaceAll("Compra segura", "Compra no Mercado Livre")
+    .replaceAll("e dados protegidos", "pelo checkout oficial")
+    .replaceAll("Até 12x no cartão", "Condições no anúncio")
+    .replaceAll("ou PIX com desconto", "parcelamento e PIX")
+    .replaceAll("Mais de 15 mil", "Catálogo especializado")
+    .replaceAll("clientes e projetos <!-- MOCKUP CLAIM — validar antes de produção -->", "para projetos reais")
+    .replaceAll("Qualidade garantida", "Informações verificadas")
+    .replaceAll("ou seu dinheiro de volta", "em cada anúncio");
+}
+
+function wireCategoryCards(html) {
+  const destinations = [
+    pageUrl("categorias/iot-gsm-e-comunicacao/"),
+    pageUrl("categorias/sensores-e-medicao/"),
+    pageUrl("categorias/fontes-e-alimentacao/"),
+    pageUrl("categorias/automacao-e-comando/"),
+    pageUrl("categorias/gps-e-localizacao/"),
+    pageUrl("produtos/?q=display"),
+    pageUrl("categorias/componentes-eletronicos/"),
+    pageUrl("categorias/conectores-e-instalacao/"),
+  ];
+  let index = 0;
+  return html.replace(/<article class="category-card([^"]*)">/g, (tag, classes) => {
+    const destination = destinations[index++];
+    return destination
+      ? `<article class="category-card${classes}" data-href="${destination}">`
+      : tag;
+  });
+}
+
+export function renderV2Home({ products, posts }) {
+  let html = frozenTemplate;
+  html = replaceRequired(html, /<title>[\s\S]*?<\/title>/, productionHead(), "head title");
+  html = html.replaceAll("./css/", assetUrl("v2/css/"));
+  html = html.replaceAll("./assets/", assetUrl("v2/assets/"));
+  html = html.replaceAll('<script type="module" src="./js/app.js"></script>', `<script defer src="${assetUrl("v2/runtime.js")}"></script>`);
+  html = replaceRequired(
+    html,
+    /(<div class="products-carousel"[^>]*>)[\s\S]*?(<\/div>\s*<button type="button" class="carousel-nav-btn carousel-next")/,
+    `$1\n${products.slice(0, 6).map(productCard).join("\n\n")}\n          $2`,
+    "product cards",
+  );
+  html = replaceRequired(html, /\s*<!-- Article 1:[\s\S]*?<\/article>\s*<!-- Article 4:[\s\S]*?<\/article>/, `\n${posts.slice(0, 4).map(articleCard).join("\n\n")}`, "article cards");
+  html = html.replaceAll('<form class="header-search" role="search">', `<form class="header-search" action="${pageUrl("produtos/")}" method="get" role="search">`);
+  html = html.replaceAll('<form class="header-search drawer-search" role="search">', `<form class="header-search drawer-search" action="${pageUrl("produtos/")}" method="get" role="search">`);
+  html = html.replaceAll('<form class="hero-search-box" role="search">', `<form class="hero-search-box" action="${pageUrl("produtos/")}" method="get" role="search">`);
+  html = html.replace(/(<form class="(?:header-search|hero-search-box)[^>]*>[\s\S]*?<input)(?![^>]*\bname=)/g, '$1 name="q"');
+  html = html.replaceAll('<span id="copyright-year">2026</span>', `<span id="copyright-year">${new Date().getFullYear()}</span>`);
+  return wireCategoryCards(wireProductionLinks(applyVerifiedClaims(html)));
 }
