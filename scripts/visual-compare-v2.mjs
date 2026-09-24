@@ -48,7 +48,7 @@ const frozenServer = await server(frozenRoot, 4311);
 const productionServer = await server("dist", 4312, true);
 let browser;
 const results = [];
-const maskCss = `.products-carousel > *, .blog-newsletter-grid > article { visibility: hidden !important; } .reveal { opacity: 1 !important; transform: none !important; } * { animation: none !important; transition: none !important; caret-color: transparent !important; }`;
+const maskCss = `.products-carousel { height: 0 !important; min-height: 0 !important; } .products-carousel > *, .blog-newsletter-grid > article { display: none !important; } .reveal { opacity: 1 !important; transform: none !important; } * { animation: none !important; transition: none !important; caret-color: transparent !important; }`;
 
 try {
   const systemChrome = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
@@ -58,6 +58,7 @@ try {
     for (const [kind, url] of [["frozen", "http://127.0.0.1:4311/"], ["production", "http://127.0.0.1:4312/omegaimports-catalogo/"]]) {
       const page = await browser.newPage({ viewport: { width, height: 1000 }, deviceScaleFactor: 1 });
       await page.goto(url, { waitUntil: "networkidle" });
+      await page.evaluate(() => document.body.classList.add("home-v2"));
       await page.addStyleTag({ content: maskCss });
       await page.evaluate(() => window.scrollTo(0, 0));
       shots[kind] = join(output, `${width}-${kind}.png`);
