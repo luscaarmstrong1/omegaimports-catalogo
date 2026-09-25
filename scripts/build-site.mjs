@@ -378,7 +378,7 @@ function trustStrip() {
 
 function commercialProof() {
   const proof = [
-    [`${published.length}`, "produtos públicos", "Itens ativos, com imagem validada e rota própria."],
+    [`${catalogProducts.length}`, "produtos no catálogo", "Seleção técnica completa organizada por família e aplicação."],
     [`${visibleCategories.length}`, "categorias técnicas", "Busca por aplicação, família e tipo de componente."],
     [`${blogPosts.length}`, "guias editoriais", "Conteúdo conectado ao catálogo real, não a texto genérico."],
     ["ML", "checkout oficial", "Pagamento, frete e entrega são confirmados no Mercado Livre."],
@@ -458,10 +458,26 @@ function enhanceAboutBody(body) {
     .replace("</p></section><section class=\"detail-grid\">", `</p>${visual}</section>${commercialProof()}<section class="detail-grid">`) + technicalFlowSection() + opportunityCta();
 }
 
+const categoryCutoutMap = {
+  "iot-gsm-e-comunicacao": "v2/assets/categories/modulos-iot-cutout.png",
+  "sensores-e-medicao": "v2/assets/categories/sensores-cutout.png",
+  "fontes-e-alimentacao": "v2/assets/categories/fontes-e-energia-cutout.png",
+  "automacao-e-comando": "v2/assets/categories/reles-e-acionamento-cutout.png",
+  "gps-e-localizacao": "v2/assets/categories/gps-e-navegacao-cutout.png",
+  "componentes-eletronicos": "v2/assets/categories/componentes-eletronicos-cutout.png",
+  "conectores-e-instalacao": "v2/assets/categories/cabos-e-conectores-cutout.png",
+  "instrumentos-de-bancada": "v2/assets/categories/displays-e-ihm-cutout.png",
+};
+
 function categoryCard(category, index, { compact = false } = {}) {
+  const cutout = categoryCutoutMap[category.slug] || "v2/assets/categories/modulos-iot-cutout.png";
   return `<a class="category-card" href="${pageUrl(`categorias/${category.slug}/`)}" data-event="category_click" data-category="${category.slug}" data-position="${index + 1}" data-reveal>
-    ${icon(category.icon, "category-icon")}
-    <span class="category-count">${categoryCounts[category.slug]}</span>
+    <div class="category-card-top-row">
+      <div class="category-card-icon-wrap">
+        <img class="category-card-cutout" src="${assetUrl(cutout)}" alt="${escapeHtml(category.label)}" width="72" height="72" loading="lazy" decoding="async">
+      </div>
+      <span class="category-count">${categoryCounts[category.slug]}</span>
+    </div>
     <h3>${escapeHtml(category.label)}</h3>
     ${compact ? "" : `<p>${escapeHtml(category.description)}</p>`}
     <strong>Ver categoria ${icon("arrow-right", "text-link-icon")}</strong>

@@ -20,7 +20,16 @@
     }
   }
 
+  const mobileSearchBtn = document.querySelector(".header-mobile-search-btn");
+
   openButton?.addEventListener("click", () => setDrawer(true));
+  mobileSearchBtn?.addEventListener("click", () => {
+    setDrawer(true);
+    setTimeout(() => {
+      const drawerInput = drawer?.querySelector(".drawer-search input");
+      if (drawerInput instanceof HTMLElement) drawerInput.focus();
+    }, 150);
+  });
   closeButton?.addEventListener("click", () => setDrawer(false));
   backdrop?.addEventListener("click", () => setDrawer(false));
   drawer?.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => setDrawer(false)));
@@ -62,9 +71,27 @@
       if (!entry.isIntersecting) return;
       entry.target.classList.add("is-visible");
       observer.unobserve(entry.target);
-    }), { rootMargin: "0px 0px -8%", threshold: .08 })
+    }), { rootMargin: "0px 0px 50px 0px", threshold: 0.02 })
     : null;
-  document.querySelectorAll(".reveal").forEach((element) => revealObserver ? revealObserver.observe(element) : element.classList.add("visible"));
+  document.querySelectorAll(".reveal").forEach((element) => {
+    if (revealObserver) {
+      revealObserver.observe(element);
+    } else {
+      element.classList.add("is-visible");
+    }
+  });
+
+  // Fallback para garantir visibilidade caso observer demore ou em renderizadores estáticos
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      document.querySelectorAll(".reveal:not(.is-visible)").forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight + 100) {
+          el.classList.add("is-visible");
+        }
+      });
+    }, 400);
+  });
 
   const hashTarget = window.location.hash ? document.querySelector(window.location.hash) : null;
   if (hashTarget instanceof HTMLDetailsElement) {
