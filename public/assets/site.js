@@ -450,4 +450,23 @@ if (article) {
     const max = document.documentElement.scrollHeight - innerHeight;
     progress.style.transform = `scaleX(${max > 0 ? scrollY / max : 0})`;
   }, { passive: true });
+
+  // Scroll-spy for TOC links
+  const tocLinks = document.querySelectorAll(".toc-nav-link");
+  const sections = document.querySelectorAll(".article-section[id]");
+  if (tocLinks.length && sections.length) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute("id");
+          tocLinks.forEach((link) => {
+            const isActive = link.getAttribute("href") === `#${id}`;
+            link.classList.toggle("is-active", isActive);
+          });
+        }
+      });
+    }, { rootMargin: "-20% 0px -70% 0px" });
+
+    sections.forEach((section) => observer.observe(section));
+  }
 }

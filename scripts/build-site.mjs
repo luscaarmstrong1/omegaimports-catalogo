@@ -491,13 +491,22 @@ function categoryGrid(items = homeCategories, { home = false } = {}) {
 }
 
 function blogCard(post, index = 0) {
+  const coverPic = blogCoverPicture(post, {
+    loading: index < 3 ? "eager" : "lazy",
+    fetchpriority: index === 0 ? "high" : "auto",
+    sizes: index === 0 ? "(min-width: 900px) 480px, 100vw" : "(min-width: 900px) 380px, 100vw"
+  });
   return `<article class="article-card" data-blog-category="${escapeHtml(normalizeText(post.category))}" data-blog-title="${escapeHtml(normalizeText(post.title))}" data-reveal>
-    <a class="article-cover" href="${pageUrl(`blog/${post.slug}/`)}">${blogCoverPicture(post, { loading: index < 3 ? "eager" : "lazy", fetchpriority: index === 0 ? "high" : "auto" })}</a>
+    <a class="article-cover" href="${pageUrl(`blog/${post.slug}/`)}" aria-label="Ler artigo: ${escapeHtml(post.title)}">${coverPic}</a>
     <div class="article-card-content">
-      <p class="eyebrow">${escapeHtml(post.category)} · ${formatDate(post.publishedAt)} · ${escapeHtml(post.readingTime)}</p>
+      <div class="blog-card-meta-row">
+        <span class="blog-badge">${escapeHtml(post.category)}</span>
+        <span class="blog-card-date">${formatDate(post.publishedAt)}</span>
+        <span class="blog-card-read">${escapeHtml(post.readingTime)}</span>
+      </div>
       <h3><a href="${pageUrl(`blog/${post.slug}/`)}">${escapeHtml(post.title)}</a></h3>
       <p>${escapeHtml(post.summary)}</p>
-      <a class="text-link" href="${pageUrl(`blog/${post.slug}/`)}">Ler artigo ${icon("arrow-right", "text-link-icon")}</a>
+      <a class="text-link blog-read-btn" href="${pageUrl(`blog/${post.slug}/`)}">Ler artigo ${icon("arrow-right", "text-link-icon")}</a>
     </div>
   </article>`;
 }
@@ -692,38 +701,169 @@ function productPages() {
 
 function blogPages() {
   const blogSchema = { "@context": "https://schema.org", "@type": "Blog", name: "Blog OMEGAIMPORTS", url: absolute("blog/") };
-  const categoriesEditorial = [...new Set(blogPosts.map((post) => post.category))];
+  const categoriesEditorial = [
+    "IoT e conectividade",
+    "Telemetria industrial",
+    "Comunicação celular",
+    "Placas e microcontroladores"
+  ];
   const sortedPosts = [...blogPosts].sort((a, b) => String(b.publishedAt).localeCompare(String(a.publishedAt)));
   const featuredPost = sortedPosts[0];
   const remainingPosts = sortedPosts.slice(1);
+
   out("blog/index.html", renderV2InternalPage({
     title: "Blog técnico",
     description: "Guias práticos sobre eletrônica, IoT, sensores, fontes, automação e prototipagem.",
     path: "blog/",
     pageClass: "blog-page",
-    body: `<section class="page-hero blog-hero"><p class="eyebrow">Blog técnico</p><h1>Guias para escolher componentes com mais segurança.</h1><p>Conteúdo editorial conectado aos produtos reais do catálogo OMEGAIMPORTS.</p><form class="blog-search" action="${pageUrl("blog/")}" role="search">${icon("search", "search-icon")}<label class="sr-only" for="blog-search">Buscar no Blog</label><input id="blog-search" name="q" type="search" placeholder="Buscar sensores, fontes, GPS, automação..."></form><div class="chips blog-category-chips"><a data-blog-category="" href="${pageUrl("blog/")}">Todos</a>${categoriesEditorial.map((category) => `<a data-blog-category="${escapeHtml(normalizeText(category))}" href="${pageUrl(`blog/?categoria=${encodeURIComponent(category)}`)}">${escapeHtml(category)}</a>`).join("")}</div></section><p class="result-count blog-result-count" aria-live="polite"><strong id="blog-result-count">${blogPosts.length}</strong> artigos encontrados</p><div id="blog-list"><div class="blog-featured">${featuredPost ? blogCard(featuredPost, 0) : ""}</div><div class="article-grid page-grid">${remainingPosts.map((post, index) => blogCard(post, index + 1)).join("")}</div></div><div class="empty-state blog-empty-state" id="blog-empty-state" hidden><h2>Nenhum artigo encontrado.</h2><p>Revise a busca ou escolha outra categoria.</p></div>`,
+    body: `<div class="blog-container">
+      <header class="blog-header">
+        <p class="eyebrow">BLOG TÉCNICO</p>
+        <h1>Guias para escolher componentes com mais segurança.</h1>
+        <p class="blog-header-sub">Conteúdo editorial conectado aos produtos reais do catálogo OMEGAIMPORTS.</p>
+        
+        <form class="blog-search" action="${pageUrl("blog/")}" role="search">
+          ${icon("search", "search-icon")}
+          <label class="sr-only" for="blog-search">Buscar no Blog</label>
+          <input id="blog-search" name="q" type="search" placeholder="Buscar artigos, sensores, protocolos...">
+        </form>
+
+        <div class="chips blog-category-chips">
+          <a data-blog-category="" href="${pageUrl("blog/")}">Todos</a>
+          ${categoriesEditorial.map((category) => `<a data-blog-category="${escapeHtml(normalizeText(category))}" href="${pageUrl(`blog/?categoria=${encodeURIComponent(category)}`)}">${escapeHtml(category)}</a>`).join("")}
+        </div>
+      </header>
+
+      <p class="result-count blog-result-count" aria-live="polite"><strong id="blog-result-count">${blogPosts.length}</strong> artigos encontrados</p>
+
+      <div id="blog-list">
+        <div class="blog-featured">
+          ${featuredPost ? blogCard(featuredPost, 0) : ""}
+        </div>
+        <div class="article-grid page-grid">
+          ${remainingPosts.map((post, index) => blogCard(post, index + 1)).join("")}
+        </div>
+      </div>
+
+      <div class="empty-state blog-empty-state" id="blog-empty-state" hidden>
+        <h2>Nenhum artigo encontrado.</h2>
+        <p>Revise a busca ou escolha outra categoria.</p>
+      </div>
+    </div>`,
     extraHead: `<script type="application/ld+json">${JSON.stringify(blogSchema)}</script>`,
   }));
+
   for (const post of blogPosts) {
     const relatedProducts = relatedProductsForPost(post);
     const relatedPosts = blogPosts.filter((item) => item.slug !== post.slug && (item.category === post.category || item.tags.some((tag) => post.tags.includes(tag)))).slice(0, 3);
     const author = post.author || "Omega Imports";
     const sourceBlock = post.sourceUrl ? `<section class="article-section article-section--wide article-source"><h2>Fonte original</h2><p>Publicado originalmente pela OMEGAIMPORTS no LinkedIn.</p><a class="secondary-action" href="${escapeHtml(post.sourceUrl)}" target="_blank" rel="noopener noreferrer">Ver artigo no LinkedIn ${icon("external", "btn-icon")}</a></section>` : "";
-    const body = `<nav class="breadcrumb"><a href="${pageUrl()}">Início</a><a href="${pageUrl("blog/")}">Blog</a><span>${escapeHtml(post.title)}</span></nav>
+
+    const body = `<div class="article-container">
+      <nav class="breadcrumb"><a href="${pageUrl()}">Início</a> &gt; <a href="${pageUrl("blog/")}">Blog</a> &gt; <span>${escapeHtml(post.category)}</span> &gt; <span class="breadcrumb-current">${escapeHtml(post.title)}</span></nav>
+      
       <article class="article article-detail">
-        <header class="article-header"><p class="eyebrow">${escapeHtml(post.category)} · ${escapeHtml(post.readingTime)}</p><h1>${escapeHtml(post.title)}</h1><p>${escapeHtml(post.summary)}</p><div class="article-meta"><span>${escapeHtml(author)}</span><span>Publicado em ${formatDate(post.publishedAt)}</span><span>Atualizado em ${formatDate(post.updatedAt)}</span></div></header>
-        ${blogCoverPicture(post, { className: "article-hero-cover", width: 1400, height: 788, loading: "eager", fetchpriority: "high", sizes: "(min-width: 1180px) 1080px, 100vw" })}
-        <aside class="toc" aria-label="Sumário"><strong>Sumário</strong>${post.sections.map(([title], index) => `<a href="#secao-${index + 1}">${escapeHtml(title)}</a>`).join("")}</aside>
-        <div class="article-section-grid">
-          ${post.sections.map(([title, text], index) => `<section class="article-section" id="secao-${index + 1}"><h2>${escapeHtml(title)}</h2>${articleParagraphs(text)}</section>`).join("")}
-          <section class="article-section article-section--wide"><h2>Conclusão</h2><p>Use o artigo como ponto de partida e confirme modelo, tensão, corrente, acessórios e disponibilidade no anúncio oficial antes da compra.</p></section>
-          <section class="article-section article-section--wide"><h2>Referências técnicas</h2><ul>${post.references.map((reference) => `<li>${escapeHtml(reference)}</li>`).join("")}</ul></section>
-          ${sourceBlock}
+        <header class="article-header">
+          <h1>${escapeHtml(post.title)}</h1>
+          <p class="article-lead">${escapeHtml(post.summary)}</p>
+          <div class="article-meta-row">
+            <span class="blog-badge">${escapeHtml(post.category)}</span>
+            <span class="article-meta-item">${formatDate(post.publishedAt)}</span>
+            <span class="article-meta-item">${escapeHtml(post.readingTime)}</span>
+            <button type="button" class="btn-share" onclick="navigator.clipboard?.writeText(window.location.href);alert('Link copiado!');">${icon("external", "share-icon")} Compartilhar</button>
+          </div>
+        </header>
+
+        <div class="article-hero-cover-wrapper">
+          ${blogCoverPicture(post, { className: "article-hero-cover", width: 1400, height: 788, loading: "eager", fetchpriority: "high", sizes: "(min-width: 1180px) 1080px, 100vw" })}
         </div>
-        <section class="article-whatsapp"><h2>Precisa de ajuda para escolher?</h2><p>Envie sua dúvida pelo WhatsApp oficial da OMEGAIMPORTS e informe o tipo de projeto, tensão, corrente e aplicação desejada.</p><a class="whatsapp-action whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp ${icon("message", "btn-icon")}</a></section>
+
+        <section class="article-summary-box">
+          <div class="summary-box-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+          </div>
+          <div class="summary-box-content">
+            <h3>Resumo deste artigo</h3>
+            <p>${escapeHtml(post.summary)} Neste guia prático, detalhamos como arquitetar a solução, contornar limitações e escolher componentes reais disponíveis no catálogo OMEGAIMPORTS.</p>
+          </div>
+        </section>
+
+        <div class="article-layout-grid">
+          <div class="article-main-col">
+            <div class="article-sections-flow">
+              ${post.sections.map(([title, text], index) => `
+                <section class="article-section" id="secao-${index + 1}">
+                  <h2 class="article-section-title"><span class="section-num">${String(index + 1).padStart(2, '0')}.</span> ${escapeHtml(title)}</h2>
+                  <div class="article-text-body">${articleParagraphs(text)}</div>
+                </section>
+              `).join("")}
+
+              <section class="article-section article-section--wide">
+                <h2 class="article-section-title"><span class="section-num">${String(post.sections.length + 1).padStart(2, '0')}.</span> Conclusão</h2>
+                <div class="article-text-body">
+                  <p>Use o artigo como ponto de partida e confirme modelo, tensão, corrente, acessórios e disponibilidade no anúncio oficial antes da compra.</p>
+                </div>
+              </section>
+
+              <section class="article-section article-section--wide">
+                <h2 class="article-section-title"><span class="section-num">${String(post.sections.length + 2).padStart(2, '0')}.</span> Referências técnicas</h2>
+                <ul class="article-ref-list">${post.references.map((reference) => `<li>${escapeHtml(reference)}</li>`).join("")}</ul>
+              </section>
+
+              ${sourceBlock}
+            </div>
+          </div>
+
+          <aside class="article-sidebar-col">
+            <div class="article-sidebar-sticky">
+              <div class="article-toc-box">
+                <h3 class="toc-header">Neste artigo</h3>
+                <nav class="toc" aria-label="Sumário">
+                  ${post.sections.map(([title], index) => `
+                    <a href="#secao-${index + 1}" class="toc-nav-link" data-target="secao-${index + 1}">
+                      <span class="toc-num">${String(index + 1).padStart(2, '0')}</span>
+                      <span class="toc-text">${escapeHtml(title)}</span>
+                    </a>
+                  `).join("")}
+                </nav>
+              </div>
+
+              <div class="article-support-box">
+                <div class="support-box-badge">SUPORTE TÉCNICO</div>
+                <h3>PRECISA DE AJUDA NO SEU PROJETO?</h3>
+                <p>Nossa equipe pode ajudar você a encontrar os componentes ideais para a sua aplicação.</p>
+                <a class="support-box-btn whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">
+                  Falar com especialista ${icon("arrow-right", "btn-icon")}
+                </a>
+                <span class="sr-only">Chamar no WhatsApp</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <section class="article-whatsapp article-whatsapp--legacy" style="display:none;" aria-hidden="true">
+          <h2>Precisa de ajuda para escolher?</h2>
+          <p>Envie sua dúvida pelo WhatsApp oficial da OMEGAIMPORTS.</p>
+          <a class="whatsapp-action whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp ${icon("message", "btn-icon")}</a>
+        </section>
       </article>
+
+      ${relatedPosts.length ? `
+        <section class="related-articles-section">
+          <div class="related-header-row">
+            <div>
+              <p class="eyebrow">CONTINUE LENDO</p>
+              <h2>Artigos relacionados</h2>
+            </div>
+            <a class="text-link" href="${pageUrl("blog/")}">Ver todos os artigos ${icon("arrow-right", "text-link-icon")}</a>
+          </div>
+          <div class="article-grid article-grid--compact">${relatedPosts.map(blogCard).join("")}</div>
+        </section>
+      ` : ""}
+
       ${relatedProducts.length ? section({ eyebrow: "Produtos relacionados", title: "Itens do catálogo ligados a este tema", className: "section section--white", content: `<div class="product-grid">${relatedProducts.map(productCard).join("")}</div>` }) : ""}
-      ${relatedPosts.length ? section({ eyebrow: "Continue lendo", title: "Artigos relacionados", content: `<div class="article-grid article-grid--compact">${relatedPosts.map(blogCard).join("")}</div>` }) : ""}`;
+    </div>`;
+
     const schema = {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
