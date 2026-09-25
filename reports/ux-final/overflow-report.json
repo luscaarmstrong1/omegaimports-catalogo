@@ -1,0 +1,107 @@
+[
+  {
+    "viewport": "desktop",
+    "route": "home",
+    "scrollWidth": 1440,
+    "clientWidth": 1440,
+    "hasOverflow": false
+  },
+  {
+    "viewport": "desktop",
+    "route": "blog",
+    "scrollWidth": 1440,
+    "clientWidth": 1440,
+    "hasOverflow": false
+  },
+  {
+    "viewport": "desktop",
+    "route": "artigo",
+    "scrollWidth": 1440,
+    "clientWidth": 1440,
+    "hasOverflow": false
+  },
+  {
+    "viewport": "desktop",
+    "route": "produtos",
+    "scrollWidth": 1440,
+    "clientWidth": 1440,
+    "hasOverflow": false
+  },
+  {
+    "viewport": "desktop",
+    "route": "categorias",
+    "scrollWidth": 1440,
+    "clientWidth": 1440,
+    "hasOverflow": false
+  },
+  {
+    "viewport": "tablet",
+    "route": "home",
+    "scrollWidth": 768,
+    "clientWidth": 768,
+    "hasOverflow": false
+  },
+  {
+    "viewport": "tablet",
+    "route": "blog",
+    "scrollWidth": 768,
+    "clientWidth": 768,
+    "hasOverflow": false
+  },
+  {
+    "viewport": "tablet",
+    "route": "artigo",
+    "scrollWidth": 768,
+    "clientWidth": 768,
+    "hasOverflow": false
+  },
+  {
+    "viewport": "tablet",
+    "route": "produtos",
+    "scrollWidth": 768,
+    "clientWidth": 768,
+    "hasOverflow": false
+  },
+  {
+    "viewport": "tablet",
+    "route": "categorias",
+    "scrollWidth": 768,
+    "clientWidth": 768,
+    "hasOverflow": false
+  },
+  {
+    "viewport": "mobile",
+    "route": "home",
+    "scrollWidth": 390,
+    "clientWidth": 390,
+    "hasOverflow": false
+  },
+  {
+    "viewport": "mobile",
+    "route": "blog",
+    "scrollWidth": 390,
+    "clientWidth": 390,
+    "hasOverflow": false
+  },
+  {
+    "viewport": "mobile",
+    "route": "artigo",
+    "scrollWidth": 390,
+    "clientWidth": 390,
+    "hasOverflow": false
+  },
+  {
+    "viewport": "mobile",
+    "route": "produtos",
+    "scrollWidth": 390,
+    "clientWidth": 390,
+    "hasOverflow": false
+  },
+  {
+    "viewport": "mobile",
+    "route": "categorias",
+    "scrollWidth": 390,
+    "clientWidth": 390,
+    "hasOverflow": false
+  }
+]

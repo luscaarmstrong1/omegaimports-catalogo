@@ -27,14 +27,15 @@ import { renderV2Home, renderV2InternalPage } from "./v2-home.mjs";
 const dist = new URL("../dist/", import.meta.url);
 const allProducts = loadProducts({ all: true });
 const published = loadProducts().filter((product) => product.active && product.imageStatus === "verified" && !product.image?.includes("product-placeholder"));
-const hidden = allProducts.filter((product) => product.status !== "published");
+const hidden = allProducts.filter((product) => product.status !== "published" || !product.active);
+const catalogProducts = [...published, ...allProducts.filter((product) => !published.some((p) => p.mlbId === product.mlbId))];
 const blogPosts = loadBlogPosts();
 const merchandising = JSON.parse(readFileSync(new URL("../src/data/home-merchandising.json", import.meta.url), "utf8"));
-const categoryCounts = Object.fromEntries(categories.map((category) => [category.slug, published.filter((product) => product.internalCategorySlug === category.slug).length]));
+const categoryCounts = Object.fromEntries(categories.map((category) => [category.slug, catalogProducts.filter((product) => product.internalCategorySlug === category.slug).length]));
 const visibleCategories = categories.filter((category) => (categoryCounts[category.slug] || 0) > 0);
 const homeCategorySlugs = ["iot-gsm-e-comunicacao", "sensores-e-medicao", "fontes-e-alimentacao", "automacao-e-comando", "componentes-eletronicos", "instrumentos-de-bancada"];
 const homeCategories = homeCategorySlugs.map((slug) => visibleCategories.find((category) => category.slug === slug)).filter(Boolean);
-const visibleFamilies = familyCards.filter((family) => published.some((product) => product.familyId === family.slug));
+const visibleFamilies = familyCards.filter((family) => catalogProducts.some((product) => product.familyId === family.slug));
 
 function out(path, html) {
   const target = new URL(path, dist);
@@ -52,7 +53,14 @@ function copyAssets() {
   cpSync(new URL("../public/assets/", import.meta.url), new URL("assets/", dist), { recursive: true });
   cpSync(new URL("../public/v2/", import.meta.url), new URL("v2/", dist), { recursive: true });
   cpSync(new URL("../public/products/", import.meta.url), new URL("products/", dist), { recursive: true });
-  cpSync(new URL("../public/manifest.webmanifest", import.meta.url), new URL("manifest.webmanifest", dist));
+  const manifest = JSON.parse(readFileSync(new URL("../public/manifest.webmanifest", import.meta.url), "utf8"));
+  manifest.start_url = pageUrl();
+  manifest.scope = pageUrl();
+  manifest.icons = manifest.icons.map((entry) => ({
+    ...entry,
+    src: assetUrl(entry.src.replace(/^\/omegaimports-catalogo\//, "")),
+  }));
+  out("manifest.webmanifest", `${JSON.stringify(manifest, null, 2)}\n`);
 }
 
 function section({ eyebrow, title, description = "", action = "", content, className = "section" }) {
@@ -70,8 +78,8 @@ function section({ eyebrow, title, description = "", action = "", content, class
 }
 
 function collectionItems(entry, route) {
-  if (route === "categorias") return published.filter((product) => product.internalCategorySlug === entry.slug);
-  if (route === "familias") return published.filter((product) => product.familyId === entry.slug);
+  if (route === "categorias") return catalogProducts.filter((product) => product.internalCategorySlug === entry.slug);
+  if (route === "familias") return catalogProducts.filter((product) => product.familyId === entry.slug);
   const applicationCategories = {
     "telemetria-e-conectividade": ["iot-gsm-e-comunicacao", "gps-e-localizacao"],
     "monitoramento-de-energia": ["sensores-e-medicao", "fontes-e-alimentacao"],
@@ -81,7 +89,7 @@ function collectionItems(entry, route) {
     "instrumentacao-de-bancada": ["instrumentos-de-bancada"],
   };
   const categorySlugs = applicationCategories[entry.slug] || [];
-  return published.filter((product) => categorySlugs.includes(product.internalCategorySlug));
+  return catalogProducts.filter((product) => categorySlugs.includes(product.internalCategorySlug));
 }
 
 function appUrl(app) {
@@ -370,7 +378,7 @@ function trustStrip() {
 
 function commercialProof() {
   const proof = [
-    [`${published.length}`, "produtos públicos", "Itens ativos, com imagem validada e rota própria."],
+    [`${catalogProducts.length}`, "produtos no catálogo", "Seleção técnica completa organizada por família e aplicação."],
     [`${visibleCategories.length}`, "categorias técnicas", "Busca por aplicação, família e tipo de componente."],
     [`${blogPosts.length}`, "guias editoriais", "Conteúdo conectado ao catálogo real, não a texto genérico."],
     ["ML", "checkout oficial", "Pagamento, frete e entrega são confirmados no Mercado Livre."],
@@ -450,10 +458,26 @@ function enhanceAboutBody(body) {
     .replace("</p></section><section class=\"detail-grid\">", `</p>${visual}</section>${commercialProof()}<section class="detail-grid">`) + technicalFlowSection() + opportunityCta();
 }
 
+const categoryCutoutMap = {
+  "iot-gsm-e-comunicacao": "v2/assets/categories/modulos-iot-cutout.png",
+  "sensores-e-medicao": "v2/assets/categories/sensores-cutout.png",
+  "fontes-e-alimentacao": "v2/assets/categories/fontes-e-energia-cutout.png",
+  "automacao-e-comando": "v2/assets/categories/reles-e-acionamento-cutout.png",
+  "gps-e-localizacao": "v2/assets/categories/gps-e-navegacao-cutout.png",
+  "componentes-eletronicos": "v2/assets/categories/componentes-eletronicos-cutout.png",
+  "conectores-e-instalacao": "v2/assets/categories/cabos-e-conectores-cutout.png",
+  "instrumentos-de-bancada": "v2/assets/categories/displays-e-ihm-cutout.png",
+};
+
 function categoryCard(category, index, { compact = false } = {}) {
+  const cutout = categoryCutoutMap[category.slug] || "v2/assets/categories/modulos-iot-cutout.png";
   return `<a class="category-card" href="${pageUrl(`categorias/${category.slug}/`)}" data-event="category_click" data-category="${category.slug}" data-position="${index + 1}" data-reveal>
-    ${icon(category.icon, "category-icon")}
-    <span class="category-count">${categoryCounts[category.slug]}</span>
+    <div class="category-card-top-row">
+      <div class="category-card-icon-wrap">
+        <img class="category-card-cutout" src="${assetUrl(cutout)}" alt="${escapeHtml(category.label)}" width="72" height="72" loading="lazy" decoding="async">
+      </div>
+      <span class="category-count">${categoryCounts[category.slug]}</span>
+    </div>
     <h3>${escapeHtml(category.label)}</h3>
     ${compact ? "" : `<p>${escapeHtml(category.description)}</p>`}
     <strong>Ver categoria ${icon("arrow-right", "text-link-icon")}</strong>
@@ -467,13 +491,22 @@ function categoryGrid(items = homeCategories, { home = false } = {}) {
 }
 
 function blogCard(post, index = 0) {
+  const coverPic = blogCoverPicture(post, {
+    loading: index < 3 ? "eager" : "lazy",
+    fetchpriority: index === 0 ? "high" : "auto",
+    sizes: index === 0 ? "(min-width: 900px) 480px, 100vw" : "(min-width: 900px) 380px, 100vw"
+  });
   return `<article class="article-card" data-blog-category="${escapeHtml(normalizeText(post.category))}" data-blog-title="${escapeHtml(normalizeText(post.title))}" data-reveal>
-    <a class="article-cover" href="${pageUrl(`blog/${post.slug}/`)}">${blogCoverPicture(post, { loading: index < 3 ? "eager" : "lazy", fetchpriority: index === 0 ? "high" : "auto" })}</a>
+    <a class="article-cover" href="${pageUrl(`blog/${post.slug}/`)}" aria-label="Ler artigo: ${escapeHtml(post.title)}">${coverPic}</a>
     <div class="article-card-content">
-      <p class="eyebrow">${escapeHtml(post.category)} · ${formatDate(post.publishedAt)} · ${escapeHtml(post.readingTime)}</p>
+      <div class="blog-card-meta-row">
+        <span class="blog-badge">${escapeHtml(post.category)}</span>
+        <span class="blog-card-date">${formatDate(post.publishedAt)}</span>
+        <span class="blog-card-read">${escapeHtml(post.readingTime)}</span>
+      </div>
       <h3><a href="${pageUrl(`blog/${post.slug}/`)}">${escapeHtml(post.title)}</a></h3>
       <p>${escapeHtml(post.summary)}</p>
-      <a class="text-link" href="${pageUrl(`blog/${post.slug}/`)}">Ler artigo ${icon("arrow-right", "text-link-icon")}</a>
+      <a class="text-link blog-read-btn" href="${pageUrl(`blog/${post.slug}/`)}">Ler artigo ${icon("arrow-right", "text-link-icon")}</a>
     </div>
   </article>`;
 }
@@ -572,7 +605,7 @@ function catalog() {
   const itemList = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    itemListElement: published.slice(0, 40).map((product, index) => ({ "@type": "ListItem", position: index + 1, url: absolute(`produtos/${product.slug}/`), name: product.title })),
+    itemListElement: catalogProducts.slice(0, 40).map((product, index) => ({ "@type": "ListItem", position: index + 1, url: absolute(`produtos/${product.slug}/`), name: product.title })),
   };
   const catalogChips = [
     ["", "Todos"],
@@ -583,10 +616,10 @@ function catalog() {
     ["componentes-eletronicos", "Componentes"],
     ["instrumentos-de-bancada", "Instrumentos"],
   ];
-  const body = `<section class="page-hero catalog-hero"><p class="eyebrow">Catálogo</p><h1>Produtos OMEGAIMPORTS</h1><p><strong>${published.length}</strong> produtos públicos, ativos e próprios, organizados para encontrar rápido o componente certo.</p><form class="catalog-search-panel" action="${pageUrl("produtos/")}" role="search">${icon("search", "search-icon")}<label class="sr-only" for="catalog-search">Buscar no catálogo</label><input id="catalog-search" name="q" type="search" placeholder="Buscar SCT-013, ESP32, Hi-Link, GPS..." autocomplete="off"><button class="secondary-action" type="submit">Buscar ${icon("arrow-right", "btn-icon")}</button></form><div class="catalog-chips" data-horizontal-scroll>${catalogChips.map(([slug, label]) => `<a href="${pageUrl(slug ? `produtos/?categoria=${slug}` : "produtos/")}" data-catalog-chip="${slug}">${label}</a>`).join("")}</div></section>
+  const body = `<section class="page-hero catalog-hero"><p class="eyebrow">Catálogo</p><h1>Produtos OMEGAIMPORTS</h1><p><strong>${catalogProducts.length}</strong> produtos organizados para encontrar rápido o componente certo.</p><form class="catalog-search-panel" action="${pageUrl("produtos/")}" role="search">${icon("search", "search-icon")}<label class="sr-only" for="catalog-search">Buscar no catálogo</label><input id="catalog-search" name="q" type="search" placeholder="Buscar SCT-013, ESP32, Hi-Link, GPS..." autocomplete="off"><button class="secondary-action" type="submit">Buscar ${icon("arrow-right", "btn-icon")}</button></form><div class="catalog-chips" data-horizontal-scroll>${catalogChips.map(([slug, label]) => `<a href="${pageUrl(slug ? `produtos/?categoria=${slug}` : "produtos/")}" data-catalog-chip="${slug}">${label}</a>`).join("")}</div></section>
     <div class="catalog-mobile-bar">
       <button class="filter-toggle" type="button" aria-controls="catalog-filters" aria-expanded="false">${icon("sliders", "btn-icon")} <span class="filter-toggle-label">Filtrar e ordenar</span></button>
-      <span><strong>${published.length}</strong> produtos</span>
+      <span><strong>${catalogProducts.length}</strong> produtos</span>
     </div>
     <div class="filter-scrim" id="filter-scrim" hidden></div>
     <section class="catalog-layout">
@@ -603,7 +636,7 @@ function catalog() {
           <button class="apply-filters" type="button" id="apply-filters">Aplicar filtros</button>
         </div>
       </aside>
-      <div><p class="result-count" aria-live="polite"><strong id="result-count">${published.length}</strong> produtos encontrados</p><div class="product-grid" id="product-list">${published.map(productCard).join("")}</div><div class="empty-state" id="empty-state" hidden><h2>Nenhum produto encontrado.</h2><p>Revise o termo ou remova alguns filtros.</p></div></div>
+      <div><p class="result-count" aria-live="polite"><strong id="result-count">${catalogProducts.length}</strong> produtos encontrados</p><div class="product-grid" id="product-list">${catalogProducts.map(productCard).join("")}</div><div class="empty-state" id="empty-state" hidden><h2>Nenhum produto encontrado.</h2><p>Revise o termo ou remova alguns filtros.</p></div></div>
     </section>`;
   out("produtos/index.html", renderV2InternalPage({ title: "Produtos", description: "Catálogo com busca e filtros de ofertas públicas da OMEGAIMPORTS.", path: "produtos/", pageClass: "catalog-page", body, extraHead: `<script type="application/ld+json">${JSON.stringify(itemList)}</script>` }));
 }
@@ -617,9 +650,10 @@ function collectionPages() {
 }
 
 function productPages() {
-  for (const product of published) {
+  for (const product of catalogProducts) {
+    const isOutOfStock = product.status !== "published" || !product.active;
     const specs = product.specifications?.length ? `<section class="detail-block"><h2>Especificações</h2><dl class="spec-table">${product.specifications.slice(0, 14).map((s) => `<div><dt>${escapeHtml(s.label)}</dt><dd>${escapeHtml(s.value)}</dd></div>`).join("")}</dl></section>` : "";
-    const related = published.filter((item) => item.mlbId !== product.mlbId && (item.familyId === product.familyId || item.internalCategorySlug === product.internalCategorySlug)).slice(0, 4);
+    const related = catalogProducts.filter((item) => item.mlbId !== product.mlbId && (item.familyId === product.familyId || item.internalCategorySlug === product.internalCategorySlug)).slice(0, 4);
     const articles = relatedPostsForProduct(product);
     const productSchema = product.price ? {
       "@context": "https://schema.org",
@@ -632,23 +666,23 @@ function productPages() {
         "@type": "Offer",
         price: product.price,
         priceCurrency: product.currency || "BRL",
-        availability: "https://schema.org/InStock",
+        availability: isOutOfStock ? "https://schema.org/OutOfStock" : "https://schema.org/InStock",
         itemCondition: product.condition === "usado" ? "https://schema.org/UsedCondition" : "https://schema.org/NewCondition",
-        url: product.permalink,
+        url: product.permalink || site.marketplaceUrl,
       },
     } : null;
-    const body = `<nav class="breadcrumb"><a href="${pageUrl()}">Início</a><a href="${pageUrl("produtos/")}">Produtos</a><span>${escapeHtml(product.shortTitle)}</span></nav>
+    const body = `<nav class="breadcrumb"><a href="${pageUrl()}">Início</a><a href="${pageUrl("produtos/")}">Produtos</a><span>${escapeHtml(product.shortTitle || product.title)}</span></nav>
       <section class="product-detail">
         <div class="product-gallery">
           ${productPicture(product, { className: "product-detail-picture", width: 720, height: 720, loading: "eager", fetchpriority: "high", sizes: "(min-width: 900px) 48vw, 100vw" })}
           <a class="image-open" href="${assetUrl(`products/${product.mlbId}/optimized/main.jpg`)}">Abrir imagem maior</a>
         </div>
-        <div class="product-summary"><p class="eyebrow">${escapeHtml(product.internalCategory)}</p><h1>${escapeHtml(product.title)}</h1><div class="summary-chips"><span>${conditionLabel(product)}</span><span>${productFormat(product)}</span><span>${escapeHtml(product.internalCategory)}</span></div><p class="summary-price">${formatPrice(product)}</p>${product.priceLastVerifiedAt ? `<p class="updated-at">Preço verificado em ${formatDate(product.priceLastVerifiedAt)}</p>` : ""}<div class="summary-actions"><a class="primary-action marketplace-link" href="${product.permalink}" target="_blank" rel="noopener noreferrer sponsored">Ver oferta no Mercado Livre ${icon("external", "btn-icon")}</a><a class="whatsapp-action whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">Tirar dúvida ${icon("message", "btn-icon")}</a></div><p class="external-note">Você será direcionado ao anúncio oficial para confirmar frete, pagamento e disponibilidade.</p></div>
+        <div class="product-summary"><p class="eyebrow">${escapeHtml(product.internalCategory)}</p><h1>${escapeHtml(product.title)}</h1><div class="summary-chips"><span>${conditionLabel(product)}</span><span>${productFormat(product)}</span><span>${escapeHtml(product.internalCategory)}</span>${isOutOfStock ? `<span style="background:#fef2f2;color:#b91c1c;border:1px solid #fecaca;padding:2px 8px;border-radius:6px;font-size:12px;font-weight:700;">Esgotado</span>` : ""}</div><p class="summary-price">${isOutOfStock && !product.price ? "Sob consulta" : formatPrice(product)}</p>${product.priceLastVerifiedAt ? `<p class="updated-at">Preço verificado em ${formatDate(product.priceLastVerifiedAt)}</p>` : ""}<div class="summary-actions"><a class="primary-action marketplace-link" href="${product.permalink || site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored">${isOutOfStock ? "Consultar no Mercado Livre" : "Ver oferta no Mercado Livre"} ${icon("external", "btn-icon")}</a><a class="whatsapp-action whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">Tirar dúvida ${icon("message", "btn-icon")}</a></div><p class="external-note">Você será direcionado ao anúncio oficial para confirmar frete, pagamento e disponibilidade.</p></div>
       </section>
       ${quickSpecStrip(product)}
       <div class="mobile-product-bar">
-        <div><span>Oferta oficial</span><strong>${formatPrice(product)}</strong></div>
-        <a class="primary-action marketplace-link" href="${product.permalink}" target="_blank" rel="noopener noreferrer sponsored">Ver oferta ${icon("external", "btn-icon")}</a>
+        <div><span>${isOutOfStock ? "Status" : "Oferta oficial"}</span><strong>${isOutOfStock && !product.price ? "Esgotado" : formatPrice(product)}</strong></div>
+        <a class="primary-action marketplace-link" href="${product.permalink || site.marketplaceUrl}" target="_blank" rel="noopener noreferrer sponsored">${isOutOfStock ? "Consultar no ML" : "Ver oferta"} ${icon("external", "btn-icon")}</a>
         <a class="whatsapp-action whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer" aria-label="Tirar dúvida no WhatsApp">${icon("message", "btn-icon")}</a>
       </div>
       <section class="detail-grid"><section class="detail-block"><h2>Resumo técnico</h2><p>${escapeHtml(product.technicalSummary || product.shortDescription || product.title)}</p></section>${specs}<section class="detail-block"><h2>Características</h2><ul><li>${productFormat(product)}</li><li>${conditionLabel(product)}</li><li>${escapeHtml(product.internalCategory)}</li></ul></section><section class="detail-block"><h2>Cuidados</h2><p>Confirme tensão, corrente, pinagem, acessórios e compatibilidade diretamente no anúncio antes da compra. Para rede elétrica ou comando, conte com profissional habilitado.</p></section></section>
@@ -667,38 +701,169 @@ function productPages() {
 
 function blogPages() {
   const blogSchema = { "@context": "https://schema.org", "@type": "Blog", name: "Blog OMEGAIMPORTS", url: absolute("blog/") };
-  const categoriesEditorial = [...new Set(blogPosts.map((post) => post.category))];
+  const categoriesEditorial = [
+    "IoT e conectividade",
+    "Telemetria industrial",
+    "Comunicação celular",
+    "Placas e microcontroladores"
+  ];
   const sortedPosts = [...blogPosts].sort((a, b) => String(b.publishedAt).localeCompare(String(a.publishedAt)));
   const featuredPost = sortedPosts[0];
   const remainingPosts = sortedPosts.slice(1);
+
   out("blog/index.html", renderV2InternalPage({
     title: "Blog técnico",
     description: "Guias práticos sobre eletrônica, IoT, sensores, fontes, automação e prototipagem.",
     path: "blog/",
     pageClass: "blog-page",
-    body: `<section class="page-hero blog-hero"><p class="eyebrow">Blog técnico</p><h1>Guias para escolher componentes com mais segurança.</h1><p>Conteúdo editorial conectado aos produtos reais do catálogo OMEGAIMPORTS.</p><form class="blog-search" action="${pageUrl("blog/")}" role="search">${icon("search", "search-icon")}<label class="sr-only" for="blog-search">Buscar no Blog</label><input id="blog-search" name="q" type="search" placeholder="Buscar sensores, fontes, GPS, automação..."></form><div class="chips blog-category-chips"><a data-blog-category="" href="${pageUrl("blog/")}">Todos</a>${categoriesEditorial.map((category) => `<a data-blog-category="${escapeHtml(normalizeText(category))}" href="${pageUrl(`blog/?categoria=${encodeURIComponent(category)}`)}">${escapeHtml(category)}</a>`).join("")}</div></section><p class="result-count blog-result-count" aria-live="polite"><strong id="blog-result-count">${blogPosts.length}</strong> artigos encontrados</p><div id="blog-list"><div class="blog-featured">${featuredPost ? blogCard(featuredPost, 0) : ""}</div><div class="article-grid page-grid">${remainingPosts.map((post, index) => blogCard(post, index + 1)).join("")}</div></div><div class="empty-state blog-empty-state" id="blog-empty-state" hidden><h2>Nenhum artigo encontrado.</h2><p>Revise a busca ou escolha outra categoria.</p></div>`,
+    body: `<div class="blog-container">
+      <header class="blog-header">
+        <p class="eyebrow">BLOG TÉCNICO</p>
+        <h1>Guias para escolher componentes com mais segurança.</h1>
+        <p class="blog-header-sub">Conteúdo editorial conectado aos produtos reais do catálogo OMEGAIMPORTS.</p>
+        
+        <form class="blog-search" action="${pageUrl("blog/")}" role="search">
+          ${icon("search", "search-icon")}
+          <label class="sr-only" for="blog-search">Buscar no Blog</label>
+          <input id="blog-search" name="q" type="search" placeholder="Buscar artigos, sensores, protocolos...">
+        </form>
+
+        <div class="chips blog-category-chips">
+          <a data-blog-category="" href="${pageUrl("blog/")}">Todos</a>
+          ${categoriesEditorial.map((category) => `<a data-blog-category="${escapeHtml(normalizeText(category))}" href="${pageUrl(`blog/?categoria=${encodeURIComponent(category)}`)}">${escapeHtml(category)}</a>`).join("")}
+        </div>
+      </header>
+
+      <p class="result-count blog-result-count" aria-live="polite"><strong id="blog-result-count">${blogPosts.length}</strong> artigos encontrados</p>
+
+      <div id="blog-list">
+        <div class="blog-featured">
+          ${featuredPost ? blogCard(featuredPost, 0) : ""}
+        </div>
+        <div class="article-grid page-grid">
+          ${remainingPosts.map((post, index) => blogCard(post, index + 1)).join("")}
+        </div>
+      </div>
+
+      <div class="empty-state blog-empty-state" id="blog-empty-state" hidden>
+        <h2>Nenhum artigo encontrado.</h2>
+        <p>Revise a busca ou escolha outra categoria.</p>
+      </div>
+    </div>`,
     extraHead: `<script type="application/ld+json">${JSON.stringify(blogSchema)}</script>`,
   }));
+
   for (const post of blogPosts) {
     const relatedProducts = relatedProductsForPost(post);
     const relatedPosts = blogPosts.filter((item) => item.slug !== post.slug && (item.category === post.category || item.tags.some((tag) => post.tags.includes(tag)))).slice(0, 3);
     const author = post.author || "Omega Imports";
     const sourceBlock = post.sourceUrl ? `<section class="article-section article-section--wide article-source"><h2>Fonte original</h2><p>Publicado originalmente pela OMEGAIMPORTS no LinkedIn.</p><a class="secondary-action" href="${escapeHtml(post.sourceUrl)}" target="_blank" rel="noopener noreferrer">Ver artigo no LinkedIn ${icon("external", "btn-icon")}</a></section>` : "";
-    const body = `<nav class="breadcrumb"><a href="${pageUrl()}">Início</a><a href="${pageUrl("blog/")}">Blog</a><span>${escapeHtml(post.title)}</span></nav>
+
+    const body = `<div class="article-container">
+      <nav class="breadcrumb"><a href="${pageUrl()}">Início</a> &gt; <a href="${pageUrl("blog/")}">Blog</a> &gt; <span>${escapeHtml(post.category)}</span> &gt; <span class="breadcrumb-current">${escapeHtml(post.title)}</span></nav>
+      
       <article class="article article-detail">
-        <header class="article-header"><p class="eyebrow">${escapeHtml(post.category)} · ${escapeHtml(post.readingTime)}</p><h1>${escapeHtml(post.title)}</h1><p>${escapeHtml(post.summary)}</p><div class="article-meta"><span>${escapeHtml(author)}</span><span>Publicado em ${formatDate(post.publishedAt)}</span><span>Atualizado em ${formatDate(post.updatedAt)}</span></div></header>
-        ${blogCoverPicture(post, { className: "article-hero-cover", width: 1400, height: 788, loading: "eager", fetchpriority: "high", sizes: "(min-width: 1180px) 1080px, 100vw" })}
-        <aside class="toc" aria-label="Sumário"><strong>Sumário</strong>${post.sections.map(([title], index) => `<a href="#secao-${index + 1}">${escapeHtml(title)}</a>`).join("")}</aside>
-        <div class="article-section-grid">
-          ${post.sections.map(([title, text], index) => `<section class="article-section" id="secao-${index + 1}"><h2>${escapeHtml(title)}</h2>${articleParagraphs(text)}</section>`).join("")}
-          <section class="article-section article-section--wide"><h2>Conclusão</h2><p>Use o artigo como ponto de partida e confirme modelo, tensão, corrente, acessórios e disponibilidade no anúncio oficial antes da compra.</p></section>
-          <section class="article-section article-section--wide"><h2>Referências técnicas</h2><ul>${post.references.map((reference) => `<li>${escapeHtml(reference)}</li>`).join("")}</ul></section>
-          ${sourceBlock}
+        <header class="article-header">
+          <h1>${escapeHtml(post.title)}</h1>
+          <p class="article-lead">${escapeHtml(post.summary)}</p>
+          <div class="article-meta-row">
+            <span class="blog-badge">${escapeHtml(post.category)}</span>
+            <span class="article-meta-item">${formatDate(post.publishedAt)}</span>
+            <span class="article-meta-item">${escapeHtml(post.readingTime)}</span>
+            <button type="button" class="btn-share" onclick="navigator.clipboard?.writeText(window.location.href);alert('Link copiado!');">${icon("external", "share-icon")} Compartilhar</button>
+          </div>
+        </header>
+
+        <div class="article-hero-cover-wrapper">
+          ${blogCoverPicture(post, { className: "article-hero-cover", width: 1400, height: 788, loading: "eager", fetchpriority: "high", sizes: "(min-width: 1180px) 1080px, 100vw" })}
         </div>
-        <section class="article-whatsapp"><h2>Precisa de ajuda para escolher?</h2><p>Envie sua dúvida pelo WhatsApp oficial da OMEGAIMPORTS e informe o tipo de projeto, tensão, corrente e aplicação desejada.</p><a class="whatsapp-action whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp ${icon("message", "btn-icon")}</a></section>
+
+        <section class="article-summary-box">
+          <div class="summary-box-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+          </div>
+          <div class="summary-box-content">
+            <h3>Resumo deste artigo</h3>
+            <p>${escapeHtml(post.summary)} Neste guia prático, detalhamos como arquitetar a solução, contornar limitações e escolher componentes reais disponíveis no catálogo OMEGAIMPORTS.</p>
+          </div>
+        </section>
+
+        <div class="article-layout-grid">
+          <div class="article-main-col">
+            <div class="article-sections-flow">
+              ${post.sections.map(([title, text], index) => `
+                <section class="article-section" id="secao-${index + 1}">
+                  <h2 class="article-section-title"><span class="section-num">${String(index + 1).padStart(2, '0')}.</span> ${escapeHtml(title)}</h2>
+                  <div class="article-text-body">${articleParagraphs(text)}</div>
+                </section>
+              `).join("")}
+
+              <section class="article-section article-section--wide">
+                <h2 class="article-section-title"><span class="section-num">${String(post.sections.length + 1).padStart(2, '0')}.</span> Conclusão</h2>
+                <div class="article-text-body">
+                  <p>Use o artigo como ponto de partida e confirme modelo, tensão, corrente, acessórios e disponibilidade no anúncio oficial antes da compra.</p>
+                </div>
+              </section>
+
+              <section class="article-section article-section--wide">
+                <h2 class="article-section-title"><span class="section-num">${String(post.sections.length + 2).padStart(2, '0')}.</span> Referências técnicas</h2>
+                <ul class="article-ref-list">${post.references.map((reference) => `<li>${escapeHtml(reference)}</li>`).join("")}</ul>
+              </section>
+
+              ${sourceBlock}
+            </div>
+          </div>
+
+          <aside class="article-sidebar-col">
+            <div class="article-sidebar-sticky">
+              <div class="article-toc-box">
+                <h3 class="toc-header">Neste artigo</h3>
+                <nav class="toc" aria-label="Sumário">
+                  ${post.sections.map(([title], index) => `
+                    <a href="#secao-${index + 1}" class="toc-nav-link" data-target="secao-${index + 1}">
+                      <span class="toc-num">${String(index + 1).padStart(2, '0')}</span>
+                      <span class="toc-text">${escapeHtml(title)}</span>
+                    </a>
+                  `).join("")}
+                </nav>
+              </div>
+
+              <div class="article-support-box">
+                <div class="support-box-badge">SUPORTE TÉCNICO</div>
+                <h3>PRECISA DE AJUDA NO SEU PROJETO?</h3>
+                <p>Nossa equipe pode ajudar você a encontrar os componentes ideais para a sua aplicação.</p>
+                <a class="support-box-btn whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">
+                  Falar com especialista ${icon("arrow-right", "btn-icon")}
+                </a>
+                <span class="sr-only">Chamar no WhatsApp</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <section class="article-whatsapp article-whatsapp--legacy" style="display:none;" aria-hidden="true">
+          <h2>Precisa de ajuda para escolher?</h2>
+          <p>Envie sua dúvida pelo WhatsApp oficial da OMEGAIMPORTS.</p>
+          <a class="whatsapp-action whatsapp-link" href="${site.whatsappUrl}" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp ${icon("message", "btn-icon")}</a>
+        </section>
       </article>
+
+      ${relatedPosts.length ? `
+        <section class="related-articles-section">
+          <div class="related-header-row">
+            <div>
+              <p class="eyebrow">CONTINUE LENDO</p>
+              <h2>Artigos relacionados</h2>
+            </div>
+            <a class="text-link" href="${pageUrl("blog/")}">Ver todos os artigos ${icon("arrow-right", "text-link-icon")}</a>
+          </div>
+          <div class="article-grid article-grid--compact">${relatedPosts.map(blogCard).join("")}</div>
+        </section>
+      ` : ""}
+
       ${relatedProducts.length ? section({ eyebrow: "Produtos relacionados", title: "Itens do catálogo ligados a este tema", className: "section section--white", content: `<div class="product-grid">${relatedProducts.map(productCard).join("")}</div>` }) : ""}
-      ${relatedPosts.length ? section({ eyebrow: "Continue lendo", title: "Artigos relacionados", content: `<div class="article-grid article-grid--compact">${relatedPosts.map(blogCard).join("")}</div>` }) : ""}`;
+    </div>`;
+
     const schema = {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
@@ -1041,9 +1206,11 @@ function legacyPages() {
 }
 
 function supportFiles() {
-  const urls = ["", "produtos/", "categorias/", "blog/", "sobre/", "contato/", "como-comprar/", "politica-de-privacidade/", "termos-de-uso/", "duvidas-frequentes/", ...published.map((p) => `produtos/${p.slug}/`), ...visibleCategories.map((c) => `categorias/${c.slug}/`), ...blogPosts.map((post) => `blog/${post.slug}/`)];
+  const urls = ["", "produtos/", "categorias/", "blog/", "sobre/", "contato/", "como-comprar/", "politica-de-privacidade/", "termos-de-uso/", "duvidas-frequentes/", ...catalogProducts.map((p) => `produtos/${p.slug}/`), ...visibleCategories.map((c) => `categorias/${c.slug}/`), ...blogPosts.map((post) => `blog/${post.slug}/`)];
   out("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((url) => `  <url><loc>${absolute(url)}</loc></url>`).join("\n")}\n</urlset>`);
-  out("robots.txt", `User-agent: *\nAllow: /\nSitemap: ${absolute("sitemap.xml")}\n`);
+  out("robots.txt", site.isPreview
+    ? "User-agent: *\nDisallow: /\n"
+    : `User-agent: *\nAllow: /\nSitemap: ${absolute("sitemap.xml")}\n`);
   out("404.html", renderV2InternalPage({ title: "Página não encontrada", description: "Página não encontrada.", path: "404.html", pageClass: "not-found-page", noindex: true, body: `<section class="page-hero"><p class="eyebrow">Erro 404</p><h1>Página não encontrada</h1><p>O endereço pode ter mudado. Continue pelo catálogo público da OMEGAIMPORTS.</p><a class="secondary-action" href="${pageUrl("produtos/")}">Ver produtos ${icon("arrow-right", "btn-icon")}</a></section>` }));
 }
 

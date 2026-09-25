@@ -54,4 +54,9 @@
   .tech-dot-pulse::after {
     animation: none !important;
   }
+
+  .home-whatsapp-float,
+  .v2-internal .home-whatsapp-float {
+    animation: none !important;
+  }
 }
