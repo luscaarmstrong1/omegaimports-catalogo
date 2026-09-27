@@ -28,7 +28,7 @@ const dist = new URL("../dist/", import.meta.url);
 const allProducts = loadProducts({ all: true });
 const published = loadProducts().filter((product) => product.active && product.imageStatus === "verified" && !product.image?.includes("product-placeholder"));
 const hidden = allProducts.filter((product) => product.status !== "published" || !product.active);
-const catalogProducts = [...published, ...allProducts.filter((product) => !published.some((p) => p.mlbId === product.mlbId))];
+const catalogProducts = published;
 const blogPosts = loadBlogPosts();
 const merchandising = JSON.parse(readFileSync(new URL("../src/data/home-merchandising.json", import.meta.url), "utf8"));
 const categoryCounts = Object.fromEntries(categories.map((category) => [category.slug, catalogProducts.filter((product) => product.internalCategorySlug === category.slug).length]));
