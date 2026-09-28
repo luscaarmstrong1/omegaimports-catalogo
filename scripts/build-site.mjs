@@ -568,7 +568,20 @@ function articleParagraphs(text = "") {
     .split(/\n{2,}/)
     .map((paragraph) => paragraph.trim())
     .filter(Boolean)
-    .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
+    .map((paragraph) => {
+      let html = escapeHtml(paragraph);
+      html = html.replace(/^([^:]{4,55}:)/, '<strong>$1</strong>');
+      html = html.replace(/([“"][^”"]{10,80}[”"])/g, '<strong>$1</strong>');
+      const techTerms = ['ESP32', 'SIM800L', 'LoRaWAN', 'Wi-Fi', 'Bluetooth', 'GPRS', 'SCT-013', 'ZMCT123A', 'HLK-PM01', 'NEO-6M', 'RS485', 'Modbus', 'MQTT'];
+      for (const term of techTerms) {
+        const regex = new RegExp(`(?<!<strong>[^<]*)\\b(${term})\\b`, 'i');
+        if (regex.test(html)) {
+          html = html.replace(regex, '<strong>$1</strong>');
+          break;
+        }
+      }
+      return `<p>${html}</p>`;
+    })
     .join("");
 }
 

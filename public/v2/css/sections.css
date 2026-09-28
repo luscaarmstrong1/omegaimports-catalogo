@@ -566,7 +566,8 @@
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  height: 98px;
+  min-height: 98px;
+  height: auto;
   box-sizing: border-box;
 }
 
@@ -807,7 +808,8 @@
   flex-direction: column;
   position: relative;
   box-sizing: border-box;
-  height: 380px;
+  min-height: 380px;
+  height: auto;
 }
 
 .product-card:hover {
@@ -960,7 +962,8 @@
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  height: 104px;
+  min-height: 104px;
+  height: auto;
   box-sizing: border-box;
 }
 
