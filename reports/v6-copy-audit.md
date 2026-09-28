@@ -1,6 +1,6 @@
 # Auditoria de copy v6
 
-Arquivos HTML analisados: 56.
+Arquivos HTML analisados: 85.
 Erros críticos: 0.
 Avisos: 1.
 
