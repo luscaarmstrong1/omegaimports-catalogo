@@ -1,4 +1,4 @@
-import { cpSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { cpSync, existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import {
@@ -53,6 +53,9 @@ function copyAssets() {
   cpSync(new URL("../public/assets/", import.meta.url), new URL("assets/", dist), { recursive: true });
   cpSync(new URL("../public/v2/", import.meta.url), new URL("v2/", dist), { recursive: true });
   cpSync(new URL("../public/products/", import.meta.url), new URL("products/", dist), { recursive: true });
+  if (existsSync(new URL("../public/favicon.svg", import.meta.url))) {
+    cpSync(new URL("../public/favicon.svg", import.meta.url), new URL("favicon.svg", dist));
+  }
   const manifest = JSON.parse(readFileSync(new URL("../public/manifest.webmanifest", import.meta.url), "utf8"));
   manifest.start_url = pageUrl();
   manifest.scope = pageUrl();
