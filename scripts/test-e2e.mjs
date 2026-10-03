@@ -29,12 +29,13 @@ if (home.includes("eotcoee")) throw new Error("marca não autorizada reapareceu 
 if (!home.includes("/omegaimports-catalogo/blog/")) throw new Error("Blog não aparece na Home");
 if (!home.includes("wa.me/5535999528858")) throw new Error("WhatsApp oficial não aparece na Home");
 if (!home.includes("https://www.linkedin.com/company/omegaimports/")) throw new Error("LinkedIn oficial não aparece na Home");
+if (!home.includes("https://www.instagram.com/omegaimports.oficial/")) throw new Error("Instagram oficial não aparece na Home");
 if (home.includes('href="#"')) throw new Error("Home contém link placeholder navegável");
 if (home.includes("Mais de 15 mil") || home.includes("MOCKUP CLAIM")) throw new Error("Home contém claim de mockup não comprovado");
 for (const claim of ["Envio pelo Mercado Livre", "Condições no anúncio", "Catálogo especializado", "Informações verificadas"]) {
   if (!home.includes(claim)) throw new Error(`Claim verificável ausente: ${claim}`);
 }
-for (const unavailableNetwork of ["Instagram", "YouTube", "Facebook", "TikTok"]) {
+for (const unavailableNetwork of ["YouTube", "Facebook", "TikTok"]) {
   if (home.includes(`aria-label="${unavailableNetwork}"`)) throw new Error(`Rede sem URL real foi publicada: ${unavailableNetwork}`);
 }
 

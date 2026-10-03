@@ -66,7 +66,7 @@ function articleCard(post, index) {
 function productionHead() {
   const title = "Componentes eletrônicos, IoT e automação | OMEGAIMPORTS";
   const description = "Componentes eletrônicos, sensores, fontes, módulos IoT e automação da OMEGAIMPORTS, com compra pelo Mercado Livre e atendimento pelo WhatsApp.";
-  const organization = { "@context": "https://schema.org", "@type": "Organization", name: site.name, url: site.productionUrl, sameAs: [site.marketplaceUrl, site.linkedinUrl] };
+  const organization = { "@context": "https://schema.org", "@type": "Organization", name: site.name, url: site.productionUrl, sameAs: [site.marketplaceUrl, site.linkedinUrl, site.instagramUrl] };
   const website = { "@context": "https://schema.org", "@type": "WebSite", name: site.name, url: site.productionUrl, potentialAction: { "@type": "SearchAction", target: `${site.productionUrl}produtos/?q={search_term_string}`, "query-input": "required name=search_term_string" } };
   return `<title>${title}</title>
   <meta name="description" content="${escapeHtml(description)}">
@@ -102,7 +102,7 @@ function internalPageHead({ title, description, path, ogImage, type = "website",
     "@type": "Organization",
     name: site.name,
     url: site.productionUrl,
-    sameAs: [site.marketplaceUrl, site.linkedinUrl],
+    sameAs: [site.marketplaceUrl, site.linkedinUrl, site.instagramUrl],
   };
   return `<title>${escapeHtml(metaTitle)}</title>
   <meta name="description" content="${escapeHtml(metaDescription)}">
@@ -204,6 +204,7 @@ function wireProductionLinks(html) {
   });
   html = html.replaceAll('href="https://wa.me/5535999528858"', `href="${site.whatsappUrl}"`);
   html = html.replaceAll('href="https://www.linkedin.com/company/omegaimports/"', `href="${site.linkedinUrl}"`);
+  html = html.replaceAll('href="https://www.instagram.com/omegaimports.oficial/"', `href="${site.instagramUrl}"`);
   html = html.replaceAll('href="#categorias"', `href="${pageUrl("categorias/")}"`);
   html = html.replaceAll('href="#blog"', `href="${pageUrl("blog/")}"`);
   html = html.replaceAll('href="#sobre"', `href="${pageUrl("sobre/")}"`);

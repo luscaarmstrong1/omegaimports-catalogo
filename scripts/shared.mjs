@@ -16,6 +16,7 @@ export const site = {
   isPreview: deployment.isPreview,
   marketplaceUrl: "https://www.mercadolivre.com.br/pagina/omegaimports",
   linkedinUrl: "https://www.linkedin.com/company/omegaimports/",
+  instagramUrl: "https://www.instagram.com/omegaimports.oficial/",
   whatsappNumber: "+55 35 99952-8858",
   whatsappUrl: "https://wa.me/5535999528858?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20OMEGAIMPORTS%20e%20gostaria%20de%20ajuda%20para%20escolher%20um%20produto.",
 };
@@ -180,6 +181,7 @@ export function icon(name, className = "icon") {
     shield: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/>',
     package: '<path d="m7.5 4.3 9 5.2"/><path d="M21 8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.7Z"/><path d="M3.3 7 12 12l8.7-5"/><path d="M12 22V12"/>',
     book: '<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M4 4v15.5A2.5 2.5 0 0 1 6.5 17H20V4Z"/>',
+    instagram: '<rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>',
     menu: '<path d="M4 6h16M4 12h16M4 18h16"/>',
     sliders: '<path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3"/><path d="M2 14h4M10 8h4M18 16h4"/>',
     x: '<path d="M18 6 6 18M6 6l12 12"/>',
