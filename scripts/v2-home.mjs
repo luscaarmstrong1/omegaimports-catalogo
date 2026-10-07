@@ -222,7 +222,7 @@ function applyVerifiedClaims(html) {
     .replaceAll("Até 12x no cartão", "Condições no anúncio")
     .replaceAll("ou PIX com desconto", "parcelamento e PIX")
     .replaceAll("Mais de 15 mil", "Catálogo especializado")
-    .replaceAll("clientes e projetos <!-- MOCKUP CLAIM — validar antes de produção -->", "para projetos reais")
+    .replaceAll(/clientes e projetos <!-- MOCKUP CLAIM [—\-] validar antes de produção -->/g, "para projetos reais")
     .replaceAll("Qualidade garantida", "Informações verificadas")
     .replaceAll("ou seu dinheiro de volta", "em cada anúncio");
 }
