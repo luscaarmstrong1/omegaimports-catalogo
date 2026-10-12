@@ -1225,7 +1225,7 @@ function supportFiles() {
   const urls = ["", "produtos/", "categorias/", "blog/", "sobre/", "contato/", "como-comprar/", "politica-de-privacidade/", "termos-de-uso/", "duvidas-frequentes/", ...catalogProducts.map((p) => `produtos/${p.slug}/`), ...visibleCategories.map((c) => `categorias/${c.slug}/`), ...blogPosts.map((post) => `blog/${post.slug}/`)];
   out("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((url) => `  <url><loc>${absolute(url)}</loc></url>`).join("\n")}\n</urlset>`);
   out("robots.txt", site.isPreview
-    ? "User-agent: *\nDisallow: /\n"
+    ? "User-agent: *\nAllow: /\n"
     : `User-agent: *\nAllow: /\nSitemap: ${absolute("sitemap.xml")}\n`);
   out("404.html", renderV2InternalPage({ title: "Página não encontrada", description: "Página não encontrada.", path: "404.html", pageClass: "not-found-page", noindex: true, body: `<section class="page-hero"><p class="eyebrow">Erro 404</p><h1>Página não encontrada</h1><p>O endereço pode ter mudado. Continue pelo catálogo público da OMEGAIMPORTS.</p><a class="secondary-action" href="${pageUrl("produtos/")}">Ver produtos ${icon("arrow-right", "btn-icon")}</a></section>` }));
 }

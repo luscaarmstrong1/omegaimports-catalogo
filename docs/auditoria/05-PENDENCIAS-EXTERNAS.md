@@ -6,13 +6,13 @@ Este documento lista as configurações e integrações que demandam acessos adm
 
 ## 1. Google Search Console
 - **Status**: PENDENTE DE ACESSO / CONFIGURAÇÃO EXTERNA
-- **Descrição**: O site já gera o arquivo `sitemap.xml` estruturado com as 84 URLs oficiais. É necessário enviar o sitemap no painel do Google Search Console.
+- **Descrição**: O site gera o arquivo `sitemap.xml` contendo as 81 URLs canônicas indexáveis. É necessário cadastrar e submeter o sitemap no painel do Google Search Console.
 - **Instruções para o Operador**:
   1. Acesse [Google Search Console](https://search.google.com/search-console).
-  2. Adicione a propriedade: `https://luscaarmstrong1.github.io/omegaimports-catalogo/` (ou domínio próprio caso configurado).
+  2. Adicione a propriedade: `https://luscaarmstrong1.github.io/omegaimports-catalogo/` (ou domínio próprio caso venha a registrar).
   3. No menu lateral, acesse **Sitemaps**.
   4. Insira a URL: `https://luscaarmstrong1.github.io/omegaimports-catalogo/sitemap.xml` e clique em **Enviar**.
-  5. Monitore a cobertura de indexação.
+  5. Monitore a cobertura de indexação e os Rich Snippets de Produto.
 
 ---
 
